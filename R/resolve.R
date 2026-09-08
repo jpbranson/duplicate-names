@@ -140,6 +140,24 @@ dn_resolve <- function(normalized, radius_m = DN_SITE_RADIUS_M) {
 
   x <- dplyr::left_join(x, site_rank, by = c("entity_id", "site_id"))
 
+  # --- 5. display name and alternates ----------------------------------
+  # "Merged under the museum": where an entity's records include a museum-type
+  # name, that name leads. Ties break on freshness, then confidence. Every
+  # other distinct name is kept in alt_names for the map footnote.
+  x <- x |>
+    dplyr::group_by(.data$entity_id) |>
+    dplyr::mutate(
+      .is_museum = dn_institution_type(.data$name_expanded) %in% c("museum", "museums"),
+      .ord = order(order(!.data$.is_museum,
+                         dplyr::desc(.data$source_update_time),
+                         dplyr::desc(dplyr::coalesce(.data$confidence, -1)))),
+      primary_name = .data$name_raw[which.min(.data$.ord)],
+      alt_names = paste(setdiff(unique(.data$name_raw), .data$primary_name[1]),
+                        collapse = " | ")
+    ) |>
+    dplyr::ungroup() |>
+    dplyr::select(-".is_museum", -".ord")
+
   out <- x |>
     dplyr::mutate(
       is_franchise     = FALSE,          # set by dn_flag_franchises()
@@ -182,11 +200,56 @@ dn_name_similarity <- function(a, b) {
     length(intersect(x, y)) / min(length(x), length(y))
   }, numeric(1))
 
-  pmax(jw, contain, na.rm = TRUE)
+  # Third measure: compare with the institution-TYPE word removed.
+  #
+  # "Washington County Historical Museum" and "Washington County Historical
+  # Society" are one physical institution — the society runs the museum, in
+  # the same building. Both reduce to "washington county historical", so this
+  # merges them while the other two measures do not.
+  #
+  # Guarded by requiring at least two tokens to survive on both sides, so
+  # "Springfield Museum" and "Springfield Society" do not collapse to
+  # "springfield" and match everything nearby. Proximity does the rest: these
+  # pairs are only ever compared within 150m.
+  ca <- dn_strip_institution_type(a)
+  cb <- dn_strip_institution_type(b)
+  ok <- lengths(stringi::stri_split_fixed(ca, " ")) >= 2L &
+        lengths(stringi::stri_split_fixed(cb, " ")) >= 2L
+  type_sim <- ifelse(ok, 1 - stringdist::stringdist(ca, cb, method = "jw", p = 0.1), 0)
+
+  pmax(jw, contain, type_sim, na.rm = TRUE)
 }
 
 DN_NAME_STOPWORDS <- c("of", "the", "at", "in", "and", "a", "inc",
                        "incorporated", "association", "foundation", "trust")
+
+# Words naming what KIND of body an institution is, rather than which one.
+# Two records at one address differing only in this word are one place.
+DN_INSTITUTION_TYPES <- c(
+  "museum", "museums", "society", "center", "centre", "association",
+  "foundation", "institute", "archives", "archive", "collection",
+  "collections", "trust", "inc", "incorporated", "corporation"
+)
+
+dn_strip_institution_type <- function(x) {
+  vapply(stringi::stri_split_fixed(x, " "), function(tk) {
+    paste(tk[!tk %in% DN_INSTITUTION_TYPES & nzchar(tk)], collapse = " ")
+  }, character(1), USE.NAMES = FALSE)
+}
+
+#' Which kind of body does this name describe?
+#'
+#' Used to choose the entity's display name. The physical institution is the
+#' subject of the analysis, so where a site has both, the museum name leads and
+#' the society name is kept as an alternate.
+dn_institution_type <- function(x) {
+  tok <- stringi::stri_split_fixed(x, " ")
+  vapply(tok, function(tk) {
+    hit <- intersect(DN_INSTITUTION_TYPES, tk)
+    if (!length(hit)) return(NA_character_)
+    hit[1]
+  }, character(1), USE.NAMES = FALSE)
+}
 
 #' Cluster records into sites: geographically close AND similarly named
 #'
@@ -239,6 +302,7 @@ dn_empty_entity_cols <- function(n) {
     entity_id = character(n), n_sources = integer(n), source_set = character(n),
     is_franchise = logical(n), chain_id = character(n),
     site_id = character(n), n_sites = integer(n), is_primary_site = logical(n),
+    primary_name = character(n), alt_names = character(n),
     counted = logical(n), exclusion_reason = character(n),
     state_fips = character(n), county_fips = character(n),
     place_geoid = character(n), place_name = character(n)

@@ -91,6 +91,18 @@ dn_schema_entity <- function() {
       n_sites         = integer(),
       is_primary_site = logical(),
 
+      # The name the entity is presented under, and the other names its
+      # records carry. Where a site holds both a museum and the historical
+      # society that runs it, the MUSEUM name leads — the physical institution
+      # is the subject — and the society name survives in alt_names.
+      #
+      # alt_names is not bookkeeping: it is the source for the footnote on the
+      # eventual map, so a reader can see that "Washington County Historical
+      # Museum" and "Washington County Historical Society" were treated as one
+      # place and judge that call for themselves.
+      primary_name = character(),
+      alt_names    = character(),   # pipe-separated, excludes primary_name
+
       # Counting policy, kept as a FLAG rather than a filter: excluded rows
       # stay in the published dataset with the reason attached, so a reader
       # can audit or reverse the decision. Every headline number in post 1

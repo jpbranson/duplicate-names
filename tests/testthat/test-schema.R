@@ -89,3 +89,36 @@ test_that("rare-token gate distinguishes identity from generic label", {
   expect_true(rare[length(corpus) - 1L])      # "cryptozoology" is rare
   expect_true(rare[length(corpus)])
 })
+
+test_that("institution-type variants merge, but only with enough name left", {
+  # Decided 2026-09-07: the physical institution is the subject, so the
+  # society that runs a museum is the same place as the museum.
+  expect_gte(dn_name_similarity("washington county historical museum",
+                                "washington county historical society"),
+             DN_NAME_SIM_MIN)
+  expect_gte(dn_name_similarity("midland county history museum",
+                                "midland county history society"),
+             DN_NAME_SIM_MIN)
+
+  # The two-token guard stops the TYPE-STRIPPED measure from collapsing
+  # "springfield museum" to "springfield" and matching everything nearby.
+  expect_equal(dn_strip_institution_type("springfield museum"), "springfield")
+
+  # KNOWN RISK, documented rather than asserted away: Jaro-Winkler's prefix
+  # weighting scores this pair ~0.90 on the shared "springfield " prefix alone,
+  # so the guard above does not actually keep them apart. Names sharing a long
+  # place prefix and differing only in the distinguishing word are the most
+  # likely over-merge in the whole pipeline — "Springfield Art Museum" vs
+  # "Springfield Science Museum" is a real configuration.
+  #
+  # Deliberately NOT tuned before the labelled sample comes back: adjusting the
+  # measure to satisfy an intuition is exactly what the sample exists to
+  # replace. See HANDOFF.md, open question 1.
+  expect_gt(dn_name_similarity("springfield museum", "springfield society"), 0.85)
+})
+
+test_that("the museum name leads and the alternate is preserved", {
+  expect_equal(dn_institution_type("county historical society"), "society")
+  expect_equal(dn_institution_type("county historical museum"), "museum")
+  expect_true(is.na(dn_institution_type("old jail")))
+})

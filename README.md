@@ -5,8 +5,9 @@ names in the United States: museums that claim to be *the* one, and churches
 that solved the same problem by numbering themselves.
 
 Start with **[DESIGN.md](DESIGN.md)** — questions, data sources, metric
-definitions, and the phase plan. Analogous namespaces worth a future post are
-tracked in **[LEADS.md](LEADS.md)**.
+definitions, decisions, and the phase plan. **[HANDOFF.md](HANDOFF.md)** is the
+fastest way to resume work: current state, the next task, and the traps. Analogous
+namespaces worth a future post are tracked in **[LEADS.md](LEADS.md)**.
 
 ## Setup
 

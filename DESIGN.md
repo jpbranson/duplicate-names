@@ -408,6 +408,12 @@ real querying but needs hosting — shinyapps.io or Posit Connect — which is a
 operational commitment than a blogdown site. Static first is the recommendation; revisit
 only if the interactions the posts suggest genuinely can't be done client-side.
 
+**Required of the map, not optional:** every entity that carries `alt_names` must expose
+them — a footnote, a popup line, whatever fits — because the map is where the merge
+decisions become visible. A reader looking at one pin labelled "Washington County
+Historical Museum" is entitled to know that the historical society at the same address was
+folded into it (§9 decision 7).
+
 At our scale — tens of thousands of points, not millions — plain GeoJSON is sufficient and
 no tiling is required. Should PMTiles become necessary later, note that `tippecanoe` does
 not build natively on Windows: that would mean WSL, and it is a reason to avoid needing
@@ -508,7 +514,23 @@ Settled 2026-09-07:
    The one thing to watch: a normalizer tuned only against museum names will have
    museum-shaped blind spots. Phase 1b must re-run the gold set with church cases added
    rather than assuming L3 generalizes.
-6. **Blog integration — defaulted, not blocked.** The blog repo is mid-rework, so §7.3
+6. **Counting policy — closed museums are excluded from counts but kept in the data.**
+   Exclusions are flags with a reason (`counted` / `exclusion_reason`), never deletions, so
+   any of them can be audited or reversed by a reader of the published dataset.
+7. **The physical institution is the unit of analysis.** Where a site holds both a museum
+   and the historical society that runs it, they are **one** entity: the museum name leads
+   and the society name is preserved in `alt_names`. Same for a relocation — the
+   International Cryptozoology Museum is one entity, at Bangor, with the Portland records
+   retained and flagged rather than dropped.
+
+   **`alt_names` carries a publication obligation, not just bookkeeping.** The eventual map
+   must footnote the alternate names, so a reader can see that "Washington County
+   Historical Museum" and "Washington County Historical Society" were treated as one place
+   and judge that call themselves. 6,181 entities currently carry an alternate.
+
+   Note the effect on a headline: this merge moved `washington county historical society`
+   from 27 to 19, so the decision is visible in post 1's numbers and has to be stated there.
+8. **Blog integration — defaulted, not blocked.** The blog repo is mid-rework, so §7.3
    fixes sensible defaults in `R/config_blog.R` and the project proceeds. The iframe
    approach in §7.1 was chosen specifically to be robust to most of the unknowns.
 
