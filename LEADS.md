@@ -72,4 +72,33 @@ saturates, rather than centuries after?
 
 ## Surfaced during analysis
 
-*(nothing yet — Phase 2 has not started)*
+### Duplicate names nested inside duplicate names (Phase 1a, 2026-09-07)
+The most duplicated museum names in the raw Overture + IMLS pull are not
+singular claims at all — they are *productive templates*:
+`Washington County Historical Society` (27), `Union County` (17), `Jackson
+County` (15), `Monroe` (14), `Wayne` (13), `Franklin`/`Greene`/`Jefferson`/
+`Madison` (12 each).
+
+The interesting part is that this duplication is **downstream of a different
+duplication**. There are ~31 Washington Counties in the US; the historical
+societies are duplicated because the *counties* are. The collision isn't in the
+museum namespace, it's inherited from the county namespace one level up.
+
+**Question:** which duplicated names are original, and which are merely
+inherited from a duplicated place name? That is a genuinely different question
+from either "who claims to be THE one" or "which chains have many branches" —
+a third category alongside the singular-claim and franchise cases, and it needs
+its own treatment in post 1 rather than being lumped into the generic tail.
+*Data:* already in hand. Census/GNIS county and place names give the upstream
+duplication directly.
+
+### Institutions whose name is just their category
+`art gallery` (37), `planetarium` (14), `fine arts gallery` (12), plus 17 rows
+with an empty name. These are POI records where the mapper typed the category
+instead of a name.
+
+Mostly a cleaning problem — they must not be counted as duplicates — but it
+raises a real question for the churches post too: how many institutions have no
+distinct name at all? A congregation listed only as "Church" is a data gap, but
+a museum whose actual signage reads "Art Gallery" is a naming *choice*, and the
+two are hard to tell apart from POI data alone. Worth a paragraph, not a post.

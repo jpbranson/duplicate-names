@@ -42,18 +42,39 @@ test_that("dn_bind_sources catches a duplicate source_id", {
   one <- dplyr::add_row(
     dn_schema_raw(),
     source = "gnis", source_id = "dup", category = "place_of_worship",
+    category_raw = "religious_organization",
     name_raw = "First Baptist Church", lon = -90, lat = 35, country = "US",
     denomination = NA_character_, religion = NA_character_,
     operator = NA_character_, wikidata_id = NA_character_,
-    confidence = NA_real_, retrieved = Sys.Date()
+    confidence = NA_real_, operating_status = NA_character_, retrieved = Sys.Date()
   )
-  # A repeated id means a paging bug in a fetcher. Downstream it would look
-  # exactly like a duplicate NAME, which is the thing this project measures.
-  expect_error(dn_bind_sources(one, one), "Duplicate source_id")
+  # An EXACT duplicate is the source shipping one record twice — IMLS does
+  # this once, where a museum appears in two of its three files. Collapse it.
+  expect_message(out <- dn_bind_sources(one, one), "collapsed")
+  expect_equal(nrow(out), 1L)
 })
 
-test_that("dn_bind_sources accepts the empty Phase 0 sources", {
-  expect_silent(
-    dn_bind_sources(src_overture(), src_osm(), src_gnis(), src_imls(), src_hifld())
+test_that("dn_bind_sources rejects a reused source_id with different content", {
+  base <- dplyr::add_row(
+    dn_schema_raw(),
+    source = "gnis", source_id = "dup", category = "place_of_worship",
+    category_raw = "religious_organization",
+    name_raw = "First Baptist Church", lon = -90, lat = 35, country = "US",
+    denomination = NA_character_, religion = NA_character_,
+    operator = NA_character_, wikidata_id = NA_character_,
+    confidence = NA_real_, operating_status = NA_character_, retrieved = Sys.Date()
   )
+  other <- base
+  other$name_raw <- "Second Baptist Church"
+
+  # Same id, different record: a paging bug, or source_id is not a key.
+  # Downstream this would look exactly like a duplicate NAME, which is the
+  # thing this project measures — so refuse rather than guess.
+  expect_error(dn_bind_sources(base, other), "DIFFERING content")
+})
+
+test_that("dn_bind_sources accepts the empty church stubs", {
+  # Only the Phase 1b stubs: src_overture() and src_imls() now hit the network
+  # and the filesystem, so they do not belong in a unit test.
+  expect_silent(dn_bind_sources(src_osm(), src_gnis(), src_hifld()))
 })

@@ -1,7 +1,14 @@
 # src_others.R ------------------------------------------------------------
-# The four supporting spine sources (DESIGN.md §3). All STUBS for Phase 0 —
-# each returns a schema-valid empty table so the DAG runs end to end, and each
-# carries the notes needed to implement it in Phase 1.
+# PHASE 1b — CHURCHES. Deferred, not dropped (DESIGN.md §9, decision 5).
+#
+# Phase 1 runs museums-first, so these four sources are still stubs returning
+# schema-valid empty tables. They stay here with their notes intact because
+# the schema is already church-shaped (denomination, religion, ordinal,
+# place_geoid) — Phase 1b extends the pipeline rather than reopening it.
+#
+# When 1b starts, note that a normalizer tuned only on museum names will have
+# museum-shaped blind spots: re-run the gold set with church cases ADDED
+# rather than assuming the L3 gazetteer generalizes.
 
 #' GNIS — the retired Church feature class, 2021 archive
 #'
@@ -19,17 +26,6 @@ src_gnis <- function() {
   dn_schema_raw()
 }
 
-#' IMLS Museum Universe Data File
-#'
-#' ~30k US museums. Last updated FY2015Q3 and explicitly not maintained, so it
-#' misses everything founded since — including, quite possibly, some of the
-#' collisions the museums post is about. Use it to catch institutions that
-#' commercial POI feeds miss, not as the population.
-src_imls <- function() {
-  # TODO(phase-1): DISCIPL code carries the museum type (ART, HST, NAT, ...),
-  # which is a ready-made check on the name-derived `subject` field in §4.2.
-  dn_schema_raw()
-}
 
 #' HIFLD All Places of Worship
 #'
@@ -63,15 +59,29 @@ dn_bind_sources <- function(...) {
   })
   out <- dplyr::bind_rows(parts)
 
-  # source_id must be unique within a source; a duplicate here means a paging
-  # bug in the fetcher, and it would masquerade downstream as a duplicate NAME,
-  # which is precisely the thing this project measures.
+  # source_id must be unique within a source, because a repeated id would
+  # masquerade downstream as a duplicate NAME — precisely the thing this
+  # project measures. Two cases, and they mean different things:
+  #
+  #   identical rows  -> the source itself ships the record twice. IMLS does
+  #                      this once (one museum appears in two of its three
+  #                      files). Harmless; collapse it.
+  #   differing rows  -> a real problem: a paging bug, or an id that isn't
+  #                      actually a key. Refuse to guess which row is right.
+  before <- nrow(out)
+  out <- dplyr::distinct(out)
+  if (nrow(out) < before) {
+    message(sprintf("[bind] collapsed %d exactly-duplicated source row(s)",
+                    before - nrow(out)))
+  }
+
   dup <- out |>
     dplyr::count(source, source_id) |>
     dplyr::filter(n > 1L)
   if (nrow(dup) > 0L) {
-    stop(sprintf("Duplicate source_id in: %s. Likely a paging bug in the fetcher.",
-                 paste(unique(dup$source), collapse = ", ")), call. = FALSE)
+    stop(sprintf(
+      "Duplicate source_id with DIFFERING content in: %s (%d id(s)).\nLikely a paging bug, or source_id is not a key for that source.",
+      paste(unique(dup$source), collapse = ", "), nrow(dup)), call. = FALSE)
   }
 
   dn_validate(out, dn_schema_raw(), label = "raw_all")

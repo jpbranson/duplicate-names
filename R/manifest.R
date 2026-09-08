@@ -53,7 +53,7 @@ dn_fetch <- function(url, label, dest = NULL, expect_sha256 = NULL,
   }
 
   message(sprintf("[%s] downloading %s", label, url))
-  curl::curl_download(url, dest, quiet = FALSE, mode = "wb")
+  curl::curl_download(url, dest, quiet = TRUE, mode = "wb")
 
   sha <- digest::digest(dest, algo = "sha256", file = TRUE)
   if (!is.null(expect_sha256) && !identical(sha, expect_sha256)) {
@@ -73,6 +73,36 @@ dn_fetch <- function(url, label, dest = NULL, expect_sha256 = NULL,
   dn_manifest_write(m, path)
 
   invisible(dest)
+}
+
+#' Record a remote QUERY the way dn_fetch() records a download
+#'
+#' Overture is queried in place rather than downloaded, so there is no file at
+#' a URL to checksum — but "which release, which filter, how many rows, when"
+#' is exactly what makes a published count defensible later. Without this, a
+#' figure built on the 2026-08-19.0 release is indistinguishable from one built
+#' on any other.
+dn_record_query <- function(label, source, detail, path, n_rows,
+                            manifest = DN_MANIFEST) {
+  m   <- dn_manifest_read(manifest)
+  idx <- which(vapply(m$queries %||% list(),
+                      function(d) identical(d$label, label), logical(1)))
+
+  entry <- list(
+    label     = label,
+    source    = source,
+    detail    = detail,
+    path      = path,
+    n_rows    = n_rows,
+    sha256    = digest::digest(path, algo = "sha256", file = TRUE),
+    bytes     = unname(file.size(path)),
+    retrieved = format(Sys.time(), "%Y-%m-%dT%H:%M:%S%z")
+  )
+
+  if (is.null(m$queries)) m$queries <- list()
+  if (length(idx) == 1L) m$queries[[idx]] <- entry else m$queries <- c(m$queries, list(entry))
+  dn_manifest_write(m, manifest)
+  invisible(entry)
 }
 
 #' Path of a previously fetched file, by label

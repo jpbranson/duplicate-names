@@ -460,8 +460,9 @@ Supporting files now in place: `R/config_blog.R`, `R/theme_dupnames.R`, `R/embed
 | Phase | Work | Exit criterion |
 |---|---|---|
 | **0. Scaffold** ✅ **done 2026-09-07** | `git init`, RStudio project, renv pinned to R 4.4 (138 packages), schema contract, manifest machinery, source stubs, gold-set tests | ✅ `targets::tar_make()` runs end to end; 42 tests pass; `entities.parquet` written with 0 rows / 31 cols matching the contract |
-| **1. Acquire + resolve** | Pull the five spine sources (US); build the normalizer with its gold-set tests; entity resolution | A single `entities.parquet` with provenance and country code, plus a measured resolution error rate on a hand-labelled sample |
+| **1a. Acquire + resolve — MUSEUMS** ◀ *current* | Overture (museum categories) + IMLS + Wikidata; the L3 gazetteer; entity resolution | `entities.parquet` covering museums, plus a measured resolution error rate on a hand-labelled sample |
 | **2. Museums analysis → D1** | M1–M4; verify top-20 collisions by hand; ggplot2 figures + `reactable` rank table; draft `index.Rmd` | Post 1 knits from `payload/` alone with no pipeline dependency; every headline number hand-verified |
+| **1b. Acquire + resolve — CHURCHES** | GNIS, HIFLD, OSM, Overture religious categories; Census places denominator | Same, extended to ~250k congregations |
 | **3. Churches analysis → D2** | C1–C4; territory maps as `mapgl` embeds; ladder; naming cultures; emit the multiplicity list for post 4 | Post 2 drafted; embeds load standalone in a bare browser tab and have static fallbacks |
 | **4. Dashboard → D6** | Generalize the post-2 embeds into an arbitrary-category explorer | Deployed and queryable beyond churches and museums |
 | **5. Post 4 → D4** *(later)* | Historical sourcing on the multiplicity list from Phase 3 | — |
@@ -491,7 +492,23 @@ Settled 2026-09-07:
 4. **First Baptist racial split — its own post (D4).** Post 2 surfaces and names the
    pattern, and emits the municipal multiplicity list; post 4 tells the history with real
    historical sourcing. See §6.4.
-5. **Blog integration — defaulted, not blocked.** The blog repo is mid-rework, so §7.3
+5. **Phase 1 runs museums-first, in two halves (1a then 1b).** Post 1 needs only Overture +
+   IMLS + Wikidata over ~30k museums, which reaches a publishable post sooner and proves the
+   normalizer and entity resolution on a tractable population before facing ~250k
+   congregations, where the same bugs would be slower to find and costlier to fix.
+
+   **Churches are deferred, not dropped.** Phase 1b still owes: GNIS (the 2021 Church
+   archive), HIFLD, OSM (for the `denomination` tag C4 depends on), Overture's religious
+   categories, and the `tigris` Census-places denominator for C2. The source stubs for all
+   of these stay in `R/src_others.R` with their Phase 1 notes intact — nothing about the
+   churches work is being unwound, it is queued. The schema in `R/schema.R` is already
+   church-shaped (`denomination`, `religion`, `ordinal`, `place_geoid`), so 1b extends the
+   pipeline rather than reopening it.
+
+   The one thing to watch: a normalizer tuned only against museum names will have
+   museum-shaped blind spots. Phase 1b must re-run the gold set with church cases added
+   rather than assuming L3 generalizes.
+6. **Blog integration — defaulted, not blocked.** The blog repo is mid-rework, so §7.3
    fixes sensible defaults in `R/config_blog.R` and the project proceeds. The iframe
    approach in §7.1 was chosen specifically to be robust to most of the unknowns.
 

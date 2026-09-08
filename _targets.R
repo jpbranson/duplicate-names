@@ -4,11 +4,15 @@
 # Shape: expensive cacheable stages up front (source pulls, normalization,
 # resolution), cheap metrics fanning out behind them. Change a metric and only
 # that metric re-runs.
+#
+# PHASE 1a — MUSEUMS. Churches are queued, not cancelled; see the block at the
+# bottom and DESIGN.md §9 decision 5.
 
 library(targets)
 
 tar_option_set(
-  packages = c("dplyr", "tibble", "tidyr", "stringi", "arrow", "jsonlite", "digest"),
+  packages = c("dplyr", "tibble", "tidyr", "stringi", "arrow", "jsonlite",
+               "digest", "readr", "DBI", "duckdb", "curl"),
   format   = "rds",
   seed     = 20260907L
 )
@@ -17,18 +21,15 @@ tar_source("R")
 
 list(
 
-  ## --- acquisition -------------------------------------------------------
-  # Phase 0: every src_*() returns a schema-valid empty table.
-  tar_target(raw_overture, src_overture()),
-  tar_target(raw_osm,      src_osm()),
-  tar_target(raw_gnis,     src_gnis()),
-  tar_target(raw_imls,     src_imls()),
-  tar_target(raw_hifld,    src_hifld()),
+  ## --- acquisition: museums ---------------------------------------------
+  # Both cache to data/raw/*.parquet, so a re-run does not re-query S3 or
+  # re-download. Pass refresh = TRUE to force.
+  tar_target(raw_overture_museums, src_overture(category_like = "%museum%",
+                                                category = "museum",
+                                                country = "US")),
+  tar_target(raw_imls, src_imls()),
 
-  tar_target(
-    raw_all,
-    dn_bind_sources(raw_overture, raw_osm, raw_gnis, raw_imls, raw_hifld)
-  ),
+  tar_target(raw_all, dn_bind_sources(raw_overture_museums, raw_imls)),
 
   ## --- normalization + resolution ---------------------------------------
   tar_target(normalized, dn_normalize(raw_all)),
@@ -48,6 +49,19 @@ list(
   ),
 
   ## --- metrics -----------------------------------------------------------
-  tar_target(dup_museums,  metric_duplicate_counts(entities, category = "museum")),
-  tar_target(dup_churches, metric_duplicate_counts(entities, category = "place_of_worship"))
+  tar_target(dup_museums, metric_duplicate_counts(entities, category = "museum"))
 )
+
+## --- PHASE 1b: CHURCHES (queued) ----------------------------------------
+## Add back when 1b starts. The stubs already exist in R/src_others.R.
+##
+##   tar_target(raw_overture_worship, src_overture(
+##     category_like = "%religious%", category = "place_of_worship", country = "US")),
+##   tar_target(raw_gnis,  src_gnis()),
+##   tar_target(raw_hifld, src_hifld()),
+##   tar_target(raw_osm,   src_osm()),
+##   tar_target(census_places, tigris::places(cb = TRUE)),   # C2 denominator
+##
+## and extend dn_bind_sources() plus add:
+##   tar_target(dup_churches, metric_duplicate_counts(entities,
+##                                                    category = "place_of_worship"))

@@ -92,11 +92,12 @@ test_that("dn_normalize warns rather than silently producing bad name_core", {
   raw <- dplyr::add_row(
     raw,
     source = "test", source_id = "1", category = "museum",
+    category_raw = "museum",
     name_raw = "The International Cryptozoology Museum",
     lon = -68.77, lat = 44.80, country = "US",
     denomination = NA_character_, religion = NA_character_,
     operator = NA_character_, wikidata_id = NA_character_,
-    confidence = NA_real_, retrieved = Sys.Date()
+    confidence = NA_real_, operating_status = NA_character_, retrieved = Sys.Date()
   )
   expect_warning(dn_normalize(raw), "gazetteer")
 })

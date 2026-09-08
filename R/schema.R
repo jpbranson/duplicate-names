@@ -13,6 +13,13 @@ dn_schema_raw <- function() {
     source       = character(),  # "overture" | "osm" | "gnis" | "imls" | "hifld"
     source_id    = character(),  # id within that source; unique per source
     category     = character(),  # "museum" | "place_of_worship"
+
+    # The source's own subtype (Overture "history_museum", IMLS DISCIPL code,
+    # OSM museum=*). An independent check on the name-derived `subject` in
+    # §4.2 — a place called "Heritage Center" that Overture types as
+    # history_museum is evidence the name alone would have missed.
+    category_raw = character(),
+
     name_raw     = character(),
     lon          = double(),
     lat          = double(),
@@ -22,6 +29,12 @@ dn_schema_raw <- function() {
     operator     = character(),  # drives franchise detection (§4.4)
     wikidata_id  = character(),
     confidence   = double(),     # source's own, NA where not provided
+
+    # Trap §6.2: POI data is full of ghosts and museums close constantly.
+    # Counting the dead inflates every duplicate count, so carry the source's
+    # own liveness signal rather than discovering the problem in a figure.
+    operating_status = character(),
+
     retrieved    = as.Date(character())
   )
 }
