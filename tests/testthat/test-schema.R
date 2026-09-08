@@ -78,3 +78,14 @@ test_that("dn_bind_sources accepts the empty church stubs", {
   # and the filesystem, so they do not belong in a unit test.
   expect_silent(dn_bind_sources(src_osm(), src_gnis(), src_hifld()))
 })
+
+test_that("rare-token gate distinguishes identity from generic label", {
+  # A shared name only implies a shared institution when the name is
+  # distinctive. Both of these appear at ~3 sites; only one is one museum.
+  corpus <- c(rep("art museum state", 40), rep("gallery art county", 40),
+              "cryptozoology international museum", "museum quilt barbed wire")
+  rare <- dn_has_rare_token(corpus)
+  expect_false(rare[1])                       # "state art museum" - all generic
+  expect_true(rare[length(corpus) - 1L])      # "cryptozoology" is rare
+  expect_true(rare[length(corpus)])
+})

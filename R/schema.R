@@ -35,6 +35,16 @@ dn_schema_raw <- function() {
     # own liveness signal rather than discovering the problem in a figure.
     operating_status = character(),
 
+    # When the SOURCE last touched this record — not when we downloaded it.
+    #
+    # operating_status is not sufficient on its own. The International
+    # Cryptozoology Museum left Portland for Bangor in 2016, and Overture
+    # still carries a Portland record marked "open". What separates them is
+    # this field plus confidence: Bangor is 0.98 / 2026-08, the Portland
+    # ghosts are 0.88 and 0.77 / 2025-08. Staleness is not flagged; it has to
+    # be inferred.
+    source_update_time = as.Date(character()),
+
     retrieved    = as.Date(character())
   )
 }
@@ -71,6 +81,22 @@ dn_schema_entity <- function() {
       source_set   = character(),  # e.g. "gnis|hifld|overture"
       is_franchise = logical(),    # §4.4; excluded from headline collisions
       chain_id     = character(),
+
+      # Sites. One institution can occupy more than one location, and a
+      # relocation leaves the old address behind in the data looking exactly
+      # like a second branch. site_id groups records by location; an entity
+      # with n_sites > 1 is either a genuine multi-site institution or a move,
+      # and only is_primary_site is treated as where it is now.
+      site_id         = character(),
+      n_sites         = integer(),
+      is_primary_site = logical(),
+
+      # Counting policy, kept as a FLAG rather than a filter: excluded rows
+      # stay in the published dataset with the reason attached, so a reader
+      # can audit or reverse the decision. Every headline number in post 1
+      # is computed over counted == TRUE.
+      counted          = logical(),
+      exclusion_reason = character(),
 
       # Geographic joins. place_geoid is the denominator for the municipal
       # exclusivity test (C2), which is the core churches result.

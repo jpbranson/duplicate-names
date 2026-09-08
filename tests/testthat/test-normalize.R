@@ -101,3 +101,12 @@ test_that("dn_normalize warns rather than silently producing bad name_core", {
   )
   expect_warning(dn_normalize(raw), "gazetteer")
 })
+
+test_that("'&' and 'and' normalize to the same key", {
+  # Overture carries this museum both ways. Left unhandled the two spellings
+  # produce two keys and one institution counts twice.
+  expect_equal(dn_name_clean("Cryptozoology & Paranormal Museum"),
+               dn_name_clean("Cryptozoology and Paranormal Museum"))
+  expect_equal(dn_name_key(dn_name_clean("Arts & Science Center")),
+               dn_name_key(dn_name_clean("Arts and Science Center")))
+})

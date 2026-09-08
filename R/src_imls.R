@@ -67,6 +67,11 @@ src_imls <- function(cache = "data/raw/imls_museums.parquet", refresh = FALSE) {
     # honest value — claiming "open" would launder a 2018 belief into a 2026
     # fact and quietly inflate duplicate counts with institutions that closed.
     operating_status = NA_character_,
+    # The CSVs are dated 2018-11-09 and will never be updated. Recording that
+    # honestly is what stops IMLS from being treated as evidence that a museum
+    # exists NOW — it is evidence that one existed in 2018. Resolution uses
+    # this to prefer a fresher source when two disagree about a location.
+    source_update_time = as.Date("2018-11-09"),
     retrieved        = Sys.Date()
   )
 

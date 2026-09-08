@@ -26,9 +26,9 @@
       },
       "path": "data/raw/overture_museum_2026-08-19.0.parquet",
       "n_rows": 29894,
-      "sha256": "5312f5f9b4d30d00e743247713d43dcdf990e201bdef8476bdd5f907f3da6361",
-      "bytes": 2423126,
-      "retrieved": "2026-09-07T19:40:21-0500"
+      "sha256": "448a5c8f87faf33360062b6fb6cf0a9e721773b2b860e791b2352db9710b72de",
+      "bytes": 2442773,
+      "retrieved": "2026-09-07T20:54:20-0500"
     },
     {
       "label": "imls_museums",
@@ -39,9 +39,9 @@
       },
       "path": "data/raw/imls_museums.parquet",
       "n_rows": 30109,
-      "sha256": "1603dd3e4d1b4c38c85b3e63814752983dfdc008a47f63474343eed1858fe5ad",
-      "bytes": 1239681,
-      "retrieved": "2026-09-07T19:44:02-0500"
+      "sha256": "0fd97847ae006f0b028c9c455895ffde20d1bff57f9d6aec8b492cccb8b6be1e",
+      "bytes": 1240074,
+      "retrieved": "2026-09-07T20:47:15-0500"
     }
   ]
 }

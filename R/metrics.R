@@ -7,8 +7,23 @@
 #' The band is not decoration. A collision that appears at L4 (token-sorted,
 #' stopwords dropped) but not at L3 is a fuzzy-match artifact, and a headline
 #' that only survives at L4 is not a headline (DESIGN.md §4.1).
+#'
+#' NOTE ON LEVEL CHOICE — the levels answer different questions, and for
+#' museums the default is L2 (`name_expanded`), not L3.
+#'
+#' L3 strips place names, which is right for churches: in "First Baptist Church
+#' of Springfield" the place is a qualifier on a name the denomination reuses
+#' everywhere. It is wrong for museums, where the place name is usually part of
+#' the institution's identity. Stripping turns "Pacific Tsunami Museum" into
+#' "Tsunami Museum" and merges "Maui Art Gallery" with every other "Art
+#' Gallery" in the country.
+#'
+#' So for museums:
+#'   L2 (name_expanded) answers "which NAMES are duplicated"      <- M1, M2
+#'   L3 (name_core)     answers "which SUBJECTS are duplicated"   <- M3
+#' Both are wanted; they are just not the same question.
 metric_duplicate_counts <- function(entities, category = NULL,
-                                    levels = c("name_core", "name_clean", "name_key")) {
+                                    levels = c("name_expanded", "name_core", "name_key")) {
   if (!is.null(category)) {
     entities <- dplyr::filter(entities, .data$category %in% !!category)
   }

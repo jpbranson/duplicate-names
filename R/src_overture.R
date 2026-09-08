@@ -79,7 +79,18 @@ src_overture <- function(category_like = "%museum%",
       brand.names.primary            AS operator,
       brand.wikidata                 AS wikidata_id,
       confidence                     AS confidence,
-      operating_status               AS operating_status
+      operating_status               AS operating_status,
+      -- Latest timestamp a DATA PROVIDER touched this record.
+      --
+      -- Overture's own entries in `sources` (confidence_calculation,
+      -- operating_status_signal) are stamped with the release date, so
+      -- including them pins every row to the same day and destroys the signal
+      -- entirely. Only the upstream contributors — Microsoft, Meta,
+      -- Foursquare — say anything about how current the record is.
+      CAST(list_max(list_transform(
+             list_filter(sources, s -> s.provider IS DISTINCT FROM 'overture'),
+             s -> try_cast(s.update_time AS TIMESTAMP))) AS DATE)
+                                     AS source_update_time
     FROM read_parquet('%s')
     WHERE bbox.xmin BETWEEN %f AND %f
       AND bbox.ymin BETWEEN %f AND %f

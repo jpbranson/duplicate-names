@@ -11,7 +11,7 @@
 library(targets)
 
 tar_option_set(
-  packages = c("dplyr", "tibble", "tidyr", "stringi", "arrow", "jsonlite",
+  packages = c("dplyr", "sf", "units", "tigris", "tibble", "tidyr", "stringi", "arrow", "jsonlite",
                "digest", "readr", "DBI", "duckdb", "curl"),
   format   = "rds",
   seed     = 20260907L
@@ -32,9 +32,11 @@ list(
   tar_target(raw_all, dn_bind_sources(raw_overture_museums, raw_imls)),
 
   ## --- normalization + resolution ---------------------------------------
-  tar_target(normalized, dn_normalize(raw_all)),
+  tar_target(gazetteer, dn_gazetteer()),
+  tar_target(normalized, dn_normalize(raw_all, gazetteer)),
   tar_target(resolved,   dn_resolve(normalized)),
-  tar_target(entities,   dn_attach_places(dn_flag_franchises(resolved))),
+  tar_target(entities, dn_apply_counting_policy(dn_flag_franchises(resolved))),
+  tar_target(multisite_review, dn_flag_multisite_review(entities)),
 
   # The publishable derived dataset (D7). Parquet so it is usable outside R.
   tar_target(
@@ -49,7 +51,8 @@ list(
   ),
 
   ## --- metrics -----------------------------------------------------------
-  tar_target(dup_museums, metric_duplicate_counts(entities, category = "museum"))
+  tar_target(dup_museums, metric_duplicate_counts(
+    dplyr::filter(entities, .data$counted), category = "museum"))
 )
 
 ## --- PHASE 1b: CHURCHES (queued) ----------------------------------------

@@ -63,7 +63,11 @@ dn_name_clean <- function(x) {
     stringi::stri_trans_nfkc() |>
     stringi::stri_trans_tolower() |>
     stringi::stri_trans_general("Latin-ASCII") |>
-    stringi::stri_replace_all_regex("[^a-z0-9&' ]+", " ") |>
+    # "&" and "and" are the same word. Left alone they split one institution
+    # into two keys — the Cryptozoology & Paranormal Museum appears both ways
+    # in Overture and failed to merge.
+    stringi::stri_replace_all_regex("\\s*&\\s*", " and ") |>
+    stringi::stri_replace_all_regex("[^a-z0-9' ]+", " ") |>
     stringi::stri_replace_all_regex("^\\s*the\\s+", "") |>
     stringi::stri_replace_all_regex("\\s+", " ") |>
     stringi::stri_trim_both()
@@ -85,12 +89,11 @@ dn_name_expand <- function(x) {
 #' "Museum of Flight", which are names, not locations.
 dn_name_core <- function(x, gazetteer = NULL) {
   if (is.null(gazetteer)) {
-    # PHASE 0: pass-through. Duplicate counts computed on this are WRONG —
-    # they will scatter one congregation across many keys. dn_normalize()
-    # warns loudly rather than letting that pass unnoticed.
+    # No gazetteer: pass through, and dn_normalize() warns. Duplicate counts
+    # computed on this are WRONG — one institution scatters across many keys.
     return(x)
   }
-  stop("dn_name_core(): gazetteer path not implemented (Phase 1).", call. = FALSE)
+  dn_strip_locative(x, gazetteer)
 }
 
 #' L4 — token sort + stopword removal, for fuzzy grouping
