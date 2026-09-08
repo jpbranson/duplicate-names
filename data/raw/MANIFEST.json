@@ -39,9 +39,9 @@
       },
       "path": "data/raw/imls_museums.parquet",
       "n_rows": 30109,
-      "sha256": "0fd97847ae006f0b028c9c455895ffde20d1bff57f9d6aec8b492cccb8b6be1e",
-      "bytes": 1240074,
-      "retrieved": "2026-09-07T20:47:15-0500"
+      "sha256": "f412b6186fefa91436ec066ea1ebae29b7f1b2fbce8f75bd12e6114ff35f254e",
+      "bytes": 1240159,
+      "retrieved": "2026-09-07T21:20:27-0500"
     }
   ]
 }

@@ -33,7 +33,12 @@ src_imls <- function(cache = "data/raw/imls_museums.parquet", refresh = FALSE) {
   if (!length(files)) stop("[imls] no CSVs found in the archive.", call. = FALSE)
 
   parts <- lapply(files, function(f) {
+    # The 2018 CSVs are Windows-1252, not UTF-8. Read as UTF-8 they carry raw
+    # \x92 (curly apostrophe), \x96 (en dash) and \xa0 (nbsp) in 42 names, so
+    # "CHILDREN\x92S MUSEUM" never matches Overture's "Children's Museum" and
+    # those museums silently fail to resolve across sources.
     x <- readr::read_csv(f, show_col_types = FALSE, progress = FALSE,
+                         locale = readr::locale(encoding = "Windows-1252"),
                          col_types = readr::cols(.default = readr::col_character()))
     # File 1 names the column DISCIPL; files 2 and 3 name it DISCIPLINE.
     if (!"DISCIPLINE" %in% names(x) && "DISCIPL" %in% names(x)) {

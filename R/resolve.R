@@ -15,7 +15,12 @@
 # Portland address marked "open". Without an entity layer above sites, that
 # reads as two museums with the same name — a duplicate that never existed.
 
-DN_SITE_RADIUS_M <- 150   # records within this distance are the same place
+DN_SITE_RADIUS_M <- 150   # records within this distance may be the same place
+
+# Name-similarity floor for merging two records at the same location.
+# Provisional: this is the number the hand-labelled sample exists to calibrate
+# (see dn_build_labelling_sample()). Do not treat it as settled.
+DN_NAME_SIM_MIN <- 0.85
 
 # A name found at more sites than this is a generic label, not one
 # institution with branches. Below it, same-name sites merge into one entity.
@@ -45,10 +50,11 @@ dn_resolve <- function(normalized, radius_m = DN_SITE_RADIUS_M) {
   x <- normalized
   x$.row <- seq_len(nrow(x))
 
-  # --- 1. sites: same name key, within radius --------------------------
-  # Blocking on name_key keeps the pairwise work tractable; without it this is
-  # 60k^2 comparisons.
-  x$site_id <- dn_cluster_by_name_and_distance(x, radius_m)
+  # --- 1. sites: geographically close AND similarly named ---------------
+  # Blocking is geographic rather than by name. Sources disagree about names
+  # far more often than about locations, so an exact-name block never puts an
+  # Overture record and its IMLS counterpart in the same bucket to compare.
+  x$site_id <- dn_cluster_sites(x, radius_m)
 
   # --- 2. entities: sites sharing a DISTINCTIVE name --------------------
   # Merging every site that shares a name is wrong, and wrong at scale: dozens
@@ -150,38 +156,82 @@ dn_resolve <- function(normalized, radius_m = DN_SITE_RADIUS_M) {
   dn_validate(out, dn_schema_entity(), label = "entities")
 }
 
-#' Cluster records into sites: same name_key, within radius_m
+#' Similarity between two institution names
 #'
-#' Uses sf on s2 geometry, so distances are true great-circle metres. Do not
+#' Two measures, because the sources fail in different ways.
+#'
+#'   Jaro-Winkler catches spelling and punctuation drift between two records
+#'   of the same signage name.
+#'
+#'   Token containment catches the signage-vs-legal-name gap (§6.1), which
+#'   edit distance handles badly: "springfield art museum" against
+#'   "springfield art museum association incorporated" is a long edit distance
+#'   but perfect containment. IMLS carries legal names, so this case is not an
+#'   edge case here — it is most of the cross-source work.
+#'
+#' The maximum of the two is used: either kind of agreement is agreement.
+dn_name_similarity <- function(a, b) {
+  jw <- 1 - stringdist::stringdist(a, b, method = "jw", p = 0.1)
+
+  ta <- stringi::stri_split_fixed(a, " ")
+  tb <- stringi::stri_split_fixed(b, " ")
+  contain <- vapply(seq_along(ta), function(i) {
+    x <- setdiff(unique(ta[[i]]), DN_NAME_STOPWORDS)
+    y <- setdiff(unique(tb[[i]]), DN_NAME_STOPWORDS)
+    if (!length(x) || !length(y)) return(0)
+    length(intersect(x, y)) / min(length(x), length(y))
+  }, numeric(1))
+
+  pmax(jw, contain, na.rm = TRUE)
+}
+
+DN_NAME_STOPWORDS <- c("of", "the", "at", "in", "and", "a", "inc",
+                       "incorporated", "association", "foundation", "trust")
+
+#' Cluster records into sites: geographically close AND similarly named
+#'
+#' Blocking is geographic, not by name. That is the inversion that makes
+#' cross-source matching work at all: Overture and IMLS frequently disagree
+#' about a museum's name but rarely about where it is, so an exact-name block
+#' never puts the two records in the same bucket to be compared.
+#'
+#' Distances come from sf on s2 geometry — true great-circle metres. Do not
 #' project to a national CRS and measure Euclidean distance (DESIGN.md §7).
-dn_cluster_by_name_and_distance <- function(x, radius_m) {
-  out <- character(nrow(x))
-  idx <- split(seq_len(nrow(x)), x$name_key)
+dn_cluster_sites <- function(x, radius_m, min_sim = DN_NAME_SIM_MIN) {
+  pts  <- sf::st_as_sf(x[, c("lon", "lat")], coords = c("lon", "lat"), crs = 4326)
+  near <- sf::st_is_within_distance(pts, dist = units::set_units(radius_m, "m"))
 
-  for (ids in idx) {
-    if (length(ids) == 1L) {
-      out[ids] <- paste0(x$name_key[ids[1]], "#1")
-      next
-    }
-    pts <- sf::st_as_sf(x[ids, c("lon", "lat")], coords = c("lon", "lat"), crs = 4326)
-    near <- sf::st_is_within_distance(pts, dist = units::set_units(radius_m, "m"))
-
-    # Connected components: transitive closure of "within radius".
-    comp <- integer(length(ids)); k <- 0L
-    for (i in seq_along(ids)) {
-      if (comp[i] != 0L) next
-      k <- k + 1L
-      stack <- i
-      while (length(stack)) {
-        j <- stack[1]; stack <- stack[-1]
-        if (comp[j] != 0L) next
-        comp[j] <- k
-        stack <- c(stack, setdiff(near[[j]], which(comp != 0L)))
-      }
-    }
-    out[ids] <- paste0(x$name_key[ids[1]], "#", comp)
+  n <- nrow(x)
+  adj <- vector("list", n)
+  for (i in seq_len(n)) {
+    cand <- near[[i]]
+    cand <- cand[cand > i]                     # each pair considered once
+    if (!length(cand)) { adj[[i]] <- integer(0); next }
+    sim <- dn_name_similarity(rep(x$name_expanded[i], length(cand)),
+                              x$name_expanded[cand])
+    adj[[i]] <- cand[sim >= min_sim]
   }
-  out
+
+  # Symmetrise, then take connected components.
+  sym <- vector("list", n)
+  for (i in seq_len(n)) for (j in adj[[i]]) {
+    sym[[i]] <- c(sym[[i]], j); sym[[j]] <- c(sym[[j]], i)
+  }
+
+  comp <- integer(n); k <- 0L
+  for (i in seq_len(n)) {
+    if (comp[i] != 0L) next
+    k <- k + 1L
+    stack <- i
+    while (length(stack)) {
+      j <- stack[1]; stack <- stack[-1]
+      if (comp[j] != 0L) next
+      comp[j] <- k
+      nb <- sym[[j]]
+      if (length(nb)) stack <- c(stack, nb[comp[nb] == 0L])
+    }
+  }
+  sprintf("s%06d", comp)
 }
 
 dn_empty_entity_cols <- function(n) {

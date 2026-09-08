@@ -11,7 +11,7 @@
 library(targets)
 
 tar_option_set(
-  packages = c("dplyr", "sf", "units", "tigris", "tibble", "tidyr", "stringi", "arrow", "jsonlite",
+  packages = c("dplyr", "stringdist", "sf", "units", "tigris", "tibble", "tidyr", "stringi", "arrow", "jsonlite",
                "digest", "readr", "DBI", "duckdb", "curl"),
   format   = "rds",
   seed     = 20260907L
@@ -37,6 +37,10 @@ list(
   tar_target(resolved,   dn_resolve(normalized)),
   tar_target(entities, dn_apply_counting_policy(dn_flag_franchises(resolved))),
   tar_target(multisite_review, dn_flag_multisite_review(entities)),
+
+  # Phase 1a exit criterion: a MEASURED resolution error rate.
+  # Writes a CSV for hand labelling; dn_score_labels() reads it back.
+  tar_target(labelling_sheet, dn_build_labelling_sample(normalized), format = "file"),
 
   # The publishable derived dataset (D7). Parquet so it is usable outside R.
   tar_target(
