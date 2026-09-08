@@ -1,0 +1,25 @@
+# R / RStudio
+.Rproj.user/
+.Rhistory
+.RData
+.Ruserdata
+.Renviron
+
+# targets pipeline store — rebuildable, and large
+_targets/
+
+# Data. Raw downloads are immutable but big; MANIFEST.json is what makes them
+# reproducible, so it is the one thing here that IS tracked.
+data/raw/*
+!data/raw/MANIFEST.json
+data/processed/*
+!data/processed/.gitkeep
+
+# Build artifacts: embeds are generated, then deployed to the blog repo.
+# Static fallbacks live in the post bundles and ARE tracked.
+embeds/*.html
+embeds/*.png
+
+# Knitted output
+posts/**/*.html
+posts/**/index_files/

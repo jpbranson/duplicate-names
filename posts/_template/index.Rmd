@@ -1,0 +1,56 @@
+---
+title: "Post title"
+subtitle: ""
+author: "J.P. Branson"
+date: 2026-01-01
+slug: post-slug
+categories:
+  - data
+tags:
+  - names
+  - maps
+draft: true
+output:
+  blogdown::html_page:
+    toc: false
+    fig_caption: true
+---
+
+```{r setup, include = FALSE}
+# dn_root points at the analysis repo. When this bundle is copied into the
+# blog, the payload/ directory travels with it and _setup.R comes along too,
+# so nothing here reaches back into the pipeline.
+dn_root <- Sys.getenv("DUPNAMES_ROOT", unset = "../../..")
+source(file.path(dn_root, "posts", "_setup.R"))
+```
+
+Opening paragraph.
+
+## A chart
+
+```{r a-chart}
+# dat <- dn_payload("something.csv")
+# ggplot(dat, aes(x, y)) +
+#   geom_col(fill = dn_palette[["blue"]], width = 0.7) +
+#   labs(title = "...", subtitle = "...", caption = dn_caption(c("overture", "imls")))
+```
+
+## A map
+
+Built by the pipeline, not here — this chunk only emits the iframe.
+
+```{r a-map, results = "asis"}
+# cat(dn_iframe(
+#   slug    = "territory-first-baptist",
+#   caption = "Each point is a First Baptist Church.",
+#   title   = "Map of First Baptist Church locations"
+# ))
+```
+
+## Notes on method
+
+Every post carries a short, honest paragraph here: which normalization level the
+counts use, what the sensitivity band looks like at the levels either side, and
+what the entity-resolution error rate was. The numbers are artifacts of the
+normalizer and the post should say so rather than implying the data speaks for
+itself.

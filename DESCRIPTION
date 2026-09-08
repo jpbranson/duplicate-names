@@ -1,0 +1,44 @@
+Type: Project
+Title: Duplicate Place Names: Churches and Museums
+Description: Dependency declaration for the analysis pipeline behind a series
+    of blog posts on duplicated institutional names in the United States.
+    This is NOT an R package — "Type: Project" is renv's convention for a
+    project that wants explicit dependency declaration. The file exists so
+    renv snapshots what the project has committed to, rather than inferring
+    it from whichever packages happen to be referenced in code today; a
+    package planned but not yet called (see the Phase 1 stubs in R/) would
+    otherwise be silently dropped from renv.lock.
+Depends:
+    R (>= 4.4)
+Imports:
+    arrow,
+    blogdown,
+    curl,
+    DBI,
+    digest,
+    dplyr,
+    duckdb,
+    ggplot2,
+    glue,
+    htmlwidgets,
+    jsonlite,
+    knitr,
+    leaflet,
+    mapgl,
+    purrr,
+    ragg,
+    reactable,
+    readr,
+    rmarkdown,
+    scales,
+    sf,
+    stringdist,
+    stringi,
+    stringr,
+    svglite,
+    tarchetypes,
+    targets,
+    testthat,
+    tibble,
+    tidyr,
+    tigris
