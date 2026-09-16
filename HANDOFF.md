@@ -1,6 +1,6 @@
 # Handoff
 
-**Last session:** 2026-09-15 · **Phase:** 2 Old Jail review batch complete; headline review ongoing
+**Last session:** 2026-09-16 · **Phase:** 2 Old Jail review batch complete; headline review ongoing
 **Repo:** https://github.com/jpbranson/duplicate-names
 
 Read [DESIGN.md](DESIGN.md) for the plan and the numbered decisions, [LEADS.md](LEADS.md)
@@ -17,7 +17,7 @@ cd duplicate-names
 ```
 
 ```r
-renv::restore()      # ~138 packages, pinned
+renv::restore()      # 137 packages, pinned
 ```
 
 **Pin R to 4.4.** The lockfile records 4.4.2. On the previous machine R 4.6.1 was
@@ -310,6 +310,21 @@ Two known gaps that only matter for churches:
 ---
 
 ## 7. Session log
+
+2026-09-16 repository cleanup: removed two unreferenced test Parquet caches and
+package-only `.Rbuildignore`; retained the IMLS ZIP fixture and its provenance.
+Moved source binding into `R/schema.R`, reused the entity schema for empty resolution,
+and removed an unused manifest lookup, resolver bookkeeping and an unreachable guard.
+Removed five unused direct dependency declarations; only `tarchetypes` left the lockfile
+(137 packages remain), and the directly used `units` is now explicit. Planned church
+and publishing tools, legacy review fields and the unused `stale_before` argument remain.
+R 4.4.2: 195 assertions passed; all 29 targets built from cached inputs in an isolated
+workspace. With the original `C` collation, all target values and 14 exported files
+match the saved baseline exactly; all 129 protected files remain unchanged. The blog
+template renders, the archive CLI writes its 11 files and refuses overwrites,
+dependency checks pass, and 180 local links/13 R blocks validate.
+Alias ordering depends on collation; pinning that behavior is separate reproducibility
+work. The analysis queue is unchanged: Union County's 14 candidates and pending reviews.
 
 2026-09-15 pre-commit documentation audit: reviewed all 14 project Markdown/R Markdown
 files against code, saved targets and the dated evidence. Corrected the current queue,

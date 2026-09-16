@@ -208,7 +208,7 @@ for the remaining source checks and the
 | Path | What |
 |---|---|
 | `_targets.R` | Pipeline DAG |
-| `R/schema.R` | The contract between stages. Start here. |
+| `R/schema.R` | Stage contracts, validation and source binding. Start here. |
 | `R/src_*.R` | Implemented Overture/IMLS adapters; queued source stubs in `src_others.R` |
 | `R/normalize.R` | The name ladder — decides every headline number |
 | `R/gazetteer.R` | Place names and exceptions for L3 geography stripping |
@@ -226,6 +226,7 @@ for the remaining source checks and the
 | `data/processed/` | Baseline/reviewed Parquet, review sheets, identity audit and labelling sheet; gitignored |
 | [`data/validation/`](data/validation/README.md) | Human labels, sourced decisions, evidence packets and dated reports; index distinguishes live inputs from archives |
 | `scripts/archive_museum_review.R` | General review-packet archive helper; identity artifacts need separate preservation |
+| `tests/testthat/data/raw/` | Immutable IMLS ZIP fixture and provenance; adapter caches are ignored |
 
 ## Two things worth knowing before changing anything
 

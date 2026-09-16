@@ -8,40 +8,5 @@
       "bytes": 2864864,
       "retrieved": "2026-09-07T19:43:55-0500"
     }
-  ],
-  "queries": [
-    {
-      "label": "overture_museum",
-      "source": "overture",
-      "detail": {
-        "release": "2026-08-19.0",
-        "category_like": "%museum%",
-        "country": "US",
-        "bbox": {
-          "xmin": -180,
-          "xmax": -66,
-          "ymin": 17,
-          "ymax": 72
-        }
-      },
-      "path": "data/raw/overture_museum_2026-08-19.0.parquet",
-      "n_rows": 29894,
-      "sha256": "5312f5f9b4d30d00e743247713d43dcdf990e201bdef8476bdd5f907f3da6361",
-      "bytes": 2423126,
-      "retrieved": "2026-09-07T19:43:53-0500"
-    },
-    {
-      "label": "imls_museums",
-      "source": "imls",
-      "detail": {
-        "files": ["MuseumFile2018_File1_Nulls.csv", "MuseumFile2018_File2_Nulls.csv", "MuseumFile2018_File3_Nulls.csv"],
-        "keyed_on": "COMMONNAME"
-      },
-      "path": "data/raw/imls_museums.parquet",
-      "n_rows": 30109,
-      "sha256": "1603dd3e4d1b4c38c85b3e63814752983dfdc008a47f63474343eed1858fe5ad",
-      "bytes": 1239681,
-      "retrieved": "2026-09-07T19:43:55-0500"
-    }
   ]
 }

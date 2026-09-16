@@ -105,7 +105,6 @@ dn_strip_locative <- function(x, gaz) {
 
     # --- tail: "... of <place>" or "... <place>"
     for (start in seq(2L, length(tok))) {
-      if (length(tok) - start + 1L < 1L) next
       cand <- paste(tok[start:length(tok)], collapse = " ")
       pool <- by_tok[[tok[start]]]
       if (!is.null(pool) && cand %in% pool) {

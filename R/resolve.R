@@ -41,14 +41,9 @@ DN_RARE_TOKEN_MAX <- 25L
 dn_resolve <- function(normalized, radius_m = DN_SITE_RADIUS_M) {
   dn_validate(normalized, dn_schema_normalized(), label = "resolve input")
 
-  if (nrow(normalized) == 0L) {
-    return(dn_validate(
-      dplyr::bind_cols(normalized, dn_empty_entity_cols(0L)),
-      dn_schema_entity(), label = "entities"))
-  }
+  if (nrow(normalized) == 0L) return(dn_schema_entity())
 
   x <- normalized
-  x$.row <- seq_len(nrow(x))
 
   # --- 1. sites: geographically close AND similarly named ---------------
   # Blocking is geographic rather than by name. Sources disagree about names
@@ -168,8 +163,7 @@ dn_resolve <- function(normalized, radius_m = DN_SITE_RADIUS_M) {
       place_name       = NA_character_,
       counted          = NA,             # set by dn_apply_counting_policy()
       exclusion_reason = NA_character_
-    ) |>
-    dplyr::select(-".row")
+    )
 
   dn_validate(out, dn_schema_entity(), label = "entities")
 }
@@ -297,18 +291,6 @@ dn_cluster_sites <- function(x, radius_m, min_sim = DN_NAME_SIM_MIN) {
   sprintf("s%06d", comp)
 }
 
-dn_empty_entity_cols <- function(n) {
-  tibble::tibble(
-    entity_id = character(n), n_sources = integer(n), source_set = character(n),
-    is_franchise = logical(n), chain_id = character(n),
-    site_id = character(n), n_sites = integer(n), is_primary_site = logical(n),
-    primary_name = character(n), alt_names = character(n),
-    counted = logical(n), exclusion_reason = character(n),
-    state_fips = character(n), county_fips = character(n),
-    place_geoid = character(n), place_name = character(n)
-  )
-}
-
 #' Apply the counting policy
 #'
 #' Exclusions are FLAGS, not deletions: every excluded record stays in the
@@ -317,10 +299,7 @@ dn_empty_entity_cols <- function(n) {
 dn_apply_counting_policy <- function(entities, stale_before = NULL) {
   if (nrow(entities) == 0L) return(entities)
 
-  # A record attested only by a source that stopped updating years ago is not
-  # evidence the institution exists now. IMLS froze in 2018.
-  stale_before <- stale_before %||% (Sys.Date() - 365 * 5)
-
+  # Keep the existing stale_before argument; source age alone does not exclude rows.
   entities |>
     dplyr::mutate(
       exclusion_reason = dplyr::case_when(

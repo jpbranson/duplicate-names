@@ -1,7 +1,7 @@
 # src_others.R ------------------------------------------------------------
 # PHASE 1b — CHURCHES. Deferred, not dropped (DESIGN.md §9, decision 5).
 #
-# Phase 1 runs museums-first, so these four sources are still stubs returning
+# Phase 1 runs museums-first, so these three sources are still stubs returning
 # schema-valid empty tables. They stay here with their notes intact because
 # the schema is already church-shaped (denomination, religion, ordinal,
 # place_geoid) — Phase 1b extends the pipeline rather than reopening it.
@@ -49,40 +49,4 @@ src_osm <- function() {
   # TODO(phase-1): Geofabrik north-america extract, or Overpass for a bbox.
   # amenity=place_of_worship, tourism=museum.
   dn_schema_raw()
-}
-
-#' Bind all sources into one raw table
-dn_bind_sources <- function(...) {
-  parts <- list(...)
-  parts <- lapply(seq_along(parts), function(i) {
-    dn_validate(parts[[i]], dn_schema_raw(), label = paste0("source[", i, "]"))
-  })
-  out <- dplyr::bind_rows(parts)
-
-  # source_id must be unique within a source, because a repeated id would
-  # masquerade downstream as a duplicate NAME — precisely the thing this
-  # project measures. Two cases, and they mean different things:
-  #
-  #   identical rows  -> the source itself ships the record twice. IMLS does
-  #                      this once (one museum appears in two of its three
-  #                      files). Harmless; collapse it.
-  #   differing rows  -> a real problem: a paging bug, or an id that isn't
-  #                      actually a key. Refuse to guess which row is right.
-  before <- nrow(out)
-  out <- dplyr::distinct(out)
-  if (nrow(out) < before) {
-    message(sprintf("[bind] collapsed %d exactly-duplicated source row(s)",
-                    before - nrow(out)))
-  }
-
-  dup <- out |>
-    dplyr::count(source, source_id) |>
-    dplyr::filter(n > 1L)
-  if (nrow(dup) > 0L) {
-    stop(sprintf(
-      "Duplicate source_id with DIFFERING content in: %s (%d id(s)).\nLikely a paging bug, or source_id is not a key for that source.",
-      paste(unique(dup$source), collapse = ", "), nrow(dup)), call. = FALSE)
-  }
-
-  dn_validate(out, dn_schema_raw(), label = "raw_all")
 }

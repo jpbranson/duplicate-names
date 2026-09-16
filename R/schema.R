@@ -181,7 +181,7 @@ dn_scope_claims <- function() {
 #' Check a table against a prototype
 #'
 #' Checks names and types, not row count — an empty table is a valid table, and
-#' that is exactly what the Phase 0 no-op pipeline produces.
+#' sources and filtered stages may have no rows.
 dn_validate <- function(x, proto, label = deparse(substitute(x))) {
   want <- names(proto)
   got  <- names(x)
@@ -210,4 +210,33 @@ dn_validate <- function(x, proto, label = deparse(substitute(x))) {
   }
 
   x[want]
+}
+
+#' Bind sources, collapsing exact repeats and rejecting conflicting source IDs
+dn_bind_sources <- function(...) {
+  parts <- list(...)
+  parts <- lapply(seq_along(parts), function(i) {
+    dn_validate(parts[[i]], dn_schema_raw(), label = paste0("source[", i, "]"))
+  })
+  out <- dplyr::bind_rows(parts)
+
+  # IMLS repeats one record across files. Collapse identical rows, but refuse
+  # different records with the same source key: they would distort name counts.
+  before <- nrow(out)
+  out <- dplyr::distinct(out)
+  if (nrow(out) < before) {
+    message(sprintf("[bind] collapsed %d exactly-duplicated source row(s)",
+                    before - nrow(out)))
+  }
+
+  dup <- out |>
+    dplyr::count(source, source_id) |>
+    dplyr::filter(n > 1L)
+  if (nrow(dup) > 0L) {
+    stop(sprintf(
+      "Duplicate source_id with DIFFERING content in: %s (%d id(s)).\nLikely a paging bug, or source_id is not a key for that source.",
+      paste(unique(dup$source), collapse = ", "), nrow(dup)), call. = FALSE)
+  }
+
+  dn_validate(out, dn_schema_raw(), label = "raw_all")
 }

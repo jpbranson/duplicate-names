@@ -32,6 +32,14 @@ test_that("the schemas nest as documented", {
   expect_true(all(names(dn_schema_normalized()) %in% names(dn_schema_entity())))
 })
 
+test_that("empty source data pass through normalization, resolution and counting", {
+  normalized <- dn_normalize(dn_bind_sources(src_osm(), src_gnis(), src_hifld()))
+  resolved <- dn_resolve(normalized)
+  expect_identical(resolved, dn_schema_entity())
+  expect_identical(dn_apply_counting_policy(resolved), resolved)
+  expect_error(dn_resolve(normalized[, -1]), "missing column")
+})
+
 test_that("controlled vocabularies are non-empty and unique", {
   expect_true(length(dn_name_styles()) > 0L)
   expect_false(anyDuplicated(dn_name_styles()) > 0L)
@@ -111,9 +119,8 @@ test_that("institution-type variants merge, but only with enough name left", {
   # likely over-merge in the whole pipeline — "Springfield Art Museum" vs
   # "Springfield Science Museum" is a real configuration.
   #
-  # Deliberately NOT tuned before the labelled sample comes back: adjusting the
-  # measure to satisfy an intuition is exactly what the sample exists to
-  # replace. See HANDOFF.md, open question 1.
+  # The September 15 sample supports retaining 0.85, but does not certify this
+  # pair or final clusters. See HANDOFF.md, open question 1.
   expect_gt(dn_name_similarity("springfield museum", "springfield society"), 0.85)
 })
 

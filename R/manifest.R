@@ -104,13 +104,3 @@ dn_record_query <- function(label, source, detail, path, n_rows,
   dn_manifest_write(m, manifest)
   invisible(entry)
 }
-
-#' Path of a previously fetched file, by label
-dn_raw_path <- function(label, path = DN_MANIFEST) {
-  m   <- dn_manifest_read(path)
-  idx <- which(vapply(m$downloads, function(d) identical(d$label, label), logical(1)))
-  if (length(idx) != 1L) {
-    stop("No manifest entry for label '", label, "'. Fetch it first.", call. = FALSE)
-  }
-  m$downloads[[idx]]$path
-}

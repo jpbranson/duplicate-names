@@ -16,6 +16,11 @@ data/raw/*
 data/processed/*
 !data/processed/.gitkeep
 
+# Tests retain one immutable IMLS fixture and its provenance, not adapter caches.
+tests/testthat/data/raw/*
+!tests/testthat/data/raw/2018_csv_museum_data_files.zip
+!tests/testthat/data/raw/MANIFEST.json
+
 # Build artifacts: embeds are generated, then deployed to the blog repo.
 # Static fallbacks live in the post bundles and ARE tracked.
 embeds/*.html
