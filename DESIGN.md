@@ -1,7 +1,12 @@
 # Duplicate Names — Development Plan
 
-**Status:** draft plan, awaiting review
-**Last updated:** 2026-09-07
+**Status:** Phase 1a measured-validation milestone complete; Phase 2 museum analysis next
+**Last updated:** 2026-09-15
+
+The museum pipeline runs on Overture + IMLS. All 300 candidate pairs have human labels;
+the [validation report](data/validation/resolution_validation_2026-09-15.md) records the
+results and their limits. [HANDOFF.md](HANDOFF.md) holds the current work queue. Sections
+below distinguish implemented behavior from remaining analysis and publication work.
 
 ---
 
@@ -32,9 +37,10 @@ it. Museums assert; churches enumerate.
 - M3. How does the generic tail behave — Natural History, Children's, Fire, Railroad,
   County Historical? These collide by necessity, not accident. Different phenomenon,
   worth separating.
-- M4. Which collisions are franchises/branches (Ripley's, Smithsonian units, Children's
-  Museum of X) versus genuinely independent institutions that happen to share a name?
-  Only the second kind is interesting.
+- M4. Which collisions have evidence of common ownership or branch affiliation, and which
+  are independent institutions sharing a name? Repeated templates such as `Children's
+  Museum of X` or `X County Historical Museum` form a separate explanatory category;
+  the wording alone does not make them chains.
 
 **Churches**
 
@@ -76,6 +82,11 @@ should point forward to both regardless of which lands first.
 
 Availability verified 2026-09-07.
 
+**Implemented inputs:** Overture Places release `2026-08-19.0` and the IMLS 2018 CSV
+archive, with provenance in `data/raw/MANIFEST.json`. GNIS, HIFLD, OSM, and Overture
+religious categories remain queued for Phase 1b. Wikidata enrichment is not implemented
+and is not a completed Phase 1a dependency.
+
 ### Primary spine
 
 | Source | Covers | Why | License |
@@ -83,14 +94,15 @@ Availability verified 2026-09-07.
 | **Overture Maps — Places theme** | Global POIs; categories `museum` (under `arts_and_entertainment`) and `religious_organization`; GeoParquet on S3/Azure | Best single spine: queryable in place via DuckDB `httpfs` without a full download; permissive license; consistent schema; carries confidence scores and source lineage | CDLA-Permissive-2.0 / Apache-2.0 |
 | **OpenStreetMap** (Geofabrik NA extract or Overpass) | `tourism=museum`, `amenity=place_of_worship` | Richer tags Overture drops: `denomination`, `religion`, `start_date`, `wikidata`, `operator`, `museum=*` | **ODbL** — share-alike; see §7 |
 | **GNIS 2021 archived snapshot** | ~230k US churches under the retired `Church` feature class | USGS *removed* Church/Cemetery/School classes in 2021 and archived the file unchanged since. A frozen, government-authored, name-rich snapshot — and its staleness is a feature: it predates the modern church-plant naming wave | Public domain |
-| **IMLS Museum Universe Data File** | ~30k US museums; last updated FY2015Q3, no further updates planned | Authoritative museum list with discipline codes. Stale but complete; cross-check against Overture to catch what commercial POI feeds miss | Public domain |
+| **IMLS Museum Universe Data File** | ~30k records from the 2018 CSV archive used by `src_imls()` | Historical museum list with discipline codes; cross-check against Overture. The snapshot does not establish current operation or complete present-day coverage | Public domain |
 | **HIFLD "All Places of Worship"** | 254,740 US records, July 2024 snapshot, built from IRS 501(c)(3) master files | Independent third source. IRS-derived, so it captures *legal* names rather than *signage* names — a useful contrast in its own right | Public domain |
 
 ### Supporting / temporal
 
-**Scope note.** These are **post 3 (D3) sources**, not Phase 1 sources. Nothing in this
-table is needed to ship posts 1 and 2, and treating it as optional is what makes the
-deferral of C5 cheap rather than merely postponed.
+**Scope note.** Founding-date acquisition is deferred to **post 3 (D3)**. Wikidata may
+also support affiliation checks for M4, but is not currently wired into the pipeline.
+Census places serve a separate purpose and are required for the church C2 denominator;
+the museum pipeline already uses a place-name gazetteer for L3 normalization.
 
 | Source | Use |
 |---|---|
@@ -130,12 +142,20 @@ Each record keeps *all* levels, so sensitivity can be reported rather than hidde
   states) at both head and tail positions — not by naive regex.
 - **L4 `name_key`** — L3 plus token sort and stopword removal, for fuzzy grouping.
 
-Duplicate counts are reported at **L3** by default, with L1 and L4 counts as a sensitivity
-band. A headline that only survives at L4 is not a headline.
+**Museum name headlines (M1/M2) use L2 `name_expanded`.** Geography is often part of a
+museum's identity; stripping it answers a different question. L3 `name_core` supports
+geography-stripped comparisons and the planned M3 subject analysis. Church name counts
+will use L3. Report the comparison levels explicitly rather than presenting L3/L4 museum
+counts as interchangeable estimates of the L2 result. A headline that only survives at L4
+is not a headline.
+
+The current duplicate-count helper defaults to L2/L3/L4. L1 can be requested explicitly.
+The M2 helper still groups on L3 and must be brought into line with this policy in Phase 2.
 
 ### 4.2 Structured extraction
 
-From `name_core`, parse into fields:
+Extract fields from the appropriate normalization level, preserving the full name for
+ordinal and scope-claim parsing and using the geography-stripped name for subject work:
 
 - `ordinal` — First … Twentieth and beyond, numeric and word forms. Watch the trap:
   `First Christian Church` is an ordinal; `First Church of Christ, Scientist` is a
@@ -150,6 +170,11 @@ From `name_core`, parse into fields:
   ethnolinguistic | descriptive | other`. Lexicon-classified first; then hand-label a
   stratified sample of ~500 to measure the classifier's error rate, and publish that rate.
 
+**Implementation status:** ordinal and scope-claim parsing exist. Compound ordinals remain
+a known church-analysis gap. `subject`, `name_style`, and `denom_norm` currently contain
+`NA` placeholders. Museum subject extraction is Phase 2 work; IMLS discipline codes offer
+an independent comparison, not a replacement for the name-derived field.
+
 ### 4.3 Entity resolution (deduplicating the *data*, not the *names*)
 
 A single institution appearing in Overture + OSM + GNIS + HIFLD must not count as four
@@ -160,28 +185,60 @@ in a low-confidence commercial POI feed may be a closed storefront.
 
 **This is the single largest correctness risk in the project.** Budget real time for it.
 
+**September 15 validation:** all 300 sampled pairs were independently human-labelled.
+At the retained similarity threshold of **0.85**, there are 119 true merges, 1 false merge,
+8 missed merges, and 172 true separations: precision **99.17%**, recall **93.70%**, and
+sample error **3.00%**. The sample F1 sweep also selects 0.85.
+
+These are unweighted results from 60 pairs per similarity band, all within 150 m. They
+do not estimate dataset-wide error or validate final transitive clusters, multi-site
+merging, or matches outside that radius. Threshold selection used the same sample rather
+than a held-out set. Preserve the original labels in `data/validation/`; use the nine
+disagreements diagnostically and fresh independent labels to evaluate matching changes.
+The generated `labelling_sheet` target can overwrite the working sheet in `data/processed/`.
+
 ### 4.4 Franchise / branch detection (M4)
 
-Flag same-operator collisions so they can be held out of the "independent collision"
-headline: shared `operator` tag, shared Wikidata parent, a known-chain lexicon (Ripley's,
-Madame Tussauds, Smithsonian units, Titanic Museum Attraction), and productive-template
-detection for `Children's Museum of X` / `X County Historical Museum`.
+Flag collisions with evidence of common ownership or branch affiliation so they can be
+held out of the "independent collision" headline. Evidence can include a shared operator,
+a verified Wikidata parent, or a sourced chain lexicon. A nonempty operator field alone
+does not establish a chain. The current helper uses that shortcut, with Overture brand
+metadata supplying `operator`, so Phase 2 must extend and review it.
+
+Classify productive templates such as `Children's Museum of X` / `X County Historical
+Museum` separately. Shared wording or inherited place names are not evidence of shared
+ownership. Keep institution identity, affiliation, and name-pattern explanations distinct.
+
+### 4.5 Category-only names
+
+The saved rankings include `art gallery`, `planetarium`, and `fine arts gallery`. These
+may be POI category placeholders or actual institution names; names alone cannot settle
+that distinction. Phase 2 starts by defining an auditable flag and review rule, preserving
+the records and the evidence behind exclusions. Confirmed placeholders must not count as
+duplicate institution names. Review ambiguous cases before using them in a headline.
 
 ---
 
 ## 5. Metrics — defined before we look
 
-Pre-registered so the analysis can't drift toward whatever looks good.
+The original questions were defined before analysis. Subsequent methodological decisions
+are recorded in §9 so changes such as the museum L2 choice remain visible.
 
 **Museums**
 
-- `dup_count(name_core)` — headline for M1.
+- `dup_count(name_expanded)` — headline for M1, using counted museum entities and the
+  category-only review policy once implemented.
 - **Singularity Collision Index** — for names carrying a `scope_claim`, the count of
-  independent (non-franchise) institutions sharing `name_core`. The Cryptozoology seed case
+  independent (non-franchise) institutions sharing `name_expanded`. The Cryptozoology seed case
   scores whatever it scores; the *ranking* is the story.
 - **Genericity split** — partition names into *asserted-unique* vs *descriptive* and report
   the two distributions separately. Conflating them is the obvious analytical mistake and
   the thing most likely to make post 1 wrong.
+
+**Implementation gap:** `_targets.R` currently emits `dup_museums` only. M2 exists as
+`metric_singularity_collisions()` but still groups on `name_core`; correct that grouping
+and ensure counted/eligible entities feed it before wiring it into the pipeline. Subject
+summaries and reviewed franchise/independent splits also remain Phase 2 work.
 
 **Churches**
 
@@ -255,42 +312,41 @@ right call regardless of convenience: analysis and publication share one languag
 figures knit directly into posts, and the existing R library already carries most of what's
 needed. Python is not used.
 
-Environment on this machine: R 4.6.1 plus 4.2–4.5 under `C:\Program Files\R`; RStudio;
-`git`; `curl`. **Note:** R 4.6.1's library is empty — the populated user library is
-**4.4** (230 packages), which already has `tidyverse`, `sf`, `arrow`, `leaflet`, `tigris`,
-`tidycensus`, `reactable`, `renv`, `knitr`, `rmarkdown`. **Pin the project to R 4.4.** Still
-to install: `duckdb`, `targets`, `stringdist`, `mapgl`, and `blogdown` (absent from every
-user library, so it presumably lives in the blog repo's own `renv` library).
+**Use R 4.4, preferably the lockfile version 4.4.2.** Restore dependencies with
+`renv::restore()` rather than relying on a machine's user library or newest R installation.
+Run `targets::tar_make()` for outdated pipeline targets and `source("tests/testthat.R")`
+for tests; the latter sources this non-package project's functions first.
 
-`tigris` and `tidycensus` already being present matters more than it looks: the Census
-places denominator for the C2 municipal-exclusivity test — the most likely real finding in
-post 2 — is a `tigris::places()` call away.
+The current layout is below. Named post bundles will be created during their analysis
+phases; only the shared setup and template exist today.
 
 ```
 duplicate-names/                # analysis repo; source of truth
   DESIGN.md
+  HANDOFF.md
+  README.md
+  AGENTS.md
   LEADS.md
   duplicate-names.Rproj
   renv.lock                     # pinned to R 4.4
   _targets.R                    # pipeline DAG
   R/
     src_*.R                     # one file per source: overture, osm, gnis, imls, hifld
-    normalize_*.R               # §4 — the ladder, extraction, exceptions
-    resolve_*.R                 # §4.3 entity resolution
-    metrics_*.R                 # §5, one function per named metric
+    normalize.R                 # §4 — the ladder, extraction, exceptions
+    gazetteer.R                 # L3 place-name stripping and exceptions
+    resolve.R                   # §4.3 entity resolution and counting policy
+    validate_resolution.R       # sample generation and human-label scoring
+    metrics.R                   # §5, one function per named metric
     theme_dupnames.R            # shared ggplot2 theme + palette
-    embed_*.R                   # builds self-contained widget HTML
+    embed.R                     # builds self-contained widget HTML
   data/
     raw/                        # immutable downloads, gitignored, manifest-tracked
-    processed/                  # parquet artifacts; the publishable dataset
+    processed/                  # generated parquet and working labelling sheet
+    validation/                 # tracked human-label archive and report
   tests/testthat/               # gold-set tests for the normalizer
   posts/
-    01-museums/
-      index.Rmd                 # drafted here, copied to the blog as a page bundle
-      payload/                  # the small aggregated files the .Rmd reads
-    02-churches/
-    03-over-time/               # D3, later
-    04-first-baptist/           # D4, later
+    _setup.R                    # shared plotting and payload helpers
+    _template/index.Rmd         # skeleton for future post bundles
   embeds/                       # self-contained widget HTML → blog's static/embeds/
   dashboard/                    # Phase 4
 ```
@@ -298,7 +354,10 @@ duplicate-names/                # analysis repo; source of truth
 **Two repos, one direction of flow.** This repo owns the pipeline and drafts the posts; the
 blog repo receives a *payload* — `index.Rmd`, the small data files it reads, and prebuilt
 embed HTML. The blog repo never needs `duckdb`, `sf`, or `arrow` to build the site, and its
-`renv` library stays untouched.
+`renv` library stays untouched. This is a publication requirement, not yet a verified
+export path: the current template sources helpers through `DUPNAMES_ROOT`, and those
+helpers must be packaged with the bundle. Use CSV payloads for a blog build without
+`arrow`; the shared reader also supports Parquet, which would require it.
 
 **Scope: US-first, global follow-up.** Analysis and both near-term posts are US-only, but
 Phase 1 pays a small generality tax so a global pass is cheap later: no US-specific columns
@@ -452,9 +511,9 @@ adjusted casually:
   denomination map cannot use one colour per denomination. Fold the tail into "Other" or
   facet. `dn_pal()` enforces the cap and errors rather than silently recycling.
 
-`node` is not installed on this machine, so the palette validator cannot be run here — which
-is precisely why the reference values are used unmodified. Swapping in different hues later
-means running the validator, not eyeballing the result.
+The reference palette values remain unmodified. Swapping in different hues requires
+running the palette validator in an environment with its dependencies; the original setup
+did not have `node` available.
 
 Supporting files now in place: `R/config_blog.R`, `R/theme_dupnames.R`, `R/embed.R`,
 `posts/_setup.R` (shared knitr defaults), `posts/_template/index.Rmd` (post skeleton).
@@ -466,8 +525,8 @@ Supporting files now in place: `R/config_blog.R`, `R/theme_dupnames.R`, `R/embed
 | Phase | Work | Exit criterion |
 |---|---|---|
 | **0. Scaffold** ✅ **done 2026-09-07** | `git init`, RStudio project, renv pinned to R 4.4 (138 packages), schema contract, manifest machinery, source stubs, gold-set tests | ✅ `targets::tar_make()` runs end to end; 42 tests pass; `entities.parquet` written with 0 rows / 31 cols matching the contract |
-| **1a. Acquire + resolve — MUSEUMS** ◀ *current* | Overture (museum categories) + IMLS + Wikidata; the L3 gazetteer; entity resolution | `entities.parquet` covering museums, plus a measured resolution error rate on a hand-labelled sample |
-| **2. Museums analysis → D1** | M1–M4; verify top-20 collisions by hand; ggplot2 figures + `reactable` rank table; draft `index.Rmd` | Post 1 knits from `payload/` alone with no pipeline dependency; every headline number hand-verified |
+| **1a. Acquire + resolve — MUSEUMS** ✅ **milestone met 2026-09-15** | Overture + IMLS; the L3 gazetteer; entity resolution; 300 human-labelled pairs scored | Museum entities generated and pair-level validation measured; final clusters and multi-site cases remain subject to review (§4.3) |
+| **2. Museums analysis → D1** ◀ **next** | Category-only review; franchise detection; subject extraction; L2 alignment for M1/M2; top-20 collision review; figures, rank table, and draft | Post 1 knits from its bundle and small payloads without the analysis checkout or pipeline; every headline number hand-verified |
 | **1b. Acquire + resolve — CHURCHES** | GNIS, HIFLD, OSM, Overture religious categories; Census places denominator | Same, extended to ~250k congregations |
 | **3. Churches analysis → D2** | C1–C4; territory maps as `mapgl` embeds; ladder; naming cultures; emit the multiplicity list for post 4 | Post 2 drafted; embeds load standalone in a bare browser tab and have static fallbacks |
 | **4. Dashboard → D6** | Generalize the post-2 embeds into an arbitrary-category explorer | Deployed and queryable beyond churches and museums |
@@ -482,11 +541,21 @@ Phases 5 and 6 are sequenced after the dashboard on the reasoning that D3 and D4
 new data acquisition, while the dashboard needs nothing that Phase 1 hasn't already built.
 Reorder freely if the writing momentum runs the other way.
 
+### Immediate Phase 2 deliverable
+
+Produce a cleaned L2 museum collision ranking and a review sheet identifying the
+institutions behind each top-20 name. Start with category-only handling, then affiliation
+classification, subject extraction, and M2's L2 correction. Review relevant entries from
+the saved 249-entity multi-site queue before using their counts. Record evidence and
+decisions, add regression cases for changed rules, and only then export the post payloads
+and write the headlines. This work does not require reopening the matching threshold.
+
 ---
 
 ## 9. Decisions
 
-Settled 2026-09-07:
+Decisions 1–8 were settled 2026-09-07. Decisions 9–10 record the museum analysis policy
+and the September 15 validation outcome.
 
 1. **Geographic scope — US-first, with a global follow-up.** Both near-term posts are
    US-only; Phase 1 keeps the schema country-general so a global pass is cheap. See §7.
@@ -498,10 +567,11 @@ Settled 2026-09-07:
 4. **First Baptist racial split — its own post (D4).** Post 2 surfaces and names the
    pattern, and emits the municipal multiplicity list; post 4 tells the history with real
    historical sourcing. See §6.4.
-5. **Phase 1 runs museums-first, in two halves (1a then 1b).** Post 1 needs only Overture +
-   IMLS + Wikidata over ~30k museums, which reaches a publishable post sooner and proves the
-   normalizer and entity resolution on a tractable population before facing ~250k
-   congregations, where the same bugs would be slower to find and costlier to fix.
+5. **Phase 1 runs museums-first, in two halves (1a then 1b).** Post 1 uses Overture +
+   IMLS, with Wikidata enrichment still optional and unimplemented. Working on museums
+   reaches a publishable post sooner and exercises the normalizer and entity resolution
+   on a tractable population before facing ~250k congregations, where the same bugs would
+   be slower to find and costlier to fix.
 
    **Churches are deferred, not dropped.** Phase 1b still owes: GNIS (the 2021 Church
    archive), HIFLD, OSM (for the `denomination` tag C4 depends on), Overture's religious
@@ -526,13 +596,23 @@ Settled 2026-09-07:
    **`alt_names` carries a publication obligation, not just bookkeeping.** The eventual map
    must footnote the alternate names, so a reader can see that "Washington County
    Historical Museum" and "Washington County Historical Society" were treated as one place
-   and judge that call themselves. 6,181 entities currently carry an alternate.
+   and judge that call themselves. The saved September 7 results contain 6,181 entities
+   with an alternate name.
 
    Note the effect on a headline: this merge moved `washington county historical society`
    from 27 to 19, so the decision is visible in post 1's numbers and has to be stated there.
 8. **Blog integration — defaulted, not blocked.** The blog repo is mid-rework, so §7.3
    fixes sensible defaults in `R/config_blog.R` and the project proceeds. The iframe
    approach in §7.1 was chosen specifically to be robust to most of the unknowns.
+9. **Museum name headlines use L2.** Place names are usually part of museum identity.
+   Use `name_expanded` for M1/M2 and retain L3 for geography-stripped comparisons and
+   subject analysis. This corrects the original plan's blanket L3 default. M1 follows
+   this policy; M2's code correction remains Phase 2 work.
+10. **Retain the 0.85 matching threshold after measured validation (2026-09-15).** The
+    300-pair sample supports this threshold; lowering it to 0.80 adds 30 false merges
+    while recovering only two true matches. Archive the human labels unchanged. The
+    result completes the Phase 1a validation milestone without asserting dataset-wide
+    accuracy or validating final clusters.
 
 ### Still open
 
@@ -547,4 +627,7 @@ Settled 2026-09-07:
 
 ## 10. Cross-references
 
+- Setup and project overview → [`README.md`](README.md)
+- Current work and saved counts → [`HANDOFF.md`](HANDOFF.md)
+- Validation evidence and limitations → [September 15 report](data/validation/resolution_validation_2026-09-15.md)
 - Analogous name-collision phenomena → [`LEADS.md`](LEADS.md)

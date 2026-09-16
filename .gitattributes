@@ -1,0 +1,2 @@
+# Preserve archived human labels byte for byte, including original line endings.
+data/validation/*.csv -text whitespace=trailing-space,space-before-tab,cr-at-eol

@@ -5,6 +5,12 @@ here whenever something surfaces during Phase 2/3 work** rather than chasing it 
 
 Format: one heading per lead, with the question, why it's interesting, and a data note.
 
+**Status, 2026-09-15:** Phase 1a's human-label scoring is complete. Phase 2 starts with
+category-only name handling and a cleaned museum ranking for top-20 review. The counts
+below are exploratory September 7 observations, not verified publication figures; see
+[HANDOFF.md](HANDOFF.md) for current work and the
+[validation report](data/validation/resolution_validation_2026-09-15.md) for sample limits.
+
 ---
 
 ## Seeded leads
@@ -59,7 +65,8 @@ well-covered ground — include only as a callback, not a post.
 ### Theater names: Bijou, Rialto, Orpheum, Roxy
 A vanished naming fashion with sharp date boundaries — these cluster hard in 1900–1930.
 **Question:** the cleanest available test of "naming conventions have eras," which is
-exactly C5's claim. Might belong *inside* the churches post as supporting evidence.
+exactly C5's claim. Might belong inside the deferred naming-over-time post (D3) as
+supporting evidence.
 *Data:* Cinema Treasures, NRHP. Decent.
 
 ### Breweries: Common, Union, Anchor, Wolf
@@ -79,6 +86,10 @@ singular claims at all — they are *productive templates*:
 County` (15), `Monroe` (14), `Wayne` (13), `Franklin`/`Greene`/`Jefferson`/
 `Madison` (12 each).
 
+These are observations from before the society-under-museum merge. That rule moved
+`washington county historical society` from 27 to 19 in the saved results. Recompute and
+verify the ranking in Phase 2 before citing any of these counts as findings.
+
 The interesting part is that this duplication is **downstream of a different
 duplication**. There are ~31 Washington Counties in the US; the historical
 societies are duplicated because the *counties* are. The collision isn't in the
@@ -89,16 +100,23 @@ inherited from a duplicated place name? That is a genuinely different question
 from either "who claims to be THE one" or "which chains have many branches" —
 a third category alongside the singular-claim and franchise cases, and it needs
 its own treatment in post 1 rather than being lumped into the generic tail.
+Repeated templates do not by themselves imply common ownership; classify inherited
+duplication separately from franchises when implementing M4.
 *Data:* already in hand. Census/GNIS county and place names give the upstream
 duplication directly.
 
 ### Institutions whose name is just their category
-`art gallery` (37), `planetarium` (14), `fine arts gallery` (12), plus 17 rows
-with an empty name. These are POI records where the mapper typed the category
-instead of a name.
+The saved September 7 results include `art gallery` (37), `planetarium` (14),
+`fine arts gallery` (12), plus 17 rows with an empty name. Empty names are already excluded
+by the counting policy. The category-like strings may be mapper-supplied placeholders or
+actual signage; the existing names alone do not distinguish them.
 
-Mostly a cleaning problem — they must not be counted as duplicates — but it
+Confirmed placeholders must not count as duplicate institution names, but this
 raises a real question for the churches post too: how many institutions have no
 distinct name at all? A congregation listed only as "Church" is a data gap, but
 a museum whose actual signage reads "Art Gallery" is a naming *choice*, and the
 two are hard to tell apart from POI data alone. Worth a paragraph, not a post.
+
+**Phase 2 action:** introduce an auditable flag and review rule, preserve source records,
+and record evidence for exclusion or retention. Resolve ambiguous leading cases before
+publishing the top-20 ranking. This is the first analysis task, not a completed cleanup.

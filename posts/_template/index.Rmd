@@ -17,9 +17,10 @@ output:
 ---
 
 ```{r setup, include = FALSE}
-# dn_root points at the analysis repo. When this bundle is copied into the
-# blog, the payload/ directory travels with it and _setup.R comes along too,
-# so nothing here reaches back into the pipeline.
+# Development template: dn_root points at the analysis repo. Before publishing,
+# package _setup.R and its config/theme/embed dependencies with the bundle,
+# adjust this source path, and verify a knit without the analysis checkout.
+# Data chunks must read only the bundle's small payload/ files.
 dn_root <- Sys.getenv("DUPNAMES_ROOT", unset = "../../..")
 source(file.path(dn_root, "posts", "_setup.R"))
 ```
@@ -49,8 +50,20 @@ Built by the pipeline, not here — this chunk only emits the iframe.
 
 ## Notes on method
 
-Every post carries a short, honest paragraph here: which normalization level the
-counts use, what the sensitivity band looks like at the levels either side, and
-what the entity-resolution error rate was. The numbers are artifacts of the
-normalizer and the post should say so rather than implying the data speaks for
-itself.
+Replace this guidance with a paragraph stating the source snapshots, counting unit,
+normalization level, exclusions, affiliation rules, and manual verification behind
+the headline. Museum name headlines use L2 (`name_expanded`); L3 comparisons strip
+geography and answer a different question. Explain the comparison levels explicitly.
+
+Report resolution validation with its sampling limits. The September 15 museum
+sample has 300 independently labelled candidate pairs within 150 m, equally sampled
+across five similarity bands: precision 99.17%, recall 93.70%, and sample error 3.00%
+at threshold 0.85. These unweighted results do not establish dataset-wide accuracy
+or validate final clusters and multi-site merges. Link the archived validation report
+when drafting the museum post; use the relevant evidence for later posts.
+
+Before publishing the museum post, resolve category-only placeholders, distinguish
+chains from independent naming templates, and verify the top-20 collisions and
+relevant multi-site cases. Show alternate names where entities have been merged.
+Use CSV payloads for a blog build without `arrow`, and verify that the completed
+bundle knits without the analysis checkout or a pipeline run.
