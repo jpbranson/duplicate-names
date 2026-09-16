@@ -1,0 +1,12 @@
+priority,case,status,next_action
+1,Union County Historical Society,unreviewed_leading_group,Review all 14 current candidates using the source and identity dossiers before treating the new lead as a headline.
+2,Old Jail shared local operators,affiliation_scope_pending,Resolve M4 treatment for locally operated museums with other named facilities; unknown remains unknown.
+2,Smethport,preferred_name_pending,Establish the preferred current museum name given County Museum in the Old Jail and Old Jail Museum wording.
+2,Winchester,additional_society_record_pending,Clarify the current society history-room record and museum relationship; different EINs and historical involvement alone do not justify a merge.
+2,Barnesville,older_society_record_pending,Resolve 858 Thomaston IMLS record without conflating current jail museum and separate archives.
+2,St Augustine,operator_record_pending,Determine whether the generic operator/campus record counts as a museum; preserve distinct named attractions and sourced HTA affiliation.
+2,Dubuque,source_conflicts_held,Seek definitive current museum/closure history before releasing either mixed row; do not transfer disputed aliases to river museum or Montana.
+3,Hayesville Lawrenceburg Thompson Falls,remaining_factual_review,Complete current governance/name evidence and precise visitor-point checks where needed.
+3,Greenwood,visitor_point_pending,Reconcile address variants and the historic-building point before visitor-map export.
+3,Bankhead and Lafayette Street,unchanged_unresolved,Continue the evidence questions documented in the address-review packet; do not infer identity or closure from property or filing addresses alone.
+4,Publication export,not_started,Apply staged operator coordinates from the address packet separately from source fields and refresh visitor access before publishing.

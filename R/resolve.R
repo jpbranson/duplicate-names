@@ -11,15 +11,15 @@
 #   ENTITY — one institution, which may occupy more than one site.
 #
 # The International Cryptozoology Museum is why the second layer exists. It
-# moved from Portland to Bangor in 2016, and Overture still carries the
-# Portland address marked "open". Without an entity layer above sites, that
-# reads as two museums with the same name — a duplicate that never existed.
+# opened its new Bangor home in June 2026, and Overture still carries the
+# Portland address marked "open". (The 2016 move was within Portland.) Without
+# an entity layer above sites, that can read as two independent museums.
 
 DN_SITE_RADIUS_M <- 150   # records within this distance may be the same place
 
 # Name-similarity floor for merging two records at the same location.
-# Provisional: this is the number the hand-labelled sample exists to calibrate
-# (see dn_build_labelling_sample()). Do not treat it as settled.
+# Retained after the independent September 15 pair-label sample. That sample
+# does not validate final clusters or multi-site matching; see the report.
 DN_NAME_SIM_MIN <- 0.85
 
 # A name found at more sites than this is a generic label, not one
@@ -338,18 +338,14 @@ dn_apply_counting_policy <- function(entities, stale_before = NULL) {
 #' Held separate from resolution on purpose: two Ripley's are genuinely two
 #' institutions, so they must NOT merge — they only have to be excluded from
 #' the "independent collision" headline, which is a labelling job.
-dn_flag_franchises <- function(entities) {
-  if (nrow(entities) == 0L) return(entities)
-  entities |>
-    dplyr::mutate(
-      is_franchise = !is.na(.data$operator) & nzchar(.data$operator),
-      chain_id     = dplyr::if_else(.data$is_franchise,
-                                    dplyr::coalesce(.data$wikidata_id, .data$operator),
-                                    NA_character_)
-    )
-  # TODO(phase-2): productive templates ("Children's Museum of X", "X County
-  # Historical Society") are not chains but behave like them. See LEADS.md —
-  # inherited duplication is a third category and needs its own treatment.
+dn_flag_franchises <- function(entities, rules = dn_schema_chain_rules()) {
+  evidence <- dn_affiliation_evidence(entities, rules)
+  idx <- match(entities$entity_id, evidence$entity_id)
+  # NA means unreviewed, not independent. Only a sourced rule establishes
+  # affiliation; a nonempty operator or a repeated template cannot do that.
+  entities$is_franchise <- ifelse(!is.na(evidence$chain_id[idx]), TRUE, NA)
+  entities$chain_id <- evidence$chain_id[idx]
+  entities
 }
 
 #' Entities whose sites are far apart — for manual review

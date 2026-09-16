@@ -1,0 +1,10 @@
+case_id,n_source_records,n_entities,source_keys
+ICM,4,1,overture:8eeacbc0-92c8-40fd-a9a2-8380cb4fd8a7 | overture:501141c4-3d4c-49e6-b3b8-c7b4c0c89250 | overture:6d77967f-48ef-4e2c-a928-dd4d4d935614 | imls:8402300523
+MOI,13,13,overture:4839d27e-d755-418c-9a26-a6c30f0dcd43 | overture:717a473d-6a94-4a75-8de1-0fe50f19f450 | overture:94f0e826-ace4-490f-aa7e-a20408c96b77 | overture:ded6189f-7f83-43b2-b59c-26db0d6e6632 | overture:27260a45-e524-43e3-8267-937dcaeaeb9b | overture:27cf1f4b-2da0-4506-963d-3dac0622c113 | overture:aca0587b-dbde-4d67-a74c-e7ebe7b874ca | overture:4c750539-2063-49ac-9e98-d9e0f79cb279 | overture:b265eee2-199c-45f3-882a-e529d744f4c6 | overture:0a7d550c-5085-4969-b80d-15b9be6451eb | overture:10d4d837-5673-4dfc-a618-7b5a72b0f37b | overture:7034b742-415d-4469-9198-89faf43da7b3 | overture:7c3aed7a-dd9d-4c56-a984-c5f8a303a9f0
+NEM,4,4,overture:983d9f85-d217-4d46-be11-70822453ad02 | overture:d11c7e73-0233-46ba-a530-91c3023d9976 | overture:633fcf2b-1b59-4527-b88a-1e42bc626921 | imls:8409400467
+NVWM,6,6,overture:9bd8b641-b58f-480e-a245-a79482c7a746 | overture:a65d225d-0c0c-404f-b2ad-7c347bab0108 | overture:6e07087a-f45d-4216-bb4c-d32c693797af | imls:8404801761 | imls:8401201028 | overture:f03eab9c-20ad-4147-b13e-7619ebba5baf
+UAG,13,13,imls:8409504218 | imls:8409504219 | imls:8409504220 | imls:8409504221 | imls:8409504222 | imls:8409504223 | imls:8409504224 | imls:8409504226 | imls:8409504227 | imls:8409504228 | imls:8409504229 | imls:8409504230 | imls:8409504231
+WCHS_AR,3,2,overture:c6dcc9e8-4c63-4c95-b9fa-c254bc607d84 | imls:8400500101 | imls:8400500155
+WCHS_FL,2,2,overture:ecf32abd-3964-4842-beb4-c2ba6c025ecc | imls:8401200854
+WCHS_GA,3,3,overture:b21c579d-6e19-4e64-83d4-051f763f8e05 | overture:05c38b17-e050-463c-9dc0-f0934663cba6 | imls:8401300404
+WCHS_PA,3,2,imls:8404200022 | imls:8404201136 | imls:8404201308

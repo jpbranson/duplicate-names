@@ -35,8 +35,26 @@ list(
   tar_target(gazetteer, dn_gazetteer()),
   tar_target(normalized, dn_normalize(raw_all, gazetteer)),
   tar_target(resolved,   dn_resolve(normalized)),
-  tar_target(entities, dn_apply_counting_policy(dn_flag_franchises(resolved))),
+  tar_target(museum_chain_rules_file, "data/validation/museum_chain_rules.csv", format = "file"),
+  tar_target(museum_chain_rules, dn_read_museum_review(museum_chain_rules_file, dn_schema_chain_rules())),
+  tar_target(museum_decisions_file, "data/validation/museum_decisions.csv", format = "file"),
+  tar_target(museum_decisions, dn_read_museum_review(museum_decisions_file, dn_schema_museum_decisions())),
+  tar_target(entities, dn_apply_counting_policy(dn_flag_franchises(resolved, museum_chain_rules))),
   tar_target(multisite_review, dn_flag_multisite_review(entities)),
+
+  # Preserve the automatic baseline; curated corrections carry a source-level audit.
+  tar_target(museum_identity_decisions_file, "data/validation/museum_identity_decisions.csv", format = "file"),
+  tar_target(museum_identity_decisions, dn_read_museum_review(
+    museum_identity_decisions_file, dn_schema_museum_identity_decisions())),
+  tar_target(museum_identity_review, dn_reconcile_museums(entities, museum_identity_decisions)),
+  tar_target(museum_records, museum_identity_review$records),
+  tar_target(museum_identity_audit_file, dn_export_museum_identity(museum_identity_review), format = "file"),
+  tar_target(museum_records_file, {
+    path <- "data/processed/museum_records.parquet"
+    dir.create(dirname(path), recursive = TRUE, showWarnings = FALSE)
+    arrow::write_parquet(museum_records, path)
+    path
+  }, format = "file"),
 
   # Phase 1a exit criterion: a MEASURED resolution error rate.
   # Writes a CSV for hand labelling; dn_score_labels() reads it back.
@@ -55,8 +73,17 @@ list(
   ),
 
   ## --- metrics -----------------------------------------------------------
-  tar_target(dup_museums, metric_duplicate_counts(
-    dplyr::filter(entities, .data$counted), category = "museum"))
+  tar_target(museum_analysis, dn_museum_analysis(museum_records, museum_chain_rules, museum_decisions)),
+  tar_target(dup_museums, metric_duplicate_counts(museum_analysis, category = "museum")),
+  tar_target(museum_ranking, dn_museum_ranking(museum_analysis)),
+  tar_target(museum_singularity, metric_singularity_collisions(museum_analysis)),
+  tar_target(museum_subjects, metric_museum_subjects(museum_analysis)),
+  tar_target(imls_review_archive, { raw_imls; "data/raw/2018_csv_museum_data_files.zip" }, format = "file"),
+  tar_target(imls_review_context, dn_imls_review_context(imls_review_archive)),
+  tar_target(museum_review, dn_museum_review_sheets(museum_analysis, museum_records, museum_ranking,
+                                                  imls_context = imls_review_context)),
+  tar_target(museum_review_files, dn_export_museum_review(
+    museum_analysis, museum_ranking, museum_singularity, museum_subjects, museum_review), format = "file")
 )
 
 ## --- PHASE 1b: CHURCHES (queued) ----------------------------------------

@@ -55,6 +55,15 @@ normalization level, exclusions, affiliation rules, and manual verification behi
 the headline. Museum name headlines use L2 (`name_expanded`); L3 comparisons strip
 geography and answer a different question. Explain the comparison levels explicitly.
 
+Export museum name-analysis payloads from `museum_analysis`, which uses the curated
+`museum_records` layer; `entities` remains the automatic baseline. Explain any count
+changes from source-specific identity corrections and link their dated evidence/audit.
+Retain source aliases and distinguish former sites from current counting locations.
+Keep contradictory `source_conflict` rows in the audit and exclude their disputed aliases
+from accepted institutions. The review's `lon`, `lat` and `map_url` remain source points,
+not certified visitor coordinates. Apply sourced map corrections in separate publication
+fields with evidence, and verify access wording before presenting a visitor map.
+
 Report resolution validation with its sampling limits. The September 15 museum
 sample has 300 independently labelled candidate pairs within 150 m, equally sampled
 across five similarity bands: precision 99.17%, recall 93.70%, and sample error 3.00%
@@ -62,8 +71,16 @@ at threshold 0.85. These unweighted results do not establish dataset-wide accura
 or validate final clusters and multi-site merges. Link the archived validation report
 when drafting the museum post; use the relevant evidence for later posts.
 
-Before publishing the museum post, resolve category-only placeholders, distinguish
+Before publishing the museum post, check category decisions affecting headlines, distinguish
 chains from independent naming templates, and verify the top-20 collisions and
 relevant multi-site cases. Show alternate names where entities have been merged.
+An institution's `verified` status means factual identity/count review is complete;
+assistant source research does not supply independent labels for measuring accuracy.
+Keep unknown affiliation and unreviewed cases explicit.
+Call `dn_assert_museum_publication_ready()` for the selected L2 headlines before exporting
+payloads; the pipeline does not invoke this helper automatically. Its status checks do not
+replace evidence review or the semantic check on M2 scope words. Use the current queue and
+checkpoint links in `data/validation/README.md` when preparing the export, then bundle the
+needed evidence references with the post.
 Use CSV payloads for a blog build without `arrow`, and verify that the completed
 bundle knits without the analysis checkout or a pipeline run.

@@ -5,9 +5,10 @@ here whenever something surfaces during Phase 2/3 work** rather than chasing it 
 
 Format: one heading per lead, with the question, why it's interesting, and a data note.
 
-**Status, 2026-09-15:** Phase 1a's human-label scoring is complete. Phase 2 starts with
-category-only name handling and a cleaned museum ranking for top-20 review. The counts
-below are exploratory September 7 observations, not verified publication figures; see
+**Status, 2026-09-15:** Phase 2 analysis, the top-20 packet, nine initial identity
+corrections and the [Old Jail review batch](data/validation/museum_old_jail_review_2026-09-15.md)
+are complete. Remaining headline checks precede the post. The dated counts below remain
+exploratory observations, not verified publication figures; see
 [HANDOFF.md](HANDOFF.md) for current work and the
 [validation report](data/validation/resolution_validation_2026-09-15.md) for sample limits.
 
@@ -86,9 +87,19 @@ singular claims at all — they are *productive templates*:
 County` (15), `Monroe` (14), `Wayne` (13), `Franklin`/`Greene`/`Jefferson`/
 `Madison` (12 each).
 
-These are observations from before the society-under-museum merge. That rule moved
-`washington county historical society` from 27 to 19 in the saved results. Recompute and
-verify the ranking in Phase 2 before citing any of these counts as findings.
+These are historical source-row observations, not verified institution totals. Phase 2
+confirmed that the old metric still counted source rows and aliases. Selecting one
+canonical museum name per entity gave 19 for `washington county historical society`.
+The first [identity corrections](data/validation/museum_identity_review_2026-09-15.md)
+reduced this to 16 provisional entities; the
+[focused follow-up](data/validation/museum_focused_review_2026-09-15.md) reduced it to 14
+after consolidating LeMoyne House and isolating contradictory source rows. The later
+[address pass](data/validation/museum_address_review_2026-09-15.md) reduces it to 13 by
+linking Chipley's older mailing record to the museum through its EIN. Old Jail
+Museum initially led at 15; its [focused review](data/validation/museum_old_jail_review_2026-09-15.md)
+reduces it to 12, leaving Union County Historical Society provisionally first at 14.
+Remaining source checks precede citation as
+verified institution counts.
 
 The interesting part is that this duplication is **downstream of a different
 duplication**. There are ~31 Washington Counties in the US; the historical
@@ -101,7 +112,7 @@ from either "who claims to be THE one" or "which chains have many branches" —
 a third category alongside the singular-claim and franchise cases, and it needs
 its own treatment in post 1 rather than being lumped into the generic tail.
 Repeated templates do not by themselves imply common ownership; classify inherited
-duplication separately from franchises when implementing M4.
+duplication separately from the sourced affiliations now used for M4.
 *Data:* already in hand. Census/GNIS county and place names give the upstream
 duplication directly.
 
@@ -117,6 +128,52 @@ distinct name at all? A congregation listed only as "Church" is a data gap, but
 a museum whose actual signage reads "Art Gallery" is a naming *choice*, and the
 two are hard to tell apart from POI data alone. Worth a paragraph, not a post.
 
-**Phase 2 action:** introduce an auditable flag and review rule, preserve source records,
-and record evidence for exclusion or retention. Resolve ambiguous leading cases before
-publishing the top-20 ranking. This is the first analysis task, not a completed cleanup.
+**Phase 2 implementation:** category-only flags now create reviewable holdouts, with
+source-level evidence decisions and an unfiltered comparison ranking. Cal Poly actually
+uses [University Art Gallery](https://cla.calpoly.edu/university-art-gallery) as a name;
+UC San Diego documents that same wording as the former name of its
+[Mandeville Art Gallery](https://mandevilleartgallery.ucsd.edu/about/history.html).
+That is both a naming phenomenon and a snapshot-age problem. The identity pass now
+retains the UCSD, Baylor and Stony Brook former names as aliases of their current
+institutions. Five University Art Gallery names are confirmed; NMSU remains a
+historical-name holdout, and 131 category decisions remain pending across the full queue.
+These are naming decisions, not completed institution reviews.
+
+### Two networks can share a chain-sounding name (Phase 2, 2026-09-15)
+Museum of Illusions cannot safely be assigned to one parent from its name alone.
+The [global network's location directory](https://www.museumofillusions.com/our-locations/)
+and [Los Angeles attraction](https://illusions-la.com/) need location-level reconciliation.
+A [2021 court order](https://business.cch.com/ipld/MetamorfozaBigFunny20210727.pdf)
+describes separate operators using the wording in Los Angeles and Miami. This is a
+research lead, not a conclusion about current ownership or the merits of a legal claim.
+The first source pass established global-network affiliation for 11 candidate locations;
+Hollywood and Miami remain unresolved. Brand affiliation does not establish common
+legal ownership. See the [source report](data/validation/museum_source_review_2026-09-15.md).
+
+### Relocations can impersonate national collisions (Phase 2, 2026-09-15)
+The initial candidate ranking had four National Electronics Museum entities. Its own
+[history](https://www.nationalelectronicsmuseum.org/about-us/history-mission/) documents
+a move from Linthicum to Hunt Valley and reopening in November 2024. The name-based
+multi-site gate stops merging once too many sites appear, so extra stale/geocoded
+records can make one institution look more independent, not less. The
+[identity pass](data/validation/museum_identity_review_2026-09-15.md) now reconciles
+those four and the Historical Electronics alias into one institution using relocation,
+address and website evidence, including the later Middle River move. Public reopening
+is not established. The automatic rule is unchanged; evaluate any future rule change
+with fresh independent labels before claiming improved matching accuracy. Nearby-pair
+diagnostics also cover cases outside the original 150 m candidate radius.
+
+### Mixed records can create collisions as well as duplicates (Phase 2, 2026-09-15)
+The [focused Pennsylvania review](data/validation/museum_focused_review_2026-09-15.md)
+found one IMLS row mixing a Pennsylvania society's common name/address with a New York
+gallery's legal name, website and EIN. Another used the society's name with a different
+organization's EIN and Venetia mailing address. Neither row can establish a museum
+identity from its name alone; both now remain isolated, uncounted and auditable.
+**Question:** how much apparent name duplication comes from fields belonging to different
+institutions being combined into one source record? Generated dossiers and future review
+archives now retain original tax IDs and separate physical/mailing addresses; the legacy
+coalesced address can hide the contradiction. These additions support the next source
+checks without changing the existing identity decisions. The subsequent address pass
+confirms Peters Creek's physical museum and consolidates its two accepted Overture
+records, while preserving the contradictory IMLS row as a separate holdout. Tax IDs
+help identify an organization; they do not justify copying all fields from a mixed row.

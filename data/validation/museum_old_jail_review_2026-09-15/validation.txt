@@ -1,0 +1,10 @@
+R 4.4.2; 192 passing assertions, zero test failures, warnings or skips.
+Existing Windows locale warnings occurred during R startup, outside tests.
+23 integration checks passed; 92 protected files unchanged; 20 new acquisition/query hashes match.
+Current review: 449 institutions, 553 source rows, 147 nearby pairs.
+Only labelling_sheet is outdated and was not rebuilt.
+Old Jail Museum publication gate rejects the remaining pending reviews and unknown affiliations.
+Baseline, source names/coordinates, matching threshold, labels, prior packets and unrelated records are unchanged.
+Archived replay reproduced before/after counts and the publication hold.
+All 15 starting candidates have archived dispositions; all 113 local links in updated documentation resolve.
+git diff --check passed.

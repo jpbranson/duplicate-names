@@ -1,0 +1,16 @@
+check,passed
+automatic_baseline_unchanged,TRUE
+source_fields_unchanged,TRUE
+unaffected_records_unchanged,TRUE
+all_source_rows_retained,TRUE
+reviewed_parquet_matches_target,TRUE
+counted_entities,TRUE
+eligible_entities,TRUE
+counted_source_rows,TRUE
+source_conflict_holdouts,TRUE
+protected_files_unchanged,TRUE
+identity_audit.csv_matches_export,TRUE
+ranking_after.csv_matches_export,TRUE
+evidence_csv_valid,TRUE
+diagnostic_labels_blank,TRUE
+only_labelling_sheet_outdated,TRUE

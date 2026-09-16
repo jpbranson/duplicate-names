@@ -4,6 +4,7 @@
 .RData
 .Ruserdata
 .Renviron
+.local/
 
 # targets pipeline store — rebuildable, and large
 _targets/

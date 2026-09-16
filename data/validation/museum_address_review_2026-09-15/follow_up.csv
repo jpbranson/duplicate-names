@@ -1,0 +1,7 @@
+case_id,status,decision,next_action
+Chipley,identity_resolved,One museum with IMLS mailing record retained uncounted.,Finish overall name/affiliation and visitor-map checks in broader headline review.
+Peters_Creek,physical_membership_resolved,House and society count once; contradictory IMLS row remains isolated.,Preserve source conflict; finish overall review without transferring disputed aliases.
+Bankhead,unresolved,Unchanged separate counted candidate.,Find dated institution evidence for 1713 East Bankhead Drive; property use alone is insufficient.
+Lafayette,unresolved,Unchanged preservation-association candidate separate from Headquarters House.,Establish current physical museum operation and supported common name; IRS filing address is insufficient.
+Smedley,operator_point_staged,Public operator map marker archived separately from source coordinates.,Apply staged point in publication export and recheck current visitor access.
+Mandeville,operator_point_and_access_wording_staged,Official destination preserved; dated wording records open-ended indoor closure.,Apply staged point in publication export and refresh access wording before publication.

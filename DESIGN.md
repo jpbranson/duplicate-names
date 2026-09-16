@@ -1,6 +1,6 @@
 # Duplicate Names — Development Plan
 
-**Status:** Phase 1a measured-validation milestone complete; Phase 2 museum analysis next
+**Status:** Phase 2 tooling and focused source/identity passes complete; remaining headline checks pending
 **Last updated:** 2026-09-15
 
 The museum pipeline runs on Overture + IMLS. All 300 candidate pairs have human labels;
@@ -87,6 +87,19 @@ archive, with provenance in `data/raw/MANIFEST.json`. GNIS, HIFLD, OSM, and Over
 religious categories remain queued for Phase 1b. Wikidata enrichment is not implemented
 and is not a completed Phase 1a dependency.
 
+Phase 2 also uses official institution pages and source address/website metadata for
+explicit naming, affiliation and identity decisions. The 38-record Overture context
+query uses the same pinned release; its SQL/checksum are in the manifest and a
+[tracked copy](data/validation/museum_identity_review_2026-09-15/overture_context.csv)
+is archived with the identity evidence. The later
+[Old Jail context query](data/validation/museum_old_jail_review_2026-09-15/overture_context.csv)
+adds 41 records from the same release. The manifest also records the address pass's
+IRS extracts and operator-page caches, including 19 pages from the Old Jail review.
+These research acquisitions are outside `_targets.R`; their dated packets preserve
+the context and extracted evidence needed to review the decisions.
+Census 2023 places, counties and states supply the cached normalization gazetteer;
+those downloads are not yet included in the manifest.
+
 ### Primary spine
 
 | Source | Covers | Why | License |
@@ -116,7 +129,9 @@ the museum pipeline already uses a place-name gazetteer for L3 normalization.
 
 - **ARDA / US Religion Census (RCMS)** — county-level counts only, no congregation names.
   Fine for context sentences, useless for name analysis.
-- Anything scraped from Google Maps or Yelp. Terms of service, and no reproducibility.
+- Google Maps or Yelp POI harvesting. Source reviews may compare saved coordinates
+  with an institution's own outbound map destination; those checks are documented as
+  operator-supplied locations, not independent geocoding validation.
 
 ---
 
@@ -130,27 +145,29 @@ normalizer. It gets its own module, its own test suite, and a paragraph in each 
 Each record keeps *all* levels, so sensitivity can be reported rather than hidden:
 
 - **L0 `name_raw`** — as given.
-- **L1 `name_clean`** — Unicode NFKC, case-fold, strip punctuation and diacritics, collapse
-  whitespace, drop leading `The`.
+- **L1 `name_clean`** — Unicode NFKC, case-fold, remove diacritics, expand `&` to `and`,
+  replace punctuation except apostrophes with spaces, collapse whitespace, drop leading `The`.
 - **L2 `name_expanded`** — abbreviation expansion: `St.`→`Saint`, `Ft.`→`Fort`,
   `Mt.`→`Mount`, `AME`→`African Methodist Episcopal`, `UMC`→`United Methodist Church`,
-  `1st`→`First`, `Ch.`→`Church`, `Assy`→`Assembly`.
+  `1st`→`First`, `Assy`→`Assembly`. These examples show expansions; stored strings are lowercase.
 - **L3 `name_core`** — strip the locative tail. This is the key operation:
-  `First Baptist Church of Springfield` → `First Baptist Church`;
-  `Springfield First Baptist Church` → `First Baptist Church`.
+  `First Baptist Church of Peoria` → `First Baptist Church`;
+  `Peoria First Baptist Church` → `First Baptist Church`.
   Implemented by matching against a gazetteer of place names (Census places, counties,
-  states) at both head and tail positions — not by naive regex.
+  states) at both head and tail positions, with a blocklist protecting ambiguous names
+  such as Springfield and Union.
 - **L4 `name_key`** — L3 plus token sort and stopword removal, for fuzzy grouping.
 
 **Museum name headlines (M1/M2) use L2 `name_expanded`.** Geography is often part of a
 museum's identity; stripping it answers a different question. L3 `name_core` supports
-geography-stripped comparisons and the planned M3 subject analysis. Church name counts
+geography-stripped comparisons and the implemented bounded M3 subject analysis. Church name counts
 will use L3. Report the comparison levels explicitly rather than presenting L3/L4 museum
 counts as interchangeable estimates of the L2 result. A headline that only survives at L4
 is not a headline.
 
 The current duplicate-count helper defaults to L2/L3/L4. L1 can be requested explicitly.
-The M2 helper still groups on L3 and must be brought into line with this policy in Phase 2.
+M1/M2 now count a single canonical L2 name per entity. The resolved-record table retains
+all source rows; counting those rows or each alias separately inflated the old metrics.
 
 ### 4.2 Structured extraction
 
@@ -171,17 +188,20 @@ ordinal and scope-claim parsing and using the geography-stripped name for subjec
   stratified sample of ~500 to measure the classifier's error rate, and publish that rate.
 
 **Implementation status:** ordinal and scope-claim parsing exist. Compound ordinals remain
-a known church-analysis gap. `subject`, `name_style`, and `denom_norm` currently contain
-`NA` placeholders. Museum subject extraction is Phase 2 work; IMLS discipline codes offer
-an independent comparison, not a replacement for the name-derived field.
+a known church-analysis gap. `name_style` and `denom_norm` remain placeholders. Museum
+subjects use a bounded regex vocabulary on L3, with unmatched names left unknown and
+multiple topics retained. This is a heuristic topic taxonomy, not complete noun-phrase
+parsing. IMLS discipline provides a coarse compatibility diagnostic; GMU is not agreement,
+and this comparison does not measure classifier accuracy. Subjects inherit L3's limits.
 
 ### 4.3 Entity resolution (deduplicating the *data*, not the *names*)
 
-A single institution appearing in Overture + OSM + GNIS + HIFLD must not count as four
-duplicates. Resolution key: normalized name + distance threshold (start at 150 m, tune
-against a hand-labelled sample) + address match where available. Cross-source agreement
-doubles as the quality signal: a record present in three sources is real; one present only
-in a low-confidence commercial POI feed may be a closed storefront.
+A single institution appearing in several sources must not count as several duplicates.
+The current Overture/IMLS automatic matcher uses normalized names and a 150 m site
+candidate radius, followed by a separate name-based multi-site heuristic. Address and
+website evidence supports curated corrections; automatic address matching is not
+implemented. Cross-source agreement is a research signal, not proof of identity or
+current operation: records can be stale and sources can share upstream providers.
 
 **This is the single largest correctness risk in the project.** Budget real time for it.
 
@@ -197,13 +217,64 @@ than a held-out set. Preserve the original labels in `data/validation/`; use the
 disagreements diagnostically and fresh independent labels to evaluate matching changes.
 The generated `labelling_sheet` target can overwrite the working sheet in `data/processed/`.
 
+### 4.3.1 Curated identity corrections
+
+**Curated identity layer, September 15:** the automatic `entities` target remains an
+auditable baseline. `museum_records` applies only explicit source memberships from
+`museum_identity_decisions.csv`; it does not widen any matching rule. Each case names
+one existing canonical record, all affected baseline-cluster members, physical site
+groups, and source evidence. Guards check original names, entity IDs and coordinates.
+Current-name and former-name aliases are retained; physical museums under the same
+operator remain separate unless the evidence identifies the same museum.
+
+Within a reviewed case, only the canonical source record counts. Other rows remain
+with `reviewed_duplicate_record`, `reviewed_former_site`, `reviewed_mailing_address`
+or `reviewed_mislocated_record`. Source names and coordinates are not overwritten;
+misplaced/mail coordinates are not treated as additional physical sites. A source-level
+audit carries the original and corrected entity/site IDs, names and counting flags.
+Unreviewed rows keep the baseline policy. The first nine cases reconcile 24 baseline
+entities into nine institutions. Tests validate this mechanism, not the correctness of
+the assistant's factual judgments or overall matching accuracy. See the
+[identity report](data/validation/museum_identity_review_2026-09-15.md).
+
+The [focused follow-up](data/validation/museum_focused_review_2026-09-15.md) adds a
+LeMoyne consolidation and two `source_conflict` holdouts. The later
+[address follow-up](data/validation/museum_address_review_2026-09-15.md) adds the Chipley
+mailing consolidation and Peters Creek house/society pair. The
+[Old Jail pass](data/validation/museum_old_jail_review_2026-09-15.md) adds eight accepted
+identity cases and two more source-conflict holds. The current input has 56 source
+rows across 22 cases, with twenty canonical institutions and four isolated conflicting rows.
+A conflict row receives its own stable entity/site ID, `counted = FALSE` and
+`reviewed_source_conflict`; its disputed aliases cannot propagate to accepted members.
+Cases containing only conflicts need no canonical institution. Cases with accepted
+members still require exactly one counted canonical record.
+
+Identity reconciliation does not certify a visitor location. Source coordinates remain
+intact, including Mandeville's displaced points; the operator-supplied destination is
+archived in the focused packet's `map_checks.csv`. The address packet's
+`publication_locations.csv` stages separate publication coordinates, evidence and dated
+access wording for Mandeville, Smedley and Peters Creek. Publication export must consume
+these fields and refresh access checks. Generated review map links still use source
+coordinates. The expanded IMLS review context now retains EIN and separate physical/mailing
+street, city, state and ZIP fields as text. Readable addresses are assembled per original
+row before combining repeated MIDs; institution summaries retain the source ID beside
+each value. The legacy coalesced fields remain for compatibility, but are insufficient
+for identity research: the earlier dossiers hid the Pennsylvania contradictions.
+These fields enrich review sheets and future archives without changing analysis records
+or applying new identity decisions. See the [field guide](README.md#completing-a-museum-review).
+
 ### 4.4 Franchise / branch detection (M4)
 
 Flag collisions with evidence of common ownership or branch affiliation so they can be
 held out of the "independent collision" headline. Evidence can include a shared operator,
 a verified Wikidata parent, or a sourced chain lexicon. A nonempty operator field alone
-does not establish a chain. The current helper uses that shortcut, with Overture brand
-metadata supplying `operator`, so Phase 2 must extend and review it.
+does not establish a chain. Sourced rules in `data/validation/museum_chain_rules.csv`
+replace that shortcut. Specific brand names can establish network affiliation; location
+identity and liveness remain separate review questions. Name-only rules for ambiguous
+labels such as Museum of Illusions and Smithsonian Institution are review hints. Sourced
+location-specific decisions now establish 11 Museum of Illusions network affiliations;
+the Hollywood and Miami candidates remain unknown. `is_franchise = NA` means unknown;
+only an explicit reviewed decision can establish independence.
 
 Classify productive templates such as `Children's Museum of X` / `X County Historical
 Museum` separately. Shared wording or inherited place names are not evidence of shared
@@ -213,9 +284,14 @@ ownership. Keep institution identity, affiliation, and name-pattern explanations
 
 The saved rankings include `art gallery`, `planetarium`, and `fine arts gallery`. These
 may be POI category placeholders or actual institution names; names alone cannot settle
-that distinction. Phase 2 starts by defining an auditable flag and review rule, preserving
-the records and the evidence behind exclusions. Confirmed placeholders must not count as
-duplicate institution names. Review ambiguous cases before using them in a headline.
+that distinction. An exact L2 vocabulary now flags category-only names. Pending cases
+are held out of the provisional cleaned ranking, remain counted under the baseline
+policy, and appear in the unfiltered ranking and review queue. A sourced `confirmed_name`
+decision releases the hold; `placeholder` excludes only the name analysis. A sourced
+`historical_name` decision preserves a documented former name while holding it out of
+the current-name ranking. These decisions are keyed by source record with a stale-name
+guard. This is not blanket deletion or a
+claim that every flagged name is wrong. Review ambiguous cases before any headline.
 
 ---
 
@@ -227,7 +303,7 @@ are recorded in §9 so changes such as the museum L2 choice remain visible.
 **Museums**
 
 - `dup_count(name_expanded)` — headline for M1, using counted museum entities and the
-  category-only review policy once implemented.
+  implemented category-only review policy.
 - **Singularity Collision Index** — for names carrying a `scope_claim`, the count of
   independent (non-franchise) institutions sharing `name_expanded`. The Cryptozoology seed case
   scores whatever it scores; the *ranking* is the story.
@@ -235,10 +311,19 @@ are recorded in §9 so changes such as the museum L2 choice remain visible.
   the two distributions separately. Conflating them is the obvious analytical mistake and
   the thing most likely to make post 1 wrong.
 
-**Implementation gap:** `_targets.R` currently emits `dup_museums` only. M2 exists as
-`metric_singularity_collisions()` but still groups on `name_core`; correct that grouping
-and ensure counted/eligible entities feed it before wiring it into the pipeline. Subject
-summaries and reviewed franchise/independent splits also remain Phase 2 work.
+**Implementation status:** `_targets.R` emits canonical L2 duplicate and singularity
+candidate counts, subject summaries, affiliation splits, and review sheets. M2 reports
+unknown affiliation separately from reviewed independence; its lexical scope claims
+still require semantic review (American can describe a subject rather than assert
+singularity). No candidate count is a verified count of independent institutions.
+
+`dn_assert_museum_publication_ready()` checks selected L2 names for counted, eligible,
+verified rows with resolved affiliation. It is an explicit pre-export check, not a target
+automatically invoked by `_targets.R`. The ranking's `publication_ready` column summarizes
+recorded review statuses; neither mechanism verifies evidence, semantic scope claims or
+map/access details. Albion and Jim Thorpe now have verified overall reviews. The other
+ten Old Jail reviews remain pending, so the group still fails the explicit publication
+check. A supported identity or naming decision alone does not complete a review.
 
 **Churches**
 
@@ -280,8 +365,9 @@ pipeline should emit it as a named artifact rather than an incidental intermedia
    SPRINGFIELD INC`; the sign says `Springfield First Baptist`; OSM says `First Baptist
    Church`. Pick one authority per question and say which one.
 2. **Closed institutions.** POI data is full of ghosts, and museums close constantly.
-   Duplicate counts inflate if we count the dead. Use Overture confidence plus cross-source
-   presence.
+   Duplicate counts inflate if we count the dead. Overture confidence and cross-source
+   presence help prioritize research; current operation needs source checks. Keep
+   excluded records and evidence rather than deleting them.
 3. **Chains masquerading as collisions** — see §4.4.
 4. **The First Baptist duplication has a history.** Many Southern towns hold two
    congregations with near-identical names because of post-Reconstruction racial splits,
@@ -314,8 +400,10 @@ needed. Python is not used.
 
 **Use R 4.4, preferably the lockfile version 4.4.2.** Restore dependencies with
 `renv::restore()` rather than relying on a machine's user library or newest R installation.
-Run `targets::tar_make()` for outdated pipeline targets and `source("tests/testthat.R")`
-for tests; the latter sources this non-package project's functions first.
+Use the selective museum build in [README.md](README.md#running) while reviewing.
+A full `targets::tar_make()` can overwrite the working label sheet; archive new labels
+first. Run `source("tests/testthat.R")` for tests; it sources this non-package project's
+functions first.
 
 The current layout is below. Named post bundles will be created during their analysis
 phases; only the shared setup and template exist today.
@@ -337,13 +425,18 @@ duplicate-names/                # analysis repo; source of truth
     resolve.R                   # §4.3 entity resolution and counting policy
     validate_resolution.R       # sample generation and human-label scoring
     metrics.R                   # §5, one function per named metric
+    museums.R                   # category/affiliation/subject analysis and review exports
+    museum_identity.R           # explicit corrections over the automatic baseline
+    museum_review_context.R     # IMLS names, EIN and separate physical/mailing addresses
+    config_blog.R               # blog paths and presentation settings
     theme_dupnames.R            # shared ggplot2 theme + palette
     embed.R                     # builds self-contained widget HTML
   data/
-    raw/                        # immutable downloads, gitignored, manifest-tracked
-    processed/                  # generated parquet and working labelling sheet
-    validation/                 # tracked human-label archive and report
-  tests/testthat/               # gold-set tests for the normalizer
+    raw/                        # cached inputs; tracked museum-input manifest
+    processed/                  # baseline/reviewed parquet, review exports and labelling sheet
+    validation/                 # tracked labels, sourced decisions, evidence and reports
+  scripts/archive_museum_review.R # review-sheet archive helper; see README limitations
+  tests/testthat/               # normalization, schema, metrics and curated-review tests
   posts/
     _setup.R                    # shared plotting and payload helpers
     _template/index.Rmd         # skeleton for future post bundles
@@ -367,12 +460,12 @@ not generalize — the municipal-exclusivity denominator and denomination taggin
 get isolated behind country-scoped modules so their absence degrades gracefully rather than
 breaking the pipeline.
 
-**Stack.** DuckDB (spatial + httpfs extensions) via the `duckdb` R package as the engine —
-it queries Overture's remote GeoParquet directly with predicate pushdown, so we never
-download the planet, and the heavy work stays in SQL rather than in R memory. `arrow` +
-Parquet for every intermediate. `sf` for spatial operations and Voronoi territory polygons
-(`st_voronoi`). `tigris` for Census places, `stringdist` for fuzzy name matching,
-`stringi` for the Unicode normalization in §4.1.
+**Stack.** DuckDB (spatial + httpfs extensions) queries Overture's remote GeoParquet
+with predicate pushdown. R handles normalization, resolution and metrics; `targets`
+stores intermediate objects as RDS. `arrow` supplies source caches and the baseline/
+reviewed Parquet exports. `sf` handles spatial operations; Voronoi territory polygons
+(`st_voronoi`) remain planned church-analysis work. `tigris` supplies Census places,
+`stringdist` fuzzy name matching, and `stringi` Unicode normalization (§4.1).
 
 **Distance correctness.** `sf` uses s2 geometry for geographic coordinates by default, so
 `st_distance()` on lon/lat returns true great-circle distances — use `st_nearest_feature()`
@@ -388,11 +481,17 @@ re-run seconds instead of an hour. If `targets` is unfamiliar territory, numbere
 `R/` writing to `data/processed/` is an acceptable substitute; the cost is manual cache
 discipline. `testthat` for the §4 gold-set tests.
 
-**Reproducibility.** Every download recorded in `data/raw/MANIFEST.json` with URL, fetch
-date, and SHA-256. Sources shift under you; the manifest is what makes a published number
-defensible a year later. `dn_fetch()` treats a checksum change as an *error*, not a cue to
-re-download — a source changing underneath a published figure is the event the machinery
-exists to catch.
+**Reproducibility.** `data/raw/MANIFEST.json` records the museum inputs and research
+acquisitions with provenance, retrieval time and SHA-256. Dated review packets preserve
+decision inputs, evidence and checksums. The Census gazetteer is pinned to 2023 in code
+but still lacks manifest coverage. `dn_fetch()` checks cached downloads against their
+recorded hash; a supplied `expect_sha256` also guards new downloads. Source adapters
+can read existing Parquet caches directly, so manifest hashes should not be described
+as an automatic check on every pipeline run. The [validation index](data/validation/README.md)
+maps current decision inputs to the dated checkpoints. Archive manifests record file
+contents at a checkpoint; later documentation and live decision edits do not justify
+rewriting historical hashes. The general archive helper reads saved targets and omits
+identity artifacts; see [README.md](README.md#running) before preserving a new review.
 
 **Two renv gotchas, both hit during Phase 0 and both now handled in `setup-renv.R`:**
 
@@ -417,8 +516,8 @@ the release ODbL and attribute properly. Decide before publishing, not after.
 ### 7.1 Publishing into blogdown
 
 **Charts: ggplot2 chunks, knitted in the post.** A shared `theme_dupnames()` keeps the two
-posts visually consistent. Set `dev = "svg"` for line/bar work; switch to `ragg::agg_png`
-at `dpi = 192` for anything with tens of thousands of overplotted points, where SVG file
+posts visually consistent. The shared setup uses `dev = "svglite"` for SVG line/bar work;
+switch to knitr's `dev = "ragg_png"` at `dpi = 192` for tens of thousands of overplotted points, where SVG file
 size explodes.
 
 **Maps: self-contained widget HTML, iframed — not inline widgets.** Build with
@@ -484,8 +583,9 @@ RStudio, check `rmarkdown::pandoc_available()` and set `RSTUDIO_PANDOC`.
 ### 7.3 Blog defaults (adjustable)
 
 The blog repo is being reworked, so these are chosen defaults rather than measured facts.
-**Every one of them lives in `R/config_blog.R`** — one file to edit when the repo settles,
-and nothing downstream hardcodes a path, a width, or a URL.
+Paths, widths, slugs and embed settings live in **`R/config_blog.R`**. Knitr's figure
+device, aspect ratio and output-width defaults live in **`posts/_setup.R`**, which reads
+that configuration. Adjust these shared settings when the blog repo settles.
 
 | Knob | Default | Why, and what changes it |
 |---|---|---|
@@ -493,7 +593,7 @@ and nothing downstream hardcodes a path, a width, or a URL.
 | Post format | **`.Rmd`** | `.Rmarkdown` cannot carry HTML dependencies, so it forecloses inline widgets permanently. Maps are iframed either way, so `.Rmd` costs nothing today and keeps the option open — plus Pandoc footnotes and citations, which a source-heavy post wants. Switching later is a rename and a rebuild. |
 | Post structure | Leaf page bundle: `content/post/<slug>/index.Rmd` | Data travels with the post and publishes as page resources, so readers can download the numbers behind a chart |
 | Content width | **720 px → `fig.width = 7.5`** | Most Hugo themes land at 700–800; 720 divides cleanly by 96 dpi. Measure the real column once and change this one number. |
-| Figure device | `svg`, `fig.asp = 0.618`, `out.width = "100%"` | Per-chunk override to `ragg_png` at `dpi = 192` for heavy point plots, where SVG size explodes |
+| Figure device | `svglite`, `fig.asp = 0.618`, `out.width = "100%"` | Shared knitr defaults in `posts/_setup.R`; override to `ragg_png` at `dpi = 192` for heavy point plots |
 | Code visibility | `echo = FALSE` | General-audience blog; the code is public in this repo anyway |
 | Embed location | `static/embeds/duplicate-names/` → `/embeds/duplicate-names/` | Namespaced so future projects can't collide |
 | Embed height | 520 px, per-embed override | — |
@@ -526,7 +626,7 @@ Supporting files now in place: `R/config_blog.R`, `R/theme_dupnames.R`, `R/embed
 |---|---|---|
 | **0. Scaffold** ✅ **done 2026-09-07** | `git init`, RStudio project, renv pinned to R 4.4 (138 packages), schema contract, manifest machinery, source stubs, gold-set tests | ✅ `targets::tar_make()` runs end to end; 42 tests pass; `entities.parquet` written with 0 rows / 31 cols matching the contract |
 | **1a. Acquire + resolve — MUSEUMS** ✅ **milestone met 2026-09-15** | Overture + IMLS; the L3 gazetteer; entity resolution; 300 human-labelled pairs scored | Museum entities generated and pair-level validation measured; final clusters and multi-site cases remain subject to review (§4.3) |
-| **2. Museums analysis → D1** ◀ **next** | Category-only review; franchise detection; subject extraction; L2 alignment for M1/M2; top-20 collision review; figures, rank table, and draft | Post 1 knits from its bundle and small payloads without the analysis checkout or pipeline; every headline number hand-verified |
+| **2. Museums analysis → D1** ◀ **in progress** | Analysis tooling and focused source/identity passes complete; remaining top-20 checks, then figures and draft | Post 1 knits from its bundle and small payloads without the analysis checkout or pipeline; every headline number checked against evidence |
 | **1b. Acquire + resolve — CHURCHES** | GNIS, HIFLD, OSM, Overture religious categories; Census places denominator | Same, extended to ~250k congregations |
 | **3. Churches analysis → D2** | C1–C4; territory maps as `mapgl` embeds; ladder; naming cultures; emit the multiplicity list for post 4 | Post 2 drafted; embeds load standalone in a bare browser tab and have static fallbacks |
 | **4. Dashboard → D6** | Generalize the post-2 embeds into an arbitrary-category explorer | Deployed and queryable beyond churches and museums |
@@ -543,19 +643,33 @@ Reorder freely if the writing momentum runs the other way.
 
 ### Immediate Phase 2 deliverable
 
-Produce a cleaned L2 museum collision ranking and a review sheet identifying the
-institutions behind each top-20 name. Start with category-only handling, then affiliation
-classification, subject extraction, and M2's L2 correction. Review relevant entries from
-the saved 249-entity multi-site queue before using their counts. Record evidence and
-decisions, add regression cases for changed rules, and only then export the post payloads
-and write the headlines. This work does not require reopening the matching threshold.
+The cleaned provisional L2 ranking and institution/source review sheets are available;
+the [Old Jail report](data/validation/museum_old_jail_review_2026-09-15.md) is the latest
+checkpoint: 52,605 counted entities and 52,473 eligible for name analysis. It adds museum/
+society/mail consolidations and two Dubuque holds to the earlier passes. All four
+source-conflict rows remain isolated. Two institutions have complete factual reviews,
+but Old Jail's group publication gate still rejects pending reviews and unknown affiliation.
+Unresolved address/location cases and remaining top-20 source checks still
+precede publication. The [initial Phase 2 report](data/validation/museum_analysis_2026-09-15.md)
+preserves the earlier implementation checkpoint.
+Category handling, affiliation rules, subject extraction, canonical entity counting and
+M2's L2 correction are implemented and tested. Check identities, relevant multi-site
+cases, category decisions and affiliations before certifying counts. An assistant can
+research official sources and apply supported factual decisions; see the
+[first source-verification pass](data/validation/museum_source_review_2026-09-15.md).
+The `verified` institution status means the factual review is complete, not that a
+human supplied an independent matching label. Record evidence for factual corrections
+and use fresh independent human labels to evaluate matching changes. Then export the
+post payloads and write the headlines.
+This work does not require reopening the matching threshold.
 
 ---
 
 ## 9. Decisions
 
-Decisions 1–8 were settled 2026-09-07. Decisions 9–10 record the museum analysis policy
-and the September 15 validation outcome.
+Decisions 1–8 were settled 2026-09-07, with implementation clarifications below.
+Decisions 9–11 record the museum analysis policy, September 15 validation outcome and
+curated correction layer.
 
 1. **Geographic scope — US-first, with a global follow-up.** Both near-term posts are
    US-only; Phase 1 keeps the schema country-general so a global pass is cheap. See §7.
@@ -581,38 +695,53 @@ and the September 15 validation outcome.
    church-shaped (`denomination`, `religion`, `ordinal`, `place_geoid`), so 1b extends the
    pipeline rather than reopening it.
 
-   The one thing to watch: a normalizer tuned only against museum names will have
-   museum-shaped blind spots. Phase 1b must re-run the gold set with church cases added
+   The one thing to watch: matching validation covers museum source data, leaving
+   possible church-specific blind spots. Phase 1b must re-run the gold set with church cases added
    rather than assuming L3 generalizes.
 6. **Counting policy — closed museums are excluded from counts but kept in the data.**
    Exclusions are flags with a reason (`counted` / `exclusion_reason`), never deletions, so
    any of them can be audited or reversed by a reader of the published dataset.
-7. **The physical institution is the unit of analysis.** Where a site holds both a museum
-   and the historical society that runs it, they are **one** entity: the museum name leads
-   and the society name is preserved in `alt_names`. Same for a relocation — the
+7. **The physical institution is the unit of analysis.** Where source evidence establishes
+   that museum and society records identify the same museum, count one entity: the museum
+   name leads and the society name is preserved in `alt_names`. Co-location or shared
+   ownership alone is insufficient; an operator's distinct museums remain separate.
+   Same for a documented relocation — the
    International Cryptozoology Museum is one entity, at Bangor, with the Portland records
    retained and flagged rather than dropped.
 
    **`alt_names` carries a publication obligation, not just bookkeeping.** The eventual map
    must footnote the alternate names, so a reader can see that "Washington County
    Historical Museum" and "Washington County Historical Society" were treated as one place
-   and judge that call themselves. The saved September 7 results contain 6,181 entities
+   and judge that call themselves. The automatic baseline contains 6,181 counted entities
    with an alternate name.
 
-   Note the effect on a headline: this merge moved `washington county historical society`
-   from 27 to 19, so the decision is visible in post 1's numbers and has to be stated there.
+   The old source-row/alias metric gave `washington county historical society` 27;
+   canonical-entity counting gives 19 on the baseline. Nine explicit identity cases
+   subsequently reduce this name to 16 provisional entities, then the focused LeMoyne
+   correction and Venetia source-conflict hold reduce it to 14. The address pass's
+   Chipley mailing consolidation reduces it to 13. These are separate changes and
+   must be distinguished in the post.
 8. **Blog integration — defaulted, not blocked.** The blog repo is mid-rework, so §7.3
    fixes sensible defaults in `R/config_blog.R` and the project proceeds. The iframe
    approach in §7.1 was chosen specifically to be robust to most of the unknowns.
 9. **Museum name headlines use L2.** Place names are usually part of museum identity.
    Use `name_expanded` for M1/M2 and retain L3 for geography-stripped comparisons and
    subject analysis. This corrects the original plan's blanket L3 default. M1 follows
-   this policy; M2's code correction remains Phase 2 work.
+   this policy; Phase 2 corrected M2 and the source-row versus entity counting mismatch.
 10. **Retain the 0.85 matching threshold after measured validation (2026-09-15).** The
     300-pair sample supports this threshold; lowering it to 0.80 adds 30 false merges
     while recovering only two true matches. Archive the human labels unchanged. The
     result completes the Phase 1a validation milestone without asserting dataset-wide
     accuracy or validating final clusters.
+11. **Apply sourced identity corrections in a separate, auditable layer (2026-09-15).**
+    Preserve `entities` as the automatic baseline and apply explicit membership through
+    `museum_identity_decisions.csv` to produce `museum_records`. Museum analysis uses
+    this corrected layer. Keep every source row, original name/coordinate and before/after
+    audit. Factual source review can be completed by an assistant; independent human
+    labels remain necessary to evaluate matching accuracy (§4.3.1). Contradictory source
+    rows may be isolated as `source_conflict` holdouts, with stable separate IDs and
+    `reviewed_source_conflict` exclusions. They do not establish identity for either
+    institution suggested by their fields, and their disputed aliases must not propagate.
 
 ### Still open
 
@@ -630,4 +759,6 @@ and the September 15 validation outcome.
 - Setup and project overview → [`README.md`](README.md)
 - Current work and saved counts → [`HANDOFF.md`](HANDOFF.md)
 - Validation evidence and limitations → [September 15 report](data/validation/resolution_validation_2026-09-15.md)
+- Latest museum counts and remaining review cases → [Old Jail report](data/validation/museum_old_jail_review_2026-09-15.md)
+- Live decisions and archived evidence → [validation index](data/validation/README.md)
 - Analogous name-collision phenomena → [`LEADS.md`](LEADS.md)

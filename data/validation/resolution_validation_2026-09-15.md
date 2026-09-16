@@ -1,5 +1,12 @@
 # Museum resolution validation — 2026-09-15
 
+**Checkpoint note:** this report preserves the original human-label evaluation. The
+later [Phase 2 analysis](museum_analysis_2026-09-15.md),
+[source pass](museum_source_review_2026-09-15.md) and
+[identity corrections](museum_identity_review_2026-09-15.md) and
+[focused follow-up](museum_focused_review_2026-09-15.md) are subsequent work;
+they do not supply a new independent matching evaluation.
+
 All 300 candidate pairs were labelled by the user: **127 same institution, 173 different,
 0 unsure**. `TRUE`/`FALSE` labels are interpreted correctly by `dn_score_labels()`.
 
@@ -78,17 +85,18 @@ the radius. The score evaluates direct pair decisions, not transitive site clust
 multi-site entity merging, or the counting policy. Threshold selection uses the same
 sample, not a separate held-out evaluation, and uses similarities rounded to three decimals.
 
-Phase 1a's measured-validation milestone is complete. Phase 2 still needs category-only
-name handling, franchise detection, subject extraction, L2 alignment for M1/M2, and manual
-verification of leading collisions. `metric_singularity_collisions()` still groups on L3;
-the documentation update records this gap without changing the code. Repeated naming
-templates alone do not establish franchise affiliation.
+Phase 1a's measured-validation milestone is complete. At this scoring checkpoint,
+Phase 2 category handling, affiliation rules, subject extraction, canonical L2 M1/M2
+and the top-20 review packet were still pending; M2 still used L3. Those implementation
+gaps have since been addressed, followed by nine initial identity corrections and the
+focused consolidation/source-conflict pass. Repeated naming templates alone still do
+not establish franchise affiliation.
 
-The next deliverable is a cleaned museum collision ranking and a review sheet identifying
-the institutions behind the top 20 names, including relevant cases from the existing
-multi-site queue. See [HANDOFF.md](../../HANDOFF.md) for the sequence and
-[DESIGN.md](../../DESIGN.md) for methodology. The pipeline was not rebuilt; saved entity
-counts remain provisional and unchanged.
+The scoring step did not rebuild the pipeline or change saved entity counts. Later
+builds and count changes are documented in the linked reports. Remaining work is the
+top-20 source checks and focused unresolved cases, then figures and the standalone post.
+See [HANDOFF.md](../../HANDOFF.md) for current work and
+[DESIGN.md](../../DESIGN.md) for methodology.
 
 Use this archived CSV for future scoring. Rebuilding `labelling_sheet` rewrites the
 generated working copy in `data/processed/`; it cannot reproduce the human judgements.

@@ -1,0 +1,5 @@
+path,sha256,review_snapshot
+data/raw/MANIFEST.json,9248347e933a3d3a1e793896f582c64fdcc08a4ed530a6392d77537ef14728d8,2026-09-15
+data/validation/museum_chain_rules.csv,5c4dde2c64091f31329dc1790dd297a56846bada7777f9da5c57051d5e4eb1ca,2026-09-15
+data/validation/museum_decisions.csv,e4b569e5ed3269cbf62b17fe7b9c652cd16fe9fcbe972e467c5a08e687b4bca9,2026-09-15
+data/validation/resolution_labelling_2026-09-15.csv,ef36a81cfe3d0c413b7cfb2c0641f318e7a3d578db731fbe39425c4e0dbfab05,2026-09-15

@@ -2,10 +2,8 @@
 # The §4 ladder. This module decides every headline number in both posts, so it
 # is the one place in the project where tests come before convenience.
 #
-# Phase 0 wires the stages together and implements only the parts that are
-# unambiguous (L1, L2). L3 needs the gazetteer and L4 needs L3, so both pass
-# through for now — clearly marked, because a silent pass-through here would
-# produce plausible-looking but wrong duplicate counts.
+# L1/L2 retain geographic identity. L3 uses the gazetteer; L4 sorts L3 tokens.
+# Museum topic extraction is a separate, deliberately incomplete vocabulary.
 
 # L2 abbreviation table -----------------------------------------------------
 # Order matters: longer patterns first, so "A.M.E. Zion" isn't half-expanded
@@ -170,7 +168,7 @@ dn_normalize <- function(raw, gazetteer = NULL) {
       name_key      = dn_name_key(core),
       ordinal       = dn_parse_ordinal(expanded),
       scope_claim   = dn_parse_scope_claim(clean),
-      subject       = NA_character_,      # TODO(phase-2): museum topic phrase
+      subject       = dn_extract_subject(core, raw$category),
       name_style    = NA_character_,      # TODO(phase-3): §4.2 taxonomy
       denom_norm    = NA_character_       # TODO(phase-1): reconcile tags vs name
     )

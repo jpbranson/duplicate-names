@@ -38,7 +38,7 @@ dn_schema_raw <- function() {
     # When the SOURCE last touched this record — not when we downloaded it.
     #
     # operating_status is not sufficient on its own. The International
-    # Cryptozoology Museum left Portland for Bangor in 2016, and Overture
+    # Cryptozoology Museum opened its new Bangor home in June 2026, and Overture
     # still carries a Portland record marked "open". What separates them is
     # this field plus confidence: Bangor is 0.98 / 2026-08, the Portland
     # ghosts are 0.88 and 0.77 / 2025-08. Staleness is not flagged; it has to
@@ -71,7 +71,7 @@ dn_schema_normalized <- function() {
   )
 }
 
-#' Entity schema — one row per real-world institution, post-resolution
+#' Resolved-record schema — source rows carrying institution and site IDs
 dn_schema_entity <- function() {
   dplyr::bind_cols(
     dn_schema_normalized(),
@@ -79,7 +79,7 @@ dn_schema_entity <- function() {
       entity_id    = character(),  # stable hash; survives re-runs
       n_sources    = integer(),    # cross-source agreement = the quality signal
       source_set   = character(),  # e.g. "gnis|hifld|overture"
-      is_franchise = logical(),    # §4.4; excluded from headline collisions
+      is_franchise = logical(),    # TRUE affiliated, FALSE reviewed independent, NA unknown
       chain_id     = character(),
 
       # Sites. One institution can occupy more than one location, and a
@@ -118,6 +118,52 @@ dn_schema_entity <- function() {
       place_name  = character()
     )
   )
+}
+
+#' Phase 2 analysis: one canonical row per museum entity, including exclusions
+dn_schema_museum_analysis <- function() {
+  dplyr::bind_cols(dn_schema_entity(), tibble::tibble(
+    category_only = logical(),
+    category_decision = character(),
+    affiliation_status = character(),
+    affiliation_evidence = character(),
+    chain_candidate = character(),
+    naming_template = character(),
+    imls_disciplines = character(),
+    subject_check = character(),
+    review_status = character(),
+    review_evidence = character(),
+    review_note = character(),
+    analysis_eligible = logical(),
+    analysis_exclusion = character()
+  ))
+}
+
+dn_schema_chain_rules <- function() {
+  tibble::tibble(rule_id = character(), chain_id = character(),
+                match_on = character(), pattern = character(),
+                evidence_url = character(), evidence_note = character(),
+                reviewed_by = character(), reviewed_on = character())
+}
+
+dn_schema_museum_decisions <- function() {
+  tibble::tibble(source = character(), source_id = character(),
+                expected_name = character(), category_decision = character(),
+                affiliation_status = character(), chain_id = character(),
+                review_status = character(), evidence_url = character(),
+                note = character(), reviewed_by = character(), reviewed_on = character())
+}
+
+# Explicit source membership for evidence-backed corrections to the baseline.
+# Coordinates are a string guard (longitude,latitude rounded to seven decimals).
+# source_conflict isolates a contradictory source row as an uncounted holdout;
+# it does not assign that row to either of the institutions its fields suggest.
+dn_schema_museum_identity_decisions <- function() {
+  tibble::tibble(case_id = character(), source = character(), source_id = character(),
+    expected_name = character(), expected_entity_id = character(),
+    expected_coordinates = character(), role = character(), site_group = character(),
+    evidence_url = character(), evidence_note = character(),
+    reviewed_by = character(), reviewed_on = character())
 }
 
 #' Controlled vocabulary for name_style (§4.2)

@@ -1,0 +1,9 @@
+R 4.4.2; 192 passing test assertions; zero failed, warnings or skipped tests.
+Existing Windows locale warnings occurred at R startup, outside tests.
+18 integration checks passed; 63 protected files unchanged.
+Current review: 452 institutions, 542 source rows, 149 nearby pairs.
+Source names/coordinates, automatic baseline, baseline multisite queue, human labels and earlier packets unchanged.
+Publication coordinates are staged CSV evidence only; no Parquet coordinate override was applied.
+All 10 new raw acquisition hashes match; earlier manifest entries and queries are unchanged.
+Cached Smedley map component reproduces the staged marker; archived count replay passed.
+Only labelling_sheet is outdated. All 102 local links in updated project/report docs resolve; git diff --check passes.

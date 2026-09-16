@@ -1,0 +1,24 @@
+label,url,path,status
+jail_barnesville,https://www.blchs.com/,data/raw/jail_barnesville_2026-09-15.html,cached
+jail_hayesville,https://www.blueridgeheritage.com/destinations/clay-county-museum/,data/raw/jail_hayesville_2026-09-15.html,cached
+jail_lawrenceburg,https://lawrencecountytn.gov/visitors/attractions/,data/raw/jail_lawrenceburg_2026-09-15.html,cached
+jail_albion,https://www.noblehistory.org/old-jail/old-jail-museum-of-noble-county-historical-society.html,data/raw/jail_albion_2026-09-15.html,cached
+jail_albion_operator,https://www.noblehistory.org/,data/raw/jail_albion_operator_2026-09-15.html,cached
+jail_st_augustine,https://www.staugustineoldjail.com/,data/raw/jail_st_augustine_2026-09-15.html,cached
+jail_hta,https://www.historictours.com/st-augustine,data/raw/jail_hta_2026-09-15.html,cached
+jail_winchester,https://www.winchester-tn.com/attractions/slideshows/old-jail-museum,data/raw/jail_winchester_2026-09-15.html,"HTTP response code said error [www.winchester-tn.com]:
+The requested URL returned error: 403"
+jail_franklin_society,https://www.franklincountytnhistory.com/,data/raw/jail_franklin_society_2026-09-15.html,cached
+jail_dubuque,https://www.dubuquecountyiowa.gov/471/Historic-Old-Jail,data/raw/jail_dubuque_2026-09-15.html,cached
+jail_dubuque_veterans,https://www.dubuquecountyiowa.gov/directory.aspx?did=35,data/raw/jail_dubuque_veterans_2026-09-15.html,cached
+jail_greenwood,https://www.greenwoodmuseumonline.com/Historic-Properties/Old-Jail-Museum,data/raw/jail_greenwood_2026-09-15.html,cached
+jail_greenwood_location,https://www.greenwoodmuseumonline.com/Museum-Information/Our-Location,data/raw/jail_greenwood_location_2026-09-15.html,cached
+jail_greenwood_operator,https://www.greenwoodmuseumonline.com/Museum-Information/About-Us,data/raw/jail_greenwood_operator_2026-09-15.html,cached
+jail_thompson_falls,https://visitmt.com/listing/old-jail-museum-14188,data/raw/jail_thompson_falls_2026-09-15.html,cached
+jail_sanders_society,https://www.thompsonfallschamber.org/members/sanders-county-historical-society-,data/raw/jail_sanders_society_2026-09-15.html,"HTTP response code said error [www.thompsonfallschamber.org]:
+The requested URL returned error: 404"
+jail_allegan,https://alleganoldjailmuseum.com/,data/raw/jail_allegan_2026-09-15.html,cached
+jail_smethport,https://www.mchsmuseum.org/museum-info,data/raw/jail_smethport_2026-09-15.html,cached
+jail_smethport_contact,https://www.mchsmuseum.org/contact,data/raw/jail_smethport_contact_2026-09-15.html,cached
+jail_jim_thorpe,https://theoldjailmuseum.com/,data/raw/jail_jim_thorpe_2026-09-15.html,cached
+jail_sandersville,https://wacohistorical.org/genealogy/,data/raw/jail_sandersville_2026-09-15.html,cached

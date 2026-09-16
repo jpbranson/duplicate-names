@@ -1,0 +1,22 @@
+rank,name_expanded,n_entities,n_chain,n_independent_verified,n_affiliation_unknown,n_category_pending,n_multisite,n_review_pending,publication_ready
+1,washington county historical society,19,0,0,19,0,0,19,FALSE
+2,old jail museum,15,0,0,15,0,0,15,FALSE
+3,union county historical society,14,0,0,14,0,0,14,FALSE
+4,museum of illusions,13,11,0,2,0,0,13,FALSE
+5,play street museum,12,12,0,0,0,0,12,FALSE
+6,ripley's believe it or not,12,12,0,0,0,0,12,FALSE
+7,franklin county historical society,11,0,0,11,0,0,11,FALSE
+8,greene county historical society,11,0,0,11,0,0,11,FALSE
+9,jackson county historical society,11,0,0,11,0,0,11,FALSE
+10,depot museum,10,0,0,10,0,0,10,FALSE
+11,smithsonian institution,10,0,0,10,0,0,10,FALSE
+12,wayne county historical society,10,0,0,10,0,0,10,FALSE
+13,adams county historical society,9,0,0,9,0,0,9,FALSE
+14,brown county historical society,9,0,0,9,0,0,9,FALSE
+15,carroll county historical society,9,0,0,9,0,0,9,FALSE
+16,children's discovery museum,9,0,0,9,0,0,9,FALSE
+17,clinton county historical society,9,0,0,9,0,0,9,FALSE
+18,madison county historical society,9,0,0,9,0,0,9,FALSE
+19,monroe county historical society,9,0,0,9,0,0,9,FALSE
+20,pioneer village,9,0,0,9,0,0,9,FALSE
+21,veterans memorial museum,9,0,0,9,0,0,9,FALSE

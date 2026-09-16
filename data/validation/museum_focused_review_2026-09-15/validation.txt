@@ -1,0 +1,7 @@
+R 4.4.2; testthat: 161 passed, 0 failed, 0 warnings, 0 skipped.
+Selective targets build: 15 completed; 13 skipped. labelling_sheet left untouched.
+15 integration checks passed; all 35 protected-file hashes unchanged.
+Archived before/after decisions reproduce counts, source fields and unaffected records.
+63 local Markdown links checked in updated documentation.
+git diff --check passed. Git emitted existing line-ending notices; R emitted existing startup locale warnings.
+This verifies implementation and preservation, not matching accuracy or publication readiness.

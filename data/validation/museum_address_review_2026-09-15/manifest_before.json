@@ -1,0 +1,61 @@
+{
+  "downloads": [
+    {
+      "label": "imls_mudf_2018",
+      "url": "https://www.imls.gov/sites/default/files/2018_csv_museum_data_files.zip",
+      "path": "data/raw/2018_csv_museum_data_files.zip",
+      "sha256": "cadafce89480912336ec64c874be2c3f1b98858ec51963b47e183f89a58fe1c4",
+      "bytes": 2864864,
+      "retrieved": "2026-09-07T19:40:56-0500"
+    }
+  ],
+  "queries": [
+    {
+      "label": "overture_museum",
+      "source": "overture",
+      "detail": {
+        "release": "2026-08-19.0",
+        "category_like": "%museum%",
+        "country": "US",
+        "bbox": {
+          "xmin": -180,
+          "xmax": -66,
+          "ymin": 17,
+          "ymax": 72
+        }
+      },
+      "path": "data/raw/overture_museum_2026-08-19.0.parquet",
+      "n_rows": 29894,
+      "sha256": "448a5c8f87faf33360062b6fb6cf0a9e721773b2b860e791b2352db9710b72de",
+      "bytes": 2442773,
+      "retrieved": "2026-09-07T20:54:20-0500"
+    },
+    {
+      "label": "imls_museums",
+      "source": "imls",
+      "detail": {
+        "files": ["MuseumFile2018_File1_Nulls.csv", "MuseumFile2018_File2_Nulls.csv", "MuseumFile2018_File3_Nulls.csv"],
+        "keyed_on": "COMMONNAME"
+      },
+      "path": "data/raw/imls_museums.parquet",
+      "n_rows": 30109,
+      "sha256": "f412b6186fefa91436ec066ea1ebae29b7f1b2fbce8f75bd12e6114ff35f254e",
+      "bytes": 1240159,
+      "retrieved": "2026-09-07T21:20:27-0500"
+    },
+    {
+      "label": "overture_identity_context",
+      "source": "overture",
+      "detail": {
+        "release": "2026-08-19.0",
+        "source_ids": ["5a790b09-0998-4068-88c3-95506f3eb6a3", "7c3aed7a-dd9d-4c56-a984-c5f8a303a9f0", "4839d27e-d755-418c-9a26-a6c30f0dcd43", "0c882b11-f39b-402b-ba37-b0980564ab65", "9bd8b641-b58f-480e-a245-a79482c7a746", "a65d225d-0c0c-404f-b2ad-7c347bab0108", "6e07087a-f45d-4216-bb4c-d32c693797af", "d4472bd6-68ab-41e1-9616-fba56529a4ce", "717a473d-6a94-4a75-8de1-0fe50f19f450", "7034b742-415d-4469-9198-89faf43da7b3", "94f0e826-ace4-490f-aa7e-a20408c96b77", "f03eab9c-20ad-4147-b13e-7619ebba5baf", "ecf32abd-3964-4842-beb4-c2ba6c025ecc", "b21c579d-6e19-4e64-83d4-051f763f8e05", "d959641b-361a-4a3c-8608-ac664bbff0e2", "05c38b17-e050-463c-9dc0-f0934663cba6", "11aca0e5-d05d-4aae-a11f-04805c2ac265", "c6dcc9e8-4c63-4c95-b9fa-c254bc607d84", "ded6189f-7f83-43b2-b59c-26db0d6e6632", "99376ad5-a49e-42db-8128-536826febae2", "27260a45-e524-43e3-8267-937dcaeaeb9b", "27cf1f4b-2da0-4506-963d-3dac0622c113", "aca0587b-dbde-4d67-a74c-e7ebe7b874ca", "4c750539-2063-49ac-9e98-d9e0f79cb279", "97b26376-a632-44de-998c-2db095ad80dd", "b21e23bc-9058-4514-8082-c3e1336834a1", "b265eee2-199c-45f3-882a-e529d744f4c6", "cde67d7d-4c26-431f-96c5-1cc683124215", "0a7d550c-5085-4969-b80d-15b9be6451eb", "d11c7e73-0233-46ba-a530-91c3023d9976", "983d9f85-d217-4d46-be11-70822453ad02", "633fcf2b-1b59-4527-b88a-1e42bc626921", "10d4d837-5673-4dfc-a618-7b5a72b0f37b", "b4c71255-4309-4213-a2ca-22e30037b268", "a1bfa5bd-cf54-481a-9b82-223a530c064c", "8eeacbc0-92c8-40fd-a9a2-8380cb4fd8a7", "501141c4-3d4c-49e6-b3b8-c7b4c0c89250", "6d77967f-48ef-4e2c-a928-dd4d4d935614"],
+        "sql": "SELECT id AS source_id, names.primary AS name_raw, CAST(addresses AS VARCHAR) AS addresses,\n    CAST(websites AS VARCHAR) AS websites, CAST(sources AS VARCHAR) AS sources, CAST(phones AS VARCHAR) AS phones\n    FROM read_parquet('s3://overturemaps-us-west-2/release/2026-08-19.0/theme=places/type=place/*') WHERE bbox.xmin BETWEEN -130 AND -65 AND bbox.ymin BETWEEN 24 AND 50\n    AND id IN ('5a790b09-0998-4068-88c3-95506f3eb6a3','7c3aed7a-dd9d-4c56-a984-c5f8a303a9f0','4839d27e-d755-418c-9a26-a6c30f0dcd43','0c882b11-f39b-402b-ba37-b0980564ab65','9bd8b641-b58f-480e-a245-a79482c7a746','a65d225d-0c0c-404f-b2ad-7c347bab0108','6e07087a-f45d-4216-bb4c-d32c693797af','d4472bd6-68ab-41e1-9616-fba56529a4ce','717a473d-6a94-4a75-8de1-0fe50f19f450','7034b742-415d-4469-9198-89faf43da7b3','94f0e826-ace4-490f-aa7e-a20408c96b77','f03eab9c-20ad-4147-b13e-7619ebba5baf','ecf32abd-3964-4842-beb4-c2ba6c025ecc','b21c579d-6e19-4e64-83d4-051f763f8e05','d959641b-361a-4a3c-8608-ac664bbff0e2','05c38b17-e050-463c-9dc0-f0934663cba6','11aca0e5-d05d-4aae-a11f-04805c2ac265','c6dcc9e8-4c63-4c95-b9fa-c254bc607d84','ded6189f-7f83-43b2-b59c-26db0d6e6632','99376ad5-a49e-42db-8128-536826febae2','27260a45-e524-43e3-8267-937dcaeaeb9b','27cf1f4b-2da0-4506-963d-3dac0622c113','aca0587b-dbde-4d67-a74c-e7ebe7b874ca','4c750539-2063-49ac-9e98-d9e0f79cb279','97b26376-a632-44de-998c-2db095ad80dd','b21e23bc-9058-4514-8082-c3e1336834a1','b265eee2-199c-45f3-882a-e529d744f4c6','cde67d7d-4c26-431f-96c5-1cc683124215','0a7d550c-5085-4969-b80d-15b9be6451eb','d11c7e73-0233-46ba-a530-91c3023d9976','983d9f85-d217-4d46-be11-70822453ad02','633fcf2b-1b59-4527-b88a-1e42bc626921','10d4d837-5673-4dfc-a618-7b5a72b0f37b','b4c71255-4309-4213-a2ca-22e30037b268','a1bfa5bd-cf54-481a-9b82-223a530c064c','8eeacbc0-92c8-40fd-a9a2-8380cb4fd8a7','501141c4-3d4c-49e6-b3b8-c7b4c0c89250','6d77967f-48ef-4e2c-a928-dd4d4d935614')"
+      },
+      "path": "data/raw/overture_identity_context_2026-09-15.csv",
+      "n_rows": 38,
+      "sha256": "0449e7b80c0f6f61a3c189102d7df11469816e50c89c548553880a8886d57ac3",
+      "bytes": 38849,
+      "retrieved": "2026-09-15T21:14:57-0500"
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+measure,before,after,change
+source_rows,60002,60002,0
+counted_source_rows,57327,57313,-14
+counted_entities,52617,52605,-12
+name_eligible_entities,52485,52473,-12
+old_jail_museum,15,12,-3
+washington_county_historical_society,13,13,0
+overall_verified_institutions,0,2,2

@@ -1,0 +1,3 @@
+source,source_id,expected_name,category_decision,affiliation_status,chain_id,review_status,evidence_url,note,reviewed_by,reviewed_on
+imls,8409504219,UNIVERSITY ART GALLERY,confirmed_name,unknown,,pending,https://cla.calpoly.edu/university-art-gallery,Cal Poly uses University Art Gallery as its actual name; release the category hold only. Campus record identity and affiliation remain unverified.,Codex source review,2026-09-15
+imls,8409504230,UNIVERSITY ART GALLERY,pending,unknown,,pending,https://mandevilleartgallery.ucsd.edu/about/history.html,UC San Diego documents University Art Gallery as the former name of Mandeville Art Gallery. Keep the old-name record pending identity and historical-name review.,Codex source review,2026-09-15

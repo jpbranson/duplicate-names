@@ -1,2 +1,6 @@
-# Preserve archived human labels byte for byte, including original line endings.
-data/validation/*.csv -text whitespace=trailing-space,space-before-tab,cr-at-eol
+# Preserve labels, evidence packets and provenance byte for byte so recorded
+# checksums survive commits and checkouts on every platform.
+data/validation/** -text whitespace=trailing-space,space-before-tab,cr-at-eol
+data/raw/MANIFEST.json -text whitespace=trailing-space,space-before-tab,cr-at-eol
+# R console transcripts retain printed alignment and terminal blank lines.
+data/validation/**/label_scores.txt -whitespace

@@ -1,0 +1,25 @@
+$threshold
+[1] 0.85
+
+$n_labelled
+[1] 300
+
+$n_unsure
+[1] 0
+
+$confusion
+   true_merge   false_merge  missed_merge true_separate 
+          119             1             8           172 
+
+$precision
+[1] 0.9916667
+
+$recall
+[1] 0.9370079
+
+$error_rate
+[1] 0.03
+
+$best_threshold_on_sample
+[1] 0.85
+
