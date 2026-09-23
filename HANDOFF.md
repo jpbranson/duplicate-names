@@ -1,6 +1,6 @@
 # Handoff
 
-**Last session:** 2026-09-23 provisional leaders review · **Phase:** 2 leaders batch complete; headline methodology question open
+**Last session:** 2026-09-23 chain separation and not-a-museum exclusion · **Phase:** 2 headline review ongoing
 **Repo:** https://github.com/jpbranson/duplicate-names
 
 Read [DESIGN.md](DESIGN.md) for the plan and the numbered decisions, [LEADS.md](LEADS.md)
@@ -74,7 +74,7 @@ Museums only. Churches (Phase 1b) are queued, not cancelled — see §6.
 | Sources | Overture `2026-08-19.0` (29,894 US museums) + IMLS MUDF 2018 (30,108) |
 | Baseline records | 60,002 → **57,348 counted** |
 | Baseline entities | **52,636** counted |
-| After curated identity corrections and source-conflict holds | **52,588** counted; **52,456** eligible for name analysis |
+| After curated identity corrections, source-conflict holds and not-a-museum decisions | **52,584** counted; **52,452** eligible for name analysis |
 | Baseline excluded source records | 2,306 non-primary site · 331 permanently closed · 17 no name |
 | Baseline counted entities with an alternate name | 6,181 |
 
@@ -118,7 +118,17 @@ fell to 8; the initial dated packet's 470/551/159 counts describe its earlier st
 **Sixteen** institutions have complete `verified` factual reviews: Albion, Jim Thorpe,
 Creston, the 11 Museum of Illusions network locations, Stevens Memorial Museum and the
 Washington County Heritage Center. Ten Old Jail reviews, seven Union County and seven
-Washington County exact-name institutions, and Museum of Illusions Miami Beach remain pending. See the
+Washington County exact-name institutions, and Museum of Illusions Miami Beach remain pending.
+
+The [methodology checkpoint](data/validation/museum_methodology_2026-09-23.md) applies two decisions made after that
+review. **Chains are separated from the headline:** M1/M2 count only non-chain institutions,
+and `museum_chains` / `museum_chain_overlap` report chain locations and shared names for the
+post. **A sourced `not_museum` decision** removes records that describe no museum; Fort
+Edward, St. George and Marietta are the first three. The directory's 14 city-suffixed Museum
+of Illusions locations are affiliated (25 in all) and Atlanta's duplicate is reconciled.
+**57,292** source rows, **52,584** institutions and **52,452** eligible are counted; the
+identity input has **92 rows in 37 cases**; **19** institutions are verified. The generated
+review has **457 institutions, 560 source rows and 149 nearby pairs**. See the
 [validation index](data/validation/README.md) for the live inputs,
 archived checkpoints and read-only reproduction commands.
 
@@ -149,8 +159,10 @@ similarity band within 150 m, not a dataset-wide error rate or an evaluation of 
 entity clusters. Multi-site merging and matches outside the candidate radius remain
 unvalidated by this sample. Preserve human labels independently of matching changes.
 
-**Current review checkpoint:** [provisional leaders report](data/validation/museum_leaders_review_2026-09-23.md),
-its updated ranking and dispositions for all 26 starting candidates. The preceding
+**Current review checkpoint:** [methodology report](data/validation/museum_methodology_2026-09-23.md), with its
+before/after headline rankings, chain summary and overlap. The
+[provisional leaders report](data/validation/museum_leaders_review_2026-09-23.md) retains
+its ranking and dispositions for all 26 starting candidates. The preceding
 [Union County report](data/validation/museum_union_county_review_2026-09-17.md) retains
 its ranking and dispositions for all 14 of that group's starting candidates. Six supported
 identity corrections reconcile Georgia, Tennessee, Illinois, Florida, Iowa and New Mexico.
@@ -175,17 +187,14 @@ M2 candidates, and the seed case. Tracked inputs are `museum_chain_rules.csv`,
 generated review outputs are under
 `data/processed/museum_review/`.
 
-**Next: decide the headline methodology question, then continue with Old Jail.**
-Four names now tie at 12: Museum of Illusions, Old Jail Museum, Play Street Museum and
-Ripley's Believe It or Not. Three are single-brand chains. The official Museum of
-Illusions directory lists 25 open US locations; 14 are in Overture with city suffixes
-and fall into separate L2 names. Decide whether M1 excludes verified chains or
-normalizes brand-plus-city names before reviewing more chain groups; Old Jail Museum
-is the leading name that is not a chain. The
-[leaders follow-up queue](data/validation/museum_leaders_review_2026-09-23/follow_up.csv)
-also proposes a sourced non-museum exclusion: Fort Edward (headquarters/library),
-St. George (umbrella society), Marietta (archives) and Greenville (revoked, no museum)
-stay counted because the schema cannot yet exclude them.
+**Next: review the new headline leaders.** With chains separated, Franklin, Greene and
+Jackson County Historical Society and Old Jail Museum tie at 11 non-chain institutions.
+Review the three county-society groups (identity merges into operated museums, and
+`not_museum` where operator evidence supports it) and Old Jail's ten pending cases.
+Smithsonian Institution (10) needs sourced parent affiliation before it can headline.
+The Madame Tussaud's overlap is unresearched blog material. See the
+[methodology queue](data/validation/museum_methodology_2026-09-23/follow_up.csv) and the
+[leaders queue](data/validation/museum_leaders_review_2026-09-23/follow_up.csv).
 The [Union County queue](data/validation/museum_union_county_review_2026-09-17/follow_up.csv)
 still holds that group's evidence gaps; its seven exact-name institutions fail the gate.
 Oregon's mixed identity context, Monroe's unconfirmed museum status, Liberty's rural
@@ -351,6 +360,17 @@ Two known gaps that only matter for churches:
 ---
 
 ## 7. Session log
+
+2026-09-23 chain separation and not-a-museum exclusion (user decisions): headline M1/M2 now
+count only non-chain institutions; new `museum_chains` and `museum_chain_overlap` targets
+and review exports report chains and the names they share. Added the `not_museum` category
+decision (uncounted in `museum_analysis`, rows kept in `museum_records`) with tests. Parsed the
+official Museum of Illusions directory's map links: 13 city-suffixed records within 53 m,
+New Orleans' address matches despite a 414 m point, and Atlanta's two records reconcile
+to one. Three sourced not-a-museum decisions (Fort Edward, St. George, Marietta). Counted
+institutions 52,584 (52,452 eligible); leaders now Franklin, Greene, Jackson County
+Historical Society and Old Jail at 11. R 4.4.2: 217 assertions and 23 integrity checks
+passed, including 212 protected files and an unchanged automatic baseline.
 
 2026-09-23 provisional leaders review: committed the Union County batch (`373deae`), then
 researched all 26 Museum of Illusions and Washington County Historical Society candidates.

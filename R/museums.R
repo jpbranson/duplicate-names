@@ -1,6 +1,9 @@
 # Phase 2 interpretation is separate from resolution. No matching thresholds,
 # entity IDs, source records, or independent resolution labels change here.
 
+DN_CATEGORY_DECISIONS <- c("pending", "confirmed_name", "placeholder", "historical_name",
+                           "not_flagged", "not_museum")
+
 DN_CATEGORY_ONLY <- c(
   "museum", "museums", "gallery", "art gallery", "fine arts gallery",
   "university art gallery", "art museum", "history museum", "science museum",
@@ -162,7 +165,7 @@ dn_museum_analysis <- function(entities, rules = dn_schema_chain_rules(),
     }
     ids <- records$entity_id[idx]
     if (anyDuplicated(ids)) stop("Multiple decisions address the same museum entity.")
-    if (any(!decisions$category_decision %in% c("pending", "confirmed_name", "placeholder", "historical_name", "not_flagged")) ||
+    if (any(!decisions$category_decision %in% DN_CATEGORY_DECISIONS) ||
         any(!decisions$affiliation_status %in% c("unknown", "chain", "independent")) ||
         any(!decisions$review_status %in% c("pending", "verified")) ||
         any(is.na(decisions$evidence_url) | !grepl("^https://", decisions$evidence_url)) ||
@@ -172,8 +175,11 @@ dn_museum_analysis <- function(entities, rules = dn_schema_chain_rules(),
     if (any(decisions$affiliation_status == "chain" & is.na(decisions$chain_id))) {
       stop("Affiliated decisions require a chain_id.")
     }
+    # Affiliation is moot for a record that is not a museum; a sourced not_museum
+    # decision can complete its review with affiliation still unknown.
     if (any(decisions$review_status == "verified" &
-            (decisions$category_decision == "pending" | decisions$affiliation_status == "unknown"))) {
+            (decisions$category_decision == "pending" |
+               (decisions$affiliation_status == "unknown" & decisions$category_decision != "not_museum")))) {
       stop("Verified institution review requires resolved category and affiliation decisions.")
     }
     k <- match(ids, x$entity_id)
@@ -187,6 +193,11 @@ dn_museum_analysis <- function(entities, rules = dn_schema_chain_rules(),
     x$review_evidence[k] <- decisions$evidence_url
     x$review_note[k] <- decisions$note
   }
+  # A reviewed non-museum (e.g. a society office, archive or umbrella group with no
+  # museum) leaves the museum count. Its source rows stay in museum_records.
+  not_museum <- x$counted & x$category_decision == "not_museum"
+  x$counted[not_museum] <- FALSE
+  x$exclusion_reason[not_museum] <- "reviewed_not_museum"
   x$analysis_exclusion <- dplyr::case_when(
     !x$counted ~ x$exclusion_reason,
     x$category_only & x$category_decision %in% c("pending", "not_flagged") ~ "category_pending",
@@ -198,24 +209,64 @@ dn_museum_analysis <- function(entities, rules = dn_schema_chain_rules(),
   dn_validate(x, dn_schema_museum_analysis(), label = "museum analysis")
 }
 
+# M1 headline ranking. Chain-affiliated locations are separated from the headline:
+# n_entities counts only non-chain institutions, and n_chain reports same-name chain
+# locations alongside. Names used only by chains drop out (see dn_museum_chain_summary).
 dn_museum_ranking <- function(x, eligible_only = TRUE) {
   if (eligible_only) x <- dplyr::filter(x, .data$analysis_eligible)
   x |>
     dplyr::filter(.data$counted, !is.na(.data$name_expanded), nzchar(.data$name_expanded)) |>
     dplyr::group_by(.data$name_expanded) |>
     dplyr::summarise(
-      n_entities = dplyr::n_distinct(.data$entity_id),
+      n_entities = sum(.data$affiliation_status != "chain"),
       n_chain = sum(.data$affiliation_status == "chain"),
       n_independent_verified = sum(.data$affiliation_status == "independent" & .data$review_status == "verified"),
       n_affiliation_unknown = sum(.data$affiliation_status == "unknown"),
-      n_category_pending = sum(.data$category_only & .data$category_decision == "pending"),
-      n_multisite = sum(.data$n_sites > 1L),
-      n_review_pending = sum(.data$review_status != "verified"),
-      publication_ready = all(.data$review_status == "verified" & .data$analysis_eligible),
+      n_category_pending = sum(.data$category_only & .data$category_decision == "pending" &
+                                 .data$affiliation_status != "chain"),
+      n_multisite = sum(.data$n_sites > 1L & .data$affiliation_status != "chain"),
+      n_review_pending = sum(.data$review_status != "verified" & .data$affiliation_status != "chain"),
+      publication_ready = all(.data$review_status[.data$affiliation_status != "chain"] == "verified" &
+                                .data$analysis_eligible[.data$affiliation_status != "chain"]),
       .groups = "drop"
     ) |>
+    dplyr::filter(.data$n_entities > 0L) |>
     dplyr::arrange(dplyr::desc(.data$n_entities), .data$name_expanded) |>
     dplyr::mutate(rank = dplyr::row_number(), .before = 1)
+}
+
+# Chains, reported beside the headline: one row per chain with its locations and
+# the L2 names they use. A brand listed with city suffixes spans several names.
+dn_museum_chain_summary <- function(x) {
+  x |>
+    dplyr::filter(.data$analysis_eligible, .data$affiliation_status == "chain") |>
+    dplyr::group_by(.data$chain_id) |>
+    dplyr::summarise(
+      n_locations = dplyr::n_distinct(.data$entity_id),
+      n_verified = sum(.data$review_status == "verified"),
+      n_names = dplyr::n_distinct(.data$name_expanded),
+      names = paste(sort(unique(.data$name_expanded)), collapse = " | "),
+      .groups = "drop"
+    ) |>
+    dplyr::arrange(dplyr::desc(.data$n_locations), .data$chain_id)
+}
+
+# L2 names shared by chain locations and non-chain institutions: where a brand name
+# collides with independently chosen (or still unverified) names.
+dn_museum_chain_overlap <- function(x) {
+  x |>
+    dplyr::filter(.data$analysis_eligible, !is.na(.data$name_expanded), nzchar(.data$name_expanded)) |>
+    dplyr::group_by(.data$name_expanded) |>
+    dplyr::filter(any(.data$affiliation_status == "chain"), any(.data$affiliation_status != "chain")) |>
+    dplyr::summarise(
+      chain_ids = paste(sort(unique(stats::na.omit(.data$chain_id))), collapse = " | "),
+      n_chain = sum(.data$affiliation_status == "chain"),
+      n_non_chain = sum(.data$affiliation_status != "chain"),
+      n_independent_verified = sum(.data$affiliation_status == "independent" & .data$review_status == "verified"),
+      n_affiliation_unknown = sum(.data$affiliation_status == "unknown"),
+      .groups = "drop"
+    ) |>
+    dplyr::arrange(dplyr::desc(.data$n_non_chain), dplyr::desc(.data$n_chain), .data$name_expanded)
 }
 
 dn_museum_review_sheets <- function(analysis, records, ranking, n = 20L,
@@ -303,12 +354,16 @@ metric_museum_subjects <- function(analysis) {
 }
 
 dn_export_museum_review <- function(analysis, ranking, m2, subjects, sheets,
+                                   chains = dn_museum_chain_summary(analysis),
+                                   chain_overlap = dn_museum_chain_overlap(analysis),
                                    directory = "data/processed/museum_review") {
   dir.create(directory, recursive = TRUE, showWarnings = FALSE)
   tables <- c(list(ranking = ranking, ranking_before_category_review = dn_museum_ranking(analysis, FALSE),
                    singularity_candidates = m2, subjects = subjects,
                    category_review = dplyr::filter(analysis, .data$category_only),
                    affiliation_summary = dplyr::count(analysis, .data$affiliation_status, .data$chain_id),
+                   chain_summary = chains, chain_overlap = chain_overlap,
+                   not_museum_review = dplyr::filter(analysis, .data$category_decision == "not_museum"),
                    subject_review = dplyr::filter(analysis, .data$subject_check == "review")), sheets)
   paths <- file.path(directory, paste0(names(tables), ".csv"))
   for (i in seq_along(tables)) readr::write_csv(tables[[i]], paths[i], na = "")
@@ -318,8 +373,11 @@ dn_export_museum_review <- function(analysis, ranking, m2, subjects, sheets,
 # Publication requires completed factual identity/count review. An assistant can
 # research official sources; a partial evidence note alone does not finish review.
 # This status is never an independent human label or matching-accuracy measure.
+# Headlines exclude chain locations, so only the non-chain institutions are checked;
+# a name used only by a chain is not a headline.
 dn_assert_museum_publication_ready <- function(analysis, name_values) {
-  x <- dplyr::filter(analysis, .data$counted, .data$name_expanded %in% name_values)
+  x <- dplyr::filter(analysis, .data$counted, .data$name_expanded %in% name_values,
+                     .data$affiliation_status != "chain")
   if (!length(name_values) || !all(name_values %in% x$name_expanded) ||
       any(!x$analysis_eligible | x$review_status != "verified" |
             x$affiliation_status == "unknown")) {

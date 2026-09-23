@@ -1,0 +1,24 @@
+check,passed
+Before counts replay,TRUE
+After counts replay,TRUE
+All normalized source fields unchanged,TRUE
+Records outside the Atlanta case unchanged,TRUE
+Atlanta counts once,TRUE
+Headline ranking has no chain-affiliated counts,TRUE
+Three verified not-a-museum records leave the count,TRUE
+Not-a-museum source rows retained in museum_records,TRUE
+All original source keys retained,TRUE
+Saved reviewed target matches replay,TRUE
+Saved analysis target matches replay,TRUE
+Saved chain targets match replay,TRUE
+Reviewed Parquet matches target,TRUE
+Baseline Parquet matches baseline target,TRUE
+"Prior packets, human labels and chain rules preserved",TRUE
+Publication gate rejects chain-only name,TRUE
+Publication gate rejects pending headline leader,TRUE
+Live identity decisions match archive,TRUE
+Live name decisions match archive,TRUE
+92 identity rows in 37 cases,TRUE
+Matching threshold remains 0.85,TRUE
+Automatic baseline unchanged,TRUE
+Baseline multisite queue unchanged,TRUE

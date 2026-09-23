@@ -1,13 +1,15 @@
 # Museum validation and review evidence
 
-**Current checkpoint: 2026-09-23 [provisional leaders review](museum_leaders_review_2026-09-23.md).**
-The reviewed data retain 60,002 source rows, with 57,293 counted rows, 52,588 counted
-institutions and 52,456 eligible for L2 name analysis. Counts remain provisional.
-Sixteen institutions have complete factual reviews, including the 11 Museum of Illusions
-network locations. Washington County Historical Society falls from 13 to 7 and Museum
-of Illusions from 13 to 12; four names now tie at 12, three of them single-brand chains.
-Every leading group still fails publication certification. See the
-[follow-up queue](museum_leaders_review_2026-09-23/follow_up.csv), the earlier
+**Current checkpoint: 2026-09-23 [chain separation and not-a-museum decisions](museum_methodology_2026-09-23.md).**
+The headline (M1/M2) now excludes chain-affiliated locations, which are reported
+beside it, and a sourced `not_museum` decision removes non-museum records from the count.
+The reviewed data retain 60,002 source rows, with 57,292 counted rows, 52,584 counted
+institutions and 52,452 eligible for L2 name analysis. Counts remain provisional.
+Nineteen institutions have complete factual reviews. Franklin, Greene and Jackson County
+Historical Society and Old Jail Museum lead at 11 non-chain institutions; every leading
+group still fails publication certification. See the
+[follow-up queue](museum_methodology_2026-09-23/follow_up.csv), the
+[leaders queue](museum_leaders_review_2026-09-23/follow_up.csv), the
 [Union County queue](museum_union_county_review_2026-09-17/follow_up.csv) and the
 [project handoff](../../HANDOFF.md) for the remaining work.
 
@@ -20,8 +22,8 @@ The human-label archive is a separate, unchanged input to resolution scoring.
 | File | Purpose |
 |---|---|
 | [museum_chain_rules.csv](museum_chain_rules.csv) | Sourced brand-affiliation rules and ambiguous-name review hints; unknown does not mean independent |
-| [museum_identity_decisions.csv](museum_identity_decisions.csv) | Explicit membership over the automatic `entities` baseline; 90 rows in 36 cases, including five source-conflict holdouts |
-| [museum_decisions.csv](museum_decisions.csv) | Naming/category, affiliation and overall review decisions, keyed to source records and expected names after identity reconciliation |
+| [museum_identity_decisions.csv](museum_identity_decisions.csv) | Explicit membership over the automatic `entities` baseline; 92 rows in 37 cases, including five source-conflict holdouts |
+| [museum_decisions.csv](museum_decisions.csv) | Naming/category (including sourced `not_museum`), affiliation and overall review decisions, keyed to source records and expected names after identity reconciliation |
 | [resolution_labelling_2026-09-15.csv](resolution_labelling_2026-09-15.csv) | Authoritative archive of 300 independent human pair labels; preserve unchanged and use for scoring |
 
 The identity layer produces `museum_records`; `museum_analysis` then selects one canonical
@@ -31,7 +33,7 @@ name, or infer ownership from a repeated naming template.
 
 ## Dated checkpoints, in order
 
-The September 15 checkpoints share a date; the Union County batch follows on September 17 and the leaders review on September 23.
+The September 15 checkpoints share a date; the Union County batch follows on September 17 and the leaders review and methodology checkpoint on September 23.
 Their descriptive names identify successive stages, not interchangeable copies of the latest results.
 
 | Report | Evidence and role |
@@ -45,27 +47,30 @@ Their descriptive names identify successive stages, not interchangeable copies o
 | [Old Jail review](museum_old_jail_review_2026-09-15.md) | [Old Jail packet](museum_old_jail_review_2026-09-15/): 15 leading-name candidates researched; 23 members in nine new cases, two complete factual reviews and sourced HTA affiliation; 52,605 counted and 52,473 eligible |
 | [Union County review](museum_union_county_review_2026-09-17.md) | [Union County packet](museum_union_county_review_2026-09-17/): all 14 starting candidates researched; six corrections cover 15 source rows; exact-name group falls to seven and Creston is verified; 52,597 counted and 52,465 eligible |
 | [Provisional leaders review](museum_leaders_review_2026-09-23.md) | [Leaders packet](museum_leaders_review_2026-09-23/): all 26 Museum of Illusions and Washington County Historical Society candidates researched; eight cases cover 19 source rows, one a new source conflict; 13 new complete reviews; 52,588 counted and 52,456 eligible |
+| [Chain separation and not-a-museum](museum_methodology_2026-09-23.md) | [Methodology packet](museum_methodology_2026-09-23/): headline excludes chains, chain summary/overlap outputs, 14 city-suffixed Museum of Illusions locations affiliated, Atlanta duplicate reconciled, three sourced not-a-museum records; 52,584 counted and 52,452 eligible |
 
 The [initial research notes](museum_research_2026-09-15.csv) retain earlier leads; use the
 later reports and evidence ledgers for resolved questions. The 38-row
 [Overture context extract](museum_identity_review_2026-09-15/overture_context.csv) is
 archived research outside the pipeline, as is the later 41-row
 [Old Jail extract](museum_old_jail_review_2026-09-15/overture_context.csv) and 21-row
-[Union County extract](museum_union_county_review_2026-09-17/overture_context.csv), and the
-22- and 18-row [leaders extracts](museum_leaders_review_2026-09-23/overture_context.csv).
+[Union County extract](museum_union_county_review_2026-09-17/overture_context.csv), the
+22- and 18-row [leaders extracts](museum_leaders_review_2026-09-23/overture_context.csv) and the
+15-row [methodology extract](museum_methodology_2026-09-23/overture_context.csv).
 Their queries and checksums are recorded in
 [`data/raw/MANIFEST.json`](../raw/MANIFEST.json); `tar_make()` does not recreate them.
 
 ## Current outputs versus archives
 
 `data/processed/museum_review/` is generated and overwritten. The current saved review
-contains 493 candidate institutions, 598 source rows and 154 nearby pairs; the top-20
-cutoff fell to 8 entities, admitting more names. The original
+contains 457 candidate institutions, 560 source rows and 149 nearby pairs, with a top-20
+cutoff of 8 non-chain entities. It also writes `chain_summary.csv`, `chain_overlap.csv`
+and `not_museum_review.csv`. The original
 packet's 470 institutions, 551 rows and 159 pairs remain valid historical counts.
 Diagnostic pair labels remain blank; they are not another completed validation sample.
 `multisite_review` still describes the automatic baseline (249 entities).
-Union County's and Washington County's exact-name groups (seven each) fall below that
-cutoff. Their packets' reviewed-institution files and follow-up queues retain those
+Union County's (seven) and Washington County's (four in the headline) exact-name groups
+fall below that cutoff. Their packets' reviewed-institution files and follow-up queues retain those
 cases, including ones merged into differently named institutions; check `museum_analysis` for
 current IDs on later revisits.
 
@@ -74,7 +79,7 @@ The identity audit and reviewed Parquet have separate export targets. Use the co
 The general archive helper reads saved targets, retains leading rankings with cutoff ties,
 and refuses an existing destination. It does not archive the identity decisions/audit or
 copy the inputs named in its checksums. Preserve a complete identity checkpoint separately,
-following the latest leaders packet's before/after decisions, records, evidence and audit.
+following the latest packets' before/after decisions, records, evidence and audit.
 
 Keep dated packet CSVs, reproduction scripts, logs and checksum files unchanged.
 Git preserves every file under `data/validation/` and the raw manifest byte for byte,
@@ -111,13 +116,14 @@ dn_score_labels("data/validation/resolution_labelling_2026-09-15.csv")
 source("data/validation/museum_old_jail_review_2026-09-15/reproduce.R")
 
 # Requires live identity decisions and saved reviewed targets/Parquet exports
-# to match the leaders checkpoint, in addition to replaying archived decisions.
-source("data/validation/museum_leaders_review_2026-09-23/validate.R")
+# to match the methodology checkpoint, in addition to replaying archived decisions.
+source("data/validation/museum_methodology_2026-09-23/validate.R")
 ```
 
-The leaders and Union County validators check the saved state current at their checkpoint as
-well as their archives. The Union County validator's live comparisons now fail by design,
-because the leaders decisions changed that state; its archived replay remains valid.
+The methodology, leaders and Union County validators check the saved state current at their
+checkpoint as well as their archives. The leaders and Union County validators' live
+comparisons now fail by design, because later decisions and the headline code changed that
+state; their archived replays remain valid.
 Keep the dated validator unchanged and record later verification in a new packet.
 
 Both packet checks also verify protected-file hashes, including the original

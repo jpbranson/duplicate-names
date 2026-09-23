@@ -251,7 +251,8 @@ identity cases and two more source-conflict holds. The
 identity cases covering 15 source rows. The
 [leaders pass](data/validation/museum_leaders_review_2026-09-23.md) adds eight cases covering 19 rows,
 one of them an isolated IMLS row whose legal name and EIN identify another organization.
-The current input has 90 source rows across 36 cases, with five isolated conflicting rows.
+The [methodology checkpoint](data/validation/museum_methodology_2026-09-23.md) adds one Atlanta duplicate case.
+The current input has 92 source rows across 37 cases, with five isolated conflicting rows.
 A conflict row receives its own stable entity/site ID, `counted = FALSE` and
 `reviewed_source_conflict`; its disputed aliases cannot propagate to accepted members.
 Cases containing only conflicts need no canonical institution. Cases with accepted
@@ -274,13 +275,16 @@ or applying new identity decisions. See the [field guide](README.md#completing-a
 ### 4.4 Franchise / branch detection (M4)
 
 Flag collisions with evidence of common ownership or branch affiliation so they can be
-held out of the "independent collision" headline. Evidence can include a shared operator,
+held out of the "independent collision" headline. Since 2026-09-23, M1 and M2 count only
+non-chain institutions; `museum_chains` summarizes each chain's locations and L2 names,
+and `museum_chain_overlap` lists names a chain shares with other institutions. Evidence can include a shared operator,
 a verified Wikidata parent, or a sourced chain lexicon. A nonempty operator field alone
 does not establish a chain. Sourced rules in `data/validation/museum_chain_rules.csv`
 replace that shortcut. Specific brand names can establish network affiliation; location
 identity and liveness remain separate review questions. Name-only rules for ambiguous
 labels such as Museum of Illusions and Smithsonian Institution are review hints. Sourced
-location-specific decisions now verify 11 Museum of Illusions network locations.
+location-specific decisions now verify 11 Museum of Illusions network locations and
+affiliate the directory's 14 city-suffixed locations, 25 in all under 15 L2 names.
 Hollywood's is a sub-attraction of the separately operated WonderWalk venue and counts
 with it; Miami Beach remains unknown. `is_franchise = NA` means unknown;
 only an explicit reviewed decision can establish independence.
@@ -298,8 +302,11 @@ are held out of the provisional cleaned ranking, remain counted under the baseli
 policy, and appear in the unfiltered ranking and review queue. A sourced `confirmed_name`
 decision releases the hold; `placeholder` excludes only the name analysis. A sourced
 `historical_name` decision preserves a documented former name while holding it out of
-the current-name ranking. These decisions are keyed by source record with a stale-name
-guard. This is not blanket deletion or a
+the current-name ranking. A sourced `not_museum` decision records that an entity is not
+a museum (for example a society office, archive or umbrella group): `museum_analysis`
+sets `counted = FALSE` with `reviewed_not_museum`, while `museum_records` keeps its rows.
+Absence of evidence, a mailbox or an IRS revocation does not support it. These decisions
+are keyed by source record with a stale-name guard. This is not blanket deletion or a
 claim that every flagged name is wrong. Review ambiguous cases before any headline.
 
 ---
@@ -311,8 +318,8 @@ are recorded in §9 so changes such as the museum L2 choice remain visible.
 
 **Museums**
 
-- `dup_count(name_expanded)` — headline for M1, using counted museum entities and the
-  implemented category-only review policy.
+- `dup_count(name_expanded)` — headline for M1, using counted non-chain museum entities
+  and the implemented category-only review policy. Chains are reported separately.
 - **Singularity Collision Index** — for names carrying a `scope_claim`, the count of
   independent (non-franchise) institutions sharing `name_expanded`. The Cryptozoology seed case
   scores whatever it scores; the *ranking* is the story.
@@ -326,13 +333,13 @@ unknown affiliation separately from reviewed independence; its lexical scope cla
 still require semantic review (American can describe a subject rather than assert
 singularity). No candidate count is a verified count of independent institutions.
 
-`dn_assert_museum_publication_ready()` checks selected L2 names for counted, eligible,
-verified rows with resolved affiliation. It is an explicit pre-export check, not a target
+`dn_assert_museum_publication_ready()` checks the non-chain institutions of selected L2
+names for counted, eligible, verified rows with resolved affiliation; a chain-only name fails. It is an explicit pre-export check, not a target
 automatically invoked by `_targets.R`. The ranking's `publication_ready` column summarizes
 recorded review statuses; neither mechanism verifies evidence, semantic scope claims or
-map/access details. Sixteen institutions have verified overall reviews. Ten Old Jail,
-seven Union County and seven Washington County exact-name candidates remain pending, as
-does Museum of Illusions Miami Beach, so every leading group fails the explicit
+map/access details. Nineteen institutions have verified overall reviews. The leading
+Franklin, Greene and Jackson County Historical Society groups are unreviewed, and ten
+Old Jail reviews remain pending, so every leading group fails the explicit
 publication check. The [September 17 batch](data/validation/museum_union_county_review_2026-09-17.md)
 reduces Union County's provisional count from 14 to seven; the
 [September 23 batch](data/validation/museum_leaders_review_2026-09-23.md) reduces Washington County's from 13 to seven.
@@ -657,16 +664,14 @@ Reorder freely if the writing momentum runs the other way.
 ### Immediate Phase 2 deliverable
 
 The cleaned provisional L2 ranking and institution/source review sheets are available;
-the [provisional leaders report](data/validation/museum_leaders_review_2026-09-23.md) is the
-latest checkpoint: 52,588 counted entities and 52,456 eligible for name analysis.
-Washington County Historical Society falls from 13 to seven and Museum of Illusions from
-13 to 12; five source-conflict rows remain isolated. Sixteen institutions have complete
-factual reviews. Four names tie at 12, three of them single-brand chains, and the
-Museum of Illusions brand has 14 further US locations under city-suffixed names. Whether
-M1 excludes verified chains or normalizes brand-plus-city names is an open decision.
-Every leading group still fails the publication gate. The latest
-[follow-up queue](data/validation/museum_leaders_review_2026-09-23/follow_up.csv) also proposes a
-sourced non-museum exclusion for society records that describe no museum.
+the [methodology checkpoint](data/validation/museum_methodology_2026-09-23.md) is the latest: 52,584 counted
+entities and 52,452 eligible for name analysis. Chains leave the headline (decision 12)
+and three sourced `not_museum` records leave the count (decision 13). Franklin, Greene and
+Jackson County Historical Society and Old Jail Museum lead at 11 non-chain institutions;
+nineteen institutions have complete factual reviews, and every leading group still fails
+the publication gate. The [provisional leaders report](data/validation/museum_leaders_review_2026-09-23.md)
+preserves the preceding checkpoint; see the latest
+[follow-up queue](data/validation/museum_methodology_2026-09-23/follow_up.csv).
 The [initial Phase 2 report](data/validation/museum_analysis_2026-09-15.md)
 preserves the earlier implementation checkpoint.
 Category handling, affiliation rules, subject extraction, canonical entity counting and
@@ -759,6 +764,15 @@ curated correction layer.
     rows may be isolated as `source_conflict` holdouts, with stable separate IDs and
     `reviewed_source_conflict` exclusions. They do not establish identity for either
     institution suggested by their fields, and their disputed aliases must not propagate.
+12. **Separate chains from the headline (2026-09-23).** A single brand's locations are
+    not organic name collisions, and brands often list locations with city suffixes that
+    split them across L2 names. M1 and M2 count only non-chain institutions. Chains are
+    reported beside the headline, including names they share with other institutions,
+    which remain candidate material for the post. See the [checkpoint](data/validation/museum_methodology_2026-09-23.md).
+13. **Exclude sourced non-museums from the count (2026-09-23).** A `not_museum` category
+    decision removes a record whose operator evidence shows no museum function, while
+    keeping its source rows auditable. It requires positive evidence of what the record
+    is; absence of evidence does not qualify.
 
 ### Still open
 
@@ -776,6 +790,6 @@ curated correction layer.
 - Setup and project overview → [`README.md`](README.md)
 - Current work and saved counts → [`HANDOFF.md`](HANDOFF.md)
 - Validation evidence and limitations → [September 15 report](data/validation/resolution_validation_2026-09-15.md)
-- Latest museum counts and remaining review cases → [provisional leaders report](data/validation/museum_leaders_review_2026-09-23.md)
+- Latest museum counts and remaining review cases → [methodology checkpoint](data/validation/museum_methodology_2026-09-23.md)
 - Live decisions and archived evidence → [validation index](data/validation/README.md)
 - Analogous name-collision phenomena → [`LEADS.md`](LEADS.md)

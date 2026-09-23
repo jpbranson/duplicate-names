@@ -37,7 +37,8 @@ corrections:
 | After address follow-up | 57,327 | 52,617 | 52,485 |
 | After Old Jail review | 57,313 | 52,605 | 52,473 |
 | After Union County review | 57,305 | 52,597 | 52,465 |
-| After provisional leaders review (current) | 57,293 | 52,588 | 52,456 |
+| After provisional leaders review | 57,293 | 52,588 | 52,456 |
+| After chain separation and not-a-museum decisions (current) | 57,292 | 52,584 | 52,452 |
 
 These are provisional counts; remaining source checks precede publication.
 
@@ -52,19 +53,21 @@ The [initial Phase 2 report](data/validation/museum_analysis_2026-09-15.md) reco
 analysis implementation; the [identity report](data/validation/museum_identity_review_2026-09-15.md)
 preserves the first identity checkpoint. The [Old Jail review](data/validation/museum_old_jail_review_2026-09-15.md)
 and [Union County review](data/validation/museum_union_county_review_2026-09-17.md) preserve
-preceding checkpoints; the [provisional leaders review](data/validation/museum_leaders_review_2026-09-23.md)
-has the latest counts and remaining cases. M1/M2 now count one canonical L2 name
-per entity; the old helper counted source rows and aliases. Category-only names are
+preceding checkpoints, as does the [provisional leaders review](data/validation/museum_leaders_review_2026-09-23.md);
+the [methodology checkpoint](data/validation/museum_methodology_2026-09-23.md) has the latest counts and remaining cases.
+M1/M2 now count one canonical L2 name per non-chain entity; the old helper counted source
+rows and aliases. Chain locations are reported beside the headline, and a sourced
+`not_museum` decision removes records that describe no museum. Category-only names are
 held pending evidence, known brand affiliations have sourced rules, unknown affiliation
 stays unknown, and M3 uses explicit topic extraction with an IMLS comparison.
 
 `museum_review_files` writes the ranking, top-20 institution/source sheets (including
-cutoff ties and leading M2 candidates), category queue, and nearby-pair diagnostics to
-`data/processed/museum_review/`. Preserve completed decisions in the tracked
+cutoff ties and leading M2 candidates), category queue, chain summary and overlap,
+not-a-museum review, and nearby-pair diagnostics to `data/processed/museum_review/`. Preserve completed decisions in the tracked
 `data/validation/museum_decisions.csv`, keyed by source record and expected name.
 Use the generated sheets for current candidates. Each dated packet's reviewed-institution
 file and follow-up queue preserve cases that merged into differently named institutions;
-see the [latest queue](data/validation/museum_leaders_review_2026-09-23/follow_up.csv). Check `museum_analysis` for current IDs when revisiting any dated packet.
+see the [latest queue](data/validation/museum_methodology_2026-09-23/follow_up.csv). Check `museum_analysis` for current IDs when revisiting any dated packet.
 No headline count is certified by these automated analyses.
 
 The [source-verification report](data/validation/museum_source_review_2026-09-15.md)
@@ -121,11 +124,21 @@ institutions to **52,456**. Sixteen institutions now have complete factual revie
 The identity input covers **90 rows in 36 cases**. **195 assertions and 25 integrity
 checks passed**, including 168 protected files. Four names now tie at 12; three are
 single-brand chains, and 14 further Museum of Illusions locations carry city-suffixed
-names. How M1 should treat chains is an open methodology decision. No leading name is
-publication ready.
+names. No leading name is publication ready.
 
-The regenerated review sheets contain **493 candidate institutions, 598 source rows
-and 154 nearby pairs**, because the top-20 cutoff fell to 8. The original dated packet's 470 institutions, 551 rows and
+The subsequent [methodology checkpoint](data/validation/museum_methodology_2026-09-23.md) separates chains from the
+headline: M1 and M2 count only non-chain institutions, while `museum_chains` and
+`museum_chain_overlap` report chain locations and the names they share with other
+institutions (Old Jail Museum, Madame Tussaud's Wax Museum, Museum of Illusions). The
+official Museum of Illusions directory's 14 city-suffixed locations are affiliated, giving
+the network 25 locations under 15 L2 names; Atlanta's duplicate record is reconciled.
+Three sourced `not_museum` decisions (Fort Edward, St. George, Marietta) leave the count.
+Counted institutions fall to **52,584** and eligible institutions to **52,452**;
+Franklin, Greene and Jackson County Historical Society and Old Jail Museum lead at **11**.
+**217 assertions and 23 integrity checks passed**, including 212 protected files.
+
+The regenerated review sheets contain **457 candidate institutions, 560 source rows
+and 149 nearby pairs**. The original dated packet's 470 institutions, 551 rows and
 159 pairs describe an earlier checkpoint. Use the
 [validation index](data/validation/README.md) to distinguish live decision inputs,
 historical evidence and the latest follow-up queue.
@@ -187,7 +200,7 @@ For an identity-correction checkpoint, also preserve those inputs, before/after 
 evidence and hashes, following the
 [identity packet](data/validation/museum_identity_review_2026-09-15/) and
 [focused packet](data/validation/museum_focused_review_2026-09-15/) or the latest
-[leaders packet](data/validation/museum_leaders_review_2026-09-23/). Existing dated
+[methodology packet](data/validation/museum_methodology_2026-09-23/). Existing dated
 packets and completed human labels are historical evidence, not generated scratch files.
 
 ### Completing a museum review
@@ -228,7 +241,7 @@ The [staged location table](data/validation/museum_address_review_2026-09-15/pub
 has separate `publication_lon`/`publication_lat` and dated access wording for Mandeville,
 Smedley and Peters Creek. It is not yet consumed by the pipeline or Parquet exports.
 Apply those fields during publication export and refresh access wording, preserving source
-coordinates and evidence. See the [current queue](data/validation/museum_leaders_review_2026-09-23/follow_up.csv)
+coordinates and evidence. See the [current queue](data/validation/museum_methodology_2026-09-23/follow_up.csv)
 for the remaining source checks and the
 [address queue](data/validation/museum_address_review_2026-09-15/follow_up.csv) for location details.
 

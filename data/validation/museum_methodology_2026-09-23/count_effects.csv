@@ -1,0 +1,12 @@
+measure,before,after
+source_rows,60002,60002
+counted_source_rows,57293,57292
+counted_institutions,52588,52584
+eligible_institutions,52456,52452
+headline_leader,11,11
+washington_county_headline,7,4
+museum_of_illusions_headline,1,1
+museum_of_illusions_chain_locations,11,25
+chain_locations,79,93
+not_museum_records,0,3
+verified_institutions,16,19

@@ -22,8 +22,12 @@
 #'   L2 (name_expanded) answers "which NAMES are duplicated"      <- M1, M2
 #'   L3 (name_core)     compares names with geography stripped
 #' M3 uses explicit subject extraction, not L3 name counts.
+#'
+#' `exclude_chains` drops locations with established chain affiliation, as the
+#' museum headline does; the chains are reported separately.
 metric_duplicate_counts <- function(entities, category = NULL,
-                                    levels = c("name_expanded", "name_core", "name_key")) {
+                                    levels = c("name_expanded", "name_core", "name_key"),
+                                    exclude_chains = FALSE) {
   if (!is.null(category)) {
     entities <- dplyr::filter(entities, .data$category %in% !!category)
   }
@@ -32,6 +36,7 @@ metric_duplicate_counts <- function(entities, category = NULL,
   if ("analysis_eligible" %in% names(entities)) {
     entities <- dplyr::filter(entities, .data$analysis_eligible)
   }
+  if (exclude_chains) entities <- dplyr::filter(entities, !.data$is_franchise %in% TRUE)
   out <- lapply(levels, function(lv) {
     entities |>
       dplyr::filter(!is.na(.data[[lv]]), nzchar(.data[[lv]])) |>
@@ -45,6 +50,7 @@ metric_duplicate_counts <- function(entities, category = NULL,
 #'
 #' L2 candidate collisions, with reviewed independence separated from unknowns.
 #' Missing affiliation evidence must never become a claim of independence.
+#' Chain locations are reported (n_affiliated) but excluded from n_candidates.
 metric_singularity_collisions <- function(entities) {
   x <- dn_canonical_entities(entities) |>
     dplyr::filter(.data$counted, .data$category == "museum", !is.na(.data$scope_claim),
@@ -52,7 +58,7 @@ metric_singularity_collisions <- function(entities) {
   if ("analysis_eligible" %in% names(x)) x <- dplyr::filter(x, .data$analysis_eligible)
   x |>
     dplyr::group_by(.data$name_expanded, .data$scope_claim) |>
-    dplyr::summarise(n_candidates = dplyr::n_distinct(.data$entity_id),
+    dplyr::summarise(n_candidates = dplyr::n_distinct(.data$entity_id[!.data$is_franchise %in% TRUE]),
                      n_independent = sum(.data$is_franchise %in% FALSE),
                      n_affiliated = sum(.data$is_franchise %in% TRUE),
                      n_unknown = sum(is.na(.data$is_franchise)), .groups = "drop") |>

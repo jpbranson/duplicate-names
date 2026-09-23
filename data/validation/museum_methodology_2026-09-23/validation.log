@@ -1,0 +1,41 @@
+[ FAIL 0 | WARN 0 | SKIP 0 | PASS 217 ]
+# A tibble: 11 × 3
+   measure                             before after
+   <chr>                                <int> <int>
+ 1 source_rows                          60002 60002
+ 2 counted_source_rows                  57293 57292
+ 3 counted_institutions                 52588 52584
+ 4 eligible_institutions                52456 52452
+ 5 headline_leader                         11    11
+ 6 washington_county_headline               7     4
+ 7 museum_of_illusions_headline             1     1
+ 8 museum_of_illusions_chain_locations     11    25
+ 9 chain_locations                         79    93
+10 not_museum_records                       0     3
+11 verified_institutions                   16    19
+# A tibble: 23 × 2
+   check                                                 passed
+   <chr>                                                 <lgl> 
+ 1 Before counts replay                                  TRUE  
+ 2 After counts replay                                   TRUE  
+ 3 All normalized source fields unchanged                TRUE  
+ 4 Records outside the Atlanta case unchanged            TRUE  
+ 5 Atlanta counts once                                   TRUE  
+ 6 Headline ranking has no chain-affiliated counts       TRUE  
+ 7 Three verified not-a-museum records leave the count   TRUE  
+ 8 Not-a-museum source rows retained in museum_records   TRUE  
+ 9 All original source keys retained                     TRUE  
+10 Saved reviewed target matches replay                  TRUE  
+11 Saved analysis target matches replay                  TRUE  
+12 Saved chain targets match replay                      TRUE  
+13 Reviewed Parquet matches target                       TRUE  
+14 Baseline Parquet matches baseline target              TRUE  
+15 Prior packets, human labels and chain rules preserved TRUE  
+16 Publication gate rejects chain-only name              TRUE  
+17 Publication gate rejects pending headline leader      TRUE  
+18 Live identity decisions match archive                 TRUE  
+19 Live name decisions match archive                     TRUE  
+20 92 identity rows in 37 cases                          TRUE  
+21 Matching threshold remains 0.85                       TRUE  
+22 Automatic baseline unchanged                          TRUE  
+23 Baseline multisite queue unchanged                    TRUE  

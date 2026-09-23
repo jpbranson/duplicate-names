@@ -74,16 +74,20 @@ list(
 
   ## --- metrics -----------------------------------------------------------
   tar_target(museum_analysis, dn_museum_analysis(museum_records, museum_chain_rules, museum_decisions)),
-  tar_target(dup_museums, metric_duplicate_counts(museum_analysis, category = "museum")),
+  tar_target(dup_museums, metric_duplicate_counts(museum_analysis, category = "museum", exclude_chains = TRUE)),
   tar_target(museum_ranking, dn_museum_ranking(museum_analysis)),
   tar_target(museum_singularity, metric_singularity_collisions(museum_analysis)),
   tar_target(museum_subjects, metric_museum_subjects(museum_analysis)),
+  # Chains are reported beside the headline, not in it.
+  tar_target(museum_chains, dn_museum_chain_summary(museum_analysis)),
+  tar_target(museum_chain_overlap, dn_museum_chain_overlap(museum_analysis)),
   tar_target(imls_review_archive, { raw_imls; "data/raw/2018_csv_museum_data_files.zip" }, format = "file"),
   tar_target(imls_review_context, dn_imls_review_context(imls_review_archive)),
   tar_target(museum_review, dn_museum_review_sheets(museum_analysis, museum_records, museum_ranking,
                                                   imls_context = imls_review_context)),
   tar_target(museum_review_files, dn_export_museum_review(
-    museum_analysis, museum_ranking, museum_singularity, museum_subjects, museum_review), format = "file")
+    museum_analysis, museum_ranking, museum_singularity, museum_subjects, museum_review,
+    museum_chains, museum_chain_overlap), format = "file")
 )
 
 ## --- PHASE 1b: CHURCHES (queued) ----------------------------------------

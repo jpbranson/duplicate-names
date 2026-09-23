@@ -35,11 +35,11 @@ Keep `DESCRIPTION` as `Type: Project` without a `Package:` field. Centralize blo
 
 Use testthat files named `test-<module>.R` with descriptive `test_that()` cases. Add regression cases for normalization, schema, or matching changes; avoid network downloads in unit tests. No numeric coverage threshold is configured.
 
-Never change gold-set expectations merely to pass tests. Museum headline counts use L2 (`name_expanded`); L3 strips geography and answers a different question. Matching accuracy requires independent human labels; do not self-grade clustering decisions.
+Never change gold-set expectations merely to pass tests. Museum headline counts use L2 (`name_expanded`); L3 strips geography and answers a different question. Headlines (M1/M2) exclude chain-affiliated locations; report chains beside them with `museum_chains` and `museum_chain_overlap`. Matching accuracy requires independent human labels; do not self-grade clustering decisions.
 
 Retain the 0.85 matching threshold supported by the September 15 sample. Its unweighted pair-level precision and recall do not establish dataset-wide or final-cluster accuracy. Preserve the original labels and use fresh independent labels to evaluate changes suggested by the nine disagreements.
 
-Phase 2 now has category-only holdouts, sourced affiliation rules, subject extraction, L2 M1/M2 metrics and review queues. Use `museum_analysis` for one canonical name per entity; `entities` retains multiple source records. Unknown affiliation is `NA`, not independence. Preserve completed review decisions in `data/validation/museum_decisions.csv`; generated review files are overwritten. Repeated naming templates alone do not establish common ownership. Keep uncertain and excluded records auditable, including `historical_name` holdouts. An assistant can verify official sources and apply supported factual decisions. Complete identity/count checks before publishing headlines; independent human labels are required for matching-accuracy evaluation, not as blanket approval for source research. `review_status = verified` means complete factual review. See the [first identity report](data/validation/museum_identity_review_2026-09-15.md) for the correction layer and the latest source review below for its current checkpoint.
+Phase 2 now has category-only holdouts, sourced affiliation rules, subject extraction, L2 M1/M2 metrics and review queues. Use `museum_analysis` for one canonical name per entity; `entities` retains multiple source records. Unknown affiliation is `NA`, not independence. Preserve completed review decisions in `data/validation/museum_decisions.csv`; generated review files are overwritten. Repeated naming templates alone do not establish common ownership. Keep uncertain and excluded records auditable, including `historical_name` holdouts and sourced `not_museum` decisions (society offices, archives or umbrella groups with no museum). Do not infer `not_museum` from a failed search, a mailbox or an IRS revocation. An assistant can verify official sources and apply supported factual decisions. Complete identity/count checks before publishing headlines; independent human labels are required for matching-accuracy evaluation, not as blanket approval for source research. `review_status = verified` means complete factual review. See the [first identity report](data/validation/museum_identity_review_2026-09-15.md) for the correction layer and the latest source review below for its current checkpoint.
 
 `entities` is the unchanged automatic baseline. `museum_records` applies the explicit
 membership in `data/validation/museum_identity_decisions.csv` before museum analysis.
@@ -48,15 +48,12 @@ guards reject stale decisions. One canonical record counts per reviewed institut
 supporting rows remain with reviewed exclusion reasons. Keep `source_conflict`
 holdouts auditable: contradictory rows have separate uncounted IDs
 and must not contribute disputed aliases to accepted institutions. The
-[provisional leaders review](data/validation/museum_leaders_review_2026-09-23.md) is the latest
-count checkpoint: 90 identity rows in 36 cases, including five isolated source conflicts.
-Sixteen institutions have complete factual reviews, including all 11 Museum of Illusions
-network locations. Washington County Historical Society falls to seven and Museum of
-Illusions to 12; Union County's seven and Old Jail's ten pending cases are unchanged.
-Three of the four names tied at 12 are single-brand chains, and 14 more Museum of Illusions
-locations carry city-suffixed names. Resolve that headline methodology question with the
-user before more chain reviews; then continue Old Jail and the latest follow-up queue.
-The schema cannot yet exclude sourced non-museum society records; do not drop them ad hoc. Preserve Oregon's
+[methodology checkpoint](data/validation/museum_methodology_2026-09-23.md) is the latest
+count checkpoint: 92 identity rows in 37 cases, including five isolated source conflicts,
+and three verified `not_museum` records. Nineteen institutions have complete factual reviews.
+Franklin, Greene and Jackson County Historical Society and Old Jail Museum lead at 11
+non-chain institutions; review those groups next, then the latest follow-up queue.
+Smithsonian Institution (10) needs sourced parent affiliation before it can headline. Preserve Oregon's
 mixed source context and unresolved museum/address/name cases without unsupported merges.
 The earlier
 [address follow-up](data/validation/museum_address_review_2026-09-15.md) reconciles Chipley

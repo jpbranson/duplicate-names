@@ -32,10 +32,64 @@ test_that("M2 uses L2 and keeps unknown affiliation separate from independence",
   x$is_franchise <- c(FALSE, FALSE, NA, TRUE)
   result <- metric_singularity_collisions(x)
   expect_equal(result$name_expanded, "national museum of ohio")
-  expect_equal(result$n_candidates, 3L)
+  # The chain location is reported but is not a headline candidate.
+  expect_equal(result$n_candidates, 2L)
   expect_equal(result$n_independent, 1L)
   expect_equal(result$n_affiliated, 1L)
   expect_equal(result$n_unknown, 1L)
+})
+
+test_that("headline counts separate chains, which are reported with their name overlaps", {
+  x <- museum_fixture(c("Museum of Illusions", "Museum of Illusions", "Museum of Illusions Chicago",
+                        "Museum of Illusions", "Play Street Museum", "Play Street Museum"))
+  d <- tibble::tibble(source = "test", source_id = c("1", "2", "3", "5", "6"),
+    expected_name = x$name_raw[c(1, 2, 3, 5, 6)], category_decision = "not_flagged",
+    affiliation_status = "chain", chain_id = c("moi", "moi", "moi", "play", "play"),
+    review_status = "verified", evidence_url = "https://example.org/locations",
+    note = "Fixture network", reviewed_by = "Reviewer", reviewed_on = "2026-09-23")
+  a <- dn_museum_analysis(x, decisions = d)
+  ranking <- dn_museum_ranking(a)
+  expect_equal(ranking$name_expanded, "museum of illusions")
+  expect_equal(ranking$n_entities, 1L)
+  expect_equal(ranking$n_chain, 2L)
+  expect_false(ranking$publication_ready)
+  chains <- dn_museum_chain_summary(a)
+  expect_equal(chains$chain_id, c("moi", "play"))
+  expect_equal(chains$n_locations, c(3L, 2L))
+  expect_equal(chains$n_names, c(2L, 1L))
+  overlap <- dn_museum_chain_overlap(a)
+  expect_equal(overlap$name_expanded, "museum of illusions")
+  expect_equal(c(overlap$n_chain, overlap$n_non_chain, overlap$n_affiliation_unknown), c(2L, 1L, 1L))
+  dup <- metric_duplicate_counts(a, levels = "name_expanded", exclude_chains = TRUE)
+  expect_equal(dup$n_entities[dup$name_value == "museum of illusions"], 1L)
+  expect_false("play street museum" %in% dup$name_value)
+  # A chain-only name is not a headline; the gate checks only non-chain institutions.
+  expect_error(dn_assert_museum_publication_ready(a, "play street museum"), "completed identity")
+  a$review_status[a$source_id == "4"] <- "verified"
+  a$affiliation_status[a$source_id == "4"] <- "independent"
+  expect_silent(dn_assert_museum_publication_ready(a, "museum of illusions"))
+})
+
+test_that("a sourced not-a-museum decision leaves the museum count but stays auditable", {
+  x <- museum_fixture(c("Example County Historical Society", "Example County Historical Society"))
+  d <- dplyr::add_row(dn_schema_museum_decisions(), source = "test", source_id = "1",
+    expected_name = x$name_raw[1], category_decision = "not_museum", affiliation_status = "unknown",
+    review_status = "verified", evidence_url = "https://example.org/about",
+    note = "Operator describes an office and research library, not a museum",
+    reviewed_by = "Reviewer", reviewed_on = "2026-09-23")
+  a <- dn_museum_analysis(x, decisions = d)
+  expect_equal(nrow(a), 2L)
+  expect_equal(a$counted, c(FALSE, TRUE))
+  expect_equal(a$exclusion_reason[1], "reviewed_not_museum")
+  expect_equal(a$analysis_exclusion[1], "reviewed_not_museum")
+  expect_equal(a$analysis_eligible, c(FALSE, TRUE))
+  expect_equal(dn_museum_ranking(a)$n_entities, 1L)
+  expect_equal(dn_museum_ranking(a, FALSE)$n_entities, 1L)
+  # Only not_museum may complete a review with affiliation unknown.
+  d$category_decision <- "not_flagged"
+  expect_error(dn_museum_analysis(x, decisions = d), "Verified institution review")
+  d$category_decision <- "not_a_category"
+  expect_error(dn_museum_analysis(x, decisions = d), "valid statuses")
 })
 
 test_that("category flags hold ambiguous names for review without deleting them", {

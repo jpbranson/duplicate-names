@@ -6,7 +6,7 @@ here whenever something surfaces during Phase 2/3 work** rather than chasing it 
 Format: one heading per lead, with the question, why it's interesting, and a data note.
 
 **Status, 2026-09-23:** Phase 2 tooling and the source/identity passes through the
-[provisional leaders review](data/validation/museum_leaders_review_2026-09-23.md)
+[methodology checkpoint](data/validation/museum_methodology_2026-09-23.md), which separates chains from the headline,
 are complete. Remaining headline checks precede the post. The dated counts below remain
 exploratory observations, not verified publication figures; see
 [HANDOFF.md](HANDOFF.md) for current work and the
@@ -158,7 +158,11 @@ The [leaders review](data/validation/museum_leaders_review_2026-09-23.md) verifi
 "Museum of Illusions" is one of three attractions in the WonderWalk venue, whose operator
 calls the Santa Monica museum "a separate business"; Miami Beach's operator domain has lapsed.
 The official directory lists 25 open US locations; 14 carry city-suffixed names, so an
-exact-name count measures one chain's listing style, not independent naming. Brand affiliation does not establish common
+exact-name count measures one chain's listing style, not independent naming. Chains now
+sit beside the headline. The [chain overlap](data/validation/museum_methodology_2026-09-23/chain_overlap.csv) keeps
+the interesting part: Old Jail Museum shares its name with one Historic Tours of America
+site, Madame Tussaud's Wax Museum with two unaffiliated records (not yet researched), and
+Museum of Illusions with the unaffiliated Miami Beach venue. Brand affiliation does not establish common
 legal ownership. See the [source report](data/validation/museum_source_review_2026-09-15.md).
 
 ### Relocations can impersonate national collisions (Phase 2, 2026-09-15)
