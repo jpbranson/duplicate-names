@@ -1,0 +1,137 @@
+[1] "C"
+During startup - Warning messages:
+1: Setting LC_COLLATE=C.UTF-8 failed 
+2: Setting LC_CTYPE=C.UTF-8 failed 
+3: Setting LC_MONETARY=C.UTF-8 failed 
+4: Setting LC_TIME=C.UTF-8 failed 
++ museum_decisions_file dispatched
+v museum_decisions_file completed [2.6s, 29.89 kB]
++ museum_identity_decisions_file dispatched
+v museum_identity_decisions_file completed [0ms, 50.50 kB]
++ museum_decisions dispatched
+v museum_decisions completed [90ms, 9.61 kB]
++ museum_identity_decisions dispatched
+v museum_identity_decisions completed [20ms, 10.26 kB]
++ normalized dispatched
+v normalized completed [25.2s, 4.38 MB]
++ resolved dispatched
+v resolved completed [1m 55s, 5.87 MB]
++ entities dispatched
+v entities completed [2.3s, 5.88 MB]
++ museum_identity_review dispatched
+v museum_identity_review completed [330ms, 5.90 MB]
++ museum_records dispatched
+v museum_records completed [0ms, 5.88 MB]
++ museum_identity_audit_file dispatched
+v museum_identity_audit_file completed [10ms, 66.69 kB]
++ museum_analysis dispatched
+v museum_analysis completed [4.8s, 5.89 MB]
++ museum_records_file dispatched
+v museum_records_file completed [310ms, 9.38 MB]
++ museum_subjects dispatched
+v museum_subjects completed [80ms, 419 B]
++ museum_ranking dispatched
+v museum_ranking completed [8.2s, 455.71 kB]
++ museum_singularity dispatched
+v museum_singularity completed [340ms, 1.88 kB]
++ dup_museums dispatched
+v dup_museums completed [1.2s, 1.10 MB]
++ museum_review dispatched
+v museum_review completed [9.2s, 127.63 kB]
++ museum_review_files dispatched
+v museum_review_files completed [8.3s, 5.96 MB]
+v ended pipeline [3m 15.2s, 18 completed, 10 skipped]
+
+Attaching package: 'testthat'
+
+The following objects are masked from 'package:readr':
+
+    edition_get, local_edition
+
+v | F W  S  OK | Context
+
+/ |          0 | museum-identity                                                
+- |          1 | museum-identity                                                
+| |         11 | museum-identity                                                
+\ |         14 | museum-identity                                                
+/ |         20 | museum-identity                                                
+| |         27 | museum-identity                                                
+| |         31 | museum-identity                                                
+- |         45 | museum-identity                                                
+\ |         50 | museum-identity                                                
+v |         53 | museum-identity [1.4s]
+
+/ |          0 | museum-review-context                                          
+- |          1 | museum-review-context                                          
+v |         23 | museum-review-context [6.4s]
+
+/ |          0 | museums                                                        
+- |          1 | museums                                                        
+/ |          4 | museums                                                        
+- |          9 | museums                                                        
+\ |         14 | museums                                                        
+- |         17 | museums                                                        
+\ |         22 | museums                                                        
+\ |         26 | museums                                                        
+- |         29 | museums                                                        
+/ |         36 | museums                                                        
+| |         39 | museums                                                        
+/ |         48 | museums                                                        
+/ |         52 | museums                                                        
+v |         60 | museums [1.7s]
+
+/ |          0 | normalize                                                      
+\ |         26 | normalize                                                      
+v |         31 | normalize
+
+/ |          0 | schema                                                         
+| |          7 | schema                                                         
+- |          9 | schema                                                         
+- |         17 | schema                                                         
+v |         28 | schema
+
+== Results =====================================================================
+Duration: 10.2 s
+
+[ FAIL 0 | WARN 0 | SKIP 0 | PASS 195 ]
+
+Your tests are posh!
+# A tibble: 8 x 3
+  measure                before after
+  <chr>                   <int> <int>
+1 source_rows             60002 60002
+2 counted_source_rows     57313 57305
+3 counted_institutions    52605 52597
+4 eligible_institutions   52473 52465
+5 union_county_name          14     7
+6 washington_county_name     13    13
+7 old_jail_name              12    12
+8 verified_institutions       2     3
+# A tibble: 23 x 2
+   check                                                   passed
+   <chr>                                                   <lgl> 
+ 1 Before counts replay                                    TRUE  
+ 2 After counts replay                                     TRUE  
+ 3 All normalized source fields unchanged                  TRUE  
+ 4 Records outside 15 reviewed members unchanged           TRUE  
+ 5 Six complete identity cases                             TRUE  
+ 6 Every affected baseline member explicitly listed        TRUE  
+ 7 One counted representative per added case               TRUE  
+ 8 All original source keys retained                       TRUE  
+ 9 Saved reviewed target matches replay                    TRUE  
+10 Saved analysis target matches replay                    TRUE  
+11 Reviewed Parquet matches target                         TRUE  
+12 Baseline Parquet matches baseline target                TRUE  
+13 Prior packets, human labels and chain rules preserved   TRUE  
+14 Union County publication gate rejects pending group     TRUE  
+15 Iowa has supported independent factual review           TRUE  
+16 Other reviewed candidates stay pending                  TRUE  
+17 Live identity decisions match archive                   TRUE  
+18 71 identity rows in 28 cases                            TRUE  
+19 Existing four source conflicts remain isolated          TRUE  
+20 Matching threshold remains 0.85                         TRUE  
+21 Eleven resulting institutions have factual review notes TRUE  
+22 Automatic baseline unchanged                            TRUE  
+23 Baseline multisite queue unchanged                      TRUE  
+125 protected files verified; 23 integrity checks passed.
+[1] TRUE

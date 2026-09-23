@@ -1,0 +1,33 @@
+id,url,path,status
+oh_museum,https://www.uchsohio.org/Museum,data/raw/union_oh_museum_2026-09-17.html,cached
+oh_home,https://www.uchsohio.org/,data/raw/union_oh_home_2026-09-17.html,cached
+ga_home,https://www.unioncountyhistory.org/,data/raw/union_ga_home_2026-09-17.html,cached
+ga_board,https://www.unioncountyhistory.org/our-board,data/raw/union_ga_board_2026-09-17.html,cached
+ga_courthouse,https://www.unioncountyhistory.org/_files/ugd/b83337_d4d2401bc0564d09be5728d8074982a5.pdf,data/raw/union_ga_courthouse_2026-09-17.pdf,cached
+ga_county,https://www.unioncountyga.gov/312/Historical-Attractions,data/raw/union_ga_county_2026-09-17.html,cached
+tn_about,https://www.unioncountyhistoricalsocietytn.org/about-1,data/raw/union_tn_about_2026-09-17.html,cached
+tn_home,https://www.unioncountyhistoricalsocietytn.org/,data/raw/union_tn_home_2026-09-17.html,cached
+in_about,https://uchistory.org/about-2/,data/raw/union_in_about_2026-09-17.html,cached
+in_development,https://ucdc.us/business-directory/union-county-historical-society/,data/raw/union_in_development_2026-09-17.html,cached
+il_contact,https://www.unioncountyilmuseum.com/contact-us,data/raw/union_il_contact_2026-09-17.html,cached
+il_museum,https://www.unioncountyilmuseum.com/museum,data/raw/union_il_museum_2026-09-17.html,cached
+il_news,https://www.unioncountyilmuseum.com/in-the-news,data/raw/union_il_news_2026-09-17.html,cached
+fl_tourism,https://www.naturalnorthflorida.com/things-to-do/union-county-historical-museum/,data/raw/union_fl_tourism_2026-09-17.html,cached
+pa_home,https://www.unioncopahistory.com/,data/raw/union_pa_home_2026-09-17.html,cached
+pa_facilities,https://www.unioncopahistory.com/facilities,data/raw/union_pa_facilities_2026-09-17.html,cached
+pa_collection,https://www.unioncopahistory.com/museum-collection,data/raw/union_pa_collection_2026-09-17.html,cached
+ia_about,https://uchistoricalvillage.com/who-we-are/,data/raw/union_ia_about_2026-09-17.html,cached
+ia_contact,https://uchistoricalvillage.com/contact/,data/raw/union_ia_contact_2026-09-17.html,cached
+ia_tourism,https://www.unioncountyiowatourism.com/historical-sites/,data/raw/union_ia_tourism_2026-09-17.html,cached
+nm_history,https://www.herzsteinmuseum.com/history,data/raw/union_nm_history_2026-09-17.html,cached
+or_city,https://cityofunion.com/directory/union-county-museum/,data/raw/union_or_city_2026-09-17.html,"HTTP response code said error [www.cityofunionor.gov]:
+The requested URL returned error: 404"
+or_trust,https://www.culturaltrust.org/wp-content/uploads/CNP-List_County_20210625.pdf,data/raw/union_or_trust_2026-09-17.pdf,cached
+irs_or,https://www.irs.gov/pub/irs-soi/eo_or.csv,data/raw/union_irs_or_2026-09-17.csv,cached
+irs_in,https://www.irs.gov/pub/irs-soi/eo_in.csv,data/raw/union_irs_in_2026-09-17.csv,cached
+oh_about,https://www.uchsohio.org/AboutUs,data/raw/union_oh_about_2026-09-17.html,cached
+nm_home,https://www.herzsteinmuseum.com/,data/raw/union_nm_home_2026-09-17.html,cached
+il_board,https://www.unioncountyilmuseum.com/board-of-directors-and-officers,data/raw/union_il_board_2026-09-17.html,cached
+or_trust_2025,https://www.culturaltrust.org/wp-content/uploads/CNP_AlphaList_20251223.pdf,data/raw/union_or_trust_2025_2026-09-17.pdf,cached
+or_state,https://sos.oregon.gov/blue-book/cultural/pages/history-regional.aspx,data/raw/union_or_state_2026-09-17.html,cached
+nc_directory,https://ncgenweb.us/union/research-resources/,data/raw/union_nc_directory_2026-09-17.html,cached

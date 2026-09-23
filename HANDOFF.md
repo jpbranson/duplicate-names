@@ -1,6 +1,6 @@
 # Handoff
 
-**Last session:** 2026-09-16 · **Phase:** 2 Old Jail review batch complete; headline review ongoing
+**Last session:** 2026-09-18 documentation audit · **Phase:** 2 Union County review batch complete; headline review ongoing
 **Repo:** https://github.com/jpbranson/duplicate-names
 
 Read [DESIGN.md](DESIGN.md) for the plan and the numbered decisions, [LEADS.md](LEADS.md)
@@ -54,6 +54,9 @@ and operator pages in the manifest. These research caches are outside the pipeli
 selected IRS rows and the extracted Smedley marker are tracked in the address packet.
 The Old Jail packet adds a 41-row Overture context query and 19 cached operator/government
 pages. Its tracked context and manifest SQL preserve the query; it is also outside the pipeline.
+The Union County packet adds a 21-row Overture context query and 30 cached public documents.
+Its tracked extracts, evidence ledger and manifest snapshot preserve that later research;
+`tar_make()` does not recreate these acquisitions either.
 
 Human labels are preserved separately in `data/validation/`, outside the ignored,
 rebuildable directories. The archived CSV cannot be recreated by `tar_make()`.
@@ -69,7 +72,7 @@ Museums only. Churches (Phase 1b) are queued, not cancelled — see §6.
 | Sources | Overture `2026-08-19.0` (29,894 US museums) + IMLS MUDF 2018 (30,108) |
 | Baseline records | 60,002 → **57,348 counted** |
 | Baseline entities | **52,636** counted |
-| After curated identity corrections and source-conflict holds | **52,605** counted; **52,473** eligible for name analysis |
+| After curated identity corrections and source-conflict holds | **52,597** counted; **52,465** eligible for name analysis |
 | Baseline excluded source records | 2,306 non-primary site · 331 permanently closed · 17 no name |
 | Baseline counted entities with an alternate name | 6,181 |
 
@@ -92,16 +95,21 @@ consolidates the clean LeMoyne House records and isolates two conflicting IMLS r
 The [address follow-up](data/validation/museum_address_review_2026-09-15.md) also reconciles
 Chipley's mailing record and Peters Creek's house/society pair. The
 [Old Jail pass](data/validation/museum_old_jail_review_2026-09-15.md) adds eight accepted
-identity cases and two Dubuque holdouts. All 60,002 source rows remain; 57,313 source rows
-are counted after corrections.
+identity cases and two Dubuque holdouts. At that checkpoint all 60,002 source rows remained,
+with 57,313 counted source rows.
 Source names and coordinates remain unchanged. The baseline multi-site queue is not
 recomputed from this reviewed layer.
 
-The live identity input now covers **56 source rows in 22 cases**: twenty canonical
+The [Union County pass](data/validation/museum_union_county_review_2026-09-17.md)
+adds six cases covering 15 source rows, reducing counted institutions by eight.
+All 60,002 source rows remain; **57,305** are counted after the latest corrections.
+Union County Historical Society falls from 14 to **7** provisional exact-name institutions.
+The live identity input now covers **71 source rows in 28 cases**: 26 canonical
 institutions and four isolated conflicting rows. The current generated review contains
-**449 institutions, 553 source rows and 147 nearby pairs**; the initial dated packet's
-470/551/159 counts describe its earlier state. Albion and Jim Thorpe have complete
-`verified` factual reviews; ten Old Jail reviews remain pending. See the
+**435 institutions, 535 source rows and 143 nearby pairs**; the initial dated packet's
+470/551/159 counts describe its earlier state. Albion, Jim Thorpe and Creston's
+Historical Village have complete `verified` factual reviews; ten Old Jail reviews
+and all seven remaining Union County exact-name institutions remain pending. See the
 [validation index](data/validation/README.md) for the live inputs,
 archived checkpoints and read-only reproduction commands.
 
@@ -132,14 +140,21 @@ similarity band within 150 m, not a dataset-wide error rate or an evaluation of 
 entity clusters. Multi-site merging and matches outside the candidate radius remain
 unvalidated by this sample. Preserve human labels independently of matching changes.
 
-**Current review checkpoint:** [Old Jail report](data/validation/museum_old_jail_review_2026-09-15.md),
-its updated ranking and evidence for all 15 starting candidates and related source members.
+**Current review checkpoint:** [Union County report](data/validation/museum_union_county_review_2026-09-17.md),
+its updated ranking and dispositions for all 14 starting candidates. Six supported
+identity corrections reconcile Georgia, Tennessee, Illinois, Florida, Iowa and New Mexico.
+The [Old Jail report](data/validation/museum_old_jail_review_2026-09-15.md) preserves the
+preceding ranking and evidence for all 15 of that group's starting candidates.
 The [address follow-up](data/validation/museum_address_review_2026-09-15.md) retains
 the earlier six-case evidence and staged map points. The
 [first identity report](data/validation/museum_identity_review_2026-09-15.md),
 [initial Phase 2 report](data/validation/museum_analysis_2026-09-15.md) and
 [source pass](data/validation/museum_source_review_2026-09-15.md) preserve earlier states.
-Use regenerated review sheets for current IDs; fresh diagnostic pair labels remain blank.
+Use regenerated review sheets for current candidates. Union County's exact-name group
+is now below the top-20 cutoff; its
+[reviewed institutions](data/validation/museum_union_county_review_2026-09-17/reviewed_institutions_after.csv)
+and follow-up queue preserve those cases. Check `museum_analysis` for current IDs when
+revisiting dated evidence. Fresh diagnostic pair labels remain blank.
 
 Implemented: category-only holdouts with sourced exceptions, evidence-backed brand
 rules and explicit unknown affiliation, name-derived subjects with an IMLS diagnostic,
@@ -149,16 +164,22 @@ M2 candidates, and the seed case. Tracked inputs are `museum_chain_rules.csv`,
 generated review outputs are under
 `data/processed/museum_review/`.
 
-**Next: review Union County Historical Society's 14 candidates, then continue the
-remaining top-20 and unresolved Old Jail checks.**
+**Next: continue the remaining top-20 and unresolved Old Jail checks, using the
+[new follow-up queue](data/validation/museum_union_county_review_2026-09-17/follow_up.csv)
+for Union County's remaining evidence gaps.** The Union County batch is complete,
+but its seven remaining exact-name institutions still fail the publication gate.
+Oregon's mixed identity context, Monroe's unconfirmed museum status, Liberty's rural
+addresses and Lewisburg's library/gallery/Packwood scope require further evidence.
+Georgia, Illinois and Tennessee retain preferred-name questions. Museum of Illusions
+and Washington County Historical Society now share the provisional lead at 13.
 The [Old Jail report](data/validation/museum_old_jail_review_2026-09-15.md) documents the
-latest corrections and remaining evidence gaps. National Electronics Museum now
+preceding corrections and its remaining evidence gaps. National Electronics Museum now
 counts once; National Vietnam War Museum has two remaining candidates (one is an
 unresolved Bankhead Drive record); Washington County Historical Society falls from
 19 to 16 in the first identity pass, 14 after the focused corrections and 13 after
 the Chipley mailing consolidation. Old Jail Museum now falls from 15 to 12 after
-Winchester consolidation and the two Dubuque holds. Union County Historical Society
-leads provisionally at 14. No headline is certified yet. Pennsylvania's
+Winchester consolidation and the two Dubuque holds. Union County Historical Society's
+former lead of 14 fell to 7 after the September 17 batch. No headline is certified yet. Pennsylvania's
 mixed Barrow row and mislabeled Venetia mailbox are isolated as source conflicts;
 the latter's EIN/address identify Peters Creek Historical Society, not the LeMoyne
 operator. The accepted Peters Creek house/society pair now counts once, while the
@@ -310,6 +331,30 @@ Two known gaps that only matter for churches:
 ---
 
 ## 7. Session log
+
+2026-09-18 documentation audit: checked all 15 project Markdown/R Markdown files
+against the latest Union County packet, saved targets and code. Updated stale current
+counts and latest-report links in DESIGN and LEADS; clarified research-cache provenance,
+historical checkpoints, access to reviewed cases below the top-20 cutoff and the current-state
+requirements of the Union County validator. All 210 local links, 14 R documentation
+blocks and six selective-build target names passed checks. The read-only Union County
+replay passed all 23 integrity checks; review sizes, category decisions, provisional
+leaders, publication holds and original 0.85 label scores match the documentation.
+All 227 protected project and generated files are unchanged, including dated evidence,
+decision inputs, human labels and code. No pipeline rebuild or new factual decisions.
+Next analysis work remains the top-20 reviews and unresolved cases in the latest follow-up queue.
+
+2026-09-17 Union County review: all 14 starting candidates researched; six sourced
+identity cases reconcile 15 source rows into six institutions, reducing counted
+institutions by eight to 52,597 (52,465 eligible). Exact-name count falls 14 to 7;
+Creston's Historical Village is verified independent, while the remaining exact-name
+group stays pending. Queried 21 Overture context rows and cached 30 public documents;
+one city-page cache attempt returned 404. R 4.4.2: 195 assertions and 23 integrity
+checks passed, including unchanged baseline/multisite targets, source fields and 125
+protected files. Review sheets, both Parquet exports and the identity audit are current.
+The [packet](data/validation/museum_union_county_review_2026-09-17.md) preserves decisions,
+candidate dispositions, evidence, counts and follow-ups. Stopped after this batch for
+the user's requested check-in; no publication or next-group research started.
 
 2026-09-16 repository cleanup: removed two unreferenced test Parquet caches and
 package-only `.Rbuildignore`; retained the IMLS ZIP fixture and its provenance.

@@ -48,11 +48,14 @@ guards reject stale decisions. One canonical record counts per reviewed institut
 supporting rows remain with reviewed exclusion reasons. Keep `source_conflict`
 holdouts auditable: contradictory rows have separate uncounted IDs
 and must not contribute disputed aliases to accepted institutions. The
-[Old Jail review](data/validation/museum_old_jail_review_2026-09-15.md) is the latest
-count checkpoint: 56 identity rows in 22 cases, including four isolated source conflicts.
-Only Albion and Jim Thorpe have complete factual reviews; Old Jail's group publication
-gate still rejects the pending cases. Continue with Union County's 14 candidates and
-the archived follow-up queue. The earlier
+[Union County review](data/validation/museum_union_county_review_2026-09-17.md) is the latest
+count checkpoint: 71 identity rows in 28 cases, including four isolated source conflicts.
+Albion, Jim Thorpe and Creston's Historical Village have complete factual reviews.
+Union County's 14 starting candidates have been researched; six corrections reduce the
+exact-name group to seven, all still pending. Old Jail's ten pending cases are unchanged.
+Continue the top-20 reviews and the latest packet's follow-up queue. Preserve Oregon's
+mixed source context and unresolved museum/address/name cases without unsupported merges.
+The earlier
 [address follow-up](data/validation/museum_address_review_2026-09-15.md) reconciles Chipley
 and the accepted Peters Creek pair; its mixed IMLS row stays isolated. That packet's
 `publication_locations.csv` stages

@@ -5,8 +5,8 @@ here whenever something surfaces during Phase 2/3 work** rather than chasing it 
 
 Format: one heading per lead, with the question, why it's interesting, and a data note.
 
-**Status, 2026-09-15:** Phase 2 analysis, the top-20 packet, nine initial identity
-corrections and the [Old Jail review batch](data/validation/museum_old_jail_review_2026-09-15.md)
+**Status, 2026-09-18:** Phase 2 tooling and the source/identity passes through the
+[Union County review batch](data/validation/museum_union_county_review_2026-09-17.md)
 are complete. Remaining headline checks precede the post. The dated counts below remain
 exploratory observations, not verified publication figures; see
 [HANDOFF.md](HANDOFF.md) for current work and the
@@ -97,8 +97,12 @@ after consolidating LeMoyne House and isolating contradictory source rows. The l
 [address pass](data/validation/museum_address_review_2026-09-15.md) reduces it to 13 by
 linking Chipley's older mailing record to the museum through its EIN. Old Jail
 Museum initially led at 15; its [focused review](data/validation/museum_old_jail_review_2026-09-15.md)
-reduces it to 12, leaving Union County Historical Society provisionally first at 14.
-Remaining source checks precede citation as
+reduces it to 12, leaving Union County Historical Society provisionally first at 14
+at that checkpoint. The September 17
+[Union County review](data/validation/museum_union_county_review_2026-09-17.md) applies
+six further identity corrections and reduces that exact-name group to seven.
+Museum of Illusions and Washington County Historical Society now share the provisional
+lead at 13. Neither is publication ready; remaining source checks precede citation as
 verified institution counts.
 
 The interesting part is that this duplication is **downstream of a different

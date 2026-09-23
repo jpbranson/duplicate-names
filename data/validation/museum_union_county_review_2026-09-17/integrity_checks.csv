@@ -1,0 +1,24 @@
+check,passed
+Before counts replay,TRUE
+After counts replay,TRUE
+All normalized source fields unchanged,TRUE
+Records outside 15 reviewed members unchanged,TRUE
+Six complete identity cases,TRUE
+Every affected baseline member explicitly listed,TRUE
+One counted representative per added case,TRUE
+All original source keys retained,TRUE
+Saved reviewed target matches replay,TRUE
+Saved analysis target matches replay,TRUE
+Reviewed Parquet matches target,TRUE
+Baseline Parquet matches baseline target,TRUE
+"Prior packets, human labels and chain rules preserved",TRUE
+Union County publication gate rejects pending group,TRUE
+Iowa has supported independent factual review,TRUE
+Other reviewed candidates stay pending,TRUE
+Live identity decisions match archive,TRUE
+71 identity rows in 28 cases,TRUE
+Existing four source conflicts remain isolated,TRUE
+Matching threshold remains 0.85,TRUE
+Eleven resulting institutions have factual review notes,TRUE
+Automatic baseline unchanged,TRUE
+Baseline multisite queue unchanged,TRUE

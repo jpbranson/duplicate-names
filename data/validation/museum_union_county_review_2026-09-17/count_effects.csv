@@ -1,0 +1,9 @@
+measure,before,after
+source_rows,60002,60002
+counted_source_rows,57313,57305
+counted_institutions,52605,52597
+eligible_institutions,52473,52465
+union_county_name,14,7
+washington_county_name,13,13
+old_jail_name,12,12
+verified_institutions,2,3

@@ -1,7 +1,7 @@
 # Duplicate Names — Development Plan
 
 **Status:** Phase 2 tooling and focused source/identity passes complete; remaining headline checks pending
-**Last updated:** 2026-09-15
+**Last updated:** 2026-09-18
 
 The museum pipeline runs on Overture + IMLS. All 300 candidate pairs have human labels;
 the [validation report](data/validation/resolution_validation_2026-09-15.md) records the
@@ -93,8 +93,10 @@ query uses the same pinned release; its SQL/checksum are in the manifest and a
 [tracked copy](data/validation/museum_identity_review_2026-09-15/overture_context.csv)
 is archived with the identity evidence. The later
 [Old Jail context query](data/validation/museum_old_jail_review_2026-09-15/overture_context.csv)
-adds 41 records from the same release. The manifest also records the address pass's
-IRS extracts and operator-page caches, including 19 pages from the Old Jail review.
+adds 41 records from the same release, followed by the 21-row
+[Union County query](data/validation/museum_union_county_review_2026-09-17/overture_context.csv).
+The manifest also records the address pass's IRS extracts and operator-page caches,
+19 pages from the Old Jail review, and 30 public documents from the Union County review.
 These research acquisitions are outside `_targets.R`; their dated packets preserve
 the context and extracted evidence needed to review the decisions.
 Census 2023 places, counties and states supply the cached normalization gazetteer;
@@ -242,8 +244,10 @@ LeMoyne consolidation and two `source_conflict` holdouts. The later
 [address follow-up](data/validation/museum_address_review_2026-09-15.md) adds the Chipley
 mailing consolidation and Peters Creek house/society pair. The
 [Old Jail pass](data/validation/museum_old_jail_review_2026-09-15.md) adds eight accepted
-identity cases and two more source-conflict holds. The current input has 56 source
-rows across 22 cases, with twenty canonical institutions and four isolated conflicting rows.
+identity cases and two more source-conflict holds. The
+[Union County pass](data/validation/museum_union_county_review_2026-09-17.md) adds six
+identity cases covering 15 source rows. The current input has 71 source rows across
+28 cases, with 26 canonical institutions and four isolated conflicting rows.
 A conflict row receives its own stable entity/site ID, `counted = FALSE` and
 `reviewed_source_conflict`; its disputed aliases cannot propagate to accepted members.
 Cases containing only conflicts need no canonical institution. Cases with accepted
@@ -321,9 +325,12 @@ singularity). No candidate count is a verified count of independent institutions
 verified rows with resolved affiliation. It is an explicit pre-export check, not a target
 automatically invoked by `_targets.R`. The ranking's `publication_ready` column summarizes
 recorded review statuses; neither mechanism verifies evidence, semantic scope claims or
-map/access details. Albion and Jim Thorpe now have verified overall reviews. The other
-ten Old Jail reviews remain pending, so the group still fails the explicit publication
-check. A supported identity or naming decision alone does not complete a review.
+map/access details. Albion, Jim Thorpe and Creston's Historical Village have verified
+overall reviews. Ten Old Jail reviews and all seven remaining Union County Historical
+Society exact-name candidates remain pending, so both groups fail the explicit publication
+check. The [September 17 batch](data/validation/museum_union_county_review_2026-09-17.md)
+reduces Union County's provisional count from 14 to seven through six identity cases.
+A supported identity or naming decision alone does not complete a review.
 
 **Churches**
 
@@ -644,13 +651,17 @@ Reorder freely if the writing momentum runs the other way.
 ### Immediate Phase 2 deliverable
 
 The cleaned provisional L2 ranking and institution/source review sheets are available;
-the [Old Jail report](data/validation/museum_old_jail_review_2026-09-15.md) is the latest
-checkpoint: 52,605 counted entities and 52,473 eligible for name analysis. It adds museum/
-society/mail consolidations and two Dubuque holds to the earlier passes. All four
-source-conflict rows remain isolated. Two institutions have complete factual reviews,
-but Old Jail's group publication gate still rejects pending reviews and unknown affiliation.
-Unresolved address/location cases and remaining top-20 source checks still
-precede publication. The [initial Phase 2 report](data/validation/museum_analysis_2026-09-15.md)
+the [Union County report](data/validation/museum_union_county_review_2026-09-17.md) is the
+latest checkpoint: 52,597 counted entities and 52,465 eligible for name analysis.
+Six identity corrections reduce Union County Historical Society's exact-name count
+from 14 to seven. All four source-conflict rows remain isolated. Albion, Jim Thorpe
+and Creston's Historical Village have complete factual reviews; ten Old Jail reviews
+and all seven remaining Union County exact-name institutions stay pending. Both groups
+still fail the publication gate. Unresolved address/location cases and remaining
+top-20 source checks precede publication; the latest packet's
+[follow-up queue](data/validation/museum_union_county_review_2026-09-17/follow_up.csv)
+also retains cases outside the regenerated top-20 queue.
+The [initial Phase 2 report](data/validation/museum_analysis_2026-09-15.md)
 preserves the earlier implementation checkpoint.
 Category handling, affiliation rules, subject extraction, canonical entity counting and
 M2's L2 correction are implemented and tested. Check identities, relevant multi-site
@@ -759,6 +770,6 @@ curated correction layer.
 - Setup and project overview → [`README.md`](README.md)
 - Current work and saved counts → [`HANDOFF.md`](HANDOFF.md)
 - Validation evidence and limitations → [September 15 report](data/validation/resolution_validation_2026-09-15.md)
-- Latest museum counts and remaining review cases → [Old Jail report](data/validation/museum_old_jail_review_2026-09-15.md)
+- Latest museum counts and remaining review cases → [Union County report](data/validation/museum_union_county_review_2026-09-17.md)
 - Live decisions and archived evidence → [validation index](data/validation/README.md)
 - Analogous name-collision phenomena → [`LEADS.md`](LEADS.md)

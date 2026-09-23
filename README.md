@@ -21,7 +21,7 @@ renv::restore()      # restore the pinned dependencies
 This is an R analysis project, not an R package. Keep `DESCRIPTION` as
 `Type: Project` without a `Package:` field.
 
-## Current status — 2026-09-15
+## Current status — 2026-09-17
 
 **Phase 2 tooling and focused source/identity passes are complete;
 remaining headline checks precede the museum post.** The pipeline uses Overture Places release
@@ -35,7 +35,8 @@ corrections:
 | After nine identity corrections (`museum_records` → `museum_analysis`) | 57,332 | 52,621 | 52,489 |
 | After focused follow-up and two source-conflict holds | 57,329 | 52,619 | 52,487 |
 | After address follow-up | 57,327 | 52,617 | 52,485 |
-| After Old Jail review (current) | 57,313 | 52,605 | 52,473 |
+| After Old Jail review | 57,313 | 52,605 | 52,473 |
+| After Union County review (current) | 57,305 | 52,597 | 52,465 |
 
 These are provisional counts; remaining source checks precede publication.
 
@@ -49,6 +50,7 @@ See the [validation report](data/validation/resolution_validation_2026-09-15.md)
 The [initial Phase 2 report](data/validation/museum_analysis_2026-09-15.md) records the
 analysis implementation; the [identity report](data/validation/museum_identity_review_2026-09-15.md)
 preserves the first identity checkpoint. The [Old Jail review](data/validation/museum_old_jail_review_2026-09-15.md)
+preserves the preceding checkpoint; the [Union County review](data/validation/museum_union_county_review_2026-09-17.md)
 has the latest counts and remaining cases. M1/M2 now count one canonical L2 name
 per entity; the old helper counted source rows and aliases. Category-only names are
 held pending evidence, known brand affiliations have sourced rules, unknown affiliation
@@ -58,7 +60,11 @@ stays unknown, and M3 uses explicit topic extraction with an IMLS comparison.
 cutoff ties and leading M2 candidates), category queue, and nearby-pair diagnostics to
 `data/processed/museum_review/`. Preserve completed decisions in the tracked
 `data/validation/museum_decisions.csv`, keyed by source record and expected name.
-Use the generated sheets for current entity IDs; dated packets preserve earlier checkpoints.
+Use the generated sheets for current candidates. Union County's exact-name group is
+now below the top-20 cutoff; its
+[reviewed institutions](data/validation/museum_union_county_review_2026-09-17/reviewed_institutions_after.csv)
+and [follow-up queue](data/validation/museum_union_county_review_2026-09-17/follow_up.csv)
+preserve those cases. Check `museum_analysis` for current IDs when revisiting any dated packet.
 No headline count is certified by these automated analyses.
 
 The [source-verification report](data/validation/museum_source_review_2026-09-15.md)
@@ -81,23 +87,33 @@ and 131 pending decisions.
 The [focused follow-up](data/validation/museum_focused_review_2026-09-15.md) consolidates
 the clean LeMoyne House records and isolates two contradictory IMLS rows. The later
 [address follow-up](data/validation/museum_address_review_2026-09-15.md) reconciles Chipley's
-mailing record and the Peters Creek house/society records. The latest
+mailing record and the Peters Creek house/society records. The September 15
 [Old Jail review](data/validation/museum_old_jail_review_2026-09-15.md) examines all 15
 starting candidates, consolidates related museum/society/mail records and isolates two
-mixed Dubuque rows. Current counts are **52,605 counted entities** and **52,473 eligible**.
-Old Jail Museum falls to 12; Union County Historical Society leads provisionally at 14.
-Washington County Historical Society stays at 13. The live identity input covers
+mixed Dubuque rows. That checkpoint has **52,605 counted entities** and **52,473 eligible**.
+Old Jail Museum falls to 12; Union County Historical Society then led provisionally at 14.
+Washington County Historical Society stays at 13. The identity input then covered
 **56 source rows in 22 cases**, including four isolated source conflicts.
 
-Albion and Jim Thorpe now have complete factual reviews; St. Augustine has a sourced
-Historic Tours of America affiliation. Ten Old Jail reviews remain pending, so its
-publication gate still rejects certification. **192 assertions and 23 integrity checks
-passed.** Bankhead and Lafayette Street still need museum evidence. Operator points for
-Mandeville, Smedley and Peters Creek remain staged for publication; source coordinates
-are unchanged.
+At the Old Jail checkpoint, Albion and Jim Thorpe received complete factual reviews;
+St. Augustine has a sourced Historic Tours of America affiliation. Ten Old Jail reviews
+remain pending, so its publication gate still rejects certification. **192 assertions and 23 integrity checks
+passed at that checkpoint.** Bankhead and Lafayette Street still need museum evidence.
+Operator points for Mandeville, Smedley and Peters Creek remain staged for publication;
+source coordinates are unchanged.
 
-The regenerated review sheets contain **449 candidate institutions, 553 source rows
-and 147 nearby pairs**. The original dated packet's 470 institutions, 551 rows and
+The September 17 [Union County batch](data/validation/museum_union_county_review_2026-09-17.md)
+reviews all 14 starting candidates. Six corrections cover 15 source rows, reducing
+the exact-name count to **7**, counted institutions to **52,597** and eligible
+institutions to **52,465**. Creston's Historical Village has a complete factual review
+and supported independent operation; all seven remaining exact-name institutions stay pending.
+The identity input now covers **71 rows in 28 cases**. **195 assertions and 23
+integrity checks passed**, including preservation of the baseline, original source
+fields, labels and 125 protected files. Neither provisional leader at 13 (Museum of
+Illusions and Washington County Historical Society) is publication ready.
+
+The regenerated review sheets contain **435 candidate institutions, 535 source rows
+and 143 nearby pairs**. The original dated packet's 470 institutions, 551 rows and
 159 pairs describe an earlier checkpoint. Use the
 [validation index](data/validation/README.md) to distinguish live decision inputs,
 historical evidence and the latest follow-up queue.
@@ -158,7 +174,8 @@ identity decisions or the identity audit, or include identity decisions in its c
 For an identity-correction checkpoint, also preserve those inputs, before/after records,
 evidence and hashes, following the
 [identity packet](data/validation/museum_identity_review_2026-09-15/) and
-[focused packet](data/validation/museum_focused_review_2026-09-15/). Existing dated
+[focused packet](data/validation/museum_focused_review_2026-09-15/) or the latest
+[Union County packet](data/validation/museum_union_county_review_2026-09-17/). Existing dated
 packets and completed human labels are historical evidence, not generated scratch files.
 
 ### Completing a museum review
@@ -199,7 +216,7 @@ The [staged location table](data/validation/museum_address_review_2026-09-15/pub
 has separate `publication_lon`/`publication_lat` and dated access wording for Mandeville,
 Smedley and Peters Creek. It is not yet consumed by the pipeline or Parquet exports.
 Apply those fields during publication export and refresh access wording, preserving source
-coordinates and evidence. See the [current queue](data/validation/museum_old_jail_review_2026-09-15/follow_up.csv)
+coordinates and evidence. See the [current queue](data/validation/museum_union_county_review_2026-09-17/follow_up.csv)
 for the remaining source checks and the
 [address queue](data/validation/museum_address_review_2026-09-15/follow_up.csv) for location details.
 
