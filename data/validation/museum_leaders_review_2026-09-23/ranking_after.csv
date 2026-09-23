@@ -1,0 +1,30 @@
+rank,name_expanded,n_entities,n_chain,n_independent_verified,n_affiliation_unknown,n_category_pending,n_multisite,n_review_pending,publication_ready
+1,museum of illusions,12,11,0,1,0,0,1,FALSE
+2,old jail museum,12,1,2,9,0,0,10,FALSE
+3,play street museum,12,12,0,0,0,0,12,FALSE
+4,ripley's believe it or not,12,12,0,0,0,0,12,FALSE
+5,franklin county historical society,11,0,0,11,0,0,11,FALSE
+6,greene county historical society,11,0,0,11,0,0,11,FALSE
+7,jackson county historical society,11,0,0,11,0,0,11,FALSE
+8,depot museum,10,0,0,10,0,0,10,FALSE
+9,smithsonian institution,10,0,0,10,0,0,10,FALSE
+10,wayne county historical society,10,0,0,10,0,0,10,FALSE
+11,adams county historical society,9,0,0,9,0,0,9,FALSE
+12,brown county historical society,9,0,0,9,0,0,9,FALSE
+13,carroll county historical society,9,0,0,9,0,0,9,FALSE
+14,children's discovery museum,9,0,0,9,0,0,9,FALSE
+15,clinton county historical society,9,0,0,9,0,0,9,FALSE
+16,madison county historical society,9,0,0,9,0,0,9,FALSE
+17,monroe county historical society,9,0,0,9,0,0,9,FALSE
+18,pioneer village,9,0,0,9,0,0,9,FALSE
+19,veterans memorial museum,9,0,0,9,0,0,9,FALSE
+20,african american museum,8,0,0,8,0,0,8,FALSE
+21,cass county historical society,8,0,0,8,0,0,8,FALSE
+22,chester historical society,8,0,0,8,0,0,8,FALSE
+23,crawford county historical society,8,0,0,8,0,0,8,FALSE
+24,imagination station,8,0,0,8,0,0,8,FALSE
+25,jefferson county historical society,8,0,0,8,0,0,8,FALSE
+26,lincoln county historical society,8,0,0,8,0,0,8,FALSE
+27,madison historical society,8,0,0,8,0,0,8,FALSE
+28,marion county historical society,8,0,0,8,0,0,8,FALSE
+29,milton historical society,8,0,0,8,0,0,8,FALSE

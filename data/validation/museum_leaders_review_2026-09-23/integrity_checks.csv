@@ -1,0 +1,26 @@
+check,passed
+Before counts replay,TRUE
+After counts replay,TRUE
+All normalized source fields unchanged,TRUE
+Records outside 19 reviewed members unchanged,TRUE
+Eight identity cases with 19 members,TRUE
+Every affected baseline member explicitly listed,TRUE
+One counted representative per accepted case,TRUE
+Arkansas association row isolated and uncounted,TRUE
+Five source conflicts isolated,TRUE
+All original source keys retained,TRUE
+Saved reviewed target matches replay,TRUE
+Saved analysis target matches replay,TRUE
+Reviewed Parquet matches target,TRUE
+Baseline Parquet matches baseline target,TRUE
+"Prior packets, human labels and chain rules preserved",TRUE
+Publication gate rejects Museum of Illusions while Miami is pending,TRUE
+Publication gate rejects Washington County Historical Society,TRUE
+Eleven verified network locations plus Miami pending,TRUE
+Thirteen new complete factual reviews,TRUE
+Live identity decisions match archive,TRUE
+Live name decisions match archive,TRUE
+90 identity rows in 36 cases,TRUE
+Matching threshold remains 0.85,TRUE
+Automatic baseline unchanged,TRUE
+Baseline multisite queue unchanged,TRUE

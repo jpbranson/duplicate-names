@@ -1,0 +1,40 @@
+[ FAIL 0 | WARN 0 | SKIP 0 | PASS 195 ]
+# A tibble: 8 × 3
+  measure                  before after
+  <chr>                     <int> <int>
+1 source_rows               60002 60002
+2 counted_source_rows       57305 57293
+3 counted_institutions      52597 52588
+4 eligible_institutions     52465 52456
+5 museum_of_illusions_name     13    12
+6 washington_county_name       13     7
+7 old_jail_name                12    12
+8 verified_institutions         3    16
+# A tibble: 25 × 2
+   check                                                               passed
+   <chr>                                                               <lgl> 
+ 1 Before counts replay                                                TRUE  
+ 2 After counts replay                                                 TRUE  
+ 3 All normalized source fields unchanged                              TRUE  
+ 4 Records outside 19 reviewed members unchanged                       TRUE  
+ 5 Eight identity cases with 19 members                                TRUE  
+ 6 Every affected baseline member explicitly listed                    TRUE  
+ 7 One counted representative per accepted case                        TRUE  
+ 8 Arkansas association row isolated and uncounted                     TRUE  
+ 9 Five source conflicts isolated                                      TRUE  
+10 All original source keys retained                                   TRUE  
+11 Saved reviewed target matches replay                                TRUE  
+12 Saved analysis target matches replay                                TRUE  
+13 Reviewed Parquet matches target                                     TRUE  
+14 Baseline Parquet matches baseline target                            TRUE  
+15 Prior packets, human labels and chain rules preserved               TRUE  
+16 Publication gate rejects Museum of Illusions while Miami is pending TRUE  
+17 Publication gate rejects Washington County Historical Society       TRUE  
+18 Eleven verified network locations plus Miami pending                TRUE  
+19 Thirteen new complete factual reviews                               TRUE  
+20 Live identity decisions match archive                               TRUE  
+21 Live name decisions match archive                                   TRUE  
+22 90 identity rows in 36 cases                                        TRUE  
+23 Matching threshold remains 0.85                                     TRUE  
+24 Automatic baseline unchanged                                        TRUE  
+25 Baseline multisite queue unchanged                                  TRUE  

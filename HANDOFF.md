@@ -1,6 +1,6 @@
 # Handoff
 
-**Last session:** 2026-09-18 documentation audit · **Phase:** 2 Union County review batch complete; headline review ongoing
+**Last session:** 2026-09-23 provisional leaders review · **Phase:** 2 leaders batch complete; headline methodology question open
 **Repo:** https://github.com/jpbranson/duplicate-names
 
 Read [DESIGN.md](DESIGN.md) for the plan and the numbered decisions, [LEADS.md](LEADS.md)
@@ -56,7 +56,9 @@ The Old Jail packet adds a 41-row Overture context query and 19 cached operator/
 pages. Its tracked context and manifest SQL preserve the query; it is also outside the pipeline.
 The Union County packet adds a 21-row Overture context query and 30 cached public documents.
 Its tracked extracts, evidence ledger and manifest snapshot preserve that later research;
-`tar_make()` does not recreate these acquisitions either.
+`tar_make()` does not recreate these acquisitions either. The leaders packet adds 22- and
+18-row Overture context queries and 46 cached public documents, including IRS Kansas and
+Mississippi extracts and the IRS revocation list, under the same rules.
 
 Human labels are preserved separately in `data/validation/`, outside the ignored,
 rebuildable directories. The archived CSV cannot be recreated by `tar_make()`.
@@ -72,7 +74,7 @@ Museums only. Churches (Phase 1b) are queued, not cancelled — see §6.
 | Sources | Overture `2026-08-19.0` (29,894 US museums) + IMLS MUDF 2018 (30,108) |
 | Baseline records | 60,002 → **57,348 counted** |
 | Baseline entities | **52,636** counted |
-| After curated identity corrections and source-conflict holds | **52,597** counted; **52,465** eligible for name analysis |
+| After curated identity corrections and source-conflict holds | **52,588** counted; **52,456** eligible for name analysis |
 | Baseline excluded source records | 2,306 non-primary site · 331 permanently closed · 17 no name |
 | Baseline counted entities with an alternate name | 6,181 |
 
@@ -102,14 +104,21 @@ recomputed from this reviewed layer.
 
 The [Union County pass](data/validation/museum_union_county_review_2026-09-17.md)
 adds six cases covering 15 source rows, reducing counted institutions by eight.
-All 60,002 source rows remain; **57,305** are counted after the latest corrections.
-Union County Historical Society falls from 14 to **7** provisional exact-name institutions.
-The live identity input now covers **71 source rows in 28 cases**: 26 canonical
-institutions and four isolated conflicting rows. The current generated review contains
-**435 institutions, 535 source rows and 143 nearby pairs**; the initial dated packet's
-470/551/159 counts describe its earlier state. Albion, Jim Thorpe and Creston's
-Historical Village have complete `verified` factual reviews; ten Old Jail reviews
-and all seven remaining Union County exact-name institutions remain pending. See the
+Union County Historical Society fell from 14 to 7 provisional exact-name institutions.
+
+The [provisional leaders review](data/validation/museum_leaders_review_2026-09-23.md)
+researches all 26 Museum of Illusions and Washington County Historical Society candidates.
+Eight cases cover 19 source rows; one is a new isolated source conflict.
+All 60,002 source rows remain; **57,293** are counted after the latest corrections.
+Washington County Historical Society falls from 13 to **7** and Museum of Illusions
+from 13 to **12**. The live identity input now covers **90 source rows in 36 cases**,
+including five isolated conflicting rows. The current generated review contains
+**493 institutions, 598 source rows and 154 nearby pairs**, because the top-20 cutoff
+fell to 8; the initial dated packet's 470/551/159 counts describe its earlier state.
+**Sixteen** institutions have complete `verified` factual reviews: Albion, Jim Thorpe,
+Creston, the 11 Museum of Illusions network locations, Stevens Memorial Museum and the
+Washington County Heritage Center. Ten Old Jail reviews, seven Union County and seven
+Washington County exact-name institutions, and Museum of Illusions Miami Beach remain pending. See the
 [validation index](data/validation/README.md) for the live inputs,
 archived checkpoints and read-only reproduction commands.
 
@@ -140,8 +149,10 @@ similarity band within 150 m, not a dataset-wide error rate or an evaluation of 
 entity clusters. Multi-site merging and matches outside the candidate radius remain
 unvalidated by this sample. Preserve human labels independently of matching changes.
 
-**Current review checkpoint:** [Union County report](data/validation/museum_union_county_review_2026-09-17.md),
-its updated ranking and dispositions for all 14 starting candidates. Six supported
+**Current review checkpoint:** [provisional leaders report](data/validation/museum_leaders_review_2026-09-23.md),
+its updated ranking and dispositions for all 26 starting candidates. The preceding
+[Union County report](data/validation/museum_union_county_review_2026-09-17.md) retains
+its ranking and dispositions for all 14 of that group's starting candidates. Six supported
 identity corrections reconcile Georgia, Tennessee, Illinois, Florida, Iowa and New Mexico.
 The [Old Jail report](data/validation/museum_old_jail_review_2026-09-15.md) preserves the
 preceding ranking and evidence for all 15 of that group's starting candidates.
@@ -164,14 +175,22 @@ M2 candidates, and the seed case. Tracked inputs are `museum_chain_rules.csv`,
 generated review outputs are under
 `data/processed/museum_review/`.
 
-**Next: continue the remaining top-20 and unresolved Old Jail checks, using the
-[new follow-up queue](data/validation/museum_union_county_review_2026-09-17/follow_up.csv)
-for Union County's remaining evidence gaps.** The Union County batch is complete,
-but its seven remaining exact-name institutions still fail the publication gate.
+**Next: decide the headline methodology question, then continue with Old Jail.**
+Four names now tie at 12: Museum of Illusions, Old Jail Museum, Play Street Museum and
+Ripley's Believe It or Not. Three are single-brand chains. The official Museum of
+Illusions directory lists 25 open US locations; 14 are in Overture with city suffixes
+and fall into separate L2 names. Decide whether M1 excludes verified chains or
+normalizes brand-plus-city names before reviewing more chain groups; Old Jail Museum
+is the leading name that is not a chain. The
+[leaders follow-up queue](data/validation/museum_leaders_review_2026-09-23/follow_up.csv)
+also proposes a sourced non-museum exclusion: Fort Edward (headquarters/library),
+St. George (umbrella society), Marietta (archives) and Greenville (revoked, no museum)
+stay counted because the schema cannot yet exclude them.
+The [Union County queue](data/validation/museum_union_county_review_2026-09-17/follow_up.csv)
+still holds that group's evidence gaps; its seven exact-name institutions fail the gate.
 Oregon's mixed identity context, Monroe's unconfirmed museum status, Liberty's rural
 addresses and Lewisburg's library/gallery/Packwood scope require further evidence.
-Georgia, Illinois and Tennessee retain preferred-name questions. Museum of Illusions
-and Washington County Historical Society now share the provisional lead at 13.
+Georgia, Illinois and Tennessee retain preferred-name questions.
 The [Old Jail report](data/validation/museum_old_jail_review_2026-09-15.md) documents the
 preceding corrections and its remaining evidence gaps. National Electronics Museum now
 counts once; National Vietnam War Museum has two remaining candidates (one is an
@@ -179,7 +198,8 @@ unresolved Bankhead Drive record); Washington County Historical Society falls fr
 19 to 16 in the first identity pass, 14 after the focused corrections and 13 after
 the Chipley mailing consolidation. Old Jail Museum now falls from 15 to 12 after
 Winchester consolidation and the two Dubuque holds. Union County Historical Society's
-former lead of 14 fell to 7 after the September 17 batch. No headline is certified yet. Pennsylvania's
+former lead of 14 fell to 7 after the September 17 batch, and Washington County's
+13 fell to 7 after the September 23 batch. No headline is certified yet. Pennsylvania's
 mixed Barrow row and mislabeled Venetia mailbox are isolated as source conflicts;
 the latter's EIN/address identify Peters Creek Historical Society, not the LeMoyne
 operator. The accepted Peters Creek house/society pair now counts once, while the
@@ -263,8 +283,8 @@ unrelated museums wrongly merged. Names and coordinates alone cannot separate th
 **5. Incomplete for post 1:** subject extraction is deliberately partial, with unknowns
 retained; discipline compatibility is not an accuracy score. Sourced brand rules replace
 the operator shortcut, but most individual locations remain unverified. Museum of Illusions
-now has 11 location-specific global-network affiliations; Hollywood and Miami still have
-unresolved affiliation. Brand affiliation does not establish common legal ownership.
+now has 11 verified global-network locations; Hollywood counts with its WonderWalk venue,
+and Miami Beach's affiliation and status remain unresolved. Brand affiliation does not establish common legal ownership.
 
 **6. M2 is now L2, with unknowns reported separately.** Its candidates expose unresolved
 duplicates and relocations beyond 150 m (for example the Texas Bankhead Drive record).
@@ -331,6 +351,21 @@ Two known gaps that only matter for churches:
 ---
 
 ## 7. Session log
+
+2026-09-23 provisional leaders review: committed the Union County batch (`373deae`), then
+researched all 26 Museum of Illusions and Washington County Historical Society candidates.
+Eight sourced identity cases cover 19 rows: society records join Stevens Memorial Museum,
+Miller House Museum, Port o' Plymouth Museum, Dewey Hotel Museum and the Washington County
+Heritage Center; Marietta's two society rows combine; Hollywood's Museum of Illusions joins
+its WonderWalk/World of Illusions venue; a mislabeled Arkansas association row is isolated.
+Counted institutions fall by nine to 52,588 (52,456 eligible); Washington County 13 to 7,
+Museum of Illusions 13 to 12. Thirteen new verified reviews, including all 11 network
+locations. Found that 14 more network locations sit under city-suffixed names, which raises
+a headline methodology question for chains. Two Overture context queries and 46 cached
+documents; two cache attempts failed. R 4.4.2: 195 assertions and 25 integrity checks passed,
+including 168 protected files, 48 acquisition hashes and an unchanged automatic baseline.
+The manifest update re-ran upstream targets with identical results. Research agents gathered
+leads; the decisive statements were rechecked directly. No publication.
 
 2026-09-18 documentation audit: checked all 15 project Markdown/R Markdown files
 against the latest Union County packet, saved targets and code. Updated stale current

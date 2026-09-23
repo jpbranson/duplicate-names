@@ -5,8 +5,8 @@ here whenever something surfaces during Phase 2/3 work** rather than chasing it 
 
 Format: one heading per lead, with the question, why it's interesting, and a data note.
 
-**Status, 2026-09-18:** Phase 2 tooling and the source/identity passes through the
-[Union County review batch](data/validation/museum_union_county_review_2026-09-17.md)
+**Status, 2026-09-23:** Phase 2 tooling and the source/identity passes through the
+[provisional leaders review](data/validation/museum_leaders_review_2026-09-23.md)
 are complete. Remaining headline checks precede the post. The dated counts below remain
 exploratory observations, not verified publication figures; see
 [HANDOFF.md](HANDOFF.md) for current work and the
@@ -101,9 +101,12 @@ reduces it to 12, leaving Union County Historical Society provisionally first at
 at that checkpoint. The September 17
 [Union County review](data/validation/museum_union_county_review_2026-09-17.md) applies
 six further identity corrections and reduces that exact-name group to seven.
-Museum of Illusions and Washington County Historical Society now share the provisional
-lead at 13. Neither is publication ready; remaining source checks precede citation as
-verified institution counts.
+The September 23 [leaders review](data/validation/museum_leaders_review_2026-09-23.md) reduces
+Washington County Historical Society from 13 to seven: five of its society records are the
+operators of differently named museums (Stevens Memorial, Miller House, Port o' Plymouth,
+Dewey Hotel, Washington County Heritage Center), and one IMLS row belongs to another
+organization. Several remaining records describe a headquarters, archives or umbrella
+society rather than a museum. No leading name is publication ready.
 
 The interesting part is that this duplication is **downstream of a different
 duplication**. There are ~31 Washington Counties in the US; the historical
@@ -150,8 +153,12 @@ and [Los Angeles attraction](https://illusions-la.com/) need location-level reco
 A [2021 court order](https://business.cch.com/ipld/MetamorfozaBigFunny20210727.pdf)
 describes separate operators using the wording in Los Angeles and Miami. This is a
 research lead, not a conclusion about current ownership or the merits of a legal claim.
-The first source pass established global-network affiliation for 11 candidate locations;
-Hollywood and Miami remain unresolved. Brand affiliation does not establish common
+The first source pass established global-network affiliation for 11 candidate locations.
+The [leaders review](data/validation/museum_leaders_review_2026-09-23.md) verifies them and finds Hollywood's
+"Museum of Illusions" is one of three attractions in the WonderWalk venue, whose operator
+calls the Santa Monica museum "a separate business"; Miami Beach's operator domain has lapsed.
+The official directory lists 25 open US locations; 14 carry city-suffixed names, so an
+exact-name count measures one chain's listing style, not independent naming. Brand affiliation does not establish common
 legal ownership. See the [source report](data/validation/museum_source_review_2026-09-15.md).
 
 ### Relocations can impersonate national collisions (Phase 2, 2026-09-15)

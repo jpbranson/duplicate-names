@@ -1,12 +1,14 @@
 # Museum validation and review evidence
 
-**Current checkpoint: 2026-09-17 [Union County review](museum_union_county_review_2026-09-17.md).**
-The reviewed data retain 60,002 source rows, with 57,305 counted rows, 52,597 counted
-institutions and 52,465 eligible for L2 name analysis. Counts remain provisional. Albion,
-Jim Thorpe and Creston's Historical Village have complete factual reviews. Union County's
-exact-name group falls from 14 to 7; all seven remain pending. Ten Old Jail reviews
-also remain pending. Both groups still fail publication certification. See the
-[follow-up queue](museum_union_county_review_2026-09-17/follow_up.csv) and
+**Current checkpoint: 2026-09-23 [provisional leaders review](museum_leaders_review_2026-09-23.md).**
+The reviewed data retain 60,002 source rows, with 57,293 counted rows, 52,588 counted
+institutions and 52,456 eligible for L2 name analysis. Counts remain provisional.
+Sixteen institutions have complete factual reviews, including the 11 Museum of Illusions
+network locations. Washington County Historical Society falls from 13 to 7 and Museum
+of Illusions from 13 to 12; four names now tie at 12, three of them single-brand chains.
+Every leading group still fails publication certification. See the
+[follow-up queue](museum_leaders_review_2026-09-23/follow_up.csv), the earlier
+[Union County queue](museum_union_county_review_2026-09-17/follow_up.csv) and the
 [project handoff](../../HANDOFF.md) for the remaining work.
 
 ## Decision inputs and human labels
@@ -18,7 +20,7 @@ The human-label archive is a separate, unchanged input to resolution scoring.
 | File | Purpose |
 |---|---|
 | [museum_chain_rules.csv](museum_chain_rules.csv) | Sourced brand-affiliation rules and ambiguous-name review hints; unknown does not mean independent |
-| [museum_identity_decisions.csv](museum_identity_decisions.csv) | Explicit membership over the automatic `entities` baseline; 71 rows in 28 cases, including four source-conflict holdouts |
+| [museum_identity_decisions.csv](museum_identity_decisions.csv) | Explicit membership over the automatic `entities` baseline; 90 rows in 36 cases, including five source-conflict holdouts |
 | [museum_decisions.csv](museum_decisions.csv) | Naming/category, affiliation and overall review decisions, keyed to source records and expected names after identity reconciliation |
 | [resolution_labelling_2026-09-15.csv](resolution_labelling_2026-09-15.csv) | Authoritative archive of 300 independent human pair labels; preserve unchanged and use for scoring |
 
@@ -29,7 +31,7 @@ name, or infer ownership from a repeated naming template.
 
 ## Dated checkpoints, in order
 
-The September 15 checkpoints share a date; the Union County batch follows on September 17.
+The September 15 checkpoints share a date; the Union County batch follows on September 17 and the leaders review on September 23.
 Their descriptive names identify successive stages, not interchangeable copies of the latest results.
 
 | Report | Evidence and role |
@@ -42,34 +44,37 @@ Their descriptive names identify successive stages, not interchangeable copies o
 | [Address follow-up](museum_address_review_2026-09-15.md) | [Address packet](museum_address_review_2026-09-15/): Chipley mailing and Peters Creek house/society consolidations; staged publication points; 52,617 counted and 52,485 eligible |
 | [Old Jail review](museum_old_jail_review_2026-09-15.md) | [Old Jail packet](museum_old_jail_review_2026-09-15/): 15 leading-name candidates researched; 23 members in nine new cases, two complete factual reviews and sourced HTA affiliation; 52,605 counted and 52,473 eligible |
 | [Union County review](museum_union_county_review_2026-09-17.md) | [Union County packet](museum_union_county_review_2026-09-17/): all 14 starting candidates researched; six corrections cover 15 source rows; exact-name group falls to seven and Creston is verified; 52,597 counted and 52,465 eligible |
+| [Provisional leaders review](museum_leaders_review_2026-09-23.md) | [Leaders packet](museum_leaders_review_2026-09-23/): all 26 Museum of Illusions and Washington County Historical Society candidates researched; eight cases cover 19 source rows, one a new source conflict; 13 new complete reviews; 52,588 counted and 52,456 eligible |
 
 The [initial research notes](museum_research_2026-09-15.csv) retain earlier leads; use the
 later reports and evidence ledgers for resolved questions. The 38-row
 [Overture context extract](museum_identity_review_2026-09-15/overture_context.csv) is
 archived research outside the pipeline, as is the later 41-row
 [Old Jail extract](museum_old_jail_review_2026-09-15/overture_context.csv) and 21-row
-[Union County extract](museum_union_county_review_2026-09-17/overture_context.csv).
+[Union County extract](museum_union_county_review_2026-09-17/overture_context.csv), and the
+22- and 18-row [leaders extracts](museum_leaders_review_2026-09-23/overture_context.csv).
 Their queries and checksums are recorded in
 [`data/raw/MANIFEST.json`](../raw/MANIFEST.json); `tar_make()` does not recreate them.
 
 ## Current outputs versus archives
 
 `data/processed/museum_review/` is generated and overwritten. The current saved review
-contains 435 candidate institutions, 535 source rows and 143 nearby pairs. The original
+contains 493 candidate institutions, 598 source rows and 154 nearby pairs; the top-20
+cutoff fell to 8 entities, admitting more names. The original
 packet's 470 institutions, 551 rows and 159 pairs remain valid historical counts.
 Diagnostic pair labels remain blank; they are not another completed validation sample.
 `multisite_review` still describes the automatic baseline (249 entities).
-Union County's exact-name group is now below the top-20 cutoff. Its
-[reviewed institutions](museum_union_county_review_2026-09-17/reviewed_institutions_after.csv)
-and [follow-up queue](museum_union_county_review_2026-09-17/follow_up.csv) retain the cases
-outside the generated queue; check `museum_analysis` for current IDs on later revisits.
+Union County's and Washington County's exact-name groups (seven each) fall below that
+cutoff. Their packets' reviewed-institution files and follow-up queues retain those
+cases, including ones merged into differently named institutions; check `museum_analysis` for
+current IDs on later revisits.
 
 The identity audit and reviewed Parquet have separate export targets. Use the complete
 [selective build](../../README.md#running) to refresh them along with the review sheets.
 The general archive helper reads saved targets, retains leading rankings with cutoff ties,
 and refuses an existing destination. It does not archive the identity decisions/audit or
 copy the inputs named in its checksums. Preserve a complete identity checkpoint separately,
-following the latest Union County packet's before/after decisions, records, evidence and audit.
+following the latest leaders packet's before/after decisions, records, evidence and audit.
 
 Keep dated packet CSVs, reproduction scripts, logs and checksum files unchanged.
 Git preserves every file under `data/validation/` and the raw manifest byte for byte,
@@ -106,12 +111,13 @@ dn_score_labels("data/validation/resolution_labelling_2026-09-15.csv")
 source("data/validation/museum_old_jail_review_2026-09-15/reproduce.R")
 
 # Requires live identity decisions and saved reviewed targets/Parquet exports
-# to match the Union County checkpoint, in addition to replaying archived decisions.
-source("data/validation/museum_union_county_review_2026-09-17/validate.R")
+# to match the leaders checkpoint, in addition to replaying archived decisions.
+source("data/validation/museum_leaders_review_2026-09-23/validate.R")
 ```
 
-The Union County validator checks the current saved state as well as its archive; after
-future decisions or rebuilds change that state, its live comparisons may fail by design.
+The leaders and Union County validators check the saved state current at their checkpoint as
+well as their archives. The Union County validator's live comparisons now fail by design,
+because the leaders decisions changed that state; its archived replay remains valid.
 Keep the dated validator unchanged and record later verification in a new packet.
 
 Both packet checks also verify protected-file hashes, including the original
