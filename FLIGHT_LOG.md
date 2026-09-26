@@ -317,3 +317,13 @@ Superseded next action: the church scope follow-up proposal (23 guarded COGASOC 
 - Upward-risk check on the 38 six-member groups: every L4 variant carries a place name, so none joins its L2 group. Karpeles Manuscript Library Museum (6 plus 3 city-suffixed) is a single-family network and belongs in the chain table; it cannot pass Old Jail either way.
 - Blocker for the export: `dn_assert_museum_publication_ready()` requires `review_status = verified`, which decision 14 deliberately leaves unchanged, so it still fails for Old Jail. Needs a user decision on how the gate reads decision-14 evidence.
 - `.gitignore` now excludes 30 full-table snapshots (671 MB) whose hashes are in later packets' `protected_files.csv`; the files remain on disk. Nothing committed yet.
+
+
+### 2026-09-26 - Gate change committed; surprising-collision shortlist
+
+- `dn_assert_museum_publication_ready()` accepts `headline_review`; Old Jail passes with `post1_headline_review.csv` (4 verified + 4 decision-14 members). 366 tests pass. Committed as 5b50ab3.
+- Shortlist screen: 3,204 L2 names shared by 2+ counted non-chain institutions; kept 220 with no place name, no naming template, no generic type word and every pair more than 40 km apart; then quick web checks.
+- Shortlist (not yet verified to decision 14): Billy the Kid Museum (Fort Sumner NM / Hico TX; third record near Clovis NM to screen); 100th Meridian Museum (Cozad NE / Erick OK); Santa Claus Museum (Santa Claus IN / Columbus TX); The Mermaid Museum (Berlin MD / Hollywood CA record unconfirmed); Salt and Pepper Shaker Museum (Gatlinburg TN / Iowa record reported temporarily closed / 2018 IMLS San Francisco row).
+- Dropped: Doc Holliday Museum (Griffin reported closed), National Medal of Honor Museum (Chattanooga record carries a former name), International Police Museum and Gone With the Wind Museum (public names differ), Eight Track Museum (Dallas closed; Roxbury shares its founder).
+- Not in M1 scope but relevant to the M4 chain table: unflagged brands and touring shows (Karpeles, Jurassic Quest, Candytopia, Sloomoo Institute, WNDR Museum, Medieval Torture Museum, Challenger Learning Center, FamilySearch Center). All are at 6 or fewer, so M1 is unaffected.
+- `tar_outdated()` lists museum source targets as outdated, including `raw_overture_museums`; use the selective `tar_make(names = ...)` commands, not a full build.
