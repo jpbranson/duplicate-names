@@ -1,0 +1,17 @@
+{
+  "applied_utc": "2026-09-26 16:24:23 UTC",
+  "summary": [
+    {
+      "source_rows": 60002,
+      "counted_rows": 57156,
+      "institutions": 52455,
+      "eligible": 52323,
+      "identity_rows": 319,
+      "identity_cases": 134,
+      "complete_reviews": 132,
+      "not_museum": 22,
+      "overrides": 80
+    }
+  ],
+  "cloud_cost_usd": 0
+}

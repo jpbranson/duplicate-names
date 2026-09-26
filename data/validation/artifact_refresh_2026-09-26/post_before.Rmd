@@ -1,0 +1,200 @@
+---
+title: "Who checks the museum names?"
+subtitle: "A search for duplicate names becomes a test of what counts as a museum."
+author: "J.P. Branson"
+date: 2026-09-26
+slug: duplicate-museum-names
+categories: [data]
+tags: [names, museums, maps]
+draft: true
+output:
+  blogdown::html_page:
+    toc: false
+    fig_caption: true
+---
+
+```{r setup, include=FALSE}
+dn_root <- "."
+source("_setup.R", local = TRUE)
+knitr::opts_chunk$set(fig.path = "figures/")
+```
+
+> **Working draft — unpublished.** The national ranking and collision reviews are
+> unfinished. The numbers below describe documented changes to a provisional
+> dataset; they do not identify the most duplicated museum name in America.
+
+The International Cryptozoology Museum in Bangor, Maine, calls itself
+[“The World's Only Cryptozoology Museum”](https://cryptozoologymuseum.com/).
+That is a wonderfully testable-sounding claim. First, though, you need to decide
+what would count as another museum.
+
+Even this opening example leaves a trail. The museum's
+[current visitor page](https://cryptozoologymuseum.com/plan-your-visit/) gives 490
+Broadway in Bangor and says its former Portland and Hammond Street locations are
+closed. Its home page dates the Bangor opening to June 1, 2026. A directory that
+retains the old addresses can make one institution look like several.
+
+Our source data contain four records for this institution. After resolution, one
+current institution counts; the older records remain visible with exclusion reasons.
+That finding checks the identity of these records. It does not prove a worldwide
+uniqueness claim, especially in a project whose geographic scope is the United States.
+
+## A name is not an institution
+
+The starting ingredients are Overture Maps' August 19, 2026 Places release and
+the IMLS 2018 museum archive. Their dates matter. The second source tells us about
+an earlier museum universe; a current retrieval date cannot make it a current census.
+
+The analysis preserves every original record and groups records into institutions.
+A separate, explicit review layer can correct a mistaken group, reconcile a move,
+or keep a contradictory record out of the count. The old record is not erased.
+A history society's museum, office and mailing address can appear under several
+names. Two buildings can house one institution. One society can also operate two
+separately named museums.
+
+The first apparent leaders made that distinction unavoidable. Three county-society
+names began this review batch at eleven institutions each. Supported corrections
+reduced each to six. The remaining records still need review.
+
+The next pass found the same problem in Wayne County: ten candidate institutions sharing the
+society name became one unresolved bare-name candidate after duplicate institutions,
+public museum names and shared operators were accounted for. The ten entries called
+*Depot Museum* now have sourced, more specific public names. This does not settle
+their entire factual review, and it does not establish a national winner.
+
+```{r review-counts, fig.width=6, fig.asp=1.2, fig.alt="Before and after candidate counts: Franklin, Greene and Jackson County Historical Society each 11 to 6; Old Jail Museum 11 to 8; Wayne County Historical Society 10 to 1; Depot Museum 10 to 0.", fig.cap="Provisional L2 non-chain candidate counts before and after the September 26 review batches. Remaining factual reviews prevent a national ranking claim."}
+dat <- dn_payload("review_count_changes.csv")
+dat$group <- factor(dat$group, levels = rev(unique(dat$group)))
+dat$checkpoint <- factor(dat$checkpoint, levels = c("Before review", "Current provisional"))
+ggplot(dat, aes(count, group, fill = checkpoint)) +
+  scale_y_discrete(labels = function(x) sub(" County Historical Society", paste(" County", "Historical Society", sep = intToUtf8(10)), x, fixed = TRUE)) +
+  geom_col(position = position_dodge(width = 0.75), width = 0.65) +
+  geom_text(aes(label = count), position = position_dodge(width = 0.75),
+            hjust = -0.25, size = 4.1, colour = dn_ink$primary) +
+  theme_dupnames(base_size = 14) + scale_fill_dn() + scale_x_continuous(limits = c(0, 12), breaks = c(0, 3, 6, 9, 12)) +
+  labs(x = "Candidate institutions", y = NULL,
+       title = "Review changes the apparent leaders",
+       subtitle = "These are unresolved candidate groups, not certified winners.",
+       caption = paste(dn_caption(c("overture", "imls")), "L2 names; affiliated museums separated.", sep = intToUtf8(10)))
+```
+
+Old Jail Museum illustrates several different corrections. Smethport's operator
+uses [The County Museum in The Old Jail](https://www.mchsmuseum.org/) as its public
+name. That changes its exact-name group without changing the source record.
+Barnesville's [society](https://www.blchs.com/) distinguishes its jail museum from
+its research archive. Allegan's [operator](https://alleganoldjailmuseum.com/) runs
+both a jail museum and a historical village. These are three different reasons a
+simple name count can mislead.
+
+In Enterprise, Alabama, the [current operator](https://peariverhistorical.square.site/)
+calls its attraction **Pea River Museum** and distinguishes it from its gift shop
+and research library. In Corydon, Iowa, the
+[Prairie Trails Museum contact page](https://prairietrailsmuseum.wordpress.com/contactus/)
+connects a physical museum address with its post-office box. These corrections
+preserve the source labels as aliases while counting the reviewed institution once.
+
+The following groups began later review passes with nine candidates each. The
+same combination of old addresses, broader society records, specific public names
+and common operators changed these counts too. Every number remains provisional.
+
+```{r recent-review-counts, results='asis'}
+recent <- dn_payload("recent_review_counts.csv")
+names(recent) <- c("Source name group", "Before review", "Current candidates")
+knitr::kable(recent, row.names = FALSE, align = c("l", "r", "r"))
+```
+
+One particularly revealing case is Carroll County. The Missouri society's legal
+record had a transposed street number; an exact EIN match in the IRS file connected
+it to the museum's current address. In Georgia, one automatic cluster instead
+contained two distinct organizations: a historical society and a genealogical
+society. The latter's own [description](https://ccgsga.org/about/) and
+[library resources](https://ccgsga.org/resources/) establish a research and
+publishing role. The correction separates them before excluding that organization
+from the museum count. The historical society's current museum review remains open.
+
+Clinton County exposed a different source problem. Several archived records mix
+the physical address of a museum in one state with the mailing address, website or
+legal identifier of a society in another. For example, the Pennsylvania operator
+places [Heisey House Museum at 362 East Water Street](https://www.clintonpahistory.org/),
+while the Michigan operator places its
+[museum at 106 Maple](https://sites.google.com/cchsmichigan.org/welcome).
+Those street addresses also appear in contradictory IMLS records assigned to other
+states. The review keeps each mixed record visible and uncounted, with its own
+identifier, so it cannot contribute disputed aliases to an accepted museum.
+
+## Repeated names, repeated operators
+
+For the principal question, affiliated museums are reported separately from
+independently named institutions. Unknown affiliation stays unknown.
+
+The distinction includes local operators. An organization can have its own
+independent nonprofit board and still operate several museums that share that
+board. It also includes brands: two records labelled Madame Tussaud's Wax Museum
+in Las Vegas turned out to describe one attraction at the
+[operator's published address](https://lasvegas-support.madametussauds.com/hc/en-us/articles/115002250572-What-is-your-address).
+Its current public name is Madame Tussauds Las Vegas.
+
+The Smithsonian example contains a different trap. Its own
+[visitor directory](https://www.si.edu/visit/museums) distinguishes its museums from
+the separate Affiliates program. Some generic Smithsonian Institution records refer
+to museums under that parent; two others match office and research locations that
+the [Archives of American Art](https://www.aaa.si.edu/sites/default/files/Documents/2023-Annual-Report.pdf)
+distinguishes from its exhibition gallery. Counting parent labels would confuse
+organizational structure with independent naming.
+
+## International what?
+
+A search for *National*, *International*, *World* or *American* produces candidates
+for a second question: do names suggesting broad scope collide?
+
+A word search cannot answer that on its own. *African American* identifies a cultural
+subject. *American Civil War* identifies a historical subject. *Old World* is an
+idiom. A museum of international folk art can describe the range of its collection.
+Even a genuinely institutional scope word does not automatically promise exclusivity.
+The draft therefore makes no numerical claim about independent collisions among
+singularity-claiming names. Those identities, affiliations and meanings still need
+review together.
+
+For the generic tail, the analysis distinguishes exact names from subjects and
+naming templates. Children's museums and county-history museums can resemble one
+another linguistically without sharing an operator. A subject extracted from a name
+is a clue, not a complete description of a collection.
+
+## The method behind a future ranking
+
+Museum headlines use **L2**: cleaned names with abbreviations expanded, while
+retaining geography. **L3** removes geographic wording and answers a different
+question. Each reviewed institution gets one canonical name and one vote. Original
+names, aliases, source points, decisions and excluded records remain auditable.
+A preferred-name correction changes the analysis name, not the original source text.
+
+An independent human sample of 300 nearby candidate pairs supported keeping the
+matching threshold at 0.85. Its unweighted pair-level precision was 99.17% and recall
+93.70%. The sample was balanced across five similarity bands; these are not estimates
+of dataset-wide accuracy and do not validate all final clusters or distant moves.
+The [validation report](evidence/matching-validation.html) explains the design.
+
+Visitor maps require another check. Publication coordinates are kept in separate
+fields, with operator evidence and dated access wording. A corrected point does not
+certify that a building is open. UC San Diego's
+[Mandeville visit page](https://mandevilleartgallery.ucsd.edu/visit/index.html), for
+example, still lists an indefinite closure when checked on September 26.
+
+The remaining work is substantive: finish the leading-name and relevant multi-site
+reviews, settle uncertain museum roles and affiliations, validate M2 meanings, and
+then rerun the explicit publication gates. Until that happens, the interesting
+result is how easily a directory can manufacture a collision.
+
+The next post turns to churches: the repeated *First*, the spacing between them,
+and how far the ordinal ladder goes. It will need its own source checks and
+independent matching labels; the museum sample cannot validate it.
+
+[Download the review-count figure data](payload/review_count_changes.csv).
+[Read the current publication blockers](payload/publication_blockers.csv).
+The bundle is self-contained: knitting reads its CSV payloads and local helpers,
+with no analysis checkout, database query or source download.
+
+
+
+
+

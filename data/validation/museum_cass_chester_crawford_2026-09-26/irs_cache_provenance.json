@@ -1,0 +1,22 @@
+[
+  {
+    "path": "data/raw/next_leaders_irs_ny_2026-09-26.csv",
+    "sha256": "ad95c07db1ab7563fcdc69d8ea194bb15d6a9d60ed80c036542eb8a15a28ff61",
+    "note": "Existing public IRS cache; acquisition metadata in data/raw/MANIFEST.json. No new download."
+  },
+  {
+    "path": "data/raw/county_greene_ia_irs_2026-09-26.csv",
+    "sha256": "777e8acec3eb137587db57f1d507ae86f0a0f67355a330feddd5b68a3b0cfbed",
+    "note": "Existing public IRS cache; acquisition metadata in data/raw/MANIFEST.json. No new download."
+  },
+  {
+    "path": "data/raw/veterans_carroll_irs_mo_2026-09-26.csv",
+    "sha256": "13f4a4f8dee4e0399afce5c20f2cf19e0471864d567006610b0681d082c87563",
+    "note": "Existing public IRS cache; acquisition metadata in data/raw/MANIFEST.json. No new download."
+  },
+  {
+    "path": "data/raw/irs_eo_ar_2026-09-15.csv",
+    "sha256": "5f6a3c34b4509e431f76f32d3c457e795ddfd015492658edef9346d88f55757b",
+    "note": "Existing public IRS cache; acquisition metadata in data/raw/MANIFEST.json. No new download."
+  }
+]

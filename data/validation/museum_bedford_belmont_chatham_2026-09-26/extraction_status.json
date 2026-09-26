@@ -1,0 +1,254 @@
+[
+  {
+    "id": "bedford_ny_museum",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 4226
+  },
+  {
+    "id": "bedford_ny_tour",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 2898
+  },
+  {
+    "id": "bedford_ny_volunteer",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 4128
+  },
+  {
+    "id": "bedford_ma_about",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 3124
+  },
+  {
+    "id": "bedford_ma_newsletters",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 11440
+  },
+  {
+    "id": "bedford_ma_2009",
+    "detected": "pdf",
+    "extension_mismatch": false,
+    "characters": 15338
+  },
+  {
+    "id": "bedford_nh_home",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 2655
+  },
+  {
+    "id": "bedford_nh_plan",
+    "detected": "pdf",
+    "extension_mismatch": false,
+    "characters": 556742
+  },
+  {
+    "id": "bedford_va_home",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 690
+  },
+  {
+    "id": "belmont_ca_city",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 7306
+  },
+  {
+    "id": "belmont_ma_home",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 12243
+  },
+  {
+    "id": "belmont_ma_location",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 1385
+  },
+  {
+    "id": "belmont_ma_collections",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 2704
+  },
+  {
+    "id": "belmont_nh_events",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 14188
+  },
+  {
+    "id": "chatham_ct_about",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 3155
+  },
+  {
+    "id": "chatham_ma_home",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 3178
+  },
+  {
+    "id": "chatham_nh_home",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 5669
+  },
+  {
+    "id": "chatham_nj_home",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 15082
+  },
+  {
+    "id": "chatham_nj_archived",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 86428
+  },
+  {
+    "id": "chatham_nj_library",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 2094
+  },
+  {
+    "id": "chatham_oh_destination",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 2321
+  },
+  {
+    "id": "bedford_ny_school",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 3140
+  },
+  {
+    "id": "bedford_ma_move",
+    "detected": "pdf",
+    "extension_mismatch": false,
+    "characters": 19009
+  },
+  {
+    "id": "bedford_ma_joblane",
+    "detected": "pdf",
+    "extension_mismatch": false,
+    "characters": 15790
+  },
+  {
+    "id": "bedford_va_house",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 1438
+  },
+  {
+    "id": "bedford_va_history",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 3172
+  },
+  {
+    "id": "bedford_va_board",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 474
+  },
+  {
+    "id": "belmont_ca_historyroom",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 9598
+  },
+  {
+    "id": "belmont_ca_park",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 8618
+  },
+  {
+    "id": "belmont_ma_about",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 2727
+  },
+  {
+    "id": "belmont_oh_project",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 6016
+  },
+  {
+    "id": "chatham_ct_bluebook",
+    "detected": "pdf",
+    "extension_mismatch": false,
+    "characters": 2517118
+  },
+  {
+    "id": "irs_ca",
+    "detected": "csv",
+    "extension_mismatch": false,
+    "note": "Structured public records; see the selected IRS JSON rows."
+  },
+  {
+    "id": "irs_va",
+    "detected": "csv",
+    "extension_mismatch": false,
+    "note": "Structured public records; see the selected IRS JSON rows."
+  },
+  {
+    "id": "irs_nc",
+    "detected": "csv",
+    "extension_mismatch": false,
+    "note": "Structured public records; see the selected IRS JSON rows."
+  },
+  {
+    "id": "bedford_nh_about",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 4662
+  },
+  {
+    "id": "bedford_nh_board",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 4249
+  },
+  {
+    "id": "belmont_ma_station",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 5523
+  },
+  {
+    "id": "belmont_nh_registry",
+    "detected": "pdf",
+    "extension_mismatch": false,
+    "characters": 1474175
+  },
+  {
+    "id": "chatham_oh_town",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 676
+  },
+  {
+    "id": "chatham_oh_history",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 1736
+  },
+  {
+    "id": "belmont_nc_downtown",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 5240
+  }
+]

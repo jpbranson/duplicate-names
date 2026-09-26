@@ -1,0 +1,22 @@
+check,passed
+Automatic baseline unchanged,TRUE
+Baseline multisite queue unchanged,TRUE
+All source rows and normalized fields preserved,TRUE
+Guarded identity replay matches pipeline,TRUE
+Analysis with preferred names matches replay,TRUE
+Reviewed Parquet matches pipeline,TRUE
+Baseline Parquet unchanged,TRUE
+977 earlier evidence files and human labels preserved,TRUE
+Identity rows outside new cases unchanged,TRUE
+Threshold remains 0.85,TRUE
+Counts match reviewed dry run,TRUE
+258 identity rows in 106 cases,TRUE
+110 complete reviews and 21 not-museum decisions,TRUE
+African American Museum three and Imagination Station two non-chain candidates,TRUE
+Four new source conflicts isolated; twenty-three total; no aliases,TRUE
+Four accepted identity cases each count one canonical source,TRUE
+St Martinville campus and museum remain separate pending municipal affiliates,TRUE
+Two childcare centers and repurposed stadium space excluded on affirmative roles,TRUE
+Every prior factual decision preserved,TRUE
+Remaining national leader fails explicit publication gate,TRUE
+Imagination Station passes recorded status gate for its two remaining institutions,TRUE

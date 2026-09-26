@@ -1,0 +1,308 @@
+[
+  {
+    "id": "jeff_ne_destination",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 5136
+  },
+  {
+    "id": "jeff_ne_guide",
+    "detected": "pdf",
+    "extension_mismatch": false,
+    "characters": 49308
+  },
+  {
+    "id": "jeff_in_home",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 3493
+  },
+  {
+    "id": "jeff_in_archives",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 3952
+  },
+  {
+    "id": "jeff_in_destination",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 4574
+  },
+  {
+    "id": "jeff_co_hiwan",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 9481
+  },
+  {
+    "id": "jeff_co_society",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 3160
+  },
+  {
+    "id": "jeff_ks_home",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 1330
+  },
+  {
+    "id": "jeff_ks_county",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 3624
+  },
+  {
+    "id": "jeff_ny_home",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 472
+  },
+  {
+    "id": "jeff_ia_minutes",
+    "detected": "pdf",
+    "extension_mismatch": false,
+    "characters": 8350
+  },
+  {
+    "id": "jeff_ga_plan",
+    "detected": "pdf",
+    "extension_mismatch": false,
+    "characters": 423396
+  },
+  {
+    "id": "jeff_il_home",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 1078
+  },
+  {
+    "id": "jeff_il_events",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 4494
+  },
+  {
+    "id": "jeff_il_guide",
+    "detected": "pdf",
+    "extension_mismatch": false,
+    "characters": 31761
+  },
+  {
+    "id": "lincoln_ky_city",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 2065
+  },
+  {
+    "id": "lincoln_wa_home",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 0
+  },
+  {
+    "id": "lincoln_wa_contact",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 0
+  },
+  {
+    "id": "lincoln_co_notice",
+    "detected": "pdf",
+    "extension_mismatch": false,
+    "characters": 105391
+  },
+  {
+    "id": "lincoln_co_president",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 8973
+  },
+  {
+    "id": "lincoln_nm_home",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 1642
+  },
+  {
+    "id": "lincoln_ne_home",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 1405
+  },
+  {
+    "id": "lincoln_ne_events",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 216738
+  },
+  {
+    "id": "lincoln_ga_home",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 2585
+  },
+  {
+    "id": "lincoln_or_about",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 3503
+  },
+  {
+    "id": "lincoln_or_burrows",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 3458
+  },
+  {
+    "id": "lincoln_or_city",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 3660
+  },
+  {
+    "id": "irs_ne",
+    "detected": "csv",
+    "extension_mismatch": false,
+    "note": "Structured public records; see the selected IRS JSON rows."
+  },
+  {
+    "id": "irs_co",
+    "detected": "csv",
+    "extension_mismatch": false,
+    "note": "Structured public records; see the selected IRS JSON rows."
+  },
+  {
+    "id": "irs_nm",
+    "detected": "csv",
+    "extension_mismatch": false,
+    "note": "Structured public records; see the selected IRS JSON rows."
+  },
+  {
+    "id": "irs_ky",
+    "detected": "csv",
+    "extension_mismatch": false,
+    "note": "Structured public records; see the selected IRS JSON rows."
+  },
+  {
+    "id": "irs_tn",
+    "detected": "csv",
+    "extension_mismatch": false,
+    "note": "Structured public records; see the selected IRS JSON rows."
+  },
+  {
+    "id": "jeff_in_museum",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 3230
+  },
+  {
+    "id": "jeff_in_news",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 1370
+  },
+  {
+    "id": "jeff_co_history",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 1122
+  },
+  {
+    "id": "jeff_ks_board",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 854
+  },
+  {
+    "id": "jeff_ks_news",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 822
+  },
+  {
+    "id": "jeff_ny_about",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 1134
+  },
+  {
+    "id": "jeff_ny_visit",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 1087
+  },
+  {
+    "id": "lincoln_ne_about",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 2428
+  },
+  {
+    "id": "lincoln_ga_about",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 6282
+  },
+  {
+    "id": "lincoln_ky_about",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 2059
+  },
+  {
+    "id": "lincoln_ky_contact",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 1078
+  },
+  {
+    "id": "lincoln_ky_museum",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 1731
+  },
+  {
+    "id": "lincoln_nm_about",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 1496
+  },
+  {
+    "id": "jeff_co_rename",
+    "detected": "pdf",
+    "extension_mismatch": false,
+    "characters": 26223
+  },
+  {
+    "id": "jeff_ga_city_current",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 1606
+  },
+  {
+    "id": "lincoln_co_town",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 0
+  },
+  {
+    "id": "lincoln_wa_legacy",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 580
+  },
+  {
+    "id": "lincoln_wa_legacy_about",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 264
+  },
+  {
+    "id": "lincoln_wa_legacy_contact",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 526
+  }
+]

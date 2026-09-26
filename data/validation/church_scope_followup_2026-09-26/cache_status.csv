@@ -1,0 +1,25 @@
+id,url,path,sha256,status
+net_home,https://www.cogasoc.net/,data/raw/church_scope_followup_net_home_2026-09-26.html,9123c823b00521136dcee796ae5593609c69ac1862cbd0eea0ee099a62163a57,cached
+net_locations,https://www.cogasoc.net/locations-1,data/raw/church_scope_followup_net_locations_2026-09-26.html,736c4e79bc1c9e5fe7df08a3cd39329fa82abef2503408907598982af0abfa81,cached
+cogsoc_home,https://cogsoconline.org/,data/raw/church_scope_followup_cogsoc_home_2026-09-26.html,ce3a7bc15f8f8ccc0342fa273b610cfd09138fdb6d3ade9705bbbc12e685fbb3,cached
+cogsoc_about,https://cogsoconline.org/about,data/raw/church_scope_followup_cogsoc_about_2026-09-26.html,,HTTP response code said error [cogsoconline.org]: The requested URL returned error: 404
+newhaven_home,https://churchofgod1931.org/,data/raw/church_scope_followup_newhaven_home_2026-09-26.html,43a191fd98e209e311f43df0681ebd31d3e7b367d44bb3059163f2259bd9b56b,cached
+hyattsville_home,https://www.cogasochyattsville.com/,data/raw/church_scope_followup_hyattsville_home_2026-09-26.html,,Could not resolve hostname [www.cogasochyattsville.com]: Could not resolve host: www.cogasochyattsville.com
+wilmington_home,https://wilmington.cogasoc.org/,data/raw/church_scope_followup_wilmington_home_2026-09-26.html,09ec8c62d9f88cbf23b1a5f7255ba77460c7e3ec1e7c906f5d73fb48c1d731ca,cached
+wilmington_history,https://wilmington.cogasoc.org/history-of-the-tabernacle/,data/raw/church_scope_followup_wilmington_history_2026-09-26.html,ad7515597201cecc35a934359c974e18135e9829cb0fd3d2f1cf6888d73b3528,cached
+detroit_home,https://detroit.cogasoc.org/,data/raw/church_scope_followup_detroit_home_2026-09-26.html,,SSL connect error [detroit.cogasoc.org]: schannel: next InitializeSecurityContext failed: SEC_E_CERT_EXPIRED (0x80090328) - The received certificate has expired.
+detroit_history,https://detroit.cogasoc.org/history-of-the-tabernacle/,data/raw/church_scope_followup_detroit_history_2026-09-26.html,,SSL connect error [detroit.cogasoc.org]: schannel: next InitializeSecurityContext failed: SEC_E_CERT_EXPIRED (0x80090328) - The received certificate has expired.
+newark_home,https://newark.cogasoc.org/,data/raw/church_scope_followup_newark_home_2026-09-26.html,,SSL connect error [newark.cogasoc.org]: schannel: next InitializeSecurityContext failed: SEC_E_CERT_EXPIRED (0x80090328) - The received certificate has expired.
+newark_history,https://newark.cogasoc.org/history-of-the-tabernacle/,data/raw/church_scope_followup_newark_history_2026-09-26.html,,SSL connect error [newark.cogasoc.org]: schannel: next InitializeSecurityContext failed: SEC_E_CERT_EXPIRED (0x80090328) - The received certificate has expired.
+cincinnati_home,https://cincinnati.cogasoc.org/,data/raw/church_scope_followup_cincinnati_home_2026-09-26.html,800e5ab56458dba47601d57ec47ee8edca794e152379f7176df9671535521625,cached
+richmond_home,https://richmond.cogasoc.org/,data/raw/church_scope_followup_richmond_home_2026-09-26.html,ab12a8f1894fc26f13193e250def52846578498b8cef07896413f9b2220a6901,cached
+jacksonville_home,https://jacksonville.cogasoc.org/,data/raw/church_scope_followup_jacksonville_home_2026-09-26.html,b01212d4a7c00eb87279a428e8d8e9139e3ba603663129db4747587e2256cfcb,cached
+baltimore_home,https://baltimore.cogasoc.org/,data/raw/church_scope_followup_baltimore_home_2026-09-26.html,6f02fa93d3a2f76d0435f6fdfc892e162693b7a9c92e3bbfc5f59f176a0cd43a,cached
+charlotte_home,https://charlotte.cogasoc.org/,data/raw/church_scope_followup_charlotte_home_2026-09-26.html,74b1fa2448e444c448a2d0bbcef1b7e878895564e82f35cc77afa7c68a79285c,cached
+washington_home,https://washingtondc.cogasoc.org/,data/raw/church_scope_followup_washington_home_2026-09-26.html,c0e6a5f2a1e8503766073b4bc1d1280ffa93674bf7f92d580b3d0a15f790d904,cached
+atlanticcity_home,https://atlanticcity.cogasoc.org/,data/raw/church_scope_followup_atlanticcity_home_2026-09-26.html,70e1caaf7214905dc84cd9d7e68a304382be0a33a4586aed27722d3658dff411,cached
+southernpines_home,https://southernpines.cogasoc.org/,data/raw/church_scope_followup_southernpines_home_2026-09-26.html,91ef87aad88ba1ff68df023f8b77e8d869de7a1a7e23d5d3573d6a481732e74e,cached
+net_about,https://www.cogasoc.net/about-us-1,data/raw/church_scope_followup_net_about_2026-09-26.html,c5337f9f47489bb4ec539b9a16de4623349f0df4772cc28e33305c9a34689377,cached
+net_faq,https://www.cogasoc.net/faq,data/raw/church_scope_followup_net_faq_2026-09-26.html,51cf80b395eec1beed06a505de1ad5cb909bc2f3fdbadae951ef114cdb14ccf3,cached
+cogsoc_who,https://cogsoconline.org/about/who-we-are,data/raw/church_scope_followup_cogsoc_who_2026-09-26.html,62227938e27e21e0c65f313ce58ead27d2982f1f2cb727d9fd8a8ffe817b9ac2,cached
+cogsoc_locations,https://cogsoconline.org/pages/locations,data/raw/church_scope_followup_cogsoc_locations_2026-09-26.html,5941e65d7f22dd66d914815a8a6829504a20d38781956a4a9ca7e133a5d69031,cached

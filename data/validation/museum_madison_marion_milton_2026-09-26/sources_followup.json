@@ -1,0 +1,82 @@
+[
+  {
+    "id": "madison_nh_about",
+    "url": "https://www.madisonnhhistoricalsociety.org/about.html",
+    "extension": "html"
+  },
+  {
+    "id": "madison_nh_school",
+    "url": "https://www.madisonnhhistoricalsociety.org/madison-corner-school.html",
+    "extension": "html"
+  },
+  {
+    "id": "madison_nj_about",
+    "url": "https://www.madisonnjhistoricalsociety.org/aboutus",
+    "extension": "html"
+  },
+  {
+    "id": "madison_nj_contact",
+    "url": "https://www.madisonnjhistoricalsociety.org/contact",
+    "extension": "html"
+  },
+  {
+    "id": "marion_ga_csu",
+    "url": "https://www.columbusstate.edu/pasaquan/",
+    "extension": "html"
+  },
+  {
+    "id": "marion_ga_collection",
+    "url": "https://www.columbusstate.edu/archives/findingaids/mc327.php",
+    "extension": "html"
+  },
+  {
+    "id": "marion_ga_timeline",
+    "url": "https://digitalarchives.columbusstate.edu/exhibits/show/pasaquan--the-story-of-st--eom/timeline",
+    "extension": "html"
+  },
+  {
+    "id": "marion_ms_directory",
+    "url": "https://www.mississippihistory.org/local-historical-societies",
+    "extension": "html"
+  },
+  {
+    "id": "irs_al",
+    "url": "https://www.irs.gov/pub/irs-soi/eo_al.csv",
+    "extension": "csv"
+  },
+  {
+    "id": "irs_ct",
+    "url": "https://www.irs.gov/pub/irs-soi/eo_ct.csv",
+    "extension": "csv"
+  },
+  {
+    "id": "irs_la",
+    "url": "https://www.irs.gov/pub/irs-soi/eo_la.csv",
+    "extension": "csv"
+  },
+  {
+    "id": "irs_nj",
+    "url": "https://www.irs.gov/pub/irs-soi/eo_nj.csv",
+    "extension": "csv"
+  },
+  {
+    "id": "irs_vt",
+    "url": "https://www.irs.gov/pub/irs-soi/eo_vt.csv",
+    "extension": "csv"
+  },
+  {
+    "id": "irs_ma",
+    "url": "https://www.irs.gov/pub/irs-soi/eo_ma.csv",
+    "extension": "csv"
+  },
+  {
+    "id": "irs_wi",
+    "url": "https://www.irs.gov/pub/irs-soi/eo_wi.csv",
+    "extension": "csv"
+  },
+  {
+    "id": "irs_nh",
+    "url": "https://www.irs.gov/pub/irs-soi/eo_nh.csv",
+    "extension": "csv"
+  }
+]

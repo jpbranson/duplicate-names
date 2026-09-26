@@ -1,0 +1,17 @@
+Standalone church draft render passed; 678361 bytes
+
+Attaching package: 'dplyr'
+
+The following objects are masked from 'package:stats':
+
+    filter, lag
+
+The following objects are masked from 'package:base':
+
+    intersect, setdiff, setequal, union
+
+museums l2: 48164 name groups; 52719 records
+museums l3: 37204 name groups; 52719 records
+churches l2: 325861 name groups; 540778 records
+churches l3: 232530 name groups; 540778 records
+Static data build complete; 77.2249593734741 MiB compressed

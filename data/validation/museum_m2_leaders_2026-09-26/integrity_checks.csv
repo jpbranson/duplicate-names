@@ -1,0 +1,28 @@
+check,passed
+Automatic baseline unchanged,TRUE
+Baseline multisite queue unchanged,TRUE
+All source rows and normalized fields preserved,TRUE
+Guarded identity replay matches pipeline,TRUE
+Preferred-name analysis matches replay,TRUE
+Reviewed Parquet matches pipeline,TRUE
+Baseline Parquet unchanged,TRUE
+1887 earlier evidence files and human labels preserved,TRUE
+Records outside fourteen explicit cases unchanged,TRUE
+All prior identity decisions preserved,TRUE
+All 37 proposed identity rows applied exactly,TRUE
+Threshold remains 0.85,TRUE
+Reviewed expected counts,TRUE
+440 identity rows in 185 cases,TRUE
+174 complete reviews 25 exclusions 105 names,TRUE
+35 source conflicts stay isolated and uncounted,TRUE
+Thirteen reconciled groups each have one source representative,TRUE
+Prior factual decisions unchanged except two absorbed pending Smithsonian rows,TRUE
+Retired decisions belong only to explicitly absorbed uncounted rows,TRUE
+All 29 new factual decisions applied exactly,TRUE
+Prior names preserved,TRUE
+Four newly complete and 25 pending factual reviews,TRUE
+Foundation is a positive not-museum exclusion,TRUE
+Two new mixed sources isolated from accepted museum aliases,TRUE
+National leader still fails explicit publication gate,TRUE
+All 48 starting candidates have recorded dispositions,TRUE
+Twenty-five newly reviewed incomplete institutions remain explicitly pending,TRUE

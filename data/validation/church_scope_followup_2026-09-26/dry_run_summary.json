@@ -1,0 +1,12 @@
+{
+  "canonical": 540778,
+  "eligible_before": 442832,
+  "eligible_after": 442818,
+  "decisions": 23,
+  "entities_changed": 21,
+  "newly_ineligible": 14,
+  "prior_holds_enriched": 7,
+  "protected_files": 2129,
+  "targets_unchanged": true,
+  "status": "dry_run_only"
+}

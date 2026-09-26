@@ -37,6 +37,7 @@ The human-label archive is a separate, unchanged input to resolution scoring.
 | [museum_identity_decisions.csv](museum_identity_decisions.csv) | Explicit membership over the automatic `entities` baseline; 440 rows in 185 cases, including thirty-five source-conflict holdouts, guarded multi-institution splits and one explicit primary-site reselection |
 | [museum_decisions.csv](museum_decisions.csv) | Naming/category (including sourced `not_museum`), affiliation and overall review decisions, keyed to source records and expected names after identity reconciliation |
 | [museum_name_overrides.csv](museum_name_overrides.csv) | Guarded preferred public names; original source names remain unchanged |
+| [post1_headline_review.csv](post1_headline_review.csv) | Post 1 evidence under DESIGN decision 14 (headline-sufficient standard) for each named group's members; not read by `_targets.R` and does not change `review_status` |
 | [church_name_overrides.csv](church_name_overrides.csv) | Guarded church public-name corrections (two 38th Avenue records); no identity or accuracy certification |
 | [church_scope_decisions.csv](church_scope_decisions.csv) | Guarded, sourced `outside_christian_scope` holds; every cluster member listed; source religion and identity unchanged |
 | [resolution_labelling_2026-09-15.csv](resolution_labelling_2026-09-15.csv) | Authoritative archive of 300 independent human pair labels; preserve unchanged and use for scoring |

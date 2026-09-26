@@ -29,3 +29,19 @@ embeds/*.png
 # Knitted output
 posts/**/*.html
 posts/**/index_files/
+
+# Independent church target store; preserve museum targets and labels.
+_targets_churches/
+
+# Reproducible static explorer payloads; checksums stay in validation.
+dashboard/data/
+
+# Full-table checkpoint snapshots (~22 MB each). Their SHA-256 hashes are recorded
+# in later packets' protected_files.csv and the tables replay from tracked decisions,
+# so they stay on local disk only. Decisions, evidence and audits remain tracked.
+data/validation/*_2026-09-26/proposed_after.csv
+data/validation/*_2026-09-26/analysis_after.csv
+data/validation/museum_next_leaders_2026-09-26/depot_after.csv
+data/validation/museum_next_leaders_2026-09-26/wayne_after.csv
+data/validation/artifact_refresh_2026-09-26/unreviewed_institutions.csv
+data/validation/church_ordinal_review_2026-09-26/duplicate_counts_after.csv

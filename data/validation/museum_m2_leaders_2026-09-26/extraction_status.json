@@ -1,0 +1,188 @@
+[
+  {
+    "id": "crystal_leadership",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 11070
+  },
+  {
+    "id": "police_home",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 3733
+  },
+  {
+    "id": "armor_visit",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 3002
+  },
+  {
+    "id": "armor_mission",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 15588
+  },
+  {
+    "id": "seneca_home",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 4538
+  },
+  {
+    "id": "acwm_home",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 7054
+  },
+  {
+    "id": "old_world_home",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 5718
+  },
+  {
+    "id": "medal_tx_home",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 5143
+  },
+  {
+    "id": "medal_tn_home",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 7610
+  },
+  {
+    "id": "acwm_locations",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 5384
+  },
+  {
+    "id": "acwm_about",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 6253
+  },
+  {
+    "id": "acwm_contact",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 3745
+  },
+  {
+    "id": "gettysburg_home",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 4442
+  },
+  {
+    "id": "gettysburg_visit",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 2033
+  },
+  {
+    "id": "medal_tn_history",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 8390
+  },
+  {
+    "id": "police_board",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 5261
+  },
+  {
+    "id": "police_news",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 5906
+  },
+  {
+    "id": "seneca_about",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 8195
+  },
+  {
+    "id": "old_world_foundation",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 2376
+  },
+  {
+    "id": "folk_new_home",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 4459
+  },
+  {
+    "id": "nmaahc_labs",
+    "detected": "pdf",
+    "extension_mismatch": false,
+    "characters": 86483
+  },
+  {
+    "id": "police_2016",
+    "detected": "pdf",
+    "extension_mismatch": false,
+    "characters": 6871
+  },
+  {
+    "id": "police_2021",
+    "detected": "pdf",
+    "extension_mismatch": false,
+    "characters": 13635
+  },
+  {
+    "id": "gettysburg_about",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 3456
+  },
+  {
+    "id": "old_world_plan",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 12144
+  },
+  {
+    "id": "folk_contact",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 3747
+  },
+  {
+    "id": "nm_lea",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 41910
+  },
+  {
+    "id": "seneca_epd",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 5905
+  },
+  {
+    "id": "seneca_move",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 2814
+  },
+  {
+    "id": "police_old_location",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 3428
+  },
+  {
+    "id": "nm_culture",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 7199
+  }
+]

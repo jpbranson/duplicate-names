@@ -1,0 +1,6 @@
+for (f in list.files('R', pattern='[.]R$', full.names=TRUE)) source(f)
+x <- src_gnis()
+message('GNIS churches: ',nrow(x))
+print(table(x$operating_status,useNA='ifany'))
+y <- src_hifld()
+message('HIFLD worship records: ',nrow(y))

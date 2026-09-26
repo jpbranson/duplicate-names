@@ -1,0 +1,54 @@
+[gnis_20210825_archive] downloading https://prd-tnm.s3.amazonaws.com/StagedProducts/GeographicNames/Archive/MainDomestic/NationalFile.zip
+                       Name    Length                Date
+1 NationalFile_20210825.txt 315163889 2021-08-25 10:57:00
+               legacy_category                       taxonomy_primary
+              church_cathedral             christian_place_of_worship
+        religious_organization                 religious_organization
+                baptist_church               baptist_place_of_worship
+               catholic_church        roman_catholic_place_of_worship
+            pentecostal_church           pentecostal_place_of_worship
+              religious_school                       religious_school
+                     synagogue                jewish_place_of_worship
+               anglican_church anglican_or_episcopal_place_of_worship
+                        mosque                muslim_place_of_worship
+            evangelical_church            protestant_place_of_worship
+ jehovahs_witness_kingdom_hall      jehovahs_witness_place_of_worship
+               buddhist_temple              buddhist_place_of_worship
+                  hindu_temple                 hindu_place_of_worship
+                        temple                       place_of_worship
+               religious_items    religious_and_spiritual_goods_store
+                   sikh_temple                  sikh_place_of_worship
+                                                                                                                            hierarchy
+                                                                    cultural_and_historic|place_of_worship|christian_place_of_worship
+                                                                                         cultural_and_historic|religious_organization
+               cultural_and_historic|place_of_worship|christian_place_of_worship|protestant_place_of_worship|baptist_place_of_worship
+                                    cultural_and_historic|place_of_worship|christian_place_of_worship|roman_catholic_place_of_worship
+           cultural_and_historic|place_of_worship|christian_place_of_worship|protestant_place_of_worship|pentecostal_place_of_worship
+                                                                                  education|place_of_learning|school|religious_school
+                                                                       cultural_and_historic|place_of_worship|jewish_place_of_worship
+ cultural_and_historic|place_of_worship|christian_place_of_worship|protestant_place_of_worship|anglican_or_episcopal_place_of_worship
+                                                                       cultural_and_historic|place_of_worship|muslim_place_of_worship
+                                        cultural_and_historic|place_of_worship|christian_place_of_worship|protestant_place_of_worship
+  cultural_and_historic|place_of_worship|christian_place_of_worship|restorationist_place_of_worship|jehovahs_witness_place_of_worship
+                                                                     cultural_and_historic|place_of_worship|buddhist_place_of_worship
+                                                                        cultural_and_historic|place_of_worship|hindu_place_of_worship
+                                                                                               cultural_and_historic|place_of_worship
+                                                                         shopping|specialty_store|religious_and_spiritual_goods_store
+                                                                         cultural_and_historic|place_of_worship|sikh_place_of_worship
+      n
+ 330267
+  83073
+  77491
+  20014
+  12682
+   4368
+   4319
+   4313
+   3061
+   2985
+   2572
+   2323
+   1328
+   1013
+    792
+    335

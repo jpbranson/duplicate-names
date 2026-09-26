@@ -24,7 +24,7 @@ dn_reconcile_museums <- function(entities, decisions = dn_schema_museum_identity
   }
   required <- vapply(decisions, function(x) any(is.na(x) | !nzchar(trimws(x))), logical(1))
   if (any(required) || any(!grepl("^https://", decisions$evidence_url)) ||
-      any(!decisions$role %in% c("canonical", "same_site", "former_site", "mislocated", "mailing_address",
+      any(!decisions$role %in% c("canonical", "reselected_canonical", "split_canonical", "same_site", "former_site", "mislocated", "mailing_address",
                                 "source_conflict"))) {
     stop("Identity decisions require valid roles, evidence and complete review metadata.")
   }
@@ -82,11 +82,72 @@ dn_reconcile_museums <- function(entities, decisions = dn_schema_museum_identity
       d <- d[!conflict, ]
       if (!length(ei)) next
     }
-    anchor <- which(d$role == "canonical")
-    if (length(anchor) != 1L || !isTRUE(entities$counted[ei[anchor]])) {
+    # A sourced split must be explicit: every destination has a split_canonical
+    # row and its own site_group. Ordinary cases retain their one-anchor contract.
+    # Former sites would need an additional destination mapping, so reject them
+    # in split cases rather than guessing which current institution owns them.
+    if (any(d$role == "split_canonical")) {
+      groups <- split(seq_len(nrow(d)), d$site_group)
+      if (length(groups) < 2L || any(d$role %in% c("canonical", "reselected_canonical", "former_site")) ||
+          any(vapply(groups, function(g) sum(d$role[g] == "split_canonical") != 1L, logical(1)))) {
+        stop("Split cases require at least two groups, each with exactly one split_canonical and no former sites.")
+      }
+      anchors <- ei[which(d$role == "split_canonical")]
+      if (any(!entities$counted[anchors])) stop("Split cases require counted canonical records.")
+      split_ids <- vapply(key[anchors], function(k) {
+        substr(digest::digest(paste0("museum_reviewed_split:", k), algo = "sha256"), 1L, 12L)
+      }, character(1))
+      if (any(split_ids %in% c(out$entity_id, out$site_id)) || anyDuplicated(split_ids)) {
+        stop("Reviewed split ID collision.")
+      }
+      for (g in groups) {
+        gi <- ei[g]
+        anchor_row <- gi[d$role[g] == "split_canonical"]
+        new_id <- split_ids[match(anchor_row, anchors)]
+        out$entity_id[gi] <- new_id
+        out$site_id[gi] <- new_id
+        out$n_sources[gi] <- dplyr::n_distinct(entities$source[gi])
+        out$source_set[gi] <- paste(sort(unique(entities$source[gi])), collapse = "|")
+        out$n_sites[gi] <- 1L
+        out$is_primary_site[gi] <- TRUE
+        out$primary_name[gi] <- entities$name_raw[anchor_row]
+        # Baseline aliases can belong to the other destination. Only reviewed
+        # members' original names are eligible to contribute to this institution.
+        aliases <- sort(unique(entities$name_raw[gi]))
+        out$alt_names[gi] <- paste(setdiff(aliases[!is.na(aliases)], entities$name_raw[anchor_row]), collapse = " | ")
+        out$is_franchise[gi] <- NA
+        out$chain_id[gi] <- NA_character_
+        out$counted[gi] <- d$role[g] == "split_canonical"
+        out$exclusion_reason[gi] <- dplyr::case_when(
+          d$role[g] == "split_canonical" ~ NA_character_,
+          d$role[g] == "mailing_address" ~ "reviewed_mailing_address",
+          d$role[g] == "mislocated" ~ "reviewed_mislocated_record",
+          TRUE ~ "reviewed_duplicate_record"
+        )
+      }
+      next
+    }
+    canonical <- d$role %in% c("canonical", "reselected_canonical")
+    anchor <- which(canonical)
+    if (length(anchor) != 1L) {
       stop("Each identity case needs exactly one counted canonical record.")
     }
     anchor_row <- ei[anchor]
+    if (d$role[anchor] == "reselected_canonical") {
+      # Explicitly correct the automatic choice of primary site within an
+      # already counted institution. This cannot reopen closed/nameless rows
+      # or revive an entirely excluded cluster. All membership/staleness
+      # guards above still apply, and the original baseline remains unchanged.
+      same_entity <- ei[entities$entity_id[ei] == entities$entity_id[anchor_row]]
+      if (!isFALSE(entities$counted[anchor_row]) ||
+          !isFALSE(entities$is_primary_site[anchor_row]) ||
+          !identical(entities$exclusion_reason[anchor_row], "non_primary_site") ||
+          !any(entities$counted[same_entity])) {
+        stop("Reselected canonical must be a non-primary site of an accepted counted baseline institution.")
+      }
+    } else if (!isTRUE(entities$counted[anchor_row])) {
+      stop("Each identity case needs exactly one counted canonical record.")
+    }
     current_group <- d$site_group[anchor]
     if (any((d$role == "former_site") == (d$site_group == current_group))) {
       stop("Former sites must have separate site groups; all other roles use the canonical site group.")
@@ -111,9 +172,9 @@ dn_reconcile_museums <- function(entities, decisions = dn_schema_museum_identity
     # One explicit source representative supplies the reviewed name and point.
     # Original names/coordinates stay intact; excluded supporting rows remain
     # available for provenance. Unreviewed entities retain their baseline policy.
-    out$counted[ei] <- d$role == "canonical"
+    out$counted[ei] <- canonical
     out$exclusion_reason[ei] <- dplyr::case_when(
-      d$role == "canonical" ~ NA_character_,
+      canonical ~ NA_character_,
       d$role == "former_site" ~ "reviewed_former_site",
       d$role == "mailing_address" ~ "reviewed_mailing_address",
       d$role == "mislocated" ~ "reviewed_mislocated_record",

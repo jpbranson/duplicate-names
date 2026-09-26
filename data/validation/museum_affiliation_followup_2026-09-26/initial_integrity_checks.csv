@@ -1,0 +1,17 @@
+check,passed
+Automatic baseline unchanged,TRUE
+Automatic multisite queue unchanged,TRUE
+Original 60002 source rows and normalized fields preserved,TRUE
+Guarded identity replay equals saved records,TRUE
+Analysis equals replay,TRUE
+Reviewed Parquet refreshed,TRUE
+Baseline Parquet unchanged,TRUE
+366 protected files and original human labels unchanged,TRUE
+Threshold unchanged,TRUE
+57272 counted source records,TRUE
+52557 counted institutions and 52425 eligible,TRUE
+125 identity rows in 51 cases,TRUE
+39 complete reviews and 11 non-museum decisions,TRUE
+Vegas pair is one affiliated reviewed museum with preserved raw name,TRUE
+Smithsonian has five parent-affiliated pending rows and three unresolved counted rows,TRUE
+Old Jail still fails publication gate,TRUE

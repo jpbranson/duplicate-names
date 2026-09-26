@@ -1,0 +1,17 @@
+[
+ {"id":"wayne_ne_home","url":"https://wcm-ne.wixsite.com/waynecountymuseum"},
+ {"id":"wayne_ne_contact","url":"https://wcm-ne.wixsite.com/waynecountymuseum/contact-us"},
+ {"id":"wayne_ne_leadership","url":"https://wcm-ne.wixsite.com/waynecountymuseum/missionleadership"},
+ {"id":"wayne_ia_history","url":"https://ptmuseum.blogspot.com/2017/10/"},
+ {"id":"wayne_ia_development","url":"https://waynecountydevelopmentcorp.com/walldogs"},
+ {"id":"wayne_pa_main","url":"https://www.waynehistorypa.com/museums/main"},
+ {"id":"irs_ny","url":"https://www.irs.gov/pub/irs-soi/eo_ny.csv","extension":"csv"},
+ {"id":"wayne_tn_home","url":"https://www.waynecountymuseumtn.org/"},
+ {"id":"rusk_home","url":"https://www.ruskcountyhistory.org/"},
+ {"id":"rusk_about","url":"https://www.ruskcountyhistory.org/about-center"},
+ {"id":"rusk_commission","url":"https://www.ruskcountyhistory.org/about-commission"},
+ {"id":"oroville_home","url":"https://sites.google.com/view/borderlandshistorical/home"},
+ {"id":"ironwood_operator","url":"https://www.ironwoodareahistoricalsociety.com/"},
+ {"id":"ironwood_chamber","url":"https://ironwoodchamber.org/business/old-depot-museum/"}
+]
+

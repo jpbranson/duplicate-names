@@ -1,0 +1,7 @@
+{
+  "sha256": "2ab72baf2399450e148ddf7a2a8689806c42e1bba71862b57e220fd9b8456d3d",
+  "version": "3.11",
+  "cloud_cost_usd": 0,
+  "url": "https://github.com/jgm/pandoc/releases/download/3.11/pandoc-3.11-windows-x86_64.zip",
+  "executable": "C:\\Developer\\duplicate-names\\data\\processed\\tools\\pandoc\\pandoc-3.11\\pandoc.exe"
+}

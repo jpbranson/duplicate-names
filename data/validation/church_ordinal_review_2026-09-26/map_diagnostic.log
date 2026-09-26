@@ -1,0 +1,8 @@
+       n_old        n_new      missing     lon_diff     lat_diff 
+7.010000e+03 7.010000e+03 0.000000e+00 1.421085e-14 7.105427e-15 
+[1] TRUE
+[1] TRUE
+  n_old_target exact_same_ids        core_na 
+          7010              1              0 
+character(0)
+character(0)

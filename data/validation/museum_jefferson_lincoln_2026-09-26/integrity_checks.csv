@@ -1,0 +1,26 @@
+check,passed
+Automatic baseline unchanged,TRUE
+Baseline multisite queue unchanged,TRUE
+All source rows and normalized fields preserved,TRUE
+Guarded identity replay matches pipeline,TRUE
+Preferred-name analysis matches replay,TRUE
+Reviewed Parquet matches pipeline,TRUE
+Baseline Parquet unchanged,TRUE
+1235 earlier evidence files and human labels preserved,TRUE
+Identity rows outside new cases unchanged,TRUE
+Prior identity decisions unchanged,TRUE
+Threshold remains 0.85,TRUE
+Counts match reviewed dry run,TRUE
+319 identity rows in 134 cases,TRUE
+132 complete reviews 22 exclusions 80 names,TRUE
+Selected non-chain groups now two and three,TRUE
+Iowa conflict isolated with no aliases; 29 total,TRUE
+Twelve accepted cases each have one counted source,TRUE
+Two distinct Newport museums retained with shared affiliation,TRUE
+North Lincoln museum untouched,TRUE
+Unresolved Kansas contact not merged with Old Jefferson Town,TRUE
+New Mexico identity reconciliation does not certify museum scope,TRUE
+Every prior factual decision preserved,TRUE
+National leader still fails explicit publication gate,TRUE
+All 16 starting candidates have recorded dispositions,TRUE
+Eight incomplete reviews remain explicitly pending,TRUE

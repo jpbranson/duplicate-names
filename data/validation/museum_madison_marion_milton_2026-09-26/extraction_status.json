@@ -1,0 +1,338 @@
+[
+  {
+    "id": "madison_nh_home",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 739
+  },
+  {
+    "id": "madison_nh_report",
+    "detected": "pdf",
+    "extension_mismatch": false,
+    "characters": 221249
+  },
+  {
+    "id": "madison_ct_home",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 4674
+  },
+  {
+    "id": "madison_ct_plan",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 11869
+  },
+  {
+    "id": "madison_nj_home",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 6573
+  },
+  {
+    "id": "madison_ny_county",
+    "detected": "pdf",
+    "extension_mismatch": false,
+    "characters": 9812
+  },
+  {
+    "id": "madison_la_guide",
+    "detected": "pdf",
+    "extension_mismatch": false,
+    "characters": 29397
+  },
+  {
+    "id": "marion_oh_home",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 6364
+  },
+  {
+    "id": "marion_oh_destination",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 4100
+  },
+  {
+    "id": "marion_ia_home",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 3199
+  },
+  {
+    "id": "marion_al_home",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 644
+  },
+  {
+    "id": "marion_al_places",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 1236
+  },
+  {
+    "id": "marion_mo_jims",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 11750
+  },
+  {
+    "id": "marion_or_history",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 6958
+  },
+  {
+    "id": "marion_or_about",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 4329
+  },
+  {
+    "id": "milton_pa_home",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 1183
+  },
+  {
+    "id": "milton_de_about",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 2332
+  },
+  {
+    "id": "milton_de_visit",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 1483
+  },
+  {
+    "id": "milton_vt_home",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 5737
+  },
+  {
+    "id": "milton_vt_museum",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 1629
+  },
+  {
+    "id": "milton_ma_visit",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 2447
+  },
+  {
+    "id": "milton_ma_house",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 11840
+  },
+  {
+    "id": "milton_wi_home",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 3086
+  },
+  {
+    "id": "milton_wi_history",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 7114
+  },
+  {
+    "id": "madison_nh_about",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 3512
+  },
+  {
+    "id": "madison_nh_school",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 5960
+  },
+  {
+    "id": "madison_nj_about",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 5503
+  },
+  {
+    "id": "madison_nj_contact",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 2885
+  },
+  {
+    "id": "marion_ga_csu",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 1213
+  },
+  {
+    "id": "marion_ga_collection",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 13922
+  },
+  {
+    "id": "marion_ga_timeline",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 5404
+  },
+  {
+    "id": "marion_ms_directory",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 12251
+  },
+  {
+    "id": "irs_al",
+    "detected": "csv",
+    "extension_mismatch": false,
+    "note": "Structured public records; see the selected IRS JSON rows."
+  },
+  {
+    "id": "irs_ct",
+    "detected": "csv",
+    "extension_mismatch": false,
+    "note": "Structured public records; see the selected IRS JSON rows."
+  },
+  {
+    "id": "irs_la",
+    "detected": "csv",
+    "extension_mismatch": false,
+    "note": "Structured public records; see the selected IRS JSON rows."
+  },
+  {
+    "id": "irs_nj",
+    "detected": "csv",
+    "extension_mismatch": false,
+    "note": "Structured public records; see the selected IRS JSON rows."
+  },
+  {
+    "id": "irs_vt",
+    "detected": "csv",
+    "extension_mismatch": false,
+    "note": "Structured public records; see the selected IRS JSON rows."
+  },
+  {
+    "id": "irs_ma",
+    "detected": "csv",
+    "extension_mismatch": false,
+    "note": "Structured public records; see the selected IRS JSON rows."
+  },
+  {
+    "id": "irs_wi",
+    "detected": "csv",
+    "extension_mismatch": false,
+    "note": "Structured public records; see the selected IRS JSON rows."
+  },
+  {
+    "id": "irs_nh",
+    "detected": "csv",
+    "extension_mismatch": false,
+    "note": "Structured public records; see the selected IRS JSON rows."
+  },
+  {
+    "id": "madison_oh_chamber",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 6091
+  },
+  {
+    "id": "marion_oh_school",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 2652
+  },
+  {
+    "id": "marion_oh_programs",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 6336
+  },
+  {
+    "id": "marion_oh_popcorn",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 4092
+  },
+  {
+    "id": "marion_ia_contact",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 1513
+  },
+  {
+    "id": "marion_ia_history",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 3405
+  },
+  {
+    "id": "marion_ia_board",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 1560
+  },
+  {
+    "id": "marion_al_contact",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 558
+  },
+  {
+    "id": "marion_ms_exhibit",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 3130
+  },
+  {
+    "id": "milton_pa_destination",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 3499
+  },
+  {
+    "id": "milton_wi_board",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 3195
+  },
+  {
+    "id": "madison_nj_museum",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 3408
+  },
+  {
+    "id": "milton_vt_team",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 741
+  },
+  {
+    "id": "milton_de_destination",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 2984
+  },
+  {
+    "id": "marion_ia_park",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 7697
+  },
+  {
+    "id": "marion_ia_map",
+    "detected": "pdf",
+    "extension_mismatch": false,
+    "characters": 3118
+  }
+]

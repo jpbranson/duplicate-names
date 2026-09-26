@@ -1,0 +1,16 @@
+[
+  {"id":"bedford_ny_school","url":"https://www.bedfordhistoricalsociety.org/school-house"},
+  {"id":"bedford_ma_move","url":"https://www.bedfordmahistory.org/wp-content/uploads/2022/04/BHS-Feb-2022-FINAL-9.pdf"},
+  {"id":"bedford_ma_joblane","url":"https://joblanefarmmuseum.org/wp-content/uploads/2023/10/2023-FJLH-Bylaws.pdf"},
+  {"id":"bedford_va_house","url":"https://www.bedfordhistory.org/house.html"},
+  {"id":"bedford_va_history","url":"https://www.bedfordhistory.org/history.html"},
+  {"id":"bedford_va_board","url":"https://www.bedfordhistory.org/board.html"},
+  {"id":"belmont_ca_historyroom","url":"https://www.belmont.gov/our-city/about-belmont/historical-photo-tour"},
+  {"id":"belmont_ca_park","url":"https://www.belmont.gov/Home/Components/FacilityDirectory/FacilityDirectory/208/702"},
+  {"id":"belmont_ma_about","url":"https://www.belmonthistoricalsociety.org/about/"},
+  {"id":"belmont_oh_project","url":"https://sites.google.com/amyjomantas.com/behdayton/Community-Work/belmont-history"},
+  {"id":"chatham_ct_bluebook","url":"https://portal.ct.gov/-/media/sots/register-manual-_-bluebook/rm_archive/ct2020.pdf?hash=3DBAD36DD26AE85C77358F6E5BB852AB&rev=24a98da2ecb54aac9afc6df028788fae","extension":"pdf"},
+  {"id":"irs_ca","url":"https://www.irs.gov/pub/irs-soi/eo_ca.csv","extension":"csv"},
+  {"id":"irs_va","url":"https://www.irs.gov/pub/irs-soi/eo_va.csv","extension":"csv"},
+  {"id":"irs_nc","url":"https://www.irs.gov/pub/irs-soi/eo_nc.csv","extension":"csv"}
+]

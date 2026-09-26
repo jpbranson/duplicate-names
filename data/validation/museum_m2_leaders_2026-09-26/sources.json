@@ -1,0 +1,54 @@
+[
+  {
+    "id": "amnh_visit",
+    "url": "https://www.amnh.org/plan-your-visit"
+  },
+  {
+    "id": "crystal_leadership",
+    "url": "https://crystalbridges.org/news/crystal-bridges-and-the-momentary-announce-key-leadership-appointments-26"
+  },
+  {
+    "id": "police_home",
+    "url": "https://www.internationalpolicemuseum.org/"
+  },
+  {
+    "id": "armor_visit",
+    "url": "https://www.museumofamericanarmor.com/visit-us"
+  },
+  {
+    "id": "armor_mission",
+    "url": "https://www.museumofamericanarmor.com/our-mission"
+  },
+  {
+    "id": "seneca_home",
+    "url": "https://senecamuseum.org/"
+  },
+  {
+    "id": "folk_home",
+    "url": "https://www.internationalfolkart.org/"
+  },
+  {
+    "id": "nmaahc_visit",
+    "url": "https://nmaahc.si.edu/visit"
+  },
+  {
+    "id": "nmai_visit",
+    "url": "https://americanindian.si.edu/visit"
+  },
+  {
+    "id": "acwm_home",
+    "url": "https://acwm.org/"
+  },
+  {
+    "id": "old_world_home",
+    "url": "https://oldworldwisconsin.wisconsinhistory.org/"
+  },
+  {
+    "id": "medal_tx_home",
+    "url": "https://mohmuseum.org/"
+  },
+  {
+    "id": "medal_tn_home",
+    "url": "https://mohhc.org/"
+  }
+]

@@ -1,0 +1,425 @@
+{
+  "evidence": {
+    "CHEHALIS": {
+      "url": "https://www.veteransmuseum.org/ ; https://www.ci.chehalis.wa.us/community/page/attraction-spotlight-veterans-memorial-museum ; https://www.irs.gov/pub/irs-soi/eo_wa.csv",
+      "note": "Three source records represent one local nonprofit museum. The city documents its 1997 Centralia opening and 2005 move to Chehalis; pinned Overture retains the former 712 W Main address. Current operator address/phone and IRS EIN 911744786 match 100 SW Veterans Way. Retain the Centralia row as former_site and the displaced IMLS mailing point as supporting evidence. Local operation is corroborated by the operator and Chehalis tourism director interview; service partnerships with AMVETS, 9Line and Legacies of Valor are not museum ownership. Current posted hours are Tuesday-Saturday 10-4. Recheck visitor points/access at publication; original coordinates stay intact. City raw download returned 403; its official search text was readable."
+    },
+    "LAUREL": {
+      "url": "https://www.veterans-memorial-museum.org/ ; https://www.veterans-memorial-museum.org/about-us.html ; https://www.veterans-memorial-museum.org/about-the-board.html",
+      "note": "Two Overture points and IMLS EIN 640884373 identify the same museum at 920 Hillcrest Drive. Both Overture records share the operator domain and 601-428-4008; IMLS has the same address. The operator documents one permanent Hillcrest museum since 2005 and its own local executive board. Use the southern Overture record already clustered with IMLS as canonical; retain the other point and IMLS as mislocated/supporting records. This is an independent local museum, not a branch of the similarly named institutions elsewhere. Keep Veterans Memorial Museum as its public name; city wording in promotional text is insufficient to require a renamed headline. Visitor-point correction remains separate."
+    },
+    "BRANSON": {
+      "url": "https://veteransmemorialbranson.com/ ; https://veteransmemorialbranson.com/about/",
+      "note": "The operator identifies the privately owned Branson Veterans Memorial Museum at 1250 W Highway 76, phone 417-336-2300. Its account names Fred Hoppe as creator, financier and director of this museum; his commissioned sculptures elsewhere do not constitute additional museum branches. Ten exhibit halls form one institution. Use the current operator header and About-page name, Branson Veterans Memorial Museum. Complete factual review supports independent local operation. Recheck visitor access when exporting a publication map."
+    },
+    "SHENANDOAH": {
+      "url": "https://www.veteransmuseumswia.org/ ; https://www.veteransmuseumswia.org/about-us ; https://www.sciaiowa.com/pdfs/Shenandoah_Visitors_Guide.pdf",
+      "note": "The current operator names Shenandoah Veterans Memorial Museum at 603 W Lowell Avenue with the source phone 712-246-9527. Apply that supported public name. Operator hours are Monday/Wednesday/Friday 1-3, closed January-February except by request. Chamber history identifies the founder and local director. Governance and legal/operator scope still need primary verification before independence is certified; retain unknown affiliation and pending status. The separately named Greater Shenandoah Historical Society is not merged merely because its board visited the veterans museum."
+    },
+    "HINTON": {
+      "url": "https://visitwv.com/partners/veterans-memorial-museum-of-southern-wv-inc/ ; https://www.jimleslie2020.com/about-1",
+      "note": "The regional visitor agency and participant Jim Leslie identify Veterans Memorial Museum of Southern West Virginia in the former Carnegie library. The existing Overture/IMLS cluster shares 419 Ballengee and IMLS EIN 550743800; the visitor agency gives 423 Ballengee and the same 304-466-4443 telephone. Apply the full supported institution name without altering baseline membership. Founder history supports the museum but does not resolve the present 419/423 entrance, current governance and access. These remain pending with unknown affiliation; the loaned state exhibit is not ownership evidence."
+    },
+    "JOHNSTOWN": {
+      "url": "https://1stsummitarena.com/experienceice/ ; https://www.visitjohnstownpa.com/wp-content/uploads/2024/04/2024-04-05-Visit-Johnstown-PA-Veterans-Trail.pdf ; https://lhhv.org/lhhv-pictures/lhhv-shows/",
+      "note": "The arena operator currently advertises school visits to its lobby military museum at 326 Napoleon Street. The destination trail confirms the arena address, and a local history account describes the Veterans Memorial Museum room. Preserve the record as a possible museum; do not exclude it as merely a sports arena. Exact museum public name, operational responsibility, counting scope and general visitor access remain pending. The arena field-trip program also uses an Ebensburg recreation facility; that alone does not establish a second museum. No merger with the separate IMLS Veterans Memorial Monument is supported."
+    },
+    "BERRYVILLE": {
+      "url": "https://ccheritagemuseum.com/ ; https://berryvillear.gov/about-berryville/parks/pioneer-park/",
+      "note": "The historical society operates the Carroll County Heritage Museum in the old courthouse on the Berryville Square; current operator board/news and the city phone 870-423-6312 connect the Overture 403 Public Square row to the IMLS courthouse/PO249 row. Reconcile as one named courthouse museum, preserving the mailing/geocoded supporting record. Apply Carroll County Heritage Museum. The city also describes society tours of Pioneer Park buildings included with museum tickets. Whether these constitute a separate museum branch or a satellite component remains unresolved, so affiliation stays unknown and the full factual review pending. Operator web text was readable although the raw cache request returned 403."
+    },
+    "MISSOURI": {
+      "url": "https://carrollton-mo-museum.com/ ; https://www.visitmo.com/things-to-do/carroll-county-historical-museum ; https://www.irs.gov/pub/irs-soi/eo_mo.csv",
+      "note": "Carroll County Historical Museum is at 510 N Mason Street, Carrollton, Missouri. The current IRS file places the exact IMLS EIN 436074684 and legal society name at 510 N Mason, resolving the IMLS 501 N Mason transposition. Operator and state tourism describe the same local museum campus and exhibits. Reconcile its Overture museum and IMLS legal society record as one independent institution. The old IMLS carrollcountymuseum.org URL now serves Indiana and is not used as the identity bridge; exact legal identity and corrected address provide that bridge. The nearby genealogical association has a different legal identity and remains separate. Seasonal visitor access must be rechecked."
+    },
+    "MILES": {
+      "url": "https://www.historyincarrollcounty.org/about/ ; https://www.historyincarrollcounty.org/ ; https://www.ohiohistory.org/visit/browse-historical-sites/mccook-house/",
+      "note": "The Illinois society identifies Miles Museum at 107 E Broadway, phone 815-244-3474, and a separate Oakville Settlement. Reconcile the named Miles record, matching-phone historyincarrollcounty.org record and IMLS EIN 237202993 (mailing 107 E Broadway; conflicting physical W Broadway) as one museum. Preserve the east/west source discrepancy. The other Illinois Overture row a15fd930 has an Ohio society domain, carrollcountyhistoricalsociety.com, which Ohio History Connection explicitly links as its McCook operator. Isolate that contradictory record, uncounted and without alias transfer, instead of accepting its mixed identity. Miles is affiliated with the Illinois society operating both museum campuses; apply its current short public name. Review the isolated source separately."
+    },
+    "MILES_CONFLICT": {
+      "url": "https://www.historyincarrollcounty.org/about/ ; https://www.ohiohistory.org/visit/browse-historical-sites/mccook-house/",
+      "note": "Pinned Overture a15fd930 combines an Illinois 107 E Broadway address and Illinois phone with carrollcountyhistoricalsociety.com, the Ohio society domain explicitly linked by Ohio History Connection for McCook House. Isolate the contradictory row as reviewed_source_conflict with its own uncounted ID and no accepted aliases. Pending source resolution; do not assign it to either Illinois Miles Museum or an Ohio site. Raw access to the ambiguous domain is not required to establish the independently sourced Ohio link."
+    },
+    "DELPHI": {
+      "url": "https://www.carrollcountymuseum.org/ ; https://www.carrollcountymuseum.org/about-us ; https://cityofdelphi.org/community/explore/museums",
+      "note": "The city names Carroll County Historical Museum in the Peirce Stone Barn at 700 N Washington Street and identifies the local society as operator. Its own site lists its board, the same physical address and PO277, bridging IMLS EIN351447421 with its older 101 W Main/PO277 mailing string. Reconcile IMLS to the existing Overture museum. The one local museum is independent; support from the Arts Federation is a grant relationship. Wabash & Erie Canal Center and the Delphi Preservation Society archives are separate operators and remain unchanged. The city page was web-readable, but raw retrieval failed certificate validation; no TLS checks were disabled."
+    },
+    "MCCOOK": {
+      "url": "https://www.ohiohistory.org/visit/browse-historical-sites/mccook-house/ ; https://sites.google.com/view/carrollcountyhistoricalsociety/mccook-house ; https://sites.google.com/view/carrollcountyhistoricalsociety/",
+      "note": "Ohio History Connection confirms the McCook House museum at 15 South Lisbon Street, locally managed by Carroll County Historical Society. Reconcile the Overture McCook and IMLS Daniel McCook rows at that address as one museum. Apply the local operator name McCook House Civil War Museum. It is affiliated with the Ohio History Connection network; local operation by the society also connects it with Algonquin Mill. The one-chain field records ohio_history_connection, while this note preserves the overlapping local operator. The society page uses 15 2nd St for the same corner house; retain that visitor-address distinction and use the state address for later publication checks."
+    },
+    "ALGONQUIN": {
+      "url": "https://sites.google.com/view/carrollcountyhistoricalsociety/ ; https://sites.google.com/view/carrollcountyhistoricalsociety/algonquin-mill-complex",
+      "note": "The society identifies its Algonquin Mill Complex at the exact Overture address 234 Autumn Rd SW. It includes the working mill, historic buildings and Bert Lytle farm museum on one campus. Apply Algonquin Mill Complex to the broad society-named site record. The same society explicitly manages McCook House separately; affiliation with carroll_county_historical_society_oh is established. Preserve separate museum campuses. Current operator information gives Thursday mill access and the October 9-11, 2026 festival; individual building access requires publication-time checking."
+    },
+    "OHIO_PARENT": {
+      "url": "https://sites.google.com/view/carrollcountyhistoricalsociety/ ; https://www.ohiohistory.org/about-us/historic-site-management-partners/",
+      "note": "The IMLS PO174 row and McCook IMLS row share EIN237009564. The operator manages both McCook House and Algonquin Mill; Ohio History Connection lists its PO174 partnership address. This generic legal/mailing record cannot yet be assigned to either campus. Retain it counted but pending as a possible parent duplicate, with sourced affiliation carroll_county_historical_society_oh. No unsupported merger and no not_museum exclusion are made. Resolve the institution represented before final counts."
+    },
+    "TENNESSEE": {
+      "url": "https://www.gordonbrowningmuseumcarrollcountyhistoricalsociety.org/ ; https://mckenzietn.org/residents/community-resources/tourism/ ; https://cchspet.org/",
+      "note": "The current society operator is at 640 North Main Street, McKenzie, phone731-352-3510, and lists both Governor Gordon Browning Museum and Archives and Carroll County War Memorial Museum. IMLS EIN620993958 has that society/address. Split the mixed Overture society row from its baseline IMLS member: its cchspet.org domain belongs to the animal shelter, not the historical society. Keep the clean IMLS parent counted and pending rather than arbitrarily assigning it to one named museum. The clean Gordon Browning Overture record remains separate. Record the common society affiliation; physical/counting scope of the two named museum units requires follow-up."
+    },
+    "TENNESSEE_CONFLICT": {
+      "url": "https://cchspet.org/ ; https://www.gordonbrowningmuseumcarrollcountyhistoricalsociety.org/",
+      "note": "The Overture historical-society record mixes 640 N Main and museum phone with cchspet.org, which is Carroll County Humane Society. Isolate the contradictory Overture member as an uncounted source conflict, distinct from its clean IMLS society member and the separate Gordon Browning museum. No shelter name or disputed alias is transferred. Pending source resolution. Coordinates are retained, and the source address is McKenzie; the earlier rough Huntingdon-area interpretation was not evidence and is discarded."
+    },
+    "GORDON": {
+      "url": "https://www.gordonbrowningmuseumcarrollcountyhistoricalsociety.org/ ; https://mckenzietn.org/residents/community-resources/tourism/ ; https://www.visitcarrolltn.com/things-to-do",
+      "note": "Clean Overture museum address 640 N Main and phone731-352-3510 match the current society operator. Apply Governor Gordon Browning Museum and Archives, its current named unit. The operator also lists Carroll County War Memorial Museum, alongside archives and a research library at this location. Common society affiliation is sourced, but whether the two named museum units are independently countable or one museum remains pending. Keep this existing record separate from the generic IMLS parent until scope is resolved; do not create a new museum record from the website alone."
+    },
+    "GEORGIA": {
+      "url": "https://ccgsga.org/about/ ; https://ccgsga.org/resources/ ; https://www.carrollcountyhistory.org/ ; https://dlg.usg.edu/record/dlg_ggpd_y-ga-bs700-pa7-bs1-bd5-b1996",
+      "note": "Split the two co-geocoded IMLS organizations: historical society EIN581293131/PO160 and genealogical society EIN581546514/PO576. Primary genealogy history and its explicit link to the separate historical society, plus the state directory, establish distinct organizations. Preserve each as a split canonical with separate IDs and names. The historical society has dated evidence of a house museum, but present legal/address linkage, public name, operation and access require confirmation. Its old site contains unrelated spam and is not sufficient for current verification. IRS absence is not evidence of closure. Keep historical record pending, unknown affiliation and counted."
+    },
+    "GEORGIA_GENEALOGY": {
+      "url": "https://ccgsga.org/about/ ; https://ccgsga.org/resources/ ; https://www.irs.gov/pub/irs-soi/eo_ga.csv",
+      "note": "IRS EIN581546514 matches the genealogical society at PO576. Its current organizational history defines a genealogy membership, research, publishing and library-support role, with collections in the Neva Lomason Library and meetings/workshops there. This is the separate genealogy organization, not the historical society house museum. After splitting the erroneous baseline cluster, exclude only this organization as not_museum on affirmative operator-role evidence. Its active status is preserved; neither a failed search, mailbox nor IRS revocation supplies the exclusion. Complete factual review of this exclusion; no matching-accuracy label created."
+    }
+  },
+  "identities": [
+    {
+      "case": "CHEHALIS",
+      "keys": [
+        "4da2344f-1a4a-4163-8d7c-9886551e9382",
+        "33f88b41-b933-445c-b212-e8710d3bbd0e",
+        "8405300550"
+      ],
+      "roles": [
+        "canonical",
+        "former_site",
+        "mailing_address"
+      ],
+      "groups": [
+        "chehalis",
+        "centralia_former",
+        "chehalis"
+      ]
+    },
+    {
+      "case": "LAUREL",
+      "keys": [
+        "4dc13d93-0464-40b3-b326-b84c510fbd37",
+        "91ac2f95-47a7-4ffb-8816-afa83f835aa0",
+        "8402800221"
+      ],
+      "roles": [
+        "canonical",
+        "mislocated",
+        "mailing_address"
+      ],
+      "groups": [
+        "laurel",
+        "laurel",
+        "laurel"
+      ]
+    },
+    {
+      "case": "BERRYVILLE",
+      "keys": [
+        "963ba697-23e7-4752-8f55-b2b5e972efe7",
+        "8400500161"
+      ],
+      "roles": [
+        "canonical",
+        "mailing_address"
+      ],
+      "groups": [
+        "berryville",
+        "berryville"
+      ]
+    },
+    {
+      "case": "MISSOURI",
+      "keys": [
+        "9a421aa7-6206-4dbc-a559-057537ca4b24",
+        "8402900673"
+      ],
+      "roles": [
+        "canonical",
+        "mailing_address"
+      ],
+      "groups": [
+        "missouri",
+        "missouri"
+      ]
+    },
+    {
+      "case": "MILES",
+      "keys": [
+        "d27354be-f860-4181-8ca5-10094c4378d8",
+        "8efcff91-a64d-4a8d-ba4e-73b57a689b8d",
+        "8401700255",
+        "a15fd930-6e3e-4b94-8684-9031b725dbc6"
+      ],
+      "roles": [
+        "canonical",
+        "same_site",
+        "mailing_address",
+        "source_conflict"
+      ],
+      "groups": [
+        "miles",
+        "miles",
+        "miles",
+        "unresolved_source"
+      ]
+    },
+    {
+      "case": "DELPHI",
+      "keys": [
+        "9ca763db-e4f6-4ebc-a1ac-c271d84c9920",
+        "8401800395"
+      ],
+      "roles": [
+        "canonical",
+        "mailing_address"
+      ],
+      "groups": [
+        "delphi",
+        "delphi"
+      ]
+    },
+    {
+      "case": "MCCOOK",
+      "keys": [
+        "7fd99b9f-90d3-487a-a960-3cc15419b020",
+        "8403900177"
+      ],
+      "roles": [
+        "canonical",
+        "same_site"
+      ],
+      "groups": [
+        "mccook",
+        "mccook"
+      ]
+    },
+    {
+      "case": "TENNESSEE",
+      "keys": [
+        "8404700375",
+        "9b1cdbf2-c365-4958-8d48-1030c850d56e"
+      ],
+      "roles": [
+        "canonical",
+        "source_conflict"
+      ],
+      "groups": [
+        "tennessee_parent",
+        "unresolved_source"
+      ]
+    },
+    {
+      "case": "GEORGIA",
+      "keys": [
+        "8401300407",
+        "8401300461"
+      ],
+      "roles": [
+        "split_canonical",
+        "split_canonical"
+      ],
+      "groups": [
+        "ga_historical",
+        "ga_genealogical"
+      ]
+    }
+  ],
+  "decisions": [
+    {
+      "key": "ff430e47-5798-40cf-9ca4-5f0cead0f97f",
+      "case": "BRANSON",
+      "aff": "independent",
+      "status": "verified",
+      "chain": null,
+      "category": "not_flagged"
+    },
+    {
+      "key": "4da2344f-1a4a-4163-8d7c-9886551e9382",
+      "case": "CHEHALIS",
+      "aff": "independent",
+      "status": "verified",
+      "chain": null,
+      "category": "not_flagged"
+    },
+    {
+      "key": "4dc13d93-0464-40b3-b326-b84c510fbd37",
+      "case": "LAUREL",
+      "aff": "independent",
+      "status": "verified",
+      "chain": null,
+      "category": "not_flagged"
+    },
+    {
+      "key": "44c84d07-7765-483b-88cf-569f12cc3bfe",
+      "case": "SHENANDOAH",
+      "aff": "unknown",
+      "status": "pending",
+      "chain": null,
+      "category": "not_flagged"
+    },
+    {
+      "key": "c765707c-d735-4285-8118-8aeac9ef217c",
+      "case": "HINTON",
+      "aff": "unknown",
+      "status": "pending",
+      "chain": null,
+      "category": "not_flagged"
+    },
+    {
+      "key": "37df7d88-9a5a-4b5c-956f-b63e0ebb5097",
+      "case": "JOHNSTOWN",
+      "aff": "unknown",
+      "status": "pending",
+      "chain": null,
+      "category": "not_flagged"
+    },
+    {
+      "key": "963ba697-23e7-4752-8f55-b2b5e972efe7",
+      "case": "BERRYVILLE",
+      "aff": "unknown",
+      "status": "pending",
+      "chain": null,
+      "category": "not_flagged"
+    },
+    {
+      "key": "9a421aa7-6206-4dbc-a559-057537ca4b24",
+      "case": "MISSOURI",
+      "aff": "independent",
+      "status": "verified",
+      "chain": null,
+      "category": "not_flagged"
+    },
+    {
+      "key": "d27354be-f860-4181-8ca5-10094c4378d8",
+      "case": "MILES",
+      "aff": "chain",
+      "status": "verified",
+      "chain": "carroll_county_historical_society_il",
+      "category": "not_flagged"
+    },
+    {
+      "key": "a15fd930-6e3e-4b94-8684-9031b725dbc6",
+      "case": "MILES_CONFLICT",
+      "aff": "unknown",
+      "status": "pending",
+      "chain": null,
+      "category": "not_flagged"
+    },
+    {
+      "key": "9ca763db-e4f6-4ebc-a1ac-c271d84c9920",
+      "case": "DELPHI",
+      "aff": "independent",
+      "status": "verified",
+      "chain": null,
+      "category": "not_flagged"
+    },
+    {
+      "key": "7fd99b9f-90d3-487a-a960-3cc15419b020",
+      "case": "MCCOOK",
+      "aff": "chain",
+      "status": "verified",
+      "chain": "ohio_history_connection",
+      "category": "not_flagged"
+    },
+    {
+      "key": "78a0b3f2-1509-4105-82f0-a9dc92722210",
+      "case": "ALGONQUIN",
+      "aff": "chain",
+      "status": "verified",
+      "chain": "carroll_county_historical_society_oh",
+      "category": "not_flagged"
+    },
+    {
+      "key": "8403900313",
+      "case": "OHIO_PARENT",
+      "aff": "chain",
+      "status": "pending",
+      "chain": "carroll_county_historical_society_oh",
+      "category": "not_flagged"
+    },
+    {
+      "key": "8404700375",
+      "case": "TENNESSEE",
+      "aff": "chain",
+      "status": "pending",
+      "chain": "carroll_county_historical_society_tn",
+      "category": "not_flagged"
+    },
+    {
+      "key": "9b1cdbf2-c365-4958-8d48-1030c850d56e",
+      "case": "TENNESSEE_CONFLICT",
+      "aff": "unknown",
+      "status": "pending",
+      "chain": null,
+      "category": "not_flagged"
+    },
+    {
+      "key": "b8565685-fc4b-4856-96fa-dd9058c2188a",
+      "case": "GORDON",
+      "aff": "chain",
+      "status": "pending",
+      "chain": "carroll_county_historical_society_tn",
+      "category": "not_flagged"
+    },
+    {
+      "key": "8401300407",
+      "case": "GEORGIA",
+      "aff": "unknown",
+      "status": "pending",
+      "chain": null,
+      "category": "not_flagged"
+    },
+    {
+      "key": "8401300461",
+      "case": "GEORGIA_GENEALOGY",
+      "aff": "independent",
+      "status": "verified",
+      "chain": null,
+      "category": "not_museum"
+    }
+  ],
+  "names": [
+    {
+      "key": "ff430e47-5798-40cf-9ca4-5f0cead0f97f",
+      "case": "BRANSON",
+      "name": "Branson Veterans Memorial Museum"
+    },
+    {
+      "key": "44c84d07-7765-483b-88cf-569f12cc3bfe",
+      "case": "SHENANDOAH",
+      "name": "Shenandoah Veterans Memorial Museum"
+    },
+    {
+      "key": "c765707c-d735-4285-8118-8aeac9ef217c",
+      "case": "HINTON",
+      "name": "Veterans Memorial Museum of Southern West Virginia"
+    },
+    {
+      "key": "963ba697-23e7-4752-8f55-b2b5e972efe7",
+      "case": "BERRYVILLE",
+      "name": "Carroll County Heritage Museum"
+    },
+    {
+      "key": "d27354be-f860-4181-8ca5-10094c4378d8",
+      "case": "MILES",
+      "name": "Miles Museum"
+    },
+    {
+      "key": "7fd99b9f-90d3-487a-a960-3cc15419b020",
+      "case": "MCCOOK",
+      "name": "McCook House Civil War Museum"
+    },
+    {
+      "key": "78a0b3f2-1509-4105-82f0-a9dc92722210",
+      "case": "ALGONQUIN",
+      "name": "Algonquin Mill Complex"
+    },
+    {
+      "key": "b8565685-fc4b-4856-96fa-dd9058c2188a",
+      "case": "GORDON",
+      "name": "Governor Gordon Browning Museum and Archives"
+    }
+  ]
+}

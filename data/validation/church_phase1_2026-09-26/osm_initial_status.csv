@@ -1,0 +1,12 @@
+region,status,n,error
+bangor,downloaded,43,NA
+atlanta,downloaded,852,NA
+detroit,downloaded,1240,NA
+new_york,downloaded,2015,NA
+seattle,failed,NA,"HTTP response code said error [overpass-api.de]:
+The requested URL returned error: 429"
+san_francisco,failed,NA,"HTTP response code said error [overpass-api.de]:
+The requested URL returned error: 429"
+honolulu,failed,NA,"HTTP response code said error [overpass-api.de]:
+The requested URL returned error: 429"
+anchorage,downloaded,152,NA

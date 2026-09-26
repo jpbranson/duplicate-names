@@ -1,0 +1,24 @@
+$source_rows
+[1] 1032223
+
+$parser_changes
+[1] 225
+
+$pair_changes
+[1] 19
+
+$merge_changes
+[1] 2
+
+$membership_changes
+[1] 0
+
+$raw_fields_unchanged
+[1] TRUE
+
+$threshold
+[1] 0.85
+
+$status
+[1] "dry_run_only"
+

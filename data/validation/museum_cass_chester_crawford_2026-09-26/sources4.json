@@ -1,0 +1,12 @@
+[
+ {"id":"irs_il","url":"https://www.irs.gov/pub/irs-soi/eo_il.csv","extension":"csv"},
+ {"id":"illinois_museum_directory","url":"https://icpn.museum.state.il.us/sites/icpn/files/attachments/ICPN_table_pages_of_Illinois_Museums_NO-contacts%26no_websites.pdf","extension":"pdf"},
+ {"id":"crawford_mi_board","url":"https://www.crawfordco.org/wp-content/uploads/2023/12/Board-Packet-12142023-B.pdf","extension":"pdf"},
+ {"id":"crawford_pa_about","url":"https://crawfordhistorical.org/about/about-cchs/"},
+ {"id":"crawford_pa_research","url":"https://crawfordhistorical.org/research/submit-request/"},
+ {"id":"crawford_pa_repository","url":"https://genpa.org/wp-content/uploads/public-collections/pa-resources/CrawfordCoReposGuide-2012.pdf","extension":"pdf"},
+ {"id":"chester_nj_constitution","url":"https://historicchesternj.com/home/constitutionandbylaws.html"},
+ {"id":"chester_nj_newsletter","url":"https://www.historicchesternj.com/images/2023_May_CHS_Newsletter_-1886_Directory_-Rev_Brewster_-Little_Niagara_Falls_-Tommie_Barker_-Archives_Reno_-Pathways_hr.pdf","extension":"pdf"},
+ {"id":"crawford_pa_baldwin","url":"https://baldwinreynolds.org/about/"},
+ {"id":"crawford_mo_survey","url":"https://mostateparks.com/sites/mostateparks/files/Cuba%20Report.pdf","extension":"pdf"}
+]

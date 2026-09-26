@@ -1,0 +1,38 @@
+# Source-guarded public names. This changes analysis labels, never identity or raw fields.
+dn_apply_church_names <- function(analysis,records,overrides,gazetteer) {
+  out<-analysis
+  out$source_primary_name<-out$primary_name
+  out$name_override_evidence<-NA_character_
+  if(!nrow(overrides)) return(out)
+  need<-c('source','source_id','expected_name','expected_coordinates','preferred_name','evidence_url','evidence_note','reviewed_by','reviewed_on')
+  if(!all(need %in% names(overrides))) stop('Church name override columns missing')
+  key<-paste(overrides$source,overrides$source_id,sep=':')
+  if(anyDuplicated(key)) stop('Duplicate church name override key')
+  i<-match(key,paste(records$source,records$source_id,sep=':'))
+  if(anyNA(i)) stop('Church name override source is missing')
+  if(any(is.na(overrides$expected_name) | overrides$expected_name!=records$name_raw[i])) stop('Stale church source-name guard')
+  coords<-sprintf('%.7f,%.7f',records$lon[i],records$lat[i])
+  if(any(is.na(overrides$expected_coordinates) | overrides$expected_coordinates!=coords)) stop('Stale church coordinate guard')
+  if(any(is.na(overrides$preferred_name) | !nzchar(trimws(overrides$preferred_name)) |
+    is.na(overrides$evidence_url) | !grepl('^https?://',overrides$evidence_url))) stop('Church preferred name requires source evidence')
+  overrides$entity_id<-records$entity_id[i]
+  if(any(!overrides$entity_id %in% out$entity_id)) stop('Church override entity absent from analysis')
+  for(id in unique(overrides$entity_id)) {
+    d<-overrides[overrides$entity_id==id,]
+    if(length(unique(d$preferred_name))!=1L) stop('Conflicting preferred names for one church entity')
+    row<-which(out$entity_id==id)
+    if(length(row)!=1L) stop('Church name application requires one analysis row per entity')
+    raw<-out[row,names(dn_schema_raw())]
+    raw$name_raw<-d$preferred_name[1]
+    normalized<-dn_normalize_churches(raw,gazetteer)
+    fields<-setdiff(names(dn_schema_normalized()),names(dn_schema_raw()))
+    out[row,fields]<-normalized[,fields]
+    out$primary_name[row]<-d$preferred_name[1]
+    out$name_override_evidence[row]<-paste(unique(d$evidence_url),collapse=' | ')
+    denom<-dn_church_denom(normalized$name_expanded,raw$denomination)
+    out$denom_from_name[row]<-denom$denom_from_name
+    out$denom_basis[row]<-denom$denom_basis;out$denom_conflict[row]<-denom$denom_conflict
+    if(denom$denom_conflict) out$denom_norm[row]<-NA_character_
+  }
+  out
+}

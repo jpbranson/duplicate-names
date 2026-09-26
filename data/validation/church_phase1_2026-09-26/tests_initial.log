@@ -1,0 +1,163 @@
+v | F W  S  OK | Context
+
+/ |          0 | churches                                                       
+| |          3 | churches                                                       
+| |         11 | churches                                                       
+| |         15 | churches                                                       
+\ |         18 | churches                                                       
+| |         23 | churches                                                       
+\ | 1       29 | churches                                                       
+| | 3       32 | churches                                                       
+x | 3       34 | churches [2.0s]
+--------------------------------------------------------------------------------
+Failure ('test-churches.R:83:3'): ladder uses distinct observed rungs and reports missing rungs
+Expected `b$max_ordinal` to equal 3L.
+Differences:
+1/1 mismatches
+[1] 2 - 3 == -1
+
+Failure ('test-churches.R:83:34'): ladder uses distinct observed rungs and reports missing rungs
+Expected `b$completeness` to equal `2/3`.
+Differences:
+1/1 mismatches
+[1] 1 - 0.667 == 0.333
+
+Failure ('test-churches.R:84:3'): ladder uses distinct observed rungs and reports missing rungs
+Expected `b$missing_rungs` to be identical to "1".
+Differences:
+1/1 mismatches
+x[1]: ""
+y[1]: "1"
+--------------------------------------------------------------------------------
+
+/ |          0 | museum-identity                                                
+- |          1 | museum-identity                                                
+| |         11 | museum-identity                                                
+| |         15 | museum-identity                                                
+/ |         20 | museum-identity                                                
+\ |         26 | museum-identity                                                
+/ |         28 | museum-identity                                                
+/ |         32 | museum-identity                                                
+- |         45 | museum-identity                                                
+\ |         50 | museum-identity                                                
+| |         59 | museum-identity                                                
+/ |         64 | museum-identity                                                
+v |         67 | museum-identity [1.6s]
+
+/ |          0 | museum-names                                                   
+- |          1 | museum-names                                                   
+| |         11 | museum-names                                                   
+| |         15 | museum-names                                                   
+\ |         18 | museum-names                                                   
+- |         21 | museum-names                                                   
+v |         22 | museum-names
+
+/ |          0 | museum-publication                                             
+| |          7 | museum-publication                                             
+v |         12 | museum-publication
+
+/ |          0 | museum-review-context                                          
+- |          1 | museum-review-context                                          
+v |         23 | museum-review-context [6.6s]
+
+/ |          0 | museums                                                        
+- |          1 | museums                                                        
+/ |          4 | museums                                                        
+- |          9 | museums                                                        
+/ |         20 | museums                                                        
+\ |         22 | museums                                                        
+\ |         30 | museums                                                        
+| |         31 | museums                                                        
+| |         35 | museums                                                        
+- |         37 | museums                                                        
+/ |         40 | museums                                                        
+| |         47 | museums                                                        
+| |         51 | museums                                                        
+\ |         58 | museums                                                        
+- |         61 | museums                                                        
+\ |         70 | museums                                                        
+- |         73 | museums                                                        
+/ |         76 | museums                                                        
+v |         82 | museums [2.6s]
+
+/ |          0 | normalize                                                      
+/ |         24 | normalize                                                      
+v |         31 | normalize
+
+/ |          0 | schema                                                         
+| |          7 | schema                                                         
+| | 1       14 | schema                                                         
+x | 2       24 | schema
+--------------------------------------------------------------------------------
+Error ('test-schema.R:36:3'): empty source data pass through normalization, resolution and counting
+Error in `src_osm()`: could not find function "src_osm"
+Backtrace:
+    x
+ 1. +-global dn_normalize(dn_bind_sources(src_osm(), src_gnis(), src_hifld())) at test-schema.R:36:3
+ 2. | \-global dn_validate(raw, dn_schema_raw(), label = "normalize input")
+ 3. \-global dn_bind_sources(src_osm(), src_gnis(), src_hifld())
+
+Error ('test-schema.R:87:3'): dn_bind_sources accepts the empty church stubs
+Error in `src_osm()`: could not find function "src_osm"
+Backtrace:
+    x
+ 1. +-testthat::expect_silent(...) at test-schema.R:87:3
+ 2. | \-testthat:::quasi_capture(enquo(object), NULL, evaluate_promise)
+ 3. |   +-testthat (local) .capture(...)
+ 4. |   | +-withr::with_output_sink(...)
+ 5. |   | | \-base::force(code)
+ 6. |   | +-base::withCallingHandlers(...)
+ 7. |   | \-base::withVisible(code)
+ 8. |   \-rlang::eval_bare(quo_get_expr(.quo), quo_get_env(.quo))
+ 9. \-global dn_bind_sources(src_osm(), src_gnis(), src_hifld())
+--------------------------------------------------------------------------------
+
+== Results =====================================================================
+Duration: 14.1 s
+
+-- Failed tests ----------------------------------------------------------------
+Failure ('test-churches.R:83:3'): ladder uses distinct observed rungs and reports missing rungs
+Expected `b$max_ordinal` to equal 3L.
+Differences:
+1/1 mismatches
+[1] 2 - 3 == -1
+
+Failure ('test-churches.R:83:34'): ladder uses distinct observed rungs and reports missing rungs
+Expected `b$completeness` to equal `2/3`.
+Differences:
+1/1 mismatches
+[1] 1 - 0.667 == 0.333
+
+Failure ('test-churches.R:84:3'): ladder uses distinct observed rungs and reports missing rungs
+Expected `b$missing_rungs` to be identical to "1".
+Differences:
+1/1 mismatches
+x[1]: ""
+y[1]: "1"
+
+Error ('test-schema.R:36:3'): empty source data pass through normalization, resolution and counting
+Error in `src_osm()`: could not find function "src_osm"
+Backtrace:
+    x
+ 1. +-global dn_normalize(dn_bind_sources(src_osm(), src_gnis(), src_hifld())) at test-schema.R:36:3
+ 2. | \-global dn_validate(raw, dn_schema_raw(), label = "normalize input")
+ 3. \-global dn_bind_sources(src_osm(), src_gnis(), src_hifld())
+
+Error ('test-schema.R:87:3'): dn_bind_sources accepts the empty church stubs
+Error in `src_osm()`: could not find function "src_osm"
+Backtrace:
+    x
+ 1. +-testthat::expect_silent(...) at test-schema.R:87:3
+ 2. | \-testthat:::quasi_capture(enquo(object), NULL, evaluate_promise)
+ 3. |   +-testthat (local) .capture(...)
+ 4. |   | +-withr::with_output_sink(...)
+ 5. |   | | \-base::force(code)
+ 6. |   | +-base::withCallingHandlers(...)
+ 7. |   | \-base::withVisible(code)
+ 8. |   \-rlang::eval_bare(quo_get_expr(.quo), quo_get_env(.quo))
+ 9. \-global dn_bind_sources(src_osm(), src_gnis(), src_hifld())
+
+[ FAIL 5 | WARN 0 | SKIP 0 | PASS 295 ]
+Error:
+! Test failures.
+Execution halted

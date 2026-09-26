@@ -1,0 +1,10 @@
+{
+  "source_rows": 1032223,
+  "parser_changes": 225,
+  "pair_changes": 19,
+  "merge_changes": 2,
+  "membership_changes": 0,
+  "raw_fields_unchanged": true,
+  "threshold": 0.85,
+  "status": "dry_run_only"
+}

@@ -1,0 +1,19 @@
+check,passed
+Automatic baseline unchanged,TRUE
+Baseline multisite queue unchanged,TRUE
+All 60002 original source rows and normalized fields unchanged,TRUE
+Saved records match guarded replay,TRUE
+Saved analysis matches replay,TRUE
+Source records counted 57284,TRUE
+Institutions counted 52575; eligible 52443,TRUE
+104 identity rows in 41 cases,TRUE
+Franklin bare-name institutions 6,TRUE
+Greene and Jackson remain 11 each,TRUE
+Old Jail headline remains 11 non-chain,TRUE
+"21 factual reviews complete, four not-museum records",TRUE
+Reviewed Parquet refreshed,TRUE
+Baseline Parquet unchanged,TRUE
+Earlier packets and original human labels preserved,TRUE
+Records outside four cases unchanged,TRUE
+Threshold remains 0.85,TRUE
+Unfinished Franklin group cannot pass publication gate,TRUE

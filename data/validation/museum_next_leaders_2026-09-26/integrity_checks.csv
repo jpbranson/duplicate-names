@@ -1,0 +1,20 @@
+check,passed
+Automatic baseline unchanged,TRUE
+Baseline multisite queue unchanged,TRUE
+All source rows and normalized fields preserved,TRUE
+Guarded identity replay matches pipeline,TRUE
+Analysis with preferred names matches replay,TRUE
+Reviewed Parquet matches pipeline,TRUE
+Baseline Parquet unchanged,TRUE
+553 earlier evidence files and human labels preserved,TRUE
+Identity rows outside the new cases unchanged,TRUE
+Threshold remains 0.85,TRUE
+Final reviewed count checkpoint,TRUE
+160 identity rows in 63 cases,TRUE
+53 complete reviews and 12 not-museum decisions,TRUE
+One unresolved Wayne bare-name record; no bare Depot names,TRUE
+Kentucky mixed legal identity remains isolated,TRUE
+Eight isolated source conflicts retained,TRUE
+Stratford unresolved society remains separate from museum,TRUE
+Unfinished leading name fails explicit publication gate,TRUE
+Reviewed Pea River name passes status gate,TRUE

@@ -1,0 +1,18 @@
+check,passed
+Automatic baseline unchanged,TRUE
+Automatic multisite review unchanged,TRUE
+60002 original source rows and normalized fields preserved,TRUE
+Reviewed records match guarded replay,TRUE
+Analysis matches guarded names and decisions,TRUE
+Reviewed Parquet matches saved target,TRUE
+Baseline Parquet matches unchanged target,TRUE
+All prior packets and original human labels preserved,TRUE
+Identity rows outside Barnesville unchanged,TRUE
+Threshold remains 0.85,TRUE
+57273 counted source rows,TRUE
+52560 counted institutions and 52428 eligible,TRUE
+123 identity rows in 50 cases,TRUE
+36 complete factual reviews and nine non-museum decisions,TRUE
+Eight non-chain Old Jail institutions,TRUE
+Unfinished Old Jail headline fails explicit publication gate,TRUE
+Smethport preferred name and raw name both retained,TRUE

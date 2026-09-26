@@ -1,0 +1,368 @@
+[
+  {
+    "id": "cass_ia_home",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 954
+  },
+  {
+    "id": "cass_ia_history",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 2011
+  },
+  {
+    "id": "cass_mo_home",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 1134
+  },
+  {
+    "id": "cass_mo_about",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 1745
+  },
+  {
+    "id": "cass_mo_exhibits",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 796
+  },
+  {
+    "id": "cass_mo_city",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 2237
+  },
+  {
+    "id": "cass_in_home",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 3255
+  },
+  {
+    "id": "cass_in_contact",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 2502
+  },
+  {
+    "id": "cass_mn_home",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 2781
+  },
+  {
+    "id": "cass_mn_state",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 100204
+  },
+  {
+    "id": "cass_il_home",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 2457
+  },
+  {
+    "id": "cass_il_library",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 1960
+  },
+  {
+    "id": "cass_mi_home",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 2283
+  },
+  {
+    "id": "cass_mi_newton",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 1815
+  },
+  {
+    "id": "cass_mi_school",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 1239
+  },
+  {
+    "id": "cass_mi_cabin",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 1965
+  },
+  {
+    "id": "cass_mi_dowagiac",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 2146
+  },
+  {
+    "id": "cass_il_about",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 1090
+  },
+  {
+    "id": "cass_il_museum",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 503
+  },
+  {
+    "id": "cass_mo_board",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 1090
+  },
+  {
+    "id": "cass_mo_cabin",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 1109
+  },
+  {
+    "id": "cass_mi_city_governance",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 2424
+  },
+  {
+    "id": "chester_ct_home",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 2822
+  },
+  {
+    "id": "chester_ct_history",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 5701
+  },
+  {
+    "id": "chester_ct_visit",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 2981
+  },
+  {
+    "id": "chester_ny_about",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 4451
+  },
+  {
+    "id": "chestertown_about",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 1446
+  },
+  {
+    "id": "chester_vt_home",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 418
+  },
+  {
+    "id": "chester_nh_home",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 6329
+  },
+  {
+    "id": "chester_nh_town",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 2298
+  },
+  {
+    "id": "chester_nj_home",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 12017
+  },
+  {
+    "id": "chester_nj_history",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 3755
+  },
+  {
+    "id": "chester_nj_present",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 4943
+  },
+  {
+    "id": "crawford_ia_destination",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 4015
+  },
+  {
+    "id": "crawford_ar_directory",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 17908
+  },
+  {
+    "id": "crawford_ar_history",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 25068
+  },
+  {
+    "id": "crawford_mo_city",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 4571
+  },
+  {
+    "id": "crawford_mo_state",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 3870
+  },
+  {
+    "id": "crawford_mo_operator",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 264312
+  },
+  {
+    "id": "crawford_wi_state",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 8936
+  },
+  {
+    "id": "crawford_il_chamber",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 6899
+  },
+  {
+    "id": "crawford_mi_home",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 369
+  },
+  {
+    "id": "crawford_ga_home",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 2295
+  },
+  {
+    "id": "crawford_ga_pottery",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 818
+  },
+  {
+    "id": "crawford_ga_indians",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 593
+  },
+  {
+    "id": "crawford_ga_jail",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 3271
+  },
+  {
+    "id": "crawford_pa_home",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 10070
+  },
+  {
+    "id": "crawford_pa_contact",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 7588
+  },
+  {
+    "id": "chester_vt_town",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 8124
+  },
+  {
+    "id": "chester_vt_release",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 6505
+  },
+  {
+    "id": "irs_il",
+    "detected": "csv",
+    "extension_mismatch": false,
+    "note": "Structured public records; see the selected IRS JSON rows."
+  },
+  {
+    "id": "illinois_museum_directory",
+    "detected": "pdf",
+    "extension_mismatch": false,
+    "characters": 136531
+  },
+  {
+    "id": "crawford_mi_board",
+    "detected": "pdf",
+    "extension_mismatch": false,
+    "characters": 279
+  },
+  {
+    "id": "crawford_pa_about",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 5139
+  },
+  {
+    "id": "crawford_pa_research",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 11156
+  },
+  {
+    "id": "crawford_pa_repository",
+    "detected": "pdf",
+    "extension_mismatch": false,
+    "characters": 2978
+  },
+  {
+    "id": "chester_nj_constitution",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 12105
+  },
+  {
+    "id": "crawford_pa_baldwin",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 4885
+  },
+  {
+    "id": "chester_ct_newsletter",
+    "detected": "pdf",
+    "extension_mismatch": false,
+    "characters": 26982
+  },
+  {
+    "id": "crawford_pa_johnson",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 4982
+  },
+  {
+    "id": "crawford_pa_archive",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 20724
+  }
+]

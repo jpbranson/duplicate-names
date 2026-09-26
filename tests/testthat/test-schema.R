@@ -33,7 +33,7 @@ test_that("the schemas nest as documented", {
 })
 
 test_that("empty source data pass through normalization, resolution and counting", {
-  normalized <- dn_normalize(dn_bind_sources(src_osm(), src_gnis(), src_hifld()))
+  normalized <- dn_normalize(dn_bind_sources(dn_schema_raw(), dn_schema_raw(), dn_schema_raw()))
   resolved <- dn_resolve(normalized)
   expect_identical(resolved, dn_schema_entity())
   expect_identical(dn_apply_counting_policy(resolved), resolved)
@@ -81,10 +81,10 @@ test_that("dn_bind_sources rejects a reused source_id with different content", {
   expect_error(dn_bind_sources(base, other), "DIFFERING content")
 })
 
-test_that("dn_bind_sources accepts the empty church stubs", {
-  # Only the Phase 1b stubs: src_overture() and src_imls() now hit the network
-  # and the filesystem, so they do not belong in a unit test.
-  expect_silent(dn_bind_sources(src_osm(), src_gnis(), src_hifld()))
+test_that("dn_bind_sources accepts empty source schemas", {
+  # Source adapters now perform acquisition and may hit the network
+  # and filesystem; use empty contract fixtures in this unit test.
+  expect_silent(dn_bind_sources(dn_schema_raw(), dn_schema_raw(), dn_schema_raw()))
 })
 
 test_that("rare-token gate distinguishes identity from generic label", {
@@ -129,3 +129,4 @@ test_that("the museum name leads and the alternate is preserved", {
   expect_equal(dn_institution_type("county historical museum"), "museum")
   expect_true(is.na(dn_institution_type("old jail")))
 })
+

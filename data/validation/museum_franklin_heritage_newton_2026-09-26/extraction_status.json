@@ -1,0 +1,236 @@
+[
+  {
+    "id": "fr_me_state",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 8856
+  },
+  {
+    "id": "fr_me_report",
+    "detected": "pdf",
+    "extension_mismatch": false,
+    "characters": 147190
+  },
+  {
+    "id": "fr_wi_home",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 4776
+  },
+  {
+    "id": "fr_wi_buildings",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 4629
+  },
+  {
+    "id": "fr_ct_volunteer",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 2937
+  },
+  {
+    "id": "fr_nj_trust",
+    "detected": "pdf",
+    "extension_mismatch": false,
+    "characters": 177183
+  },
+  {
+    "id": "new_ar_home",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 1179
+  },
+  {
+    "id": "new_in_tourism",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 1636
+  },
+  {
+    "id": "new_mo_about",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 1126
+  },
+  {
+    "id": "new_ms_info",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 6005
+  },
+  {
+    "id": "her_falf_city",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 951
+  },
+  {
+    "id": "her_falf_home",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 2721
+  },
+  {
+    "id": "her_va_about",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 7847
+  },
+  {
+    "id": "her_va_name",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 3804
+  },
+  {
+    "id": "her_austin_museum",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 2713
+  },
+  {
+    "id": "her_md_2011",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 12615
+  },
+  {
+    "id": "her_ore_home",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 7763
+  },
+  {
+    "id": "her_ore_museum",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 6469
+  },
+  {
+    "id": "fr_wi_about",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 3362
+  },
+  {
+    "id": "fr_wi_contact",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 2393
+  },
+  {
+    "id": "fr_ct_home",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 3676
+  },
+  {
+    "id": "fr_ct_board",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 2093
+  },
+  {
+    "id": "fr_ct_guide",
+    "detected": "pdf",
+    "extension_mismatch": false,
+    "characters": 538571
+  },
+  {
+    "id": "fr_nj_minutes2017",
+    "detected": "pdf",
+    "extension_mismatch": false,
+    "characters": 24122
+  },
+  {
+    "id": "fr_nj_museum1998",
+    "detected": "pdf",
+    "extension_mismatch": false,
+    "characters": 135495
+  },
+  {
+    "id": "new_ar_about",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 3034
+  },
+  {
+    "id": "new_in_scott",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 1507
+  },
+  {
+    "id": "new_in_scott_nps",
+    "detected": "pdf",
+    "extension_mismatch": false,
+    "characters": 30232
+  },
+  {
+    "id": "new_ga_1997",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 393510
+  },
+  {
+    "id": "new_ms_archives",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 10339
+  },
+  {
+    "id": "her_va_visit",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 3639
+  },
+  {
+    "id": "her_austin_board",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 6062
+  },
+  {
+    "id": "her_ia_school",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 3151
+  },
+  {
+    "id": "her_ia_history",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 2822
+  },
+  {
+    "id": "her_jewish_home",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 1456
+  },
+  {
+    "id": "her_jewish_board",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 1111
+  },
+  {
+    "id": "fr_in_home",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 1663
+  },
+  {
+    "id": "fr_in_contact",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 1105
+  },
+  {
+    "id": "fr_in_about",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 1374
+  }
+]

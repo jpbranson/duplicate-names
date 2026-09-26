@@ -1,0 +1,43 @@
+churches: .....................................................................
+museum-identity: .....................................................................................
+museum-names: ......................
+museum-publication: ............
+museum-review-context: .......................
+museums: ..................................................................................
+normalize: ...............................
+schema: ............................
+
+== DONE ========================================================================
+skipped 1 targets
+dispatched target church_scope_decisions_file
+completed target church_scope_decisions_file [920ms, 1.27 kB]
+skipped 5 targets
+dispatched target church_scope_decisions
+completed target church_scope_decisions [80ms, 853 B]
+dispatched target church_normalized
+completed target church_normalized [6m 18.2s, 69.67 MB]
+dispatched target church_pairs
+[church pairs] 447836 worship-site queries; 934283 source targets
+[church pairs] scoring 565643 candidate pairs; no legacy-only comparisons
+[church pairs] batch 1/12
+[church pairs] batch 2/12
+[church pairs] batch 3/12
+[church pairs] batch 4/12
+[church pairs] batch 5/12
+[church pairs] batch 6/12
+[church pairs] batch 7/12
+[church pairs] batch 8/12
+[church pairs] batch 9/12
+[church pairs] batch 10/12
+[church pairs] batch 11/12
+[church pairs] batch 12/12
+completed target church_pairs [3m 20.2s, 8.40 MB]
+dispatched target church_records
+completed target church_records [36.9s, 107.24 MB]
+dispatched target church_analysis
+completed target church_analysis [39.4s, 79.55 MB]
+dispatched target church_named_analysis
+completed target church_named_analysis [980ms, 84.82 MB]
+dispatched target church_output_files
+completed target church_output_files [40.2s, 333.24 MB]
+v ended pipeline [13m 30.4s, 8 completed, 9 skipped]

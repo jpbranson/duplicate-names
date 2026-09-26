@@ -1,0 +1,60 @@
+v | F W  S  OK | Context
+
+/ |          0 | museum-identity                                                
+- |          1 | museum-identity                                                
+| |         11 | museum-identity                                                
+\ |         14 | museum-identity                                                
+/ |         20 | museum-identity                                                
+\ |         26 | museum-identity                                                
+- |         29 | museum-identity                                                
+/ |         32 | museum-identity                                                
+- |         45 | museum-identity                                                
+\ |         50 | museum-identity                                                
+| |         59 | museum-identity                                                
+/ |         64 | museum-identity                                                
+v |         67 | museum-identity [2.0s]
+
+/ |          0 | museum-names                                                   
+- |          1 | museum-names                                                   
+\ |         14 | museum-names                                                   
+| |         15 | museum-names                                                   
+| |         19 | museum-names                                                   
+v |         22 | museum-names
+
+/ |          0 | museum-review-context                                          
+- |          1 | museum-review-context                                          
+v |         23 | museum-review-context [3.4s]
+
+/ |          0 | museums                                                        
+- |          1 | museums                                                        
+/ |          4 | museums                                                        
+- |          9 | museums                                                        
+/ |         20 | museums                                                        
+| |         27 | museums                                                        
+\ |         30 | museums                                                        
+| |         31 | museums                                                        
+/ |         36 | museums                                                        
+| |         39 | museums                                                        
+| |         43 | museums                                                        
+| |         47 | museums                                                        
+| |         51 | museums                                                        
+\ |         58 | museums                                                        
+- |         61 | museums                                                        
+\ |         70 | museums                                                        
+- |         73 | museums                                                        
+- |         77 | museums                                                        
+v |         82 | museums [2.9s]
+
+/ |          0 | normalize                                                      
+/ |         28 | normalize                                                      
+v |         31 | normalize
+
+/ |          0 | schema                                                         
+- |          9 | schema                                                         
+\ |         18 | schema                                                         
+v |         28 | schema
+
+== Results =====================================================================
+Duration: 9.6 s
+
+[ FAIL 0 | WARN 0 | SKIP 0 | PASS 253 ]

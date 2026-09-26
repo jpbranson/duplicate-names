@@ -241,6 +241,32 @@ test_that("publication cannot use a provisional ranking or unsourced decisions",
   expect_silent(dn_assert_museum_publication_ready(a, a$name_expanded))
 })
 
+test_that("headline-sufficient evidence passes the gate without changing review status", {
+  a <- dn_museum_analysis(museum_fixture(c("Old Jail Museum", "Old Jail Museum")))
+  a$review_status <- c("verified", "pending")
+  a$affiliation_status <- c("independent", "unknown")
+  review <- data.frame(group = "old jail museum", source = "test", source_id = "2",
+    a_distinct_public_museum = "yes", b_plausibly_operating = "yes",
+    c_no_shared_operator_in_group = "yes", evidence_url = "https://example.org/jail",
+    checked_on = "2026-09-26")
+  run <- function(r) dn_assert_museum_publication_ready(a, "old jail museum", r, as.Date("2026-09-26"))
+  expect_error(dn_assert_museum_publication_ready(a, "old jail museum"), "completed identity")
+  expect_silent(run(review))
+  expect_equal(a$review_status, c("verified", "pending"))
+  for (field in c("a_distinct_public_museum", "b_plausibly_operating", "c_no_shared_operator_in_group")) {
+    bad <- review; bad[[field]] <- "no"; expect_error(run(bad), "completed identity")
+  }
+  bad <- review; bad$group <- "old jail"; expect_error(run(bad), "completed identity")
+  bad <- review; bad$source_id <- "3"; expect_error(run(bad), "completed identity")
+  bad <- review; bad$evidence_url <- "http://example.org/jail"; expect_error(run(bad), "completed identity")
+  bad <- review; bad$checked_on <- "2026-09-27"; expect_error(run(bad), "completed identity")
+  bad <- review; bad$checked_on <- "26/09/2026"; expect_error(run(bad), "completed identity")
+  expect_error(run(rbind(review, review)), "Duplicate headline review")
+  expect_error(run(review[, -1]), "fields missing")
+  a$analysis_eligible[2] <- FALSE
+  expect_error(run(review), "completed identity")
+})
+
 test_that("nearby review pairs use distances without assigning matching labels", {
   x <- museum_fixture(rep("Example Museum", 3))
   x$lon <- c(-90, -90.01, -100)

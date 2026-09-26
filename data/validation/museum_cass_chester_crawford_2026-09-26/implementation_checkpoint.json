@@ -1,0 +1,14 @@
+[
+  {
+    "path": "R/museum_identity.R",
+    "sha256": "707537d041b36cc7c09fb854d4c7a52bbc3094a49a7dc4b368e426fb9e22fd97"
+  },
+  {
+    "path": "tests/testthat/test-museum-identity.R",
+    "sha256": "2043de7f98081f33171e87a3319c4797522e628c601d11eba5a3bc4e9b9aa14f"
+  },
+  {
+    "path": "DESIGN.md",
+    "sha256": "9cb00f039b85cc60743a853bab830e1d5d275973ee8935166dd2f37c1e20e89c"
+  }
+]

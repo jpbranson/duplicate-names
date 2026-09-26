@@ -1,0 +1,19 @@
+check,passed
+Automatic baseline unchanged,TRUE
+Baseline multisite queue unchanged,TRUE
+All source rows and normalized fields preserved,TRUE
+Guarded identity replay matches pipeline,TRUE
+Analysis with preferred names matches replay,TRUE
+Reviewed Parquet matches pipeline,TRUE
+Baseline Parquet unchanged,TRUE
+638 earlier evidence files and human labels preserved,TRUE
+Identity rows outside the new cases unchanged,TRUE
+Threshold remains 0.85,TRUE
+Current counts match reviewed dry run,TRUE
+179 identity rows in 69 cases,TRUE
+65 complete reviews and 15 supported not-museum decisions,TRUE
+Unresolved Adams and Brown bare-name groups retained,TRUE
+Earlier eight source conflicts unchanged,TRUE
+Hiawatha preserves three identities and two counted museums,TRUE
+Gettysburg former address retained; Shriver separate,TRUE
+Remaining leader fails explicit publication gate,TRUE

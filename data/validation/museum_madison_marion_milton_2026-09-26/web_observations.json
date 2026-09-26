@@ -1,0 +1,38 @@
+[
+  {
+    "id": "madison_la_operator_profile",
+    "url": "https://www.museumsusa.org/museums/info/21666",
+    "channel": "web rendered page; native timeout",
+    "observation": "Profile identifies Hermione Museum, 315 N Mulberry, PO Box 268 and phone 3185740082, owned and operated by Madison Historical Society. Annual elected officers and five directors are described. John Earl Martin is named assistant curator; IRS mailbox contact agrees. Page inspected 2026-09-26."
+  },
+  {
+    "id": "madison_oh_about",
+    "url": "https://madisonohiohistoricalsociety.org/about/",
+    "channel": "web rendered page; native 403",
+    "observation": "Operator describes several temporary locations before buying 126 W Main in July 2020. Current PO Box 515, museum hours and executive board are shown. Exact former 13 W Main and 45 N Lake roles remain unsourced."
+  },
+  {
+    "id": "marion_ga_smithsonian",
+    "url": "https://www.si.edu/es/object/pasaquan-sculpture%3Asiris_ari_331011",
+    "channel": "web indexed catalog; native 403 and open error",
+    "observation": "Smithsonian American Art Museum catalog for Pasaquan, survey 1993, identifies Marion County Historical Society at PO Box 564, Buena Vista, as administrator. Historic record only; current ownership comes from CSU sources."
+  },
+  {
+    "id": "marion_ga_director",
+    "url": "https://www.columbusstate.edu/art/contact-us.php",
+    "channel": "web rendered page",
+    "observation": "University art directory identifies Michael McFalls as Professor / Director, Pasaquan and Bo Bartlett Center. Both centers are linked as university outreach programs."
+  },
+  {
+    "id": "milton_pa_train",
+    "url": "https://www.miltonmodeltrainmuseum.org/p/contact.html",
+    "channel": "web rendered page; native HTTP2 error",
+    "observation": "Museum identifies layout ownership by TIME (The Improved Milton Experience), a separate nonprofit; visitor address 139 South Front and mailbox PO534. Page disagrees internally about third versus fourth floor; no floor claim used."
+  },
+  {
+    "id": "marion_ms_ford",
+    "url": "https://www.apps.mdah.ms.gov/public/prop.aspx?id=21654&view=facts&y=728",
+    "channel": "web rendered government record",
+    "observation": "State historic property record describes John Ford House ownership transferred to the county historical society in 1962 and society-requested landmark designation in 1995. Current public operation remains a follow-up, not certified by historical ownership alone."
+  }
+]

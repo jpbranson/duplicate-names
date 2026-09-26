@@ -1,0 +1,51 @@
+# A tibble: 1 x 9
+  source_rows counted_rows institutions eligible identity_rows identity_cases
+        <int>        <int>        <int>    <int>         <int>          <int>
+1       60002        57126        52426    52294           370            157
+  complete_reviews not_museum overrides
+             <int>      <int>     <int>
+1              158         24        97
+# A tibble: 12 x 10
+    rank name_expanded                        n_entities n_chain
+   <int> <chr>                                     <int>   <int>
+ 1     1 old jail museum                               8       3
+ 2     2 franklin historical society                   7       0
+ 3     3 heritage museum                               7       0
+ 4     4 newton county historical society              7       0
+ 5     5 telephone museum                              7       0
+ 6     6 union county historical society               7       0
+ 7     7 washington historical society                 7       0
+ 8     8 antique car museum                            6       0
+ 9     9 bethel historical society                     6       0
+10    10 clinton historical society                    6       0
+11    11 concord historical society                    6       0
+12    12 cumberland county historical society          6       0
+   n_independent_verified n_affiliation_unknown n_category_pending n_multisite
+                    <int>                 <int>              <int>       <int>
+ 1                      4                     4                  0           0
+ 2                      0                     7                  0           0
+ 3                      0                     7                  0           0
+ 4                      0                     7                  0           0
+ 5                      0                     7                  0           0
+ 6                      0                     7                  0           0
+ 7                      0                     7                  0           0
+ 8                      0                     6                  0           0
+ 9                      0                     6                  0           0
+10                      0                     6                  0           0
+11                      0                     6                  0           0
+12                      0                     6                  0           0
+   n_review_pending publication_ready
+              <int> <lgl>            
+ 1                4 FALSE            
+ 2                7 FALSE            
+ 3                7 FALSE            
+ 4                7 FALSE            
+ 5                7 FALSE            
+ 6                7 FALSE            
+ 7                7 FALSE            
+ 8                6 FALSE            
+ 9                6 FALSE            
+10                6 FALSE            
+11                6 FALSE            
+12                6 FALSE            
+Dry run passed; no live decision inputs changed.

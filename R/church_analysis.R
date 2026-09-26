@@ -1,0 +1,118 @@
+# Church analysis contract; source and resolved-record schemas are shared unchanged.
+dn_schema_church_analysis <- function() {
+  dplyr::bind_cols(dn_schema_entity(),tibble::tibble(place_match_status=character(),place_class=character(),
+    state_match_status=character(),denom_from_name=character(),denom_basis=character(),denom_conflict=logical(),
+    analysis_exclusion=character(),analysis_eligible=logical(),review_status=character()))
+}
+# One provisional canonical worship-site row per Overture entity, with all holds.
+dn_church_analysis <- function(records,places,states) {
+  if(!nrow(records)) return(dn_schema_church_analysis())
+  x<-records[records$source=='overture',]
+  x<-x[!duplicated(x$entity_id),]
+  x<-dn_attach_church_places(x,places)
+  valid<-which(is.finite(x$lon) & is.finite(x$lat) & abs(x$lon)<=180 & abs(x$lat)<=90)
+  x$state_match_status<-'invalid_coordinates'
+  # State assignment must not depend on being inside a Census place.
+  x$state_fips<-NA_character_
+  if(length(valid)) {
+    pts<-sf::st_as_sf(x[valid,c('lon','lat')],coords=c('lon','lat'),crs=4326)
+    hit<-sf::st_intersects(pts,states)
+    x$state_match_status[valid]<-ifelse(lengths(hit)==1L,'one_state',ifelse(lengths(hit)==0L,'outside_50_states_dc','ambiguous_boundary'))
+    ok<-which(lengths(hit)==1L); x$state_fips[valid[ok]]<-states$STATEFP[unlist(hit[ok],use.names=FALSE)]
+  }
+  denom<-dn_church_denom(x$name_expanded,x$denomination)
+  x$denom_from_name<-denom$denom_from_name;x$denom_basis<-denom$denom_basis;x$denom_conflict<-denom$denom_conflict
+  # Tag wins during candidate matching; unresolved contradictions are held out of
+  # denomination-specific metrics while both source claims remain auditable.
+  x$denom_norm[x$denom_conflict]<-NA_character_
+  x$analysis_exclusion<-dplyr::case_when(!x$counted ~ x$exclusion_reason,
+    x$state_match_status!='one_state' ~ x$state_match_status,TRUE ~ NA_character_)
+  x$analysis_eligible<-is.na(x$analysis_exclusion)
+  x$review_status<-'pending'
+  dn_validate(x,dn_schema_church_analysis(),'church analysis')
+}
+
+dn_export_church_outputs <- function(records,analysis,pairs,normalized,places,folder='data/processed/church_review') {
+  dir.create(folder,recursive=TRUE,showWarnings=FALSE)
+  files<-character()
+  write<-function(x,name) {f<-file.path(folder,paste0(name,'.csv'));readr::write_csv(x,f,na='');files<<-c(files,f)}
+  write(metric_duplicate_counts(analysis,category='place_of_worship'), 'duplicate_counts')
+  write(metric_municipal_exclusivity(analysis,places),'census_place_exclusivity')
+  incorporated<-places[grepl('^C',places$CLASSFP),]
+  inc<-analysis;inc$place_geoid[!inc$place_geoid %in% incorporated$GEOID]<-NA_character_
+  write(metric_municipal_exclusivity(inc,incorporated),'incorporated_place_exclusivity')
+  write(metric_ladder_completeness(analysis),'ordinal_ladders')
+  write(metric_name_style_profile(analysis),'naming_style_profile')
+  write(artifact_municipal_multiplicity(analysis),'municipal_multiplicity')
+  first<-analysis[analysis$analysis_eligible & analysis$ordinal %in% 1L,]
+  territory<-metric_territory_radius(first,unique(first$name_core))
+  write(territory,'territory_distances')
+  summary<-territory |>
+    dplyr::filter(!is.na(.data$denom_norm)) |>
+    dplyr::group_by(.data$denom_norm) |>
+    dplyr::summarise(n=dplyr::n(),n_with_neighbor=sum(is.finite(.data$distance_km)),
+      median_km=if(any(is.finite(.data$distance_km))) median(.data$distance_km,na.rm=TRUE) else NA_real_,
+      p10_km=if(any(is.finite(.data$distance_km))) as.numeric(quantile(.data$distance_km,.1,na.rm=TRUE)) else NA_real_,
+      p90_km=if(any(is.finite(.data$distance_km))) as.numeric(quantile(.data$distance_km,.9,na.rm=TRUE)) else NA_real_,.groups='drop')
+  write(summary,'territory_summary')
+  write(analysis |>
+    dplyr::filter(.data$analysis_eligible,!is.na(.data$ordinal)) |>
+    dplyr::arrange(dplyr::desc(.data$ordinal),.data$entity_id) |>
+    dplyr::slice_head(n=100),'high_ordinal_review')
+  write(analysis[analysis$denom_conflict,],'denomination_conflicts')
+  write(analysis |>
+    dplyr::count(.data$analysis_eligible,.data$analysis_exclusion,.data$place_match_status,.data$denom_basis,name='n_entities'),'coverage')
+  write(normalized |> dplyr::count(.data$source,.data$category_raw,.data$operating_status,name='n_records'),'source_coverage')
+  # An explicit incomplete gate travels with exports; a successful build is not validation.
+  write(tibble::tibble(check=c('independent_matching_labels','independent_classifier_labels','headline_source_reviews','publication'),
+    status='incomplete',note=c('Fresh labels required; museum labels do not transfer',
+      'Heuristic styles and denominational names are not self-graded','Highest ordinals and leading duplicates need official-source review','No final church claims certified')),'publication_gates')
+  path<-file.path(folder,'church_records.parquet');arrow::write_parquet(records,path);files<-c(files,path)
+  path<-file.path(folder,'church_analysis.parquet');arrow::write_parquet(analysis,path);files<-c(files,path)
+  clusters<-records |> dplyr::filter(.data$source=='overture') |>
+    dplyr::add_count(.data$entity_id,name='n_cluster_records') |>
+    dplyr::filter(.data$n_cluster_records>1L) |>
+    dplyr::arrange(dplyr::desc(.data$n_cluster_records),.data$entity_id)
+  clusters$human_cluster_decision<-NA_character_;clusters$reviewer<-NA_character_
+  write(clusters,'cluster_review')
+  unparsed<-analysis[analysis$analysis_eligible & is.na(analysis$ordinal) &
+    grepl('^[0-9]+(st|nd|rd|th) |hundred|thousand',analysis$name_clean),]
+  write(unparsed,'ordinal_parser_review')
+  dn_export_church_label_samples(normalized,pairs,analysis,folder)
+  c(files,list.files(folder,pattern='labels|predictions|cluster_review',full.names=TRUE))
+}
+
+dn_export_church_label_samples <- function(x,pairs,analysis,folder,seed=20260926L) {
+  set.seed(seed)
+  p<-pairs
+  p$pair_type<-ifelse(x$source[p$row_a]=='overture' & x$source[p$row_b]=='overture','spine',
+    ifelse(x$source[p$row_a]=='overture' | x$source[p$row_b]=='overture','cross_source','comparison_only'))
+  p<-p[p$pair_type!='comparison_only',]
+  p$band<-cut(p$similarity,c(-Inf,.60,.75,.85,.95,Inf),right=FALSE)
+  p<-p |> dplyr::group_by(.data$pair_type,.data$band) |>
+    dplyr::mutate(n_stratum=dplyr::n()) |> dplyr::slice_sample(n=30L) |> dplyr::ungroup()
+  p$pair_id<-sprintf('C%04d',seq_len(nrow(p)))
+  readr::write_csv(p,file.path(folder,'matching_predictions.csv'))
+  a<-p$row_a;b<-p$row_b
+  blind<-tibble::tibble(pair_id=p$pair_id,source_a=x$source[a],source_id_a=x$source_id[a],
+    name_a=x$name_raw[a],lon_a=x$lon[a],lat_a=x$lat[a],source_date_a=x$source_update_time[a],
+    source_b=x$source[b],source_id_b=x$source_id[b],name_b=x$name_raw[b],lon_b=x$lon[b],lat_b=x$lat[b],
+    source_date_b=x$source_update_time[b],distance_m=p$distance_m,
+    same_institution=NA_integer_,reviewer=NA_character_,evidence_url=NA_character_,note=NA_character_)
+  readr::write_csv(blind,file.path(folder,'matching_labels_blank.csv'),na='')
+  eligible<-analysis[analysis$analysis_eligible,]
+  style<-eligible |> dplyr::group_by(.data$name_style) |>
+    dplyr::mutate(n_stratum=dplyr::n()) |> dplyr::slice_sample(n=63L) |> dplyr::ungroup()
+  if(nrow(style)>500L) style<-dplyr::slice_sample(style,n=500L)
+  style$label_id<-sprintf('S%04d',seq_len(nrow(style)))
+  readr::write_csv(style[,c('label_id','entity_id','name_style','denom_norm','denom_basis','n_stratum')],file.path(folder,'classifier_predictions.csv'))
+  blind<-style[,c('label_id','entity_id','source','source_id','name_raw','lon','lat')]
+  blind$human_name_style<-NA_character_;blind$human_denom_family<-NA_character_
+  blind$reviewer<-NA_character_;blind$evidence_url<-NA_character_;blind$note<-NA_character_
+  readr::write_csv(blind,file.path(folder,'classifier_labels_blank.csv'),na='')
+  # Pair labels cannot validate transitive groups; export final multi-row clusters separately.
+  invisible(NULL)
+}
+
+
+

@@ -1,0 +1,80 @@
+# Refresh the selected museum review/export targets; preserve labelling_sheet.
+p <- 'data/validation/museum_african_imagination_2026-09-26'
+stopifnot(file.exists(file.path(p,'applied.json')))
+if(!'--verify-only'%in%commandArgs(trailingOnly=TRUE)) {
+  targets::tar_make(names=c(museum_review_files,museum_identity_audit_file,
+    museum_records_file,dup_museums,multisite_review,entities_file))
+  source('tests/testthat.R')
+}
+for(f in list.files('R',pattern='[.]R$',full.names=TRUE))source(f)
+before <- readRDS('data/processed/museum_african_imagination_before.rds')
+baseline <- targets::tar_read(entities)
+records <- targets::tar_read(museum_records)
+analysis <- targets::tar_read(museum_analysis)
+ids <- targets::tar_read(museum_identity_decisions)
+decisions <- targets::tar_read(museum_decisions)
+overrides <- targets::tar_read(museum_name_overrides)
+rules <- targets::tar_read(museum_chain_rules)
+gazetteer <- targets::tar_read(gazetteer)
+replay <- dn_reconcile_museums(baseline,ids)
+checks <- list()
+check <- function(label,result) {
+  checks[[length(checks)+1L]] <<- tibble::tibble(check=label,passed=isTRUE(result))
+  readr::write_csv(dplyr::bind_rows(checks),file.path(p,'integrity_checks.csv'))
+  if(!isTRUE(result))stop(label)
+}
+check('Automatic baseline unchanged',identical(baseline,before$entities))
+check('Baseline multisite queue unchanged',identical(targets::tar_read(multisite_review),before$multisite_review))
+check('All source rows and normalized fields preserved',nrow(records)==60002L &&
+  identical(records[names(dn_schema_normalized())],baseline[names(dn_schema_normalized())]))
+check('Guarded identity replay matches pipeline',identical(records,replay$records))
+check('Analysis with preferred names matches replay',identical(analysis,dn_museum_analysis(records,rules,decisions,overrides,gazetteer)))
+check('Reviewed Parquet matches pipeline',identical(tibble::as_tibble(arrow::read_parquet('data/processed/museum_records.parquet')),records))
+check('Baseline Parquet unchanged',identical(tibble::as_tibble(arrow::read_parquet('data/processed/entities.parquet')),baseline))
+protected <- readr::read_csv(file.path(p,'protected_files.csv'),show_col_types=FALSE)
+actual <- vapply(protected$path,function(path)digest::digest(file=path,algo='sha256'),character(1))
+check('977 earlier evidence files and human labels preserved',nrow(protected)==977L && identical(unname(actual),protected$sha256))
+old_ids <- readr::read_csv(file.path(p,'identity_decisions_before.csv'),show_col_types=FALSE)
+new_keys <- setdiff(ids$source_id,old_ids$source_id)
+changed <- records$source_id%in%new_keys
+check('Identity rows outside new cases unchanged',identical(records[!changed,],before$records[!changed,]))
+check('Threshold remains 0.85',identical(DN_NAME_SIM_MIN,0.85))
+check('Counts match reviewed dry run',sum(analysis$counted)==52480L && sum(analysis$analysis_eligible)==52348L && sum(records$counted)==57191L)
+check('258 identity rows in 106 cases',nrow(ids)==258L && dplyr::n_distinct(ids$case_id)==106L)
+check('110 complete reviews and 21 not-museum decisions',sum(analysis$review_status=='verified')==110L && sum(analysis$category_decision=='not_museum')==21L)
+check('African American Museum three and Imagination Station two non-chain candidates',all(vapply(c('african american museum','imagination station'),function(n)sum(analysis$analysis_eligible & !analysis$is_franchise%in%TRUE & analysis$name_expanded==n),integer(1))==c(3L,2L)))
+conflict_keys <- c('11d33303-171f-4d9e-8128-3bac109e573c','7d036ce3-6450-4717-a025-f47f3302347e','8404802033','46a9f87e-a76f-4e67-b202-272c9acb12a7')
+conflicts <- records[records$source_id%in%conflict_keys,]
+check('Four new source conflicts isolated; twenty-three total; no aliases',sum(records$exclusion_reason=='reviewed_source_conflict',na.rm=TRUE)==23L && nrow(conflicts)==4L && !any(conflicts$counted) && dplyr::n_distinct(conflicts$entity_id)==4L && all(!nzchar(dplyr::coalesce(conflicts$alt_names,''))))
+current_keys <- c('f426349b-22f0-4454-9dde-fbb94a11f5f9','3e0f85d0-3213-4bc9-a0a0-1bbccc701df5','3a87c63f-98f0-4876-9ade-7e6ad7f8a1fa','4a06db8a-1c1f-45b1-9f07-a169ab0649a5')
+check('Four accepted identity cases each count one canonical source',all(vapply(records$entity_id[match(current_keys,records$source_id)],function(id)sum(records$counted[records$entity_id==id])==1L,logical(1))))
+stmartin <- analysis[analysis$source_id%in%c('5213c117-6203-49e7-8d01-da6627b370d9','c362bcd2-b1cc-4e02-85c2-2f1f0feb9275'),]
+check('St Martinville campus and museum remain separate pending municipal affiliates',nrow(stmartin)==2L && all(stmartin$counted) && all(stmartin$review_status=='pending') && all(stmartin$chain_id=='city_st_martinville_museums') && dplyr::n_distinct(stmartin$entity_id)==2L)
+excluded <- analysis[analysis$source_id%in%c('abf900f3-7689-4fd4-8140-c2c3949273bb','6ddcc3a6-7d46-4184-9c80-0db96cb932dd','2e676c65-b170-42f1-a565-dbb834052856'),]
+check('Two childcare centers and repurposed stadium space excluded on affirmative roles',nrow(excluded)==3L && all(excluded$category_decision=='not_museum') && all(!excluded$counted) && all(excluded$review_status=='verified'))
+old_decisions <- dn_read_museum_review(file.path(p,'museum_decisions_before.csv'),dn_schema_museum_decisions())
+check('Every prior factual decision preserved',identical(decisions[match(old_decisions$source_id,decisions$source_id),],old_decisions))
+rank <- dn_museum_ranking(analysis)
+gate <- tryCatch({dn_assert_museum_publication_ready(analysis,rank$name_expanded[1]);''},error=conditionMessage)
+check('Remaining national leader fails explicit publication gate',nzchar(gate))
+writeLines(gate,file.path(p,'headline_publication_gate.txt'))
+imagination_gate <- tryCatch({dn_assert_museum_publication_ready(analysis,'imagination station');'PASS: two recorded independent factual reviews; map/access and national ranking remain separate checks.'},error=conditionMessage)
+check('Imagination Station passes recorded status gate for its two remaining institutions',startsWith(imagination_gate,'PASS:'))
+writeLines(imagination_gate,file.path(p,'imagination_status_gate.txt'))
+readr::write_csv(rank,file.path(p,'ranking_after.csv'),na='')
+readr::write_csv(records[changed,],file.path(p,'records_after.csv'),na='')
+readr::write_csv(analysis,file.path(p,'analysis_after.csv'),na='')
+candidates <- readr::read_csv(file.path(p,'candidates_before.csv'),show_col_types=FALSE)
+record_index <- match(candidates$source_id,records$source_id)
+final_index <- match(records$entity_id[record_index],analysis$entity_id)
+dispositions <- tibble::tibble(original_entity_id=candidates$entity_id,original_source_id=candidates$source_id,original_name=candidates$primary_name,reviewed_entity_id=analysis$entity_id[final_index],reviewed_name=analysis$primary_name[final_index],counted=analysis$counted[final_index],affiliation_status=analysis$affiliation_status[final_index],review_status=analysis$review_status[final_index],evidence_url=analysis$review_evidence[final_index],note=analysis$review_note[final_index])
+readr::write_csv(dispositions,file.path(p,'candidate_dispositions.csv'),na='')
+selected <- readr::read_csv(file.path(p,'proposed_new_decisions.csv'),show_col_types=FALSE)$source_id
+selected_entities <- records$entity_id[match(selected,records$source_id)]
+followup <- analysis[analysis$entity_id%in%selected_entities & analysis$review_status!='verified',]
+readr::write_csv(followup,file.path(p,'follow_up.csv'),na='')
+stopifnot(nrow(followup)==8L,nrow(dispositions)==16L,!anyNA(dispositions$reviewed_entity_id))
+stopifnot(file.copy('data/processed/museum_review/identity_audit.csv',file.path(p,'identity_audit_after.csv'),overwrite=TRUE))
+stopifnot(file.copy('data/raw/MANIFEST.json',file.path(p,'manifest_after.json'),overwrite=TRUE))
+readr::write_csv(tibble::tibble(source_rows=nrow(records),counted_source_rows=sum(records$counted),counted_institutions=sum(analysis$counted),eligible=sum(analysis$analysis_eligible),identity_rows=nrow(ids),identity_cases=dplyr::n_distinct(ids$case_id),complete_reviews=sum(analysis$review_status=='verified'),pending_in_this_followup=nrow(followup)),file.path(p,'counts.csv'))
+message(length(checks),' integrity checks passed; ',nrow(protected),' earlier files unchanged.')

@@ -130,11 +130,12 @@ dn_subject_check <- function(subject, disciplines) {
 }
 
 dn_museum_analysis <- function(entities, rules = dn_schema_chain_rules(),
-                               decisions = dn_schema_museum_decisions()) {
+                               decisions = dn_schema_museum_decisions(),
+                               name_overrides = dn_schema_museum_name_overrides(), gazetteer = NULL) {
   dn_validate(entities, dn_schema_entity())
   dn_validate(decisions, dn_schema_museum_decisions())
   records <- dplyr::filter(entities, .data$category == "museum")
-  x <- dn_canonical_entities(records)
+  x <- dn_apply_museum_name_overrides(dn_canonical_entities(records), name_overrides, gazetteer)
   affiliations <- dn_affiliation_evidence(records, rules)
   j <- match(x$entity_id, affiliations$entity_id)
   x$chain_id <- affiliations$chain_id[j]
@@ -375,13 +376,34 @@ dn_export_museum_review <- function(analysis, ranking, m2, subjects, sheets,
 # This status is never an independent human label or matching-accuracy measure.
 # Headlines exclude chain locations, so only the non-chain institutions are checked;
 # a name used only by a chain is not a headline.
-dn_assert_museum_publication_ready <- function(analysis, name_values) {
+# DESIGN decision 14: `headline_review` (data/validation/post1_headline_review.csv)
+# can instead show a member is a distinct, plausibly operating public museum with no
+# shared operator in its group. It never changes review_status or affiliation_status.
+dn_assert_museum_publication_ready <- function(analysis, name_values, headline_review = NULL,
+                                               as_of = Sys.Date()) {
   x <- dplyr::filter(analysis, .data$counted, .data$name_expanded %in% name_values,
                      .data$affiliation_status != "chain")
+  ok <- x$review_status == "verified" & x$affiliation_status != "unknown"
+  if (!is.null(headline_review)) ok <- ok | dn_headline_sufficient(x, headline_review, as_of)
   if (!length(name_values) || !all(name_values %in% x$name_expanded) ||
-      any(!x$analysis_eligible | x$review_status != "verified" |
-            x$affiliation_status == "unknown")) {
+      any(!x$analysis_eligible | !ok)) {
     stop("Museum headlines require completed identity, category and affiliation review.", call. = FALSE)
   }
   invisible(TRUE)
+}
+
+# One logical per row of `x`: TRUE only for a dated, sourced headline review of that
+# source record under its current L2 name, with all three criteria met.
+dn_headline_sufficient <- function(x, review, as_of = Sys.Date()) {
+  need <- c("group", "source", "source_id", "a_distinct_public_museum", "b_plausibly_operating",
+            "c_no_shared_operator_in_group", "evidence_url", "checked_on")
+  if (!all(need %in% names(review))) stop("Headline review fields missing.", call. = FALSE)
+  key <- function(z) paste(z$source, z$source_id, sep = ":")
+  if (anyDuplicated(key(review))) stop("Duplicate headline review source key.", call. = FALSE)
+  checked <- as.Date(as.character(review$checked_on), format = "%Y-%m-%d")
+  pass <- review$a_distinct_public_museum %in% "yes" & review$b_plausibly_operating %in% "yes" &
+    review$c_no_shared_operator_in_group %in% "yes" & grepl("^https://", review$evidence_url) &
+    !is.na(checked) & checked <= as_of
+  i <- match(key(x), key(review))
+  !is.na(i) & pass[i] %in% TRUE & (review$group[i] == x$name_expanded) %in% TRUE
 }

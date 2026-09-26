@@ -29,6 +29,7 @@ Imports:
     readr,
     rmarkdown,
     sf,
+    s2,
     stringdist,
     stringi,
     svglite,
@@ -38,3 +39,4 @@ Imports:
     tidyr,
     tigris,
     units
+

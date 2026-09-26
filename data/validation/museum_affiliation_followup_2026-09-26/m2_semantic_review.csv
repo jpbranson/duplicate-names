@@ -1,0 +1,13 @@
+name_expanded,scope_word,semantic_disposition,rationale,identity_status
+"african american museum",American,subject_descriptor,"African American names a cultural subject; the token alone is not an assertion of national or exclusive scope",unreviewed
+"american civil war museum",American,subject_descriptor,"American Civil War names the historical subject",unreviewed
+"american museum of natural history",American,ambiguous,"American modifies museum but does not by itself assert that this is the sole museum of the subject",unreviewed
+"crystal bridges museum of american art",American,subject_descriptor,"American art names the collection subject",unreviewed
+"international police museum",International,institutional_scope_candidate,"International may describe either the collection or institutional reach; requires operator interpretation and identity review",unreviewed
+"museum of american armor",American,subject_descriptor,"American armor describes the collection subject",unreviewed
+"museum of international folk art",International,subject_descriptor,"International folk art describes the collection's cultural range",unreviewed
+"national medal of honor museum",National,institutional_scope_candidate,"National is an institutional scope word; it is not proof of exclusivity or of independent collisions",unreviewed
+"national museum of african american history and culture",National,institutional_scope_candidate,"National modifies the institution; source duplicates and Smithsonian affiliation must be resolved",unreviewed
+"national museum of the american indian",National,institutional_scope_candidate,"National modifies the institution; multiple sites and source duplicates must be resolved",unreviewed
+"old world wisconsin",World,idiomatic_descriptor,"Old World is an idiom for a historical/geographic subject rather than worldwide institutional scope",unreviewed
+"seneca iroquois national museum",National,governance_descriptor,"National can refer to a tribal nation; do not recast it as an assertion of US-wide uniqueness",unreviewed

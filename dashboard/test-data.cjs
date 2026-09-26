@@ -1,0 +1,18 @@
+const assert=require('node:assert/strict');
+const fs=require('node:fs');const {parseCSV,importedRows,makeIndex,groupCount,inScope,csvCell,F}=require('./app.js');
+const example=fs.readFileSync(__dirname+'/example-category.csv','utf8');const rows=importedRows(example);
+assert.equal(rows.length,3);assert.equal(rows[0][F.aliases],'Fictional Playground');
+assert.equal(rows[0][F.review],'unverified import');
+const index=makeIndex(rows,'l3');assert.equal(index.length,2);assert.equal(groupCount(index[0],'eligible','custom'),2);
+const held=rows[0].slice();held[F.eligible]=false;const affiliated=rows[1].slice();affiliated[F.aff]='affiliated';
+const mixed=makeIndex([rows[0],held,affiliated],'l2')[0];assert.equal(groupCount(mixed,'all','museums'),3);assert.equal(groupCount(mixed,'eligible','museums'),1);assert.equal(groupCount(mixed,'eligible','churches'),2);assert.equal(groupCount(mixed,'affiliated','museums'),1);
+assert.equal(inScope(affiliated,'eligible','museums'),false);assert.equal(inScope(held,'all','museums'),true);
+assert.deepEqual(parseCSV('a,b\r\n"quoted, value","two\nlines"\r\n"a""b",c'),[['a','b'],['quoted, value','two\nlines'],['a"b','c']]);
+assert.throws(()=>parseCSV('a\n"unclosed'),/Unclosed/);
+assert.throws(()=>importedRows(example.replace('fictional-park-2','fictional-park-1')),/duplicate/);
+assert.throws(()=>importedRows(example.replace('-100,40','-200,40')),/coordinates/);
+assert.throws(()=>importedRows(example.replace('-100,40',',40')),/coordinates/);
+assert.throws(()=>importedRows(example.replace('TRUE','maybe')),/boolean/);
+assert.throws(()=>importedRows('a,b\n1,2'),/Missing column/);
+assert.equal(csvCell('=HYPERLINK("x")'),'"\'=HYPERLINK(""x"")"');assert.equal(csvCell(-100),'"-100"');
+console.log('19 focused data/import/export assertions passed. Browser integration remains separate.');

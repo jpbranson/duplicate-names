@@ -359,7 +359,8 @@ singularity). No candidate count is a verified count of independent institutions
 
 `dn_assert_museum_publication_ready()` checks the non-chain institutions of selected L2
 names for counted, eligible, verified rows with resolved affiliation; a chain-only name fails. It is an explicit pre-export check, not a target
-automatically invoked by `_targets.R`. The ranking's `publication_ready` column summarizes
+automatically invoked by `_targets.R`. Under decision 14, an optional `headline_review`
+table can instead pass a member with dated, sourced evidence for all three criteria. The ranking's `publication_ready` column summarizes
 recorded review statuses; neither mechanism verifies evidence, semantic scope claims or
 map/access details. At the [M2 checkpoint](data/validation/museum_m2_leaders_2026-09-26.md),
 174 institutions have complete factual reviews, including exclusions. Old Jail Museum is the
@@ -726,7 +727,8 @@ This work does not require reopening the matching threshold.
 Decisions 1–8 were settled 2026-09-07, with implementation clarifications below.
 Decisions 9–11 record the museum analysis policy, September 15 validation outcome and
 curated correction layer. Decisions 12–13 (2026-09-23) separate chains from headlines and
-exclude sourced non-museums.
+exclude sourced non-museums. Decision 14 (2026-09-26) sets post 1's review standard and
+stopping rules.
 
 1. **Geographic scope — US-first, with a global follow-up.** Both near-term posts are
    US-only; Phase 1 keeps the schema country-general so a global pass is cheap. See §7.
@@ -811,6 +813,24 @@ exclude sourced non-museums.
     decision removes a record whose operator evidence shows no museum function, while
     keeping its source rows auditable. It requires positive evidence of what the record
     is; absence of evidence does not qualify.
+14. **Headline-sufficient review and stopping rules for post 1 (2026-09-26).** Post 1
+    answers two questions: which museum name is number one, and whether there are
+    surprising collisions. An institution counts toward a named headline group when
+    source evidence shows that it is (a) a distinct public museum, not a duplicate
+    record, office, mailing address, former site or support facility; (b) plausibly
+    operating; and (c) not sharing a brand or operator with another member of the
+    group. Governance, campus scope, visitor access and exact map points are outside
+    this standard unless they change (a)-(c). Map and access checks apply only to
+    institutions the post shows on a map. This standard does not change
+    `review_status = verified`, which still means a complete factual review; the
+    post's per-member evidence goes in one flat CSV, not a new packet.
+    **M1 stopping rule:** resolve Old Jail Museum's pending members to this standard
+    to get V. If V is 7 or more (above every other provisional group), Old Jail is
+    the headline, after checking that no six-member group can reach V through pending
+    renames or near-variant names. If V is 6 or less, report the tie plateau; do not
+    open further leader batches. **Surprising collisions:** select at most five
+    groups and verify only those to this standard. Church work and the explorer are
+    frozen until post 1 publishes.
 
 ### Still open
 

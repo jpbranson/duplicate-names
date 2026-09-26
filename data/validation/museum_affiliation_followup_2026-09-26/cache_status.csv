@@ -1,0 +1,12 @@
+id,url,path,sha256,status
+smithsonian_visitors,https://www.si.edu/visit/museums,data/raw/affiliation_followup_smithsonian_visitors_2026-09-26.html,,HTTP response code said error [www.si.edu]: The requested URL returned error: 403
+smithsonian_aaa_2023,https://www.aaa.si.edu/sites/default/files/Documents/2023-Annual-Report.pdf,data/raw/affiliation_followup_smithsonian_aaa_2023_2026-09-26.pdf,b3a6e1f419155739593887ebbc1c500adbaaccf490afd32727d8fd00cbcc2d8d,cached
+smithsonian_ny_move,https://www.aaa.si.edu/news/new-york-research-center-moving.html,data/raw/affiliation_followup_smithsonian_ny_move_2026-09-26.html,,HTTP response code said error [www.aaa.si.edu]: The requested URL returned error: 403
+smithsonian_nmai_ny,https://americanindian.si.edu/visit/ny,data/raw/affiliation_followup_smithsonian_nmai_ny_2026-09-26.html,,HTTP response code said error [americanindian.si.edu]: The requested URL returned error: 403
+smithsonian_animal_connections,https://www.si.edu/es/newsdesk/releases/smithsonian-mobile-exhibit-explores-human-animal-bond-0,data/raw/affiliation_followup_smithsonian_animal_connections_2026-09-26.html,,HTTP response code said error [www.si.edu]: The requested URL returned error: 403
+tussauds_network,https://www.madametussauds.com/,data/raw/affiliation_followup_tussauds_network_2026-09-26.html,3a7680fcf3c7d369c4a5cd42f4d03bf59458afc22a916f8a46fd2850bb1a384a,cached
+tussauds_vegas_address,https://lasvegas-support.madametussauds.com/hc/en-us/articles/115002250572-What-is-your-address,data/raw/affiliation_followup_tussauds_vegas_address_2026-09-26.html,,HTTP response code said error [lasvegas-support.madametussauds.com]: The requested URL returned error: 403
+tussauds_vegas,https://www.madametussauds.com/las-vegas/,data/raw/affiliation_followup_tussauds_vegas_2026-09-26.html,c667d82b0df6a904bac55f638681f6399114a70fe06998cc852219a1c4a31c14,cached
+wch_mn_about,https://www.wchsmn.org/about-us/,data/raw/affiliation_followup_wch_mn_about_2026-09-26.html,643895ef2f4a05a8fc343e7fdde84f164d12874ae48e20605398f16d53ef1438,cached
+wch_in_stevens,https://www.johnhaycenter.org/index.php/attractions/stevens-memorial-museum,data/raw/affiliation_followup_wch_in_stevens_2026-09-26.html,a33947224f3e4f7e15044172a2040b4a7838deac202f43b861cc9f7b1fb31691,cached
+wch_in_depot,https://www.johnhaycenter.org/index.php/attractions/the-depot-railroad-museum,data/raw/affiliation_followup_wch_in_depot_2026-09-26.html,d84dd1b9404aaa69f9c5f16c30a64038062dd13a1655e1fd260f211182bd6b6a,cached

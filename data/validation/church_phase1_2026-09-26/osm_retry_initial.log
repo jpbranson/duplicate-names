@@ -1,0 +1,4 @@
+[1] TRUE
+[OSM paced retry] seattle
+[osm_validation_seattle_20260926] downloading https://overpass-api.de/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A90%5D%3Bnwr%5B%22amenity%22%3D%22place_of_worship%22%5D%2847.5%2C-122.4%2C47.72%2C-122.25%29%3Bout%20center%20tags%3B
+Retry failed; stop to respect service limits.

@@ -1,0 +1,82 @@
+[
+  {
+    "id": "net_home",
+    "url": "https://www.cogasoc.net/"
+  },
+  {
+    "id": "net_locations",
+    "url": "https://www.cogasoc.net/locations-1"
+  },
+  {
+    "id": "cogsoc_home",
+    "url": "https://cogsoconline.org/"
+  },
+  {
+    "id": "cogsoc_about",
+    "url": "https://cogsoconline.org/about"
+  },
+  {
+    "id": "newhaven_home",
+    "url": "https://churchofgod1931.org/"
+  },
+  {
+    "id": "hyattsville_home",
+    "url": "https://www.cogasochyattsville.com/"
+  },
+  {
+    "id": "wilmington_home",
+    "url": "https://wilmington.cogasoc.org/"
+  },
+  {
+    "id": "wilmington_history",
+    "url": "https://wilmington.cogasoc.org/history-of-the-tabernacle/"
+  },
+  {
+    "id": "detroit_home",
+    "url": "https://detroit.cogasoc.org/"
+  },
+  {
+    "id": "detroit_history",
+    "url": "https://detroit.cogasoc.org/history-of-the-tabernacle/"
+  },
+  {
+    "id": "newark_home",
+    "url": "https://newark.cogasoc.org/"
+  },
+  {
+    "id": "newark_history",
+    "url": "https://newark.cogasoc.org/history-of-the-tabernacle/"
+  },
+  {
+    "id": "cincinnati_home",
+    "url": "https://cincinnati.cogasoc.org/"
+  },
+  {
+    "id": "richmond_home",
+    "url": "https://richmond.cogasoc.org/"
+  },
+  {
+    "id": "jacksonville_home",
+    "url": "https://jacksonville.cogasoc.org/"
+  },
+  {
+    "id": "baltimore_home",
+    "url": "https://baltimore.cogasoc.org/"
+  },
+  {
+    "id": "charlotte_home",
+    "url": "https://charlotte.cogasoc.org/"
+  },
+  {
+    "id": "washington_home",
+    "url": "https://washingtondc.cogasoc.org/"
+  },
+  {
+    "id": "atlanticcity_home",
+    "url": "https://atlanticcity.cogasoc.org/"
+  },
+  {
+    "id": "southernpines_home",
+    "url": "https://southernpines.cogasoc.org/"
+  }
+]

@@ -1,0 +1,56 @@
+Error: 
+! in callr subprocess.
+Caused by error in `eval(ei, envir)`:
+! object 'dn_root' not found
+---
+Standard error:
+Quitting from index.Rmd:16-20 [setup]
+---
+Backtrace:
+1. callr::r(function(folder) {
+2. callr:::get_result(output = out, options)
+3. callr:::throw(callr_remote_error(remerr, output), parent = fix_msg(remerr[[3]]))
+---
+Subprocess backtrace:
+ 1. rmarkdown::render("index.Rmd", output_format = rmarkdown::html_document(sel
+ 2. knitr::knit(knit_input, knit_output, envir = envir, quiet = quiet)
+ 3. knitr:::process_file(text, output)
+ 4. xfun:::handle_error(with_options(withCallingHandlers(if (tangle) process_ta
+ 5. knitr:::with_options(withCallingHandlers(if (tangle) process_tangle(group) else pro
+ 6. base::withCallingHandlers(if (tangle) process_tangle(group) else process_group(gr
+ 7. knitr:::process_group(group)
+ 8. knitr:::call_block(x)
+ 9. knitr:::block_exec(params)
+10. knitr:::eng_r(options)
+11. knitr:::in_input_dir(evaluate(code, envir = env, new_device = FALSE,
+12. knitr:::in_dir(input_dir(), expr)
+13. local evaluate(code, envir = env, new_device = FALSE, keep_warning = if (is.numer
+14. evaluate::evaluate(...)
+15. base::withRestarts(with_handlers({
+16. base::withRestartList(expr, restarts)
+17. base::withOneRestart(withRestartList(expr, restarts[-nr]), restarts[[nr]])
+18. base::doWithOneRestart(return(expr), restart)
+19. base::withRestartList(expr, restarts[-nr])
+20. base::withOneRestart(expr, restarts[[1L]])
+21. base::doWithOneRestart(return(expr), restart)
+22. evaluate:::with_handlers({
+23. base::eval(call)
+24. base::eval(call)
+25. base::withCallingHandlers(code, error = function (e)
+26. base::withVisible(eval(expr, envir))
+27. base::eval(expr, envir)
+28. base::eval(expr, envir)
+29. base::source("_setup.R")
+30. | base::withVisible(eval(ei, envir))
+31. | base::eval(ei, envir)
+32. | base::eval(ei, envir)
+33. base::source(file.path(dn_root, "R", "config_blog.R"))
+34. base::file.path(dn_root, "R", "config_blog.R")
+35. base::.handleSimpleError(function (e)
+36. local h(simpleError(msg, call))
+37. rlang::entrace(e)
+38. rlang::cnd_signal(entraced)
+39. rlang:::signal_abort(cnd)
+40. base::signalCondition(cnd)
+41. global (function (e)
+Execution halted

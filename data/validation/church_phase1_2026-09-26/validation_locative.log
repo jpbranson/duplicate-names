@@ -1,0 +1,69 @@
+
+Attaching package: 'dplyr'
+
+The following objects are masked from 'package:stats':
+
+    filter, lag
+
+The following objects are masked from 'package:base':
+
+    intersect, setdiff, setequal, union
+
+$status
+[1] "provisional"
+
+$raw_records
+[1] 1032223
+
+$spine_entities
+[1] 540778
+
+$eligible_sites
+[1] 442834
+
+$counted_source_rows
+[1] 442838
+
+$excluded_entities
+[1] 97944
+
+$matching_labels
+[1] 300
+
+$classifier_labels
+[1] 500
+
+$checks
+[1] 18
+
+$cloud_cost_usd
+[1] 0
+
+$publication_ready
+[1] FALSE
+
+$source_counts
+$source_counts$gnis
+[1] 231707
+
+$source_counts$hifld
+[1] 254740
+
+$source_counts$overture
+[1] 545776
+
+
+$leading_l3
+       level                                  name_value n_entities
+1  name_core                              baptist church      24952
+2  name_core                     united methodist church      10317
+3  name_core                        first baptist church       7010
+4  name_core church of jesus christ of latter day saints       6204
+5  name_core                            church of christ       5476
+6  name_core                             lutheran church       5219
+7  name_core                            community church       4369
+8  name_core                         presbyterian church       3769
+9  name_core                   missionary baptist church       3451
+10 name_core                            christian church       3091
+
+Museum preservation checks:  6  passed;  453  protected files unchanged

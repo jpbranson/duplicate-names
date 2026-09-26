@@ -1,0 +1,3 @@
+Error in dn_reconcile_museums(baseline, ids) : 
+  Each identity case needs exactly one counted canonical record.
+Execution halted

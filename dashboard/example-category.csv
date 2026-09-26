@@ -1,0 +1,4 @@
+entity_id,primary_name,name_expanded,name_core,lon,lat,alt_names,analysis_eligible,review_status,source
+fictional-park-1,Fictional North Park,fictional north park,fictional north park,-100,40,Fictional Playground,TRUE,pending,fictional demonstration
+fictional-park-2,Fictional North Park,fictional north park,fictional north park,-95,42,,TRUE,pending,fictional demonstration
+fictional-park-3,Fictional Riverside Park,fictional riverside park,fictional riverside park,-90,38,,TRUE,pending,fictional demonstration

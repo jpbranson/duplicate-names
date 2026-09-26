@@ -1,0 +1,22 @@
+id,url,path,sha256,status
+sdb_belief,https://seventhdaybaptist.org/wp-content/uploads/2016/03/Statement-of-Belief-QA-Tract.pdf,data/raw/church_ordinal_review_sdb_belief_2026-09-26.pdf,d826098e8869573849ed98d1b9e312d927d83c4d9e700be56d452ac1dfb5b508,cached
+cog7_belief,https://cog7jax.org/who-we-are.html,data/raw/church_ordinal_review_cog7_belief_2026-09-26.html,,HTTP response code said error [cog7jax.org]: The requested URL returned error: 403
+eighth_day_home,https://www.eighthdaychurch.com/,data/raw/church_ordinal_review_eighth_day_home_2026-09-26.html,d13115a105a8accdfe4ef783fb1e725fcd9e68795fd8933b91a8041182caf764,cached
+eighth_day_about,https://www.eighthdaychurch.com/about-edc,data/raw/church_ordinal_review_eighth_day_about_2026-09-26.html,43d07c5e2c26dab2b53dd988aa0f5bbc10984e7352ec5a14ec8c55b82f6d44fa,cached
+fortieth_historical,https://www.templehealth.org/sites/default/files/inline-files/Jeanes-CHNA.pdf,data/raw/church_ordinal_review_fortieth_historical_2026-09-26.pdf,430781aa4f1f9cb9c14c007b1b93b48c439e3f5b0109b308973233a1e63c439b,cached
+fortieth_leader,https://www.m2mmentoring.org/our-leaders,data/raw/church_ordinal_review_fortieth_leader_2026-09-26.html,b7289c8698b4f542868e24f7b72acd19daa0415be27de97941e9d9c818f0a67c,cached
+meridian_county,https://lauderdalecounty.org/wp-content/uploads/2019/08/2014.pdf,data/raw/church_ordinal_review_meridian_county_2026-09-26.pdf,1446ec4dcedffcfe1ab3f72989f24f680627641392a67479e21700200d094e0e,cached
+meridian_pastor,https://www.hopespringmbjackson.org/pastor-dr-samuel-l-thompson,data/raw/church_ordinal_review_meridian_pastor_2026-09-26.html,fbbc25e0380951b0dca44e24197b96e99a71a280db2576776162c17427b90702,cached
+albany_facebook,https://www.facebook.com/US19churchofChrist,data/raw/church_ordinal_review_albany_facebook_2026-09-26.html,e56a6d7dee1b05283a8fa4c052deae55cdf2bf1211b6f1656a2864a2cf51cfed,cached
+albany_directory,https://www.church-of-christ.org/cb-profile/19864-userhgzeshhtc99wx7zc.html,data/raw/church_ordinal_review_albany_directory_2026-09-26.html,,HTTP response code said error [www.church-of-christ.org]: The requested URL returned error: 403
+chapel_twelve,http://www.12thchapel.org/,data/raw/church_ordinal_review_chapel_twelve_2026-09-26.html,,Number of redirects hit maximum amount [12thchapel.org]: Maximum (10) redirects followed
+miami_source,http://fromfaithtofulfillmentorg.org/,data/raw/church_ordinal_review_miami_source_2026-09-26.html,cb75eae6630c33400ca46a30d314e6d6a2b5f665d02dc201c3900ecf105b11c6,cached
+tenth_history,https://www.tenth.org/about/history/,data/raw/church_ordinal_review_tenth_history_2026-09-26.html,31e14f6f7cb80f8e91f630817fa8a7db49d8e3253709576083ceb961fe7d602d,cached
+tenth_contact,https://www.tenth.org/contact/,data/raw/church_ordinal_review_tenth_contact_2026-09-26.html,9c424d0942f82069c0390b5507d19fb618b096b26b5f21560ef4659ab29f4444,cached
+tenth_memorial,http://tenthmemorial.org/,data/raw/church_ordinal_review_tenth_memorial_2026-09-26.html,944e96bc9724178df97696cba33ca7e0413bc847e3477070ffb574d2b4ae40d1,cached
+cogasoc_home,https://cogasoc.org/,data/raw/church_ordinal_review_cogasoc_home_2026-09-26.html,77d54c82caa23c02fb5d202c935b997b214973a1ee73bbb44e9ebc66cd482425,cached
+tenth_directions,https://www.tenth.org/about/directions-parking/,data/raw/church_ordinal_review_tenth_directions_2026-09-26.html,084070de4cbd64eff2a35b49712d092b93dcb75fe11588b2c3e0d76d94617900,cached
+tenth_memorial_history,https://tenthmemorial.org/history/,data/raw/church_ordinal_review_tenth_memorial_history_2026-09-26.html,cc2f047c495caeb923a2017d96a06d07ae9c429033993ae32bbf301d215e78c0,cached
+miami_operator,https://miami.cogasoc.org/,data/raw/church_ordinal_review_miami_operator_2026-09-26.html,c1ffe5ea355fbb12919e4fd27044c31278a97727f46dffd8736407d41447908c,cached
+eleventh_county,https://countycertified.acfw.net/prop_details.php?page_no=52&prop=69746,data/raw/church_ordinal_review_eleventh_county_2026-09-26.html,542cfed007bcbdb13ecde69e2904c4735fc00d4ab96b872b08805616c467a3d9,cached
+cogasoc_directory,https://www.cogasoc.org/tabernacles/,data/raw/church_ordinal_review_cogasoc_directory_2026-09-26.html,3c506de611cb552fc76725cc3e4773bb72e08de010e01fc4e9a362b45fceea0a,cached

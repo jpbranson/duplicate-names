@@ -1,0 +1,27 @@
+check,passed
+Automatic baseline unchanged,TRUE
+Baseline multisite queue unchanged,TRUE
+All source rows and normalized fields preserved,TRUE
+Guarded identity replay matches pipeline,TRUE
+Preferred-name analysis matches replay,TRUE
+Reviewed Parquet matches pipeline,TRUE
+Baseline Parquet unchanged,TRUE
+1781 earlier evidence files and human labels preserved,TRUE
+Source records outside four reviewed cases unchanged,TRUE
+Prior identity decisions outside explicit Illinois extension unchanged,TRUE
+All nine proposed identity rows applied exactly,TRUE
+Threshold remains 0.85,TRUE
+Counts match reviewed dry run,TRUE
+403 identity rows in 171 cases,TRUE
+170 complete reviews 24 exclusions 103 names,TRUE
+33 source-conflict holds preserved,TRUE
+Four reconciled cases each count one representative,TRUE
+18 factual decisions give four complete and fourteen pending,TRUE
+Four sourced affiliations with three still pending,TRUE
+Massachusetts conflicting identifiers remain separate pending,TRUE
+Only seven explicitly listed prior factual decisions updated,TRUE
+All proposed factual decisions applied exactly,TRUE
+All prior preferred names preserved,TRUE
+National leader still fails explicit publication gate,TRUE
+All 21 starting candidates have recorded dispositions,TRUE
+Fourteen incomplete reviews remain explicitly pending,TRUE

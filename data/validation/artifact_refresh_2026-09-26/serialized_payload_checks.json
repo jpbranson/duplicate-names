@@ -1,0 +1,48 @@
+{
+  "status": "passed",
+  "publication_ready": false,
+  "checks": [
+    {
+      "category": "museums",
+      "level": "l2",
+      "records": 52719,
+      "groups": 48164,
+      "eligible": 52255,
+      "aliases": 6329,
+      "verified": 174,
+      "status": "passed"
+    },
+    {
+      "category": "museums",
+      "level": "l3",
+      "records": 52719,
+      "groups": 37204,
+      "eligible": 52255,
+      "aliases": 6329,
+      "verified": 174,
+      "status": "passed"
+    },
+    {
+      "category": "churches",
+      "level": "l2",
+      "records": 540778,
+      "groups": 325861,
+      "eligible": 442834,
+      "aliases": 4463,
+      "verified": 0,
+      "status": "passed"
+    },
+    {
+      "category": "churches",
+      "level": "l3",
+      "records": 540778,
+      "groups": 232530,
+      "eligible": 442834,
+      "aliases": 4463,
+      "verified": 0,
+      "status": "passed"
+    }
+  ],
+  "states": 51,
+  "remote_tiles": false
+}

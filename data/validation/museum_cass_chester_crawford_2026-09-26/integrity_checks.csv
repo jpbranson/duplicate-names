@@ -1,0 +1,26 @@
+check,passed
+Automatic baseline unchanged,TRUE
+Baseline multisite queue unchanged,TRUE
+All source rows and normalized fields preserved,TRUE
+Guarded identity replay matches pipeline,TRUE
+Preferred-name analysis matches replay,TRUE
+Reviewed Parquet matches pipeline,TRUE
+Baseline Parquet unchanged,TRUE
+1097 earlier evidence files and human labels preserved,TRUE
+Identity rows outside new cases unchanged,TRUE
+Prior identity decisions unchanged,TRUE
+Threshold remains 0.85,TRUE
+Counts match reviewed dry run,TRUE
+292 identity rows in 121 cases,TRUE
+123 complete reviews 22 exclusions 69 names,TRUE
+Selected non-chain groups now zero three three,TRUE
+Five new conflicts isolated with no aliases; 28 total,TRUE
+Accepted cases each have one counted source,TRUE
+Two distinct Indiana museums retained with shared affiliation,TRUE
+Two distinct Pennsylvania museums retained with shared affiliation,TRUE
+Sourced Terrace site reselected without changing source point,TRUE
+Society archive excluded while museums remain,TRUE
+Every prior factual decision preserved,TRUE
+National leader still fails explicit publication gate,TRUE
+All 24 starting candidates have recorded dispositions,TRUE
+Twelve incomplete reviews remain explicitly pending,TRUE

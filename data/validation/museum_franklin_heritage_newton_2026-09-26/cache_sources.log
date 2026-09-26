@@ -1,0 +1,25 @@
+fr_me_state: cached
+fr_me_report: cached
+fr_wi_home: cached
+fr_wi_buildings: cached
+fr_ct_assessment: HTTP response code said error [www.franklinct.gov]: The requested URL returned error: 404
+fr_ct_volunteer: cached
+fr_nh_home: SSL peer certificate or SSH remote key was not OK [franklinnhhistoricalsociety.org]: schannel: SNI or certificate check failed: SEC_E_WRONG_PRINCIPAL (0x80090322) - The target principal name is incorrect.
+fr_nh_events: SSL peer certificate or SSH remote key was not OK [franklinnhhistoricalsociety.org]: schannel: SNI or certificate check failed: SEC_E_WRONG_PRINCIPAL (0x80090322) - The target principal name is incorrect.
+fr_nh_member: SSL peer certificate or SSH remote key was not OK [www.franklinnhhistoricalsociety.org]: schannel: SNI or certificate check failed: SEC_E_WRONG_PRINCIPAL (0x80090322) - The target principal name is incorrect.
+fr_nj_trust: cached
+new_ar_home: cached
+new_in_tourism: cached
+new_in_newsletter: Timeout was reached [ingenweb.org]: Connection timed out after 15007 milliseconds
+new_mo_about: cached
+new_ms_info: cached
+her_falf_city: cached
+her_falf_home: cached
+her_libby_home: SSL peer certificate or SSH remote key was not OK [www.libbyheritagemuseum.org]: schannel: SEC_E_UNTRUSTED_ROOT (0x80090325) - The certificate chain was issued by an authority that is not trusted.
+her_libby_board: SSL peer certificate or SSH remote key was not OK [www.libbyheritagemuseum.org]: schannel: SEC_E_UNTRUSTED_ROOT (0x80090325) - The certificate chain was issued by an authority that is not trusted.
+her_va_about: cached
+her_va_name: cached
+her_austin_museum: cached
+her_md_2011: cached
+her_ore_home: cached
+her_ore_museum: cached

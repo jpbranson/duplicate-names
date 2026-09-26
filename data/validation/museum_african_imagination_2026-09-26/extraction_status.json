@@ -1,0 +1,278 @@
+[
+  {
+    "id": "galveston_destination",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 3509
+  },
+  {
+    "id": "dallas_home",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 6336
+  },
+  {
+    "id": "dallas_history",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 16242
+  },
+  {
+    "id": "carbondale_home",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 3029
+  },
+  {
+    "id": "carbondale_endowment",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 2491
+  },
+  {
+    "id": "bg_story",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 8293
+  },
+  {
+    "id": "monroe_home",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 6156
+  },
+  {
+    "id": "monroe_history",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 5685
+  },
+  {
+    "id": "monroe_board",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 4878
+  },
+  {
+    "id": "tacoma_watch",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 121754
+  },
+  {
+    "id": "marshfield_home",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 1766
+  },
+  {
+    "id": "zeeland_home",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 5745
+  },
+  {
+    "id": "wilson_home",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 2806
+  },
+  {
+    "id": "toledo_home",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 5508
+  },
+  {
+    "id": "toledo_history",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 11930
+  },
+  {
+    "id": "lafayette_home",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 804
+  },
+  {
+    "id": "pensacola_stadium",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 8828
+  },
+  {
+    "id": "pensacola_college",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 3589
+  },
+  {
+    "id": "stratford_operator",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 15898
+  },
+  {
+    "id": "dallas_team",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 2247
+  },
+  {
+    "id": "dallas_visit",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 2967
+  },
+  {
+    "id": "monroe_visit",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 1338
+  },
+  {
+    "id": "monroe_old_location",
+    "detected": "pdf",
+    "extension_mismatch": false,
+    "characters": 50687
+  },
+  {
+    "id": "monroe_relocation_interview",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 15513
+  },
+  {
+    "id": "lafayette_history",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 1142
+  },
+  {
+    "id": "lafayette_team",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 1537
+  },
+  {
+    "id": "toledo_about",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 9121
+  },
+  {
+    "id": "marshfield_policies",
+    "detected": "pdf",
+    "extension_mismatch": false,
+    "characters": 13463
+  },
+  {
+    "id": "marshfield_state",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 6944
+  },
+  {
+    "id": "stmartinville_current",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 8978
+  },
+  {
+    "id": "stmartinville_admin",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 2323
+  },
+  {
+    "id": "bg_squarespace",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 2285
+  },
+  {
+    "id": "bg_reopening",
+    "detected": "pdf",
+    "extension_mismatch": false,
+    "characters": 7848
+  },
+  {
+    "id": "stratford_school",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 7272
+  },
+  {
+    "id": "galveston_founder",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 3465
+  },
+  {
+    "id": "bg_about_native",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 2890
+  },
+  {
+    "id": "bg_board_native",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 836
+  },
+  {
+    "id": "stmartinville_budget",
+    "detected": "pdf",
+    "extension_mismatch": false,
+    "characters": 349
+  },
+  {
+    "id": "stmartinville_partner",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 25235
+  },
+  {
+    "id": "stmartinville_minutes",
+    "detected": "pdf",
+    "extension_mismatch": false,
+    "characters": 8159
+  },
+  {
+    "id": "pensacola_operator_report",
+    "detected": "html",
+    "extension_mismatch": true,
+    "characters": 16365
+  },
+  {
+    "id": "stratford_legacy_domain",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 1291
+  },
+  {
+    "id": "stmartinville_staff_2022",
+    "detected": "pdf",
+    "extension_mismatch": false,
+    "characters": 8100
+  },
+  {
+    "id": "stmartinville_staff_2024",
+    "detected": "pdf",
+    "extension_mismatch": false,
+    "characters": 17587
+  },
+  {
+    "id": "stmartinville_weddings",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 3223
+  },
+  {
+    "id": "carbondale_about",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 1696
+  }
+]

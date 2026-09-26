@@ -1,0 +1,3 @@
+Error in dn_reconcile_museums(baseline, ids) : 
+  Identity decisions require valid roles, evidence and complete review metadata.
+Execution halted

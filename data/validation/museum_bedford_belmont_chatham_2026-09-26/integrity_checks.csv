@@ -1,0 +1,28 @@
+check,passed
+Automatic baseline unchanged,TRUE
+Baseline multisite queue unchanged,TRUE
+All source rows and normalized fields preserved,TRUE
+Guarded identity replay matches pipeline,TRUE
+Preferred-name analysis matches replay,TRUE
+Reviewed Parquet matches pipeline,TRUE
+Baseline Parquet unchanged,TRUE
+1467 earlier evidence files and human labels preserved,TRUE
+Identity rows outside new cases unchanged,TRUE
+Prior identity decisions unchanged,TRUE
+Threshold remains 0.85,TRUE
+Counts match reviewed dry run,TRUE
+364 identity rows in 154 cases,TRUE
+154 complete reviews 24 exclusions 95 names,TRUE
+Selected non-chain groups now three two and four,TRUE
+New Hampshire conflict isolated with no aliases; 31 total,TRUE
+Six accepted identity cases each have one counted source,TRUE
+New York museum and excluded office remain separate under shared operator,TRUE
+California identity resolved but affiliation remains pending,TRUE
+Claflin Room retains sourced multi-museum society affiliation,TRUE
+Connecticut officer mailbox reconciles with one independent campus,TRUE
+Atwood Museum and society description count once,TRUE
+Unresolved Chatham New Hampshire addresses remain separate and pending,TRUE
+Every prior factual decision preserved,TRUE
+National leader still fails explicit publication gate,TRUE
+All 21 starting candidates have recorded dispositions,TRUE
+Eight incomplete reviews remain explicitly pending,TRUE

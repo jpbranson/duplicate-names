@@ -1,0 +1,202 @@
+---
+title: "How many Firsts fit in one town?"
+author: "J. P. Branson"
+date: "2026-09-26"
+draft: true
+output: blogdown::html_page
+---
+
+```{r setup, include=FALSE}
+dn_root <- "."
+source("_setup.R", local = TRUE)
+library(dplyr)
+library(ggplot2)
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE,
+                     fig.width = dn_blog$fig_width, fig.asp = 0.8)
+counts <- read.csv("payload/duplicate_counts.csv", stringsAsFactors = FALSE)
+exclusivity <- read.csv("payload/census_place_exclusivity.csv", stringsAsFactors = FALSE)
+territory <- read.csv("payload/territory_summary.csv", stringsAsFactors = FALSE)
+```
+
+<div class="draft-notice"><strong>Research draft — unpublished.</strong> These are
+provisional estimates from automatically resolved Overture worship sites. Independent
+matching and naming-style labels, leading-name identity reviews and final publication
+checks are unfinished. No national ordinal record is certified.</div>
+
+There is a [Twelfth Baptist Church in Boston](https://www.tbcboston.org/). The name
+invites an apparently easy exercise: find the other eleven.
+
+That exercise needs a time, a boundary and a definition of “other.” Congregations
+move, merge and rename themselves. The current map cannot tell us which First a
+Twelfth once followed. Nor does a numbered church necessarily count within a city.
+[Sixteenth Tabernacle Beth El's own history](https://alexandria.cogasoc.org/history-of-the-tabernacle/)
+identifies it as the sixteenth tabernacle chartered in Virginia. Looking for fifteen
+predecessors inside Alexandria would begin with the wrong boundary. It also exposes
+a category error: the [parent organization describes its faith as Judaism](https://www.cogasoc.org/).
+The Alexandria and Miami tabernacles are therefore retained as sourced exclusions
+from this draft's Christian-only statistics, despite the source's Christian category.
+
+The museum question was whether a distinctive name actually singles out one
+institution. Here the useful questions run the other way: how widely do churches
+reuse names, and what geographic territory does a “First” occupy?
+
+## A map of recorded names
+
+This draft starts from Overture's August 19, 2026 release. Its worship categories
+are more useful than a search for the word “religious”: that word's broad category
+also contains organizations that may not be a worship location. The analysis keeps
+those records as reviewable holds, along with reported permanent closures, missing
+names and points outside the fifty states and DC.
+
+Two other inputs answer different questions. GNIS supplies a frozen 2021 collection
+of geographic church features, including explicitly historical names. The HIFLD
+copy hosted by FEMA supplies legal names at geocoded tax addresses. Its geographic
+extent does not cover Hawaii. Those records help investigate omissions and identity;
+they do not independently certify present-day congregations. OSM samples are kept
+as internal validation context and contribute no values to these published tables.
+
+For name comparisons, the pipeline retains the original text, expands abbreviations,
+and strips recognized place qualifiers at level L3. A blocklist protects ambiguous
+words. “First Baptist Church of Peoria” and a comparable locative prefix can share a
+core name; a shared core never establishes common ownership or one congregation.
+
+```{r leading-names, fig.alt="Provisional L3 name counts. Removing geographic qualifiers makes Baptist Church the largest template; independent validation remains pending."}
+leaders <- counts |> filter(level == "name_core") |> head(10)
+ggplot(leaders, aes(x = n_entities, y = reorder(name_value, n_entities))) +
+  geom_col(fill = dn_palette[["blue"]], width = .7) +
+  labs(x = "Provisional worship-site candidates", y = NULL,
+       title = "Names reused across the recorded sites",
+       subtitle = "L3 comparison; identity and coverage validation pending") +
+  theme_dupnames(base_size = 14)
+```
+
+Removing place qualifiers can turn many distinct public names into a broad template
+like “Baptist Church.” The L3 chart counts those templates; the L2 payload preserves
+the more literal comparison. Gazetteer ambiguity remains a validation concern.
+
+The units here are provisional worship sites, with nearby automatic duplicates
+consolidated. They are not a certified count of independent congregations. A church
+with several campuses requires an institutional decision; no distant places are
+merged merely because their names match. The payload also retains L2 and L4 results
+so the effect of stripping place names or sorting tokens can be inspected.
+
+## A First's nearest neighbor
+
+A first description of territory measures the distance to the nearest **other** site
+with the same L3 name. Distances follow the globe. A singleton has no observed neighbor;
+it does not receive zero. Two different sites at the same point can receive zero,
+which is a reason to review their identities rather than silently spread them apart.
+
+<div class="dn-table-scroll" style="max-width:100%;overflow-x:auto;">
+
+```{r distances}
+shown <- territory |> filter(n_with_neighbor >= 30) |> arrange(desc(n_with_neighbor)) |> head(8)
+shown$Family <- gsub("_", " ", shown$denom_norm)
+knitr::kable(shown |> transmute(Family, `Sites with a neighbor` = n_with_neighbor,
+  `Median km` = round(median_km, 1), `10th percentile km` = round(p10_km, 1),
+  `90th percentile km` = round(p90_km, 1)), row.names = FALSE)
+```
+
+</div>
+
+These distributions pool the observed First-name classes within broad denomination
+families. Source omissions and false matches affect the distances. “Baptist” does
+not identify a particular convention, and a name-derived family is a heuristic.
+Conflicting category and name signals remain visible and are withheld from the
+family-specific estimates.
+
+<iframe data-external="1" title="Provisional First Baptist worship sites" src="embeds/first-baptist.html"
+        width="100%" height="560" loading="lazy" style="border:0"></iframe>
+
+[Open the interactive map](embeds/first-baptist.html) or view the [static fallback](first-baptist-fallback.png).
+
+The map is a research view of source points. It is not a visitor guide and does not
+certify current operation, institutional independence or location accuracy.
+
+## One per place?
+
+Spacing alone cannot tell us whether the convention is “one First per town.” The
+second calculation asks: among **all Census places with any observed congregation
+of a denomination**, how many contain exactly one observed First of that denomination?
+Places containing a Second but no First remain in the denominator. Places with two
+Firsts remain a separate outcome.
+
+```{r place-pattern, fig.asp=0.85, fig.alt="Provisional shares of occupied Census places with zero, one, or multiple observed First churches, by broad denomination family."}
+shown <- exclusivity |> arrange(desc(n_occupied_places)) |> head(8)
+long <- tidyr::pivot_longer(shown, c(n_zero_first, n_exactly_one_first, n_multiple_first),
+                           names_to = "pattern", values_to = "n")
+long$pattern <- factor(long$pattern,
+  levels = c("n_zero_first", "n_exactly_one_first", "n_multiple_first"),
+  labels = c("No First", "One First", "Two or more"))
+long$family <- gsub("_", " ", long$denom_norm)
+ggplot(long, aes(x = n / n_occupied_places, y = reorder(family, n_occupied_places), fill = pattern)) +
+  geom_col(width = .7) +
+  scale_x_continuous(labels = function(x) paste0(round(100*x), "%")) +
+  scale_fill_dn() +
+  labs(x = "Share of occupied Census places", y = NULL, fill = NULL,
+       title = "The denominator includes places without a First",
+       subtitle = "Provisional observations, not a test of historical intent") +
+  theme_dupnames(base_size = 14) + theme(legend.position = "bottom")
+```
+
+Census places include incorporated places and census-designated places. They do not
+cover every settlement or all rural territory, and a CDP is not a municipality. The
+bundle includes a separate incorporated-place calculation and the coverage audit.
+No point outside a place is assigned to the nearest city for convenience.
+
+Even a high observed rate would not establish a universal naming rule. The relevant
+historical territory might be a state, a neighborhood or a denomination's own district.
+The Sixteenth Tabernacle example makes that qualification concrete.
+
+## Which numbers count?
+
+The largest apparent ordinal is especially vulnerable to a small error. In the
+initial extract, “107th Psalm,” “21st Century,” numbered intersections and administrative
+districts all appeared among high-number candidates. Their numbers are not counts of
+congregations. Two source records called “Thirty Eighth Baptist Church” linked to
+[38th Avenue Baptist Church](https://38thavenuebaptist.org/contact-us): the missing
+word **Avenue** was doing almost all the analytical damage.
+
+The parser now protects those patterns and retains sourced public-name corrections
+separately from raw records. It also holds out day expressions: [Seventh Day Baptists](https://seventhdaybaptist.org/wp-content/uploads/2016/03/Statement-of-Belief-QA-Tract.pdf)
+refer to the Sabbath, while [Eighth Day Church explains its name in terms of new birth](https://www.eighthdaychurch.com/about-edc).
+An outer number such as **First** in “First Seventh Day Baptist” still counts as a
+candidate congregation ordinal.
+
+Some histories do explain a sequence. [Tenth Presbyterian's history](https://www.tenth.org/about/history/)
+identifies it as Philadelphia's tenth Presbyterian church. By contrast,
+[Tenth Memorial Baptist](https://tenthmemorial.org/history/) commemorates the members
+of an earlier Tenth Baptist congregation. These histories make the interpretation
+more precise; they do not certify a present-day ladder of ten active congregations.
+The remaining high ordinals still need identity and meaning checks. This draft
+therefore names no national maximum.
+
+Within a place and denomination, a provisional ladder records the distinct observed
+rungs up to the largest parsed number. An absent Third could reflect missing data,
+a name change, a move, a different historical boundary or a congregation that never
+existed. The name list does not choose among those stories.
+
+## Counting, saints, virtues and brands
+
+The final comparison classifies names as ordinal, saint, virtue, toponym, modern brand,
+ethnolinguistic, descriptive or other. This is currently a lexicon-based heuristic.
+An independent sample of 500 names for estimating its errors is archived separately from
+its predictions; it has not been graded by this analysis. Until that review is complete,
+the proportions are research outputs, not a supported claim about denominational culture.
+
+The pipeline also emits places with multiple Firsts as a distinct research file.
+Explaining those cases requires historical sources. A later post will examine that
+history; another will ask how naming changed over time, using dated evidence that
+these snapshots do not provide. Neither story can be recovered merely by sorting names.
+
+The [museum draft](../duplicate-museum-names/) begins this series. Both drafts retain
+explicit publication gates and build from their own small payloads without
+the analysis checkout. The independent-review protocol accompanies
+the research bundle; full acquisition provenance remains in the repository manifest.
+
+
+
+
+
+
+

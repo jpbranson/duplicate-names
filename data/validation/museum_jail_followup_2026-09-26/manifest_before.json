@@ -1,0 +1,1593 @@
+{
+  "downloads": [
+    {
+      "label": "imls_mudf_2018",
+      "url": "https://www.imls.gov/sites/default/files/2018_csv_museum_data_files.zip",
+      "path": "data/raw/2018_csv_museum_data_files.zip",
+      "sha256": "cadafce89480912336ec64c874be2c3f1b98858ec51963b47e183f89a58fe1c4",
+      "bytes": 2864864,
+      "retrieved": "2026-09-07T19:40:56-0500"
+    },
+    {
+      "label": "irs_eo_fl_2026-09-15",
+      "url": "https://www.irs.gov/pub/irs-soi/eo_fl.csv",
+      "path": "data/raw/irs_eo_fl_2026-09-15.csv",
+      "sha256": "8a662d47029a227a175b84460e81f6dd9a479ad1968fffcc59e73f38c89b1455",
+      "bytes": 19853085,
+      "retrieved": "2026-09-15T22:59:18-0500"
+    },
+    {
+      "label": "irs_eo_ar_2026-09-15",
+      "url": "https://www.irs.gov/pub/irs-soi/eo_ar.csv",
+      "path": "data/raw/irs_eo_ar_2026-09-15.csv",
+      "sha256": "5f6a3c34b4509e431f76f32d3c457e795ddfd015492658edef9346d88f55757b",
+      "bytes": 2785464,
+      "retrieved": "2026-09-15T22:59:19-0500"
+    },
+    {
+      "label": "irs_eo_pa_2026-09-15",
+      "url": "https://www.irs.gov/pub/irs-soi/eo_pa.csv",
+      "path": "data/raw/irs_eo_pa_2026-09-15.csv",
+      "sha256": "44f9135f3a2b4d06af6137e580cc43a5e34e0910fd49de12a5072671145a8811",
+      "bytes": 14372101,
+      "retrieved": "2026-09-15T22:59:19-0500"
+    },
+    {
+      "label": "peters_location_2026-09-15",
+      "url": "https://peterscreekhistoricalsociety.org/location/",
+      "path": "data/raw/peters_location_2026-09-15.html",
+      "sha256": "28d006f60172b58a57177198d0439d3f82f56e68481bc31c341b858dcb980b45",
+      "bytes": 107022,
+      "retrieved": "2026-09-15T23:01:19-0500"
+    },
+    {
+      "label": "peters_museum_2026-09-15",
+      "url": "https://peterscreekhistoricalsociety.org/enoch-wright-house-and-museum-of-westward-expansion/",
+      "path": "data/raw/peters_museum_2026-09-15.html",
+      "sha256": "32b8d463b65fe31c7e191ba131c1e61fea7d9f64572bfb9fcb9a5bea096182b6",
+      "bytes": 96470,
+      "retrieved": "2026-09-15T23:01:20-0500"
+    },
+    {
+      "label": "chipley_tourism_2026-09-15",
+      "url": "https://visitwcfla.com/businesses/details/washington-county-historical-society/",
+      "path": "data/raw/chipley_tourism_2026-09-15.html",
+      "sha256": "eb63c888daed73fa4dd2cb0d33b0bfec3ee3c08646c57455c68077d56ddda3b2",
+      "bytes": 23953,
+      "retrieved": "2026-09-15T23:01:22-0500"
+    },
+    {
+      "label": "mandeville_visit_2026-09-15",
+      "url": "https://mandevilleartgallery.ucsd.edu/visit/index.html",
+      "path": "data/raw/mandeville_visit_2026-09-15.html",
+      "sha256": "e47294686ae4fdc6b8fc0f76c5775a35aa9d13eccc4e29c3a50ee5e09755d20f",
+      "bytes": 44395,
+      "retrieved": "2026-09-15T23:01:22-0500"
+    },
+    {
+      "label": "irs_bmf_index_2026-09-15",
+      "url": "https://www.irs.gov/charities-non-profits/exempt-organizations-business-master-file-extract-eo-bmf",
+      "path": "data/raw/irs_bmf_index_2026-09-15.html",
+      "sha256": "c7bd80a95665c7a2e35e0b3d295f00afbf5c1e4e297a9071ffbc4a4a5438747a",
+      "bytes": 115329,
+      "retrieved": "2026-09-15T23:01:22-0500"
+    },
+    {
+      "label": "smedley-contact_2026-09-15",
+      "url": "https://theoriginalbunker.wixsite.com/orlando/contact",
+      "path": "data/raw/smedley-contact_2026-09-15.html",
+      "sha256": "ae61adc8da3f697fb8563e6f4ff1fee2f2ea751dd8090af8c0da01af143c9fe2",
+      "bytes": 406680,
+      "retrieved": "2026-09-15T22:52:35-0500"
+    },
+    {
+      "label": "smedley-page-1_2026-09-15",
+      "url": "https://siteassets.parastorage.com/pages/pages/thunderbolt?beckyExperiments=.DatePickerPortal%2C.DisableDocumentScrollWhenLightBoxOpen%2C.EnableCustomCSSVarsForLoginSocialBar%2C.FreemiumBannerOdeditor%2C.LoginBarEnableLoggingInStateInSSR%2C.TextInputAutoFillFix%2C.UseLoginSocialBarCustomMenu%2C.UseNestedLoginSocialBarMenuItems%2C.UseNewLoginBarDropdownMenuAlignment%2C.UseNewLoginSocialBarElementStructure%2C.UseNewLoginSocialBarMemberInitialsAvatar%2C.WixFreeSiteBannerDesktop%2C.WixFreeSiteBannerMobile%2C.a11yContrast%2C.addIdAsClassName%2C.allowWebpAvifTransforms%2C.builderBoxSizingBorderBox%2C.buttonUdp%2C.calculateCollapsibleTextLineHeightByFont%2C.dom_store%2C.dontApplyDacOverridesOnBoBApps%2C.dynamicPageLinkTarget%2C.dynamicSlots%2C.fiveGridLineStudioSkins%2C.fixDocumentLinkInPremiumPreview%2C.fixFirefoxLinkBarIntrinsicSizing%2C.fixRemappedFullNameCompType%2C.imageEncodingAVIF%2C.interactionsUseReactionEffectId%2C.isClassNameToRootEnabled%2C.logVsmFeaturesModuleDiff%2C.motionTimeAnimationsCSS%2C.resolveManifestInTB%2C.responsiveContainerRoleGroup%2C.sectionA11yProps%2C.shouldUseResponsiveImages%2C.splitSlotSelectors%2C.stopResolvingInnerSelectors_VAG%2C.svgResolver_2%2C.updateRichTextSemanticClassNamesOnCorvid%2C.useClassnameInResponsiveAppWidget%2C.useFragmentHrefForTopBottomAnchor%2C.useImageAvifFormatInNativeProGallery%2C.useResponsiveImgClassicFixed%2C.useSvgLoaderFeature%2C.useSvgLoaderFeatureOnBuilderComps%2C.useWowImageInFastGallery%2C.vsmFeaturesModule%2C.vsm_interactions_v1&blocksBuilderManifestGeneratorVersion=1.129.0&contentType=application%2Fjson&deviceType=Other&dfCk=6&dfVersion=1.5593.0&disableStaticPagesUrlHierarchy=false&editorName=Unknown&experiments=dm_masterPageVariablesQueryFixer%2Cdm_migrateOldHoverBoxToNewFixer&externalBaseUrl=https%3A%2F%2Ftheoriginalbunker.wixsite.com%2Forlando&fileId=0c286202.bundle.min&formFactor=desktop&freemiumBanner=true&hasTPAWorkerOnSite=false&hasUserDomainMedia=false&isBuilderComponentModel=false&isHttps=true&isInSeo=false&isMultilingualEnabled=false&isTrackClicksAnalyticsEnabled=false&isUrlMigrated=true&isWixCodeOnPage=false&isWixCodeOnSite=false&language=en&languageResolutionMethod=QueryParam&metaSiteId=456e76f2-cb0c-421b-97e0-9fe779428e6d&module=thunderbolt-features&originalLanguage=en&pageId=824003_3d5e1a6a159a53cf482909dccf372e53_111.json&pilerExperiments=specs.piler.useEditorReactComponents&quickActionsMenuEnabled=false&registryLibrariesTopology=%5B%7B%22artifactId%22%3A%22editor-elements%22%2C%22namespace%22%3A%22wixui%22%2C%22url%22%3A%22https%3A%2F%2Fstatic.parastorage.com%2Fservices%2Feditor-elements%2F1.15509.0%22%7D%2C%7B%22artifactId%22%3A%22editor-elements%22%2C%22namespace%22%3A%22dsgnsys%22%2C%22url%22%3A%22https%3A%2F%2Fstatic.parastorage.com%2Fservices%2Feditor-elements%2F1.15509.0%22%7D%5D&remoteWidgetStructureBuilderVersion=1.251.0&siteId=dce7171c-624d-4a83-be67-023b4fa200ee&siteRevision=115&staticHTMLComponentUrl=https%3A%2F%2Ftheoriginalbunker-wixsite-com.filesusr.com%2F&useSandboxInHTMLComp=true&viewMode=desktop",
+      "path": "data/raw/smedley-page-1_2026-09-15.json",
+      "sha256": "8af1c11a01db0bcd5789dbc98b7c0d94769641943fdf888c319f1b59a31b25e0",
+      "bytes": 25196,
+      "retrieved": "2026-09-15T22:53:48-0500"
+    },
+    {
+      "label": "jail_barnesville_2026-09-15",
+      "url": "https://www.blchs.com/",
+      "path": "data/raw/jail_barnesville_2026-09-15.html",
+      "sha256": "d6f46511351cbb25dceaeae5266c7ed16cbda5faf7858f26aff9748fc12632b6",
+      "bytes": 1147443,
+      "retrieved": "2026-09-15T23:24:51-0500"
+    },
+    {
+      "label": "jail_hayesville_2026-09-15",
+      "url": "https://www.blueridgeheritage.com/destinations/clay-county-museum/",
+      "path": "data/raw/jail_hayesville_2026-09-15.html",
+      "sha256": "c0fdde8fff326b7157c8aea447198aa8893242683ecf8b316ebb4eccbd7edf01",
+      "bytes": 97501,
+      "retrieved": "2026-09-15T23:24:53-0500"
+    },
+    {
+      "label": "jail_lawrenceburg_2026-09-15",
+      "url": "https://lawrencecountytn.gov/visitors/attractions/",
+      "path": "data/raw/jail_lawrenceburg_2026-09-15.html",
+      "sha256": "b791d6e4d676867ab83f1c84ba47a6aa6ecf7a556b7abc2e827084b2533c2a53",
+      "bytes": 133026,
+      "retrieved": "2026-09-15T23:24:54-0500"
+    },
+    {
+      "label": "jail_albion_2026-09-15",
+      "url": "https://www.noblehistory.org/old-jail/old-jail-museum-of-noble-county-historical-society.html",
+      "path": "data/raw/jail_albion_2026-09-15.html",
+      "sha256": "458869de0c9638b69a122cd61e279559017be84d29e66f94660c2aff1418b7cd",
+      "bytes": 6923,
+      "retrieved": "2026-09-15T23:24:54-0500"
+    },
+    {
+      "label": "jail_albion_operator_2026-09-15",
+      "url": "https://www.noblehistory.org/",
+      "path": "data/raw/jail_albion_operator_2026-09-15.html",
+      "sha256": "b6baf55a95e037a2b1b370c780ac231eeaf0cbc091a4cc22baa3ceb42d8e1467",
+      "bytes": 7739,
+      "retrieved": "2026-09-15T23:24:54-0500"
+    },
+    {
+      "label": "jail_st_augustine_2026-09-15",
+      "url": "https://www.staugustineoldjail.com/",
+      "path": "data/raw/jail_st_augustine_2026-09-15.html",
+      "sha256": "0d057643a147e582bb93a40c3c316dcc847e0fa8fd8fa83f8141a03218bf93b9",
+      "bytes": 227198,
+      "retrieved": "2026-09-15T23:24:55-0500"
+    },
+    {
+      "label": "jail_hta_2026-09-15",
+      "url": "https://www.historictours.com/st-augustine",
+      "path": "data/raw/jail_hta_2026-09-15.html",
+      "sha256": "79d26d649ed3453dfd568a1d912e4e6d23f35e99e79f13de383424a925a0c77c",
+      "bytes": 439331,
+      "retrieved": "2026-09-15T23:24:56-0500"
+    },
+    {
+      "label": "jail_franklin_society_2026-09-15",
+      "url": "https://www.franklincountytnhistory.com/",
+      "path": "data/raw/jail_franklin_society_2026-09-15.html",
+      "sha256": "da2dc8bf2580fcdd16816321d610764597e8e3e42df877b905bf32f53a870652",
+      "bytes": 36146,
+      "retrieved": "2026-09-15T23:24:57-0500"
+    },
+    {
+      "label": "jail_dubuque_2026-09-15",
+      "url": "https://www.dubuquecountyiowa.gov/471/Historic-Old-Jail",
+      "path": "data/raw/jail_dubuque_2026-09-15.html",
+      "sha256": "f207bb667651d76ade849ed4e0ae48731503a99b655da2915ce19bfe2f4b4a78",
+      "bytes": 93815,
+      "retrieved": "2026-09-15T23:24:58-0500"
+    },
+    {
+      "label": "jail_dubuque_veterans_2026-09-15",
+      "url": "https://www.dubuquecountyiowa.gov/directory.aspx?did=35",
+      "path": "data/raw/jail_dubuque_veterans_2026-09-15.html",
+      "sha256": "5074825e9bb05ccb593bdbf58d8b8b97b52ee88bb88ad1ef66e54ee8193927e2",
+      "bytes": 95593,
+      "retrieved": "2026-09-15T23:24:59-0500"
+    },
+    {
+      "label": "jail_greenwood_2026-09-15",
+      "url": "https://www.greenwoodmuseumonline.com/Historic-Properties/Old-Jail-Museum",
+      "path": "data/raw/jail_greenwood_2026-09-15.html",
+      "sha256": "07ed0e46529e0e2b89d0c4d54c9d495560c48a56c95d045c09fad247208f9169",
+      "bytes": 39764,
+      "retrieved": "2026-09-15T23:24:59-0500"
+    },
+    {
+      "label": "jail_greenwood_location_2026-09-15",
+      "url": "https://www.greenwoodmuseumonline.com/Museum-Information/Our-Location",
+      "path": "data/raw/jail_greenwood_location_2026-09-15.html",
+      "sha256": "51b2f833b90b54960aab4491a14af0b6b1c7a8f8ef57587dcdd32908206ef38a",
+      "bytes": 26674,
+      "retrieved": "2026-09-15T23:24:59-0500"
+    },
+    {
+      "label": "jail_greenwood_operator_2026-09-15",
+      "url": "https://www.greenwoodmuseumonline.com/Museum-Information/About-Us",
+      "path": "data/raw/jail_greenwood_operator_2026-09-15.html",
+      "sha256": "89a3a7d4487d153364152a9b840cdba24ca0f7d5736c3f24160ede35c1c97d25",
+      "bytes": 27269,
+      "retrieved": "2026-09-15T23:24:59-0500"
+    },
+    {
+      "label": "jail_thompson_falls_2026-09-15",
+      "url": "https://visitmt.com/listing/old-jail-museum-14188",
+      "path": "data/raw/jail_thompson_falls_2026-09-15.html",
+      "sha256": "7996d5dbdc00948c382c69384ed458341269f4b2a81c736280a2de8d6d02b5b8",
+      "bytes": 168734,
+      "retrieved": "2026-09-15T23:25:02-0500"
+    },
+    {
+      "label": "jail_allegan_2026-09-15",
+      "url": "https://alleganoldjailmuseum.com/",
+      "path": "data/raw/jail_allegan_2026-09-15.html",
+      "sha256": "e7c7818c98355217ab48d7a4b60479a1fb87bb104926aede9d72e5cd37f4b8b5",
+      "bytes": 83978,
+      "retrieved": "2026-09-15T23:25:03-0500"
+    },
+    {
+      "label": "jail_smethport_2026-09-15",
+      "url": "https://www.mchsmuseum.org/museum-info",
+      "path": "data/raw/jail_smethport_2026-09-15.html",
+      "sha256": "deac8e9121073a3e5147096e451e766948157ee97ed822fd5594927f358ce184",
+      "bytes": 672895,
+      "retrieved": "2026-09-15T23:25:05-0500"
+    },
+    {
+      "label": "jail_smethport_contact_2026-09-15",
+      "url": "https://www.mchsmuseum.org/contact",
+      "path": "data/raw/jail_smethport_contact_2026-09-15.html",
+      "sha256": "2b29e4c4d90cbf55244d5b05cde324d9b5af9bd9c21fdf4c27e5068b72a47bc6",
+      "bytes": 704532,
+      "retrieved": "2026-09-15T23:25:07-0500"
+    },
+    {
+      "label": "jail_jim_thorpe_2026-09-15",
+      "url": "https://theoldjailmuseum.com/",
+      "path": "data/raw/jail_jim_thorpe_2026-09-15.html",
+      "sha256": "5a7c31c009f490642e70786b87778dcaf30f8f07360929dd1c1ec227253f8538",
+      "bytes": 92644,
+      "retrieved": "2026-09-15T23:25:08-0500"
+    },
+    {
+      "label": "jail_sandersville_2026-09-15",
+      "url": "https://wacohistorical.org/genealogy/",
+      "path": "data/raw/jail_sandersville_2026-09-15.html",
+      "sha256": "31fce0b349a513e9c08c8978a38e42f8cf9a4c5a462b6d224f69a817ccc12465",
+      "bytes": 57002,
+      "retrieved": "2026-09-15T23:25:16-0500"
+    },
+    {
+      "label": "union_oh_museum_2026-09-17",
+      "url": "https://www.uchsohio.org/Museum",
+      "path": "data/raw/union_oh_museum_2026-09-17.html",
+      "sha256": "bbabff172ccb76f08d2af87161aaf84cbbbf66262617e95126507251daf25548",
+      "bytes": 98499,
+      "retrieved": "2026-09-17T22:39:27-0500"
+    },
+    {
+      "label": "union_oh_home_2026-09-17",
+      "url": "https://www.uchsohio.org/",
+      "path": "data/raw/union_oh_home_2026-09-17.html",
+      "sha256": "337067e9f1dd5786fc9cdfa1be5235092d6556243b7f15bd05910a533e4566b9",
+      "bytes": 95882,
+      "retrieved": "2026-09-17T22:39:27-0500"
+    },
+    {
+      "label": "union_ga_home_2026-09-17",
+      "url": "https://www.unioncountyhistory.org/",
+      "path": "data/raw/union_ga_home_2026-09-17.html",
+      "sha256": "bc3e5b69d9445e03242d988539d4779bac6c7fa8675a719f6b2d41438caa9c80",
+      "bytes": 455051,
+      "retrieved": "2026-09-17T22:39:28-0500"
+    },
+    {
+      "label": "union_ga_board_2026-09-17",
+      "url": "https://www.unioncountyhistory.org/our-board",
+      "path": "data/raw/union_ga_board_2026-09-17.html",
+      "sha256": "df649334daf581c36870acc7e49be9c02fd1a9980fa046b722505a882513c322",
+      "bytes": 419859,
+      "retrieved": "2026-09-17T22:39:29-0500"
+    },
+    {
+      "label": "union_ga_courthouse_2026-09-17",
+      "url": "https://www.unioncountyhistory.org/_files/ugd/b83337_d4d2401bc0564d09be5728d8074982a5.pdf",
+      "path": "data/raw/union_ga_courthouse_2026-09-17.pdf",
+      "sha256": "cdef2baa42c22676e6628c01285f14938a56549dff310436363664e9407caa2b",
+      "bytes": 1095767,
+      "retrieved": "2026-09-17T22:39:29-0500"
+    },
+    {
+      "label": "union_ga_county_2026-09-17",
+      "url": "https://www.unioncountyga.gov/312/Historical-Attractions",
+      "path": "data/raw/union_ga_county_2026-09-17.html",
+      "sha256": "d4fb199fc98dee2241048c29f6b7d72741b4b53d93320df700a5b4acab5d3c9e",
+      "bytes": 82486,
+      "retrieved": "2026-09-17T22:39:30-0500"
+    },
+    {
+      "label": "union_tn_about_2026-09-17",
+      "url": "https://www.unioncountyhistoricalsocietytn.org/about-1",
+      "path": "data/raw/union_tn_about_2026-09-17.html",
+      "sha256": "5a1f2d356128a644b7266544f54d57eabda3f2890c676118d510445adc263376",
+      "bytes": 408948,
+      "retrieved": "2026-09-17T22:39:30-0500"
+    },
+    {
+      "label": "union_tn_home_2026-09-17",
+      "url": "https://www.unioncountyhistoricalsocietytn.org/",
+      "path": "data/raw/union_tn_home_2026-09-17.html",
+      "sha256": "e298162e123c39dc5921a8025781ddf4a1b1297cf2bd083f9612d4c2bb2bad10",
+      "bytes": 406983,
+      "retrieved": "2026-09-17T22:39:31-0500"
+    },
+    {
+      "label": "union_in_about_2026-09-17",
+      "url": "https://uchistory.org/about-2/",
+      "path": "data/raw/union_in_about_2026-09-17.html",
+      "sha256": "dd10c4babbe86f30545720e1f626ee68092135a6d0b97d97c3343158c8b1507c",
+      "bytes": 149140,
+      "retrieved": "2026-09-17T22:39:31-0500"
+    },
+    {
+      "label": "union_in_development_2026-09-17",
+      "url": "https://ucdc.us/business-directory/union-county-historical-society/",
+      "path": "data/raw/union_in_development_2026-09-17.html",
+      "sha256": "f312869c0e26aebb8704db3c532e11238b1e399d0a49c2192a89820ad19d313b",
+      "bytes": 51737,
+      "retrieved": "2026-09-17T22:39:32-0500"
+    },
+    {
+      "label": "union_il_contact_2026-09-17",
+      "url": "https://www.unioncountyilmuseum.com/contact-us",
+      "path": "data/raw/union_il_contact_2026-09-17.html",
+      "sha256": "fbc070ac1cad209f3fa51028ef668c8cade3ab6f518c28bb7afdf86d31a37077",
+      "bytes": 120382,
+      "retrieved": "2026-09-17T22:39:33-0500"
+    },
+    {
+      "label": "union_il_museum_2026-09-17",
+      "url": "https://www.unioncountyilmuseum.com/museum",
+      "path": "data/raw/union_il_museum_2026-09-17.html",
+      "sha256": "6be44bd980bc983fb2f2370aa5006ee240331f8f82c0d6612e1727be6ef4856b",
+      "bytes": 115940,
+      "retrieved": "2026-09-17T22:39:33-0500"
+    },
+    {
+      "label": "union_il_news_2026-09-17",
+      "url": "https://www.unioncountyilmuseum.com/in-the-news",
+      "path": "data/raw/union_il_news_2026-09-17.html",
+      "sha256": "5c5553cc2284ce2f82ea7f10ac6fd6ed4418b774abd882bab461defa4b0e8862",
+      "bytes": 119516,
+      "retrieved": "2026-09-17T22:39:33-0500"
+    },
+    {
+      "label": "union_fl_tourism_2026-09-17",
+      "url": "https://www.naturalnorthflorida.com/things-to-do/union-county-historical-museum/",
+      "path": "data/raw/union_fl_tourism_2026-09-17.html",
+      "sha256": "311787281ef7db1cac270f24c3a4edb51e135430ae8ff597d92cc0b06b0369f2",
+      "bytes": 365034,
+      "retrieved": "2026-09-17T22:39:34-0500"
+    },
+    {
+      "label": "union_pa_home_2026-09-17",
+      "url": "https://www.unioncopahistory.com/",
+      "path": "data/raw/union_pa_home_2026-09-17.html",
+      "sha256": "1c7b558ff17cd082904681633a6df4b64ed99e803b6a1a8b8d9be9d1eeb081fe",
+      "bytes": 908912,
+      "retrieved": "2026-09-17T22:39:34-0500"
+    },
+    {
+      "label": "union_pa_facilities_2026-09-17",
+      "url": "https://www.unioncopahistory.com/facilities",
+      "path": "data/raw/union_pa_facilities_2026-09-17.html",
+      "sha256": "90eb0c138fa7a6fe962df7041df80ce6aa162ddf0bd1a00a42811320475b6359",
+      "bytes": 733581,
+      "retrieved": "2026-09-17T22:39:35-0500"
+    },
+    {
+      "label": "union_pa_collection_2026-09-17",
+      "url": "https://www.unioncopahistory.com/museum-collection",
+      "path": "data/raw/union_pa_collection_2026-09-17.html",
+      "sha256": "a25e7dda653002ba49a0280a089c4ab3563186abbb4d919cc12e7f80353526d8",
+      "bytes": 698895,
+      "retrieved": "2026-09-17T22:39:37-0500"
+    },
+    {
+      "label": "union_ia_about_2026-09-17",
+      "url": "https://uchistoricalvillage.com/who-we-are/",
+      "path": "data/raw/union_ia_about_2026-09-17.html",
+      "sha256": "6b58b976778196da9ca895d8b4062e078c2831bdcfa65a53742aa279d60d3341",
+      "bytes": 128369,
+      "retrieved": "2026-09-17T22:39:39-0500"
+    },
+    {
+      "label": "union_ia_contact_2026-09-17",
+      "url": "https://uchistoricalvillage.com/contact/",
+      "path": "data/raw/union_ia_contact_2026-09-17.html",
+      "sha256": "da5efb2d801706fcaa44430382e42948cc518224b7c575e022ed69c01f4f2935",
+      "bytes": 111249,
+      "retrieved": "2026-09-17T22:39:41-0500"
+    },
+    {
+      "label": "union_ia_tourism_2026-09-17",
+      "url": "https://www.unioncountyiowatourism.com/historical-sites/",
+      "path": "data/raw/union_ia_tourism_2026-09-17.html",
+      "sha256": "f49c4d9a2fc6577ef68e381ff697263ce0d260479adfd6443f9c55e0f029165f",
+      "bytes": 45295,
+      "retrieved": "2026-09-17T22:39:41-0500"
+    },
+    {
+      "label": "union_nm_history_2026-09-17",
+      "url": "https://www.herzsteinmuseum.com/history",
+      "path": "data/raw/union_nm_history_2026-09-17.html",
+      "sha256": "190ae041841125a3c021f518000d247d3750eac58b9b1f56209e6b2ba35ca987",
+      "bytes": 814749,
+      "retrieved": "2026-09-17T22:39:43-0500"
+    },
+    {
+      "label": "union_or_trust_2026-09-17",
+      "url": "https://www.culturaltrust.org/wp-content/uploads/CNP-List_County_20210625.pdf",
+      "path": "data/raw/union_or_trust_2026-09-17.pdf",
+      "sha256": "d80138dc9136526dbf0df3fc1297ddd8021d89d36d82ecfb59ad2cbdca8a1adf",
+      "bytes": 1022361,
+      "retrieved": "2026-09-17T22:39:45-0500"
+    },
+    {
+      "label": "union_irs_or_2026-09-17",
+      "url": "https://www.irs.gov/pub/irs-soi/eo_or.csv",
+      "path": "data/raw/union_irs_or_2026-09-17.csv",
+      "sha256": "e4d163397e9ba0ff8035d669d08a116c94db375023db94cd8e64c678014205e3",
+      "bytes": 4602697,
+      "retrieved": "2026-09-17T22:39:45-0500"
+    },
+    {
+      "label": "union_irs_in_2026-09-17",
+      "url": "https://www.irs.gov/pub/irs-soi/eo_in.csv",
+      "path": "data/raw/union_irs_in_2026-09-17.csv",
+      "sha256": "9f2cf3cc1cc3c58ed44d75e675d0e0cc7297e5331ce676f746eb55a8e8150525",
+      "bytes": 7771832,
+      "retrieved": "2026-09-17T22:39:45-0500"
+    },
+    {
+      "label": "union_oh_about_2026-09-17",
+      "url": "https://www.uchsohio.org/AboutUs",
+      "path": "data/raw/union_oh_about_2026-09-17.html",
+      "sha256": "307cbe82bd7bfaddb21cf49883e6522f0c83918ca5c19be8df7829fc00a9456a",
+      "bytes": 100285,
+      "retrieved": "2026-09-17T22:47:09-0500"
+    },
+    {
+      "label": "union_nm_home_2026-09-17",
+      "url": "https://www.herzsteinmuseum.com/",
+      "path": "data/raw/union_nm_home_2026-09-17.html",
+      "sha256": "17e10bcd8bbd4bdc36e7d698a2fab8b1920f80028401b01e38fd8bea77d3dbd0",
+      "bytes": 925697,
+      "retrieved": "2026-09-17T22:47:09-0500"
+    },
+    {
+      "label": "union_il_board_2026-09-17",
+      "url": "https://www.unioncountyilmuseum.com/board-of-directors-and-officers",
+      "path": "data/raw/union_il_board_2026-09-17.html",
+      "sha256": "924d303dcc17c8bbe11e984dc1f858f1ac21cd7e66e9a7e3b82a64861fb353d1",
+      "bytes": 114886,
+      "retrieved": "2026-09-17T22:47:10-0500"
+    },
+    {
+      "label": "union_or_trust_2025_2026-09-17",
+      "url": "https://www.culturaltrust.org/wp-content/uploads/CNP_AlphaList_20251223.pdf",
+      "path": "data/raw/union_or_trust_2025_2026-09-17.pdf",
+      "sha256": "20f948cd97e936b40c666f34dcf312b19aa3118bcc60096c5d1e72e9f604db9f",
+      "bytes": 1113637,
+      "retrieved": "2026-09-17T22:47:11-0500"
+    },
+    {
+      "label": "union_or_state_2026-09-17",
+      "url": "https://sos.oregon.gov/blue-book/cultural/pages/history-regional.aspx",
+      "path": "data/raw/union_or_state_2026-09-17.html",
+      "sha256": "982bcb5006db56c41ce14c84e1fac9ec79303278d9ac0e6e1462fec72b7414fb",
+      "bytes": 95819,
+      "retrieved": "2026-09-17T22:47:13-0500"
+    },
+    {
+      "label": "union_nc_directory_2026-09-17",
+      "url": "https://ncgenweb.us/union/research-resources/",
+      "path": "data/raw/union_nc_directory_2026-09-17.html",
+      "sha256": "7ea280c71694f7f6d9ccae63c2e6484a911062ef641368811237cbec2550a572",
+      "bytes": 37207,
+      "retrieved": "2026-09-17T22:47:13-0500"
+    },
+    {
+      "label": "leaders_moi_directory_2026-09-23",
+      "url": "https://www.museumofillusions.com/our-locations/",
+      "path": "data/raw/leaders_moi_directory_2026-09-23.html",
+      "sha256": "2b6530afb67a222be13ec418fe85a9d31ede62766adc6c33805bf63731ebb539",
+      "bytes": 744266,
+      "retrieved": "2026-09-23T02:14:55-0500"
+    },
+    {
+      "label": "leaders_moi_pittsburgh_2026-09-23",
+      "url": "https://moipittsburgh.com/contact-us/",
+      "path": "data/raw/leaders_moi_pittsburgh_2026-09-23.html",
+      "sha256": "641edd59e6c9c9bca571f262805d2cc7772d54e539201dfa6c636144da817218",
+      "bytes": 216077,
+      "retrieved": "2026-09-23T02:14:56-0500"
+    },
+    {
+      "label": "leaders_moi_detroit_2026-09-23",
+      "url": "https://www.moidetroit.com/contact-us/",
+      "path": "data/raw/leaders_moi_detroit_2026-09-23.html",
+      "sha256": "a915ba3c56fb2702b1f15da7ba02a748225b665043b4ff5567ad61527193faf5",
+      "bytes": 204828,
+      "retrieved": "2026-09-23T02:14:57-0500"
+    },
+    {
+      "label": "leaders_moi_charlotte_2026-09-23",
+      "url": "https://moicharlotte.com/",
+      "path": "data/raw/leaders_moi_charlotte_2026-09-23.html",
+      "sha256": "3570d65d6a111371c97e0086044229e2d3288ac639159a21fcafc12307ef5bfb",
+      "bytes": 242941,
+      "retrieved": "2026-09-23T02:14:58-0500"
+    },
+    {
+      "label": "leaders_moi_denver_2026-09-23",
+      "url": "https://moidenver.com/",
+      "path": "data/raw/leaders_moi_denver_2026-09-23.html",
+      "sha256": "9f8fdabe07aab73e4d0baaed5823a7205e798f3e7eaa7dabbcd44cfe14bddce9",
+      "bytes": 236586,
+      "retrieved": "2026-09-23T02:14:58-0500"
+    },
+    {
+      "label": "leaders_moi_mall_of_america_2026-09-23",
+      "url": "https://moimallofamerica.com/contact-us/",
+      "path": "data/raw/leaders_moi_mall_of_america_2026-09-23.html",
+      "sha256": "c9acf0ed38428c2f4ef6c7426ea37e374471cc07e2b6b1f956dd8f27e8aba4c8",
+      "bytes": 216822,
+      "retrieved": "2026-09-23T02:14:58-0500"
+    },
+    {
+      "label": "leaders_moi_san_diego_2026-09-23",
+      "url": "https://moisandiego.com/contact-us/",
+      "path": "data/raw/leaders_moi_san_diego_2026-09-23.html",
+      "sha256": "49a5223394a700f27217eb1d59636516273c9cbafaa95fb4c8e382baaa29595a",
+      "bytes": 202212,
+      "retrieved": "2026-09-23T02:14:59-0500"
+    },
+    {
+      "label": "leaders_moi_scottsdale_2026-09-23",
+      "url": "https://moiscottsdale.com/contact-us/",
+      "path": "data/raw/leaders_moi_scottsdale_2026-09-23.html",
+      "sha256": "23a21e9ed9a101722b76425fad24bd77963ea70dca052400b104e4fd8ab084da",
+      "bytes": 210099,
+      "retrieved": "2026-09-23T02:14:59-0500"
+    },
+    {
+      "label": "leaders_moi_santa_monica_2026-09-23",
+      "url": "https://moisantamonica.com/contact-us/",
+      "path": "data/raw/leaders_moi_santa_monica_2026-09-23.html",
+      "sha256": "78079866c0acac50ef5f701c7a820b0d830c33eadacc4374b548bdf395eb1c8e",
+      "bytes": 208168,
+      "retrieved": "2026-09-23T02:14:59-0500"
+    },
+    {
+      "label": "leaders_moi_philadelphia_2026-09-23",
+      "url": "https://moiphilly.com/contact-us/",
+      "path": "data/raw/leaders_moi_philadelphia_2026-09-23.html",
+      "sha256": "09714e859f1b4dbe0027a5a8478e229114bf7964f65b6b4c4f6ebd0f564645cc",
+      "bytes": 215367,
+      "retrieved": "2026-09-23T02:15:00-0500"
+    },
+    {
+      "label": "leaders_moi_washington_2026-09-23",
+      "url": "https://moiwashington.com/contact-us/",
+      "path": "data/raw/leaders_moi_washington_2026-09-23.html",
+      "sha256": "1c0d40e2bc77795e3c0db5e75b19b8c3d35a0f753beaaf7751aed769858bd408",
+      "bytes": 221907,
+      "retrieved": "2026-09-23T02:15:00-0500"
+    },
+    {
+      "label": "leaders_moi_kansas_city_2026-09-23",
+      "url": "https://moikansascity.com/contact-us/",
+      "path": "data/raw/leaders_moi_kansas_city_2026-09-23.html",
+      "sha256": "0370a04ac8849c820e07beeaef149d2dfb896ded4e063fda08b3ff045e54140d",
+      "bytes": 191320,
+      "retrieved": "2026-09-23T02:15:00-0500"
+    },
+    {
+      "label": "leaders_wonderwalk_home_2026-09-23",
+      "url": "https://illusions-la.com/",
+      "path": "data/raw/leaders_wonderwalk_home_2026-09-23.html",
+      "sha256": "dcd3cc9ab9bc8600365e450df1058ba7b1fffaa25d8abe6a2b0b9f4bee3f4790",
+      "bytes": 96831,
+      "retrieved": "2026-09-23T02:15:01-0500"
+    },
+    {
+      "label": "leaders_wonderwalk_moi_2026-09-23",
+      "url": "https://illusions-la.com/museum-of-illusions/",
+      "path": "data/raw/leaders_wonderwalk_moi_2026-09-23.html",
+      "sha256": "09afe29dc0103e25c1d3a59666e7163fd791f710e8b8503f0150feb8fcb0caa7",
+      "bytes": 63639,
+      "retrieved": "2026-09-23T02:15:01-0500"
+    },
+    {
+      "label": "leaders_wonderwalk_visit_2026-09-23",
+      "url": "https://illusions-la.com/plan-your-visit/",
+      "path": "data/raw/leaders_wonderwalk_visit_2026-09-23.html",
+      "sha256": "3783c96e02f6455ff1d4f34e572062da06b097a66ceea49c6fbb4502748fb456",
+      "bytes": 51424,
+      "retrieved": "2026-09-23T02:15:02-0500"
+    },
+    {
+      "label": "leaders_in_home_2026-09-23",
+      "url": "https://www.johnhaycenter.org/",
+      "path": "data/raw/leaders_in_home_2026-09-23.html",
+      "sha256": "daf26d81087106a27c24ab0394928840a9c747e65d8a684b27b21b1954287b24",
+      "bytes": 63030,
+      "retrieved": "2026-09-23T02:15:02-0500"
+    },
+    {
+      "label": "leaders_in_stevens_2026-09-23",
+      "url": "https://www.johnhaycenter.org/index.php/attractions/stevens-memorial-museum",
+      "path": "data/raw/leaders_in_stevens_2026-09-23.html",
+      "sha256": "134228de84e4f00f217f6dbeb0a65a936231b80e48423376cc0f451ab44847d0",
+      "bytes": 56512,
+      "retrieved": "2026-09-23T02:15:03-0500"
+    },
+    {
+      "label": "leaders_in_contact_2026-09-23",
+      "url": "https://www.johnhaycenter.org/index.php/contact-john-hay-center",
+      "path": "data/raw/leaders_in_contact_2026-09-23.html",
+      "sha256": "7c8f4e13f987cc3cff69a5deb7c0ec6f4b5547cb5f5d747d14b73ca7fd3a3839",
+      "bytes": 54696,
+      "retrieved": "2026-09-23T02:15:03-0500"
+    },
+    {
+      "label": "leaders_in_leadership_2026-09-23",
+      "url": "https://www.johnhaycenter.org/index.php/about/staff-leadership",
+      "path": "data/raw/leaders_in_leadership_2026-09-23.html",
+      "sha256": "53eabbb701a855bf357d75353c0f71ba02f2c92ca1e4c2713972e0cc6ff3b94c",
+      "bytes": 53175,
+      "retrieved": "2026-09-23T02:15:03-0500"
+    },
+    {
+      "label": "leaders_md_manual_2026-09-23",
+      "url": "https://msa.maryland.gov/msa/mdmanual/01glance/museums/wa/html/wa.html",
+      "path": "data/raw/leaders_md_manual_2026-09-23.html",
+      "sha256": "40436d28c8767b22ba328e76a04453022d03c94ba9a802608941f34776cb2b2d",
+      "bytes": 17379,
+      "retrieved": "2026-09-23T02:15:04-0500"
+    },
+    {
+      "label": "leaders_nc_about_2026-09-23",
+      "url": "https://portoplymouthmuseum.org/about-port-o-plymouth-museum/",
+      "path": "data/raw/leaders_nc_about_2026-09-23.html",
+      "sha256": "ae9a99710db527cf2bdf894ae44bf14684a52413d177cc6feac6fd513a624718",
+      "bytes": 53039,
+      "retrieved": "2026-09-23T02:15:14-0500"
+    },
+    {
+      "label": "leaders_nc_visit_2026-09-23",
+      "url": "https://portoplymouthmuseum.org/about-port-o-plymouth-museum/plan-a-visit-2/",
+      "path": "data/raw/leaders_nc_visit_2026-09-23.html",
+      "sha256": "e96cf3ae35dcefccfeaab3f93f5ee2d0396d80b42f7db9d959cd017c79db2767",
+      "bytes": 48321,
+      "retrieved": "2026-09-23T02:15:15-0500"
+    },
+    {
+      "label": "leaders_ok_home_2026-09-23",
+      "url": "https://www.wchs-ok.org/",
+      "path": "data/raw/leaders_ok_home_2026-09-23.html",
+      "sha256": "88f6b0362f0c2e272aa41ff74bec56329b71f1adacaf2999bb8b513e6b4697f0",
+      "bytes": 22489,
+      "retrieved": "2026-09-23T02:15:15-0500"
+    },
+    {
+      "label": "leaders_ok_encyclopedia_2026-09-23",
+      "url": "https://www.okhistory.org/publications/enc/entry?entry=DE017",
+      "path": "data/raw/leaders_ok_encyclopedia_2026-09-23.html",
+      "sha256": "789f8123fb876316dcab10576f741b93af7ac1a9f59e3261d0030d6c20a90b72",
+      "bytes": 42380,
+      "retrieved": "2026-09-23T02:15:16-0500"
+    },
+    {
+      "label": "leaders_ok_tom_mix_2026-09-23",
+      "url": "https://www.okhistory.org/sites/tommix",
+      "path": "data/raw/leaders_ok_tom_mix_2026-09-23.html",
+      "sha256": "8015209c1ba6d5bb867d0f120ea861a54f183b4e4aca160b920a5d9ce428ad73",
+      "bytes": 35388,
+      "retrieved": "2026-09-23T02:15:16-0500"
+    },
+    {
+      "label": "leaders_mn_about_2026-09-23",
+      "url": "https://www.wchsmn.org/about-us/",
+      "path": "data/raw/leaders_mn_about_2026-09-23.html",
+      "sha256": "f89d646d509f633b902ebb768b378ea3c75441a52bf7087937d247c1653acbd8",
+      "bytes": 55841,
+      "retrieved": "2026-09-23T02:15:17-0500"
+    },
+    {
+      "label": "leaders_mn_contact_2026-09-23",
+      "url": "https://www.wchsmn.org/about-us/contact/",
+      "path": "data/raw/leaders_mn_contact_2026-09-23.html",
+      "sha256": "d3a20a5bca37399775876700a1d42364102b05fa70be9eed1f9bf0a8b6e0b868",
+      "bytes": 49602,
+      "retrieved": "2026-09-23T02:15:17-0500"
+    },
+    {
+      "label": "leaders_oh_archives_2026-09-23",
+      "url": "https://www.wchshistory.org/visit-the-archives",
+      "path": "data/raw/leaders_oh_archives_2026-09-23.html",
+      "sha256": "b7a23dc028ba298b6d3aa7dd0d1dd8092deeef627c863e5af25b4d65fe20f67b",
+      "bytes": 930098,
+      "retrieved": "2026-09-23T02:15:18-0500"
+    },
+    {
+      "label": "leaders_oh_about_2026-09-23",
+      "url": "https://www.wchshistory.org/about-wchs",
+      "path": "data/raw/leaders_oh_about_2026-09-23.html",
+      "sha256": "2f5459e4db93d447aeb94953818a2185cdbe6a998e80e7f22ba11d9afb4c4642",
+      "bytes": 823865,
+      "retrieved": "2026-09-23T02:15:19-0500"
+    },
+    {
+      "label": "leaders_oh_fearing_2026-09-23",
+      "url": "https://www.wchshistory.org/visit-the-fearing-house",
+      "path": "data/raw/leaders_oh_fearing_2026-09-23.html",
+      "sha256": "2619fe08cd99f15be1b0ee2613c1fea01a07c2644ff5a2ed5965d70d2dc541ca",
+      "bytes": 846524,
+      "retrieved": "2026-09-23T02:15:19-0500"
+    },
+    {
+      "label": "leaders_ny_wing_northup_2026-09-23",
+      "url": "https://wchs-ny.org/the-wing-northup-house/",
+      "path": "data/raw/leaders_ny_wing_northup_2026-09-23.html",
+      "sha256": "d854a6db954012173cda90e4ee4c1bf07912d2948760af1305b3a1bd84bb6926",
+      "bytes": 166849,
+      "retrieved": "2026-09-23T02:15:20-0500"
+    },
+    {
+      "label": "leaders_ny_library_2026-09-23",
+      "url": "https://wchs-ny.org/heritage-research-library/",
+      "path": "data/raw/leaders_ny_library_2026-09-23.html",
+      "sha256": "80e797d0d55299c4cf166e84730956e57cdb75c9fada172580eb4c54d1f29926",
+      "bytes": 172353,
+      "retrieved": "2026-09-23T02:15:21-0500"
+    },
+    {
+      "label": "leaders_ny_old_fort_2026-09-23",
+      "url": "https://villageoffortedward.gov/attractions/oldforthousemuseum/",
+      "path": "data/raw/leaders_ny_old_fort_2026-09-23.html",
+      "sha256": "8d53adef5476e313d9d9e95dfc295490ef1d897158cb6eb304ae2c2f08387ac0",
+      "bytes": 23717,
+      "retrieved": "2026-09-23T02:15:21-0500"
+    },
+    {
+      "label": "leaders_ks_home_2026-09-23",
+      "url": "https://sites.google.com/view/wchistorical/home",
+      "path": "data/raw/leaders_ks_home_2026-09-23.html",
+      "sha256": "f60e8ede012749748802fb0dd1f076180719761e8b8087f667d1ce39dac7a1ec",
+      "bytes": 158440,
+      "retrieved": "2026-09-23T02:15:22-0500"
+    },
+    {
+      "label": "leaders_ks_contact_2026-09-23",
+      "url": "https://sites.google.com/view/wchistorical/contact-us-hours-open",
+      "path": "data/raw/leaders_ks_contact_2026-09-23.html",
+      "sha256": "babfaf9207542a059d520e4e5912004849ddba8556e578f6b79a9af866bcfbe4",
+      "bytes": 146734,
+      "retrieved": "2026-09-23T02:15:22-0500"
+    },
+    {
+      "label": "leaders_ia_genweb_2026-09-23",
+      "url": "http://iagenweb.org/washington/wchs.htm",
+      "path": "data/raw/leaders_ia_genweb_2026-09-23.html",
+      "sha256": "7bf2ade0433edf21d9fb8a6670d614f28229f6543d54228c0159e5e44e479c5d",
+      "bytes": 6554,
+      "retrieved": "2026-09-23T02:15:22-0500"
+    },
+    {
+      "label": "leaders_ut_about_2026-09-23",
+      "url": "https://wchsutah.org/wchs/about-wchs.php",
+      "path": "data/raw/leaders_ut_about_2026-09-23.html",
+      "sha256": "b0640f5c4acf6959d2984c4ac6972f05e6f59c5040a17cb509650e4811fca3ae",
+      "bytes": 10391,
+      "retrieved": "2026-09-23T02:15:23-0500"
+    },
+    {
+      "label": "leaders_ut_courthouse_2026-09-23",
+      "url": "https://wchsutah.org/buildings/old-county-courthouse9.php",
+      "path": "data/raw/leaders_ut_courthouse_2026-09-23.html",
+      "sha256": "6dd365fa36a6705eb5d5d881c175a1f1eb16ca53a7a90bca48612bd13ee433d6",
+      "bytes": 12348,
+      "retrieved": "2026-09-23T02:15:23-0500"
+    },
+    {
+      "label": "leaders_ut_museums_2026-09-23",
+      "url": "https://wchsutah.org/museums/museums.php",
+      "path": "data/raw/leaders_ut_museums_2026-09-23.html",
+      "sha256": "19d75c2ab41e97359a675a0c90d000999e4c73bc97d071dc3eeaec13002ea01d",
+      "bytes": 20531,
+      "retrieved": "2026-09-23T02:15:23-0500"
+    },
+    {
+      "label": "leaders_ms_societies_2026-09-23",
+      "url": "https://www.mississippihistory.org/local-historical-societies",
+      "path": "data/raw/leaders_ms_societies_2026-09-23.html",
+      "sha256": "e188e3163a38558be66950bac395256e818d2562953d4ed83bd523b606a6978f",
+      "bytes": 34577,
+      "retrieved": "2026-09-23T02:15:23-0500"
+    },
+    {
+      "label": "leaders_ar_ein_2026-09-23",
+      "url": "https://projects.propublica.org/nonprofits/api/v2/organizations/300212518.json",
+      "path": "data/raw/leaders_ar_ein_2026-09-23.json",
+      "sha256": "0f4b32d5559959675b38d0c402edad5d67d35fefed7edb2707a91cc5318f0609",
+      "bytes": 1380,
+      "retrieved": "2026-09-23T02:15:24-0500"
+    },
+    {
+      "label": "leaders_oh_ein_2026-09-23",
+      "url": "https://projects.propublica.org/nonprofits/api/v2/organizations/316039450.json",
+      "path": "data/raw/leaders_oh_ein_2026-09-23.json",
+      "sha256": "2d3c7fae53c97a7103de90f7aa9e21d2b2ab6e48ee4a15ecb300495102d95439",
+      "bytes": 4543,
+      "retrieved": "2026-09-23T02:15:24-0500"
+    },
+    {
+      "label": "leaders_ms_ein_greenville_museum_2026-09-23",
+      "url": "https://projects.propublica.org/nonprofits/api/v2/organizations/475558530.json",
+      "path": "data/raw/leaders_ms_ein_greenville_museum_2026-09-23.json",
+      "sha256": "40b226e4c3d7406067d117a060cdf0be81b8a128940094b13d373e4561dfcc02",
+      "bytes": 1346,
+      "retrieved": "2026-09-23T02:15:24-0500"
+    },
+    {
+      "label": "leaders_irs_revocations_2026-09-23",
+      "url": "https://apps.irs.gov/pub/epostcard/data-download-revocation.zip",
+      "path": "data/raw/leaders_irs_revocations_2026-09-23.zip",
+      "sha256": "6c868c17af09b86aeabf30da80b1567c311a5aaf80af42ac0dcc4d5a9560ced7",
+      "bytes": 47564625,
+      "retrieved": "2026-09-23T02:15:25-0500"
+    },
+    {
+      "label": "leaders_irs_eo_ks_2026-09-23",
+      "url": "https://www.irs.gov/pub/irs-soi/eo_ks.csv",
+      "path": "data/raw/leaders_irs_eo_ks_2026-09-23.csv",
+      "sha256": "6b8b5ff3db33d47e0d1d789be4ecd95d0197291061ee4f518a5dc8a36c8e199c",
+      "bytes": 3163997,
+      "retrieved": "2026-09-23T02:15:25-0500"
+    },
+    {
+      "label": "leaders_irs_eo_ms_2026-09-23",
+      "url": "https://www.irs.gov/pub/irs-soi/eo_ms.csv",
+      "path": "data/raw/leaders_irs_eo_ms_2026-09-23.csv",
+      "sha256": "6be9ec376ace2d0f939e222e1e5e64d0aa01fa2e1302681d0a1c594632313084",
+      "bytes": 2738361,
+      "retrieved": "2026-09-23T02:15:25-0500"
+    },
+    {
+      "label": "county_franklin_pa_home_2026-09-26",
+      "url": "https://www.franklinhistorical.org/",
+      "path": "data/raw/county_franklin_pa_home_2026-09-26.html",
+      "sha256": "951dc442e0ff36874820f355f635da46c81b24507611a9457f8f2d7630c03809",
+      "bytes": 844994,
+      "retrieved": "2026-09-25T20:15:06-0500"
+    },
+    {
+      "label": "county_franklin_pa_about_2026-09-26",
+      "url": "https://www.franklinhistorical.org/about",
+      "path": "data/raw/county_franklin_pa_about_2026-09-26.html",
+      "sha256": "4beba57b63429dba360cc4a78d99ae0260e1d97e4a8752b0e9b0670045b1b23d",
+      "bytes": 718397,
+      "retrieved": "2026-09-25T20:15:08-0500"
+    },
+    {
+      "label": "county_franklin_pa_visit_2026-09-26",
+      "url": "https://www.franklinhistorical.org/visit",
+      "path": "data/raw/county_franklin_pa_visit_2026-09-26.html",
+      "sha256": "91ab40f51e4706821c7ade1c3843064b303bb750c8b1dbf0f77a0953230ad5c8",
+      "bytes": 730777,
+      "retrieved": "2026-09-25T20:15:09-0500"
+    },
+    {
+      "label": "county_franklin_tn_home_2026-09-26",
+      "url": "https://www.franklincountytnhistory.com/",
+      "path": "data/raw/county_franklin_tn_home_2026-09-26.html",
+      "sha256": "41c4ac99528f23f01a5e56547c34d245fb37a90bdc04f20231b7eaf22e42bc23",
+      "bytes": 36146,
+      "retrieved": "2026-09-25T20:15:10-0500"
+    },
+    {
+      "label": "county_franklin_ga_chamber_2026-09-26",
+      "url": "https://www.franklin-county.com/business-directory.php",
+      "path": "data/raw/county_franklin_ga_chamber_2026-09-26.html",
+      "sha256": "3049e0b7216ef595aa633edbf6329bd9cab0311f3f8b5cd45a5d57461317cefc",
+      "bytes": 135168,
+      "retrieved": "2026-09-25T20:15:10-0500"
+    },
+    {
+      "label": "county_franklin_in_tour_2026-09-26",
+      "url": "https://franklincountyin.com/wp-content/uploads/2019/03/Brookville-Historic-Tour-2016.pdf",
+      "path": "data/raw/county_franklin_in_tour_2026-09-26.pdf",
+      "sha256": "f3f17507dddcf45dedbdd2e046cc8fbf28b95800f802de0e9baa64e6a13a912d",
+      "bytes": 2865947,
+      "retrieved": "2026-09-25T20:15:11-0500"
+    },
+    {
+      "label": "county_franklin_in_nomination_2026-09-26",
+      "url": "https://secure.in.gov/apps/dnr/shaard/r/25b67/N/Franklin_CO_Seminary_Nom.pdf",
+      "path": "data/raw/county_franklin_in_nomination_2026-09-26.pdf",
+      "sha256": "cddda60b1e53bae24ee47faab0f94ef426c485e3a5fbaaf2e70f3cb8b8340e45",
+      "bytes": 11188,
+      "retrieved": "2026-09-25T20:15:11-0500"
+    },
+    {
+      "label": "county_franklin_in_library_2026-09-26",
+      "url": "https://fclibraries.org/in-search-of/",
+      "path": "data/raw/county_franklin_in_library_2026-09-26.html",
+      "sha256": "100cb4da928bc3a23e4d545bcddc074fbef47c659c3b32863de8772adaead3c1",
+      "bytes": 98838,
+      "retrieved": "2026-09-25T20:15:13-0500"
+    },
+    {
+      "label": "county_franklin_nc_restoration_2026-09-26",
+      "url": "https://www.louisburg.edu/_resources/tar-river-center/pdfs-files/Jail-Stabilization.pdf",
+      "path": "data/raw/county_franklin_nc_restoration_2026-09-26.pdf",
+      "sha256": "50299ae6dbd51f361791c4612e5673f3ceb33d8578a7cba2d4b548ff8f63691c",
+      "bytes": 74299,
+      "retrieved": "2026-09-25T20:15:13-0500"
+    },
+    {
+      "label": "county_franklin_nc_minutes_2026-09-26",
+      "url": "https://www.franklincountync.gov/Archive/ViewFile/Item/1947",
+      "path": "data/raw/county_franklin_nc_minutes_2026-09-26.pdf",
+      "sha256": "81db298288c22f5133e6f685dc8dbce8b51d5c2a31dfb02f19b35aece8a64a20",
+      "bytes": 798507,
+      "retrieved": "2026-09-25T20:15:14-0500"
+    },
+    {
+      "label": "county_franklin_va_home_2026-09-26",
+      "url": "https://franklincountyvahistoricalsociety.org/",
+      "path": "data/raw/county_franklin_va_home_2026-09-26.html",
+      "sha256": "19a1f053735b9b11bd0334d93d4618489f8b5a6decdeacf86989ee283ce631a7",
+      "bytes": 10781,
+      "retrieved": "2026-09-25T20:15:14-0500"
+    },
+    {
+      "label": "county_franklin_va_county_2026-09-26",
+      "url": "https://visitfranklincountyva.com/27/Things-to-Do",
+      "path": "data/raw/county_franklin_va_county_2026-09-26.html",
+      "sha256": "7697d91f481b1e4be58f04a39721217109b58c95073becda55ec061ce7266ec9",
+      "bytes": 132459,
+      "retrieved": "2026-09-25T20:15:15-0500"
+    },
+    {
+      "label": "county_franklin_oh_cosi_2026-09-26",
+      "url": "https://cosi.org/about-cosi/history-of-cosi",
+      "path": "data/raw/county_franklin_oh_cosi_2026-09-26.html",
+      "sha256": "1455f82d2a31d35f0b6ab588f1d742e079fac7b724d1e8581780a6fc18b3996f",
+      "bytes": 31438,
+      "retrieved": "2026-09-25T20:15:16-0500"
+    },
+    {
+      "label": "county_franklin_oh_ordinance_2026-09-26",
+      "url": "https://columbus.legistar.com/LegislationDetail.aspx?GUID=A80F490B-CA43-46F6-ADA6-51FB614C78FF&ID=4694386&Options=&Search=",
+      "path": "data/raw/county_franklin_oh_ordinance_2026-09-26.html",
+      "sha256": "182ccd32afe716a1946c665c368e74fabb5f5adb77abca459e07d3be8d82b5ce",
+      "bytes": 99736,
+      "retrieved": "2026-09-25T20:15:16-0500"
+    },
+    {
+      "label": "county_franklin_ks_depot_2026-09-26",
+      "url": "https://olddepotmuseum.org/historical-sites/old-depot-museum/",
+      "path": "data/raw/county_franklin_ks_depot_2026-09-26.html",
+      "sha256": "2190e7945bfbbd92c2cf225f42e19609bad003ca86f0de15bf189a03787b7717",
+      "bytes": 119398,
+      "retrieved": "2026-09-25T20:15:17-0500"
+    },
+    {
+      "label": "county_franklin_ks_archives_2026-09-26",
+      "url": "https://olddepotmuseum.org/historical-sites/franklin-county-records-research-center/",
+      "path": "data/raw/county_franklin_ks_archives_2026-09-26.html",
+      "sha256": "eeb6c3b8cb78e0bd1c89bbc73258e318373ef1e96d85afc119d469128488e29c",
+      "bytes": 107363,
+      "retrieved": "2026-09-25T20:15:17-0500"
+    },
+    {
+      "label": "county_franklin_ks_board_2026-09-26",
+      "url": "https://olddepotmuseum.org/about/trustees-staff/",
+      "path": "data/raw/county_franklin_ks_board_2026-09-26.html",
+      "sha256": "902b65b43482d35dcbe36618711fda576256516c9515495662dd2ac19377dc78",
+      "bytes": 102111,
+      "retrieved": "2026-09-25T20:15:17-0500"
+    },
+    {
+      "label": "county_franklin_ia_museum_2026-09-26",
+      "url": "https://fchsiowa.org/historical-museum",
+      "path": "data/raw/county_franklin_ia_museum_2026-09-26.html",
+      "sha256": "f3627fc8ba8539d02ad29f95bf48ac6f9900c27333dec44337fa32f0628be898",
+      "bytes": 25253,
+      "retrieved": "2026-09-25T20:15:18-0500"
+    },
+    {
+      "label": "county_franklin_va_board_2026-09-26",
+      "url": "https://franklincountyvahistoricalsociety.org/aboutUs.html",
+      "path": "data/raw/county_franklin_va_board_2026-09-26.html",
+      "sha256": "159760bf6ddcb83ff75f26c0819eb5024ee4d35a5d1376e3a03ac569cfbd500b",
+      "bytes": 9231,
+      "retrieved": "2026-09-25T20:17:46-0500"
+    },
+    {
+      "label": "county_franklin_va_contact_2026-09-26",
+      "url": "https://franklincountyvahistoricalsociety.org/contact.html",
+      "path": "data/raw/county_franklin_va_contact_2026-09-26.html",
+      "sha256": "e3df51d61890e0723d47c28ebc01e8a214921326184a3fc5396aca13b3153e2c",
+      "bytes": 5852,
+      "retrieved": "2026-09-25T20:17:46-0500"
+    },
+    {
+      "label": "county_franklin_oh_dinosaur_2026-09-26",
+      "url": "https://cosi.org/exhibits/dinos",
+      "path": "data/raw/county_franklin_oh_dinosaur_2026-09-26.html",
+      "sha256": "04cf2537ceec9f9ace66caf86102f7c94fdbf4b1afbe7d05bccb61c2af9beb0c",
+      "bytes": 33864,
+      "retrieved": "2026-09-25T20:17:47-0500"
+    },
+    {
+      "label": "county_franklin_oh_irs_2026-09-26",
+      "url": "https://www.irs.gov/pub/irs-soi/eo_oh.csv",
+      "path": "data/raw/county_franklin_oh_irs_2026-09-26.csv",
+      "sha256": "be06ce872549bff7db4ca352051dfc13ac82f55592798c46b3c3eed359ecf4ca",
+      "bytes": 13440000,
+      "retrieved": "2026-09-25T20:17:48-0500"
+    },
+    {
+      "label": "county_franklin_ga_operator_2026-09-26",
+      "url": "https://andreakfreeland.my.canva.site/franklin-co-historical-society-georgia",
+      "path": "data/raw/county_franklin_ga_operator_2026-09-26.html",
+      "sha256": "65361a637e28cc6bad46d5a389be4c27ae71630d07147d87fa762dec0facec80",
+      "bytes": 318978,
+      "retrieved": "2026-09-25T20:17:48-0500"
+    },
+    {
+      "label": "county_franklin_ga_shop_2026-09-26",
+      "url": "https://www.zeffy.com/en-US/ticketing/519f9fbf-1b40-4188-9834-023905e90157",
+      "path": "data/raw/county_franklin_ga_shop_2026-09-26.html",
+      "sha256": "4f20269a5b462c7382849ef2deaa91da9daba264fd3975529e5da89b9eef3394",
+      "bytes": 370277,
+      "retrieved": "2026-09-25T20:17:49-0500"
+    },
+    {
+      "label": "county_franklin_ks_hours_2026-09-26",
+      "url": "https://olddepotmuseum.org/old-depot-museum-records-center-hours-and-restrictions-as-of-september-12-2021/",
+      "path": "data/raw/county_franklin_ks_hours_2026-09-26.html",
+      "sha256": "97b970081f671577bf9afa1eda33c1e2f5585f24c7570dace20e1637f18054e7",
+      "bytes": 116384,
+      "retrieved": "2026-09-25T20:21:20-0500"
+    },
+    {
+      "label": "county_franklin_ks_library_2026-09-26",
+      "url": "https://ottawalibrary.pbworks.com/f/Genealogy.pdf",
+      "path": "data/raw/county_franklin_ks_library_2026-09-26.pdf",
+      "sha256": "426af362bd4379c311df2fe9c83c4cf9606a420b7c6992b00d976f825d4bd30a",
+      "bytes": 30814,
+      "retrieved": "2026-09-25T20:21:20-0500"
+    },
+    {
+      "label": "county_greene_pa_home_2026-09-26",
+      "url": "https://greenecountyhistory.org/",
+      "path": "data/raw/county_greene_pa_home_2026-09-26.html",
+      "sha256": "f210bccd0519402f1011da4027f11501ae7446d6a6a2a256d6339c1f99fb8c66",
+      "bytes": 138629,
+      "retrieved": "2026-09-25T20:32:06-0500"
+    },
+    {
+      "label": "county_greene_pa_about_2026-09-26",
+      "url": "https://greenecountyhistory.org/about-us/",
+      "path": "data/raw/county_greene_pa_about_2026-09-26.html",
+      "sha256": "174d275cf0888794f0514bd94657e735673517dfacfb7397e863044a83a9179e",
+      "bytes": 137922,
+      "retrieved": "2026-09-25T20:32:07-0500"
+    },
+    {
+      "label": "county_greene_ga_city_2026-09-26",
+      "url": "https://downtowngreensboroga.com/things-to-do-2",
+      "path": "data/raw/county_greene_ga_city_2026-09-26.html",
+      "sha256": "7eba1d470280af54f946df149e56f09dab58bb229fa21120fae5f8a1f47b1930",
+      "bytes": 160306,
+      "retrieved": "2026-09-25T20:32:07-0500"
+    },
+    {
+      "label": "county_greene_in_home_2026-09-26",
+      "url": "https://www.greenecoindianahistory.com/",
+      "path": "data/raw/county_greene_in_home_2026-09-26.html",
+      "sha256": "e242940d6dc934f9ec36ab439a49221407a370fe21e3d9f6443b6513e7a55511",
+      "bytes": 1847777,
+      "retrieved": "2026-09-25T20:32:12-0500"
+    },
+    {
+      "label": "county_greene_in_previous_2026-09-26",
+      "url": "https://www.greenecountyhistoricalsociety.org/home.php",
+      "path": "data/raw/county_greene_in_previous_2026-09-26.html",
+      "sha256": "de02ca13b417124ea79234d86172d3273073393a68010ed2536c1a974d98348d",
+      "bytes": 2282,
+      "retrieved": "2026-09-25T20:32:12-0500"
+    },
+    {
+      "label": "county_greene_mo_about_2026-09-26",
+      "url": "https://www.greenecountyhistoricalsociety.com/about",
+      "path": "data/raw/county_greene_mo_about_2026-09-26.html",
+      "sha256": "2ec656192974083a8f6ad8aecb5018dac932b5f8d80372a866bc2708e90f68c3",
+      "bytes": 705423,
+      "retrieved": "2026-09-25T20:32:15-0500"
+    },
+    {
+      "label": "county_greene_mo_mission_2026-09-26",
+      "url": "https://www.greenecountyhistoricalsociety.com/our-mission",
+      "path": "data/raw/county_greene_mo_mission_2026-09-26.html",
+      "sha256": "532e347b8d3d6a8d5f92fc582a0cc6d584d98222f06ade87f1c79e9851595880",
+      "bytes": 695406,
+      "retrieved": "2026-09-25T20:32:17-0500"
+    },
+    {
+      "label": "county_greene_mo_bylaws_2026-09-26",
+      "url": "https://www.greenecountyhistoricalsociety.com/bylaws",
+      "path": "data/raw/county_greene_mo_bylaws_2026-09-26.html",
+      "sha256": "a85f34916637122fd9b29239716e38c03afea57718127c810f88992eec6dd5ae",
+      "bytes": 744336,
+      "retrieved": "2026-09-25T20:32:17-0500"
+    },
+    {
+      "label": "county_greene_mo_museum_2026-09-26",
+      "url": "https://historymuseumonthesquare.org/our-museum-history/",
+      "path": "data/raw/county_greene_mo_museum_2026-09-26.html",
+      "sha256": "6c3f309964b2f54a25839b238a0918c904c473713afcc6934ae8639f21e96d1b",
+      "bytes": 135222,
+      "retrieved": "2026-09-25T20:32:18-0500"
+    },
+    {
+      "label": "county_greene_mo_archives_2026-09-26",
+      "url": "https://cdm17307.contentdm.oclc.org/digital/api/collection/Guides/id/2106/download",
+      "path": "data/raw/county_greene_mo_archives_2026-09-26.pdf",
+      "sha256": "6e34b54b76ba0831c74a8407e07e22891cd80e55210c7ba5fa78ddd09d655672",
+      "bytes": 116070,
+      "retrieved": "2026-09-25T20:32:19-0500"
+    },
+    {
+      "label": "county_greene_va_home_2026-09-26",
+      "url": "https://greenehistoryva.org/",
+      "path": "data/raw/county_greene_va_home_2026-09-26.html",
+      "sha256": "9f70d936eae7714f6e722aee39a0f1a4f8f6de92b2305ff18d57cf154bfb7634",
+      "bytes": 252920,
+      "retrieved": "2026-09-25T20:32:19-0500"
+    },
+    {
+      "label": "county_greene_ny_about_2026-09-26",
+      "url": "https://www.gchistory.org/what-we-do",
+      "path": "data/raw/county_greene_ny_about_2026-09-26.html",
+      "sha256": "fa565bf5be156dc6afadd668ed053da5cb48ceb98b5682da1e74537b0fd6a8bd",
+      "bytes": 80165,
+      "retrieved": "2026-09-25T20:32:20-0500"
+    },
+    {
+      "label": "county_greene_ny_board_2026-09-26",
+      "url": "https://www.gchistory.org/trustees-staff",
+      "path": "data/raw/county_greene_ny_board_2026-09-26.html",
+      "sha256": "6450d1e8426d2eab848ca14f21cfbc36aa03952de25da4dd203639aa87304a5a",
+      "bytes": 102109,
+      "retrieved": "2026-09-25T20:32:20-0500"
+    },
+    {
+      "label": "county_greene_ny_directions_2026-09-26",
+      "url": "https://www.gchistory.org/bronck-museum-directions",
+      "path": "data/raw/county_greene_ny_directions_2026-09-26.html",
+      "sha256": "4bee1e5f6ec40fc8d8dfb05456b23e84c47abdb409b580889021154479865bf4",
+      "bytes": 79562,
+      "retrieved": "2026-09-25T20:32:21-0500"
+    },
+    {
+      "label": "county_greene_ny_tours_2026-09-26",
+      "url": "https://www.gchistory.org/schedule-tour",
+      "path": "data/raw/county_greene_ny_tours_2026-09-26.html",
+      "sha256": "c17515d874ff04e98ff77dadc4aeb642a2f9ed10ee671a288bdf0f0ebe2d1a09",
+      "bytes": 86146,
+      "retrieved": "2026-09-25T20:32:21-0500"
+    },
+    {
+      "label": "county_greene_ia_tourism_2026-09-26",
+      "url": "https://www.experiencejeffersoniowa.com/directory/blog-post-title-two-3sg2n-3bgx7-eyex7-jbjy2-7zdct-dyhgp-8lgjc-lt6gh-belln-2hydb-3wdpb-ce7bw-ag4t7-pc83y-3p2sk-98mn7-mbhax-ctp96-prb3c-txnjp-nt33p",
+      "path": "data/raw/county_greene_ia_tourism_2026-09-26.html",
+      "sha256": "0ff4ede1c5ed3a573ad26bcdf08d56c0c716c6f8424541e6ffbccd6bee2847a4",
+      "bytes": 228103,
+      "retrieved": "2026-09-25T20:32:22-0500"
+    },
+    {
+      "label": "county_greene_ia_program_2026-09-26",
+      "url": "https://greenecountynewsonline.com/2023/07/19/finding-civil-war-ancestors-topic-of-historical-society-program/",
+      "path": "data/raw/county_greene_ia_program_2026-09-26.html",
+      "sha256": "913ce4069752d6518c0b53424f6dc9977182da51db06e06d2d757a4e8e8f1695",
+      "bytes": 116139,
+      "retrieved": "2026-09-25T20:32:23-0500"
+    },
+    {
+      "label": "county_greene_ia_bank_2026-09-26",
+      "url": "https://fraser.stlouisfed.org/files/docs/publications/fdic/CRAexamined/fdic_CRAexamined_19961119_387.pdf",
+      "path": "data/raw/county_greene_ia_bank_2026-09-26.pdf",
+      "sha256": "af3cce9f3e947bee6247eb69f5642709ede58a0c6d13e4c7f77bb98f41ace48f",
+      "bytes": 470876,
+      "retrieved": "2026-09-25T20:32:23-0500"
+    },
+    {
+      "label": "county_greene_ia_irs_2026-09-26",
+      "url": "https://www.irs.gov/pub/irs-soi/eo_ia.csv",
+      "path": "data/raw/county_greene_ia_irs_2026-09-26.csv",
+      "sha256": "777e8acec3eb137587db57f1d507ae86f0a0f67355a330feddd5b68a3b0cfbed",
+      "bytes": 5236042,
+      "retrieved": "2026-09-25T20:32:24-0500"
+    },
+    {
+      "label": "county_greene_al_home_2026-09-26",
+      "url": "https://www.greenecountyhistory.net/",
+      "path": "data/raw/county_greene_al_home_2026-09-26.html",
+      "sha256": "391c953772143a74214727141b6e27f0806bc35cf694b38f3dc54ec0b20cb480",
+      "bytes": 19526,
+      "retrieved": "2026-09-25T20:32:24-0500"
+    },
+    {
+      "label": "county_greene_al_speakers_2026-09-26",
+      "url": "https://www.greenecountyhistory.net/events/upcoming-speakers.php",
+      "path": "data/raw/county_greene_al_speakers_2026-09-26.html",
+      "sha256": "df99ab69ecf86641290fca91068af53b670f019dcad18b6aab76f91d73be87ef",
+      "bytes": 21229,
+      "retrieved": "2026-09-25T20:32:25-0500"
+    },
+    {
+      "label": "county_greene_al_history_2026-09-26",
+      "url": "https://www.greenecountyhistory.net/about/history.php",
+      "path": "data/raw/county_greene_al_history_2026-09-26.html",
+      "sha256": "152444c708c22686d6e56cc1507a109852256fb7303c4b63134d1cdd385e4fcf",
+      "bytes": 25011,
+      "retrieved": "2026-09-25T20:34:27-0500"
+    },
+    {
+      "label": "county_greene_al_projects_2026-09-26",
+      "url": "https://www.greenecountyhistory.net/about/current-projects.php",
+      "path": "data/raw/county_greene_al_projects_2026-09-26.html",
+      "sha256": "4763af12abcc576dad7998bb368d7489a49e194c6f37b57ded0dac7cb2fdb318",
+      "bytes": 19710,
+      "retrieved": "2026-09-25T20:34:27-0500"
+    },
+    {
+      "label": "county_greene_al_rentals_2026-09-26",
+      "url": "https://www.greenecountyhistory.net/support/facility-rental/rentals.php",
+      "path": "data/raw/county_greene_al_rentals_2026-09-26.html",
+      "sha256": "de255e07eec3d1e8b4e256e44da0a528065e07fc52ed2d647fdc42c78c36a1a5",
+      "bytes": 20810,
+      "retrieved": "2026-09-25T20:34:27-0500"
+    },
+    {
+      "label": "county_jackson_ar_operator_2026-09-26",
+      "url": "https://jacksonhistory.net/",
+      "path": "data/raw/county_jackson_ar_operator_2026-09-26.html",
+      "sha256": "a2eb25236b9dfac83bcb8275a1cee246f97bc882574e387e81d2a57a08ed8055",
+      "bytes": 69200,
+      "retrieved": "2026-09-25T20:43:08-0500"
+    },
+    {
+      "label": "county_jackson_ar_history_2026-09-26",
+      "url": "https://encyclopediaofarkansas.net/entries/jackson-county-historical-society-6999/",
+      "path": "data/raw/county_jackson_ar_history_2026-09-26.html",
+      "sha256": "f8504376c3392889713d0b55451db9690ec15f0d49644c1655435984a292a176",
+      "bytes": 242040,
+      "retrieved": "2026-09-25T20:43:09-0500"
+    },
+    {
+      "label": "county_jackson_ks_operator_2026-09-26",
+      "url": "https://sites.google.com/site/jchsks/",
+      "path": "data/raw/county_jackson_ks_operator_2026-09-26.html",
+      "sha256": "ad6377a85eeca33f99b1656c837baf7160a7db909823770f4ed21d140aba8aa0",
+      "bytes": 232473,
+      "retrieved": "2026-09-25T20:43:09-0500"
+    },
+    {
+      "label": "county_jackson_ks_contact_2026-09-26",
+      "url": "https://sites.google.com/site/jchsks/contact-us",
+      "path": "data/raw/county_jackson_ks_contact_2026-09-26.html",
+      "sha256": "b8f820246cef8d1291139549ba2836e65c882c5651c27cda8c2f0310e95f630d",
+      "bytes": 171612,
+      "retrieved": "2026-09-25T20:43:10-0500"
+    },
+    {
+      "label": "county_jackson_ks_university_2026-09-26",
+      "url": "https://www.k-state.edu/chapman/research/2018_Museums_Historical_Society.pdf",
+      "path": "data/raw/county_jackson_ks_university_2026-09-26.pdf",
+      "sha256": "0b7f6cfadb10b9d05c11854cabfaeaee21ae5dd46a0f62242ec66c9d3750b6da",
+      "bytes": 129879,
+      "retrieved": "2026-09-25T20:43:10-0500"
+    },
+    {
+      "label": "county_jackson_il_operator_2026-09-26",
+      "url": "https://www.jchsil.org/",
+      "path": "data/raw/county_jackson_il_operator_2026-09-26.html",
+      "sha256": "36c3c17ad875c5640835293f6e32e4e7bede357b89c6c9f32d104fe0c1bdbcf1",
+      "bytes": 99734,
+      "retrieved": "2026-09-25T20:43:11-0500"
+    },
+    {
+      "label": "county_jackson_il_about_2026-09-26",
+      "url": "https://www.jchsil.org/index.php/about/about-us",
+      "path": "data/raw/county_jackson_il_about_2026-09-26.html",
+      "sha256": "6a523f93ece2f15081dbf78d31c0095ff0578a94f91918227006b87c0372fa71",
+      "bytes": 51143,
+      "retrieved": "2026-09-25T20:43:11-0500"
+    },
+    {
+      "label": "county_jackson_il_history_2026-09-26",
+      "url": "https://www.jchsil.org/index.php/about/history",
+      "path": "data/raw/county_jackson_il_history_2026-09-26.html",
+      "sha256": "e6772c058b0cb779425d815bafbd6c90a70b371cd1122deafe3358bbb20a171a",
+      "bytes": 52160,
+      "retrieved": "2026-09-25T20:43:12-0500"
+    },
+    {
+      "label": "county_jackson_mn_operator_2026-09-26",
+      "url": "https://www.jchsmn.org/",
+      "path": "data/raw/county_jackson_mn_operator_2026-09-26.html",
+      "sha256": "9067a27737c725088b2d3efe0095cb7ea88b47c322bcbe9faa1db108b61cabc0",
+      "bytes": 186315,
+      "retrieved": "2026-09-25T20:43:13-0500"
+    },
+    {
+      "label": "county_jackson_mi_current_2026-09-26",
+      "url": "https://www.myjacksonhistorical.org/about",
+      "path": "data/raw/county_jackson_mi_current_2026-09-26.html",
+      "sha256": "18a9ca62963d95bd3f207be134f683e4500c94404820f04db15c2b398d47cd84",
+      "bytes": 617705,
+      "retrieved": "2026-09-25T20:43:14-0500"
+    },
+    {
+      "label": "county_jackson_ga_county_2026-09-26",
+      "url": "https://www.jacksoncountygov.com/695/Historic-Archives",
+      "path": "data/raw/county_jackson_ga_county_2026-09-26.html",
+      "sha256": "3c73ec83b5392956cd1b14669b799603e070b5c247acadaa8f43f8131cd06794",
+      "bytes": 104063,
+      "retrieved": "2026-09-25T20:43:15-0500"
+    },
+    {
+      "label": "county_jackson_ga_library_2026-09-26",
+      "url": "https://www.prlib.org/commerce-public-library-heritage-room",
+      "path": "data/raw/county_jackson_ga_library_2026-09-26.html",
+      "sha256": "5cf0b1b4c4edffe35f3a4d46ca6964fb0639bf6a28a3d723782933fec593d7aa",
+      "bytes": 813294,
+      "retrieved": "2026-09-25T20:43:16-0500"
+    },
+    {
+      "label": "county_jackson_mo_jail_2026-09-26",
+      "url": "https://www.jchs.org/1859jailmuseum",
+      "path": "data/raw/county_jackson_mo_jail_2026-09-26.html",
+      "sha256": "6e7ec63e910f863a5989fd0e611ca8d1eaec196ea759a77246c46a82185a3512",
+      "bytes": 349268,
+      "retrieved": "2026-09-25T20:43:16-0500"
+    },
+    {
+      "label": "county_jackson_mo_visit_2026-09-26",
+      "url": "https://www.jchs.org/plan-your-visit",
+      "path": "data/raw/county_jackson_mo_visit_2026-09-26.html",
+      "sha256": "52a0e036970e1f73a5aed35124b27315e03e44fedbaf665b9c820d35bb2f1e60",
+      "bytes": 115694,
+      "retrieved": "2026-09-25T20:43:16-0500"
+    },
+    {
+      "label": "county_jackson_mo_governance_2026-09-26",
+      "url": "https://www.jchs.org/mission-1",
+      "path": "data/raw/county_jackson_mo_governance_2026-09-26.html",
+      "sha256": "e4395ce59a6b461c41c73b705c0e5bfe30e822bff54a7be8e16c2c55e4595592",
+      "bytes": 131733,
+      "retrieved": "2026-09-25T20:43:17-0500"
+    },
+    {
+      "label": "county_jackson_mo_office_2026-09-26",
+      "url": "https://www.jchs.org/who-we-are",
+      "path": "data/raw/county_jackson_mo_office_2026-09-26.html",
+      "sha256": "3c7bf7e5b775788e16c1e9031ccfa009d83a6445eeca8caa8e812bce09b0d812",
+      "bytes": 110776,
+      "retrieved": "2026-09-25T20:43:17-0500"
+    },
+    {
+      "label": "county_jackson_ok_auditor_2026-09-26",
+      "url": "https://www.sai.ok.gov/Search%20Reports/database/JacksonCoOp15WebFinal.pdf",
+      "path": "data/raw/county_jackson_ok_auditor_2026-09-26.pdf",
+      "sha256": "6d427f716b7e5e51af1dabf5cce1a9346e7e49ddd7fe639e4f7d9c3174b6fcaf",
+      "bytes": 635600,
+      "retrieved": "2026-09-25T20:43:18-0500"
+    },
+    {
+      "label": "county_jackson_ia_foundation_2026-09-26",
+      "url": "https://www.greatgiveday.org/organization/Jackson-County-Historical-Society-4",
+      "path": "data/raw/county_jackson_ia_foundation_2026-09-26.html",
+      "sha256": "36465f25ba15f3574003ed916dfa24428040d0ba2caaa3c4a015b26f122b1acf",
+      "bytes": 206783,
+      "retrieved": "2026-09-25T20:43:19-0500"
+    },
+    {
+      "label": "county_irs_bmf_codes_2026-09-26",
+      "url": "https://www.irs.gov/pub/irs-soi/eo-info.pdf",
+      "path": "data/raw/county_irs_bmf_codes_2026-09-26.pdf",
+      "sha256": "c9b037fdf8597a9394fff299113b5fd906f4f84a074c76ec1f92d5a629748f93",
+      "bytes": 495364,
+      "retrieved": "2026-09-25T20:43:19-0500"
+    },
+    {
+      "label": "county_jackson_ar_mission_2026-09-26",
+      "url": "https://jacksonhistory.net/our-mission/",
+      "path": "data/raw/county_jackson_ar_mission_2026-09-26.html",
+      "sha256": "2d7db300ee32f0817e46beb74e972a79b9a75ab4a447cc432dd1ebcd83bca3c3",
+      "bytes": 55668,
+      "retrieved": "2026-09-25T20:51:04-0500"
+    },
+    {
+      "label": "county_jackson_ar_operator_history_2026-09-26",
+      "url": "https://jacksonhistory.net/jchs-history/",
+      "path": "data/raw/county_jackson_ar_operator_history_2026-09-26.html",
+      "sha256": "77f8d33c3a9115ac2e72638e068daa31d86ab4126208c965ec27b11f36819191",
+      "bytes": 59322,
+      "retrieved": "2026-09-25T20:51:06-0500"
+    },
+    {
+      "label": "county_jackson_mn_history_2026-09-26",
+      "url": "https://www.jchsmn.org/about-us",
+      "path": "data/raw/county_jackson_mn_history_2026-09-26.html",
+      "sha256": "8604b3e6cec05468eed43e4ef4378bd3593f379a090b72c8e9362675cb8bb910",
+      "bytes": 163757,
+      "retrieved": "2026-09-25T20:51:07-0500"
+    },
+    {
+      "label": "county_jackson_mn_board_2026-09-26",
+      "url": "https://www.jchsmn.org/about-us/staff-and-directors",
+      "path": "data/raw/county_jackson_mn_board_2026-09-26.html",
+      "sha256": "7a7dd56efe3a9fc3c57ae53cb413add586a4fe37a68f2cb892ab8e670be45354",
+      "bytes": 157475,
+      "retrieved": "2026-09-25T20:51:08-0500"
+    },
+    {
+      "label": "county_jackson_mn_governance_2026-09-26",
+      "url": "https://jacksoncountymn.gov/vertical/Sites/%7B47B68709-5081-4D2D-A79C-49891B025171%7D/uploads/2016_Final_Audit_Report.pdf",
+      "path": "data/raw/county_jackson_mn_governance_2026-09-26.pdf",
+      "sha256": "8ffad564af31895cbd36228682218645b62287354b78f63c3c80bc2d1b92da90",
+      "bytes": 859944,
+      "retrieved": "2026-09-25T20:51:08-0500"
+    },
+    {
+      "label": "county_jackson_mo_courthouse_2026-09-26",
+      "url": "https://www.jchs.org/truman-courthouse",
+      "path": "data/raw/county_jackson_mo_courthouse_2026-09-26.html",
+      "sha256": "ca0e83d0350531cc829050a56feca87b2b379de0f1cf0b8bbe146f0cfe1b05b7",
+      "bytes": 121254,
+      "retrieved": "2026-09-25T20:51:09-0500"
+    },
+    {
+      "label": "county_jackson_ia_county_genealogy_host_2026-09-26",
+      "url": "https://jackson.county.iowa.sites.gmdsolutions.net/recorder/genealogy/",
+      "path": "data/raw/county_jackson_ia_county_genealogy_host_2026-09-26.html",
+      "sha256": "49f5be248ff550e1a3b98ac871e99ee78dc4f2e9332744bc76bc82c1c3ef7f3e",
+      "bytes": 60669,
+      "retrieved": "2026-09-25T20:53:25-0500"
+    }
+  ],
+  "queries": [
+    {
+      "label": "overture_museum",
+      "source": "overture",
+      "detail": {
+        "release": "2026-08-19.0",
+        "category_like": "%museum%",
+        "country": "US",
+        "bbox": {
+          "xmin": -180,
+          "xmax": -66,
+          "ymin": 17,
+          "ymax": 72
+        }
+      },
+      "path": "data/raw/overture_museum_2026-08-19.0.parquet",
+      "n_rows": 29894,
+      "sha256": "448a5c8f87faf33360062b6fb6cf0a9e721773b2b860e791b2352db9710b72de",
+      "bytes": 2442773,
+      "retrieved": "2026-09-07T20:54:20-0500"
+    },
+    {
+      "label": "imls_museums",
+      "source": "imls",
+      "detail": {
+        "files": ["MuseumFile2018_File1_Nulls.csv", "MuseumFile2018_File2_Nulls.csv", "MuseumFile2018_File3_Nulls.csv"],
+        "keyed_on": "COMMONNAME"
+      },
+      "path": "data/raw/imls_museums.parquet",
+      "n_rows": 30109,
+      "sha256": "f412b6186fefa91436ec066ea1ebae29b7f1b2fbce8f75bd12e6114ff35f254e",
+      "bytes": 1240159,
+      "retrieved": "2026-09-07T21:20:27-0500"
+    },
+    {
+      "label": "overture_identity_context",
+      "source": "overture",
+      "detail": {
+        "release": "2026-08-19.0",
+        "source_ids": ["5a790b09-0998-4068-88c3-95506f3eb6a3", "7c3aed7a-dd9d-4c56-a984-c5f8a303a9f0", "4839d27e-d755-418c-9a26-a6c30f0dcd43", "0c882b11-f39b-402b-ba37-b0980564ab65", "9bd8b641-b58f-480e-a245-a79482c7a746", "a65d225d-0c0c-404f-b2ad-7c347bab0108", "6e07087a-f45d-4216-bb4c-d32c693797af", "d4472bd6-68ab-41e1-9616-fba56529a4ce", "717a473d-6a94-4a75-8de1-0fe50f19f450", "7034b742-415d-4469-9198-89faf43da7b3", "94f0e826-ace4-490f-aa7e-a20408c96b77", "f03eab9c-20ad-4147-b13e-7619ebba5baf", "ecf32abd-3964-4842-beb4-c2ba6c025ecc", "b21c579d-6e19-4e64-83d4-051f763f8e05", "d959641b-361a-4a3c-8608-ac664bbff0e2", "05c38b17-e050-463c-9dc0-f0934663cba6", "11aca0e5-d05d-4aae-a11f-04805c2ac265", "c6dcc9e8-4c63-4c95-b9fa-c254bc607d84", "ded6189f-7f83-43b2-b59c-26db0d6e6632", "99376ad5-a49e-42db-8128-536826febae2", "27260a45-e524-43e3-8267-937dcaeaeb9b", "27cf1f4b-2da0-4506-963d-3dac0622c113", "aca0587b-dbde-4d67-a74c-e7ebe7b874ca", "4c750539-2063-49ac-9e98-d9e0f79cb279", "97b26376-a632-44de-998c-2db095ad80dd", "b21e23bc-9058-4514-8082-c3e1336834a1", "b265eee2-199c-45f3-882a-e529d744f4c6", "cde67d7d-4c26-431f-96c5-1cc683124215", "0a7d550c-5085-4969-b80d-15b9be6451eb", "d11c7e73-0233-46ba-a530-91c3023d9976", "983d9f85-d217-4d46-be11-70822453ad02", "633fcf2b-1b59-4527-b88a-1e42bc626921", "10d4d837-5673-4dfc-a618-7b5a72b0f37b", "b4c71255-4309-4213-a2ca-22e30037b268", "a1bfa5bd-cf54-481a-9b82-223a530c064c", "8eeacbc0-92c8-40fd-a9a2-8380cb4fd8a7", "501141c4-3d4c-49e6-b3b8-c7b4c0c89250", "6d77967f-48ef-4e2c-a928-dd4d4d935614"],
+        "sql": "SELECT id AS source_id, names.primary AS name_raw, CAST(addresses AS VARCHAR) AS addresses,\n    CAST(websites AS VARCHAR) AS websites, CAST(sources AS VARCHAR) AS sources, CAST(phones AS VARCHAR) AS phones\n    FROM read_parquet('s3://overturemaps-us-west-2/release/2026-08-19.0/theme=places/type=place/*') WHERE bbox.xmin BETWEEN -130 AND -65 AND bbox.ymin BETWEEN 24 AND 50\n    AND id IN ('5a790b09-0998-4068-88c3-95506f3eb6a3','7c3aed7a-dd9d-4c56-a984-c5f8a303a9f0','4839d27e-d755-418c-9a26-a6c30f0dcd43','0c882b11-f39b-402b-ba37-b0980564ab65','9bd8b641-b58f-480e-a245-a79482c7a746','a65d225d-0c0c-404f-b2ad-7c347bab0108','6e07087a-f45d-4216-bb4c-d32c693797af','d4472bd6-68ab-41e1-9616-fba56529a4ce','717a473d-6a94-4a75-8de1-0fe50f19f450','7034b742-415d-4469-9198-89faf43da7b3','94f0e826-ace4-490f-aa7e-a20408c96b77','f03eab9c-20ad-4147-b13e-7619ebba5baf','ecf32abd-3964-4842-beb4-c2ba6c025ecc','b21c579d-6e19-4e64-83d4-051f763f8e05','d959641b-361a-4a3c-8608-ac664bbff0e2','05c38b17-e050-463c-9dc0-f0934663cba6','11aca0e5-d05d-4aae-a11f-04805c2ac265','c6dcc9e8-4c63-4c95-b9fa-c254bc607d84','ded6189f-7f83-43b2-b59c-26db0d6e6632','99376ad5-a49e-42db-8128-536826febae2','27260a45-e524-43e3-8267-937dcaeaeb9b','27cf1f4b-2da0-4506-963d-3dac0622c113','aca0587b-dbde-4d67-a74c-e7ebe7b874ca','4c750539-2063-49ac-9e98-d9e0f79cb279','97b26376-a632-44de-998c-2db095ad80dd','b21e23bc-9058-4514-8082-c3e1336834a1','b265eee2-199c-45f3-882a-e529d744f4c6','cde67d7d-4c26-431f-96c5-1cc683124215','0a7d550c-5085-4969-b80d-15b9be6451eb','d11c7e73-0233-46ba-a530-91c3023d9976','983d9f85-d217-4d46-be11-70822453ad02','633fcf2b-1b59-4527-b88a-1e42bc626921','10d4d837-5673-4dfc-a618-7b5a72b0f37b','b4c71255-4309-4213-a2ca-22e30037b268','a1bfa5bd-cf54-481a-9b82-223a530c064c','8eeacbc0-92c8-40fd-a9a2-8380cb4fd8a7','501141c4-3d4c-49e6-b3b8-c7b4c0c89250','6d77967f-48ef-4e2c-a928-dd4d4d935614')"
+      },
+      "path": "data/raw/overture_identity_context_2026-09-15.csv",
+      "n_rows": 38,
+      "sha256": "0449e7b80c0f6f61a3c189102d7df11469816e50c89c548553880a8886d57ac3",
+      "bytes": 38849,
+      "retrieved": "2026-09-15T21:14:57-0500"
+    },
+    {
+      "label": "overture_old_jail_context",
+      "source": "overture",
+      "detail": {
+        "release": "2026-08-19.0",
+        "source_ids": ["13f8a610-ee4a-4b0b-9139-eb57d6458c3f", "9715e25c-8c45-4e06-ba1a-0093b1a08a53", "0b67fafb-eb60-4bbd-abe2-b3b8baac8c71", "d5e5fe4b-8889-4463-84e1-a2f4f4186ab9", "d407d58e-b771-4e47-9610-a777496e4451", "b8639a00-9b98-4ccb-a3e1-c6ca9b06162a", "c22b0c13-6dd7-472c-9000-c32a0a87e095", "b21c579d-6e19-4e64-83d4-051f763f8e05", "d959641b-361a-4a3c-8608-ac664bbff0e2", "05c38b17-e050-463c-9dc0-f0934663cba6", "19a2ab31-192a-4ead-b122-ddefce526cbf", "aef72756-aeea-4b32-987b-dadd50cb0735", "9175cee7-8a27-42fe-9b77-ed253fd2d8b3", "07fd66e5-e9ab-45d2-ba55-779a34d3d8b4", "1da4ac46-f9fa-4b44-81c7-96d8763bc2ef", "aab693c8-1c37-47ff-81ea-149242e46d26", "a72fe838-dca3-4bef-9a5c-21546c2b41b9", "c0454aa2-d0bb-40f7-9b9a-a931d7d9bfd4", "62c23ee2-db36-428a-b8bd-cb78cc55bba1", "2e62cd42-2e2f-49af-ace2-5c3aa43a3be0", "11217263-90c9-47dd-ba3c-6dac29fbfa83", "3efaa778-fa6d-446e-8aa5-2a7a3f265f7f", "32cfb026-f4db-4a5d-b3cb-ee80f1552029", "c7886577-8086-4623-8c8e-e80c197bbe8b", "1d22707d-248d-463b-86ff-8d8345e380b7", "cff4f2b0-cdef-40a3-9116-867efdb45e73", "2f2a89c6-8534-4a2f-9002-7c6f10ca225a", "3aa867b0-cf92-4815-af28-ed1003df8a82", "5d5fb152-d433-4438-9ac5-1fbbe7a5c88a", "e9b346bf-0403-49ce-89b4-89950beab437", "005f5fac-8189-4ce0-af07-5edf68abd025", "745fffab-1d21-47a6-b38d-d1e0e3a671fc", "ecb2c82c-5b41-4b60-9d98-4ff04291620d", "170d0c1d-d5dc-4253-a7cd-82d8e973a35c", "f58c3429-be3f-40c5-8c6a-fdd0b2327aa3", "a3d593c2-11c1-4a95-b30f-9df191654175", "b9a9ac3d-cf2b-4821-8125-0e8e0729a61f", "bd9c1f07-e7c7-493a-9471-a98499e86838", "c755c667-5d41-4403-8d62-f3b8da6bf8df", "f5ac466e-2b4d-47e0-8cdd-3e99d234414d", "ab726831-5e69-4ba0-ae0a-edad9cd5bf60"],
+        "sql": "SELECT id AS source_id, names.primary AS name_raw,\n  CAST(addresses AS VARCHAR) AS addresses, CAST(websites AS VARCHAR) AS websites,\n  CAST(sources AS VARCHAR) AS sources, CAST(phones AS VARCHAR) AS phones\n  FROM read_parquet('s3://overturemaps-us-west-2/release/2026-08-19.0/theme=places/type=place/*') WHERE bbox.xmin BETWEEN -130 AND -65\n  AND bbox.ymin BETWEEN 24 AND 50 AND id IN ('13f8a610-ee4a-4b0b-9139-eb57d6458c3f','9715e25c-8c45-4e06-ba1a-0093b1a08a53','0b67fafb-eb60-4bbd-abe2-b3b8baac8c71','d5e5fe4b-8889-4463-84e1-a2f4f4186ab9','d407d58e-b771-4e47-9610-a777496e4451','b8639a00-9b98-4ccb-a3e1-c6ca9b06162a','c22b0c13-6dd7-472c-9000-c32a0a87e095','b21c579d-6e19-4e64-83d4-051f763f8e05','d959641b-361a-4a3c-8608-ac664bbff0e2','05c38b17-e050-463c-9dc0-f0934663cba6','19a2ab31-192a-4ead-b122-ddefce526cbf','aef72756-aeea-4b32-987b-dadd50cb0735','9175cee7-8a27-42fe-9b77-ed253fd2d8b3','07fd66e5-e9ab-45d2-ba55-779a34d3d8b4','1da4ac46-f9fa-4b44-81c7-96d8763bc2ef','aab693c8-1c37-47ff-81ea-149242e46d26','a72fe838-dca3-4bef-9a5c-21546c2b41b9','c0454aa2-d0bb-40f7-9b9a-a931d7d9bfd4','62c23ee2-db36-428a-b8bd-cb78cc55bba1','2e62cd42-2e2f-49af-ace2-5c3aa43a3be0','11217263-90c9-47dd-ba3c-6dac29fbfa83','3efaa778-fa6d-446e-8aa5-2a7a3f265f7f','32cfb026-f4db-4a5d-b3cb-ee80f1552029','c7886577-8086-4623-8c8e-e80c197bbe8b','1d22707d-248d-463b-86ff-8d8345e380b7','cff4f2b0-cdef-40a3-9116-867efdb45e73','2f2a89c6-8534-4a2f-9002-7c6f10ca225a','3aa867b0-cf92-4815-af28-ed1003df8a82','5d5fb152-d433-4438-9ac5-1fbbe7a5c88a','e9b346bf-0403-49ce-89b4-89950beab437','005f5fac-8189-4ce0-af07-5edf68abd025','745fffab-1d21-47a6-b38d-d1e0e3a671fc','ecb2c82c-5b41-4b60-9d98-4ff04291620d','170d0c1d-d5dc-4253-a7cd-82d8e973a35c','f58c3429-be3f-40c5-8c6a-fdd0b2327aa3','a3d593c2-11c1-4a95-b30f-9df191654175','b9a9ac3d-cf2b-4821-8125-0e8e0729a61f','bd9c1f07-e7c7-493a-9471-a98499e86838','c755c667-5d41-4403-8d62-f3b8da6bf8df','f5ac466e-2b4d-47e0-8cdd-3e99d234414d','ab726831-5e69-4ba0-ae0a-edad9cd5bf60')"
+      },
+      "path": "data/raw/overture_old_jail_context_2026-09-15.csv",
+      "n_rows": 41,
+      "sha256": "6e8a911d7857baaf32389dae13b5f9d40aee25b28e0000e75de698dc5eaeba59",
+      "bytes": 40020,
+      "retrieved": "2026-09-15T23:20:23-0500"
+    },
+    {
+      "label": "overture_union_county_context",
+      "source": "overture",
+      "detail": {
+        "release": "2026-08-19.0",
+        "source_ids": ["c560b9d8-d396-4cef-bc01-f2aaf135e6f5", "7379ebed-c0cd-457b-9328-42af247ba7b3", "547ed1de-cdaf-4324-b48f-b719fe376e87", "63846205-a712-42e2-a1b2-bd29c123af52", "a96e1409-0a5a-4a48-b911-bac91a303fab", "47651abb-3108-4b91-829f-4a401d7e4155", "6144cfa5-647e-4aac-a4be-8300a2f04644", "fa5b1021-c965-41a6-8a0e-acdf2d5e490d", "e7510f8e-0832-445f-9683-c41138639bf9", "45b47613-6224-41a1-8c7c-dbf1f7f8139e", "4a28b958-9a96-445f-93b5-cc21803391e0", "596c4c3d-5911-4dd1-9c0f-38e18a1d19e7", "da92d1f3-ffdd-48e2-8c1a-c4f53dfbe904", "9a97fa6b-8e96-4374-9404-607867f1c741", "cc2a936a-b634-4b3b-a818-7ee5859ab8f2", "29aa33ad-7c60-473d-904a-8757f1ffc3fc", "fcdc3086-3d5b-43a2-a461-64033d84e849", "88d7e928-cbd1-421c-b070-eaca82217ba4", "59527f3f-99ff-4f83-b235-2d5f3b11f93b", "28b1f23d-40e9-48ff-b278-0b231d4762ae", "020cc712-f2e4-47a4-aa1e-8d83179974b6"],
+        "sql": "SELECT id AS source_id, names.primary AS name_raw,\n  CAST(addresses AS VARCHAR) AS addresses, CAST(websites AS VARCHAR) AS websites,\n  CAST(sources AS VARCHAR) AS sources, CAST(phones AS VARCHAR) AS phones\n  FROM read_parquet('s3://overturemaps-us-west-2/release/2026-08-19.0/theme=places/type=place/*') WHERE bbox.xmin BETWEEN -130 AND -65\n  AND bbox.ymin BETWEEN 24 AND 50 AND id IN ('c560b9d8-d396-4cef-bc01-f2aaf135e6f5','7379ebed-c0cd-457b-9328-42af247ba7b3','547ed1de-cdaf-4324-b48f-b719fe376e87','63846205-a712-42e2-a1b2-bd29c123af52','a96e1409-0a5a-4a48-b911-bac91a303fab','47651abb-3108-4b91-829f-4a401d7e4155','6144cfa5-647e-4aac-a4be-8300a2f04644','fa5b1021-c965-41a6-8a0e-acdf2d5e490d','e7510f8e-0832-445f-9683-c41138639bf9','45b47613-6224-41a1-8c7c-dbf1f7f8139e','4a28b958-9a96-445f-93b5-cc21803391e0','596c4c3d-5911-4dd1-9c0f-38e18a1d19e7','da92d1f3-ffdd-48e2-8c1a-c4f53dfbe904','9a97fa6b-8e96-4374-9404-607867f1c741','cc2a936a-b634-4b3b-a818-7ee5859ab8f2','29aa33ad-7c60-473d-904a-8757f1ffc3fc','fcdc3086-3d5b-43a2-a461-64033d84e849','88d7e928-cbd1-421c-b070-eaca82217ba4','59527f3f-99ff-4f83-b235-2d5f3b11f93b','28b1f23d-40e9-48ff-b278-0b231d4762ae','020cc712-f2e4-47a4-aa1e-8d83179974b6')"
+      },
+      "path": "data/raw/overture_union_county_context_2026-09-17.csv",
+      "n_rows": 21,
+      "sha256": "f6b9edf9083a4b445ab8e2ea6e40528d680a79791dfc9bccc75e0f71c6249a0b",
+      "bytes": 20504,
+      "retrieved": "2026-09-17T22:37:30-0500"
+    },
+    {
+      "label": "overture_leaders_context",
+      "source": "overture",
+      "detail": {
+        "release": "2026-08-19.0",
+        "source_ids": ["7c3aed7a-dd9d-4c56-a984-c5f8a303a9f0", "4839d27e-d755-418c-9a26-a6c30f0dcd43", "717a473d-6a94-4a75-8de1-0fe50f19f450", "7034b742-415d-4469-9198-89faf43da7b3", "94f0e826-ace4-490f-aa7e-a20408c96b77", "ecf32abd-3964-4842-beb4-c2ba6c025ecc", "ded6189f-7f83-43b2-b59c-26db0d6e6632", "27260a45-e524-43e3-8267-937dcaeaeb9b", "27cf1f4b-2da0-4506-963d-3dac0622c113", "df057a04-1a97-4b93-8a80-3210dc121a49", "aca0587b-dbde-4d67-a74c-e7ebe7b874ca", "4c750539-2063-49ac-9e98-d9e0f79cb279", "f874863e-866e-49e1-9dca-17b4211ad14e", "7697d60a-34be-4d3d-adac-d6e8d3f4470e", "b265eee2-199c-45f3-882a-e529d744f4c6", "0a7d550c-5085-4969-b80d-15b9be6451eb", "10d4d837-5673-4dfc-a618-7b5a72b0f37b", "613a19b3-8df1-4fde-bac2-ed689e93d4ce", "5528c66a-a815-4597-84d0-dbabfa444a20", "b66e05d9-cedf-4160-8cbd-1a7c8e67140e", "8f0dd247-ab7d-4e24-b396-672a7cb359e9", "68d726b1-08a1-4bf5-948e-16e3f24bc530"],
+        "sql": "SELECT id AS source_id, names.primary AS name_raw,\n  CAST(addresses AS VARCHAR) AS addresses, CAST(websites AS VARCHAR) AS websites,\n  CAST(sources AS VARCHAR) AS sources, CAST(phones AS VARCHAR) AS phones\n  FROM read_parquet('s3://overturemaps-us-west-2/release/2026-08-19.0/theme=places/type=place/*') WHERE bbox.xmin BETWEEN -130 AND -65\n  AND bbox.ymin BETWEEN 24 AND 50 AND id IN ('7c3aed7a-dd9d-4c56-a984-c5f8a303a9f0','4839d27e-d755-418c-9a26-a6c30f0dcd43','717a473d-6a94-4a75-8de1-0fe50f19f450','7034b742-415d-4469-9198-89faf43da7b3','94f0e826-ace4-490f-aa7e-a20408c96b77','ecf32abd-3964-4842-beb4-c2ba6c025ecc','ded6189f-7f83-43b2-b59c-26db0d6e6632','27260a45-e524-43e3-8267-937dcaeaeb9b','27cf1f4b-2da0-4506-963d-3dac0622c113','df057a04-1a97-4b93-8a80-3210dc121a49','aca0587b-dbde-4d67-a74c-e7ebe7b874ca','4c750539-2063-49ac-9e98-d9e0f79cb279','f874863e-866e-49e1-9dca-17b4211ad14e','7697d60a-34be-4d3d-adac-d6e8d3f4470e','b265eee2-199c-45f3-882a-e529d744f4c6','0a7d550c-5085-4969-b80d-15b9be6451eb','10d4d837-5673-4dfc-a618-7b5a72b0f37b','613a19b3-8df1-4fde-bac2-ed689e93d4ce','5528c66a-a815-4597-84d0-dbabfa444a20','b66e05d9-cedf-4160-8cbd-1a7c8e67140e','8f0dd247-ab7d-4e24-b396-672a7cb359e9','68d726b1-08a1-4bf5-948e-16e3f24bc530')"
+      },
+      "path": "data/raw/overture_leaders_context_2026-09-23.csv",
+      "n_rows": 22,
+      "sha256": "029e3d5209f541022cfb04777e75628578bc310cc185626297e1aa34a382033b",
+      "bytes": 23117,
+      "retrieved": "2026-09-23T02:03:42-0500"
+    },
+    {
+      "label": "overture_leaders_nearby_context",
+      "source": "overture",
+      "detail": {
+        "release": "2026-08-19.0",
+        "source_ids": ["128b5b25-e15b-4e75-be9b-50de8321e93b", "2e03a301-90df-48b5-a2e9-d39efc4f87b9", "7de4411b-c2f7-41d0-8a71-341f74508fb4", "b71c8d0b-0fc7-434f-8509-b7a23747f3ec", "e86b58f2-280f-45b5-af2f-3659960971e7", "ae837bd5-a2b6-40bf-bfa2-1be4a7b40cc4", "9832f3f9-63f6-4619-9e08-b4034a1c9ad1", "6bbaaa21-4cec-42e5-b2e8-8a7d9365778e", "ab3bae62-5671-4936-a294-475feffc010c", "b23a408a-b80b-494a-a3e8-1d5659930846", "9af7f732-8277-46e3-bbe8-74905cfec832", "fc7fc664-15e9-4d1c-99da-0e1d5e8ee2fd", "5d2a75f7-aea5-41b1-8ff3-f7dbba8a7256", "ff6574a6-2332-4c5e-b285-b1ddc3d3bd72", "f7568790-92b8-46f6-b086-0ccd033a53c8", "58f1aeb5-b88a-479e-8cfa-d01c5b8109d6", "11aca0e5-d05d-4aae-a11f-04805c2ac265", "cb7581ed-3ce4-4e71-af13-6451c34711be"],
+        "sql": "SELECT id AS source_id, names.primary AS name_raw,\n  CAST(addresses AS VARCHAR) AS addresses, CAST(websites AS VARCHAR) AS websites,\n  CAST(sources AS VARCHAR) AS sources, CAST(phones AS VARCHAR) AS phones\n  FROM read_parquet('s3://overturemaps-us-west-2/release/2026-08-19.0/theme=places/type=place/*') WHERE bbox.xmin BETWEEN -130 AND -65\n  AND bbox.ymin BETWEEN 24 AND 50 AND id IN ('128b5b25-e15b-4e75-be9b-50de8321e93b','2e03a301-90df-48b5-a2e9-d39efc4f87b9','7de4411b-c2f7-41d0-8a71-341f74508fb4','b71c8d0b-0fc7-434f-8509-b7a23747f3ec','e86b58f2-280f-45b5-af2f-3659960971e7','ae837bd5-a2b6-40bf-bfa2-1be4a7b40cc4','9832f3f9-63f6-4619-9e08-b4034a1c9ad1','6bbaaa21-4cec-42e5-b2e8-8a7d9365778e','ab3bae62-5671-4936-a294-475feffc010c','b23a408a-b80b-494a-a3e8-1d5659930846','9af7f732-8277-46e3-bbe8-74905cfec832','fc7fc664-15e9-4d1c-99da-0e1d5e8ee2fd','5d2a75f7-aea5-41b1-8ff3-f7dbba8a7256','ff6574a6-2332-4c5e-b285-b1ddc3d3bd72','f7568790-92b8-46f6-b086-0ccd033a53c8','58f1aeb5-b88a-479e-8cfa-d01c5b8109d6','11aca0e5-d05d-4aae-a11f-04805c2ac265','cb7581ed-3ce4-4e71-af13-6451c34711be')"
+      },
+      "path": "data/raw/overture_leaders_nearby_context_2026-09-23.csv",
+      "n_rows": 18,
+      "sha256": "8796a2475862906dedb8c4e9b9f74a0e675a2df38f16ea90bca34437e6c41105",
+      "bytes": 18330,
+      "retrieved": "2026-09-23T02:05:58-0500"
+    },
+    {
+      "label": "overture_moi_suffixed_context",
+      "source": "overture",
+      "detail": {
+        "release": "2026-08-19.0",
+        "source_ids": ["d0447be2-ca69-4e3a-a787-e6a92a2bd5c9", "9f97fb8d-5b19-4080-86cf-3d722aa1fbce", "d2a53859-d7d1-4355-93f4-a7a08274614c", "e1f2ae93-2d2d-4ded-8e2a-f6902d47ad5f", "f3e9834b-77c9-4022-afa7-1139cfd95f55", "39aa4ed6-1b8c-46b7-92c2-c6941d640628", "fece1ff6-3d88-43e0-8f28-d856aa3c19de", "aa9369b5-7d60-473b-ad16-822f86ad6c3d", "ab8a0237-3bad-40ab-a04c-742a2662bcce", "43de2230-bd21-44d6-b79e-e54518568879", "3e303d66-b7db-4c79-8c1d-9091ffcff3a3", "3c36e79d-55db-46c1-bc43-e36d331f40dd", "262ec4e6-7bf7-4285-905b-4b107fb8589e", "146b4c78-5313-431c-87ec-d86ef7f53932", "3ee61a24-6ba9-428d-91d5-84f1c428e5e3"],
+        "sql": "SELECT id AS source_id, names.primary AS name_raw,\n  CAST(addresses AS VARCHAR) AS addresses, CAST(websites AS VARCHAR) AS websites,\n  CAST(sources AS VARCHAR) AS sources, CAST(phones AS VARCHAR) AS phones\n  FROM read_parquet('s3://overturemaps-us-west-2/release/2026-08-19.0/theme=places/type=place/*') WHERE bbox.xmin BETWEEN -130 AND -65\n  AND bbox.ymin BETWEEN 24 AND 50 AND id IN ('d0447be2-ca69-4e3a-a787-e6a92a2bd5c9','9f97fb8d-5b19-4080-86cf-3d722aa1fbce','d2a53859-d7d1-4355-93f4-a7a08274614c','e1f2ae93-2d2d-4ded-8e2a-f6902d47ad5f','f3e9834b-77c9-4022-afa7-1139cfd95f55','39aa4ed6-1b8c-46b7-92c2-c6941d640628','fece1ff6-3d88-43e0-8f28-d856aa3c19de','aa9369b5-7d60-473b-ad16-822f86ad6c3d','ab8a0237-3bad-40ab-a04c-742a2662bcce','43de2230-bd21-44d6-b79e-e54518568879','3e303d66-b7db-4c79-8c1d-9091ffcff3a3','3c36e79d-55db-46c1-bc43-e36d331f40dd','262ec4e6-7bf7-4285-905b-4b107fb8589e','146b4c78-5313-431c-87ec-d86ef7f53932','3ee61a24-6ba9-428d-91d5-84f1c428e5e3')"
+      },
+      "path": "data/raw/overture_moi_suffixed_context_2026-09-23.csv",
+      "n_rows": 15,
+      "sha256": "87adc92b6d4c98e7b54934f46fb133c61247c40a1cb378a1c5b4236107582464",
+      "bytes": 15594,
+      "retrieved": "2026-09-23T02:38:24-0500"
+    },
+    {
+      "label": "overture_county_leaders_context",
+      "source": "overture",
+      "detail": {
+        "release": "2026-08-19.0",
+        "source_ids": ["260372d1-1139-445f-94e8-75ad35b7f5cb", "25764ded-ebcd-4256-a06f-75074a0d2ec6", "a523be03-7532-4774-b619-6cb2fcece402", "2a79a410-72cc-4bcf-bdf5-f13cbb4077f2", "bb54ce9f-8d3a-4a05-9de4-e0fa473c0420", "7804af38-860e-405a-bbd1-0b4a3d343eb9", "e117f1c8-7889-42e8-8483-406d38b303d9", "ef8820e8-1984-409e-88b8-f61a9f9c2456", "89c9ca16-d439-424e-97f1-664131e75d68", "69d9986b-d2c7-4ac5-a30d-9403d0cb5f6a", "c79c891f-d590-4396-87e9-a6e9679aeb2f", "8b5f494e-ead6-4e97-8643-dd6b00a0eacd", "052bcd74-4e51-4e45-81d4-6ffd0f6d4c65", "0ace3fbc-3866-4bd1-b85a-ea5723c6cc5c", "3c74ca61-abfd-4a4e-a4f7-849d9991090a", "108869fb-1d7d-42f9-a9e3-ed3404c43ca8", "bc546a43-d83a-4b25-91ef-5672013ee6de", "8ecd7238-b646-4d1c-aa68-2aad63a910a8", "984d0ee1-fcbd-40cd-b174-db03e84fa1dc", "281f6c15-e1a9-48af-a450-667812bc2d5c", "5ed089e4-af67-4233-a6e3-96a771475aee", "e9fe9930-dbd4-4630-b623-5cea03fccaa7", "4051c726-014c-4e9e-86cc-dd3c3b7a3a10", "630ff8b4-2f4e-4820-b428-4249965d2932", "71b7aeb8-7ec0-4436-ad58-2a1de512281c", "193b3660-ea5c-4dba-a30f-8339d79bdca6", "451ca577-04c7-4c91-91b6-268a735033de", "22985874-2bf0-431d-9b5c-98ef72899323", "dc7df26a-22e2-402d-a21c-43d6dd76bbb0", "78225ede-8b5b-41c8-8119-85524dc485b6", "78940f8a-6978-4cfa-8fe4-8190c73e5374", "e00b1b63-f211-4f89-afb8-a16901185c73", "64bbfb69-05f0-4fbb-a3ed-f482415eac5e", "e44e78c4-4c6a-473a-b50d-02e91a062c6d", "241e0286-be27-4cd4-8f9b-83176cce55b8", "89509929-85c4-43de-967a-5a398fccff71", "ba7e5626-d5ae-4281-b9da-ce1c6de2504c", "80d3de55-6615-4df8-84cb-f3fc513fe691", "7d9d6c23-1e01-4cfa-a07f-62d0d7aa738c", "8f97d112-ba1c-45d4-914e-b401d371fb16", "65e690f1-6cd0-48ac-997a-f179d70f2db4", "36dedb34-ece1-4834-8d92-51c77cb545ca", "e9d49635-8f87-48b0-ac36-4d468c0517b2", "0569ce2d-924d-40a7-8875-9679f92195ed", "c608d7ed-d3e2-4933-9f16-a84c145381a7", "f0f7dc0d-05c4-48fa-baf2-6b943d482c95", "f6ecf05a-2c9d-463d-835c-3f66f4f157c9", "92c735b6-1832-42f6-83cb-a4a2f22025b3", "b2ae5f25-fd3e-4efb-8cf1-409980e33faf", "860a911c-a62a-4c36-ad77-6d3fb9a467a7", "d1b65814-90f9-4717-a126-79192a1664b4", "6794464b-2407-4870-97ed-5a69e4fb01e2", "7b5d28f7-3bbf-44ee-b6e1-9a3d5bb95868", "99d912d4-d988-4f9e-a66a-dece70cbf90b", "cc30d4da-8135-4a3d-8aaf-318ad990f2d1", "a4c4bda7-7438-4f73-bf2a-c245653c5f10", "af42159d-7d4c-49e1-9001-eb3b2f53e896", "ec5a95c2-e7b9-4204-8607-544319b4ea86", "5000c09e-be7c-4443-9bdf-c414eb4165fc", "78324515-5c6a-413e-a925-f2429c003566", "c65e5530-1d56-4ba5-af15-97032f0352d1", "176e872a-27f9-41c9-8f90-b164980afbc0", "825b3376-1f94-462c-ad89-bdcd5ac2d3aa", "2d4a7ca3-6c23-48f9-b996-062e4fed89c5", "7b6b6286-76bb-47a3-ba22-29349d65d03d", "d8a92e0d-baf6-4101-b63e-b2a6eeb931e1", "78992144-9f03-4195-9812-68e161811b39", "e478f857-9abe-4943-945d-f9f310511e5c", "b8e442ae-f514-4715-aea9-e0d5b9adcfec", "bd9c6661-9f37-4013-a7c9-353b6a0ae034", "3a7abf7e-bf7a-4537-a611-561229c95413", "177a4eab-cbbf-4bde-bf63-9b79e5a0e22d", "e4d6da38-a5b3-49b7-9c48-c9ea5ed005be", "ab3278af-0eb2-483f-b1df-603bfee0a321", "9ba8ef25-965b-4a69-836b-208d92b6068c", "97ea8cdd-4c82-4c16-adeb-c36447bf4cc8", "324091ee-a650-4fe6-bff6-a044e921e4a9", "bdf98412-2a45-4c47-88b2-1fd99f3c5bcb", "2c21dac1-5b17-4b89-8960-640ad7885a1b", "198cf606-435a-464d-8231-584b30688749", "5470d6be-6d09-48c7-9884-abf92df29dd5", "779b9e77-5bf2-4a54-bb61-e307f1905e88", "be8a6f53-5892-4fc5-8fa6-f45c85610786", "5f4187f2-8655-4730-b8a9-3e5afd0c9130", "e0619b58-2714-4b42-b749-1498aee2c101", "95b03ff4-0c0c-406e-b03d-30b9643d67aa", "0ad56514-cdcb-4d6c-b145-3a1e5e644502", "767c0924-63c0-433e-b9e9-cedacc00852b", "85bb5b55-52d1-4331-8377-23e4f75233e9", "2cd7aee0-f005-476b-b688-9a56b4360643", "03d0431a-ddf1-4b59-b1e5-65edddf202e4", "7e3b2387-0e20-467a-954f-d0d946f0f04f", "346575b9-7f99-4ab1-9fac-ba186f43ed6f", "22f40aa3-5411-4a77-b14c-a5b67e5c0e76", "48d0fd85-8b2f-4bda-b356-0f4e1cdc2e27", "ec3bd1e4-0b92-42f3-9da3-d6726b67194d", "d09b137e-3e16-4c97-8448-c38cfab03798", "bb885d77-bbb3-4627-bef3-0fe770ea3001", "0b9328c1-cb46-4370-bfbe-7e64f419e41f", "6ae82217-0d7a-43f6-99de-ac1d7cc01b66", "8589f1d1-c8f3-4f81-8967-ea682e26cab5", "67fdc932-edc1-4cfe-980a-8084fd21949e", "c437f9a4-5f25-4e61-8767-4e1d0ccb0af1", "772fc377-f94f-4f5a-8859-5a578a3e9e16", "904b6b39-7e85-4be1-a18c-be5abff5c844", "c4d698e3-5e35-45c6-a955-46e6af9bfca3", "3dd7d9f9-6688-44d7-a4ce-210205555063", "9952cd97-0600-4b76-9ab9-6899ead8b3d4", "9036aea3-9cb5-446f-9409-15359390e01c", "bf1982fa-09c2-4b90-8f04-4284c080feaa", "4a77b8d8-edef-432c-9fa1-139561ed81ed", "98cb8468-3787-4b13-b5f0-0dce7dbfedbc", "16d2cf3f-cc35-4ebc-8e69-ec9bf98cb6a8", "b4ee8d7b-3852-4d1d-aff7-f42ee258febf", "8bdc4b3c-69de-4f5e-bfda-3f7e5090fc63", "ceb2f204-b657-4768-88fb-be45ca156056", "2403fe68-ad48-4640-ad27-cc8948a41c78", "5e8f9865-82c1-479d-a71f-01320688926f", "2d2d0331-20ec-4267-927b-f357c8e36b54", "82b5714e-206b-471e-a3a8-8261c97d4457", "da11969c-4fc2-451a-975c-627285af2fbd", "bbf4b285-7abe-4362-95be-077918f01000", "a7e88a4f-21a9-48c5-83d1-a6c3d5215f7e", "ed36a287-2e43-4441-a945-935998e3e927", "d4845674-593b-4bbb-a72d-a06bfced141b", "10d38131-eed8-40e5-9b30-9eb5009848a8", "3df6dd16-8319-4d03-9315-c9d9660ca49e", "65f86797-6b09-419e-8833-13cf78d88709", "13fd21ba-0274-4375-a97d-1e3822b8ac6e", "ecb72b00-5bf2-4a73-9f6a-a17a54652a4b", "8e5ba51a-57a8-40d1-a85d-02bcff4d80c2", "2e152ddb-1fb6-4467-b772-a7f578e8db58", "cacd25a7-8dfa-4a6c-a113-10f6d18e6fbf", "705ab2f8-99f4-4454-bc9a-92b499dbdae1", "14a71ce0-5d31-4e7f-93d9-ad37c0727cd8", "c9829474-b54c-4127-b596-6e6fa2418384", "f6fdafc9-ed47-4843-8008-00c3e2318ea9", "fe703645-03e4-4bae-ba78-43720cd3be66", "c9469311-68b2-4eb8-afff-477ea6494c4a", "2f2a89c6-8534-4a2f-9002-7c6f10ca225a", "3aa867b0-cf92-4815-af28-ed1003df8a82", "9053e8c8-29ac-4a75-827c-0d3d0f5d9f5d", "00e99753-5eb5-4b1b-bc2c-809ae7238299", "f88f3d21-c18a-45ea-916d-bcc20754cdfb", "f27fda33-7679-4e94-b437-c8557e2d610a", "ba90a1a8-88cb-4afd-bf87-65e4b1b53ab7", "00bef7ee-e530-4c48-a227-e764c2e41bcb", "35f40b9c-98c4-40c1-9877-1eefbb4b3d8a", "a9c4fa68-40e7-4b6c-ab11-d2db912e6755", "c2123026-65dd-41b4-aef9-bccf3a93184b", "1cbdadb2-913f-427e-b0cf-6e2e6dd9c499", "d11969e7-90df-456d-a752-4f14e64fe790", "277849c5-7916-4912-863e-15af1fc72ed9", "a42359e0-9cd8-4da0-98a3-e0cb74924186", "ad128b04-cd52-46ac-86f6-9eb8b42dd5de", "6c07dcd4-6249-4bb7-b8fc-f301d5430b2e", "f0a18896-0686-4715-a68b-f81d1ab1437c", "d45d13de-3cb4-45a9-afdf-9f9c8157eed4", "e9125aec-9b46-47e2-92b9-1f1a08ca36eb", "6d866742-7c5c-4160-90ad-a3e3f8c7b3fd", "e261b05d-995b-4e3b-a06e-83dbd381fab6", "831e5d85-4366-4a7d-a8bc-694800e8566a", "835c8959-3cca-4862-af27-b91d63dcee25", "f645bb96-d440-43ce-a789-0d2f7c649643", "4cf456ce-a1b4-4e5b-b3dd-fda6012123cb", "982977d2-5b46-46cc-a3c1-964e045db92c", "6bca5ab3-2887-4122-bfcf-1dd279d68832", "dfcf926c-db3c-47fe-bf75-13e96390e26a", "59d6efb5-f900-449e-8268-9883cd46b12f", "6e5f2179-e493-4679-a48b-9355f00939df", "b1659f55-18ee-4f66-9e39-70eeadddc7aa", "e65c30ae-b0eb-4e03-b6db-7ce31a384574", "297128aa-8865-4872-a6bf-5c43bf25f0b0", "a47afdc2-e17b-4d18-a079-46b84f3b5038", "f397e1b5-fa21-461b-9e66-c620e4778200", "878e952b-4a37-4a1c-b0e8-b73a76eb6d2e", "22576711-0453-43bc-885b-2ed773e20f69", "b6394287-d204-4743-84e7-82675057892f", "f61046bc-0882-4612-8b64-927d24af69f0", "fb1f82f1-b11a-422b-89a9-ba512b3530d3", "13f66802-7858-4028-bf63-6a98d2665595", "341ae4b6-9080-4b21-869c-79d9eb597b9d", "b7bb1941-9b73-4fca-875f-0f74390b66d4", "73877c6c-d831-4677-b006-df83dc3241e5", "7d8fde02-4ae9-45fc-99aa-d4a53190c3d2", "558fc724-6709-4ca1-8c8b-17bfa60de2d5", "0b3eb306-c79e-4961-83b2-fb063bb7f528", "e6e8ce59-bc62-447d-ac11-a29cd8b8432e", "f513d46a-fa8d-42a7-a38b-56da64f0b36e", "82b6adab-514e-466d-86ab-90aecd29b9c3", "c734be17-eb74-4489-87e1-0541541a7d07", "31952fd9-e865-4ee8-8ae9-964436cea1e1", "5256de30-036c-4537-bda4-c48fafc88649", "75197088-d71f-4ffe-8dfc-6b9268d1e7c9", "19b9110f-7d55-4d51-9a77-81311b101019", "9ab04429-8f37-4ca9-9b8b-3fcbc90b7429", "e8066634-621e-4b73-9e1e-70324c0142c0", "cd3a9e1b-32e7-4ab5-a567-47d9fb2270ff", "914dfebd-41f6-4228-b46e-4541046962ac", "aba87984-4c98-456f-98f7-f66b57312f17", "47d66208-d8fc-4387-bf54-acd1321da151", "2658ddf5-d636-42e5-a519-c60865ff007e", "815e43db-7532-40ef-97b1-603aa296cc3b", "aeb76da8-658c-4981-9c64-9a252a3d490d", "87789180-aa2c-45da-b343-790ca9cbb2f8", "8ab865c4-d149-4094-aeb7-b2e59c3ac6a6", "300fedd1-53da-462a-9aa9-32d4af70e0a9", "25f71e70-8537-4c8a-aca1-909c1204c255", "4d04674b-1d8f-43c4-b6fc-7685d0854387", "adbc8458-bb76-42ab-b476-3b4d9543018b", "42a17948-6f9a-43fa-aa2f-7d45fa10e5d5", "2239a098-7891-470d-8598-84dddbc75932", "92975937-cbd4-4647-abc6-b5b4942aa964", "f6e33f22-8192-4c2f-9eb6-fe4d2e729bfd", "a8af2ad6-1e0e-4953-9869-987dc4adf08e", "327c1170-2716-4319-a85b-74a65ed39c8c", "eb66c1be-1438-465b-afea-c1fcb112bb02", "5e0fc62b-4594-4a9a-83ca-a5bab7bd39f1", "e0e16387-d67d-42be-a2fc-7dbd874f9d95", "bbeb5c7f-f9db-4195-8429-f597ffa1d672", "d05ca724-dcd8-42e1-8360-0bdb1cc6e837", "9759a62b-b0c7-4751-827a-3fd1ce2ce619", "e8b762ce-46e4-468a-b55b-448cdf8ffcc2", "3c53ba51-b6c6-4bb9-956a-ad5a1c6aacce", "c7a543f8-b84b-45bd-b9f2-6627b956551b", "55453e07-5945-4b2a-b0d6-d922d86a356e", "bb8a070b-dd3c-4276-a52d-7f0f1787f824", "09c7874c-2759-41bf-b9d5-309ab3d83c33", "7596781d-b332-4fc7-b5b4-a9394c248ba4", "9fd03a7f-b35a-4ad9-a00a-b04f20cead24", "10e7fc9e-03f9-4f19-9721-866275411ebb", "b5c8b933-4b62-4706-a701-d35697c27628", "3769823c-ecdb-4ea8-8e2e-fadd3e291d05", "ce425db9-ae71-48e9-a228-6a1cf01a16c4", "bf119509-ca18-4585-a3f3-f694b57b5799", "483ed119-cb10-4b5c-89bb-b8cac4e543d1", "48b3a8e4-17fc-4b7f-b40c-1127adc5604a", "09f79a47-3f82-442a-9aed-a186341b499a", "f071e0c9-ba88-41f4-a605-b9ff266a74ca", "ea3bd024-518f-4804-b09d-1ab65d97c6e3", "6c350654-ee86-40bc-b9df-db89f6f9fc5c", "dc409dd4-1e08-4185-bb09-acdaa300be66", "1431e9f4-825c-4b95-b1ea-d8a14a90c163", "1fe73458-f3c7-4a04-9128-2a333ff0858a", "0d75bfd8-a6a7-4bcd-b4b8-fa824929726f", "73e263dc-870a-405b-9005-b0075cece747", "c8ebf1cc-f484-4fd5-91fd-dcea79e00284", "d43decdf-0f63-4161-9fa5-e120b3ed55ea", "64953f20-8dba-480a-bc4c-d9b065d11aa5", "d503c74b-0ae4-45bd-9c80-8a3fef318c0e", "2523fd7b-972f-494d-899d-5af0d9f95d9c", "fbb69e78-9eb2-4805-bc8a-a2b2d5bbafb4", "f18ba66c-cee0-46b5-b204-6a532741f647", "8b95ec0f-39b6-4cb2-83f1-5cacc784f8ac", "be918788-4910-4cc1-bb79-5f1c44715cfd", "d64a5bb4-b7e5-48a1-aca4-194a90d37a40", "53c86a20-ea18-4f57-ba0f-025dfb95c4d9", "073cf175-0e8c-4b91-915b-49b82de290f2", "498162cd-dba7-4cb9-b526-772543abb400", "5ea3cfb7-0104-46b6-9280-d06d31baf743", "f6ff04d7-5f7b-4805-9c24-ec8e30e29ab3", "c42b1bc7-2fa7-49ee-b926-6c2ef0a3cb20", "56daa08e-2c0e-4451-a7c6-2fe2b153cf63", "9a3bb389-f6fd-46d5-b80f-df131d7d87ff", "a5cc1c0c-5e1e-4be0-9e7b-9a2dd502691d", "60c4edb6-ad88-4e80-ac3a-b052457821da", "57f9545a-100e-4abd-b7c0-61fc2b4eed22", "806cdbd7-0192-4862-ba65-57932fb7f5ce", "b739aada-34ed-4b5a-8e4a-57856373e3c4", "559f7e22-6634-46fc-88d7-53e4cf97938e", "8702c8d8-c130-4695-987c-ecf95ec0f176", "717c3841-baff-4108-87fc-c1b810e97fb4", "1535a86b-d267-402b-81a5-9ecd21e6df8c", "8239d1c6-b41c-4ddc-9b31-e9788efb19b8", "7716d22b-064c-45ea-8833-766c8385f5fa", "a5948c33-cb2e-4df3-9d36-e811e692ede8", "be6f1365-2501-439f-8e50-87ad8ae23e92", "03a103eb-f5ac-4c1e-a11f-70f73ab27ff5", "e834d6d8-0981-4b9a-b796-b4b617633448", "7185e316-34b9-4f5d-9b6f-22f443c5289f", "746f7ef5-299a-4cb2-9a24-ca22ddbf8828", "3aeae8a5-89d2-4ef0-a09d-76ab22ea18f3", "9f4550d4-a513-41d4-bd7a-af01e5d42b73", "4c9f6897-a7cc-4115-9716-0f56528c814b", "3920a25c-eb37-4f43-b867-e276093b0220", "913503e8-673e-4ac0-9550-39512a3d30af", "854c7b0d-e02e-4431-a880-704b17868aa1", "a641826d-cf44-4616-a854-2ce4dcd682aa", "f4316b3a-1f46-4d51-a1fd-1eaeb28a4613", "923be474-2e2c-4c66-a712-e69fa83c8974", "566737ad-5dfe-4aaf-bbba-a00776a65e9d", "6ffa0dd0-77ae-42ab-bf83-2b1d6fc0cff7", "ae19c1c0-5b79-4d96-880c-59481608abf0", "7eb86787-44f1-4749-8962-b262e72dd73d", "f02756fb-4a85-4f39-90d3-d85643fd8e13", "e9d3ef9d-5889-4087-a5a6-bf3c7198969a"],
+        "sql": "SELECT id AS source_id, names.primary AS name_raw,\n  CAST(addresses AS VARCHAR) AS addresses, CAST(websites AS VARCHAR) AS websites,\n  CAST(sources AS VARCHAR) AS sources, CAST(phones AS VARCHAR) AS phones\n  FROM read_parquet('s3://overturemaps-us-west-2/release/2026-08-19.0/theme=places/type=place/*') WHERE bbox.xmin BETWEEN -180 AND -65\n  AND bbox.ymin BETWEEN 17 AND 72 AND id IN ('260372d1-1139-445f-94e8-75ad35b7f5cb','25764ded-ebcd-4256-a06f-75074a0d2ec6','a523be03-7532-4774-b619-6cb2fcece402','2a79a410-72cc-4bcf-bdf5-f13cbb4077f2','bb54ce9f-8d3a-4a05-9de4-e0fa473c0420','7804af38-860e-405a-bbd1-0b4a3d343eb9','e117f1c8-7889-42e8-8483-406d38b303d9','ef8820e8-1984-409e-88b8-f61a9f9c2456','89c9ca16-d439-424e-97f1-664131e75d68','69d9986b-d2c7-4ac5-a30d-9403d0cb5f6a','c79c891f-d590-4396-87e9-a6e9679aeb2f','8b5f494e-ead6-4e97-8643-dd6b00a0eacd','052bcd74-4e51-4e45-81d4-6ffd0f6d4c65','0ace3fbc-3866-4bd1-b85a-ea5723c6cc5c','3c74ca61-abfd-4a4e-a4f7-849d9991090a','108869fb-1d7d-42f9-a9e3-ed3404c43ca8','bc546a43-d83a-4b25-91ef-5672013ee6de','8ecd7238-b646-4d1c-aa68-2aad63a910a8','984d0ee1-fcbd-40cd-b174-db03e84fa1dc','281f6c15-e1a9-48af-a450-667812bc2d5c','5ed089e4-af67-4233-a6e3-96a771475aee','e9fe9930-dbd4-4630-b623-5cea03fccaa7','4051c726-014c-4e9e-86cc-dd3c3b7a3a10','630ff8b4-2f4e-4820-b428-4249965d2932','71b7aeb8-7ec0-4436-ad58-2a1de512281c','193b3660-ea5c-4dba-a30f-8339d79bdca6','451ca577-04c7-4c91-91b6-268a735033de','22985874-2bf0-431d-9b5c-98ef72899323','dc7df26a-22e2-402d-a21c-43d6dd76bbb0','78225ede-8b5b-41c8-8119-85524dc485b6','78940f8a-6978-4cfa-8fe4-8190c73e5374','e00b1b63-f211-4f89-afb8-a16901185c73','64bbfb69-05f0-4fbb-a3ed-f482415eac5e','e44e78c4-4c6a-473a-b50d-02e91a062c6d','241e0286-be27-4cd4-8f9b-83176cce55b8','89509929-85c4-43de-967a-5a398fccff71','ba7e5626-d5ae-4281-b9da-ce1c6de2504c','80d3de55-6615-4df8-84cb-f3fc513fe691','7d9d6c23-1e01-4cfa-a07f-62d0d7aa738c','8f97d112-ba1c-45d4-914e-b401d371fb16','65e690f1-6cd0-48ac-997a-f179d70f2db4','36dedb34-ece1-4834-8d92-51c77cb545ca','e9d49635-8f87-48b0-ac36-4d468c0517b2','0569ce2d-924d-40a7-8875-9679f92195ed','c608d7ed-d3e2-4933-9f16-a84c145381a7','f0f7dc0d-05c4-48fa-baf2-6b943d482c95','f6ecf05a-2c9d-463d-835c-3f66f4f157c9','92c735b6-1832-42f6-83cb-a4a2f22025b3','b2ae5f25-fd3e-4efb-8cf1-409980e33faf','860a911c-a62a-4c36-ad77-6d3fb9a467a7','d1b65814-90f9-4717-a126-79192a1664b4','6794464b-2407-4870-97ed-5a69e4fb01e2','7b5d28f7-3bbf-44ee-b6e1-9a3d5bb95868','99d912d4-d988-4f9e-a66a-dece70cbf90b','cc30d4da-8135-4a3d-8aaf-318ad990f2d1','a4c4bda7-7438-4f73-bf2a-c245653c5f10','af42159d-7d4c-49e1-9001-eb3b2f53e896','ec5a95c2-e7b9-4204-8607-544319b4ea86','5000c09e-be7c-4443-9bdf-c414eb4165fc','78324515-5c6a-413e-a925-f2429c003566','c65e5530-1d56-4ba5-af15-97032f0352d1','176e872a-27f9-41c9-8f90-b164980afbc0','825b3376-1f94-462c-ad89-bdcd5ac2d3aa','2d4a7ca3-6c23-48f9-b996-062e4fed89c5','7b6b6286-76bb-47a3-ba22-29349d65d03d','d8a92e0d-baf6-4101-b63e-b2a6eeb931e1','78992144-9f03-4195-9812-68e161811b39','e478f857-9abe-4943-945d-f9f310511e5c','b8e442ae-f514-4715-aea9-e0d5b9adcfec','bd9c6661-9f37-4013-a7c9-353b6a0ae034','3a7abf7e-bf7a-4537-a611-561229c95413','177a4eab-cbbf-4bde-bf63-9b79e5a0e22d','e4d6da38-a5b3-49b7-9c48-c9ea5ed005be','ab3278af-0eb2-483f-b1df-603bfee0a321','9ba8ef25-965b-4a69-836b-208d92b6068c','97ea8cdd-4c82-4c16-adeb-c36447bf4cc8','324091ee-a650-4fe6-bff6-a044e921e4a9','bdf98412-2a45-4c47-88b2-1fd99f3c5bcb','2c21dac1-5b17-4b89-8960-640ad7885a1b','198cf606-435a-464d-8231-584b30688749','5470d6be-6d09-48c7-9884-abf92df29dd5','779b9e77-5bf2-4a54-bb61-e307f1905e88','be8a6f53-5892-4fc5-8fa6-f45c85610786','5f4187f2-8655-4730-b8a9-3e5afd0c9130','e0619b58-2714-4b42-b749-1498aee2c101','95b03ff4-0c0c-406e-b03d-30b9643d67aa','0ad56514-cdcb-4d6c-b145-3a1e5e644502','767c0924-63c0-433e-b9e9-cedacc00852b','85bb5b55-52d1-4331-8377-23e4f75233e9','2cd7aee0-f005-476b-b688-9a56b4360643','03d0431a-ddf1-4b59-b1e5-65edddf202e4','7e3b2387-0e20-467a-954f-d0d946f0f04f','346575b9-7f99-4ab1-9fac-ba186f43ed6f','22f40aa3-5411-4a77-b14c-a5b67e5c0e76','48d0fd85-8b2f-4bda-b356-0f4e1cdc2e27','ec3bd1e4-0b92-42f3-9da3-d6726b67194d','d09b137e-3e16-4c97-8448-c38cfab03798','bb885d77-bbb3-4627-bef3-0fe770ea3001','0b9328c1-cb46-4370-bfbe-7e64f419e41f','6ae82217-0d7a-43f6-99de-ac1d7cc01b66','8589f1d1-c8f3-4f81-8967-ea682e26cab5','67fdc932-edc1-4cfe-980a-8084fd21949e','c437f9a4-5f25-4e61-8767-4e1d0ccb0af1','772fc377-f94f-4f5a-8859-5a578a3e9e16','904b6b39-7e85-4be1-a18c-be5abff5c844','c4d698e3-5e35-45c6-a955-46e6af9bfca3','3dd7d9f9-6688-44d7-a4ce-210205555063','9952cd97-0600-4b76-9ab9-6899ead8b3d4','9036aea3-9cb5-446f-9409-15359390e01c','bf1982fa-09c2-4b90-8f04-4284c080feaa','4a77b8d8-edef-432c-9fa1-139561ed81ed','98cb8468-3787-4b13-b5f0-0dce7dbfedbc','16d2cf3f-cc35-4ebc-8e69-ec9bf98cb6a8','b4ee8d7b-3852-4d1d-aff7-f42ee258febf','8bdc4b3c-69de-4f5e-bfda-3f7e5090fc63','ceb2f204-b657-4768-88fb-be45ca156056','2403fe68-ad48-4640-ad27-cc8948a41c78','5e8f9865-82c1-479d-a71f-01320688926f','2d2d0331-20ec-4267-927b-f357c8e36b54','82b5714e-206b-471e-a3a8-8261c97d4457','da11969c-4fc2-451a-975c-627285af2fbd','bbf4b285-7abe-4362-95be-077918f01000','a7e88a4f-21a9-48c5-83d1-a6c3d5215f7e','ed36a287-2e43-4441-a945-935998e3e927','d4845674-593b-4bbb-a72d-a06bfced141b','10d38131-eed8-40e5-9b30-9eb5009848a8','3df6dd16-8319-4d03-9315-c9d9660ca49e','65f86797-6b09-419e-8833-13cf78d88709','13fd21ba-0274-4375-a97d-1e3822b8ac6e','ecb72b00-5bf2-4a73-9f6a-a17a54652a4b','8e5ba51a-57a8-40d1-a85d-02bcff4d80c2','2e152ddb-1fb6-4467-b772-a7f578e8db58','cacd25a7-8dfa-4a6c-a113-10f6d18e6fbf','705ab2f8-99f4-4454-bc9a-92b499dbdae1','14a71ce0-5d31-4e7f-93d9-ad37c0727cd8','c9829474-b54c-4127-b596-6e6fa2418384','f6fdafc9-ed47-4843-8008-00c3e2318ea9','fe703645-03e4-4bae-ba78-43720cd3be66','c9469311-68b2-4eb8-afff-477ea6494c4a','2f2a89c6-8534-4a2f-9002-7c6f10ca225a','3aa867b0-cf92-4815-af28-ed1003df8a82','9053e8c8-29ac-4a75-827c-0d3d0f5d9f5d','00e99753-5eb5-4b1b-bc2c-809ae7238299','f88f3d21-c18a-45ea-916d-bcc20754cdfb','f27fda33-7679-4e94-b437-c8557e2d610a','ba90a1a8-88cb-4afd-bf87-65e4b1b53ab7','00bef7ee-e530-4c48-a227-e764c2e41bcb','35f40b9c-98c4-40c1-9877-1eefbb4b3d8a','a9c4fa68-40e7-4b6c-ab11-d2db912e6755','c2123026-65dd-41b4-aef9-bccf3a93184b','1cbdadb2-913f-427e-b0cf-6e2e6dd9c499','d11969e7-90df-456d-a752-4f14e64fe790','277849c5-7916-4912-863e-15af1fc72ed9','a42359e0-9cd8-4da0-98a3-e0cb74924186','ad128b04-cd52-46ac-86f6-9eb8b42dd5de','6c07dcd4-6249-4bb7-b8fc-f301d5430b2e','f0a18896-0686-4715-a68b-f81d1ab1437c','d45d13de-3cb4-45a9-afdf-9f9c8157eed4','e9125aec-9b46-47e2-92b9-1f1a08ca36eb','6d866742-7c5c-4160-90ad-a3e3f8c7b3fd','e261b05d-995b-4e3b-a06e-83dbd381fab6','831e5d85-4366-4a7d-a8bc-694800e8566a','835c8959-3cca-4862-af27-b91d63dcee25','f645bb96-d440-43ce-a789-0d2f7c649643','4cf456ce-a1b4-4e5b-b3dd-fda6012123cb','982977d2-5b46-46cc-a3c1-964e045db92c','6bca5ab3-2887-4122-bfcf-1dd279d68832','dfcf926c-db3c-47fe-bf75-13e96390e26a','59d6efb5-f900-449e-8268-9883cd46b12f','6e5f2179-e493-4679-a48b-9355f00939df','b1659f55-18ee-4f66-9e39-70eeadddc7aa','e65c30ae-b0eb-4e03-b6db-7ce31a384574','297128aa-8865-4872-a6bf-5c43bf25f0b0','a47afdc2-e17b-4d18-a079-46b84f3b5038','f397e1b5-fa21-461b-9e66-c620e4778200','878e952b-4a37-4a1c-b0e8-b73a76eb6d2e','22576711-0453-43bc-885b-2ed773e20f69','b6394287-d204-4743-84e7-82675057892f','f61046bc-0882-4612-8b64-927d24af69f0','fb1f82f1-b11a-422b-89a9-ba512b3530d3','13f66802-7858-4028-bf63-6a98d2665595','341ae4b6-9080-4b21-869c-79d9eb597b9d','b7bb1941-9b73-4fca-875f-0f74390b66d4','73877c6c-d831-4677-b006-df83dc3241e5','7d8fde02-4ae9-45fc-99aa-d4a53190c3d2','558fc724-6709-4ca1-8c8b-17bfa60de2d5','0b3eb306-c79e-4961-83b2-fb063bb7f528','e6e8ce59-bc62-447d-ac11-a29cd8b8432e','f513d46a-fa8d-42a7-a38b-56da64f0b36e','82b6adab-514e-466d-86ab-90aecd29b9c3','c734be17-eb74-4489-87e1-0541541a7d07','31952fd9-e865-4ee8-8ae9-964436cea1e1','5256de30-036c-4537-bda4-c48fafc88649','75197088-d71f-4ffe-8dfc-6b9268d1e7c9','19b9110f-7d55-4d51-9a77-81311b101019','9ab04429-8f37-4ca9-9b8b-3fcbc90b7429','e8066634-621e-4b73-9e1e-70324c0142c0','cd3a9e1b-32e7-4ab5-a567-47d9fb2270ff','914dfebd-41f6-4228-b46e-4541046962ac','aba87984-4c98-456f-98f7-f66b57312f17','47d66208-d8fc-4387-bf54-acd1321da151','2658ddf5-d636-42e5-a519-c60865ff007e','815e43db-7532-40ef-97b1-603aa296cc3b','aeb76da8-658c-4981-9c64-9a252a3d490d','87789180-aa2c-45da-b343-790ca9cbb2f8','8ab865c4-d149-4094-aeb7-b2e59c3ac6a6','300fedd1-53da-462a-9aa9-32d4af70e0a9','25f71e70-8537-4c8a-aca1-909c1204c255','4d04674b-1d8f-43c4-b6fc-7685d0854387','adbc8458-bb76-42ab-b476-3b4d9543018b','42a17948-6f9a-43fa-aa2f-7d45fa10e5d5','2239a098-7891-470d-8598-84dddbc75932','92975937-cbd4-4647-abc6-b5b4942aa964','f6e33f22-8192-4c2f-9eb6-fe4d2e729bfd','a8af2ad6-1e0e-4953-9869-987dc4adf08e','327c1170-2716-4319-a85b-74a65ed39c8c','eb66c1be-1438-465b-afea-c1fcb112bb02','5e0fc62b-4594-4a9a-83ca-a5bab7bd39f1','e0e16387-d67d-42be-a2fc-7dbd874f9d95','bbeb5c7f-f9db-4195-8429-f597ffa1d672','d05ca724-dcd8-42e1-8360-0bdb1cc6e837','9759a62b-b0c7-4751-827a-3fd1ce2ce619','e8b762ce-46e4-468a-b55b-448cdf8ffcc2','3c53ba51-b6c6-4bb9-956a-ad5a1c6aacce','c7a543f8-b84b-45bd-b9f2-6627b956551b','55453e07-5945-4b2a-b0d6-d922d86a356e','bb8a070b-dd3c-4276-a52d-7f0f1787f824','09c7874c-2759-41bf-b9d5-309ab3d83c33','7596781d-b332-4fc7-b5b4-a9394c248ba4','9fd03a7f-b35a-4ad9-a00a-b04f20cead24','10e7fc9e-03f9-4f19-9721-866275411ebb','b5c8b933-4b62-4706-a701-d35697c27628','3769823c-ecdb-4ea8-8e2e-fadd3e291d05','ce425db9-ae71-48e9-a228-6a1cf01a16c4','bf119509-ca18-4585-a3f3-f694b57b5799','483ed119-cb10-4b5c-89bb-b8cac4e543d1','48b3a8e4-17fc-4b7f-b40c-1127adc5604a','09f79a47-3f82-442a-9aed-a186341b499a','f071e0c9-ba88-41f4-a605-b9ff266a74ca','ea3bd024-518f-4804-b09d-1ab65d97c6e3','6c350654-ee86-40bc-b9df-db89f6f9fc5c','dc409dd4-1e08-4185-bb09-acdaa300be66','1431e9f4-825c-4b95-b1ea-d8a14a90c163','1fe73458-f3c7-4a04-9128-2a333ff0858a','0d75bfd8-a6a7-4bcd-b4b8-fa824929726f','73e263dc-870a-405b-9005-b0075cece747','c8ebf1cc-f484-4fd5-91fd-dcea79e00284','d43decdf-0f63-4161-9fa5-e120b3ed55ea','64953f20-8dba-480a-bc4c-d9b065d11aa5','d503c74b-0ae4-45bd-9c80-8a3fef318c0e','2523fd7b-972f-494d-899d-5af0d9f95d9c','fbb69e78-9eb2-4805-bc8a-a2b2d5bbafb4','f18ba66c-cee0-46b5-b204-6a532741f647','8b95ec0f-39b6-4cb2-83f1-5cacc784f8ac','be918788-4910-4cc1-bb79-5f1c44715cfd','d64a5bb4-b7e5-48a1-aca4-194a90d37a40','53c86a20-ea18-4f57-ba0f-025dfb95c4d9','073cf175-0e8c-4b91-915b-49b82de290f2','498162cd-dba7-4cb9-b526-772543abb400','5ea3cfb7-0104-46b6-9280-d06d31baf743','f6ff04d7-5f7b-4805-9c24-ec8e30e29ab3','c42b1bc7-2fa7-49ee-b926-6c2ef0a3cb20','56daa08e-2c0e-4451-a7c6-2fe2b153cf63','9a3bb389-f6fd-46d5-b80f-df131d7d87ff','a5cc1c0c-5e1e-4be0-9e7b-9a2dd502691d','60c4edb6-ad88-4e80-ac3a-b052457821da','57f9545a-100e-4abd-b7c0-61fc2b4eed22','806cdbd7-0192-4862-ba65-57932fb7f5ce','b739aada-34ed-4b5a-8e4a-57856373e3c4','559f7e22-6634-46fc-88d7-53e4cf97938e','8702c8d8-c130-4695-987c-ecf95ec0f176','717c3841-baff-4108-87fc-c1b810e97fb4','1535a86b-d267-402b-81a5-9ecd21e6df8c','8239d1c6-b41c-4ddc-9b31-e9788efb19b8','7716d22b-064c-45ea-8833-766c8385f5fa','a5948c33-cb2e-4df3-9d36-e811e692ede8','be6f1365-2501-439f-8e50-87ad8ae23e92','03a103eb-f5ac-4c1e-a11f-70f73ab27ff5','e834d6d8-0981-4b9a-b796-b4b617633448','7185e316-34b9-4f5d-9b6f-22f443c5289f','746f7ef5-299a-4cb2-9a24-ca22ddbf8828','3aeae8a5-89d2-4ef0-a09d-76ab22ea18f3','9f4550d4-a513-41d4-bd7a-af01e5d42b73','4c9f6897-a7cc-4115-9716-0f56528c814b','3920a25c-eb37-4f43-b867-e276093b0220','913503e8-673e-4ac0-9550-39512a3d30af','854c7b0d-e02e-4431-a880-704b17868aa1','a641826d-cf44-4616-a854-2ce4dcd682aa','f4316b3a-1f46-4d51-a1fd-1eaeb28a4613','923be474-2e2c-4c66-a712-e69fa83c8974','566737ad-5dfe-4aaf-bbba-a00776a65e9d','6ffa0dd0-77ae-42ab-bf83-2b1d6fc0cff7','ae19c1c0-5b79-4d96-880c-59481608abf0','7eb86787-44f1-4749-8962-b262e72dd73d','f02756fb-4a85-4f39-90d3-d85643fd8e13','e9d3ef9d-5889-4087-a5a6-bf3c7198969a')"
+      },
+      "path": "data/raw/overture_county_leaders_context_2026-09-26.csv",
+      "n_rows": 296,
+      "sha256": "f02694cc04b659da4d9e27ac4bddadad0474f9c1610dc7c9171190e4aebb30ae",
+      "bytes": 281028,
+      "retrieved": "2026-09-25T20:14:29-0500"
+    }
+  ]
+}

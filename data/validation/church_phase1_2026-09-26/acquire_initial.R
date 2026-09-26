@@ -1,0 +1,16 @@
+for (f in list.files('R', pattern = '[.]R$', full.names = TRUE)) source(f)
+p <- 'data/validation/church_phase1_2026-09-26'
+snapshot <- list(entities = targets::tar_read(entities), museum_records = targets::tar_read(museum_records), museum_analysis = targets::tar_read(museum_analysis), multisite = targets::tar_read(multisite_review))
+saveRDS(snapshot, 'data/processed/church_museum_before.rds')
+url <- 'https://prd-tnm.s3.amazonaws.com/StagedProducts/GeographicNames/Archive/MainDomestic/NationalFile.zip'
+f <- dn_fetch(url, 'gnis_20210825_archive', 'data/raw/gnis_NationalFile_20210825.zip')
+print(utils::unzip(f, list = TRUE))
+con <- dn_duckdb()
+on.exit(DBI::dbDisconnect(con))
+sql <- sprintf("SELECT categories.primary AS legacy_category, taxonomy.primary AS taxonomy_primary, taxonomy.hierarchy AS hierarchy, count(*) AS n FROM read_parquet('%s') WHERE bbox.xmin BETWEEN -180 AND -66 AND bbox.ymin BETWEEN 17 AND 72 AND addresses[1].country = 'US' GROUP BY ALL ORDER BY n DESC", dn_overture_path())
+x <- DBI::dbGetQuery(con, sql)
+saveRDS(x, file.path(p, 'overture_taxonomy_inventory.rds'))
+x$hierarchy <- vapply(x$hierarchy, paste, collapse='|', character(1))
+readr::write_csv(x, file.path(p, 'overture_taxonomy_inventory.csv'))
+dn_record_query('church_overture_taxonomy_inventory', 'overture', list(release=DN_OVERTURE_RELEASE,sql=sql), file.path(p, 'overture_taxonomy_inventory.csv'), nrow(x))
+print(x[grepl('church|religio|worship|mosque|synagogue|temple|monaster|convent|hindu|buddh|gurdwara|gurudwara',paste(x$legacy_category,x$hierarchy)), ], row.names=FALSE)

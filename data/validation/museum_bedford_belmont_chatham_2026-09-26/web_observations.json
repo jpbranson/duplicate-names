@@ -1,0 +1,38 @@
+[
+  {
+    "url": "https://thebelmonthistoricalsociety.org/",
+    "method": "web indexed primary operator text",
+    "observed_utc": "2026-09-26",
+    "note": "Historical house museum at 40 Catawba Street, permanent and changing displays and public hours. Native cache failed expired-certificate verification; no security bypass."
+  },
+  {
+    "url": "https://thebelmonthistoricalsociety.org/index.php/board-of-directors-information/",
+    "method": "web indexed primary operator text",
+    "observed_utc": "2026-09-26",
+    "note": "Nine directors elected from membership for three-year terms; 2025 board includes president Myra Joye. Native cache failed expired certificate and direct web open returned 502; indexed substantive text was inspected."
+  },
+  {
+    "url": "https://mm.nh.gov/files/uploads/doj/remote-docs/registered-charities.pdf",
+    "method": "comparison of indexed web text and cached original PDF",
+    "observed_utc": "2026-09-26",
+    "note": "Indexed text gave an older registry status. Original PDF is updated September 21, 2026 and confirms Belmont Historical Society at 229 Dutile Road on page 56. Do not substitute stale search status or infer museum closure from status."
+  },
+  {
+    "url": "https://www.woodfuneralhome.org/obituaries/Barbara-E-Eastman?obId=27906073",
+    "method": "web indexed family obituary; lead only",
+    "observed_utc": "2026-09-26",
+    "note": "Links older Chatham NH phone to society donation contact, but not 1209 Main Road. No identity decision rests on this incomplete lead."
+  },
+  {
+    "url": "https://www.linkedin.com/company/chatham-historical-society",
+    "method": "web read; contradictory lead only",
+    "observed_utc": "2026-09-26",
+    "note": "Combines 1209 Main Road New Hampshire with Massachusetts Atwood Museum description; not used to merge identities."
+  },
+  {
+    "url": "https://chathamhistoricalsociety.org/about-us/our-organization/",
+    "method": "direct web read of primary operator page",
+    "observed_utc": "2026-09-26",
+    "note": "Membership corporation with elected officers/trustees and executive director responsible for Atwood Museum; museum address 347 Stage Harbor Road and PO Box 709. Native cache returned HTTP 522; cached home page independently supplies museum identity."
+  }
+]

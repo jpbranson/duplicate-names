@@ -1,0 +1,56 @@
+id,url,path,sha256,status
+jeff_ne_destination,https://visitoregontrail.org/historical-sites/,data/raw/jefferson_lincoln_jeff_ne_destination_2026-09-26.html,ab929a1806497af42c75fa22a45bc92d410cbb76ee5dfe68ed7cc4dd585a02c4,cached
+jeff_ne_guide,https://fairbury.com/wp-content/uploads/2022/04/2022-Jefferson-County-Guide.pdf,data/raw/jefferson_lincoln_jeff_ne_guide_2026-09-26.pdf,f68acdff663f60c64ec7b81da8e8f5a1f7e4a9f5f33e95ded0b5fc94455280ba,cached
+jeff_in_home,https://jchshc.org/,data/raw/jefferson_lincoln_jeff_in_home_2026-09-26.html,e94f934b8a5765ae8640dcb02a4e84e1bbca50bcd0099269ac83e20236c7b02c,cached
+jeff_in_archives,https://historicjeffersoncounty.org/,data/raw/jefferson_lincoln_jeff_in_archives_2026-09-26.html,f42c80e69f0dc5659e2a4b4619cd4642334874cefb2d953230e51e69f514805e,cached
+jeff_in_destination,https://visitmadison.org/explore/historic-sites/history-and-art-center/,data/raw/jefferson_lincoln_jeff_in_destination_2026-09-26.html,8d590036d62776ee5a4afbbc1e8117a73f0e4bb06e100b083fc75ca3ce592a35,cached
+jeff_co_hiwan,https://www.jeffco.us/1251/Hiwan-Heritage-Park,data/raw/jefferson_lincoln_jeff_co_hiwan_2026-09-26.html,d959be17bab3cb0736d248f03e5f5ba61b6386aa84d6316a3005ae2f8375e6e8,cached
+jeff_co_society,https://emahs.org/,data/raw/jefferson_lincoln_jeff_co_society_2026-09-26.html,142b2813f7f37ba2570cd539cb9b1044bfd4e2ee2c65dd485ee9e8d5d9cf2ba6,cached
+jeff_ks_home,https://www.jchsks.com/,data/raw/jefferson_lincoln_jeff_ks_home_2026-09-26.html,72e4acc1aef3006fd590addadf3e2aa1cbdbe958f67120a66c077b72228f4484,cached
+jeff_ks_county,https://www.jfcountyks.com/383/History-of-Jefferson-County,data/raw/jefferson_lincoln_jeff_ks_county_2026-09-26.html,401885b8262dd2e36aa396356bccdbba6db4f9d8af661b576b22fbcf996453e5,cached
+jeff_ny_home,https://www.jeffersoncountyhistoricalsociety.com/,data/raw/jefferson_lincoln_jeff_ny_home_2026-09-26.html,f4e37a03b2daebdd5a210b93fa1a36469245dadedf46be54380dec502304d47e,cached
+jeff_ia_minutes,https://cityoffairfieldiowa.com/DocumentCenter/View/10980/12-17-24-Museum-Board-Minutes,data/raw/jefferson_lincoln_jeff_ia_minutes_2026-09-26.pdf,ca64cb0c750e902a5779a766bc093191053882307f9c77727d177685c4459bce,cached
+jeff_ga_city,https://www.cityoflouisvillega.org/jefferson-county-historical-society/,data/raw/jefferson_lincoln_jeff_ga_city_2026-09-26.html,,Could not resolve hostname [www.cityoflouisvillega.org]: Could not resolve host: www.cityoflouisvillega.org
+jeff_ga_plan,https://csrarc.ga.gov/sites/default/files/csrarc/documents/Planning/complete_doc.pdf,data/raw/jefferson_lincoln_jeff_ga_plan_2026-09-26.pdf,49192c272223c25f5b7adec07241540467a59637121b714fef20f62ad2a17d03,cached
+jeff_il_home,https://jchshistoricalvillage.org/,data/raw/jefferson_lincoln_jeff_il_home_2026-09-26.html,0dd544c7ac832bedebfde3fcd2acac3856afb0376d47eae06dbda9bef60afe7b,cached
+jeff_il_events,https://jchshistoricalvillage.org/events/list/,data/raw/jefferson_lincoln_jeff_il_events_2026-09-26.html,0c8efeb1acd89e56d4a5404e7b3f9d8711bbca21bcf3ab42bd1a980c5ca5b5d4,cached
+jeff_il_guide,https://www.mtvernon.com/media/ja2hlchn/mt-vernon-welcome-packet-2023.pdf,data/raw/jefferson_lincoln_jeff_il_guide_2026-09-26.pdf,5e098b729708dc5acb6a3060d43e16086244fea26522a67b4007bbed4c129284,cached
+lincoln_ky_city,https://stanford.ky.gov/About%20Us/Pages/Lincoln-County-Courthouse.aspx,data/raw/jefferson_lincoln_lincoln_ky_city_2026-09-26.html,f902401d459b14ad95f75d33ee3b3a5ea4c09ca8c475d2228a807fe3dd481359,cached
+lincoln_wa_home,https://lincolncountymuseums.org/,data/raw/jefferson_lincoln_lincoln_wa_home_2026-09-26.html,6dc9c7fc93bb488bb0520a6c780a8d3c0fb5486a4711aca49b4c53fac7393023,cached
+lincoln_wa_contact,https://lincolncountymuseums.org/contact-2/,data/raw/jefferson_lincoln_lincoln_wa_contact_2026-09-26.html,6dc9c7fc93bb488bb0520a6c780a8d3c0fb5486a4711aca49b4c53fac7393023,cached
+lincoln_co_notice,https://cdn1.creativecirclemedia.com/limon/files/20250423-100009-a6d-2025-04-24.pdf,data/raw/jefferson_lincoln_lincoln_co_notice_2026-09-26.pdf,672b34f04e3c78c9edfc568dd15f18cfa05a2a294c2cfe36e9e37538e7777e11,cached
+lincoln_co_president,https://thefacesoflincolncountyco.com/sheri-gaskins/,data/raw/jefferson_lincoln_lincoln_co_president_2026-09-26.html,583cb020d64109641305a70ed2942a30ed3b8de9b72de823be8b227c2231f48f,cached
+lincoln_tn_chamber,https://939c9b01811224bb3dcf-d6f090436a6f3838a347f2f22505b78d.ssl.cf5.rackcdn.com/uploads/editions/12473/original_bb5db226ac43e74fdd5534214763cfc7ec7b9112.pdf,data/raw/jefferson_lincoln_lincoln_tn_chamber_2026-09-26.pdf,,HTTP response code said error [939c9b01811224bb3dcf-d6f090436a6f3838a347f2f22505b78d.ssl.cf5.rackcdn.com]: The requested URL returned error: 404
+lincoln_nm_home,https://www.nmlincolncountyhistoricalsociety.com/,data/raw/jefferson_lincoln_lincoln_nm_home_2026-09-26.html,3f364fcf417d7b93091d71fc8a888f6032938123d35dd81d78dd49223dc3c539,cached
+lincoln_ne_home,https://lincolncountymuseum.org/,data/raw/jefferson_lincoln_lincoln_ne_home_2026-09-26.html,1af0a7cb7f11f0c9b91a8d7e9f4294e457c3a8649d1a4d46c41763ebf58f616f,cached
+lincoln_ne_events,https://lincolncountymuseum.org/museum-events/,data/raw/jefferson_lincoln_lincoln_ne_events_2026-09-26.html,5f27b1eef3ce3884ac529e52c6e2b8201cec9f3eeb2291971ebeead39e98983f,cached
+lincoln_ga_state,https://exploregeorgia.org/lincolnton/arts-culture/museums/lincoln-county-historical-park,data/raw/jefferson_lincoln_lincoln_ga_state_2026-09-26.html,,HTTP response code said error [exploregeorgia.org]: The requested URL returned error: 403
+lincoln_ga_home,https://www.lincolncountyhistoricalsocietyga.org/,data/raw/jefferson_lincoln_lincoln_ga_home_2026-09-26.html,2e030dc390e6e991578109df42140e74dea2643e478c084274ebef806c7a4d32,cached
+lincoln_or_about,https://oregoncoasthistory.org/about-us/,data/raw/jefferson_lincoln_lincoln_or_about_2026-09-26.html,c971944e15c7d8981d168958289571240a0759bdda333d18c97bc5669b74eaf5,cached
+lincoln_or_burrows,https://oregoncoasthistory.org/museums-exhibits/burrows-house/,data/raw/jefferson_lincoln_lincoln_or_burrows_2026-09-26.html,7a00ca57c101438e27fce789dbaede19b6330cfa89e550e4b4cf50f71b85f863,cached
+lincoln_or_city,https://www.cityoftoledo.org/1785/Museums-Local-History,data/raw/jefferson_lincoln_lincoln_or_city_2026-09-26.html,f0162cdb468be1226e308a5d9fb6f6cf7f32a90b529f4939c3836cd93c360a47,cached
+irs_ne,https://www.irs.gov/pub/irs-soi/eo_ne.csv,data/raw/jefferson_lincoln_irs_ne_2026-09-26.csv,837ef9da8013d1315ad59fd03831fc4217c132e384d4453a2f0a26f0d480d95b,cached
+irs_co,https://www.irs.gov/pub/irs-soi/eo_co.csv,data/raw/jefferson_lincoln_irs_co_2026-09-26.csv,b5f43843b54314eb151140931969299e4174be96d30bd8acc9807e1dc6757cb3,cached
+irs_nm,https://www.irs.gov/pub/irs-soi/eo_nm.csv,data/raw/jefferson_lincoln_irs_nm_2026-09-26.csv,bb2000c7bbdf4e1c92a25b7d2953e4b8f8707ed4e3dac6ddca90dc559311ec23,cached
+irs_ky,https://www.irs.gov/pub/irs-soi/eo_ky.csv,data/raw/jefferson_lincoln_irs_ky_2026-09-26.csv,874725ce526f96c4298b8e7775f7de8c059c7c1dba417815e85bc3c515502cda,cached
+irs_tn,https://www.irs.gov/pub/irs-soi/eo_tn.csv,data/raw/jefferson_lincoln_irs_tn_2026-09-26.csv,c111c263cd599b0e41797c5a478e1f2d7514145c6408e3d8d29ff7af6550c105,cached
+jeff_in_museum,https://jchshc.org/history-%26-art-museum,data/raw/jefferson_lincoln_jeff_in_museum_2026-09-26.html,2321a8eac07507900840ef202080f0b1e6f68f6fed80db871a8f08ecca4cdee8,cached
+jeff_in_news,https://jchshc.org/newsletter-%26-stories,data/raw/jefferson_lincoln_jeff_in_news_2026-09-26.html,9d78b5377ffe1b25bd93e0f76eaef3f39103d8a8699c1112d44f0f33fe3272fd,cached
+jeff_co_history,https://emahs.org/history/,data/raw/jefferson_lincoln_jeff_co_history_2026-09-26.html,0628fe84adbdb2448bd4c43a75fb1cee04a2a47273ad307b66832e5202bea866,cached
+jeff_ks_board,https://www.jchsks.com/copy-of-board-members,data/raw/jefferson_lincoln_jeff_ks_board_2026-09-26.html,bdafa2adc7d26ff7df61a8c8383782ebbfc1cfeb724e82ddf7df414fb8f48df1,cached
+jeff_ks_news,https://www.jchsks.com/newsletter-current,data/raw/jefferson_lincoln_jeff_ks_news_2026-09-26.html,fe6854e848dcc832cd3d2656acd52629168a391d2738e9bb4d80fa489c8f0510,cached
+jeff_ny_about,https://www.jeffersoncountyhistoricalsociety.com/about,data/raw/jefferson_lincoln_jeff_ny_about_2026-09-26.html,2dd45ee4479277507b31878a143832432f082f7053d472012d5a177d976723f8,cached
+jeff_ny_visit,https://www.jeffersoncountyhistoricalsociety.com/visitor-information,data/raw/jefferson_lincoln_jeff_ny_visit_2026-09-26.html,74879d7d0340e751cc49be6a965564f6bb4cc8f0b7d1672c3960a87ef3fe831a,cached
+lincoln_ne_about,https://lincolncountymuseum.org/about-our-museum/,data/raw/jefferson_lincoln_lincoln_ne_about_2026-09-26.html,ad6971a2bcca8edf2a2a79fd8c893ce7fd2dcbcc8c7478ef51651785c2f57a7c,cached
+lincoln_ga_about,https://www.lincolncountyhistoricalsocietyga.com/about,data/raw/jefferson_lincoln_lincoln_ga_about_2026-09-26.html,966e5f27b5cf0a05e277f5c10601fd1d14690200cd1bd34f1b08418cc05e65e0,cached
+lincoln_ky_about,https://lincolncountykyhistory.org/about/,data/raw/jefferson_lincoln_lincoln_ky_about_2026-09-26.html,3fcd778e046e143f7ee47dc309841fd835339a4373a9007f2ab324cf940a1f45,cached
+lincoln_ky_contact,https://lincolncountykyhistory.org/contact/,data/raw/jefferson_lincoln_lincoln_ky_contact_2026-09-26.html,01828f59b887627d8d2111b7f82c6957de146824914d97032c5160373c7c54e4,cached
+lincoln_ky_museum,https://lincolncountykyhistory.org/second-saturday-250/presbyterian-meeting-house-activity/,data/raw/jefferson_lincoln_lincoln_ky_museum_2026-09-26.html,95d1a6dd8b0390380fc61a1e27df895c681b34b9d87901ef4b1b41187651e5ad,cached
+lincoln_nm_about,https://www.nmlincolncountyhistoricalsociety.com/about,data/raw/jefferson_lincoln_lincoln_nm_about_2026-09-26.html,75f519b423ecc9757082e2ab8582ee6f260935f9bd1319b72650c56095d75332,cached
+jeff_ne_operator,https://www.jeffersoncohistory.org/,data/raw/jefferson_lincoln_jeff_ne_operator_2026-09-26.html,,Could not resolve hostname [www.jeffersoncohistory.org]: Could not resolve host: www.jeffersoncohistory.org
+jeff_co_rename,https://emahs.org/wp-content/uploads/2021/10/EMAHS_F_W_2018-Newsletter.pdf,data/raw/jefferson_lincoln_jeff_co_rename_2026-09-26.pdf,678061f8694717fde5df4aff5d9f3d41cb5638dfe11bdb630a4f198cab2b0a8e,cached
+jeff_ga_city_current,https://www.cityoflouisvillegeorgia.com/jefferson-county-historical-society/,data/raw/jefferson_lincoln_jeff_ga_city_current_2026-09-26.html,942b5e2ddf83c4968df2e8509004e0f19c8c539c73903fadcdb3ca09dd4b1faf,cached
+lincoln_co_town,https://townhugo.com/museum/,data/raw/jefferson_lincoln_lincoln_co_town_2026-09-26.html,d02032286070b4dd9d8fbd985a7bdca8af8edf52b89ff177db3bfcb2c8a9c43d,cached
+lincoln_wa_legacy,https://lincolncountymuseum.weebly.com/,data/raw/jefferson_lincoln_lincoln_wa_legacy_2026-09-26.html,30b98aa990f5af45a55a131366fc5c5c1a21d822db4505cc51a01d01e866fbc6,cached
+lincoln_wa_legacy_about,https://lincolncountymuseum.weebly.com/about.html,data/raw/jefferson_lincoln_lincoln_wa_legacy_about_2026-09-26.html,12bb362914c08021cb21d503124bb647ec6d9cd6318288d6927d3ee995ea4073,cached
+lincoln_wa_legacy_contact,https://lincolncountymuseum.weebly.com/contact-us.html,data/raw/jefferson_lincoln_lincoln_wa_legacy_contact_2026-09-26.html,9ddf1496b13a52608020a922093e1b8dd665cec270ce7096cf9b4f4dcae05686,cached

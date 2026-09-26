@@ -1,0 +1,27 @@
+check,passed
+Automatic baseline unchanged,TRUE
+Baseline multisite queue unchanged,TRUE
+All source rows and normalized fields preserved,TRUE
+Guarded identity replay matches pipeline,TRUE
+Preferred-name analysis matches replay,TRUE
+Reviewed Parquet matches pipeline,TRUE
+Baseline Parquet unchanged,TRUE
+1578 earlier evidence files and human labels preserved,TRUE
+Identity rows outside new cases unchanged,TRUE
+Prior identity decisions unchanged,TRUE
+Threshold remains 0.85,TRUE
+Counts match reviewed dry run,TRUE
+370 identity rows in 157 cases,TRUE
+158 complete reviews 24 exclusions 97 names,TRUE
+Bare generic CAF removed from non-chain ranking,TRUE
+31 source-conflict holds unchanged,TRUE
+Three paired museums count once each,TRUE
+All ten reviewed institutions have sourced CAF affiliation,TRUE
+Four complete and six pending without not-museum inference,TRUE
+Three unresolved Midland roles remain distinct and pending,TRUE
+Dallas campus identities remain distinct and pending,TRUE
+Kansas public wing name is complete,TRUE
+Every prior factual decision preserved,TRUE
+National leader still fails explicit publication gate,TRUE
+All 7 starting candidates have recorded dispositions,TRUE
+Six incomplete reviews remain explicitly pending,TRUE

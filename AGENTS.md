@@ -55,7 +55,10 @@ and must not contribute disputed aliases to accepted institutions. The
 museum count checkpoint: 52,387 counted and 52,255 eligible institutions, 440 identity rows
 in 185 cases, 35 isolated source conflicts, 25 `not_museum` exclusions and 174 complete
 factual reviews. Old Jail Museum is the provisional non-chain leader at eight with four
-pending reviews; 28 open actions remain. The
+pending reviews; 28 open actions remain. DESIGN decision 14 now governs post 1: use its
+headline-sufficient standard and M1 stopping rule, verify at most five surprising
+collisions, and do not open new leader batches. Church work and the explorer are frozen
+until post 1 publishes. The
 [validation index](data/validation/README.md) lists every dated packet and its open-action
 queue. Preserve Oregon's mixed source context and unresolved museum/address/name cases
 without unsupported merges.
@@ -77,6 +80,8 @@ conflicts; the older `imls_street/city/state` fields still coalesce address type
 Institution summaries attach IMLS source IDs to EIN/address values; repeated archive
 values are alternatives to inspect, not additional confirmed sites. Before exporting selected headline names, call
 `dn_assert_museum_publication_ready()` explicitly; the pipeline does not invoke it.
+For post 1, pass `data/validation/post1_headline_review.csv` as `headline_review`
+(decision 14); it never changes recorded review or affiliation statuses.
 The helper checks recorded statuses, not the evidence, visitor access, map points or
 M2 scope-word meaning. These still require factual review.
 

@@ -1,0 +1,13 @@
+name_expanded,interpretation,note,evidence_url
+african american museum,cultural_subject,"African American identifies a cultural/history subject, not geographic monopoly; preserve earlier factual uncertainties.",https://aambg.squarespace.com/
+american civil war museum,historical_subject,American modifies Civil War; exact name does not establish exclusive national jurisdiction.,https://acwm.org/about/
+american museum of natural history,ambiguous_institutional_scope,"American may style institutional reach; no uniqueness assertion established, identity checks remain pending.",https://www.amnh.org/plan-your-visit
+crystal bridges museum of american art,collection_subject,American Art describes the collection; parent affiliation and duplicate records are separate questions.,https://crystalbridges.org/news/crystal-bridges-and-the-momentary-announce-key-leadership-appointments-26
+international police museum,collection_subject,Oregon operator describes uniforms and policing objects from multiple countries; other institutions remain separately pending.,https://www.internationalpolicemuseum.org/
+museum of american armor,collection_subject,American Armor describes the military collection.,https://www.museumofamericanarmor.com/our-mission
+museum of international folk art,collection_subject,"International Folk Art describes collection subject/geographic breadth, not exclusive global museum authority.",https://www.moifa.org/
+national medal of honor museum,institutional_scope_requires_context,Distinct Texas and Tennessee organizations; national subject/ambition is not proof of an exclusivity claim.,https://www.mohhc.org/center-history/
+national museum of african american history and culture,national_institution,"Smithsonian national institution; apparent duplicates include labs and conflicting source rows, with unresolved identities.",https://nmaahc.si.edu/sites/default/files/downloads/nmaahc_digitalarchivesspecialist_package.pdf
+national museum of the american indian,national_institution_multiple_campuses,Two Smithsonian public campuses share one parent; no independent competition inferred.,https://americanindian.si.edu/about/contact
+old world wisconsin,geographic_idiom,"Old World is a historical/cultural idiom, not a claim to represent the entire world.",https://oldworldwisconsin.wisconsinhistory.org/
+seneca iroquois national museum,tribal_national_context,"National refers to Seneca Nation heritage/governance, not a US-wide exclusivity claim.",https://senecamuseum.org/about/

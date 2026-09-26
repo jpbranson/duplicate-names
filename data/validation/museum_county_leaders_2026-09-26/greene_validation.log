@@ -1,0 +1,90 @@
++ museum_identity_decisions_file dispatched
+
+v museum_identity_decisions_file completed [1.2s, 90.49 kB]
++ museum_decisions_file dispatched
+v museum_decisions_file completed [0ms, 64.67 kB]
++ museum_identity_decisions dispatched
+v museum_identity_decisions completed [90ms, 17.47 kB]
++ museum_decisions dispatched
+v museum_decisions completed [0ms, 18.62 kB]
++ museum_identity_review dispatched
+v museum_identity_review completed [700ms, 5.91 MB]
++ museum_identity_audit_file dispatched
+v museum_identity_audit_file completed [10ms, 117.39 kB]
++ museum_records dispatched
+v museum_records completed [0ms, 5.88 MB]
++ museum_analysis dispatched
+v museum_analysis completed [5.2s, 5.90 MB]
++ museum_records_file dispatched
+v museum_records_file completed [320ms, 9.38 MB]
++ museum_chain_overlap dispatched
+v museum_chain_overlap completed [1.4s, 306 B]
++ museum_chains dispatched
+v museum_chains completed [10ms, 720 B]
++ museum_ranking dispatched
+v museum_ranking completed [10.2s, 455.20 kB]
++ museum_singularity dispatched
+v museum_singularity completed [570ms, 1.88 kB]
++ museum_subjects dispatched
+v museum_subjects completed [100ms, 418 B]
++ dup_museums dispatched
+v dup_museums completed [1.6s, 1.10 MB]
++ museum_review dispatched
+v museum_review completed [12s, 128.69 kB]
++ museum_review_files dispatched
+v museum_review_files completed [11.2s, 5.96 MB]
+v ended pipeline [1m 0.3s, 17 completed, 13 skipped]
+v | F W  S  OK | Context
+
+/ |          0 | museum-identity                                                
+- |          1 | museum-identity                                                
+| |         11 | museum-identity                                                
+\ |         14 | museum-identity                                                
+/ |         20 | museum-identity                                                
+| |         27 | museum-identity                                                
+| |         31 | museum-identity                                                
+/ |         32 | museum-identity                                                
+- |         45 | museum-identity                                                
+\ |         50 | museum-identity                                                
+v |         53 | museum-identity [1.6s]
+
+/ |          0 | museum-review-context                                          
+- |          1 | museum-review-context                                          
+v |         23 | museum-review-context [3.8s]
+
+/ |          0 | museums                                                        
+- |          1 | museums                                                        
+/ |          4 | museums                                                        
+- |          9 | museums                                                        
+\ |         22 | museums                                                        
+\ |         30 | museums                                                        
+| |         31 | museums                                                        
+/ |         36 | museums                                                        
+| |         39 | museums                                                        
+/ |         44 | museums                                                        
+| |         47 | museums                                                        
+| |         51 | museums                                                        
+\ |         58 | museums                                                        
+- |         61 | museums                                                        
+\ |         70 | museums                                                        
+- |         73 | museums                                                        
+- |         77 | museums                                                        
+v |         82 | museums [2.9s]
+
+/ |          0 | normalize                                                      
+/ |         24 | normalize                                                      
+v |         31 | normalize
+
+/ |          0 | schema                                                         
+/ |          8 | schema                                                         
+- |          9 | schema                                                         
+\ |         18 | schema                                                         
+v |         28 | schema
+
+== Results =====================================================================
+Duration: 8.9 s
+
+[ FAIL 0 | WARN 0 | SKIP 0 | PASS 217 ]
+
+Keep up the good work.
+20 integrity checks passed; 247 protected files unchanged.

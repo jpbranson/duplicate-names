@@ -1,0 +1,12 @@
+{
+  "status": "validated_provisional",
+  "raw_rows": 1032223,
+  "canonical_entities": 540778,
+  "eligible": 442832,
+  "scope_holds": 2,
+  "complete_factual_reviews": 0,
+  "analysis_ordinal_changes": 107,
+  "checks": 20,
+  "cloud_cost_usd": 0,
+  "publication_ready": false
+}

@@ -1,0 +1,51 @@
+# A tibble: 1 x 9
+  source_rows counted_rows institutions eligible identity_rows identity_cases
+        <int>        <int>        <int>    <int>         <int>          <int>
+1       60002        57156        52455    52323           319            134
+  complete_reviews not_museum overrides
+             <int>      <int>     <int>
+1              132         22        80
+# A tibble: 12 x 10
+    rank name_expanded                    n_entities n_chain
+   <int> <chr>                                 <int>   <int>
+ 1     1 madison historical society                8       0
+ 2     2 marion county historical society          8       0
+ 3     3 milton historical society                 8       0
+ 4     4 old jail museum                           8       3
+ 5     5 bedford historical society                7       0
+ 6     6 belmont historical society                7       0
+ 7     7 chatham historical society                7       0
+ 8     8 commemorative air force                   7       0
+ 9     9 franklin historical society               7       0
+10    10 heritage museum                           7       0
+11    11 newton county historical society          7       0
+12    12 telephone museum                          7       0
+   n_independent_verified n_affiliation_unknown n_category_pending n_multisite
+                    <int>                 <int>              <int>       <int>
+ 1                      0                     8                  0           0
+ 2                      0                     8                  0           0
+ 3                      0                     8                  0           0
+ 4                      4                     4                  0           0
+ 5                      0                     7                  0           0
+ 6                      0                     7                  0           0
+ 7                      0                     7                  0           0
+ 8                      0                     7                  0           0
+ 9                      0                     7                  0           0
+10                      0                     7                  0           0
+11                      0                     7                  0           0
+12                      0                     7                  0           0
+   n_review_pending publication_ready
+              <int> <lgl>            
+ 1                8 FALSE            
+ 2                8 FALSE            
+ 3                8 FALSE            
+ 4                4 FALSE            
+ 5                7 FALSE            
+ 6                7 FALSE            
+ 7                7 FALSE            
+ 8                7 FALSE            
+ 9                7 FALSE            
+10                7 FALSE            
+11                7 FALSE            
+12                7 FALSE            
+Factual decisions applied. Pipeline exports still require selective rebuild.

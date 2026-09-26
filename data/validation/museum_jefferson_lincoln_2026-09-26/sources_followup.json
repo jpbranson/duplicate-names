@@ -1,0 +1,67 @@
+[
+  {
+    "id": "jeff_in_museum",
+    "url": "https://jchshc.org/history-%26-art-museum",
+    "extension": "html"
+  },
+  {
+    "id": "jeff_in_news",
+    "url": "https://jchshc.org/newsletter-%26-stories",
+    "extension": "html"
+  },
+  {
+    "id": "jeff_co_history",
+    "url": "https://emahs.org/history/",
+    "extension": "html"
+  },
+  {
+    "id": "jeff_ks_board",
+    "url": "https://www.jchsks.com/copy-of-board-members",
+    "extension": "html"
+  },
+  {
+    "id": "jeff_ks_news",
+    "url": "https://www.jchsks.com/newsletter-current",
+    "extension": "html"
+  },
+  {
+    "id": "jeff_ny_about",
+    "url": "https://www.jeffersoncountyhistoricalsociety.com/about",
+    "extension": "html"
+  },
+  {
+    "id": "jeff_ny_visit",
+    "url": "https://www.jeffersoncountyhistoricalsociety.com/visitor-information",
+    "extension": "html"
+  },
+  {
+    "id": "lincoln_ne_about",
+    "url": "https://lincolncountymuseum.org/about-our-museum/",
+    "extension": "html"
+  },
+  {
+    "id": "lincoln_ga_about",
+    "url": "https://www.lincolncountyhistoricalsocietyga.com/about",
+    "extension": "html"
+  },
+  {
+    "id": "lincoln_ky_about",
+    "url": "https://lincolncountykyhistory.org/about/",
+    "extension": "html"
+  },
+  {
+    "id": "lincoln_ky_contact",
+    "url": "https://lincolncountykyhistory.org/contact/",
+    "extension": "html"
+  },
+  {
+    "id": "lincoln_ky_museum",
+    "url": "https://lincolncountykyhistory.org/second-saturday-250/presbyterian-meeting-house-activity/",
+    "extension": "html"
+  },
+  {
+    "id": "lincoln_nm_about",
+    "url": "https://www.nmlincolncountyhistoricalsociety.com/about",
+    "extension": "html"
+  }
+]

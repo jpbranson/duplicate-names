@@ -36,7 +36,14 @@ created/used for the project, not the user's existing assistant subscription.
 5. Update this log at each meaningful checkpoint, including exact commands/files
    needed to resume and any failures or blockers.
 
-Current next action: the church scope follow-up proposal (23 guarded COGASOC scope decisions; read-only dry run passed, eligible would become 442,818) awaits user approval before its one-time apply, rebuild and validation. Then continue remaining museum headline and church factual source checks. Project documentation was audited and synchronized at 20:15 UTC. Five highest-ordinal cases are flagged for human review. Independent church labels and publication destination remain missing. Counts: museums 52,387 counted / 52,255 eligible / 174 complete reviews; churches 540,778 canonical / 442,832 eligible / zero complete reviews. Do not rerun frozen packet scripts. Cloud spending USD 0.
+**Rescoped 2026-09-26 (user-approved; DESIGN decision 14):** ship post 1 first. Resolve
+Old Jail Museum's pending members to the headline-sufficient standard and apply the M1
+stopping rule; verify at most five surprising-collision groups; rewrite the draft to the
+original brief; publish on the blogdown site. No further leader batches. Church work
+(including the 23-decision scope proposal below) and the explorer are frozen until post 1
+publishes. This supersedes the next action below.
+
+Superseded next action: the church scope follow-up proposal (23 guarded COGASOC scope decisions; read-only dry run passed, eligible would become 442,818) awaits user approval before its one-time apply, rebuild and validation. Then continue remaining museum headline and church factual source checks. Project documentation was audited and synchronized at 20:15 UTC. Five highest-ordinal cases are flagged for human review. Independent church labels and publication destination remain missing. Counts: museums 52,387 counted / 52,255 eligible / 174 complete reviews; churches 540,778 canonical / 442,832 eligible / zero complete reviews. Do not rerun frozen packet scripts. Cloud spending USD 0.
 
 ### 2026-09-26 16:04 UTC — Jefferson/Lincoln snapshot prepared
 
@@ -301,3 +308,12 @@ Current next action: the church scope follow-up proposal (23 guarded COGASOC sco
 
 - On user request, audited AGENTS, README, HANDOFF, DESIGN, LEADS, the validation index, dashboard README and post docs against the M2 museum and church ordinal/scope checkpoints. Corrected stale current-state claims (Sept 23 counts/leaders, queued-church wording, layout tables, review-sheet sizes 432/557/84 with cutoff six, missing Sept 26 packets in the index, R 4.4.2 Rscript path) and noted the pending scope proposal. Documentation only: no decisions, labels, code, targets or dated packets changed. Existing line endings preserved.
 - Local links: all live docs and dated reports resolve. Open for the user: 53 links inside the museum post bundle's copied evidence files point to packet folders not bundled; the bundle includes 8 of 18 Sept 26 reports; the post template's `dn_root` default resolves above the repo. Post sources were not edited, so the rendered previews still match them.
+
+
+### 2026-09-26 - Rescope to post 1; M1 stopping rule applied
+
+- User approved DESIGN decision 14 (headline-sufficient standard, M1 stopping rule, at most five surprising collisions) and confirmed post 1's questions: who is number one, and are there surprising collisions. Publication target: the blogdown site. Church work, including the 23-decision scope proposal, and the explorer are frozen until post 1 publishes.
+- Old Jail Museum: all eight non-chain members meet decision 14; evidence in `data/validation/post1_headline_review.csv`. The four pending members were rechecked on public sources (Winchester via state tourism; the city page returned 403). V = 8, above every other group (none at 7, 38 at 6). No live decisions, review statuses or counts changed.
+- Upward-risk check on the 38 six-member groups: every L4 variant carries a place name, so none joins its L2 group. Karpeles Manuscript Library Museum (6 plus 3 city-suffixed) is a single-family network and belongs in the chain table; it cannot pass Old Jail either way.
+- Blocker for the export: `dn_assert_museum_publication_ready()` requires `review_status = verified`, which decision 14 deliberately leaves unchanged, so it still fails for Old Jail. Needs a user decision on how the gate reads decision-14 evidence.
+- `.gitignore` now excludes 30 full-table snapshots (671 MB) whose hashes are in later packets' `protected_files.csv`; the files remain on disk. Nothing committed yet.

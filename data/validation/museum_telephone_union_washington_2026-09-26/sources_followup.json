@@ -1,0 +1,63 @@
+[
+  {
+    "id": "wash_mo_museum",
+    "url": "https://washmohistorical.org/museum/"
+  },
+  {
+    "id": "wash_me_bylaws",
+    "url": "https://www.washingtonhistorical.org/home/by-laws-of-the-washington-historical-society/"
+  },
+  {
+    "id": "union_ga_about",
+    "url": "https://www.unioncountyhistory.org/about-us"
+  },
+  {
+    "id": "union_ga_board",
+    "url": "https://www.unioncountyhistory.org/our-board"
+  },
+  {
+    "id": "union_oh_event",
+    "url": "https://www.ogs.org/event/union-county-chapter-of-ogs-may-meeting/"
+  },
+  {
+    "id": "union_il_home",
+    "url": "https://www.unioncountyilmuseum.com/"
+  },
+  {
+    "id": "union_il_news",
+    "url": "https://www.unioncountyilmuseum.com/in-the-news"
+  },
+  {
+    "id": "union_il_research",
+    "url": "https://www.unioncountyilmuseum.com/genealogy/genealogy-research"
+  },
+  {
+    "id": "wash_ny_home",
+    "url": "https://www.millbrookhistoricalsociety.org/"
+  },
+  {
+    "id": "wash_ny_archives",
+    "url": "https://www.millbrookhistoricalsociety.org/info"
+  },
+  {
+    "id": "wash_ny_contact",
+    "url": "https://www.millbrookhistoricalsociety.org/contact"
+  },
+  {
+    "id": "wash_ny_board",
+    "url": "https://www.millbrookhistoricalsociety.org/team"
+  },
+  {
+    "id": "wash_ny_streets",
+    "url": "https://www.millbrookhistoricalsociety.org/museum-in-the-streets-1"
+  },
+  {
+    "id": "wash_ny_library",
+    "url": "https://millbrooklibrary.org/past-art-shows/"
+  },
+  {
+    "id": "wash_me_2023_town",
+    "url": "https://webgen1files1.revize.com/washingtonme/Document%20Center/Resources/Town%20Archives/Town%20Reports/WASH%20Full%20report%20with%20cover.pdf",
+    "extension": "pdf"
+  }
+]

@@ -1,0 +1,163 @@
+church_fixture <- function(names,lon=seq_along(names),lat=rep(40,length(names)),source='overture') {
+  x<-dn_church_raw(source,as.character(seq_along(names)),names,lon,lat,'christian_place_of_worship',status='open')
+  x$religion<-'christian'
+  dn_normalize_churches(x,tibble::tibble(name_norm=character()))
+}
+church_metric_fixture <- function() {
+  x<-church_fixture(c('First Baptist Church','Second Baptist Church','First Baptist Church','First Baptist Church','Third Baptist Church'))
+  x<-dn_resolve_churches(x,tibble::tibble(row_a=integer(),row_b=integer(),would_merge=logical()))
+  x<-x[order(as.integer(x$source_id)),]
+  x$place_geoid<-c('A','B','C','C','B');x$place_name<-x$place_geoid;x
+}
+
+test_that('church compound ordinals agree across numeric and word forms', {
+  x<-dn_church_name_expand(dn_name_clean(c('23rd Baptist Church','Twenty-third Baptist Church','100th Presbyterian Church','One hundred first Baptist Church','211th Baptist Church','11st Baptist Church','1000th Baptist Church')))
+  expect_identical(dn_church_parse_ordinal(x),c(23L,23L,100L,101L,211L,NA_integer_,NA_integer_))
+  expect_identical(x[1],x[2])
+})
+test_that('doctrinal names and street ordinals do not become numbered congregations', {
+  x<-church_fixture(c('First Church of Christ, Scientist','Third Church of Christ Scientist','Seventh-day Adventist Church','23rd Avenue Baptist Church','Fourth St Baptist Church','First Baptist Church'))
+  expect_identical(x$ordinal,c(NA_integer_,NA_integer_,NA_integer_,NA_integer_,NA_integer_,1L))
+  expect_identical(x$denom_norm[1:3],c('christian_science','christian_science','seventh_day_adventist'))
+})
+test_that('church geography stripping can expose an ordinal while names stay intact', {
+  x<-dn_church_raw('overture','one','Peoria First Baptist Church',-89.6,40.7,'christian_place_of_worship')
+  out<-dn_normalize_churches(x,tibble::tibble(name_norm='peoria'))
+  expect_identical(out$name_raw,x$name_raw)
+  expect_identical(out$name_core,'first baptist church')
+  expect_identical(out$ordinal,1L)
+})
+test_that('denomination families preserve specific exceptions and flag tag conflicts', {
+  x<-dn_church_denom(c('african methodist episcopal church','saint paul episcopal church','first baptist church','river community church'),c(NA,NA,'roman_catholic',NA))
+  expect_identical(x$denom_norm,c('methodist','anglican_episcopal','catholic',NA_character_))
+  expect_identical(x$denom_conflict,c(FALSE,FALSE,TRUE,FALSE))
+  expect_identical(x$denom_basis,c('name_heuristic','name_heuristic','source_category','unknown'))
+})
+test_that('church matching blocks different ordinal or denomination at same location', {
+  x<-church_fixture(c('First Baptist Church','Second Baptist Church','First Methodist Church','First Baptist Church'),lon=rep(-90,4))
+  pairs<-dn_church_candidate_pairs(x)
+  expect_false(pairs$would_merge[pairs$row_a==1 & pairs$row_b==2])
+  expect_false(pairs$would_merge[pairs$row_a==1 & pairs$row_b==3])
+  out<-dn_resolve_churches(x,pairs)
+  expect_equal(sum(out$counted),3L)
+  expect_equal(length(unique(out$entity_id[out$name_raw=='First Baptist Church'])),1L)
+})
+test_that('same-name distant churches stay separate and legal comparison cannot bridge', {
+  x<-church_fixture(c('Unique Name Church','Unique Name Church'),lon=c(-90,-91))
+  out<-dn_resolve_churches(x)
+  expect_equal(dplyr::n_distinct(out$entity_id),2L)
+  y<-church_fixture(c('Unique Name Church','Unique Name Church'),lon=c(-90,-90),source='hifld')
+  out<-dn_resolve_churches(dplyr::bind_rows(x,y))
+  expect_equal(sum(out$counted),2L)
+  expect_true(all(!out$counted[out$source=='hifld']))
+})
+test_that('nearest neighbor excludes self but keeps distinct co-located entities', {
+  nn<-dn_leave_one_out_s2(c(179.9,-179.9,0),c(0,0,0))
+  expect_equal(nn$neighbor[1:2],c(2L,1L))
+  expect_equal(nn$distance_m[1]/1000,22.239, tolerance=0.02)
+  nn<-dn_leave_one_out_s2(c(0,0,1),c(0,0,0))
+  expect_equal(nn$distance_m[1:2],c(0,0))
+  expect_true(all(nn$neighbor!=seq_len(3)))
+  expect_true(is.na(dn_leave_one_out_s2(1,1)$distance_m))
+})
+test_that('spherical divide-and-query agrees with exact distance matrix', {
+  set.seed(17);lon<-runif(12,-179,179);lat<-runif(12,-70,70)
+  nn<-dn_leave_one_out_s2(lon,lat)
+  pts<-sf::st_as_sf(data.frame(lon,lat),coords=c('lon','lat'),crs=4326)
+  dist<-units::drop_units(sf::st_distance(pts));diag(dist)<-Inf
+  expect_equal(nn$distance_m,apply(dist,1,min),tolerance=1e-7)
+})
+test_that('exclusivity denominator includes occupied places with no First', {
+  x<-church_metric_fixture()
+  out<-metric_municipal_exclusivity(x,data.frame(GEOID=c('A','B','C','EMPTY')))
+  expect_equal(out$n_occupied_places,3L)
+  expect_equal(out$n_zero_first,1L)
+  expect_equal(out$n_exactly_one_first,1L)
+  expect_equal(out$n_multiple_first,1L)
+  expect_equal(out$exclusivity_rate,1/3)
+  expect_error(metric_municipal_exclusivity(x,data.frame(GEOID='A')),'absent')
+})
+test_that('ladder uses distinct observed rungs and reports missing rungs', {
+  x<-church_metric_fixture()
+  out<-metric_ladder_completeness(x)
+  b<-out[out$place_geoid=='B',]
+  expect_equal(b$max_ordinal,3L);expect_equal(b$completeness,2/3)
+  expect_identical(b$missing_rungs,'1')
+  expect_equal(artifact_municipal_multiplicity(x)$n_first,2L)
+  expect_error(metric_ladder_completeness(dplyr::bind_rows(x,x[1,])),'canonical')
+})
+test_that('Census join retains outside places and ambiguous boundary without duplicating', {
+  poly<-function(a,b) sf::st_polygon(list(matrix(c(a,0,b,0,b,2,a,2,a,0),ncol=2,byrow=TRUE)))
+  places<-sf::st_sf(GEOID=c('A','B'),STATEFP=c('01','01'),NAME=c('A','B'),CLASSFP=c('C1','U1'),geometry=sf::st_sfc(poly(0,2),poly(1,3),crs=4326))
+  x<-dn_resolve_churches(church_fixture(c('A Church','B Church','C Church'),lon=c(.5,1.5,5),lat=c(1,1,1)))
+  out<-dn_attach_church_places(x,places)
+  out<-out[match(c('A Church','B Church','C Church'),out$name_raw),]
+  expect_equal(nrow(out),3L)
+  expect_identical(out$place_match_status,c('one_place','ambiguous_boundary','outside_census_place'))
+  expect_identical(out$place_geoid,c('A',NA_character_,NA_character_))
+})
+
+
+test_that('transitive matching cannot bridge contradictory church ordinals', {
+  x<-church_fixture(c('First Baptist Church','Baptist Church','Second Baptist Church'),lon=rep(-90,3))
+  pairs<-tibble::tibble(row_a=c(1L,2L),row_b=c(2L,3L),would_merge=TRUE)
+  out<-dn_resolve_churches(x,pairs)
+  expect_equal(dplyr::n_distinct(out$entity_id),2L)
+})
+
+test_that('biblical, temporal, intersection and district numbers are not congregation ordinals', {
+  x<-dn_church_name_expand(dn_name_clean(c('107th Psalm Christian Family','85th and Euclid Church of Christ',
+    '21st Century Baptist Church','30th Annual Christmas Bazaar','Sixteenth Section Baptist Church',
+    'Eleventh Hour Ministries','12th Episcopal District','13th Church of Christ Science','Twelfth Baptist Church')))
+  expect_identical(dn_church_parse_ordinal(x),c(rep(NA_integer_,8),12L))
+})
+
+test_that('church preferred names preserve raw fields and reject stale evidence guards', {
+  records<-dn_resolve_churches(church_fixture('Thirty Eighth Baptist Church',lon=-89.3,lat=31.3))
+  analysis<-records
+  analysis$denom_from_name<-analysis$denom_norm;analysis$denom_basis<-'name_heuristic'
+  analysis$denom_conflict<-FALSE;analysis$review_status<-'pending'
+  d<-tibble::tibble(source=records$source,source_id=records$source_id,expected_name=records$name_raw,
+    expected_coordinates=sprintf('%.7f,%.7f',records$lon,records$lat),preferred_name='38th Avenue Baptist Church',
+    evidence_url='https://example.org/operator',evidence_note='Operator public name',reviewed_by='source_reviewer',reviewed_on='2026-09-26')
+  out<-dn_apply_church_names(analysis,records,d,tibble::tibble(name_norm=character()))
+  expect_identical(out$name_raw,records$name_raw)
+  expect_identical(out$entity_id,records$entity_id)
+  expect_identical(out$lon,records$lon)
+  expect_identical(out$primary_name,'38th Avenue Baptist Church')
+  expect_true(is.na(out$ordinal))
+  expect_identical(out$review_status,'pending')
+  stale<-d;stale$expected_name<-'different';expect_error(dn_apply_church_names(analysis,records,stale,NULL),'Stale')
+  stale<-d;stale$expected_coordinates<-'0,0';expect_error(dn_apply_church_names(analysis,records,stale,NULL),'Stale')
+  stale<-d;stale$evidence_url<-'';expect_error(dn_apply_church_names(analysis,records,stale,NULL),'evidence')
+})
+
+test_that('church cluster IDs and canonical source choice are stable under input reordering', {
+  x<-church_fixture(c('First Baptist Church','First Baptist Church'),lon=rep(-90,2))
+  x$source_update_time<-as.Date(c('2020-01-01','2026-01-01'))
+  a<-dn_resolve_churches(x)
+  b<-dn_resolve_churches(x[2:1,])
+  expect_identical(a$entity_id[match(x$source_id,a$source_id)],b$entity_id[match(x$source_id,b$source_id)])
+  expect_identical(a$source_id[a$counted],'2')
+  expect_identical(a[,names(dn_schema_raw())][match(x$source_id,a$source_id),],x[,names(dn_schema_raw())])
+})
+
+test_that('church pair search covers the spine and cross-source comparisons only', {
+  x<-church_fixture(c('First Baptist Church','First Baptist Church'),lon=rep(-90,2))
+  y<-church_fixture(c('First Baptist Church','First Baptist Church'),lon=rep(-90,2),source='gnis')
+  z<-dplyr::bind_rows(x,y)
+  p<-dn_church_candidate_pairs(z)
+  expect_equal(nrow(p),5L)
+  expect_false(any(z$source[p$row_a]=='gnis' & z$source[p$row_b]=='gnis'))
+  expect_equal(nrow(dn_church_candidate_pairs(y)),0L)
+})
+
+test_that('ordinals inside a stripped place name are not congregation numbers', {
+  raw<-dn_church_raw('overture',as.character(1:4),
+    c('First Mesa Baptist Church','Second Mesa Baptist Church','Peoria First Baptist Church','First Baptist Church of Peoria'),
+    rep(-110,4),rep(35,4),'christian_place_of_worship')
+  out<-dn_normalize_churches(raw,tibble::tibble(name_norm=c('first mesa','second mesa','peoria')))
+  expect_identical(out$ordinal,c(NA_integer_,NA_integer_,1L,1L))
+  expect_identical(out$name_core,c('baptist church','baptist church','first baptist church','first baptist church'))
+  expect_identical(out$name_raw,raw$name_raw)
+})

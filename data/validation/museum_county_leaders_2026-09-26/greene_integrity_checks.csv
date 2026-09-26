@@ -1,0 +1,21 @@
+check,passed
+Automatic baseline unchanged,TRUE
+Baseline multisite queue unchanged,TRUE
+All 60002 original rows and normalized fields preserved,TRUE
+Saved records match guarded replay,TRUE
+Saved analysis matches replay,TRUE
+Reviewed Parquet refreshed,TRUE
+Baseline Parquet unchanged,TRUE
+Earlier packets and original human labels preserved,TRUE
+Rows outside county identity cases unchanged,TRUE
+Threshold remains 0.85,TRUE
+Franklin remains six provisional bare-name institutions,TRUE
+Greene has six provisional bare-name institutions,TRUE
+57278 counted source rows,TRUE
+52568 counted institutions and 52436 eligible,TRUE
+114 identity rows in 46 cases,TRUE
+24 verified reviews and five not-museum records,TRUE
+Jackson remains at 11,TRUE
+Iowa source conflict isolated and uncounted,TRUE
+Disputed museum name not propagated to accepted Iowa record,TRUE
+Unfinished headline group cannot pass publication gate,TRUE

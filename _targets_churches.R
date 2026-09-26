@@ -1,0 +1,27 @@
+library(targets)
+tar_option_set(packages=c('dplyr','tibble','tidyr','sf','units','stringi','stringdist','arrow','readr','digest'),
+  format='rds',seed=20260926L)
+tar_source('R')
+list(
+  tar_target(church_raw_overture,src_overture_worship()),
+  tar_target(church_raw_gnis,src_gnis()),
+  tar_target(church_raw_hifld,src_hifld()),
+  tar_target(church_raw,dn_bind_sources(church_raw_overture,church_raw_gnis,church_raw_hifld)),
+  tar_target(church_gazetteer,dn_gazetteer()),
+  tar_target(church_normalized,dn_normalize_churches(church_raw,church_gazetteer)),
+  tar_target(church_pairs,dn_church_candidate_pairs(church_normalized)),
+  tar_target(church_records,dn_resolve_churches(church_normalized,church_pairs)),
+  tar_target(church_places,src_census_places()),
+  tar_target(church_states,src_census_states()),
+  tar_target(church_analysis,dn_church_analysis(church_records,church_places,church_states)),
+  tar_target(church_name_overrides_file,'data/validation/church_name_overrides.csv',format='file'),
+  tar_target(church_name_overrides,readr::read_csv(church_name_overrides_file,col_types=readr::cols(.default='c'))),
+  tar_target(church_scope_decisions_file,'data/validation/church_scope_decisions.csv',format='file'),
+  tar_target(church_scope_decisions,readr::read_csv(church_scope_decisions_file,col_types=readr::cols(.default='c'))),
+  tar_target(church_named_analysis,dn_apply_church_scope(
+    dn_apply_church_names(church_analysis,church_records,church_name_overrides,church_gazetteer),
+    church_records,church_scope_decisions)),
+  tar_target(church_output_files,dn_export_church_outputs(church_records,church_named_analysis,church_pairs,
+    church_normalized,church_places),format='file')
+)
+

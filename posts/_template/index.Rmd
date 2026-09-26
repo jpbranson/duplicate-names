@@ -22,7 +22,7 @@ output:
 # adjust this source path, and verify a knit without the analysis checkout.
 # Data chunks must read only the bundle's small payload/ files.
 dn_root <- Sys.getenv("DUPNAMES_ROOT", unset = "../../..")
-source(file.path(dn_root, "posts", "_setup.R"))
+source(file.path(dn_root, "posts", "_setup.R"), local = TRUE)
 ```
 
 Opening paragraph.
@@ -84,3 +84,4 @@ checkpoint links in `data/validation/README.md` when preparing the export, then 
 needed evidence references with the post.
 Use CSV payloads for a blog build without `arrow`, and verify that the completed
 bundle knits without the analysis checkout or a pipeline run.
+

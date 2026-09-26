@@ -1,0 +1,38 @@
+[
+  {
+    "id": "bg_about_native",
+    "url": "https://aambg.squarespace.com/about-us"
+  },
+  {
+    "id": "bg_board_native",
+    "url": "https://aambg.squarespace.com/board-of-directors"
+  },
+  {
+    "id": "stmartinville_budget",
+    "url": "https://stmartinville.gov/wp-content/uploads/2026/02/6-30-2026-City-of-St-Martinvlle-Budget.pdf",
+    "extension": "pdf"
+  },
+  {
+    "id": "stmartinville_partner",
+    "url": "https://acadianmemorial.org/area-attractions/"
+  },
+  {
+    "id": "stmartinville_minutes",
+    "url": "https://stmartinville.gov/wp-content/uploads/2025/08/8cade-6-02-25minutes.pdf",
+    "extension": "pdf"
+  },
+  {
+    "id": "pensacola_operator_report",
+    "url": "https://www.wsre.org/bento-api/filer-file-download/293438/",
+    "extension": "pdf"
+  },
+  {
+    "id": "stratford_legacy_domain",
+    "url": "http://www.scribblesdesigns.net/index.html"
+  },
+  {
+    "id": "tacoma_original_author",
+    "url": "https://antoinettebroussard.com/wp-content/uploads/2024/05/columbiamagazinearticle-1.pdf",
+    "extension": "pdf"
+  }
+]

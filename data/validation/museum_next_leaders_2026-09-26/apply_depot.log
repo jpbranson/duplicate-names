@@ -1,0 +1,8 @@
+# A tibble: 1 x 7
+  counted eligible source_counted identity_rows identity_cases verified
+    <int>    <int>          <int>         <int>          <int>    <int>
+1   52539    52407          57250           160             63       53
+  not_museum
+       <int>
+1         12
+Depot factual corrections applied; unfinished affiliations and headline certification remain pending.

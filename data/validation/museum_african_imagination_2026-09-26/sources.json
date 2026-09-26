@@ -1,0 +1,95 @@
+[
+  {
+    "id": "galveston_destination",
+    "url": "https://www.visitgalveston.com/directory/african-american-museum/"
+  },
+  {
+    "id": "dallas_home",
+    "url": "https://aamdallas.org/"
+  },
+  {
+    "id": "dallas_history",
+    "url": "https://aamdallas.org/history/"
+  },
+  {
+    "id": "carbondale_home",
+    "url": "https://aamsi.org/"
+  },
+  {
+    "id": "carbondale_endowment",
+    "url": "https://www.sicf.org/ourfunds/aamsi/"
+  },
+  {
+    "id": "bg_contact",
+    "url": "https://www.aambg.org/contact"
+  },
+  {
+    "id": "bg_home",
+    "url": "https://www.aambg.org/"
+  },
+  {
+    "id": "bg_story",
+    "url": "https://africanamericanmuseumbg.com/"
+  },
+  {
+    "id": "monroe_home",
+    "url": "https://www.monroeblackheritagemuseum.org/"
+  },
+  {
+    "id": "monroe_history",
+    "url": "https://www.monroeblackheritagemuseum.org/history"
+  },
+  {
+    "id": "monroe_board",
+    "url": "https://www.monroeblackheritagemuseum.org/board-of-directors"
+  },
+  {
+    "id": "tacoma_watch",
+    "url": "https://historictacoma.org/watchlist"
+  },
+  {
+    "id": "stmartinville_legacy",
+    "url": "https://stmartinville.org/attractions.html"
+  },
+  {
+    "id": "marshfield_home",
+    "url": "https://imaginationstationmarshfield.com/"
+  },
+  {
+    "id": "zeeland_home",
+    "url": "https://www.istation.org/"
+  },
+  {
+    "id": "woodstock_zoning",
+    "url": "https://www.woodstockct.gov/planning-and-zoning-commission/minutes/planning-zoning-minutes-9",
+    "extension": "pdf"
+  },
+  {
+    "id": "wilson_home",
+    "url": "https://scienceandhistory.org/"
+  },
+  {
+    "id": "toledo_home",
+    "url": "https://www.imaginationstationtoledo.org/"
+  },
+  {
+    "id": "toledo_history",
+    "url": "https://www.imaginationstationtoledo.org/about/timeline"
+  },
+  {
+    "id": "lafayette_home",
+    "url": "https://www.imagination-station.org/"
+  },
+  {
+    "id": "pensacola_stadium",
+    "url": "https://www.milb.com/news/blue-wahoos-stadium-improvements"
+  },
+  {
+    "id": "pensacola_college",
+    "url": "https://pensacolastate.smartcatalogiq.com/en/2016-2017/catalog/academic-and-student-services/wsre"
+  },
+  {
+    "id": "stratford_operator",
+    "url": "https://highplainsobserverstratford.com/index198.htm"
+  }
+]

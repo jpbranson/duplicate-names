@@ -1,0 +1,22 @@
+[
+ {"id":"fr_wi_about","url":"https://franklinhistory.net/about-us/"},
+ {"id":"fr_wi_contact","url":"https://franklinhistory.net/contact/"},
+ {"id":"fr_ct_home","url":"https://sites.google.com/site/ashbelwoodwardmuseum/"},
+ {"id":"fr_ct_board","url":"https://www.franklinct.gov/m/directory/department?did=46"},
+ {"id":"fr_ct_guide","url":"https://thelastgreenvalley.org/wp-content/uploads/2022/08/Explore-2022-FINAL.pdf"},
+ {"id":"fr_nj_minutes2017","url":"https://www.franklinborough.org/documents/minutes/town-council/2017/MINUTES-01-10-17.pdf"},
+ {"id":"fr_nj_museum1998","url":"https://www.fomsnj.org/PDF/PickingTable/PT39-1.pdf"},
+ {"id":"new_ar_about","url":"https://www.newtoncountyar.com/about"},
+ {"id":"new_in_scott","url":"https://www.newtoncountyindiana.com/destinations/historic-scott-lucas-house"},
+ {"id":"new_in_scott_nps","url":"https://npgallery.nps.gov/GetAsset/eaeee513-c33c-467a-a2bf-83b0508633fd","extension":"pdf"},
+ {"id":"new_ga_1997","url":"https://dlg.usg.edu/record/dlg_ggpd_y-ga-bs700-pa7-bs1-bd5-b1997"},
+ {"id":"new_ms_archives","url":"https://www.nchgs.org/html/archives.html"},
+ {"id":"her_libby_news","url":"https://www.libbyheritagemuseum.org/news.htm"},
+ {"id":"her_libby_homehtm","url":"https://libbyheritagemuseum.org/home.htm"},
+ {"id":"her_va_visit","url":"https://www.rocktownhistory.org/plan-your-visit/"},
+ {"id":"her_austin_board","url":"https://www.tsd.texas.gov/apps/news/article/2015940"},
+ {"id":"her_ia_school","url":"https://johnsoncountyhistory.org/schoolhouse/"},
+ {"id":"her_ia_history","url":"https://johnsoncountyhistory.org/about/"},
+ {"id":"her_jewish_home","url":"https://www.jhmomc.org/"},
+ {"id":"her_jewish_board","url":"https://www.jhmomc.org/board-of-trustees-and-staff"}
+]

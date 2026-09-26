@@ -1,0 +1,16 @@
+
+Attaching package: 'dplyr'
+
+The following objects are masked from 'package:stats':
+
+    filter, lag
+
+The following objects are masked from 'package:base':
+
+    intersect, setdiff, setequal, union
+
+museums l2: 48153 name groups; 52805 records
+museums l3: 37208 name groups; 52805 records
+churches l2: 325861 name groups; 540778 records
+churches l3: 232530 name groups; 540778 records
+Static data build complete; 77.2262086868286 MiB compressed

@@ -1,0 +1,8 @@
+church_output_files
+church_normalized
+church_scope_decisions_file
+church_records
+church_pairs
+church_analysis
+church_scope_decisions
+church_named_analysis

@@ -1,0 +1,75 @@
+[
+  {
+    "id": "acwm_locations",
+    "url": "https://acwm.org/visit/our-locations/"
+  },
+  {
+    "id": "acwm_about",
+    "url": "https://acwm.org/about/"
+  },
+  {
+    "id": "acwm_contact",
+    "url": "https://acwm.org/about/our-people/contact-us/"
+  },
+  {
+    "id": "gettysburg_home",
+    "url": "https://www.gettysburgmuseum.com/"
+  },
+  {
+    "id": "gettysburg_visit",
+    "url": "https://www.gettysburgmuseum.com/visit.html"
+  },
+  {
+    "id": "medal_tn_history",
+    "url": "https://www.mohhc.org/center-history/"
+  },
+  {
+    "id": "police_board",
+    "url": "https://www.internationalpolicemuseum.org/board.php"
+  },
+  {
+    "id": "police_news",
+    "url": "https://www.internationalpolicemuseum.org/news.php"
+  },
+  {
+    "id": "seneca_about",
+    "url": "https://senecamuseum.org/about/"
+  },
+  {
+    "id": "old_world_foundation",
+    "url": "https://oldworldfoundation.org/about-owf.html"
+  },
+  {
+    "id": "folk_new_home",
+    "url": "https://www.moifa.org/"
+  },
+  {
+    "id": "nmai_ny",
+    "url": "https://americanindian.si.edu/visit/ny"
+  },
+  {
+    "id": "nmai_about",
+    "url": "https://americanindian.si.edu/about"
+  },
+  {
+    "id": "si_nmai_ny",
+    "url": "https://www.si.edu/museums/american-indian-museum-heye-center"
+  },
+  {
+    "id": "si_nmai_dc",
+    "url": "https://www.si.edu/museums/american-indian-museum"
+  },
+  {
+    "id": "si_nmaahc",
+    "url": "https://www.si.edu/museums/african-american-museum"
+  },
+  {
+    "id": "amnh_about",
+    "url": "https://www.amnh.org/about"
+  },
+  {
+    "id": "seneca_plan",
+    "url": "https://sni.org/app/uploads/2021/08/6-2024-SNI-LRTP-_-FINAL-w-Appendices.pdf",
+    "extension": "pdf"
+  }
+]

@@ -1,0 +1,29 @@
+check,passed
+Automatic baseline unchanged,TRUE
+Baseline multisite queue unchanged,TRUE
+All source rows and normalized fields preserved,TRUE
+Guarded identity replay matches pipeline,TRUE
+Preferred-name analysis matches replay,TRUE
+Reviewed Parquet matches pipeline,TRUE
+Baseline Parquet unchanged,TRUE
+1667 earlier evidence files and human labels preserved,TRUE
+Identity rows outside new cases unchanged,TRUE
+Prior identity decisions unchanged,TRUE
+Threshold remains 0.85,TRUE
+Counts match reviewed dry run,TRUE
+396 identity rows in 168 cases,TRUE
+166 complete reviews 24 exclusions 100 names,TRUE
+33 source-conflict holds retained uncounted,TRUE
+Ten accepted case groups count one source representative each,TRUE
+All 23 factual decisions represented in analysis,TRUE
+Eight complete and fifteen pending without new exclusions,TRUE
+Mixed rows isolated and New Jersey alias removed from Indiana,TRUE
+Clean Jewish museum pair excludes mixed Iowa membership,TRUE
+Five Rocktown descriptions retain one current canonical,TRUE
+Unresolved Arkansas 403 and 601 descriptions remain separate pending,TRUE
+Three specifically sourced chain affiliations retained,TRUE
+Connecticut society and museum remain separate pending,TRUE
+Every prior factual decision preserved,TRUE
+National leader still fails explicit publication gate,TRUE
+All 21 starting candidates have recorded dispositions,TRUE
+Fifteen incomplete reviews remain explicitly pending,TRUE

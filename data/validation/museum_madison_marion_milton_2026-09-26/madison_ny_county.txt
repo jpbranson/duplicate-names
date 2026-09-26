@@ -1,0 +1,875 @@
+PAGE 1
+Map Prepared by the Madison County Planning Department
+8
+4
+6
+3
+5
+1
+2
+9
+16
+10
+14
+2013
+12
+11
+55
+80
+31
+78
+73
+54
+62
+99
+88
+50
+61
+64
+71
+3
+37
+29
+43
+32
+67
+101
+58
+5
+6
+69
+24
+7
+57
+34
+49
+68
+17
+30
+89
+52
+41
+60
+23
+42
+33
+1
+45
+91
+28
+39
+14
+72
+26
+83
+65
+66
+20
+95
+21
+18
+25
+74
+4
+53
+19
+8
+11
+85
+10
+35
+13
+40
+77
+105
+48
+81
+70
+100
+76
+87
+46
+75
+102
+93
+86
+47
+2792
+107
+36
+16
+12
+103
+44
+106
+2
+97
+90
+22
+15
+38
+98
+84
+108
+56
+96
+71
+76
+1
+97
+41
+83
+99
+52
+34
+83
+1
+1
+35
+6
+103
+20
+20
+26
+12
+46
+13
+8
+80
+5
+92
+31
+12B
+20
+135
+80
+90
+RIVER RD
+OXBOW RD
+COLE ST
+LEBANON RD
+CREEK RD
+E LAKE RD
+ERIEVILLE RD
+BUYEA RD
+CODY RD
+MIDDLE RD
+EAST RD
+FYLER RD
+N MAIN ST
+PRATTS RD
+LAKEPORT RD
+PETERBORO RD
+DAMON RD
+NELSON RD
+SWAMP RD
+S LEBANON RD
+DUGWAY RD
+LARKIN RD
+CRUMB HILL RD
+FEARON RD
+PERRYVILLE RD
+QUARRY RD
+EATON RD
+NEW BOSTON RD
+WILLIAMS RD
+CANAL RD
+COTTONS RD
+EATON BROOK RD
+FENNER RD
+VALLEY RD
+QUARTERLINE RD
+CENTER RD
+S HAMILTON RD
+UPHAM RD CAMPBELL RD
+OULEOUT RD
+SMITH RD
+BEAVER CREEK RD
+N COURT ST
+BRADLEY BROOK RD
+LEWIS POINT RD
+FALLS RD
+TUSCARORA RD
+MT HOPE AVE
+DELPHI RD
+ROCKS RD
+FAIRVIEW AVE
+BINGLEY RD
+BURLESON RD
+W LAKE RD
+GORTON RD
+EARLVILLE RD
+CHESTNUT RIDGE RD
+HARDSCRABBLE RD
+W ELM ST
+PLEASANT VALLEY RD
+HAMILTON RD
+PETH RD
+MOSCOW RD
+CLOCKVILLE RD
+E HILL RD
+NORTH RD
+STOCKBRIDGE FLS
+INGALLS CORNERS RD
+SKANEATELES TPKE
+MIDDLE LAKE RD
+AUGUSTA RD
+RODMAN RD
+LYNCH RD
+MAIN ST
+UNION ST
+POMPEY HOLLOW RD
+MILL RD
+RESERVOIR RD
+SCHOOLHEIMER RD
+POOLVILLE RD
+STRATFORD ST
+COBB ST
+ONEIDA VALLEY RD
+GREEN RD
+EATON ST
+CANAL ST
+CARDNER RD
+E HILL RD
+OULEOUT RD
+SKANEATELES TPKE
+BEAVER CREEK RD
+SWAMP RD
+W LAKE RD
+CANAL RD
+E LAKE RD
+CANAL RD
+E LAKE RD
+POOLVILLE RD
+RIDGE RD
+GEE RD
+GILES RD
+NELSON RD
+TAG RD
+FISK RD
+OLD STATE RD
+ACADEMY RD
+DITCH BANK RD
+HILL RD
+CAREY RD
+VIDLER RD
+CARPENTER RD
+HALL RD
+S BUTLER RD
+LARKIN RD
+ENGLISH AVE
+GEER RD
+HARP RD
+FAIRGROUND RD
+GORTON LAKE RD
+PETERBORO RD
+SOULE RD
+WYSS RD
+BROWN RD
+WATER ST
+HUGHES RD
+MULLER HILL RD
+FOREST AVE
+SEEBER RD
+KINNEY RD
+CHAPMAN RD
+PRESTON HILL RD
+LYON RD
+BOLIVAR RD
+FITCH RD
+HART RD
+CREEK RD
+COLE RD
+MORROW RD
+BONNEY RD
+W HILL RD
+OLD COUNTY RD S
+HUMPHREY RD
+BLACK CREEK RD
+BAILEY RD
+VOSBURG RD BORDEN RD
+SMITH RIDGE RD
+DUBLIN RD
+MINER RD
+WHITMAN RD
+EATON RD
+E MILESTRIP RD
+DAVENPORT RD
+W MILESTRIP RD
+COOK RD
+JUDD RD
+CHAPPEL RD
+LINCKLAEN RD
+BRUCE RD
+LAMB RD
+BUYEA RD
+FAIRBANKS RD
+BROOKS RD
+WHITELAW RD
+STONE BRIDGE RD
+DYKE RD
+TUTTLE RD
+DOYLE RD
+BALLINA RD
+HOXIE RD
+PICKETT RD
+YORK RD
+PARKER HILL RD
+BRIGGS RD
+CHAPIN RD
+SULLIVAN RD
+E LAKE RD
+RICH RD
+CAMP RD
+HOLLOW RD
+GILL RD
+TRUCK TRAIL 13
+EDDY RD
+FORBES RD
+RESERVOIR RD
+W LAKE RD
+NILES RD
+OLD COUNTY RD
+MOSLEY RD
+ROBERTS RD
+HUEY RD
+WARNERS RD
+HORTON RD
+STILLMAN RD
+FRANCIS RD
+BILLINGS HILL RD
+RATHBUN RD
+BIRD RD
+QUAKER HILL RD
+E TRUCK TRAIL 4
+CRUMB RD
+SANDERSON RD
+PINE RIDGE RD
+MORRIS RD
+BISHOP RD
+KEITH RD
+CARTER RD
+THAYER RD
+BONNEY HILL RD
+N BUTLER RD
+THOMAS RD
+MOORE RD
+PARADISE HILL RD
+COLE HILL RD
+STANLEY RD
+TUCKER RD
+BARTLETT RD
+EAST RD
+MAXON RD
+TRUCK TRAIL 1
+CROW HILL RD
+BARLOW ST
+EVANS RD
+CALLAHAN RD
+FALLS RD
+STONE RD
+JANTZEN RD
+MUTTON HILL RD
+FIRE TOWER RD
+BURLINGAME RD
+GOFF RD
+RAY RD
+BURCH RD
+TILLER RD
+DEVAUL RD
+COLGROVE RD
+DEEP SPRINGS RD
+STONE ST
+KELLY RD
+WHITFORD RD
+STREETER RD
+DEVINE RD
+CANASERAGA RD
+ARNOLD RD
+STEPHENS RD
+PETRIE RD
+HOLMES RD
+FURMAN MILL RD
+SOUTH RD
+BARRETT RD
+MAPLE RD
+PRIVATE RD
+MICHIGAN RD
+JOHNNYCAKE HILL RD
+BALDWIN RD
+CORKINSVILLE RD
+KELLEY RD
+LEACH RD
+SHEPHARDS RD
+SANFORD RD
+STANTON RD
+WESTCOTT RD
+MUSICIAN RD
+THOMPSON RD
+EMHOFF RD
+FITCH ST
+DAVIS RD
+LANE RD
+HATCH LAKE RD
+MCCLELLAN RD
+DUGWAY RD
+ADAMS RD
+BRONDER HOLLOW RD
+CLARK RD
+TRUCK TRAIL 8
+WOOD RD
+FREEMAN RD
+COLLINS RD
+TINSLEY HILL RD
+CHAMBERLAIN RD
+BARNARD RD
+PUTNAM RD
+PARKER RD
+DRIVEWAY
+BUNDY RD
+CHESEBRO RD
+LANDON RDPLEASANT RD
+JENNINGS RD
+TEXAS HILL RD
+HOWLETT RD
+SMITH RD
+KINDERHOOK RD
+VROLYK RD
+MCCORMICK RD
+SHERMAN RD
+W ELM ST
+WICKWIRE RD
+STATE ST
+BISBEE RD
+INDIAN OPENING RD
+CHAPHE HILL RD
+MASON RD
+WATSON RD
+CHURCH RD
+WILLIAMS RD
+OSBORNE RD
+HIBBARD RD
+STONE QUARRY RD
+WILCOX RD W
+CHARD RD
+KIETH RD
+STANBRO RD
+ALDERMAN RD
+GRAND ST
+BASTIAN RD
+HODGE RD
+HARSH RD
+JONES RD
+NEWTON RD
+MYERS RD
+LANDERS RD
+AVERY RD
+PAGE RD
+GLASS FACTORY RD
+BROWNELL RD
+IRISH HILL RD
+OLMSTEAD RD
+NORTHRUP RD
+WEAVER RD
+CLOCK RD
+SPRING ST
+MCGRAW RD
+SAYLES ST
+SWAMP SCHOOL RD
+TORPY POND RD
+PECKS RD
+KILEY RD
+CARRYS HILL RD
+KNIGHT RD
+RYAN RD
+MORSE RD
+WATERMAN RD
+MAYERLE RD
+LARSON RD
+DAVIS HILL RD
+THURBER RD
+LEWIS RD
+BUSH RD
+GULCH RD
+BEHN RD
+TRUCK TRAIL 14
+TRUCK TRAIL 7
+RICHARDS RD
+SNELL RD
+S HILL RD
+MERRILL RD
+OAK LN
+MORGAN RD
+HASLAUER RD
+ROBINSON HILL RD
+WISE RD
+OLD ROUTE 5
+LORD RD
+BOSWORTH RD
+GREEN RD
+KLOCK RD
+HARRIS RD
+LAKE RD
+COE RD
+NOBLE RD
+S QUARRY RD
+BARR RD
+STRAIN RD N
+RIPPLETON CROSS RD
+STOCKBRIDGE HILL RD
+MAY RD
+ABES WAY
+RITZ RD
+HERTEL RD
+ROHER RD
+HUBBARD PLWHITE BRIDGE RD
+TRUCK TRAIL 2
+WILLOWVALE RD
+BARNES RD
+2ND ST
+BASS RD
+WOODLAND RD
+CLARK RD NE
+MOSHER RD
+BETTS RD
+STOWELL RD
+WHELER DR
+GRASSY LANE RD
+STURM RD
+THOMPSON HILL RD
+FUESS RD
+LEWIS ST
+EAVES RD
+LADD RD
+WILCOX RD
+GRAGO BLVD
+CEDAR ST
+OLD ROUTE 13
+FOX HILL RD
+FROST RD
+HILLCREST RD
+PINE ST
+WEBBER DR
+KEEFE RD
+ROXBURY RD
+LAMOY RD
+FUNK RD MORTON RD
+HURD ST
+HOFFMAN LN
+SEEBER RD N
+BURDICK RD
+OLD CO67
+BEST RD
+ELLIS RD
+BACH DR
+DENNY RD
+PADDOCK RD
+WHEELER RD
+STONY POND RD
+CLAY HILL RD
+WILLIAMS ST
+OLD COUNTY RD
+PRIVATE RD
+EATON RD
+DRIVEWAY
+JONES RD
+WILLIAMS RD
+SMITH RD
+HALL RD
+CAMP RD
+DRIVEWAY
+STANTON RD
+BROWN RD
+DAVIS RD
+KILEY RD
+ROBERTS RD
+BIRD RD
+HILL RD
+MOORE RD
+CLARK RD
+EDDY RD
+BROWN RD
+HOLMES RD
+JONES RD
+EVANS RD
+CHAPMAN RD
+HILL RD
+DRIVEWAY
+CLARK RD
+DRIVEWAY
+STONE QUARRY RD
+SMITH RD
+SMITH RD
+W LAKE RD
+DRIVEWAY
+RESERVOIR RD
+DAVIS RD
+HOLMES RD
+Sheds
+Eaton
+Alene
+Nelson
+Siloam
+Lebanon
+Ballina
+Bingley
+Cottons
+Bolivar
+Whitelaw
+Lakeport
+Hunt Hill
+Poolville
+Ritz Hill
+Cole Hill
+Juddville
+Cobb Hill
+Rippleton
+Oniontown
+South Bay
+Oniontown
+South Hill
+Crumb Hill
+Georgetown
+Texas Hill
+Clark Hill
+Guideboard
+Pine Woods
+Eaton Hill
+Clockville
+Allis Hill
+Kawana Bay
+Perryville
+Briggs Bay
+Fisher Bay
+Kinney Hill
+Muller Hill
+Grassy Hill
+Moscow Hill
+Witter Hill
+Bonney Hill
+Pierceville
+Mutton Hill
+Lewis Point
+East Boston
+Damon Point
+Five Corners
+Jackass Hill
+Cody Corners
+Russ Corners
+Valley Mills
+Cranson Hill
+Quality Hill
+Peck Corners
+Gees Corners
+Wilson Point
+South Lebanon
+Randallsville
+Darts Corners
+West Edmeston
+Robinson Hill
+Eaton Station
+Pratts Hollow
+Gills Corners
+Davis CornersHughs Corners
+Pughs Corners
+Tinselor Hill
+Merrillsville
+Oneida Valley
+Union Corners
+Messenger Bay
+Weaver Corner
+Eaton Corners
+Larkins Point
+Kenyon Corners
+Loomis Corners
+Madison Center
+Sigsby Corners
+Whites Corners
+Delphi Station
+Atwell Corners
+Billington Bay
+Hamilton Center
+Roberts Corners
+Eisamen Corners
+Bridges Corners
+Walkers Corners
+Sulphur Springs
+Dutchman Island
+Hitchcock Point
+South Brookfield
+North Brookfield
+Scribner Corners
+Lillies Pinnacle
+Quaker Settlement
+Georgetown Station
+Christianson Corners
+Five Chimneys Corner
+SULLIVAN
+EATON
+BROOKFIELD
+NELSON
+LENOX
+LEBANON
+CAZENOVIA MADISON
+FENNER
+HAMILTON
+GEORGETOWN
+ONEIDA
+DE RUYTER
+LINCOLN
+STOCKBRIDGE
+SMITHFIELD
+173
+5
+MUNNSVILLE
+CAZENOVIA
+CHITTENANGO
+CANASTOTA
+W AMPSVILLE
+19
+18
+17
+15
+DERUYTER
+MORRISVILLE MADISON
+20
+HAMIL TON
+History Trail Locations: 
+1. Cottage Lawn 
+2. Oneida Community Mansion House 
+3. Fryer Memorial Museum 
+4. Chenango Canal Cottage 
+5. Town of Madison Historical Society 
+6. Brookfield Museum and Giles School 
+7. Q uincy Square Museum 
+8. Eaton’s O ld Town Museum 
+9. Georgetown Historical Society Museum 
+10.  DeRuyter Museum 
+11.  New Woodstock Regional  
+        Historical Society Museum 
+12.  Lorenzo State Historic Site 
+13.  Erieville-Nelson Heritage Society 
+14.  Fenner Baptist (Community) Church 
+15.  Chittenango Landing Canal Boat Museum 
+16.  Canastota Canal Town Museum 
+17.  Peterboro Area Museum 
+18.  Peter Smith Land O ffice 
+19.  Smithfield Community Center 
+20.  Engine House 
+Legend
+History Trail
+Roads
+Road Type
+US Highway
+Interstate
+State Highway
+County Highway
+Local Road
+Waterbodies
+Madison County History TrailMadison County History Trail
+www.madisontourism.com
+1-(800) 684-73200 3 6 91.5
+Miles
+Photos Courtesy of the 
+Madison County Historical Society
+EARLVILLE
+2006 Madison County 
+Bicentennial Heritage 
+Trails Project
+2006 Madison County 
+Bicentennial Heritage 
+Trails Project
+Madison County History TrailMadison County History Trail
+Centennial in Oneida
+7
+and Towpath Trail
+Madison County Historical Society at Cottage Lawn
+
+PAGE 2
+Madison Historical Society  
+at Cottage Lawn 
+435 Main St. 
+Oneida 
+Oneida Community Mansion House 
+170 Kenwood Ave. 
+Oneida 
+Fryer Memorial Museum 
+Corner of Williams Road and Route 46 
+Munnsville 
+Chenango Canal Cottage  
+and Towpath Trail 
+Corner of Route 20 and Canal Road 
+Bouckville 
+Town of Madison Historical Society 
+3606 South St. 
+Madison 
+Brookfield Museum and Giles School 
+10556 Skaneateles Turnpike Road 
+Brookfield 
+Quincy Square Museum 
+23 E. Main St. 
+Earlville 
+Eaton’s Old Town Museum 
+2776 River Road 
+Eaton 
+Georgetown Historical  
+Society Museum 
+Muller Hill Road, intersection of Routes 26 and 80 
+Georgetown 
+DeRuyter Museum 
+712 Utica St. 
+DeRuyter 
+New Woodstock Regional  
+Historical Society Museum  
+2641 Railroad St. 
+New Woodstock 
+Lorenzo State Historic Site 
+17 Rippleton Road 
+Cazenovia 
+Erieville-Nelson Heritage Society  
+Town of Nelson Office Building 
+4085 Nelson Road 
+Cazenovia 
+Chittenango Landing  
+Canal Boat Museum 
+7010 Lakeport Road 
+Chittenango 
+Canastota Canal Town Museum 
+122 N. Canal St. 
+Canastota 
+Peterboro Area Museum 
+4608 Peterboro Road 
+Peterboro 
+Peter Smith Land Office  
+Gerrit Smith Estate National Historic Landmark 
+4543 Peterboro Road 
+Peterboro 
+Smithfield Community Center 
+5255 Pleasant Valley Road 
+Peterboro 
+Engine House 
+93 E. Main St. 
+Morrisville 
+1 
+2 
+3 
+4 
+5 
+6 
+7 
+8 
+9 
+10 
+11 
+12 
+13 
+15 
+16 
+17 
+18 
+19 
+20 
+14 
+Fenner Baptist (Community) Church 
+3122 Bingley Road 
+Cazenovia 

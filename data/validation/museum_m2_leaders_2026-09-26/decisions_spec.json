@@ -1,0 +1,823 @@
+{
+  "evidence": {
+    "ACWM_TREDEGAR": {
+      "url": "https://acwm.org/about/",
+      "note": "Operator identifies three separate visitor sites and its EIN 464685540; IRS connects the same legal museum to 490 Tredegar. Consolidate the physical 480 Tredegar and IMLS administrative/mail 490 Tredegar descriptions of its flagship campus. Common operation with Appomattox and the White House is explicit. The 2013 predecessor merger and 2019 opening do not by themselves assign the extra 470 Tredegar, 1501 E Franklin and 1201 E Clay source records; these remain outside this correction. Evidence packet: data/validation/museum_m2_leaders_2026-09-26. Source names and coordinates retained; visitor points require separate publication checks."
+    },
+    "ACWM_APPOMATTOX": {
+      "url": "https://acwm.org/visit/our-locations/",
+      "note": "Operator expressly maintains its Appomattox museum as a separate location from its two Richmond sites; source street, website and phone match. Record common parent while keeping this campus separate. Current operator exhibitions and visit information establish museum scope. Evidence packet: data/validation/museum_m2_leaders_2026-09-26. Source names and coordinates retained; visitor points require separate publication checks."
+    },
+    "GETTYSBURG": {
+      "url": "https://www.gettysburgmuseum.com/about.html",
+      "note": "The operator explicitly traces the American Civil War Wax Museum (1962-2013) to the Gettysburg Heritage Center at 297 Steinwehr, matching the existing two-row baseline group and phone. Apply the current public name. Its nonprofit relationship with Gettysburg Nature Alliance and separate learning barn needs counting/governance clarification before completing the factual review; no relationship to the Virginia operator is inferred. Evidence packet: data/validation/museum_m2_leaders_2026-09-26. Source names and coordinates retained; visitor points require separate publication checks."
+    },
+    "AMNH_MAIN": {
+      "url": "https://www.amnh.org/plan-your-visit",
+      "note": "Official visitor page gives 200 Central Park West, postal code 10024 and phone 2127695100. IMLS Central Park West at 79th is the same campus. The Queens source combines that exact phone/domain with postal code 10024 parsed into its street and is a displaced duplicate. Reconcile these three descriptions. The 165 E 56th and Planetarium Authority source roles remain unresolved; no governance or complete-review claim is inferred from a famous name. Evidence packet: data/validation/museum_m2_leaders_2026-09-26. Source names and coordinates retained; visitor points require separate publication checks."
+    },
+    "AMNH_56TH": {
+      "url": "https://www.amnh.org/plan-your-visit",
+      "note": "The source repeats the museum domain and main phone at 165 E 56th, while the operator gives Central Park West. No primary explanation of this address was established. Keep separate and pending; matching contact details do not alone establish an office, former site or nonexistent museum. Evidence packet: data/validation/museum_m2_leaders_2026-09-26. Source names and coordinates retained; visitor points require separate publication checks."
+    },
+    "CRYSTAL_MAIN": {
+      "url": "https://crystalbridges.org/news/crystal-bridges-and-the-momentary-announce-key-leadership-appointments-26",
+      "note": "The June 24 2026 operator release identifies 600 Museum Way, confirming the Overture/IMLS pair and current IRS EIN 201359710. It expressly describes the separate Momentary at 507 SE E Street as its extension, supporting common-parent affiliation. Other Bentonville and Springdale descriptions have not been sufficiently bridged; pending status remains. Evidence packet: data/validation/museum_m2_leaders_2026-09-26. Source names and coordinates retained; visitor points require separate publication checks."
+    },
+    "CRYSTAL_CENTRAL": {
+      "url": "https://crystalbridges.org/news/crystal-bridges-and-the-momentary-announce-key-leadership-appointments-26",
+      "note": "Current operator confirms its 600 Museum Way campus and Momentary extension, but does not resolve this 125 W Central Avenue source. Historical Massey-building and ticket-directory references remain research leads. Preserve this record separately with unknown affiliation and pending identity; do not assume the name or proximity proves a duplicate. Evidence packet: data/validation/museum_m2_leaders_2026-09-26. Source names and coordinates retained; visitor points require separate publication checks."
+    },
+    "CRYSTAL_J": {
+      "url": "https://crystalbridges.org/news/crystal-bridges-and-the-momentary-announce-key-leadership-appointments-26",
+      "note": "Current operator confirms its 600 Museum Way campus and Momentary extension, but does not resolve this 799 NE J Street source. Historical Massey-building and ticket-directory references remain research leads. Preserve this record separately with unknown affiliation and pending identity; do not assume the name or proximity proves a duplicate. Evidence packet: data/validation/museum_m2_leaders_2026-09-26. Source names and coordinates retained; visitor points require separate publication checks."
+    },
+    "POLICE_OR": {
+      "url": "https://www.internationalpolicemuseum.org/news.php",
+      "note": "Operator news and board pages document its current 320 S Highway 101 museum, local nonprofit board, international uniform collection and 2026 activities. Its 2021 newsletter documents relocation from Rockaway to Wheeler, and current news documents return. The dated local visitor-bureau account anchors the former 212 Highway 101 North address. Consolidate old/current records; collaborations and internationally sourced objects do not establish common ownership with other police museums. Evidence packet: data/validation/museum_m2_leaders_2026-09-26. Source names and coordinates retained; visitor points require separate publication checks."
+    },
+    "POLICE_CA": {
+      "url": "https://www.huntingtonparkpd.org/",
+      "note": "Source names the police department domain at 6538 Miles Avenue. Historical civic references support a police collection, but current operation, governance and the IMLS Southern California museum at a Cypress mailing address are not resolved. URL is a research lead. Do not merge with Oregon or Pennsylvania from the shared title. Evidence packet: data/validation/museum_m2_leaders_2026-09-26. Source names and coordinates retained; visitor points require separate publication checks."
+    },
+    "POLICE_PA": {
+      "url": "https://www.internationalpolicemuseum.org/",
+      "note": "IMLS describes EIN 472160188 at 185 Ira Lane, Port Matilda. The Oregon operator website is only a comparison/research lead and supplies no bridge to this Pennsylvania organization. Preserve unknown affiliation and pending museum scope; no exclusion follows from limited web evidence. Evidence packet: data/validation/museum_m2_leaders_2026-09-26. Source names and coordinates retained; visitor points require separate publication checks."
+    },
+    "ARMOR_MAIN": {
+      "url": "https://www.museumofamericanarmor.com/our-mission",
+      "note": "Operator gives 1303 Round Swamp Road and describes its own founder/leadership and museum within Old Bethpage Village Restoration grounds. Two Overture descriptions share that street/domain/phone; IRS EIN 800866399 connects the IMLS Syosset mailing description to that current address. Reconcile three records. County tenancy and partner-museum links do not establish common ownership. The Deer Park outlet source remains unexplained, preventing a complete count review. Evidence packet: data/validation/museum_m2_leaders_2026-09-26. Source names and coordinates retained; visitor points require separate publication checks."
+    },
+    "ARMOR_DEER_PARK": {
+      "url": "https://www.museumofamericanarmor.com/visit-us",
+      "note": "The source has a Tanger outlet brand URL and 152 Via Napoli address unlike the operator visitor address. No primary record established whether this was a temporary exhibition, retail presence or mixed listing. Keep separate and pending; do not exclude from the street or failed historical search alone. Evidence packet: data/validation/museum_m2_leaders_2026-09-26. Source names and coordinates retained; visitor points require separate publication checks."
+    },
+    "FOLK_MAIN": {
+      "url": "https://www.moifa.org/about/contact-us.html",
+      "note": "The operator confirms its museum at 706 Camino Lejo and identifies itself as a New Mexico Department of Cultural Affairs division. This reconciles the exact physical Overture and IMLS physical/mail descriptions. The department operates multiple museums. The 228 E Palace and 4491 Cerrillos sources still need provenance; this review remains pending. Evidence packet: data/validation/museum_m2_leaders_2026-09-26. Source names and coordinates retained; visitor points require separate publication checks."
+    },
+    "FOLK_PALACE": {
+      "url": "https://www.moifa.org/about/contact-us.html",
+      "note": "Current operator contact does not explain the 228 E Palace source. Historical state arts-office references remain leads, not a verified institutional bridge. Preserve separate identity and unknown affiliation. Evidence packet: data/validation/museum_m2_leaders_2026-09-26. Source names and coordinates retained; visitor points require separate publication checks."
+    },
+    "FOLK_CERRILLOS": {
+      "url": "https://www.lea.nm.gov/law-enforcement-certification-board/board-meetings/",
+      "note": "Current state notices identify the Law Enforcement Academy at 4491 Cerrillos, while this source names the folk-art museum and its domain. This is a concrete address discrepancy, but does not by itself prove an impossible museum administrative role or identify a replacement. Preserve the source separately pending provenance; do not silently correct its location. Evidence packet: data/validation/museum_m2_leaders_2026-09-26. Source names and coordinates retained; visitor points require separate publication checks."
+    },
+    "MEDAL_TN": {
+      "url": "https://www.mohhc.org/center-history/",
+      "note": "Operator history explicitly traces the 1987 foundation, 2003-2019 Northgate Mall gallery and February 2020 opening at Aquarium Plaza with the current Coolidge name. Its footer retains PO Box 11467 and 4238772525. IRS EIN 581739072 bridges IMLS to 2 W Aquarium Way. Consolidate the current site and two former mall descriptions, with current public name. The 400 Georgia source and a TN storage/SC foundation mixed baseline cluster require further review, so factual completion remains pending. Do not merge the distinct Texas institution. Evidence packet: data/validation/museum_m2_leaders_2026-09-26. Source names and coordinates retained; visitor points require separate publication checks."
+    },
+    "MEDAL_TN_GEORGIA": {
+      "url": "https://www.mohhc.org/center-history/",
+      "note": "Operator history describes rented city space before Northgate but does not give 400 Georgia Avenue. The source has no operator URL and a different phone. Retain separate pending identity rather than treating a plausible courthouse address as an established former site. Evidence packet: data/validation/museum_m2_leaders_2026-09-26. Source names and coordinates retained; visitor points require separate publication checks."
+    },
+    "MEDAL_TX": {
+      "url": "https://mohmuseum.org/",
+      "note": "Current operator identifies its Arlington museum and National Medal of Honor Museum Foundation. This is distinct from the Chattanooga Coolidge organization. Related Randol Mill and South Carolina foundation descriptions still require complete historical/source-role mapping; the main museum remains pending for count review. Evidence packet: data/validation/museum_m2_leaders_2026-09-26. Source names and coordinates retained; visitor points require separate publication checks."
+    },
+    "NMAAHC_DC": {
+      "url": "https://nmaahc.si.edu/sites/default/files/downloads/nmaahc_digitalarchivesspecialist_package.pdf",
+      "note": "Smithsonian 2021 contract PDF page 6 explicitly distinguishes the public museum at 1400 Constitution from its conservation labs at Capital Gallery, 600 Maryland. Reconcile those and IMLS 8401100014 at 14th/Constitution; mailing_address denotes the supporting administrative/lab description, not a second public museum. The affected baseline member 8401100034 instead names American History, gives Natural History physical street 10th/Constitution, and NMAAHC mail street 1400 Constitution. Isolate it as source_conflict without donating its disputed aliases. Official Natural History contact and American History visitor pages corroborate the conflict. Unanchored DC and mixed Iowa records remain separate pending; this campus review is not complete. Evidence packet: data/validation/museum_m2_leaders_2026-09-26. Source names and coordinates retained; visitor points require separate publication checks."
+    },
+    "NMAAHC_IA": {
+      "url": "https://blackiowa.org/event/prayer-pop-up-presented-by-renee-bryant-moore-shavon-webb/",
+      "note": "The IMLS row mixes the DC museum title with Cedar Rapids 55 12th Avenue SE and blackiowa.org, plus a Waterloo mailing/ZIP/legal context. The Iowa operator confirms its distinct Cedar Rapids museum at that physical street; Smithsonian evidence places NMAAHC in Washington. Isolate this internally contradictory row as source_conflict, without choosing an Iowa or DC institution or transferring disputed aliases. Original fields remain auditable. Evidence packet: data/validation/museum_m2_leaders_2026-09-26. Source names and coordinates retained; visitor points require separate publication checks."
+    },
+    "NMAAHC_UNANCHORED": {
+      "url": "https://nmaahc.si.edu/",
+      "note": "Overture has the museum title and a DC point but no street, website or phone. The current museum website is a comparison lead, not a bridge proving this source identity. Preserve unknown affiliation and a separate pending record. Evidence packet: data/validation/museum_m2_leaders_2026-09-26. Source names and coordinates retained; visitor points require separate publication checks."
+    },
+    "NMAI_NY": {
+      "url": "https://americanindian.si.edu/about/contact",
+      "note": "Official NMAI contact identifies the New York museum at One Bowling Green. Existing Overture/IMLS pair and the two generic Smithsonian Overture records all give that address; both generic records have the exact NMAI phone 2125143700. Reconcile all four under the named museum, preserving their generic names as provenance. Retire only the two superseded pending decisions on absorbed generic rows; their originals remain archived. Keep New York distinct from Washington under Smithsonian affiliation. The West 136th historical-name source is unresolved. Evidence packet: data/validation/museum_m2_leaders_2026-09-26. Source names and coordinates retained; visitor points require separate publication checks."
+    },
+    "NMAI_DC": {
+      "url": "https://americanindian.si.edu/about/contact",
+      "note": "Official contact places the Washington museum at Fourth Street and Independence Avenue SW. Reconcile the two named Overture descriptions and IMLS mailing description at that intersection. Keep the separate New York campus. Generic 300 Maryland NE, unanchored and Potomac Atrium source roles still require review, so factual status remains pending. Evidence packet: data/validation/museum_m2_leaders_2026-09-26. Source names and coordinates retained; visitor points require separate publication checks."
+    },
+    "NMAI_MARYLAND": {
+      "url": "https://americanindian.si.edu/about/contact",
+      "note": "The source gives 300 Maryland Avenue NE and a phone unlike the official Fourth/Independence SW museum. A related generic Smithsonian description repeats that questionable address. Keep separate and pending; quadrant substitution is not a verified correction. Evidence packet: data/validation/museum_m2_leaders_2026-09-26. Source names and coordinates retained; visitor points require separate publication checks."
+    },
+    "OLD_WORLD_MAIN": {
+      "url": "https://oldworldwisconsin.wisconsinhistory.org/plan/",
+      "note": "Operator gives the main gate at W372 S9727 Highway 67, exactly the reordered address in both Overture descriptions; domain and phone also match. Consolidate one public campus with integrated historic buildings. Wisconsin Historical Society explicitly operates this and other historic sites/museums. The independent fundraising foundation is a separate legal support organization, excluded in its own case. Source points are not validated entrances. Evidence packet: data/validation/museum_m2_leaders_2026-09-26. Source names and coordinates retained; visitor points require separate publication checks."
+    },
+    "OLD_WORLD_FOUNDATION": {
+      "url": "https://oldworldfoundation.org/about-owf.html",
+      "note": "The foundation explicitly defines its purpose as fundraising for Old World Wisconsin and documents Friends of Old World Wisconsin becoming Old World Wisconsin Foundation in 2005. Both IMLS descriptions have EIN 391484170; the 123 E Main Overture source uses friendsoww.org, matching the IMLS Friends street and operator email/domain. Consolidate these support-office descriptions separately from the state museum and apply not_museum on positive mission evidence. Current IRS PO Box 347 Elkhorn confirms legal/mail continuity; a mailbox alone is not the exclusion basis. Evidence packet: data/validation/museum_m2_leaders_2026-09-26. Source names and coordinates retained; visitor points require separate publication checks."
+    },
+    "SENECA_MAIN": {
+      "url": "https://historicpath.com/current-event/new-seneca-iroquois-national-museum-and-cultural-center-opens-salamanca-708",
+      "note": "County historical/tourism page explicitly documents the 2018 move from 814 Broad to 82 Hetzel. Current operator confirms 82 West Hetzel, the same phone/domain in all three Overture descriptions, and Seneca Nation operation. Consolidate the former site and displaced duplicate of the current street. The museum remains Seneca-Iroquois National Museum within On\u00f6hsagw\u00eb:de Cultural Center. IMLS malformed 794 BROAD ST 814 and its EIN remain separately pending; National refers to Seneca governance/heritage and is not a US-wide exclusivity assertion. Evidence packet: data/validation/museum_m2_leaders_2026-09-26. Source names and coordinates retained; visitor points require separate publication checks."
+    },
+    "SENECA_IMLS": {
+      "url": "https://senecamuseum.org/about/",
+      "note": "The source has the museum name but no website and malformed mailing street 794 BROAD ST 814. IRS retains the legal name at PO Box 442, while current operator confirms the Seneca Nation museum at 82 Hetzel. This suggests continuity but does not settle the legal/address bridge; retain separate pending rather than assigning the EIN from name alone. Evidence packet: data/validation/museum_m2_leaders_2026-09-26. Source names and coordinates retained; visitor points require separate publication checks."
+    }
+  },
+  "identities": [
+    {
+      "case": "ACWM_TREDEGAR",
+      "case_id": "M2L_ACWM_TREDEGAR",
+      "keys": [
+        "5896d026-7b47-4d34-bdf5-c1fab86e2fce",
+        "8409400035"
+      ],
+      "roles": [
+        "canonical",
+        "mailing_address"
+      ],
+      "groups": [
+        "acwm_tredegar",
+        "acwm_tredegar"
+      ]
+    },
+    {
+      "case": "AMNH_MAIN",
+      "case_id": "M2L_AMNH_MAIN",
+      "keys": [
+        "40b69843-9dcf-4999-b282-3ac22f8be326",
+        "8403601031",
+        "d1eefdd8-1fea-4ef4-a47d-83f8f36cc8aa"
+      ],
+      "roles": [
+        "canonical",
+        "mailing_address",
+        "mislocated"
+      ],
+      "groups": [
+        "amnh_main",
+        "amnh_main",
+        "amnh_main"
+      ]
+    },
+    {
+      "case": "CRYSTAL_MAIN",
+      "case_id": "M2L_CRYSTAL_MAIN",
+      "keys": [
+        "c375ef07-21a1-476b-8531-440740ada170",
+        "8400500059"
+      ],
+      "roles": [
+        "canonical",
+        "mailing_address"
+      ],
+      "groups": [
+        "crystal_main",
+        "crystal_main"
+      ]
+    },
+    {
+      "case": "POLICE_OR",
+      "case_id": "M2L_POLICE_OR",
+      "keys": [
+        "9764f344-608b-43f4-9594-9da80924d841",
+        "1e12492f-a2e5-4346-9140-00d6a2bf8e82"
+      ],
+      "roles": [
+        "canonical",
+        "former_site"
+      ],
+      "groups": [
+        "police_or",
+        "police_or_former"
+      ]
+    },
+    {
+      "case": "ARMOR_MAIN",
+      "case_id": "M2L_ARMOR_MAIN",
+      "keys": [
+        "35d7aa94-1126-4fcf-a830-346bee284d98",
+        "e3a3b2f1-b2aa-49ab-b8df-2c13be3246d3",
+        "8403602395"
+      ],
+      "roles": [
+        "canonical",
+        "same_site",
+        "mailing_address"
+      ],
+      "groups": [
+        "armor_main",
+        "armor_main",
+        "armor_main"
+      ]
+    },
+    {
+      "case": "FOLK_MAIN",
+      "case_id": "M2L_FOLK_MAIN",
+      "keys": [
+        "f8382d17-9daf-43d9-85b8-ec5cd508f89d",
+        "8403500048"
+      ],
+      "roles": [
+        "canonical",
+        "mailing_address"
+      ],
+      "groups": [
+        "folk_main",
+        "folk_main"
+      ]
+    },
+    {
+      "case": "MEDAL_TN",
+      "case_id": "M2L_MEDAL_TN",
+      "keys": [
+        "c831fc8a-8557-48ce-8ef9-c48c62488242",
+        "2a268774-2e72-4b95-b4e8-ce8c65f9bcf4",
+        "8404700315"
+      ],
+      "roles": [
+        "canonical",
+        "former_site",
+        "former_site"
+      ],
+      "groups": [
+        "medal_tn",
+        "medal_tn_former",
+        "medal_tn_former"
+      ]
+    },
+    {
+      "case": "NMAAHC_DC",
+      "case_id": "M2L_NMAAHC_DC",
+      "keys": [
+        "934d4af6-5528-4ae0-8fcf-c71d07cf2396",
+        "3d041735-d991-4766-96c4-ff9d32b32cdd",
+        "8401100014",
+        "8401100034"
+      ],
+      "roles": [
+        "canonical",
+        "mailing_address",
+        "mailing_address",
+        "source_conflict"
+      ],
+      "groups": [
+        "nmaahc_dc",
+        "nmaahc_dc",
+        "nmaahc_dc",
+        "unresolved_source"
+      ]
+    },
+    {
+      "case": "NMAAHC_IA",
+      "case_id": "M2L_NMAAHC_IA",
+      "keys": [
+        "8401900298"
+      ],
+      "roles": [
+        "source_conflict"
+      ],
+      "groups": [
+        "unresolved_source"
+      ]
+    },
+    {
+      "case": "NMAI_NY",
+      "case_id": "M2L_NMAI_NY",
+      "keys": [
+        "d3b9a8fb-582c-4efb-aaf1-8f0ea6971cf4",
+        "8403600198",
+        "62556f95-6f92-49ec-81f1-a2f777bad70e",
+        "42bf97d5-2d95-4162-8347-3101c836b23b"
+      ],
+      "roles": [
+        "canonical",
+        "mailing_address",
+        "same_site",
+        "same_site"
+      ],
+      "groups": [
+        "nmai_ny",
+        "nmai_ny",
+        "nmai_ny",
+        "nmai_ny"
+      ]
+    },
+    {
+      "case": "NMAI_DC",
+      "case_id": "M2L_NMAI_DC",
+      "keys": [
+        "b20537ae-3605-403c-a3a7-c4fff56591bb",
+        "8401100018",
+        "24c80030-7368-4c75-980e-351ccad35dab"
+      ],
+      "roles": [
+        "canonical",
+        "mailing_address",
+        "same_site"
+      ],
+      "groups": [
+        "nmai_dc",
+        "nmai_dc",
+        "nmai_dc"
+      ]
+    },
+    {
+      "case": "OLD_WORLD_MAIN",
+      "case_id": "M2L_OLD_WORLD_MAIN",
+      "keys": [
+        "762ef431-3c3d-499a-b7da-4fe5131c8500",
+        "21766b18-4cb9-4740-896d-a178b163aae2"
+      ],
+      "roles": [
+        "canonical",
+        "same_site"
+      ],
+      "groups": [
+        "old_world_main",
+        "old_world_main"
+      ]
+    },
+    {
+      "case": "OLD_WORLD_FOUNDATION",
+      "case_id": "M2L_OLD_WORLD_FOUNDATION",
+      "keys": [
+        "8405500038",
+        "8405500468",
+        "0f3703e4-e5ed-4095-a4c7-61c9bf961d19"
+      ],
+      "roles": [
+        "canonical",
+        "mailing_address",
+        "same_site"
+      ],
+      "groups": [
+        "old_world_foundation",
+        "old_world_foundation",
+        "old_world_foundation"
+      ]
+    },
+    {
+      "case": "SENECA_MAIN",
+      "case_id": "M2L_SENECA_MAIN",
+      "keys": [
+        "1c98b934-0853-4f45-adc2-0ec3317e42f2",
+        "f3e98e2d-1d1f-4244-a502-0ca4573ecddb",
+        "587398a7-d47f-4f10-a01c-ed8315fb4d10"
+      ],
+      "roles": [
+        "canonical",
+        "mislocated",
+        "former_site"
+      ],
+      "groups": [
+        "seneca_main",
+        "seneca_main",
+        "seneca_main_former"
+      ]
+    }
+  ],
+  "decisions": [
+    {
+      "case": "ACWM_TREDEGAR",
+      "key": "5896d026-7b47-4d34-bdf5-c1fab86e2fce",
+      "aff": "chain",
+      "status": "pending",
+      "chain": "american_civil_war_museum",
+      "category": "not_flagged"
+    },
+    {
+      "case": "ACWM_APPOMATTOX",
+      "key": "c56a48a4-99dd-485f-b7f0-2ba37baab621",
+      "aff": "chain",
+      "status": "verified",
+      "chain": "american_civil_war_museum",
+      "category": "not_flagged"
+    },
+    {
+      "case": "GETTYSBURG",
+      "key": "96c14c5d-61c7-40f4-a2b7-21dc06f52272",
+      "aff": "unknown",
+      "status": "pending",
+      "chain": null,
+      "category": "not_flagged"
+    },
+    {
+      "case": "AMNH_MAIN",
+      "key": "40b69843-9dcf-4999-b282-3ac22f8be326",
+      "aff": "unknown",
+      "status": "pending",
+      "chain": null,
+      "category": "not_flagged"
+    },
+    {
+      "case": "AMNH_56TH",
+      "key": "a0db63be-cb3c-4f99-9cdf-62b885c81909",
+      "aff": "unknown",
+      "status": "pending",
+      "chain": null,
+      "category": "not_flagged"
+    },
+    {
+      "case": "CRYSTAL_MAIN",
+      "key": "c375ef07-21a1-476b-8531-440740ada170",
+      "aff": "chain",
+      "status": "pending",
+      "chain": "crystal_bridges",
+      "category": "not_flagged"
+    },
+    {
+      "case": "CRYSTAL_CENTRAL",
+      "key": "c4d5c7d2-ddd2-4a10-ab0e-98bd0b3c7d0d",
+      "aff": "unknown",
+      "status": "pending",
+      "chain": null,
+      "category": "not_flagged"
+    },
+    {
+      "case": "CRYSTAL_J",
+      "key": "d3fed4a3-cee3-4a01-9a97-5ad3507be3b2",
+      "aff": "unknown",
+      "status": "pending",
+      "chain": null,
+      "category": "not_flagged"
+    },
+    {
+      "case": "POLICE_OR",
+      "key": "9764f344-608b-43f4-9594-9da80924d841",
+      "aff": "independent",
+      "status": "verified",
+      "chain": null,
+      "category": "not_flagged"
+    },
+    {
+      "case": "POLICE_CA",
+      "key": "a8d37192-e77b-4919-8d06-198a3632812a",
+      "aff": "unknown",
+      "status": "pending",
+      "chain": null,
+      "category": "not_flagged"
+    },
+    {
+      "case": "POLICE_PA",
+      "key": "8409400286",
+      "aff": "unknown",
+      "status": "pending",
+      "chain": null,
+      "category": "not_flagged"
+    },
+    {
+      "case": "ARMOR_MAIN",
+      "key": "35d7aa94-1126-4fcf-a830-346bee284d98",
+      "aff": "independent",
+      "status": "pending",
+      "chain": null,
+      "category": "not_flagged"
+    },
+    {
+      "case": "ARMOR_DEER_PARK",
+      "key": "2e090ea3-6df3-429e-a8f5-1c7c818804db",
+      "aff": "unknown",
+      "status": "pending",
+      "chain": null,
+      "category": "not_flagged"
+    },
+    {
+      "case": "FOLK_MAIN",
+      "key": "f8382d17-9daf-43d9-85b8-ec5cd508f89d",
+      "aff": "chain",
+      "status": "pending",
+      "chain": "new_mexico_department_of_cultural_affairs",
+      "category": "not_flagged"
+    },
+    {
+      "case": "FOLK_PALACE",
+      "key": "1e5ea63d-362a-42fa-ac6b-fc594c287e8c",
+      "aff": "unknown",
+      "status": "pending",
+      "chain": null,
+      "category": "not_flagged"
+    },
+    {
+      "case": "FOLK_CERRILLOS",
+      "key": "58991288-b166-429d-9bde-65e23621dff0",
+      "aff": "unknown",
+      "status": "pending",
+      "chain": null,
+      "category": "not_flagged"
+    },
+    {
+      "case": "MEDAL_TN",
+      "key": "c831fc8a-8557-48ce-8ef9-c48c62488242",
+      "aff": "independent",
+      "status": "pending",
+      "chain": null,
+      "category": "not_flagged"
+    },
+    {
+      "case": "MEDAL_TN_GEORGIA",
+      "key": "fe0737a0-acb9-413f-bff4-4aed9fb56e9b",
+      "aff": "unknown",
+      "status": "pending",
+      "chain": null,
+      "category": "not_flagged"
+    },
+    {
+      "case": "MEDAL_TX",
+      "key": "d21868ad-5c53-424e-ab70-2bc4597b300e",
+      "aff": "independent",
+      "status": "pending",
+      "chain": null,
+      "category": "not_flagged"
+    },
+    {
+      "case": "NMAAHC_DC",
+      "key": "934d4af6-5528-4ae0-8fcf-c71d07cf2396",
+      "aff": "chain",
+      "status": "pending",
+      "chain": "smithsonian",
+      "category": "not_flagged"
+    },
+    {
+      "case": "NMAAHC_IA",
+      "key": "8401900298",
+      "aff": "unknown",
+      "status": "pending",
+      "chain": null,
+      "category": "not_flagged"
+    },
+    {
+      "case": "NMAAHC_UNANCHORED",
+      "key": "ed4da2cb-87a5-450d-826e-6114e5f6061a",
+      "aff": "unknown",
+      "status": "pending",
+      "chain": null,
+      "category": "not_flagged"
+    },
+    {
+      "case": "NMAI_NY",
+      "key": "d3b9a8fb-582c-4efb-aaf1-8f0ea6971cf4",
+      "aff": "chain",
+      "status": "pending",
+      "chain": "smithsonian",
+      "category": "not_flagged"
+    },
+    {
+      "case": "NMAI_DC",
+      "key": "b20537ae-3605-403c-a3a7-c4fff56591bb",
+      "aff": "chain",
+      "status": "pending",
+      "chain": "smithsonian",
+      "category": "not_flagged"
+    },
+    {
+      "case": "NMAI_MARYLAND",
+      "key": "c9fcc463-7174-4472-a7d7-276823bf1226",
+      "aff": "unknown",
+      "status": "pending",
+      "chain": null,
+      "category": "not_flagged"
+    },
+    {
+      "case": "OLD_WORLD_MAIN",
+      "key": "762ef431-3c3d-499a-b7da-4fe5131c8500",
+      "aff": "chain",
+      "status": "verified",
+      "chain": "wisconsin_historical_society",
+      "category": "not_flagged"
+    },
+    {
+      "case": "OLD_WORLD_FOUNDATION",
+      "key": "8405500038",
+      "aff": "unknown",
+      "status": "verified",
+      "chain": null,
+      "category": "not_museum"
+    },
+    {
+      "case": "SENECA_MAIN",
+      "key": "1c98b934-0853-4f45-adc2-0ec3317e42f2",
+      "aff": "unknown",
+      "status": "pending",
+      "chain": null,
+      "category": "not_flagged"
+    },
+    {
+      "case": "SENECA_IMLS",
+      "key": "8403600551",
+      "aff": "unknown",
+      "status": "pending",
+      "chain": null,
+      "category": "not_flagged"
+    }
+  ],
+  "names": [
+    {
+      "case": "GETTYSBURG",
+      "key": "96c14c5d-61c7-40f4-a2b7-21dc06f52272",
+      "name": "Gettysburg Heritage Center"
+    },
+    {
+      "case": "MEDAL_TN",
+      "key": "c831fc8a-8557-48ce-8ef9-c48c62488242",
+      "name": "Coolidge National Medal of Honor Heritage Center"
+    }
+  ],
+  "human_review": [
+    {
+      "case": "ACWM_TREDEGAR",
+      "source_id": "5896d026-7b47-4d34-bdf5-c1fab86e2fce",
+      "status": "pending",
+      "action": "Resolve predecessor/office records 470 Tredegar, 1501 E Franklin and 1201 E Clay against the Tredegar campus and separately operated White House; retain distinct public campuses.",
+      "evidence_url": "https://acwm.org/about/"
+    },
+    {
+      "case": "GETTYSBURG",
+      "source_id": "96c14c5d-61c7-40f4-a2b7-21dc06f52272",
+      "status": "pending",
+      "action": "Confirm governance and museum versus education-only role of the separate Sachs Bridge learning barn; verify current visitor point and access.",
+      "evidence_url": "https://www.gettysburgmuseum.com/about.html"
+    },
+    {
+      "case": "AMNH_MAIN",
+      "source_id": "40b69843-9dcf-4999-b282-3ac22f8be326",
+      "status": "pending",
+      "action": "Resolve 165 E 56th Street and Planetarium Authority source roles, confirm governance/count scope, and distinguish COSI collaboration from common museum ownership.",
+      "evidence_url": "https://www.amnh.org/plan-your-visit"
+    },
+    {
+      "case": "AMNH_56TH",
+      "source_id": "a0db63be-cb3c-4f99-9cdf-62b885c81909",
+      "status": "pending",
+      "action": "Obtain primary provenance for 165 E 56th Street before merging, excluding or declaring another AMNH campus.",
+      "evidence_url": "https://www.amnh.org/plan-your-visit"
+    },
+    {
+      "case": "CRYSTAL_MAIN",
+      "source_id": "c375ef07-21a1-476b-8531-440740ada170",
+      "status": "pending",
+      "action": "Resolve 125 W Central, 799 NE J and Springdale source roles using primary address/history evidence; retain the separate Momentary campus and integrated grounds exhibits appropriately.",
+      "evidence_url": "https://crystalbridges.org/news/crystal-bridges-and-the-momentary-announce-key-leadership-appointments-26"
+    },
+    {
+      "case": "CRYSTAL_CENTRAL",
+      "source_id": "c4d5c7d2-ddd2-4a10-ab0e-98bd0b3c7d0d",
+      "status": "pending",
+      "action": "Establish the exact current/former/administrative role of 125 W Central Avenue and its legal/source bridge before changing its count.",
+      "evidence_url": "https://crystalbridges.org/news/crystal-bridges-and-the-momentary-announce-key-leadership-appointments-26"
+    },
+    {
+      "case": "CRYSTAL_J",
+      "source_id": "d3fed4a3-cee3-4a01-9a97-5ad3507be3b2",
+      "status": "pending",
+      "action": "Establish the exact current/former/administrative role of 799 NE J Street and its legal/source bridge before changing its count.",
+      "evidence_url": "https://crystalbridges.org/news/crystal-bridges-and-the-momentary-announce-key-leadership-appointments-26"
+    },
+    {
+      "case": "POLICE_CA",
+      "source_id": "a8d37192-e77b-4919-8d06-198a3632812a",
+      "status": "pending",
+      "action": "Obtain current city/operator evidence for 6538 Miles and bridge IMLS EIN 330816609 at 4603 Rainier Cypress; verify museum operation and governance.",
+      "evidence_url": "https://www.huntingtonparkpd.org/"
+    },
+    {
+      "case": "POLICE_PA",
+      "source_id": "8409400286",
+      "status": "pending",
+      "action": "Establish Pennsylvania EIN 472160188 museum location, collection access and legal operator; do not substitute the Oregon institution.",
+      "evidence_url": "https://www.internationalpolicemuseum.org/"
+    },
+    {
+      "case": "ARMOR_MAIN",
+      "source_id": "35d7aa94-1126-4fcf-a830-346bee284d98",
+      "status": "pending",
+      "action": "Resolve Deer Park 152 Via Napoli outlet/pop-up source and confirm precise museum entrance coordinates separately from campus/source points.",
+      "evidence_url": "https://www.museumofamericanarmor.com/our-mission"
+    },
+    {
+      "case": "ARMOR_DEER_PARK",
+      "source_id": "2e090ea3-6df3-429e-a8f5-1c7c818804db",
+      "status": "pending",
+      "action": "Obtain operator or property-owner documentation of the Deer Park site and its relationship to the Old Bethpage museum.",
+      "evidence_url": "https://www.museumofamericanarmor.com/visit-us"
+    },
+    {
+      "case": "FOLK_MAIN",
+      "source_id": "f8382d17-9daf-43d9-85b8-ec5cd508f89d",
+      "status": "pending",
+      "action": "Resolve the Palace and Cerrillos source roles before certifying museum counts; preserve separate state museums and collection support facilities.",
+      "evidence_url": "https://www.moifa.org/about/contact-us.html"
+    },
+    {
+      "case": "FOLK_PALACE",
+      "source_id": "1e5ea63d-362a-42fa-ac6b-fc594c287e8c",
+      "status": "pending",
+      "action": "Obtain dated primary evidence explaining 228 E Palace and its museum/office role, if any.",
+      "evidence_url": "https://www.moifa.org/about/contact-us.html"
+    },
+    {
+      "case": "FOLK_CERRILLOS",
+      "source_id": "58991288-b166-429d-9bde-65e23621dff0",
+      "status": "pending",
+      "action": "Resolve the museum name/domain versus Law Enforcement Academy street/phone context from original source provenance before merge or source-conflict exclusion.",
+      "evidence_url": "https://www.lea.nm.gov/law-enforcement-certification-board/board-meetings/"
+    },
+    {
+      "case": "MEDAL_TN",
+      "source_id": "c831fc8a-8557-48ce-8ef9-c48c62488242",
+      "status": "pending",
+      "action": "Resolve 400 Georgia and the TN collection-storage/SC foundation baseline cluster. Any split must list every member and preserve the separate Texas/SC operator history.",
+      "evidence_url": "https://www.mohhc.org/center-history/"
+    },
+    {
+      "case": "MEDAL_TN_GEORGIA",
+      "source_id": "fe0737a0-acb9-413f-bff4-4aed9fb56e9b",
+      "status": "pending",
+      "action": "Bridge 400 Georgia Avenue to a dated museum lease/exhibition or other primary record before reconciling it.",
+      "evidence_url": "https://www.mohhc.org/center-history/"
+    },
+    {
+      "case": "MEDAL_TX",
+      "source_id": "d21868ad-5c53-424e-ab70-2bc4597b300e",
+      "status": "pending",
+      "action": "Resolve Arlington Randol Mill administrative description and South Carolina predecessor/foundation records; retain Chattanooga as a distinct legal museum.",
+      "evidence_url": "https://mohmuseum.org/"
+    },
+    {
+      "case": "NMAAHC_DC",
+      "source_id": "934d4af6-5528-4ae0-8fcf-c71d07cf2396",
+      "status": "pending",
+      "action": "Resolve the unanchored DC source and 1733 N Street generic description; seek original provenance for mixed 8401100034. Recheck current visitor access separately.",
+      "evidence_url": "https://nmaahc.si.edu/sites/default/files/downloads/nmaahc_digitalarchivesspecialist_package.pdf"
+    },
+    {
+      "case": "NMAAHC_IA",
+      "source_id": "8401900298",
+      "status": "pending",
+      "action": "Resolve original MUDF provenance and EIN 391880414/Waterloo mail context before assigning this mixed source to any institution.",
+      "evidence_url": "https://blackiowa.org/event/prayer-pop-up-presented-by-renee-bryant-moore-shavon-webb/"
+    },
+    {
+      "case": "NMAAHC_UNANCHORED",
+      "source_id": "ed4da2cb-87a5-450d-826e-6114e5f6061a",
+      "status": "pending",
+      "action": "Recover provider provenance or a reliable location/contact link for the unanchored DC source before merging or excluding.",
+      "evidence_url": "https://nmaahc.si.edu/"
+    },
+    {
+      "case": "NMAI_NY",
+      "source_id": "d3b9a8fb-582c-4efb-aaf1-8f0ea6971cf4",
+      "status": "pending",
+      "action": "Resolve the West 136th Street historical Museum of the American Indian source; verify current visit point independently.",
+      "evidence_url": "https://americanindian.si.edu/about/contact"
+    },
+    {
+      "case": "NMAI_DC",
+      "source_id": "b20537ae-3605-403c-a3a7-c4fff56591bb",
+      "status": "pending",
+      "action": "Resolve 300 Maryland NE, the unanchored NMAI source and Potomac Atrium integrated-venue description before completing the DC count review.",
+      "evidence_url": "https://americanindian.si.edu/about/contact"
+    },
+    {
+      "case": "NMAI_MARYLAND",
+      "source_id": "c9fcc463-7174-4472-a7d7-276823bf1226",
+      "status": "pending",
+      "action": "Obtain provider or official historical evidence for 300 Maryland Avenue NE and the generic Smithsonian counterpart before assigning a museum.",
+      "evidence_url": "https://americanindian.si.edu/about/contact"
+    },
+    {
+      "case": "SENECA_MAIN",
+      "source_id": "1c98b934-0853-4f45-adc2-0ec3317e42f2",
+      "status": "pending",
+      "action": "Bridge IMLS EIN 112490166 and malformed Broad Street mail to current operator; confirm parent museum-count scope before classifying independence or chain.",
+      "evidence_url": "https://historicpath.com/current-event/new-seneca-iroquois-national-museum-and-cultural-center-opens-salamanca-708"
+    },
+    {
+      "case": "SENECA_IMLS",
+      "source_id": "8403600551",
+      "status": "pending",
+      "action": "Obtain original legal/address evidence connecting EIN 112490166, PO Box 442 and 794 BROAD ST 814 to the current Seneca Nation museum.",
+      "evidence_url": "https://senecamuseum.org/about/"
+    },
+    {
+      "case": "CARRIED_AFRICAN_AMERICAN",
+      "source_id": "8405300735",
+      "status": "pending",
+      "action": "Carry forward the exact source/governance question in museum_african_imagination_2026-09-26/human_review.csv; no new evidence resolved it in this batch.",
+      "evidence_url": "https://historictacoma.org/watchlist | https://antoinettebroussard.com/wp-content/uploads/2024/05/columbiamagazinearticle-1.pdf"
+    },
+    {
+      "case": "CARRIED_AFRICAN_AMERICAN",
+      "source_id": "e847cc46-6a72-4405-8916-2ff27f3353ea",
+      "status": "pending",
+      "action": "Carry forward the exact source/governance question in museum_african_imagination_2026-09-26/human_review.csv; no new evidence resolved it in this batch.",
+      "evidence_url": "https://www.visitgalveston.com/directory/african-american-museum/ | https://gamma-pi-lambda.com/james-josey/"
+    },
+    {
+      "case": "CARRIED_AFRICAN_AMERICAN",
+      "source_id": "5213c117-6203-49e7-8d01-da6627b370d9",
+      "status": "pending",
+      "action": "Carry forward the exact source/governance question in museum_african_imagination_2026-09-26/human_review.csv; no new evidence resolved it in this batch.",
+      "evidence_url": "https://stmartinville.gov/attractions/ | https://stmartinville.gov/wp-content/uploads/2025/08/af6bd-8-01-22-minutes.pdf | https://stmartinville.gov/wp-content/uploads/2025/08/fef6e-10-07-24-minutes.pdf | https://stmartinville.gov/wp-content/uploads/2025/08/8cade-6-02-25minutes.pdf | https://stmartinville.gov/weddings/ | https://acadianmemorial.org/area-attractions/"
+    }
+  ],
+  "replace_identity_cases": [],
+  "replace_decision_keys": [],
+  "retire_decision_keys": [
+    "62556f95-6f92-49ec-81f1-a2f777bad70e",
+    "42bf97d5-2d95-4162-8347-3101c836b23b"
+  ]
+}

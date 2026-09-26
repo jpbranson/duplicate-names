@@ -1,0 +1,20 @@
+net_home: cached
+net_locations: cached
+cogsoc_home: cached
+cogsoc_about: HTTP response code said error [cogsoconline.org]: The requested URL returned error: 404
+newhaven_home: cached
+hyattsville_home: Could not resolve hostname [www.cogasochyattsville.com]: Could not resolve host: www.cogasochyattsville.com
+wilmington_home: cached
+wilmington_history: cached
+detroit_home: SSL connect error [detroit.cogasoc.org]: schannel: next InitializeSecurityContext failed: SEC_E_CERT_EXPIRED (0x80090328) - The received certificate has expired.
+detroit_history: SSL connect error [detroit.cogasoc.org]: schannel: next InitializeSecurityContext failed: SEC_E_CERT_EXPIRED (0x80090328) - The received certificate has expired.
+newark_home: SSL connect error [newark.cogasoc.org]: schannel: next InitializeSecurityContext failed: SEC_E_CERT_EXPIRED (0x80090328) - The received certificate has expired.
+newark_history: SSL connect error [newark.cogasoc.org]: schannel: next InitializeSecurityContext failed: SEC_E_CERT_EXPIRED (0x80090328) - The received certificate has expired.
+cincinnati_home: cached
+richmond_home: cached
+jacksonville_home: cached
+baltimore_home: cached
+charlotte_home: cached
+washington_home: cached
+atlanticcity_home: cached
+southernpines_home: cached

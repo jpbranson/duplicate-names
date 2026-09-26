@@ -1,0 +1,30 @@
+﻿$canonical
+[1] 540778
+
+$eligible_before
+[1] 442832
+
+$eligible_after
+[1] 442818
+
+$decisions
+[1] 23
+
+$entities_changed
+[1] 21
+
+$newly_ineligible
+[1] 14
+
+$prior_holds_enriched
+[1] 7
+
+$protected_files
+[1] 2129
+
+$targets_unchanged
+[1] TRUE
+
+$status
+[1] "dry_run_only"
+

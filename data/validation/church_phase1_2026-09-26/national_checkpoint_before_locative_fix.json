@@ -1,0 +1,70 @@
+{
+  "status": "provisional",
+  "raw_records": 1032223,
+  "spine_entities": 540778,
+  "eligible_sites": 442834,
+  "counted_source_rows": 442838,
+  "excluded_entities": 97944,
+  "matching_labels": 300,
+  "classifier_labels": 500,
+  "checks": 17,
+  "cloud_cost_usd": 0,
+  "publication_ready": false,
+  "source_counts": {
+    "gnis": 231707,
+    "hifld": 254740,
+    "overture": 545776
+  },
+  "leading_l3": [
+    {
+      "level": "name_core",
+      "name_value": "baptist church",
+      "n_entities": 24952
+    },
+    {
+      "level": "name_core",
+      "name_value": "united methodist church",
+      "n_entities": 10317
+    },
+    {
+      "level": "name_core",
+      "name_value": "first baptist church",
+      "n_entities": 7010
+    },
+    {
+      "level": "name_core",
+      "name_value": "church of jesus christ of latter day saints",
+      "n_entities": 6204
+    },
+    {
+      "level": "name_core",
+      "name_value": "church of christ",
+      "n_entities": 5476
+    },
+    {
+      "level": "name_core",
+      "name_value": "lutheran church",
+      "n_entities": 5219
+    },
+    {
+      "level": "name_core",
+      "name_value": "community church",
+      "n_entities": 4369
+    },
+    {
+      "level": "name_core",
+      "name_value": "presbyterian church",
+      "n_entities": 3769
+    },
+    {
+      "level": "name_core",
+      "name_value": "missionary baptist church",
+      "n_entities": 3451
+    },
+    {
+      "level": "name_core",
+      "name_value": "christian church",
+      "n_entities": 3091
+    }
+  ]
+}

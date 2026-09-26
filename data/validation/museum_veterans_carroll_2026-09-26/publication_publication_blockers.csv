@@ -1,0 +1,12 @@
+step,status,remaining_work,evidence
+M1 leaders,incomplete,Finish county and newly exposed leading-name identity/name/category/affiliation reviews; four Old Jail cases remain pending,Museum review queues and publication_gates.csv
+Old Jail operator evidence,human_review_needed,Hayesville current operator/name; Winchester current governance; Thompson Falls governance/address; Greenwood campus scope,museum_jail_followup_2026-09-26/human_review.csv
+M2 collisions,incomplete,Review institution identities and affiliations alongside scope-word meanings; lexical candidates alone are insufficient,museum_affiliation_followup_2026-09-26/m2_semantic_review.csv
+Smithsonian,incomplete,Three generic parent labels have unresolved roles; five affiliated labels still need complete identity/name reconciliation,museum_affiliation_followup_2026-09-26/research_notes.md
+Museum of Illusions,operator_evidence_needed,Miami Beach operator page unavailable; do not infer closure from failed access. City-suffixed access reviews remain pending if quoted,museum_leaders_review_2026-09-23/follow_up.csv
+Visitor maps,incomplete,Separate sourced points and access checks prepared for three earlier cases; these do not certify all selected museum identities or reopen Mandeville,publication_points.csv
+Publication destination,configuration_needed,DUPNAMES_BLOG_DIR unset and ../blog absent. Draft remains local until evidence and destination are ready,config_blog.R
+Pending museum_next_leaders_2026-09-26,incomplete,11 pending factual reviews; see exact per-institution gaps,museum_next_leaders_2026-09-26/follow_up.csv
+Pending museum_adams_brown_2026-09-26,incomplete,6 pending factual reviews; see exact per-institution gaps,museum_adams_brown_2026-09-26/follow_up.csv
+Pending museum_discovery_pioneer_2026-09-26,incomplete,8 pending factual reviews; see exact per-institution gaps,museum_discovery_pioneer_2026-09-26/follow_up.csv
+Pending museum_veterans_carroll_2026-09-26,incomplete,10 pending factual reviews; see exact per-institution gaps,museum_veterans_carroll_2026-09-26/follow_up.csv

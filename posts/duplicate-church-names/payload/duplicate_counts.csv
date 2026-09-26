@@ -1,0 +1,601 @@
+level,name_value,n_entities
+name_core,baptist church,24952
+name_core,united methodist church,10317
+name_core,first baptist church,7010
+name_core,church of jesus christ of latter day saints,6204
+name_core,church of christ,5476
+name_core,lutheran church,5219
+name_core,community church,4369
+name_core,presbyterian church,3769
+name_core,missionary baptist church,3451
+name_core,christian church,3091
+name_core,catholic church,2674
+name_core,hall of jehovah's witnesses,2479
+name_core,church of god,2452
+name_core,first presbyterian church,1990
+name_core,first united methodist church,1978
+name_core,bible church,1860
+name_core,seventh day adventist church,1781
+name_core,methodist church,1508
+name_core,church of the nazarene,1420
+name_core,episcopal church,1321
+name_core,assembly of god,1298
+name_core,first christian church,1272
+name_core,african methodist episcopal church,1157
+name_core,united church of christ,803
+name_core,calvary chapel,771
+name_core,christian fellowship,750
+name_core,grove church,741
+name_core,life church,709
+name_core,first assembly of god,667
+name_core,bible baptist church,622
+name_core,fellowship church,617
+name_core,congregational church,536
+name_core,christian center,526
+name_core,first congregational church,522
+name_core,church of god in christ,496
+name_core,wesleyan church,490
+name_core,apostolic church,485
+name_core,evangelical lutheran church,484
+name_core,assembly of god church,480
+name_core,united methodist,479
+name_core,community baptist church,478
+name_core,city church,474
+name_core,hill church,473
+name_core,free will baptist church,471
+name_core,pentecostal church,462
+name_core,first church of god,452
+name_core,grace church,446
+name_core,worship center,442
+name_core,primitive baptist church,441
+name_core,church of god of prophecy,440
+name_core,first church of the nazarene,439
+name_core,saint john's lutheran church,431
+name_core,mennonite church,418
+name_core,friendship baptist church,417
+name_core,second baptist church,417
+name_core,chapel baptist church,414
+name_core,fellowship baptist church,412
+name_core,victory baptist church,407
+name_core,new life church,400
+name_core,memorial baptist church,399
+name_core,immanuel lutheran church,389
+name_core,covenant church,372
+name_core,holiness church,370
+name_core,grove baptist church,367
+name_core,saint paul's lutheran church,362
+name_core,african methodist episcopal zion church,357
+name_core,chapel african methodist episcopal church,357
+name_core,avenue baptist church,349
+name_core,central baptist church,346
+name_core,united pentecostal church,342
+name_core,reformed church,340
+name_core,cornerstone church,338
+name_core,first church of christ scientist,338
+name_core,jehovah's witnesses,338
+name_core,freewill baptist church,335
+name_core,hill baptist church,331
+name_core,road baptist church,331
+name_core,alliance church,329
+name_core,missionary baptist,328
+name_core,liberty baptist church,324
+name_core,first lutheran church,320
+name_core,creek church,319
+name_core,family church,319
+name_core,emmanuel baptist church,318
+name_core,christ lutheran church,316
+name_core,street baptist church,312
+name_core,christ church,306
+name_core,church of the,306
+name_core,saint paul's episcopal church,306
+name_core,lighthouse baptist church,301
+name_core,creek baptist church,299
+name_core,zion church,299
+name_core,cornerstone baptist church,297
+name_core,redeemer lutheran church,296
+name_core,saint john's episcopal church,293
+name_core,memorial united methodist church,288
+name_core,evangelical free church,284
+name_core,community of christ,282
+name_core,hope church,276
+name_core,chapel church,275
+name_core,valley church,275
+name_core,union baptist church,273
+name_core,community bible church,265
+name_core,journey church,264
+name_core,roman catholic church,263
+name_core,family worship center,261
+name_core,good shepherd lutheran church,261
+name_core,free methodist church,258
+name_core,christ community church,249
+name_core,new hope church,248
+name_core,calvary church,247
+name_core,union church,246
+name_core,united church,242
+name_core,baptist association,241
+name_core,bethel church,240
+name_core,peace lutheran church,239
+name_core,church of the living god,238
+name_core,trinity church,237
+name_core,first methodist church,236
+name_core,tabernacle baptist church,233
+name_core,full gospel church,232
+name_core,rock church,227
+name_core,chapel united methodist church,226
+name_core,heights baptist church,225
+name_core,cme church,224
+name_core,iglesia bautista,224
+name_core,ebenezer baptist church,215
+name_core,harvest church,213
+name_core,bible chapel,212
+name_core,christ episcopal church,212
+name_core,first baptist,211
+name_core,immanuel baptist church,211
+name_core,new life baptist church,211
+name_core,sacred heart church,205
+name_core,restoration church,202
+name_core,street church of christ,202
+name_core,crossroads church,201
+name_core,iglesia universal,201
+name_core,pentecostal holiness church,201
+name_core,first missionary baptist church,197
+name_core,foursquare church,195
+name_core,heritage baptist church,194
+name_core,first assembly of god church,193
+name_core,friends church,193
+name_core,united presbyterian church,193
+name_core,lighthouse church,192
+name_core,bible fellowship,190
+name_core,bridge church,189
+name_core,sda church,189
+name_core,springs baptist church,189
+name_core,first pentecostal church,188
+name_core,faith church,186
+name_core,valley baptist church,186
+name_core,cumberland presbyterian church,184
+name_core,christian reformed church,183
+name_core,church at,178
+name_core,mission church,178
+name_core,pentecostal church of god,177
+name_core,vineyard church,172
+name_core,cornerstone community church,171
+name_core,first southern baptist church,171
+name_core,hope lutheran church,171
+name_core,temple church,170
+name_core,independent baptist church,169
+name_core,abundant life church,168
+name_core,ridge church,166
+name_core,river church,166
+name_core,tabernacle church,165
+name_core,freedom church,164
+name_core,missionary church,162
+name_core,crossroads community church,161
+name_core,new beginnings church,161
+name_core,new life community church,161
+name_core,saint joseph's catholic church,160
+name_core,mb church,158
+name_core,memorial church,158
+name_core,first free will baptist church,157
+name_core,saint mary's church,156
+name_core,hope community church,154
+name_core,temple church of god in christ,154
+name_core,united baptist church,154
+name_core,evangelical church,153
+name_core,victory church,153
+name_core,northside baptist church,152
+name_core,saint mark's episcopal church,152
+name_core,holy family catholic church,151
+name_core,holy trinity lutheran church,151
+name_core,messiah lutheran church,151
+name_core,of prayer,149
+name_core,point church,149
+name_core,covenant presbyterian church,148
+name_core,road church of christ,148
+name_core,community presbyterian church,147
+name_core,christ united methodist church,146
+name_core,community united methodist church,146
+name_core,saint luke's episcopal church,146
+name_core,general baptist church,145
+name_core,immaculate conception catholic church,145
+name_core,unitarian universalist church,145
+name_core,first united pentecostal church,143
+name_expanded,church of jesus christ of latter day saints,6203
+name_expanded,first baptist church,4104
+name_expanded,kingdom hall of jehovah's witnesses,2479
+name_expanded,first presbyterian church,1571
+name_expanded,first united methodist church,1457
+name_expanded,calvary baptist church,1189
+name_expanded,church of christ,1136
+name_expanded,first christian church,1069
+name_expanded,trinity lutheran church,827
+name_expanded,grace baptist church,695
+name_expanded,faith baptist church,679
+name_expanded,united methodist church,651
+name_expanded,new hope baptist church,567
+name_expanded,bethel baptist church,511
+name_expanded,zion lutheran church,471
+name_expanded,mount zion baptist church,455
+name_expanded,grace lutheran church,426
+name_expanded,trinity baptist church,426
+name_expanded,saint john's lutheran church,421
+name_expanded,first assembly of god,412
+name_expanded,bible baptist church,408
+name_expanded,faith lutheran church,403
+name_expanded,friendship baptist church,403
+name_expanded,victory baptist church,396
+name_expanded,first congregational church,389
+name_expanded,church of the nazarene,382
+name_expanded,immanuel lutheran church,382
+name_expanded,church of god,381
+name_expanded,saint joseph catholic church,378
+name_expanded,trinity united methodist church,370
+name_expanded,second baptist church,359
+name_expanded,saint paul's lutheran church,358
+name_expanded,antioch baptist church,355
+name_expanded,saint paul lutheran church,346
+name_expanded,sacred heart catholic church,339
+name_expanded,mount olive baptist church,334
+name_expanded,shiloh baptist church,327
+name_expanded,central baptist church,325
+name_expanded,saint mary's catholic church,322
+name_expanded,jehovah's witnesses,321
+name_expanded,fellowship baptist church,312
+name_expanded,first church of christ scientist,312
+name_expanded,liberty baptist church,308
+name_expanded,christ lutheran church,307
+name_expanded,macedonia baptist church,306
+name_expanded,emmanuel baptist church,303
+name_expanded,new life church,303
+name_expanded,church of god of prophecy,302
+name_expanded,first church of god,302
+name_expanded,saint paul's episcopal church,300
+name_expanded,first lutheran church,295
+name_expanded,grace community church,294
+name_expanded,saint john's episcopal church,290
+name_expanded,cornerstone baptist church,289
+name_expanded,lighthouse baptist church,289
+name_expanded,trinity episcopal church,283
+name_expanded,cornerstone church,267
+name_expanded,grace bible church,263
+name_expanded,bethlehem baptist church,261
+name_expanded,grace church,261
+name_expanded,saint john lutheran church,260
+name_expanded,good shepherd lutheran church,259
+name_expanded,community baptist church,256
+name_expanded,union baptist church,238
+name_expanded,grace united methodist church,237
+name_expanded,first church of the nazarene,236
+name_expanded,peace lutheran church,233
+name_expanded,new hope church,231
+name_expanded,community of christ,229
+name_expanded,christ community church,226
+name_expanded,bethel african methodist episcopal church,222
+name_expanded,church of the living god,218
+name_expanded,oak grove baptist church,214
+name_expanded,ebenezer baptist church,209
+name_expanded,pleasant grove baptist church,209
+name_expanded,christ episcopal church,208
+name_expanded,mount pleasant baptist church,208
+name_expanded,temple baptist church,205
+name_expanded,grace episcopal church,204
+name_expanded,immanuel baptist church,203
+name_expanded,journey church,201
+name_expanded,new life baptist church,201
+name_expanded,iglesia universal,200
+name_expanded,mount calvary baptist church,200
+name_expanded,pleasant hill baptist church,198
+name_expanded,redeemer lutheran church,195
+name_expanded,bethany baptist church,194
+name_expanded,sacred heart church,193
+name_expanded,providence baptist church,192
+name_expanded,westminster presbyterian church,192
+name_expanded,life church,190
+name_expanded,mount zion church,189
+name_expanded,bethel church,187
+name_expanded,heritage baptist church,183
+name_expanded,southside baptist church,181
+name_expanded,tabernacle baptist church,177
+name_expanded,first assembly of god church,176
+name_expanded,first missionary baptist church,176
+name_expanded,presbyterian church,176
+name_expanded,wesley united methodist church,174
+name_expanded,faith community church,173
+name_expanded,hope lutheran church,169
+name_expanded,saint james episcopal church,169
+name_expanded,assembly of god church,168
+name_expanded,seventh day adventist church,164
+name_expanded,bethlehem lutheran church,163
+name_expanded,cornerstone community church,163
+name_expanded,hope church,161
+name_expanded,trinity church,161
+name_expanded,calvary church,160
+name_expanded,saint paul baptist church,160
+name_expanded,united pentecostal church,160
+name_expanded,saint joseph's catholic church,159
+name_expanded,saint john baptist church,157
+name_expanded,saint paul african methodist episcopal church,154
+name_expanded,crossroads church,153
+name_expanded,bethel united methodist church,152
+name_expanded,crossroads community church,151
+name_expanded,holy trinity lutheran church,151
+name_expanded,northside baptist church,151
+name_expanded,holy family catholic church,150
+name_expanded,saint mark's episcopal church,150
+name_expanded,abundant life church,149
+name_expanded,messiah lutheran church,149
+name_expanded,bethany lutheran church,145
+name_expanded,saint luke's episcopal church,145
+name_expanded,bridge church,144
+name_expanded,saint paul united methodist church,143
+name_expanded,kingdom hall of jehovahs witnesses,142
+name_expanded,all saints episcopal church,141
+name_expanded,community bible church,141
+name_expanded,first southern baptist church,141
+name_expanded,new life community church,140
+name_expanded,unity baptist church,140
+name_expanded,immaculate conception catholic church,139
+name_expanded,mount carmel baptist church,139
+name_expanded,faith united methodist church,138
+name_expanded,house of prayer,138
+name_expanded,trinity presbyterian church,138
+name_expanded,restoration church,137
+name_expanded,saint andrew's episcopal church,137
+name_expanded,christ united methodist church,136
+name_expanded,saint mary's church,136
+name_expanded,new beginnings church,135
+name_expanded,our savior lutheran church,135
+name_expanded,berean baptist church,134
+name_expanded,central christian church,132
+name_expanded,christian science reading room,132
+name_expanded,covenant presbyterian church,131
+name_expanded,salem baptist church,131
+name_expanded,hope community church,130
+name_expanded,immaculate conception church,130
+name_expanded,lighthouse church,130
+name_expanded,fairview baptist church,128
+name_expanded,family worship center,127
+name_expanded,freedom church,127
+name_expanded,calvary chapel,126
+name_expanded,morning star baptist church,126
+name_expanded,faith bible church,125
+name_expanded,first free will baptist church,125
+name_expanded,grace fellowship church,125
+name_expanded,mount moriah baptist church,125
+name_expanded,rock church,125
+name_expanded,saint mary catholic church,125
+name_expanded,zion baptist church,124
+name_expanded,christ church,123
+name_expanded,beulah baptist church,122
+name_expanded,new bethel baptist church,122
+name_expanded,first united pentecostal church,121
+name_expanded,harmony baptist church,121
+name_expanded,hopewell baptist church,121
+name_expanded,prince of peace lutheran church,121
+name_expanded,harvest church,120
+name_expanded,holy cross lutheran church,120
+name_expanded,saint patrick catholic church,120
+name_expanded,mount zion missionary baptist church,119
+name_expanded,zion hill baptist church,119
+name_expanded,iglesia ni cristo,118
+name_expanded,mount sinai baptist church,117
+name_expanded,oak grove church,116
+name_expanded,victory church,116
+name_expanded,first pentecostal church,115
+name_expanded,grace presbyterian church,115
+name_expanded,saint john the baptist catholic church,115
+name_expanded,antioch church,114
+name_expanded,new zion baptist church,114
+name_expanded,pine grove baptist church,114
+name_expanded,primera iglesia bautista,114
+name_expanded,asbury united methodist church,113
+name_expanded,shiloh church,113
+name_expanded,pentecostal church of god,112
+name_expanded,river of life church,112
+name_expanded,saint james catholic church,112
+name_expanded,first methodist church,111
+name_expanded,refuge church,111
+name_expanded,shady grove baptist church,111
+name_expanded,saint james baptist church,110
+name_expanded,liberty church,109
+name_expanded,pleasant hill church,109
+name_expanded,friendship church,108
+name_key,baptist church,24986
+name_key,church methodist united,10333
+name_key,baptist church first,7028
+name_key,christ church day jesus latter saints,6211
+name_key,christ church,5958
+name_key,church lutheran,5245
+name_key,church community,4389
+name_key,church presbyterian,3785
+name_key,baptist church missionary,3462
+name_key,christian church,3107
+name_key,catholic church,2679
+name_key,church god,2576
+name_key,hall jehovah's witnesses,2485
+name_key,church first presbyterian,2000
+name_key,church first methodist united,1988
+name_key,bible church,1867
+name_key,adventist church day seventh,1781
+name_key,church nazarene,1634
+name_key,church methodist,1509
+name_key,church episcopal,1359
+name_key,assembly god,1299
+name_key,christian church first,1273
+name_key,african church episcopal methodist,1158
+name_key,christ church united,843
+name_key,church life,818
+name_key,calvary chapel,779
+name_key,church,752
+name_key,christian fellowship,751
+name_key,church grove,741
+name_key,assembly first god,669
+name_key,baptist bible church,634
+name_key,church fellowship,624
+name_key,christ church god,554
+name_key,church congregational,543
+name_key,church congregational first,527
+name_key,center christian,526
+name_key,church grace,505
+name_key,assembly church god,504
+name_key,church city,497
+name_key,church wesleyan,493
+name_key,apostolic church,491
+name_key,church evangelical lutheran,485
+name_key,baptist church community,484
+name_key,methodist united,479
+name_key,church hill,477
+name_key,baptist church free will,472
+name_key,church god prophecy,466
+name_key,church pentecostal,463
+name_key,church first nazarene,460
+name_key,church first god,456
+name_key,center worship,445
+name_key,baptist church primitive,441
+name_key,church john's lutheran saint,431
+name_key,baptist church fellowship,425
+name_key,baptist chapel church,419
+name_key,church mennonite,418
+name_key,baptist church friendship,417
+name_key,baptist church second,417
+name_key,baptist church victory,407
+name_key,church life new,404
+name_key,baptist church memorial,399
+name_key,church covenant,394
+name_key,church immanuel lutheran,391
+name_key,church holiness,372
+name_key,baptist church grove,371
+name_key,church lutheran peace,370
+name_key,church hope,364
+name_key,church lutheran paul's saint,362
+name_key,african chapel church episcopal methodist,358
+name_key,african church episcopal methodist zion,358
+name_key,christ church lutheran,352
+name_key,avenue baptist church,349
+name_key,christ church first scientist,348
+name_key,baptist central church,346
+name_key,church pentecostal united,343
+name_key,church reformed,343
+name_key,church cornerstone,342
+name_key,jehovah's witnesses,338
+name_key,baptist church freewill,336
+name_key,baptist church hill,334
+name_key,baptist church road,331
+name_key,baptist missionary,331
+name_key,alliance church,330
+name_key,church family,326
+name_key,baptist church liberty,325
+name_key,church first lutheran,321
+name_key,church creek,320
+name_key,church lutheran redeemer,320
+name_key,baptist church emmanuel,318
+name_key,christ church community,317
+name_key,baptist church street,312
+name_key,church episcopal paul's saint,307
+name_key,church zion,304
+name_key,baptist church lighthouse,301
+name_key,baptist church creek,299
+name_key,baptist church cornerstone,297
+name_key,church episcopal john's saint,293
+name_key,christ community,292
+name_key,church memorial methodist united,288
+name_key,church evangelical free,286
+name_key,church valley,280
+name_key,bible church community,276
+name_key,chapel church,276
+name_key,baptist church union,274
+name_key,church journey,269
+name_key,catholic church roman,263
+name_key,center family worship,261
+name_key,church good lutheran shepherd,261
+name_key,church god living,260
+name_key,church free methodist,258
+name_key,church hope new,257
+name_key,church united,254
+name_key,calvary church,253
+name_key,church union,249
+name_key,church faith,248
+name_key,bethel church,245
+name_key,christ church episcopal,245
+name_key,association baptist,242
+name_key,church trinity,241
+name_key,church first methodist,238
+name_key,baptist church tabernacle,237
+name_key,church full gospel,235
+name_key,church rock,230
+name_key,chapel church methodist united,226
+name_key,baptist church heights,225
+name_key,church cme,225
+name_key,bautista iglesia,224
+name_key,church restoration,220
+name_key,church harvest,219
+name_key,baptist church ebenezer,216
+name_key,bible chapel,213
+name_key,baptist church immanuel,212
+name_key,baptist church life new,212
+name_key,church crossroads,212
+name_key,baptist first,211
+name_key,bible church fellowship,211
+name_key,baptist church first missionary,207
+name_key,church heart sacred,207
+name_key,church holiness pentecostal,203
+name_key,christ church street,202
+name_key,iglesia universal,201
+name_key,assembly church first god,197
+name_key,church foursquare,196
+name_key,church presbyterian united,196
+name_key,baptist church heritage,195
+name_key,church god pentecostal,195
+name_key,church lighthouse,195
+name_key,church friends,193
+name_key,bridge church,192
+name_key,bible fellowship,191
+name_key,baptist church springs,189
+name_key,church sda,189
+name_key,church first pentecostal,188
+name_key,baptist church valley,187
+name_key,beginnings church new,186
+name_key,christian church reformed,184
+name_key,church cumberland presbyterian,184
+name_key,church hope lutheran,184
+name_key,christian church community,183
+name_key,church mission,182
+name_key,church vineyard,176
+name_key,church community hope,175
+name_key,church river,174
+name_key,baptist church first southern,172
+name_key,church community cornerstone,172
+name_key,abundant church life,171
+name_key,church temple,171
+name_key,baptist church independent,169
+name_key,church missionary,169
+name_key,church ridge,169
+name_key,church freedom,168
+name_key,church tabernacle,165
+name_key,church first,164
+name_key,christ church god temple,162
+name_key,church community crossroads,162
+name_key,catholic church joseph's saint,161
+name_key,church community life new,161
+name_key,church victory,161
+name_key,christ church methodist united,160
+name_key,church memorial,160
+name_key,church mary's saint,159
+name_key,church mb,159
+name_key,church unitarian universalist,159
+name_key,baptist church first free will,158
+name_key,baptist church united,155
+name_key,catholic church family holy,155
+name_key,church evangelical,154
+name_key,church lutheran messiah,154
+name_key,church covenant presbyterian,153
+name_key,baptist church northside,152
+name_key,church episcopal mark's saint,152
+name_key,house prayer,152
+name_key,church community presbyterian,151
+name_key,church holy lutheran trinity,151
+name_key,church redeemer,151
+name_key,prayer,151
+name_key,church point,150
+name_key,church refuge,149
+name_key,anglican church,148
+name_key,christ church road,148

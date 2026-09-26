@@ -1,0 +1,230 @@
+[
+  {
+    "id": "tel_me_home",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 3068
+  },
+  {
+    "id": "tel_me_visit",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 2776
+  },
+  {
+    "id": "tel_me_news",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 10341
+  },
+  {
+    "id": "tel_ma_about",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 18491
+  },
+  {
+    "id": "tel_ma_home",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 1827
+  },
+  {
+    "id": "tel_ma_proposal",
+    "detected": "pdf",
+    "extension_mismatch": false,
+    "characters": 201083
+  },
+  {
+    "id": "tel_wv_visit",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 1998
+  },
+  {
+    "id": "wash_mo_home",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 2485
+  },
+  {
+    "id": "wash_mo_about",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 2151
+  },
+  {
+    "id": "wash_il_home",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 8875
+  },
+  {
+    "id": "wash_il_about",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 2992
+  },
+  {
+    "id": "wash_nh_home",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 3527
+  },
+  {
+    "id": "wash_nh_museums",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 2919
+  },
+  {
+    "id": "wash_me_home",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 2530
+  },
+  {
+    "id": "wash_me_museum",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 2059
+  },
+  {
+    "id": "union_oh_museum",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 2838
+  },
+  {
+    "id": "union_oh_about",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 3022
+  },
+  {
+    "id": "union_ga_home",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 1945
+  },
+  {
+    "id": "union_in_about",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 5613
+  },
+  {
+    "id": "union_il_museum",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 1943
+  },
+  {
+    "id": "union_pa_home",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 1408
+  },
+  {
+    "id": "union_pa_facilities",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 5359
+  },
+  {
+    "id": "wash_mo_museum",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 1943
+  },
+  {
+    "id": "wash_me_bylaws",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 8377
+  },
+  {
+    "id": "union_ga_about",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 3136
+  },
+  {
+    "id": "union_ga_board",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 1132
+  },
+  {
+    "id": "union_oh_event",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 5373
+  },
+  {
+    "id": "union_il_home",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 1323
+  },
+  {
+    "id": "union_il_news",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 3666
+  },
+  {
+    "id": "union_il_research",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 2694
+  },
+  {
+    "id": "wash_ny_home",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 924
+  },
+  {
+    "id": "wash_ny_archives",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 722
+  },
+  {
+    "id": "wash_ny_contact",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 683
+  },
+  {
+    "id": "wash_ny_board",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 865
+  },
+  {
+    "id": "wash_ny_streets",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 642
+  },
+  {
+    "id": "wash_ny_library",
+    "detected": "html",
+    "extension_mismatch": false,
+    "characters": 25649
+  },
+  {
+    "id": "wash_me_2023_town",
+    "detected": "pdf",
+    "extension_mismatch": false,
+    "characters": 254715
+  },
+  {
+    "id": "wash_il_history",
+    "detected": "pdf",
+    "extension_mismatch": false,
+    "characters": 1918
+  }
+]

@@ -1,0 +1,3 @@
+ohio_state_mccook: cached
+johnstown_fieldtrip: cached
+ambiguous_society_domain: SSL connect error [carrollcountyhistoricalsociety.com]: schannel: next InitializeSecurityContext failed: SEC_E_CERT_EXPIRED (0x80090328) - The received certificate has expired.

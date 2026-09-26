@@ -1,0 +1,51 @@
+# A tibble: 1 x 9
+  source_rows counted_rows institutions eligible identity_rows identity_cases
+        <int>        <int>        <int>    <int>         <int>          <int>
+1       60002        57107        52409    52277           403            171
+  complete_reviews not_museum overrides
+             <int>      <int>     <int>
+1              170         24       103
+# A tibble: 12 x 10
+    rank name_expanded                        n_entities n_chain
+   <int> <chr>                                     <int>   <int>
+ 1     1 old jail museum                               8       3
+ 2     2 antique car museum                            6       0
+ 3     3 bethel historical society                     6       0
+ 4     4 clinton historical society                    6       0
+ 5     5 concord historical society                    6       0
+ 6     6 cumberland county historical society          6       0
+ 7     7 dinosaur museum                               6       0
+ 8     8 douglas county historical society             6       0
+ 9     9 exploration station                           6       0
+10    10 fayette county historical society             6       0
+11    11 franklin county historical society            6       0
+12    12 greene county historical society              6       0
+   n_independent_verified n_affiliation_unknown n_category_pending n_multisite
+                    <int>                 <int>              <int>       <int>
+ 1                      4                     4                  0           0
+ 2                      0                     6                  0           0
+ 3                      0                     6                  0           0
+ 4                      0                     6                  0           0
+ 5                      0                     6                  0           0
+ 6                      0                     6                  0           0
+ 7                      0                     6                  0           0
+ 8                      0                     6                  0           0
+ 9                      0                     6                  0           0
+10                      0                     6                  0           0
+11                      0                     6                  0           0
+12                      0                     4                  0           1
+   n_review_pending publication_ready
+              <int> <lgl>            
+ 1                4 FALSE            
+ 2                6 FALSE            
+ 3                6 FALSE            
+ 4                6 FALSE            
+ 5                6 FALSE            
+ 6                6 FALSE            
+ 7                6 FALSE            
+ 8                6 FALSE            
+ 9                6 FALSE            
+10                6 FALSE            
+11                6 FALSE            
+12                6 FALSE            
+Factual decisions applied. Pipeline exports still require selective rebuild.

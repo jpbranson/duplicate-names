@@ -1,0 +1,19 @@
+check,passed,detail
+source_rows_preserved,TRUE,1032223
+source_keys_unique,TRUE,
+raw_name_coordinates_preserved,TRUE,
+one_analysis_row_per_spine_entity,TRUE,
+no_legacy_or_osm_counted,TRUE,
+scope_and_unverified_status,TRUE,
+denomination_conflicts_held,TRUE,
+normalization_count_totals,TRUE,name_expanded 442834; name_core 442834; name_key 442832
+census_place_exclusivity_denominator,TRUE,
+incorporated_place_exclusivity_denominator,TRUE,
+territory_contains_only_firsts,TRUE,
+neighbors_are_other_entities,TRUE,
+distances_nonnegative,TRUE,
+neighbors_share_l3,TRUE,
+reported_neighbor_distance_sample,TRUE,200 seeded rows
+independent_labels_still_blank,TRUE,
+sample_sizes,TRUE,300 500
+publication_gates_incomplete,TRUE,

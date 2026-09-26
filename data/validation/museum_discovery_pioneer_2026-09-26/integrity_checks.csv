@@ -1,0 +1,20 @@
+check,passed
+Automatic baseline unchanged,TRUE
+Baseline multisite queue unchanged,TRUE
+All source rows and normalized fields preserved,TRUE
+Guarded identity replay matches pipeline,TRUE
+Analysis with preferred names matches replay,TRUE
+Reviewed Parquet matches pipeline,TRUE
+Baseline Parquet unchanged,TRUE
+693 earlier evidence files and human labels preserved,TRUE
+Identity rows outside the new cases unchanged,TRUE
+Threshold remains 0.85,TRUE
+Current counts match reviewed dry run,TRUE
+198 identity rows in 77 cases,TRUE
+76 complete reviews; prior 15 not-museum decisions unchanged,TRUE
+Discovery and Pioneer bare-name groups each retain four non-chain candidates,TRUE
+Ninth source conflict isolated with separate ID and no alias leakage,TRUE
+Victoria and Maine retain four former-address rows,TRUE
+Nobles preserves two distinct affiliated institutions,TRUE
+California records remain pending separate and unknown,TRUE
+Remaining leader fails explicit publication gate,TRUE

@@ -1,0 +1,8 @@
+{
+  "version2_classifier_rows_affected_by_parser": [],
+  "version2_matching_rows_with_affected_name": [],
+  "version2_classifier_scope_holds": [],
+  "labels_modified": false,
+  "accuracy_evaluated": false,
+  "note": "Labels remain independent and blank. Preserve version-2 sample IDs and sampling design; re-score current predictions on those fixed IDs after labels arrive. Generated working samples can differ and are not replacements for received human work."
+}

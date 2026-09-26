@@ -1,0 +1,13 @@
+amnh_visit: HTTP response code said error [www.amnh.org]: The requested URL returned error: 403
+crystal_leadership: cached
+police_home: cached
+armor_visit: cached
+armor_mission: cached
+seneca_home: cached
+folk_home: Timeout was reached [moifa.org]: Operation timed out after 45325 milliseconds with 0 bytes received
+nmaahc_visit: HTTP response code said error [nmaahc.si.edu]: The requested URL returned error: 403
+nmai_visit: HTTP response code said error [americanindian.si.edu]: The requested URL returned error: 403
+acwm_home: cached
+old_world_home: cached
+medal_tx_home: cached
+medal_tn_home: cached

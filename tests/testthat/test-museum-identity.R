@@ -137,6 +137,36 @@ test_that("mixed source rows are isolated without leaking aliases into accepted 
   expect_error(dn_reconcile_museums(x, bad), "exactly one")
 })
 
+test_that("explicit splits separate visitor institutions and isolate their aliases", {
+  x <- identity_fixture()
+  x$entity_id[2] <- x$entity_id[1]
+  x$alt_names[1:2] <- "Inherited mixed alias"
+  d <- identity_decisions_fixture(x)
+  d$role <- c("split_canonical", "split_canonical", "mailing_address")
+  d$site_group <- c("museum", "history_center", "museum")
+  result <- dn_reconcile_museums(x, d)
+  out <- result$records
+  expect_identical(out[names(dn_schema_normalized())], x[names(dn_schema_normalized())])
+  expect_identical(out[4, ], x[4, ])
+  expect_equal(out$counted, c(TRUE, TRUE, FALSE, TRUE))
+  expect_equal(out$entity_id[1], out$entity_id[3])
+  expect_false(out$entity_id[1] == out$entity_id[2])
+  expect_false(any(out$entity_id[1:3] %in% x$entity_id))
+  expect_equal(out$alt_names[1:3], c("Museum Mailing Record", "", "Museum Mailing Record"))
+  expect_equal(sum(dn_museum_analysis(out)$counted), 3L)
+  reordered <- dn_reconcile_museums(x[4:1, ], d[3:1, ])$records
+  expect_equal(reordered$entity_id[match(out$source_id, reordered$source_id)], out$entity_id)
+  expect_error(dn_reconcile_museums(x, d[1, ]), "every member")
+  bad <- d; bad$site_group[2] <- "museum"
+  expect_error(dn_reconcile_museums(x, bad), "at least two groups")
+  bad <- d; bad$role[2] <- "same_site"
+  expect_error(dn_reconcile_museums(x, bad), "exactly one split_canonical")
+  bad <- d; bad$role[3] <- "former_site"
+  expect_error(dn_reconcile_museums(x, bad), "no former sites")
+  bad <- d; bad$role[2] <- "canonical"
+  expect_error(dn_reconcile_museums(x, bad), "exactly one split_canonical")
+})
+
 test_that("an entirely contradictory entity can be held out without a canonical assignment", {
   x <- identity_fixture()
   d <- identity_decisions_fixture(x)[1, ]
@@ -147,4 +177,42 @@ test_that("an entirely contradictory entity can be held out without a canonical 
   expect_false(out$counted[1])
   expect_equal(out$exclusion_reason[1], "reviewed_source_conflict")
   expect_false(out$entity_id[1] %in% x$entity_id)
+})
+
+test_that("an explicit reselected canonical corrects only a suppressed site in an accepted institution", {
+  x <- identity_fixture()
+  x$entity_id[2:3] <- x$entity_id[1]
+  x$counted[1] <- FALSE
+  x$is_primary_site[1] <- FALSE
+  x$exclusion_reason[1] <- "non_primary_site"
+  d <- identity_decisions_fixture(x)
+  d$role <- c("reselected_canonical", "mislocated", "source_conflict")
+  d$site_group <- c("current", "current", "unresolved_source")
+  result <- dn_reconcile_museums(x, d)
+  out <- result$records
+  expect_identical(out[names(dn_schema_normalized())], x[names(dn_schema_normalized())])
+  expect_identical(out[4, ], x[4, ])
+  expect_equal(out$counted, c(TRUE, FALSE, FALSE, TRUE))
+  expect_equal(out$site_id[1:2], c("s1", "s1"))
+  expect_true(out$is_primary_site[1])
+  expect_true(is.na(out$exclusion_reason[1]))
+  expect_equal(dn_canonical_entities(out)$lon[dn_canonical_entities(out)$entity_id == "e1"], -89)
+  expect_false(result$audit$before_counted[1])
+  expect_true(result$audit$after_counted[1])
+  expect_equal(out$alt_names[3], "")
+  expect_error(dn_reconcile_museums(x, d[1:2, ]), "every member")
+  bad <- d; bad$role[1] <- "canonical"
+  expect_error(dn_reconcile_museums(x, bad), "counted canonical")
+  bad <- d; bad$role[2] <- "canonical"
+  expect_error(dn_reconcile_museums(x, bad), "exactly one")
+  y <- x; y$exclusion_reason[1] <- "permanently_closed"
+  expect_error(dn_reconcile_museums(y, d), "non-primary site")
+  y <- x; y$exclusion_reason[1] <- "no_name"
+  expect_error(dn_reconcile_museums(y, d), "non-primary site")
+  y <- x; y$counted[1] <- TRUE
+  expect_error(dn_reconcile_museums(y, d), "non-primary site")
+  y <- x; y$counted[2:3] <- FALSE
+  expect_error(dn_reconcile_museums(y, d), "accepted counted")
+  bad <- d; bad$role[2] <- "source_conflict"; bad$site_group[2] <- "unresolved_source"
+  expect_error(dn_reconcile_museums(x, bad), "accepted counted")
 })

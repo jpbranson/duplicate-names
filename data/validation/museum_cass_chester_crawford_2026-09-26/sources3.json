@@ -1,0 +1,21 @@
+[
+ {"id":"crawford_ia_destination","url":"https://www.cdcia.org/arts-culture-museums"},
+ {"id":"crawford_ar_directory","url":"https://arkansashistoricalassociation.org/?page_id=3960"},
+ {"id":"crawford_ar_history","url":"https://encyclopediaofarkansas.net/entries/crawford-county-761/"},
+ {"id":"crawford_mo_city","url":"https://visitcubamo.com/museums/"},
+ {"id":"crawford_mo_state","url":"https://www.visitmo.com/things-to-do/crawford-county-historical-society-museum-2"},
+ {"id":"crawford_mo_operator","url":"http://www.crawfordmomuseum.com/"},
+ {"id":"crawford_wi_state","url":"https://www.wisconsinhistory.org/record/affiliate/LHS88/crawford-county-historical-society"},
+ {"id":"crawford_wi_roster","url":"https://wisconsinhistory.org/pdfs/2021%20LHAS%20roster%20to%20post%206_2022.pdf","extension":"pdf"},
+ {"id":"crawford_il_chamber","url":"https://www.robinsonchamber.com/visitor-information"},
+ {"id":"crawford_mi_home","url":"https://crawfordcountyhistoricalsociety.com/"},
+ {"id":"crawford_ga_home","url":"https://www.crawfordcountyhistoricalsociety.org/"},
+ {"id":"crawford_ga_pottery","url":"https://www.crawfordcountyhistoricalsociety.org/Pages/pottery.html"},
+ {"id":"crawford_ga_indians","url":"https://www.crawfordcountyhistoricalsociety.org/Pages/Indians.html"},
+ {"id":"crawford_ga_jail","url":"https://www.crawfordcountyhistoricalsociety.org/Pages/Jail.html"},
+ {"id":"crawford_pa_home","url":"https://crawfordhistorical.org/"},
+ {"id":"crawford_pa_contact","url":"https://crawfordhistorical.org/about/contact/"},
+ {"id":"chester_vt_town","url":"https://www.chestervt.gov/chester-historic-preservation-committee.html"},
+ {"id":"chester_vt_release","url":"https://www.chestertelegraph.org/2026/09/23/chester-historical-society-presents-stories-of-popple-dungeon/"},
+ {"id":"chester_nh_report","url":"https://www.chesternh.org/sites/g/files/vyhlif2941/f/uploads/fy_2023_town_of_chester_town_report.pdf","extension":"pdf"}
+]

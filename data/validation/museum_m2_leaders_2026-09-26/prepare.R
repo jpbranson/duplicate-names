@@ -1,0 +1,30 @@
+# One-time snapshot; never rerun after decisions have changed.
+for(f in list.files('R',pattern='[.]R$',full.names=TRUE))source(f)
+p<-'data/validation/museum_m2_leaders_2026-09-26'
+stopifnot(!file.exists(file.path(p,'identity_decisions_before.csv')))
+baseline<-targets::tar_read(entities);records<-targets::tar_read(museum_records)
+analysis<-targets::tar_read(museum_analysis)
+stopifnot(nrow(baseline)==60002L,sum(analysis$counted)==52409L)
+for(name in c('museum_identity_decisions','museum_decisions','museum_chain_rules','museum_name_overrides'))
+  stopifnot(file.copy(file.path('data/validation',paste0(name,'.csv')),file.path(p,paste0(name,'_before.csv'))))
+stopifnot(file.copy('data/validation/museum_identity_decisions.csv',file.path(p,'identity_decisions_before.csv')))
+stopifnot(file.copy('data/raw/MANIFEST.json',file.path(p,'manifest_before.json')))
+protected<-c(list.files('data/validation',recursive=TRUE,full.names=TRUE),'data/processed/resolution_labelling.csv')
+mutable<-c(file.path('data/validation',paste0(c('museum_identity_decisions','museum_decisions','museum_chain_rules','museum_name_overrides'),'.csv')),'data/validation/README.md')
+protected<-protected[!startsWith(protected,p)&!protected%in%mutable&file.exists(protected)]
+readr::write_csv(tibble::tibble(path=protected,sha256=vapply(protected,digest::digest,character(1),algo='sha256',file=TRUE)),file.path(p,'protected_files.csv'))
+leaders<-c('african american museum','american civil war museum','american museum of natural history','crystal bridges museum of american art','international police museum','museum of american armor','museum of international folk art','national medal of honor museum','national museum of african american history and culture','national museum of the american indian','old world wisconsin','seneca iroquois national museum')
+candidates<-dplyr::filter(analysis,.data$analysis_eligible,.data$name_expanded%in%leaders)
+stopifnot(nrow(candidates)==48L)
+readr::write_csv(candidates,file.path(p,'candidates_before.csv'),na='')
+readr::write_csv(dn_museum_ranking(analysis),file.path(p,'ranking_before.csv'),na='')
+stopifnot(file.copy('data/processed/museum_review/identity_audit.csv',file.path(p,'identity_audit_before.csv')))
+saveRDS(list(entities=baseline,records=records,analysis=analysis,multisite_review=targets::tar_read(multisite_review)),
+  'data/processed/museum_m2_leaders_before.rds')
+near<-vapply(seq_len(nrow(baseline)),function(i)any(abs(baseline$lat[i]-candidates$lat)<.09 & abs(baseline$lon[i]-candidates$lon)<.13),logical(1))
+named<-grepl('(smithsonian|medal.of.honor|international.police|american.armor|international.folk.art|seneca.iroquois|old.world.wisconsin|crystal.bridges|american.museum.of.natural.history|american.civil.war.museum)',baseline$name_raw,ignore.case=TRUE)
+related<-baseline[baseline$entity_id%in%baseline$entity_id[near|named],]
+readr::write_csv(related,file.path(p,'related_baseline_records.csv'),na='')
+imls<-dn_imls_review_context('data/raw/2018_csv_museum_data_files.zip')
+readr::write_csv(dplyr::filter(imls,.data$source_id%in%related$source_id),file.path(p,'imls_context.csv'),na='')
+message(nrow(candidates),' candidates; ',nrow(related),' related rows; ',length(protected),' protected files')

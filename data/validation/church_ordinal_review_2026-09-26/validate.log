@@ -1,0 +1,3 @@
+Error in check("existing_map_points_still_exact", nrow(oldmap) == nrow(newmap) &&  : 
+  existing_map_points_still_exact
+Execution halted

@@ -1,0 +1,21 @@
+check,passed
+Automatic baseline unchanged,TRUE
+Baseline multisite queue unchanged,TRUE
+All source rows and normalized fields preserved,TRUE
+Guarded identity replay matches pipeline,TRUE
+Analysis with preferred names matches replay,TRUE
+Reviewed Parquet matches pipeline,TRUE
+Baseline Parquet unchanged,TRUE
+754 earlier evidence files and human labels preserved,TRUE
+Identity rows outside the new cases unchanged,TRUE
+Threshold remains 0.85,TRUE
+Current counts match reviewed dry run,TRUE
+220 identity rows in 86 cases,TRUE
+85 complete reviews and 16 not-museum decisions,TRUE
+Veterans three and Carroll one non-chain bare-name candidates,TRUE
+Two new conflicts isolated; eleven total; no aliases,TRUE
+Georgia legal identities split and only genealogy excluded,TRUE
+Centralia former site retained,TRUE
+Ohio and Tennessee parent records remain pending and separate,TRUE
+Every prior factual decision preserved,TRUE
+Remaining leader fails explicit publication gate,TRUE

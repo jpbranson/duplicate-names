@@ -1,0 +1,16 @@
++ church_states dispatched
+
+v church_states completed [1.1s, 10.65 MB]
++ church_places dispatched
+v church_places completed [1.8s, 146.42 MB]
++ church_raw_hifld dispatched
+v church_raw_hifld completed [160ms, 6.56 MB]
++ church_gazetteer dispatched
+v church_gazetteer completed [30ms, 270.17 kB]
++ church_raw_gnis dispatched
+v church_raw_gnis completed [80ms, 4.95 MB]
++ church_raw_overture dispatched
+v church_raw_overture completed [250ms, 26.73 MB]
++ church_raw dispatched
+v church_raw completed [10.8s, 38.23 MB]
++ church_normalized dispatched

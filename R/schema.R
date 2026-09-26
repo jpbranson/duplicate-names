@@ -123,6 +123,8 @@ dn_schema_entity <- function() {
 #' Phase 2 analysis: one canonical row per museum entity, including exclusions
 dn_schema_museum_analysis <- function() {
   dplyr::bind_cols(dn_schema_entity(), tibble::tibble(
+    source_primary_name = character(),
+    name_override_evidence = character(),
     category_only = logical(),
     category_decision = character(),
     affiliation_status = character(),
@@ -152,6 +154,14 @@ dn_schema_museum_decisions <- function() {
                 affiliation_status = character(), chain_id = character(),
                 review_status = character(), evidence_url = character(),
                 note = character(), reviewed_by = character(), reviewed_on = character())
+}
+
+# A preferred public name is separate from immutable source names and identity.
+# Guard both the chosen source representative and its reviewed institution ID.
+dn_schema_museum_name_overrides <- function() {
+  tibble::tibble(source = character(), source_id = character(), expected_name = character(),
+    expected_entity_id = character(), preferred_name = character(), evidence_url = character(),
+    evidence_note = character(), reviewed_by = character(), reviewed_on = character())
 }
 
 # Explicit source membership for evidence-backed corrections to the baseline.

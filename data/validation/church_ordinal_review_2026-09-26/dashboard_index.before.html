@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Duplicate names · research explorer</title>
+<link rel="stylesheet" href="vendor/maplibre-gl.css"><link rel="stylesheet" href="style.css">
+<script defer src="vendor/maplibre-gl.js"></script><script defer src="app.js?v=20260926-m2"></script></head>
+<body><header><p class="eyebrow">Names, places, evidence</p><h1>One name. Many places.</h1>
+<p class="intro">Explore recorded name collisions, then inspect the institutions behind them.</p>
+<p class="notice"><strong>Provisional research.</strong> Museum headline reviews and independent church validation are unfinished. Counts describe the selected records; they do not certify current operation, institutional independence or a national winner.</p></header>
+<main><section class="controls" aria-label="Explore records">
+<label>Collection<select id="category"><option value="museums">Museums</option><option value="churches">Christian worship sites</option></select></label>
+<label>Compare names at<select id="level"><option value="l2">L2 · expanded names</option><option value="l3">L3 · place qualifiers removed</option></select></label>
+<label>Records<select id="scope"><option value="eligible">Eligible candidates</option><option value="all">All records, including holds</option><option value="affiliated">Known affiliated locations</option></select></label>
+<label class="search">Find a name<input id="search" type="search" placeholder="Try old jail, first baptist, cryptozoology…" autocomplete="off"></label>
+</section><p id="scope-note" class="muted"></p><p id="status" role="status" aria-live="polite">Loading the local data index…</p>
+<div class="workspace"><aside><div class="section-title"><h2>Recorded names</h2><span id="group-count"></span></div>
+<div id="groups" aria-label="Matching names"></div><button id="more-groups" class="secondary" hidden>Show more names</button></aside>
+<section class="detail" aria-label="Selected name"><div class="section-title"><div><p class="eyebrow">Selected comparison</p><h2 id="selected-name">Choose a name</h2></div><button id="download" class="secondary" disabled>Download rows</button></div>
+<p id="selected-summary"></p><p id="export-ready" hidden><a id="export-link">Save prepared CSV</a> <span id="export-details"></span></p><div class="map-shell"><div id="map" role="region" aria-label="Source coordinates of selected institutions"></div>
+<div class="map-tools"><button data-region="lower48">Lower 48</button><button data-region="alaska">Alaska</button><button data-region="hawaii">Hawaii</button><button id="fit">Fit selected</button></div></div>
+<p class="map-note"><span class="dot blue"></span>Eligible <span class="dot orange"></span>Held or excluded <span class="dot aqua"></span>Known affiliated · Source points; access and location accuracy are not certified.</p>
+<div class="table-wrap"><table><caption id="table-caption">Institution records</caption><thead><tr><th>Name and source aliases</th><th>Review / affiliation</th><th>Source / location</th></tr></thead><tbody id="records"></tbody></table></div>
+<button id="more-records" class="secondary" hidden>Show more records</button></section></div>
+<details class="method"><summary>How to read this explorer</summary><p>Museum headlines use L2. Eligible museum candidates exclude known chains, but unknown affiliation remains unknown. L3 strips recognized geography and answers a different question. One reviewed canonical museum record represents each institution; source aliases remain visible.</p><p>Church counts use L3 and represent provisional Overture worship sites. GNIS and HIFLD are comparison sources, not additional counted congregations. Independent matching, classifier and cluster reviews remain pending. Distant campuses are not automatically combined.</p><p>Blue means eligible for the selected analysis, not factually verified. Orange holds stay inspectable. A verified review status records completed factual review; it is not an independent estimate of matching accuracy. No OSM fields are included. Census 2023 outlines provide context without remote tiles.</p><p id="provenance"></p></details>
+<details class="method"><summary>Explore another category locally</summary><p>Open a CSV of canonical records with <code>entity_id, primary_name, name_expanded, name_core, lon, lat</code>. Optional columns: <code>alt_names, analysis_eligible, review_status, is_franchise, source, source_id, analysis_exclusion, denom_norm, ordinal</code>. Each entity ID must be unique. Coordinates must be valid. Up to 50,000 rows / 30 MB. The file stays in this browser and is never uploaded.</p><label class="file-label">Choose local CSV<input id="import" type="file" accept=".csv,text/csv"></label><p id="import-status" role="status"></p><p><a href="example-category.csv" download>Download a clearly fictional parks example</a>. Imported data is always marked as user-supplied, unverified research.</p></details>
+</main><footer>Duplicate Names · local research build · No paid map services or cloud compute. <a href="README.md">Build and methodology notes</a>.</footer>
+</body></html>
+

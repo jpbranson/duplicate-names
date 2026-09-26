@@ -1,0 +1,122 @@
+[
+  {
+    "id": "bedford_ny_museum",
+    "url": "https://www.bedfordhistoricalsociety.org/court-house-bedford-museum",
+    "extension": "html"
+  },
+  {
+    "id": "bedford_ny_tour",
+    "url": "https://www.bedfordhistoricalsociety.org/take-a-tour",
+    "extension": "html"
+  },
+  {
+    "id": "bedford_ny_volunteer",
+    "url": "https://www.bedfordhistoricalsociety.org/volunteer",
+    "extension": "html"
+  },
+  {
+    "id": "bedford_ma_about",
+    "url": "https://www.bedfordmahistory.org/about-us/",
+    "extension": "html"
+  },
+  {
+    "id": "bedford_ma_newsletters",
+    "url": "https://www.bedfordmahistory.org/our-newsletter/",
+    "extension": "html"
+  },
+  {
+    "id": "bedford_ma_2009",
+    "url": "https://bedfordmahistory.org/newsletters/October%202009.pdf",
+    "extension": "pdf"
+  },
+  {
+    "id": "bedford_nh_home",
+    "url": "https://www.bedfordhistoricalnh.org/",
+    "extension": "html"
+  },
+  {
+    "id": "bedford_nh_library",
+    "url": "https://www.bedfordnhlibrary.org/sites/bedfordnhlibrary.org/files/attachments/bedfordprofiles.pdf",
+    "extension": "pdf"
+  },
+  {
+    "id": "bedford_nh_plan",
+    "url": "https://www.bedfordnh.gov/DocumentCenter/View/4247/Bedford_MasterPlan_2010",
+    "extension": "pdf"
+  },
+  {
+    "id": "bedford_va_home",
+    "url": "https://www.bedfordhistory.org/",
+    "extension": "html"
+  },
+  {
+    "id": "belmont_ca_home",
+    "url": "https://belmonthistoricalsociety.com/",
+    "extension": "html"
+  },
+  {
+    "id": "belmont_ca_city",
+    "url": "https://www.belmont.gov/Home/Components/StaffDirectory/StaffDirectory/112/178",
+    "extension": "html"
+  },
+  {
+    "id": "belmont_nc_home",
+    "url": "https://thebelmonthistoricalsociety.org/",
+    "extension": "html"
+  },
+  {
+    "id": "belmont_ma_home",
+    "url": "https://www.belmonthistoricalsociety.org/",
+    "extension": "html"
+  },
+  {
+    "id": "belmont_ma_location",
+    "url": "https://www.belmonthistoricalsociety.org/where-we-are/",
+    "extension": "html"
+  },
+  {
+    "id": "belmont_ma_collections",
+    "url": "https://www.belmonthistoricalsociety.org/collections/",
+    "extension": "html"
+  },
+  {
+    "id": "belmont_nh_events",
+    "url": "https://belmontnh.gov/announcements/",
+    "extension": "html"
+  },
+  {
+    "id": "chatham_ct_about",
+    "url": "https://chathamhistoricalct.org/about-us/",
+    "extension": "html"
+  },
+  {
+    "id": "chatham_ma_home",
+    "url": "https://chathamhistoricalsociety.org/",
+    "extension": "html"
+  },
+  {
+    "id": "chatham_nh_home",
+    "url": "https://chathamhistoricalnh.org/",
+    "extension": "html"
+  },
+  {
+    "id": "chatham_nj_home",
+    "url": "https://www.chathamnjhistoricalsociety.org/",
+    "extension": "html"
+  },
+  {
+    "id": "chatham_nj_archived",
+    "url": "https://www.chathamnjhistoricalsociety.org/archived-news.html",
+    "extension": "html"
+  },
+  {
+    "id": "chatham_nj_library",
+    "url": "https://chathamlibrary.librarycalendar.com/index.php/event/our-american-journey-exhibit-41992",
+    "extension": "html"
+  },
+  {
+    "id": "chatham_oh_destination",
+    "url": "https://www.visitmedinacounty.com/things-to-do-in-medina-county/chatham-historical-society/",
+    "extension": "html"
+  }
+]

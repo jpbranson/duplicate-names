@@ -1,0 +1,3 @@
+Error in dn_reconcile_museums(baseline, ids) : 
+  Former sites must have separate site groups; all other roles use the canonical site group.
+Execution halted

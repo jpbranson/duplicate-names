@@ -1,0 +1,50 @@
+id,url,path,sha256,status
+chehalis_home,https://www.veteransmuseum.org/,data/raw/veterans_carroll_chehalis_home_2026-09-26.html,c55aaf7d28ff72fe56b86edfae4a4dec3afc3a5e0aa664150fb5fae939860d3e,cached
+chehalis_city_history,https://www.ci.chehalis.wa.us/community/page/attraction-spotlight-veterans-memorial-museum,data/raw/veterans_carroll_chehalis_city_history_2026-09-26.html,,HTTP response code said error [www.ci.chehalis.wa.us]: The requested URL returned error: 403
+chehalis_events,https://experiencechehalis.com/veteran-museum-events/,data/raw/veterans_carroll_chehalis_events_2026-09-26.html,8454be04cbce3eaf7b5fc7204502e0fc663a48ca1ee6831a35d39bc39651a7db,cached
+laurel_home,https://www.veterans-memorial-museum.org/,data/raw/veterans_carroll_laurel_home_2026-09-26.html,b10a0747bccbeb233aa91fbef9a8087ff478568029dfb46b2e77953a6bbe3871,cached
+laurel_about,https://www.veterans-memorial-museum.org/about-us.html,data/raw/veterans_carroll_laurel_about_2026-09-26.html,bf2907947f7ca2c9c394cbfdf76a89c361d8cd74f20dba0888b2023cf7991111,cached
+laurel_board,https://www.veterans-memorial-museum.org/about-the-board.html,data/raw/veterans_carroll_laurel_board_2026-09-26.html,cbbfcbab72e369f2e16e489310512d054fc4390dcc7c61aaf006b91dd02d9991,cached
+branson_home,https://veteransmemorialbranson.com/,data/raw/veterans_carroll_branson_home_2026-09-26.html,bf1bc0b7265066ffc5c66ba58b97c2031d5cac4efa796e9fd2d6057668f49876,cached
+branson_about,https://veteransmemorialbranson.com/about/,data/raw/veterans_carroll_branson_about_2026-09-26.html,383ba957c8089dd7c27d9f842dc8596f97ba3a12d92570220c5f3952213c9338,cached
+shenandoah_home,https://www.veteransmuseumswia.org/,data/raw/veterans_carroll_shenandoah_home_2026-09-26.html,429c772771d65cb3a892cd2d30ae879e6dd05861b86eb36522d820c476612274,cached
+shenandoah_about,https://www.veteransmuseumswia.org/about-us,data/raw/veterans_carroll_shenandoah_about_2026-09-26.html,af120ebc3288fdba82754b5b17bcca8ce6c13a1d22c193c7a810c71e2a476f04,cached
+shenandoah_guide,https://www.sciaiowa.com/pdfs/Shenandoah_Visitors_Guide.pdf,data/raw/veterans_carroll_shenandoah_guide_2026-09-26.pdf,a2b614525527f94f9559905c85387bb8a7bd6cb32369b605fe9575a76b063921,cached
+hinton_tourism,https://visitwv.com/partners/veterans-memorial-museum-of-southern-wv-inc/,data/raw/veterans_carroll_hinton_tourism_2026-09-26.html,a1109175f227395ce5f1677aba849872b430d5473917a7be402f6520714d2487,cached
+hinton_founder,https://www.jimleslie2020.com/about-1,data/raw/veterans_carroll_hinton_founder_2026-09-26.html,13e21fa1487fbbe8016f831704d19e225642f3cc608deed2246a856fd7fbcd48,cached
+johnstown_trail,https://www.visitjohnstownpa.com/wp-content/uploads/2024/04/2024-04-05-Visit-Johnstown-PA-Veterans-Trail.pdf,data/raw/veterans_carroll_johnstown_trail_2026-09-26.pdf,49d8d2676b10f1d607c73723c639fc49c0871028e2a72f0b465d2622c4ae7963,cached
+johnstown_arena,https://1stsummitarena.com/,data/raw/veterans_carroll_johnstown_arena_2026-09-26.html,88a0255ec803c7e0eb266bd404556376974e5952b7f22e791f39808c67824670,cached
+johnstown_history_group,https://lhhv.org/lhhv-pictures/lhhv-shows/,data/raw/veterans_carroll_johnstown_history_group_2026-09-26.html,8721bd4e911d5b7451632b4276364bb6485ba65b19ede5382450f34132fb2d7c,cached
+berryville_home,https://ccheritagemuseum.com/,data/raw/veterans_carroll_berryville_home_2026-09-26.html,,HTTP response code said error [ccheritagemuseum.com]: The requested URL returned error: 403
+berryville_park,https://berryvillear.gov/about-berryville/parks/pioneer-park/,data/raw/veterans_carroll_berryville_park_2026-09-26.html,55af25ee1b2ed06d8fc4a34dc50d42f62a743b4c236835e80afe09c29b88fa08,cached
+missouri_home,https://carrollton-mo-museum.com/,data/raw/veterans_carroll_missouri_home_2026-09-26.html,12e957998dc44e4dee3d493095fd590e8024a0baa1c9f3d7d4aebc84bd5da1f4,cached
+missouri_state_tourism,https://www.visitmo.com/things-to-do/carroll-county-historical-museum,data/raw/veterans_carroll_missouri_state_tourism_2026-09-26.html,bdfba165b1797e24052c77793674000a0663abad06f73b78e3e87f458848da83,cached
+missouri_society,https://carroll.mogenweb.org/histsoc.htm,data/raw/veterans_carroll_missouri_society_2026-09-26.html,ee67da9b79b680d05089278c0d84525e04ef1ce126e5acebe20a8aff4144f6a1,cached
+missouri_chamber,https://docu.team/mtiodew/index.php?store=120443,data/raw/veterans_carroll_missouri_chamber_2026-09-26.html,3fe4790510d62d6ae4ff548e7bb1cebb248204d93c688af03a9d34de856a37d3,cached
+illinois_about,https://www.historyincarrollcounty.org/about/,data/raw/veterans_carroll_illinois_about_2026-09-26.html,2d723000eb64cae3800fd890938b9307971703055e73e4e7bd163c8d7ccd7f3f,cached
+illinois_home,https://www.historyincarrollcounty.org/,data/raw/veterans_carroll_illinois_home_2026-09-26.html,15319439eb5ceb397a2bdb559b0af907c39b1df46dbbddfb142301b27cd53ac4,cached
+illinois_county_packet,https://cms9files.revize.com/carrollil/BOARD%20PACKET_8.7.25.pdf,data/raw/veterans_carroll_illinois_county_packet_2026-09-26.pdf,ffa3f5da1393587dbea8901ea5807124eb63b8bc95164c698d73600c7356c4dd,cached
+indiana_home,https://www.carrollcountymuseum.org/,data/raw/veterans_carroll_indiana_home_2026-09-26.html,5921b98ad52b6edc03a7661c3600023e8a146e7a201485444f0d9e8f9f9dd838,cached
+indiana_about,https://www.carrollcountymuseum.org/about-us,data/raw/veterans_carroll_indiana_about_2026-09-26.html,215a64c63a45563c83fe2cb510c7196f876e26a02c750cd4b777af9f8e80060a,cached
+indiana_city,https://cityofdelphi.org/community/explore/museums,data/raw/veterans_carroll_indiana_city_2026-09-26.html,,SSL connect error [cityofdelphi.org]: schannel: next InitializeSecurityContext failed: SEC_E_CERT_EXPIRED (0x80090328) - The received certificate has expired.
+ohio_home,https://sites.google.com/view/carrollcountyhistoricalsociety/,data/raw/veterans_carroll_ohio_home_2026-09-26.html,4ccf0dfee2522fefce4d5cd168c6a1045d1936f2a8e17577abb01c3940bacf5f,cached
+ohio_mccook,https://sites.google.com/view/carrollcountyhistoricalsociety/mccook-house,data/raw/veterans_carroll_ohio_mccook_2026-09-26.html,5bb5b73b0d34f1d98412954b762432df62c37f1412aec90b2fbabc95dc2942f4,cached
+ohio_mill,https://sites.google.com/view/carrollcountyhistoricalsociety/algonquin-mill-complex,data/raw/veterans_carroll_ohio_mill_2026-09-26.html,293403506106a30a348c98345f01319b35c53de041a38c5045f6a90e4c97026e,cached
+ohio_state_partners,https://www.ohiohistory.org/about-us/historic-site-management-partners/,data/raw/veterans_carroll_ohio_state_partners_2026-09-26.html,ae63b7bb241c705a71c0f816d088390b2d187ced30f19089e4a07b109fb2801f,cached
+mckenzie_city,https://mckenzietn.org/residents/community-resources/tourism/,data/raw/veterans_carroll_mckenzie_city_2026-09-26.html,bd4a5889838cb65313c198bd85a36e86b090447013e3c6fc75cfee23c2f1da95,cached
+mckenzie_museum_history,https://tn-roots.com/gordon-browning-museum/cchs/,data/raw/veterans_carroll_mckenzie_museum_history_2026-09-26.html,956b777863cbf501b72a2ad0d057b5d49b5465242cf24e68bcc00f2646f2e5ff,cached
+mckenzie_tourism,https://www.visitcarrolltn.com/things-to-do,data/raw/veterans_carroll_mckenzie_tourism_2026-09-26.html,ec390649b4d2c7c0be2862adbd922a50b1c0476c3c5c4c3b0c8972535853b76c,cached
+mckenzie_humane,https://cchspet.org/,data/raw/veterans_carroll_mckenzie_humane_2026-09-26.html,1d43cc99a90e108f1e755eb9e5c38ea40a618b09ae38d153af056aa1b6a2c4ee,cached
+georgia_history_home,https://www.carrollcountyhistory.org/,data/raw/veterans_carroll_georgia_history_home_2026-09-26.html,69e03fdd9bfdb465bebfaef7be0e1a86454c40684c71214cf9804be6cbe580b9,cached
+georgia_history_brochure,https://www.carrollcountyhistory.org/PDFs/CCHS%20Brochure-%202013.pdf,data/raw/veterans_carroll_georgia_history_brochure_2026-09-26.pdf,6d68a485a3511978b89995c357cd6213db7971046504f7a00f338d5fb627e73b,cached
+georgia_genealogy_home,https://ccgsga.org/,data/raw/veterans_carroll_georgia_genealogy_home_2026-09-26.html,2a13ce0751e1734ea4d047ee34066bf9d14e7e9932b8388eba7d007d539c15ed,cached
+georgia_genealogy_resources,https://ccgsga.org/resources/,data/raw/veterans_carroll_georgia_genealogy_resources_2026-09-26.html,955c5513ccc444235f1f06f33b864826c3bbffac7e1d4341474665662e53edba,cached
+georgia_state_directory,https://dlg.usg.edu/record/dlg_ggpd_y-ga-bs700-pa7-bs1-bd5-b1996,data/raw/veterans_carroll_georgia_state_directory_2026-09-26.html,9b922b8da6469594f030c4cf45194799de51a337fc3c928d3fb0557cadad342e,cached
+mckenzie_operator,https://www.gordonbrowningmuseumcarrollcountyhistoricalsociety.org/,data/raw/veterans_carroll_mckenzie_operator_2026-09-26.html,d5cda332183fdc0f5119dea506cf277c56224baffb6dad17e887473c589c6416,cached
+georgia_genealogy_about,https://ccgsga.org/about/,data/raw/veterans_carroll_georgia_genealogy_about_2026-09-26.html,2312ebc7b551a538058cad7cdd545a242fb214c33889f38422db8e621cc448e7,cached
+irs_mo,https://www.irs.gov/pub/irs-soi/eo_mo.csv,data/raw/veterans_carroll_irs_mo_2026-09-26.csv,13f4a4f8dee4e0399afce5c20f2cf19e0471864d567006610b0681d082c87563,cached
+irs_ga,https://www.irs.gov/pub/irs-soi/eo_ga.csv,data/raw/veterans_carroll_irs_ga_2026-09-26.csv,977f508805a8ab7f16550fde5cacc74ebce0a0418b650a1b38ae03a453dbef6b,cached
+irs_wa,https://www.irs.gov/pub/irs-soi/eo_wa.csv,data/raw/veterans_carroll_irs_wa_2026-09-26.csv,fe365f5d78c3df8c254df541fbf301b97fab125dfe66a3c87c29cd49fd1868ed,cached
+ohio_state_mccook,https://www.ohiohistory.org/visit/browse-historical-sites/mccook-house/,data/raw/veterans_carroll_ohio_state_mccook_2026-09-26.html,bf9bc499b02fd8e658c8b07b7080471f511ac20e8bc18fe2fee0dec0c7e15656,cached
+johnstown_fieldtrip,https://1stsummitarena.com/experienceice/,data/raw/veterans_carroll_johnstown_fieldtrip_2026-09-26.html,8cdcd4f7638b9603fdc374027646ae065e1d7294507d817d02dfe3e08bcbb9df,cached
+ambiguous_society_domain,https://carrollcountyhistoricalsociety.com/,data/raw/veterans_carroll_ambiguous_society_domain_2026-09-26.html,,SSL connect error [carrollcountyhistoricalsociety.com]: schannel: next InitializeSecurityContext failed: SEC_E_CERT_EXPIRED (0x80090328) - The received certificate has expired.

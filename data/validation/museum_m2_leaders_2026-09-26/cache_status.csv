@@ -1,0 +1,48 @@
+id,url,path,sha256,status
+amnh_visit,https://www.amnh.org/plan-your-visit,data/raw/m2_leaders_amnh_visit_2026-09-26.html,,HTTP response code said error [www.amnh.org]: The requested URL returned error: 403
+crystal_leadership,https://crystalbridges.org/news/crystal-bridges-and-the-momentary-announce-key-leadership-appointments-26,data/raw/m2_leaders_crystal_leadership_2026-09-26.html,076c2ef651f38c8a7266aa72fff2521ef0d413badf272d63925a1ba129504bd4,cached
+police_home,https://www.internationalpolicemuseum.org/,data/raw/m2_leaders_police_home_2026-09-26.html,3c76bb927b4eed23f6447eca95c51a31e46de484355fd122f1e676aa22bf76b5,cached
+armor_visit,https://www.museumofamericanarmor.com/visit-us,data/raw/m2_leaders_armor_visit_2026-09-26.html,a9a031f0829d6c8c00376d8f9cab0f54f852c1b27952a7fb14b67f283464956d,cached
+armor_mission,https://www.museumofamericanarmor.com/our-mission,data/raw/m2_leaders_armor_mission_2026-09-26.html,cb11cc25ec026ffee5a47c35b7889f50f7cdf392f3fe3d0a6944f82a6417c5e7,cached
+seneca_home,https://senecamuseum.org/,data/raw/m2_leaders_seneca_home_2026-09-26.html,012958f40ae99724220a8f1808a5222dfd75180ffbbb89c2fb9e9c9cffe07f59,cached
+folk_home,https://www.internationalfolkart.org/,data/raw/m2_leaders_folk_home_2026-09-26.html,,Timeout was reached [moifa.org]: Operation timed out after 45325 milliseconds with 0 bytes received
+nmaahc_visit,https://nmaahc.si.edu/visit,data/raw/m2_leaders_nmaahc_visit_2026-09-26.html,,HTTP response code said error [nmaahc.si.edu]: The requested URL returned error: 403
+nmai_visit,https://americanindian.si.edu/visit,data/raw/m2_leaders_nmai_visit_2026-09-26.html,,HTTP response code said error [americanindian.si.edu]: The requested URL returned error: 403
+acwm_home,https://acwm.org/,data/raw/m2_leaders_acwm_home_2026-09-26.html,8391a2de5cb96f97b77ea88b0fb52dc145639d41a65a0f7592c1cd2a8e4a05ba,cached
+old_world_home,https://oldworldwisconsin.wisconsinhistory.org/,data/raw/m2_leaders_old_world_home_2026-09-26.html,ce1e784802633c2ca5c8b27214e5863d0816c8105bee72c16050275bacdf1028,cached
+medal_tx_home,https://mohmuseum.org/,data/raw/m2_leaders_medal_tx_home_2026-09-26.html,7693a601bb7abaf83bee54abeecc13feffa5c9731707cb4a7d18f26de7f3c09e,cached
+medal_tn_home,https://mohhc.org/,data/raw/m2_leaders_medal_tn_home_2026-09-26.html,1f61817731e203f111e915347aa9896ed3bf32fc37d0ba568fac1557616e2bca,cached
+acwm_locations,https://acwm.org/visit/our-locations/,data/raw/m2_leaders_acwm_locations_2026-09-26.html,998293238b36449ff7014bb3e6c6dd1df879e8f00d85905baa45442b76cb25b4,cached
+acwm_about,https://acwm.org/about/,data/raw/m2_leaders_acwm_about_2026-09-26.html,fc8340379d498414f123a2bdefc945c422f31f8fa7ce32ad7021c4f49e5da002,cached
+acwm_contact,https://acwm.org/about/our-people/contact-us/,data/raw/m2_leaders_acwm_contact_2026-09-26.html,d12eeda601d70d0d5a80778f2e972a84aa6bf6952d15adfefc680812b6fc7eff,cached
+gettysburg_home,https://www.gettysburgmuseum.com/,data/raw/m2_leaders_gettysburg_home_2026-09-26.html,f12757430ba38910b04ab7bbb909a2a81729ba3f2d36b5bd27b3b3fec1f57b20,cached
+gettysburg_visit,https://www.gettysburgmuseum.com/visit.html,data/raw/m2_leaders_gettysburg_visit_2026-09-26.html,dd0ddacc999199c2fcc53fded0b2149db29d0b2f644261a0f6232bb79f8da040,cached
+medal_tn_history,https://www.mohhc.org/center-history/,data/raw/m2_leaders_medal_tn_history_2026-09-26.html,3692e9c893312356229f3ec106f01db39a7d50b505eb3badd34beb9618544e4f,cached
+police_board,https://www.internationalpolicemuseum.org/board.php,data/raw/m2_leaders_police_board_2026-09-26.html,f1022fdd742db21de15fc29b93ded0a8b51e9be5b3483b206a22f9cf8a3ea8ba,cached
+police_news,https://www.internationalpolicemuseum.org/news.php,data/raw/m2_leaders_police_news_2026-09-26.html,12483ab8189d4d5c4aa9bc52bc794c6e7d6f2124a08d792beda92f1a065ef2a4,cached
+seneca_about,https://senecamuseum.org/about/,data/raw/m2_leaders_seneca_about_2026-09-26.html,4cd5b77b894a76093ae601ae841d0c0322b67a62e7e1c7dbe0ec62afcfd3a988,cached
+old_world_foundation,https://oldworldfoundation.org/about-owf.html,data/raw/m2_leaders_old_world_foundation_2026-09-26.html,a3b491e7d12c8772c97cab31e78ab677a2ca2653aa9e711b5e9d5cde89a84a83,cached
+folk_new_home,https://www.moifa.org/,data/raw/m2_leaders_folk_new_home_2026-09-26.html,4cf5d67186c4e241896a7acd09ed099ba805b00822c319365a020378175907b7,cached
+nmai_ny,https://americanindian.si.edu/visit/ny,data/raw/m2_leaders_nmai_ny_2026-09-26.html,,HTTP response code said error [americanindian.si.edu]: The requested URL returned error: 403
+nmai_about,https://americanindian.si.edu/about,data/raw/m2_leaders_nmai_about_2026-09-26.html,,HTTP response code said error [americanindian.si.edu]: The requested URL returned error: 403
+si_nmai_ny,https://www.si.edu/museums/american-indian-museum-heye-center,data/raw/m2_leaders_si_nmai_ny_2026-09-26.html,,HTTP response code said error [www.si.edu]: The requested URL returned error: 403
+si_nmai_dc,https://www.si.edu/museums/american-indian-museum,data/raw/m2_leaders_si_nmai_dc_2026-09-26.html,,HTTP response code said error [www.si.edu]: The requested URL returned error: 403
+si_nmaahc,https://www.si.edu/museums/african-american-museum,data/raw/m2_leaders_si_nmaahc_2026-09-26.html,,HTTP response code said error [www.si.edu]: The requested URL returned error: 403
+amnh_about,https://www.amnh.org/about,data/raw/m2_leaders_amnh_about_2026-09-26.html,,HTTP response code said error [www.amnh.org]: The requested URL returned error: 403
+seneca_plan,https://sni.org/app/uploads/2021/08/6-2024-SNI-LRTP-_-FINAL-w-Appendices.pdf,data/raw/m2_leaders_seneca_plan_2026-09-26.pdf,,HTTP response code said error [sni.org]: The requested URL returned error: 404
+nmaahc_labs,https://nmaahc.si.edu/sites/default/files/downloads/nmaahc_digitalarchivesspecialist_package.pdf,data/raw/m2_leaders_nmaahc_labs_2026-09-26.pdf,63228329a4b32972d751b2a5b334b471f4f7f48a2fedd8b7ee5a8b108b8b4138,cached
+nmaahc_access,https://nmaahc.si.edu/visit/accessibility-options,data/raw/m2_leaders_nmaahc_access_2026-09-26.html,,HTTP response code said error [nmaahc.si.edu]: The requested URL returned error: 403
+nmai_contact,https://americanindian.si.edu/about/contact,data/raw/m2_leaders_nmai_contact_2026-09-26.html,,HTTP response code said error [americanindian.si.edu]: The requested URL returned error: 403
+police_2016,https://www.internationalpolicemuseum.org/news/The-Scanner-V1-Issue-1-Apr-2016.pdf,data/raw/m2_leaders_police_2016_2026-09-26.pdf,3ac90258541020c5283bcf640f5acb0dbbe0c90e89d1b506e44b987c35164e39,cached
+police_2021,https://www.internationalpolicemuseum.org/newsattachments/news2021-03.pdf,data/raw/m2_leaders_police_2021_2026-09-26.pdf,59cda1bb777cb0bc9758beea7209563aa9696c651a1cf663726964a4e9496eae,cached
+gettysburg_about,https://www.gettysburgmuseum.com/about.html,data/raw/m2_leaders_gettysburg_about_2026-09-26.html,4c380a67d162d17e402afbdfbf6c29c124a6ee587f85a4d4b1702e5268f9a71b,cached
+old_world_plan,https://oldworldwisconsin.wisconsinhistory.org/plan/,data/raw/m2_leaders_old_world_plan_2026-09-26.html,e93934cac6e29bf1471e01160bfc226b5589ea5c3af9baf62bb3d2dc774d74a6,cached
+folk_contact,https://www.moifa.org/about/contact-us.html,data/raw/m2_leaders_folk_contact_2026-09-26.html,c1a05c4a7a50a6f5272c9187dfaa2667beddab2ed8b37dc4ddd1cb73ee5b7aaf,cached
+nm_lea,https://www.lea.nm.gov/law-enforcement-certification-board/board-meetings/,data/raw/m2_leaders_nm_lea_2026-09-26.html,61c18dc5a5d21b3af220c690a7bfb4fdffc9e29ffef73b81ed4b04c53fb48dd9,cached
+american_history_visit,https://americanhistory.si.edu/visit,data/raw/m2_leaders_american_history_visit_2026-09-26.html,,HTTP response code said error [americanhistory.si.edu]: The requested URL returned error: 403
+natural_history_visit,https://naturalhistory.si.edu/visit,data/raw/m2_leaders_natural_history_visit_2026-09-26.html,,HTTP response code said error [naturalhistory.si.edu]: The requested URL returned error: 403
+iowa_home,https://blackiowa.org/,data/raw/m2_leaders_iowa_home_2026-09-26.html,,HTTP response code said error [blackiowa.org]: The requested URL returned error: 403
+seneca_epd,https://sni.org/draft-water-quality-standards-extended/,data/raw/m2_leaders_seneca_epd_2026-09-26.html,f0d730c2bce44a3c45ccd1a20ecee5bf38b0c725f8ae78dfb11770f700212305,cached
+seneca_move,https://historicpath.com/current-event/new-seneca-iroquois-national-museum-and-cultural-center-opens-salamanca-708,data/raw/m2_leaders_seneca_move_2026-09-26.html,c003b2ac5e05fdb9a6670b56c393b0e3e0f7d44302fdd055dab82a39138fc77b,cached
+police_old_location,https://visitrockawaybeach.org/international-police-museum/,data/raw/m2_leaders_police_old_location_2026-09-26.html,fd78534ca45d7a47cbb51538121414784ade95e40caffc8f60b1909ecffc6e48,cached
+nm_culture,https://www.newmexicoculture.org/visit,data/raw/m2_leaders_nm_culture_2026-09-26.html,7451e9e4442f43f37b1c6b45d34123115ab46693d4b8709fdc171a862632ed72,cached

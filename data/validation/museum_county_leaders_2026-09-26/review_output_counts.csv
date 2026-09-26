@@ -1,0 +1,16 @@
+file,rows
+affiliation_summary.csv,9
+category_review.csv,137
+chain_overlap.csv,4
+chain_summary.csv,7
+identity_audit.csv,121
+institutions.csv,424
+multisite_records.csv,4
+nearby_pairs.csv,142
+not_museum_review.csv,7
+ranking.csv,47854
+ranking_before_category_review.csv,47867
+singularity_candidates.csv,141
+source_records.csv,520
+subject_review.csv,230
+subjects.csv,17

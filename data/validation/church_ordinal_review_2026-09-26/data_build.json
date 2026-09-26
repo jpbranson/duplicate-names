@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "built_utc": "2026-09-26 19:44:26 UTC",
+  "overture_release": "2026-08-19.0",
+  "cloud_cost_usd": 0,
+  "publication_ready": false,
+  "fields": ["entity_id", "primary_name", "name_expanded", "name_core", "lon", "lat", "alt_names", "analysis_eligible", "review_status", "affiliation", "source", "source_id", "analysis_exclusion", "denom_norm", "ordinal"],
+  "collections": {
+    "museums": {
+      "records": 52719,
+      "eligible": 52255,
+      "unmapped": 0,
+      "aliases": 6329,
+      "verified": 174
+    },
+    "churches": {
+      "records": 540778,
+      "eligible": 442832,
+      "unmapped": 0,
+      "aliases": 4463,
+      "verified": 0
+    }
+  },
+  "maplibre_version": "5.24.0",
+  "mapgl_package_version": "0.5.0",
+  "osm_data_included": false,
+  "remote_tiles": false
+}

@@ -1,0 +1,41 @@
+Back to Property Listing
+Tax Unit:
+74 - FW  Wayne
+Tax Type:
+Personal
+Tax ID:
+074-0001125
+Year Assessed:
+2017
+Amount to Certify:
+30
+Owner:
+Eleventh Missionary Baptist Church
+Mailing Address:
+5011 Decatur Rd
+Mailing Address 2:
+City:
+Fort Wayne
+State:
+IN
+Zip Code:
+46816
+Country:
+USA
+Description of Property:
+Religious Organizations
+Property Address:
+5011 Decatur Rd.
+Property Address 2:
+Property City:
+Fort Wayne
+Property Zip Code:
+46816
+Property Country:
+USA
+Date Certified:
+03/11/2019
+Released:
+No
+Vacated:
+No

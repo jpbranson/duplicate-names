@@ -67,51 +67,70 @@ metric_singularity_collisions <- function(entities) {
                    .data$name_expanded)
 }
 
-#' Territory radius (C2, descriptive half)
-#'
-#' Nearest-neighbour distance between same-name congregations, on s2 geometry.
-#' Never project first — see DESIGN.md §7.
+
+#' Territory radius (C2): leave-one-out nearest same-name congregation on s2.
 metric_territory_radius <- function(entities, name_value) {
-  # TODO(phase-3): sf::st_nearest_feature + st_distance within each name class
-  stop("metric_territory_radius(): Phase 3.", call. = FALSE)
+  x <- dn_church_metric_rows(entities)
+  x <- x[x$name_core %in% name_value,]
+  x$neighbor_id <- NA_character_; x$distance_km <- NA_real_
+  groups <- split(seq_len(nrow(x)),x$name_core)
+  for (idx in groups) {
+    if(length(idx)<2L) next
+    nn <- dn_leave_one_out_s2(x$lon[idx],x$lat[idx])
+    x$neighbor_id[idx] <- x$entity_id[idx[nn$neighbor]]
+    x$distance_km[idx] <- nn$distance_m/1000
+  }
+  x[,c('entity_id','name_core','denom_norm','lon','lat','neighbor_id','distance_km')]
 }
 
-#' Municipal exclusivity rate (C2, the actual test)
-#'
-#' Of all places holding at least one congregation of denomination D, what
-#' fraction hold exactly one "First D Church"? This is the hypothesis the
-#' churches post turns on: that the apparent spacing rule is really a
-#' one-per-settlement rule, and observed distances are settlement distances.
-#'
-#' `all_places` is required rather than optional: computing this from occupied
-#' places alone makes the denominator conditional on the numerator.
+#' Municipal exclusivity: occupied denominator includes ZERO-First places.
+#' Census CDPs are not municipalities; callers report a separate incorporated cut.
 metric_municipal_exclusivity <- function(entities, all_places) {
-  # TODO(phase-3)
-  stop("metric_municipal_exclusivity(): Phase 3.", call. = FALSE)
+  if(!'GEOID' %in% names(all_places) || anyDuplicated(all_places$GEOID)) stop('Unique Census place universe required')
+  x <- dn_church_metric_rows(entities)
+  if(any(!is.na(x$place_geoid) & !x$place_geoid %in% all_places$GEOID)) stop('Entity place absent from Census universe')
+  occupied <- x |>
+    dplyr::filter(!is.na(.data$place_geoid),!is.na(.data$denom_norm)) |>
+    dplyr::group_by(.data$denom_norm,.data$place_geoid) |>
+    dplyr::summarise(n_congregations=dplyr::n(),n_first=sum(.data$ordinal %in% 1L),.groups='drop')
+  occupied |>
+    dplyr::group_by(.data$denom_norm) |>
+    dplyr::summarise(n_occupied_places=dplyr::n(),n_zero_first=sum(.data$n_first==0L),
+      n_exactly_one_first=sum(.data$n_first==1L),n_multiple_first=sum(.data$n_first>=2L),
+      exclusivity_rate=.data$n_exactly_one_first/.data$n_occupied_places,.groups='drop')
 }
 
-#' Ordinal ladder completeness (C3)
-#'
-#' For each place with a maximum ordinal N, what share of 1..N is present?
-#' Missing rungs are stories — mergers, closures, renames — but also possibly
-#' data gaps, and the post has to be honest about not being able to tell those
-#' apart from names alone.
 metric_ladder_completeness <- function(entities) {
-  # TODO(phase-3)
-  stop("metric_ladder_completeness(): Phase 3.", call. = FALSE)
+  x <- dn_church_metric_rows(entities)
+  if(any(!is.na(x$ordinal) & (x$ordinal<1L | x$ordinal!=floor(x$ordinal)))) stop('Positive integer ordinals required')
+  x |>
+    dplyr::filter(!is.na(.data$place_geoid),!is.na(.data$denom_norm),!is.na(.data$ordinal)) |>
+    dplyr::group_by(.data$place_geoid,.data$place_name,.data$denom_norm) |>
+    dplyr::summarise(max_ordinal=max(.data$ordinal),n_observed_rungs=dplyr::n_distinct(.data$ordinal),
+      observed_rungs=paste(sort(unique(.data$ordinal)),collapse='|'),
+      missing_rungs=paste(setdiff(seq_len(max(.data$ordinal)),unique(.data$ordinal)),collapse='|'),
+      completeness=.data$n_observed_rungs/.data$max_ordinal,.groups='drop') |>
+    dplyr::arrange(dplyr::desc(.data$max_ordinal),.data$place_geoid,.data$denom_norm)
 }
 
-#' Naming-culture profile (C4)
 metric_name_style_profile <- function(entities) {
-  # TODO(phase-3)
-  stop("metric_name_style_profile(): Phase 3.", call. = FALSE)
+  x <- dn_church_metric_rows(entities)
+  x |>
+    dplyr::mutate(denom_norm=dplyr::coalesce(.data$denom_norm,'unknown'),
+      name_style=dplyr::coalesce(.data$name_style,'unclassified')) |>
+    dplyr::count(.data$denom_norm,.data$name_style,name='n_entities') |>
+    dplyr::group_by(.data$denom_norm) |>
+    dplyr::mutate(n_family=sum(.data$n_entities),share=.data$n_entities/.data$n_family) |>
+    dplyr::ungroup()
 }
 
-#' Places holding two or more "First <denomination>" congregations
-#'
-#' Emitted as a named artifact because it is the raw material for post 4
-#' (DESIGN.md §5, §6.4), not because post 2 plots it directly.
 artifact_municipal_multiplicity <- function(entities) {
-  # TODO(phase-3)
-  stop("artifact_municipal_multiplicity(): Phase 3.", call. = FALSE)
+  x <- dn_church_metric_rows(entities)
+  x |>
+    dplyr::filter(!is.na(.data$place_geoid),!is.na(.data$denom_norm),.data$ordinal %in% 1L) |>
+    dplyr::group_by(.data$place_geoid,.data$place_name,.data$denom_norm) |>
+    dplyr::summarise(n_first=dplyr::n(),entity_ids=paste(sort(.data$entity_id),collapse='|'),
+      names=paste(sort(unique(.data$primary_name)),collapse=' | '),.groups='drop') |>
+    dplyr::filter(.data$n_first>=2L) |>
+    dplyr::arrange(dplyr::desc(.data$n_first),.data$place_geoid)
 }

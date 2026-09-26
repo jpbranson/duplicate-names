@@ -1,0 +1,30 @@
++ church_name_overrides_file dispatched
+
+v church_name_overrides_file completed [930ms, 892 B]
++ church_name_overrides dispatched
+v church_name_overrides completed [80ms, 657 B]
++ church_pairs dispatched
+[church pairs] 447836 worship-site queries; 934283 source targets
+[church pairs] scoring 565643 candidate pairs; no legacy-only comparisons
+[church pairs] batch 1/12
+[church pairs] batch 2/12
+[church pairs] batch 3/12
+[church pairs] batch 4/12
+[church pairs] batch 5/12
+[church pairs] batch 6/12
+[church pairs] batch 7/12
+[church pairs] batch 8/12
+[church pairs] batch 9/12
+[church pairs] batch 10/12
+[church pairs] batch 11/12
+[church pairs] batch 12/12
+v church_pairs completed [3m 27.3s, 8.40 MB]
++ church_records dispatched
+v church_records completed [34.5s, 107.24 MB]
++ church_analysis dispatched
+v church_analysis completed [41s, 79.55 MB]
++ church_named_analysis dispatched
+v church_named_analysis completed [690ms, 84.81 MB]
++ church_output_files dispatched
+v church_output_files completed [43.1s, 337.53 MB]
+v ended pipeline [7m 5.4s, 7 completed, 8 skipped]

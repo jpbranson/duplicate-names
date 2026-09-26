@@ -1,0 +1,28 @@
+id,url,path,sha256,status
+allegan_operator,https://alleganoldjailmuseum.com/,data/raw/jail_followup_allegan_operator_2026-09-26.html,bbce2ba672531007a078ae01ec3bfb03b4d7c088f99227dd898d88489971db02,cached
+greenwood_about,https://www.greenwoodmuseumonline.com/Museum-Information/About-Us,data/raw/jail_followup_greenwood_about_2026-09-26.html,8d2c6c0b6cf0a2e44d54e942c3d4c1fc23c67c57f4a7f4b0cd12f97cf29be0ac,cached
+greenwood_location,https://www.greenwoodmuseumonline.com/Museum-Information/Our-Location,data/raw/jail_followup_greenwood_location_2026-09-26.html,2ccc3bbb899c01bbf8b3e3611baeffd2722f9ad93116f74b6a2ab89d0f4c18bf,cached
+sandersville_about,https://wacohistorical.org/about-us/,data/raw/jail_followup_sandersville_about_2026-09-26.html,c6a39af5b8b193baf36db4fecdfa7887f2efebb1c87ba4f33dfc6b4c405fb864,cached
+sandersville_jail,https://wacohistorical.org/genealogy/,data/raw/jail_followup_sandersville_jail_2026-09-26.html,a08c92f37ddb62191798ebe55426126b699b48955f1d4f893739173934b70b3e,cached
+smethport_home,https://www.mchsmuseum.org/,data/raw/jail_followup_smethport_home_2026-09-26.html,e64cc85460b53c15843fcac4cbdec8067e709f768be13b164ae20d56c621e34c,cached
+smethport_info,https://www.mchsmuseum.org/museum-info,data/raw/jail_followup_smethport_info_2026-09-26.html,04a6d1eac53a56782ef4e85c3c4ea62b407e7716ddf75f958b0ff1608f8cd4d4,cached
+barnesville_operator,https://www.blchs.com/,data/raw/jail_followup_barnesville_operator_2026-09-26.html,829a316ed39deb7e54ed17a17df1470ca69b37873b7007321e0ff0e1181bf225,cached
+lawrenceburg_attractions,https://lawrencecountytn.gov/visitors/attractions/,data/raw/jail_followup_lawrenceburg_attractions_2026-09-26.html,16cc56f976ede14e3ac51043c57d1831571c56ab4cf10a9daa43e859b44e829e,cached
+lawrenceburg_society,https://lawrencecountytn.gov/county-services/get-involved/,data/raw/jail_followup_lawrenceburg_society_2026-09-26.html,b52d30c7d0562f62f37cbe3b8a5ca4bb1130d29a827495d8714e77044cacd39c,cached
+thompson_state,https://visitmt.com/listing/old-jail-museum-14188,data/raw/jail_followup_thompson_state_2026-09-26.html,24a39b4ef7eb7fc6c56888ac4642cb088981c945405fcc30fb73980d6f098ea1,cached
+winchester_city,https://www.winchester-tn.com/attractions/slideshows/old-jail-museum,data/raw/jail_followup_winchester_city_2026-09-26.html,,HTTP response code said error [www.winchester-tn.com]: The requested URL returned error: 403
+hayesville_heritage,https://www.blueridgeheritage.com/destinations/clay-county-museum/,data/raw/jail_followup_hayesville_heritage_2026-09-26.html,22b94cfc91291f2746f3581352296cd7b01fc287f4c8dba54ce6bdad6658737e,cached
+chambersburg_operator,https://www.franklinhistorical.org/,data/raw/jail_followup_chambersburg_operator_2026-09-26.html,951dc442e0ff36874820f355f635da46c81b24507611a9457f8f2d7630c03809,cached
+st_augustine_operator,https://www.historictours.com/st-augustine,data/raw/jail_followup_st_augustine_operator_2026-09-26.html,b39709a877517cc6e144979a8a1798e4b4cce87e1ca634723d366e88b0ea9420,cached
+st_augustine_jail,https://www.staugustineoldjail.com/,data/raw/jail_followup_st_augustine_jail_2026-09-26.html,c9fd89ddd94284250642b22610327293868a40bcbc5cea61d999a05061a389e2,cached
+allegan_village,https://alleganoldjailmuseum.com/the-village/,data/raw/jail_followup_allegan_village_2026-09-26.html,dee48ff78088ea2bd8807d73511be30482ab1600822a48280c3d2ff535a31c9e,cached
+allegan_about,https://alleganoldjailmuseum.com/about/,data/raw/jail_followup_allegan_about_2026-09-26.html,364c2b8ee96f825eac4e4b38a8cc5916c28445c9d2e10b803a3551d303640ca6,cached
+hayesville_operator,https://clayhistoryarts.org/,data/raw/jail_followup_hayesville_operator_2026-09-26.html,,HTTP response code said error [clayhistoryarts.org]: The requested URL returned error: 403
+hayesville_partner,https://historichayesvilleinc.com/partnership-in-action,data/raw/jail_followup_hayesville_partner_2026-09-26.html,,HTTP response code said error [historichayesvilleinc.com]: The requested URL returned error: 503
+lawrenceburg_operator,http://home.lorettotel.net/~lcarchives/lchistsoc.htm,data/raw/jail_followup_lawrenceburg_operator_2026-09-26.html,90cbf842408b064b0dafa65c06a63e530b78f6a01a823a01d49e94cbdf752fc6,cached
+barnesville_registration,https://ecorp.sos.ga.gov/BusinessSearch/DownloadFile?filingNo=16843804,data/raw/jail_followup_barnesville_registration_2026-09-26.pdf,,HTTP response code said error [ecorp.sos.ga.gov]: The requested URL returned error: 403
+greenwood_cabin,https://www.greenwoodmuseumonline.com/Historic-Properties/Vineyard-Cabin,data/raw/jail_followup_greenwood_cabin_2026-09-26.html,bb6747484a589b7a6f4a93f1891412161f01030a9a0f2e75f4524a3914ad4010,cached
+greenwood_school,https://www.greenwoodmuseumonline.com/Historic-Properties/Redwine-Pioneer-Schoolhouse,data/raw/jail_followup_greenwood_school_2026-09-26.html,21432ff90a6769718f6cd100544f2be8225755320ec9087fee92671c6738e9f4,cached
+greenwood_jail,https://www.greenwoodmuseumonline.com/Historic-Properties/Old-Jail-Museum,data/raw/jail_followup_greenwood_jail_2026-09-26.html,39004c4331bbcfe392a9b54987b70f595367e6d1f17e36e9e515f789a1c56253,cached
+greenwood_tours,https://www.greenwoodmuseumonline.com/Education/Guided-Tours,data/raw/jail_followup_greenwood_tours_2026-09-26.html,8a30e4ec473287c6792d7ebccec65a033282a7c8b777965f082c0b4c9d1dbaff,cached
+greenwood_board,https://www.greenwoodmuseumonline.com/Museum-Information/Board-of-Directors,data/raw/jail_followup_greenwood_board_2026-09-26.html,19c31b81184273a0aec2f652b598f3c304952fa109d98a1f2c83d781ffaf7220,cached

@@ -1,0 +1,3 @@
+Error in dn_museum_analysis(review$records, targets::tar_read(museum_chain_rules),  : 
+  Museum decisions require valid statuses, evidence and reviewer/date.
+Execution halted

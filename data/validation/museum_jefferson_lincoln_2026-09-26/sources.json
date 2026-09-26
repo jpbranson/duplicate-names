@@ -1,0 +1,177 @@
+[
+  {
+    "id": "jeff_ne_destination",
+    "url": "https://visitoregontrail.org/historical-sites/",
+    "extension": "html"
+  },
+  {
+    "id": "jeff_ne_guide",
+    "url": "https://fairbury.com/wp-content/uploads/2022/04/2022-Jefferson-County-Guide.pdf",
+    "extension": "pdf"
+  },
+  {
+    "id": "jeff_in_home",
+    "url": "https://jchshc.org/",
+    "extension": "html"
+  },
+  {
+    "id": "jeff_in_archives",
+    "url": "https://historicjeffersoncounty.org/",
+    "extension": "html"
+  },
+  {
+    "id": "jeff_in_destination",
+    "url": "https://visitmadison.org/explore/historic-sites/history-and-art-center/",
+    "extension": "html"
+  },
+  {
+    "id": "jeff_co_hiwan",
+    "url": "https://www.jeffco.us/1251/Hiwan-Heritage-Park",
+    "extension": "html"
+  },
+  {
+    "id": "jeff_co_society",
+    "url": "https://emahs.org/",
+    "extension": "html"
+  },
+  {
+    "id": "jeff_ks_home",
+    "url": "https://www.jchsks.com/",
+    "extension": "html"
+  },
+  {
+    "id": "jeff_ks_county",
+    "url": "https://www.jfcountyks.com/383/History-of-Jefferson-County",
+    "extension": "html"
+  },
+  {
+    "id": "jeff_ny_home",
+    "url": "https://www.jeffersoncountyhistoricalsociety.com/",
+    "extension": "html"
+  },
+  {
+    "id": "jeff_ia_minutes",
+    "url": "https://cityoffairfieldiowa.com/DocumentCenter/View/10980/12-17-24-Museum-Board-Minutes",
+    "extension": "pdf"
+  },
+  {
+    "id": "jeff_ga_city",
+    "url": "https://www.cityoflouisvillega.org/jefferson-county-historical-society/",
+    "extension": "html"
+  },
+  {
+    "id": "jeff_ga_plan",
+    "url": "https://csrarc.ga.gov/sites/default/files/csrarc/documents/Planning/complete_doc.pdf",
+    "extension": "pdf"
+  },
+  {
+    "id": "jeff_il_home",
+    "url": "https://jchshistoricalvillage.org/",
+    "extension": "html"
+  },
+  {
+    "id": "jeff_il_events",
+    "url": "https://jchshistoricalvillage.org/events/list/",
+    "extension": "html"
+  },
+  {
+    "id": "jeff_il_guide",
+    "url": "https://www.mtvernon.com/media/ja2hlchn/mt-vernon-welcome-packet-2023.pdf",
+    "extension": "pdf"
+  },
+  {
+    "id": "lincoln_ky_city",
+    "url": "https://stanford.ky.gov/About%20Us/Pages/Lincoln-County-Courthouse.aspx",
+    "extension": "html"
+  },
+  {
+    "id": "lincoln_wa_home",
+    "url": "https://lincolncountymuseums.org/",
+    "extension": "html"
+  },
+  {
+    "id": "lincoln_wa_contact",
+    "url": "https://lincolncountymuseums.org/contact-2/",
+    "extension": "html"
+  },
+  {
+    "id": "lincoln_co_notice",
+    "url": "https://cdn1.creativecirclemedia.com/limon/files/20250423-100009-a6d-2025-04-24.pdf",
+    "extension": "pdf"
+  },
+  {
+    "id": "lincoln_co_president",
+    "url": "https://thefacesoflincolncountyco.com/sheri-gaskins/",
+    "extension": "html"
+  },
+  {
+    "id": "lincoln_tn_chamber",
+    "url": "https://939c9b01811224bb3dcf-d6f090436a6f3838a347f2f22505b78d.ssl.cf5.rackcdn.com/uploads/editions/12473/original_bb5db226ac43e74fdd5534214763cfc7ec7b9112.pdf",
+    "extension": "pdf"
+  },
+  {
+    "id": "lincoln_nm_home",
+    "url": "https://www.nmlincolncountyhistoricalsociety.com/",
+    "extension": "html"
+  },
+  {
+    "id": "lincoln_ne_home",
+    "url": "https://lincolncountymuseum.org/",
+    "extension": "html"
+  },
+  {
+    "id": "lincoln_ne_events",
+    "url": "https://lincolncountymuseum.org/museum-events/",
+    "extension": "html"
+  },
+  {
+    "id": "lincoln_ga_state",
+    "url": "https://exploregeorgia.org/lincolnton/arts-culture/museums/lincoln-county-historical-park",
+    "extension": "html"
+  },
+  {
+    "id": "lincoln_ga_home",
+    "url": "https://www.lincolncountyhistoricalsocietyga.org/",
+    "extension": "html"
+  },
+  {
+    "id": "lincoln_or_about",
+    "url": "https://oregoncoasthistory.org/about-us/",
+    "extension": "html"
+  },
+  {
+    "id": "lincoln_or_burrows",
+    "url": "https://oregoncoasthistory.org/museums-exhibits/burrows-house/",
+    "extension": "html"
+  },
+  {
+    "id": "lincoln_or_city",
+    "url": "https://www.cityoftoledo.org/1785/Museums-Local-History",
+    "extension": "html"
+  },
+  {
+    "id": "irs_ne",
+    "url": "https://www.irs.gov/pub/irs-soi/eo_ne.csv",
+    "extension": "csv"
+  },
+  {
+    "id": "irs_co",
+    "url": "https://www.irs.gov/pub/irs-soi/eo_co.csv",
+    "extension": "csv"
+  },
+  {
+    "id": "irs_nm",
+    "url": "https://www.irs.gov/pub/irs-soi/eo_nm.csv",
+    "extension": "csv"
+  },
+  {
+    "id": "irs_ky",
+    "url": "https://www.irs.gov/pub/irs-soi/eo_ky.csv",
+    "extension": "csv"
+  },
+  {
+    "id": "irs_tn",
+    "url": "https://www.irs.gov/pub/irs-soi/eo_tn.csv",
+    "extension": "csv"
+  }
+]

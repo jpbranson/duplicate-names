@@ -1,0 +1,13 @@
+{
+  "status": "passed",
+  "isolated_directory": "C:/Developer/duplicate-names/data/processed/museum_bundle_check_20260926_140143",
+  "no_project_profile": true,
+  "analysis_checkout_used_by_knit": false,
+  "final_publication_ready": false,
+  "build": {
+    "path": "C:/Developer/duplicate-names/data/processed/museum_bundle_check_20260926_140143/preview.html",
+    "bytes": 669813,
+    "pandoc": "3.11",
+    "input_files": ["R/config_blog.R", "R/embed.R", "R/theme_dupnames.R", "README.md", "_setup.R", "evidence-matching-validation.md", "evidence/matching-validation.html", "evidence/museum_adams_brown_2026-09-26.md", "evidence/museum_affiliation_followup_2026-09-26.md", "evidence/museum_clinton_madison_monroe_2026-09-26.md", "evidence/museum_county_leaders_2026-09-26.md", "evidence/museum_discovery_pioneer_2026-09-26.md", "evidence/museum_jail_followup_2026-09-26.md", "evidence/museum_next_leaders_2026-09-26.md", "evidence/museum_veterans_carroll_2026-09-26.md", "evidence/resolution_labelling_2026-09-15.csv", "evidence/resolution_validation_2026-09-15.md", "figures/review-counts-1.svg", "index.Rmd", "payload/checkpoint.csv", "payload/publication_blockers.csv", "payload/publication_gates.csv", "payload/recent_review_counts.csv", "payload/review_count_changes.csv", "payload/scope_word_review.csv", "payload/seed_institution.csv", "preview.css", "preview.html"]
+  }
+}

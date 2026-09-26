@@ -1,0 +1,30 @@
+$status
+[1] "validated_provisional"
+
+$raw_rows
+[1] 1032223
+
+$canonical_entities
+[1] 540778
+
+$eligible
+[1] 442832
+
+$scope_holds
+[1] 2
+
+$complete_factual_reviews
+[1] 0
+
+$analysis_ordinal_changes
+[1] 107
+
+$checks
+[1] 20
+
+$cloud_cost_usd
+[1] 0
+
+$publication_ready
+[1] FALSE
+

@@ -1,0 +1,585 @@
+{
+  "evidence": {
+    "FRANKLIN_ME": {
+      "url": "https://www.maine.gov/sos/archives/services-and-records-management/about/historical-organizations/franklin-historical-society",
+      "note": "Maine State Archives expressly links the Franklin society at 249 Hog Bay Road to PO Box 317, reconciling the Overture museum with the IMLS mailbox (mislabelled physical in the source). The society report in the 2018 town annual report, PDF pages 43-44, describes its East Franklin museum campus and separately located West Franklin park with granite-industry exhibits, a galamander and blacksmith shop. Consolidate the two source descriptions of the society museum; keep overall affiliation review pending until current governance and the separate park interpretation/counting scope are established. Neither the park nor another source row is invented. Evidence packet: data/validation/museum_franklin_heritage_newton_2026-09-26; original source fields and coordinates retained."
+    },
+    "FRANKLIN_WI": {
+      "url": "https://franklinhistory.net/about-us/",
+      "note": "Operator describes one integrated living-museum village in Lions Legend Park and lists its own governing board; the homepage identifies the president elected in May 2025. Operator contact and IRS EIN 237069911 link PO Box 320012 to the society, matching IMLS. Both sources use FRANKLINHISTORY.NET; the incomplete West Drexel physical field is not evidence of another museum. Consolidate the Legend Drive description and society mailing record. Buildings on this campus remain one institution; retain the society umbrella public name. Evidence packet: data/validation/museum_franklin_heritage_newton_2026-09-26; original source fields and coordinates retained."
+    },
+    "FRANKLIN_CT_MUSEUM": {
+      "url": "https://www.franklinct.gov/m/directory/department?did=46",
+      "note": "Ashbel Woodward Museum and the generic Franklin Town Administrative Departments source both give 387 Route 32. The generic row phone 860-642-1988 is expressly the museum board/programs contact in the current town directory; it describes this museum rather than a separate town office. Consolidate those two physical descriptions under the existing museum name. Current operator site announces a second campus at the Lebanon Road/Route 87 schoolhouse in August 2026. That campus role and the separate society/history-room record are not fully resolved, so overall review and affiliation remain pending. Do not infer not_museum from the generic department label. Evidence packet: data/validation/museum_franklin_heritage_newton_2026-09-26; original source fields and coordinates retained."
+    },
+    "FRANKLIN_CT_SOCIETY": {
+      "url": "https://sites.google.com/site/ashbelwoodwardmuseum/",
+      "note": "IMLS society EIN 061427987/PO Box 73 matches current IRS. The 2022 Last Green Valley guide separately lists Franklin Historical Society and Calvert Library History Room, and Friends of Ashbel Woodward Museum, both using PO Box 73. Current municipal and museum pages describe collaboration and an additional schoolhouse campus. A shared mailbox does not identify which museum institution the umbrella society source represents. Preserve this source separately pending a specific collection/site bridge, without arbitrary assignment to Ashbel Woodward or a not_museum decision. Evidence packet: data/validation/museum_franklin_heritage_newton_2026-09-26; original source fields and coordinates retained."
+    },
+    "FRANKLIN_NH": {
+      "url": "https://franklinnhhistoricalsociety.org/meetings-and-events.html",
+      "note": "The society membership page links PO Box 43 to its Webster/Tay House museum; its 2026 schedule identifies 21 Holy Cross Road and seasonal Saturday openings ending Labor Day weekend. No separate matching baseline museum row was found. Its 2019 membership letter describes support for the state-owned Daniel Webster Birthplace and discussions with the Firefighters Association, not completed common operation. Keep current affiliation review pending until the firefighter relationship is resolved. Indexed primary content was read, while native certificate checks failed; the failures are preserved. Evidence packet: data/validation/museum_franklin_heritage_newton_2026-09-26; original source fields and coordinates retained."
+    },
+    "FRANKLIN_NJ": {
+      "url": "https://www.nj.gov/state/culturaltrust/assets/pdf/2024-ct-qualified-orgs-0715.pdf",
+      "note": "The state cultural-trust roster documents the Franklin Borough society and its preservation/museum purposes. IMLS EIN 223478192/PO Box 332 is distinct from Franklin Heritage Inc in Indiana. Historical borough minutes record the Hungarian Church property being returned by the society; current museum operation, access and location are not established by the purpose statement or grant status. Keep this row pending. The separate mixed IMLS Franklin Heritage Museum row is isolated and supplies no aliases. Evidence packet: data/validation/museum_franklin_heritage_newton_2026-09-26; original source fields and coordinates retained."
+    },
+    "FRANKLIN_NJ_CONFLICT": {
+      "url": "https://www.fomsnj.org/PDF/PickingTable/PT39-1.pdf",
+      "note": "IMLS 8403400077 combines a Franklin Heritage Museum description at 95 Main Street, Franklin New Jersey, with legal name Franklin Heritage Inc, EIN 311109732 and coordinates in Franklin Indiana. Current cached IRS Indiana identifies that EIN at 48 E Madison Street, Franklin Indiana. The 1998 Franklin-Ogdensburg Mineralogical Society publication independently documents the New Jersey society museum opening in the former Zinc Company Main Street time office. Isolate the contradictory source uncounted with no aliases; do not merge it into either state or treat this as proof of closure. Evidence packet: data/validation/museum_franklin_heritage_newton_2026-09-26; original source fields and coordinates retained."
+    },
+    "FRANKLIN_IN": {
+      "url": "https://www.franklinheritage.org/contact.html",
+      "note": "The complete affected automatic cluster also includes the two clean Indiana Franklin Heritage descriptions. Current operator contact explicitly identifies its preservation-group office at 57 N Main Street, matching the IMLS mailing field, website and EIN 311109732. Current IRS identifies the same legal organization at 48 E Madison, matching Overture address and operator phone. Keep one organization description and its mailing support; strip the contradictory New Jersey museum name from the accepted aliases. The operator describes preservation work, a salvage store and the Artcraft Theatre, but this does not establish the museum classification of this umbrella source. Leave museum scope and affiliation pending without inferring a not_museum exclusion merely from search absence. Evidence packet: data/validation/museum_franklin_heritage_newton_2026-09-26; original source fields and coordinates retained."
+    },
+    "HERITAGE_FALFURRIAS": {
+      "url": "https://www.falfurrias.us/m/directory/department?did=8",
+      "note": "Operator identifies Heritage Museum at Falfurrias as one local museum governed by its board, supported by donations and city subsidy. Both source descriptions refer to this museum and the operator domain; municipal listing gives 415 N St Marys while Overture/other trail material gives 515 N St Marys. They are alternate street-number descriptions, not supported separate institutions. Consolidate the public museum and IMLS EIN 746079667/PO Box 86 description, apply the supported public name, and retain the address discrepancy for visitor-point verification. Operator and city hours differ, so recheck access before publication. Evidence packet: data/validation/museum_franklin_heritage_newton_2026-09-26; original source fields and coordinates retained."
+    },
+    "HERITAGE_LIBBY": {
+      "url": "https://libbyheritagemuseum.org/home.htm",
+      "note": "Current operator identifies The Heritage Museum, 34067 US Highway 2, Libby, matching source website, phone and address. Its 2026 season page describes the museum, single campus and year-round appointment research center; the season ended September 12. Its use agreement and 2026 annual/monthly board calendar establish local museum-board control and membership governance. Retain one independent museum and its existing public name. Indexed operator text was inspected; native certificate verification failed and was not bypassed. Do not promise the seasonal galleries are currently open. Evidence packet: data/validation/museum_franklin_heritage_newton_2026-09-26; original source fields and coordinates retained."
+    },
+    "HERITAGE_VIRGINIA": {
+      "url": "https://www.rocktownhistory.org/blog/names-may-change-but-our-commitment-stays-the-same/",
+      "note": "The operator expressly traces Heritage Museum to Harrisonburg-Rockingham Historical Society, now operating as Rocktown History, at 382 High Street. Its current board, staff, mailing PO Box 716 and museum/library/welcome-center description support one independently governed campus. Consolidate the current name, old museum name, society, integrated welcome center and all baseline society-cluster members. The IMLS society member already excluded by the baseline remains supporting and uncounted. Keep the existing Rocktown History canonical name. Nearby Virginia Quilt Museum is explicitly a neighbor, not a common operator. Evidence packet: data/validation/museum_franklin_heritage_newton_2026-09-26; original source fields and coordinates retained."
+    },
+    "HERITAGE_AUSTIN": {
+      "url": "https://www.tsd.texas.gov/apps/pages/museum",
+      "note": "The school operator expressly identifies Heritage Center Museum within the Texas School for the Deaf campus, with historical artifacts and school archives, and visitor arrangements through the alumni association. Source address 1102 S Congress Avenue, website and phone match. Apply the public name Heritage Center Museum. The school governing-board release describes its own governor-appointed board overseeing policy, budget and superintendent. This is one documented school museum, not evidence of a multi-museum chain; record independent museum affiliation. Appointment/campus access and exact visitor entrance require recheck before export. Evidence packet: data/validation/museum_franklin_heritage_newton_2026-09-26; original source fields and coordinates retained."
+    },
+    "HERITAGE_BALTIMORE": {
+      "url": "https://2011mdmanual.msa.maryland.gov/msa/mdmanual/01glance/museums/bcity/html/bcity.html",
+      "note": "Maryland official 2011 museum directory identifies Heritage Museum of Art at Hamlet Court, 4509 Prospect Circle, matching IMLS address. This is historical identity evidence, not a current operating or governance record. No reliable current museum/access source was established. Retain the original source pending; do not infer closure or not_museum from a failed search, absence in a newer list or IRS absence. Do not substitute the separate Baltimore American Indian Center museum. Evidence packet: data/validation/museum_franklin_heritage_newton_2026-09-26; original source fields and coordinates retained."
+    },
+    "HERITAGE_ASTORIA": {
+      "url": "https://astoriamuseums.org/explore/heritage-museum/",
+      "note": "Clatsop County Historical Society identifies its Heritage Museum at 1618 Exchange Street and explicitly operates four museums: Heritage, Flavel House, Oregon Film and Uppertown Firefighters. Current exhibits and public access are documented. Record chain affiliation clatsop_county_historical_society for this specific museum. The IMLS society mailbox at this address is left separate pending its source role because it may describe the multi-museum parent; do not arbitrarily merge that umbrella row into this branch. Evidence packet: data/validation/museum_franklin_heritage_newton_2026-09-26; original source fields and coordinates retained."
+    },
+    "CLATSOP_PARENT": {
+      "url": "https://astoriamuseums.org/",
+      "note": "IMLS 8404100102 names the Clatsop County Historical Society with mailing 1618 Exchange Street, the present Heritage Museum. The operator publicly describes four separate museums and administrative services at the Flavel campus. Common operator affiliation is established, but this umbrella mailing record has not been assigned to a specific physical museum from primary source provenance. Leave identity and count pending rather than merging into one chosen branch or excluding it solely for its parent name. Evidence packet: data/validation/museum_franklin_heritage_newton_2026-09-26; original source fields and coordinates retained."
+    },
+    "HERITAGE_IA_CONFLICT": {
+      "url": "https://johnsoncountyhistory.org/about/",
+      "note": "IMLS 8401900081 uses generic Heritage Museum and mailing 310 Fifth Street Coralville Iowa, but legal name Jewish Heritage Museum of Monmouthcty, EIN 204316463 and coordinates are New Jersey. The Iowa operator history and schoolhouse page identify the former Johnson County Heritage Museum at this exact Iowa school address under different EIN 237427638. IRS and New Jersey operator identify EIN 204316463 at Mounts Corner Drive Freehold. Isolate this mixed row uncounted with no aliases; neither side receives its disputed name. This is not a closure or not_museum decision. Evidence packet: data/validation/museum_franklin_heritage_newton_2026-09-26; original source fields and coordinates retained."
+    },
+    "JEWISH_MONMOUTH": {
+      "url": "https://www.jhmomc.org/board-of-trustees-and-staff",
+      "note": "Current museum operator and 2026-27 board page identify the independent museum at 310 Mounts Corner Drive, PO Box 7078, Freehold. IRS EIN 204316463 confirms the same legal name and street, matching the clean New Jersey IMLS description. Consolidate that IMLS record with Overture; keep the mixed Iowa row entirely isolated with no aliases transferred. Retain the existing specific public museum name. Evidence packet: data/validation/museum_franklin_heritage_newton_2026-09-26; original source fields and coordinates retained."
+    },
+    "NEWTON_AR_CURRENT": {
+      "url": "https://www.newtoncountyar.com/about",
+      "note": "The operator identifies Bradley House Museum and the Chaney Log Cabin as one campus at 403 W Clark Street, PO Box 360, owned by the society since its 1993 purchase and 1994 cabin move. Its own board is listed. Consolidate the two Overture descriptions and IMLS society record at 403 Clark, with existing Bradley House Museum canonical. The separate older IMLS Bradley House at 601 W Clark has not been bridged by primary address history, so leave overall identity review pending while recording supported independent governance. Evidence packet: data/validation/museum_franklin_heritage_newton_2026-09-26; original source fields and coordinates retained."
+    },
+    "NEWTON_AR_OLD": {
+      "url": "https://www.newtoncountyar.com/",
+      "note": "IMLS 8400500046 describes Bradley House Museum at 601 W Clark without EIN or operator URL; its coordinates equal the society IMLS point. Current operator gives 403 W Clark. Secondary listings repeat 601 but are not an independent primary address bridge. Preserve the row separately pending without merging solely from name/town or treating a street-number disagreement as closure. Evidence packet: data/validation/museum_franklin_heritage_newton_2026-09-26; original source fields and coordinates retained."
+    },
+    "NEWTON_IN": {
+      "url": "https://www.newtoncountyindiana.com/destinations/newton-county-historical-society-museum-and-resource-center",
+      "note": "The county operator directory identifies the society museum/resource center at 310 E Seymour, Kentland, phone 219-474-6944. The society Winter 2016 newsletter links its resource center, same phone and PO Box 303; current IRS EIN 351853218 confirms the mailbox. Consolidate both source descriptions and apply the county directory public museum name. The society also owns the separate Scott-Lucas House, documented in its National Register nomination and current county visitor directory, so record shared affiliation newton_county_indiana_historical_society. Do not equate county-sponsored Hazelden events with ownership or merge the distinct Iroquois-Washington museum. Evidence packet: data/validation/museum_franklin_heritage_newton_2026-09-26; original source fields and coordinates retained."
+    },
+    "NEWTON_MO": {
+      "url": "https://www.newtoncountyhistory.org/about/about-us",
+      "note": "Current operator expressly links its Newton County Historical Park and Museum at 121 N Washington Street to PO Box 675, matching IMLS and IRS EIN 431100987. Consolidate museum and society mailbox with the existing specific museum name. The local nonprofit statement establishes a society but the current governance/parent relationship has not been adequately sourced; overall review remains pending with affiliation unknown. The park schoolhouse and cabin are not automatically separate institutions, and an unrelated directory claim about operating the federal fish hatchery is not accepted. Evidence packet: data/validation/museum_franklin_heritage_newton_2026-09-26; original source fields and coordinates retained."
+    },
+    "NEWTON_GA": {
+      "url": "https://dlg.usg.edu/record/dlg_ggpd_y-ga-bs700-pa7-bs1-bd5-b1997",
+      "note": "The Georgia Archives 1997 directory links the society PO Box 2415 to 2100 Washington Street and describes archives/artifacts plus Brick Store and Harris Springs Primitive Baptist Church holdings. Current IRS EIN 237216847 retains PO Box 2415. This supports identity of the organization but not current public museum scope or visitor sites. Keep this umbrella source pending without inventing a physical museum or merging unrelated Oxford/Lockwood institutions. Evidence packet: data/validation/museum_franklin_heritage_newton_2026-09-26; original source fields and coordinates retained."
+    },
+    "NEWTON_MS": {
+      "url": "https://www.nchgs.org/html/archives.html",
+      "note": "The operator archives page matches Overture 15309 Highway 15 and phone 601-635-2350, and says the archives moved to the Old Jail in June 2004. The earlier 2004 information page described the prior Agriculture Building. The archives page documents primarily research holdings, with non-print materials, but its holiday schedule is from 2012 and does not establish current curated public museum scope. Preserve the source pending; do not infer not_museum solely from archive wording or self-guided building history. Evidence packet: data/validation/museum_franklin_heritage_newton_2026-09-26; original source fields and coordinates retained."
+    }
+  },
+  "identities": [
+    {
+      "case": "FRANKLIN_ME",
+      "keys": [
+        "e9d3ef9d-5889-4087-a5a6-bf3c7198969a",
+        "8402300181"
+      ],
+      "roles": [
+        "canonical",
+        "mailing_address"
+      ],
+      "groups": [
+        "franklin_me",
+        "franklin_me"
+      ]
+    },
+    {
+      "case": "FRANKLIN_WI",
+      "keys": [
+        "982977d2-5b46-46cc-a3c1-964e045db92c",
+        "8405500206"
+      ],
+      "roles": [
+        "canonical",
+        "mailing_address"
+      ],
+      "groups": [
+        "franklin_wi",
+        "franklin_wi"
+      ]
+    },
+    {
+      "case": "FRANKLIN_CT_MUSEUM",
+      "keys": [
+        "8c6b6a79-2e47-4a50-b801-317c3341988e",
+        "923be474-2e2c-4c66-a712-e69fa83c8974"
+      ],
+      "roles": [
+        "canonical",
+        "same_site"
+      ],
+      "groups": [
+        "franklin_ct_museum",
+        "franklin_ct_museum"
+      ]
+    },
+    {
+      "case": "FRANKLIN_NJ_CONFLICT",
+      "keys": [
+        "1cbdadb2-913f-427e-b0cf-6e2e6dd9c499",
+        "8401800311",
+        "8403400077"
+      ],
+      "roles": [
+        "canonical",
+        "mailing_address",
+        "source_conflict"
+      ],
+      "groups": [
+        "franklin_indiana",
+        "franklin_indiana",
+        "unresolved_source"
+      ]
+    },
+    {
+      "case": "HERITAGE_FALFURRIAS",
+      "keys": [
+        "f77a0b46-8ae9-4cfc-9366-842b624d4d08",
+        "8404801399"
+      ],
+      "roles": [
+        "canonical",
+        "same_site"
+      ],
+      "groups": [
+        "heritage_falfurrias",
+        "heritage_falfurrias"
+      ]
+    },
+    {
+      "case": "HERITAGE_VIRGINIA",
+      "keys": [
+        "8378f398-13e7-4e0b-b764-52ce05a943da",
+        "b4323a53-17f7-4436-9bca-0e82ee139771",
+        "4c10b642-27e3-484c-8603-91a9312b01e1",
+        "8405100619",
+        "4dc40b24-03e8-483b-a719-7fe15906f546"
+      ],
+      "roles": [
+        "canonical",
+        "same_site",
+        "same_site",
+        "mislocated",
+        "same_site"
+      ],
+      "groups": [
+        "heritage_virginia",
+        "heritage_virginia",
+        "heritage_virginia",
+        "heritage_virginia",
+        "heritage_virginia"
+      ]
+    },
+    {
+      "case": "HERITAGE_IA_CONFLICT",
+      "keys": [
+        "8401900081"
+      ],
+      "roles": [
+        "source_conflict"
+      ],
+      "groups": [
+        "unresolved_source"
+      ]
+    },
+    {
+      "case": "JEWISH_MONMOUTH",
+      "keys": [
+        "5e1afd1f-bf13-48b3-9f08-4936e81d27c5",
+        "8403400166"
+      ],
+      "roles": [
+        "canonical",
+        "mailing_address"
+      ],
+      "groups": [
+        "jewish_monmouth",
+        "jewish_monmouth"
+      ]
+    },
+    {
+      "case": "NEWTON_AR_CURRENT",
+      "keys": [
+        "23141362-d61e-42a0-8b56-49952643a25a",
+        "fbe188d0-4236-421f-87d2-fe8ea31f9739",
+        "8400500189"
+      ],
+      "roles": [
+        "canonical",
+        "same_site",
+        "same_site"
+      ],
+      "groups": [
+        "newton_ar_current",
+        "newton_ar_current",
+        "newton_ar_current"
+      ]
+    },
+    {
+      "case": "NEWTON_IN",
+      "keys": [
+        "68298af8-35dc-4355-b21c-88bb971e19df",
+        "8401800487"
+      ],
+      "roles": [
+        "canonical",
+        "mailing_address"
+      ],
+      "groups": [
+        "newton_in",
+        "newton_in"
+      ]
+    },
+    {
+      "case": "NEWTON_MO",
+      "keys": [
+        "80a262d7-5c92-4d1f-9863-68f1075db069",
+        "8402900331"
+      ],
+      "roles": [
+        "canonical",
+        "mailing_address"
+      ],
+      "groups": [
+        "newton_mo",
+        "newton_mo"
+      ]
+    }
+  ],
+  "decisions": [
+    {
+      "case": "FRANKLIN_ME",
+      "key": "e9d3ef9d-5889-4087-a5a6-bf3c7198969a",
+      "aff": "unknown",
+      "status": "pending",
+      "chain": null,
+      "category": "not_flagged"
+    },
+    {
+      "case": "FRANKLIN_WI",
+      "key": "982977d2-5b46-46cc-a3c1-964e045db92c",
+      "aff": "independent",
+      "status": "verified",
+      "chain": null,
+      "category": "not_flagged"
+    },
+    {
+      "case": "FRANKLIN_CT_MUSEUM",
+      "key": "8c6b6a79-2e47-4a50-b801-317c3341988e",
+      "aff": "unknown",
+      "status": "pending",
+      "chain": null,
+      "category": "not_flagged"
+    },
+    {
+      "case": "FRANKLIN_CT_SOCIETY",
+      "key": "8400900244",
+      "aff": "unknown",
+      "status": "pending",
+      "chain": null,
+      "category": "not_flagged"
+    },
+    {
+      "case": "FRANKLIN_NH",
+      "key": "8403300226",
+      "aff": "unknown",
+      "status": "pending",
+      "chain": null,
+      "category": "not_flagged"
+    },
+    {
+      "case": "FRANKLIN_NJ",
+      "key": "8403400429",
+      "aff": "unknown",
+      "status": "pending",
+      "chain": null,
+      "category": "not_flagged"
+    },
+    {
+      "case": "FRANKLIN_NJ_CONFLICT",
+      "key": "8403400077",
+      "aff": "unknown",
+      "status": "pending",
+      "chain": null,
+      "category": "not_flagged"
+    },
+    {
+      "case": "FRANKLIN_IN",
+      "key": "1cbdadb2-913f-427e-b0cf-6e2e6dd9c499",
+      "aff": "unknown",
+      "status": "pending",
+      "chain": null,
+      "category": "not_flagged"
+    },
+    {
+      "case": "HERITAGE_FALFURRIAS",
+      "key": "f77a0b46-8ae9-4cfc-9366-842b624d4d08",
+      "aff": "independent",
+      "status": "verified",
+      "chain": null,
+      "category": "not_flagged"
+    },
+    {
+      "case": "HERITAGE_LIBBY",
+      "key": "f778ad93-6633-482a-84d9-b6c81ed30b7c",
+      "aff": "independent",
+      "status": "verified",
+      "chain": null,
+      "category": "not_flagged"
+    },
+    {
+      "case": "HERITAGE_VIRGINIA",
+      "key": "8378f398-13e7-4e0b-b764-52ce05a943da",
+      "aff": "independent",
+      "status": "verified",
+      "chain": null,
+      "category": "not_flagged"
+    },
+    {
+      "case": "HERITAGE_AUSTIN",
+      "key": "d97951f6-7207-4dcd-9af2-7b878a97b6db",
+      "aff": "independent",
+      "status": "verified",
+      "chain": null,
+      "category": "not_flagged"
+    },
+    {
+      "case": "HERITAGE_BALTIMORE",
+      "key": "8402400465",
+      "aff": "unknown",
+      "status": "pending",
+      "chain": null,
+      "category": "not_flagged"
+    },
+    {
+      "case": "HERITAGE_ASTORIA",
+      "key": "710d0bf4-30ce-4ced-bcff-7761f12f0f23",
+      "aff": "chain",
+      "status": "verified",
+      "chain": "clatsop_county_historical_society",
+      "category": "not_flagged"
+    },
+    {
+      "case": "CLATSOP_PARENT",
+      "key": "8404100102",
+      "aff": "chain",
+      "status": "pending",
+      "chain": "clatsop_county_historical_society",
+      "category": "not_flagged"
+    },
+    {
+      "case": "HERITAGE_IA_CONFLICT",
+      "key": "8401900081",
+      "aff": "unknown",
+      "status": "pending",
+      "chain": null,
+      "category": "not_flagged"
+    },
+    {
+      "case": "JEWISH_MONMOUTH",
+      "key": "5e1afd1f-bf13-48b3-9f08-4936e81d27c5",
+      "aff": "independent",
+      "status": "verified",
+      "chain": null,
+      "category": "not_flagged"
+    },
+    {
+      "case": "NEWTON_AR_CURRENT",
+      "key": "23141362-d61e-42a0-8b56-49952643a25a",
+      "aff": "independent",
+      "status": "pending",
+      "chain": null,
+      "category": "not_flagged"
+    },
+    {
+      "case": "NEWTON_AR_OLD",
+      "key": "8400500046",
+      "aff": "unknown",
+      "status": "pending",
+      "chain": null,
+      "category": "not_flagged"
+    },
+    {
+      "case": "NEWTON_IN",
+      "key": "68298af8-35dc-4355-b21c-88bb971e19df",
+      "aff": "chain",
+      "status": "verified",
+      "chain": "newton_county_indiana_historical_society",
+      "category": "not_flagged"
+    },
+    {
+      "case": "NEWTON_MO",
+      "key": "80a262d7-5c92-4d1f-9863-68f1075db069",
+      "aff": "unknown",
+      "status": "pending",
+      "chain": null,
+      "category": "not_flagged"
+    },
+    {
+      "case": "NEWTON_GA",
+      "key": "8401300208",
+      "aff": "unknown",
+      "status": "pending",
+      "chain": null,
+      "category": "not_flagged"
+    },
+    {
+      "case": "NEWTON_MS",
+      "key": "d43a63b5-1008-4371-bcab-ae6daf02540f",
+      "aff": "unknown",
+      "status": "pending",
+      "chain": null,
+      "category": "not_flagged"
+    }
+  ],
+  "names": [
+    {
+      "case": "HERITAGE_FALFURRIAS",
+      "key": "f77a0b46-8ae9-4cfc-9366-842b624d4d08",
+      "name": "Heritage Museum at Falfurrias"
+    },
+    {
+      "case": "HERITAGE_AUSTIN",
+      "key": "d97951f6-7207-4dcd-9af2-7b878a97b6db",
+      "name": "Heritage Center Museum"
+    },
+    {
+      "case": "NEWTON_IN",
+      "key": "68298af8-35dc-4355-b21c-88bb971e19df",
+      "name": "Newton County Historical Society Museum and Resource Center"
+    }
+  ],
+  "human_review": [
+    {
+      "case": "FRANKLIN_ME",
+      "source_id": "e9d3ef9d-5889-4087-a5a6-bf3c7198969a",
+      "status": "pending",
+      "action": "Confirm current society governance and whether the separately located West Franklin industrial-history park is a second museum institution or supporting outdoor interpretation; verify current campus access.",
+      "evidence_url": "https://www.maine.gov/sos/archives/services-and-records-management/about/historical-organizations/franklin-historical-society"
+    },
+    {
+      "case": "FRANKLIN_CT_MUSEUM",
+      "source_id": "8c6b6a79-2e47-4a50-b801-317c3341988e",
+      "status": "pending",
+      "action": "Resolve the current museum scope and operating relationship of the new Route 87/Lebanon Road schoolhouse campus and the society history room before certifying Ashbel Woodward affiliation and institution count.",
+      "evidence_url": "https://www.franklinct.gov/m/directory/department?did=46"
+    },
+    {
+      "case": "FRANKLIN_CT_SOCIETY",
+      "source_id": "8400900244",
+      "status": "pending",
+      "action": "Establish whether the IMLS society row represents the Calvert Library history room, Ashbel Woodward collections or a parent organization; document current exhibitions, governance and relationships to the Route 87 schoolhouse.",
+      "evidence_url": "https://sites.google.com/site/ashbelwoodwardmuseum/"
+    },
+    {
+      "case": "FRANKLIN_NH",
+      "source_id": "8403300226",
+      "status": "pending",
+      "action": "Obtain current society governance and the final operating relationship, if any, with Franklin Firefighters Museum; distinguish friends-group support at the state birthplace from common museum ownership.",
+      "evidence_url": "https://franklinnhhistoricalsociety.org/meetings-and-events.html"
+    },
+    {
+      "case": "FRANKLIN_NJ",
+      "source_id": "8403400429",
+      "status": "pending",
+      "action": "Document the society current museum operation after the Hungarian Church property transfer, its relationship to the earlier Main Street Heritage Museum, and current location/access/governance.",
+      "evidence_url": "https://www.nj.gov/state/culturaltrust/assets/pdf/2024-ct-qualified-orgs-0715.pdf"
+    },
+    {
+      "case": "FRANKLIN_NJ_CONFLICT",
+      "source_id": "8403400077",
+      "status": "pending",
+      "action": "Repair the mixed New Jersey museum/address and Indiana legal/coordinate fields from original IMLS provenance; establish any continuing New Jersey museum separately.",
+      "evidence_url": "https://www.fomsnj.org/PDF/PickingTable/PT39-1.pdf"
+    },
+    {
+      "case": "FRANKLIN_IN",
+      "source_id": "1cbdadb2-913f-427e-b0cf-6e2e6dd9c499",
+      "status": "pending",
+      "action": "Confirm whether Franklin Heritage Inc has a curated public museum and whether these sources describe that museum or only the preservation-group office/theatre; resolve 48 E Madison versus 57 N Main office history before any exclusion or publication.",
+      "evidence_url": "https://www.franklinheritage.org/contact.html"
+    },
+    {
+      "case": "HERITAGE_BALTIMORE",
+      "source_id": "8402400465",
+      "status": "pending",
+      "action": "Obtain current operator/legal and visitor evidence for EIN 521727885 and the Hamlet Court Heritage Museum of Art at 4509 Prospect Circle; establish whether and where a public museum now operates.",
+      "evidence_url": "https://2011mdmanual.msa.maryland.gov/msa/mdmanual/01glance/museums/bcity/html/bcity.html"
+    },
+    {
+      "case": "CLATSOP_PARENT",
+      "source_id": "8404100102",
+      "status": "pending",
+      "action": "Determine which institution, if any, IMLS 8404100102 was intended to represent within the society four-museum network; distinguish a parent office/mail record from a Heritage Museum description.",
+      "evidence_url": "https://astoriamuseums.org/"
+    },
+    {
+      "case": "HERITAGE_IA_CONFLICT",
+      "source_id": "8401900081",
+      "status": "pending",
+      "action": "Repair the cross-state IMLS fields using original provenance. Keep legitimate New Jersey and Iowa museum records separate; do not transfer the mixed row aliases.",
+      "evidence_url": "https://johnsoncountyhistory.org/about/"
+    },
+    {
+      "case": "NEWTON_AR_CURRENT",
+      "source_id": "23141362-d61e-42a0-8b56-49952643a25a",
+      "status": "pending",
+      "action": "Obtain primary address history linking or distinguishing the older IMLS 601 W Clark description from the documented 403 W Clark Bradley House campus before certifying the count.",
+      "evidence_url": "https://www.newtoncountyar.com/about"
+    },
+    {
+      "case": "NEWTON_AR_OLD",
+      "source_id": "8400500046",
+      "status": "pending",
+      "action": "Resolve source 8400500046 address/date/provenance and whether 601 W Clark is a former numbering, mailing address, typo or distinct site; document the relationship to 403 W Clark.",
+      "evidence_url": "https://www.newtoncountyar.com/"
+    },
+    {
+      "case": "NEWTON_MO",
+      "source_id": "80a262d7-5c92-4d1f-9863-68f1075db069",
+      "status": "pending",
+      "action": "Obtain current governing-board/bylaw or operating-agreement evidence for the Neosho historical park; confirm integrated campus and distinguish nearby federal or college museums from society operation.",
+      "evidence_url": "https://www.newtoncountyhistory.org/about/about-us"
+    },
+    {
+      "case": "NEWTON_GA",
+      "source_id": "8401300208",
+      "status": "pending",
+      "action": "Establish current society museum/exhibit operations, location/access and governance, including present roles of Brick Store and Harris Springs church; distinguish archival custody from a public museum.",
+      "evidence_url": "https://dlg.usg.edu/record/dlg_ggpd_y-ga-bs700-pa7-bs1-bd5-b1997"
+    },
+    {
+      "case": "NEWTON_MS",
+      "source_id": "d43a63b5-1008-4371-bcab-ae6daf02540f",
+      "status": "pending",
+      "action": "Confirm current curated museum exhibits, public access and governing arrangements for the Decatur old-jail archives at 15309 Highway 15; use current primary evidence before any museum/exclusion decision.",
+      "evidence_url": "https://www.nchgs.org/html/archives.html"
+    }
+  ]
+}

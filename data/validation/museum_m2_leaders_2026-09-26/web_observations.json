@@ -1,0 +1,56 @@
+[
+  {
+    "url": "https://www.amnh.org/plan-your-visit",
+    "observed_on": "2026-09-26",
+    "retrieval": "web tool; native request 403 retained in cache_status.csv",
+    "finding": "Official visitor page gives 200 Central Park West, New York NY 10024-5102 and phone 212-769-5100. It lists the Rose Center and Gilder Center as entrances on the same museum campus. Does not explain the 165 E 56th Street source."
+  },
+  {
+    "url": "https://americanindian.si.edu/about/contact",
+    "observed_on": "2026-09-26",
+    "retrieval": "web tool",
+    "finding": "Official NMAI contact page lists Washington at Fourth Street and Independence Avenue SW and New York at Alexander Hamilton U.S. Custom House, One Bowling Green. Same Smithsonian museum has two public locations, retained as separate chain-affiliated campuses."
+  },
+  {
+    "url": "https://nmaahc.si.edu/sites/default/files/downloads/nmaahc_digitalarchivesspecialist_package.pdf",
+    "observed_on": "2026-09-26",
+    "retrieval": "Cached native PDF; page 6 rendered and visually inspected",
+    "finding": "June 17 2021 solicitation page 6 identifies NMAAHC Media Conservation Labs at Capital Gallery, 600 Maryland Avenue SW, and the separate public museum at 1400 Constitution. Historical address-role evidence, not a current access guarantee."
+  },
+  {
+    "url": "https://visitrockawaybeach.org/international-police-museum/",
+    "observed_on": "2026-09-26",
+    "retrieval": "web tool, dated visitor-bureau page",
+    "finding": "2017 local visitor page identifies the International Police Museum at 212 Highway 101 North; appended note records loss of lease in 2021. Current operator news documents return to Rockaway and current 320 S Highway 101 museum. Do not use the older page as current access advice."
+  },
+  {
+    "url": "https://sni.org/app/uploads/2021/08/6-2024-SNI-LRTP-_-FINAL-w-Appendices.pdf",
+    "observed_on": "2026-09-26",
+    "retrieval": "search-index lead; native 404",
+    "finding": "Search result describes a 2018 museum move. Not yet fully inspected; do not use this document as verified evidence."
+  },
+  {
+    "url": "https://naturalhistory.si.edu/about/press-office",
+    "observed_on": "2026-09-26",
+    "retrieval": "web search official contact content",
+    "finding": "National Museum of Natural History contact gives 10th Street and Constitution Avenue NW. Supports source-field conflict, not a current visitor-access guarantee."
+  },
+  {
+    "url": "https://americanhistory.si.edu/es/visita",
+    "observed_on": "2026-09-26",
+    "retrieval": "web search official visitor content",
+    "finding": "American History museum visitor address is 1300 Constitution Avenue NW. English /visit request failed; that failure is retained."
+  },
+  {
+    "url": "https://blackiowa.org/event/prayer-pop-up-presented-by-renee-bryant-moore-shavon-webb/",
+    "observed_on": "2026-09-26",
+    "retrieval": "web search official event content",
+    "finding": "October 3 2026 venue is African American Museum of Iowa, 55 12th Ave SE, Cedar Rapids IA 52401. Confirms a distinct Iowa museum, not the Washington Smithsonian institution."
+  },
+  {
+    "url": "https://nmaahc.si.edu/visit/accessibility-options",
+    "observed_on": "2026-09-26",
+    "retrieval": "web open redirects to generic si.edu/visit; native 403",
+    "finding": "The current open did not independently confirm NMAAHC access details. Use the cached contract only for historical address roles; current visitor access remains unverified."
+  }
+]

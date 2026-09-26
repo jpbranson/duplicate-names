@@ -1,0 +1,1 @@
+SUPERSEDED: these blank sheets and predictions precede the First Mesa ordinal/C2 correction. Do not label this version. The corrected independent_review_v2 packet will be linked from the parent README after rebuilding. No truth labels were filled.

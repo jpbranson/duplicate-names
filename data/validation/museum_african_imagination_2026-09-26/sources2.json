@@ -1,0 +1,73 @@
+[
+  {
+    "id": "dallas_team",
+    "url": "https://aamdallas.org/about/"
+  },
+  {
+    "id": "dallas_visit",
+    "url": "https://aamdallas.org/nelson-mandela-exhibition-plan-your-visit/"
+  },
+  {
+    "id": "monroe_visit",
+    "url": "https://www.monroeblackheritagemuseum.org/visit"
+  },
+  {
+    "id": "monroe_old_location",
+    "url": "https://www.ulm.edu/cbss/cber/documents/2006efb.pdf",
+    "extension": "pdf"
+  },
+  {
+    "id": "monroe_relocation_interview",
+    "url": "https://bayoulifemag.com/finishing-the-dream/"
+  },
+  {
+    "id": "lafayette_history",
+    "url": "https://www.imagination-station.org/mission-history"
+  },
+  {
+    "id": "lafayette_team",
+    "url": "https://www.imagination-station.org/about-1"
+  },
+  {
+    "id": "toledo_about",
+    "url": "https://www.imaginationstationtoledo.org/about"
+  },
+  {
+    "id": "marshfield_policies",
+    "url": "https://imaginationstationmarshfield.com/wp-content/uploads/2023/08/ISM-Policies-2023-Aug-Update.pdf",
+    "extension": "pdf"
+  },
+  {
+    "id": "marshfield_state",
+    "url": "https://education.mdc.mo.gov/reports/child-care-facilities?page=13"
+  },
+  {
+    "id": "stmartinville_current",
+    "url": "https://stmartinville.gov/attractions/"
+  },
+  {
+    "id": "stmartinville_admin",
+    "url": "https://stmartinville.gov/administration/"
+  },
+  {
+    "id": "bg_squarespace",
+    "url": "https://aambg.squarespace.com/"
+  },
+  {
+    "id": "bg_about",
+    "url": "https://www.aambg.org/about-us"
+  },
+  {
+    "id": "bg_reopening",
+    "url": "https://www.wku.edu/mediarelations/2023/august/aug30/museum_dn.pdf",
+    "extension": "pdf"
+  },
+  {
+    "id": "stratford_school",
+    "url": "https://meetings.boardbook.org/Public/Projector/2533?meeting=738692"
+  },
+  {
+    "id": "galveston_founder",
+    "url": "https://gamma-pi-lambda.com/james-josey/"
+  }
+]

@@ -1,0 +1,1916 @@
+PAGE 1
+ 
+ 
+American Airpower Heritage Group 
+Consolidated Financial Report 
+December 31, 2019 
+
+PAGE 2
+ 
+ 
+C O N T E N T S 
+ 
+ 
+Page 
+ 
+Independent Auditor’s Report .......................................................................................................................................... 1 
+ 
+ 
+Consolidated Financial Statements 
+ 
+Consolidated Statements of Financial Position ...................................................................................................... 3 
+ 
+Consolidated Statements of Activities ..................................................................................................................... 4 
+ 
+Consolidated Statements of Functional Expenses ................................................................................................ 5 
+ 
+Consolidated Statements of Cash Flows ................................................................................................................. 6 
+ 
+Notes to the Consolidated Financial Statements .................................................................................................. 7 
+ 
+ 
+Supplemental Information 
+ 
+Independent Auditor’s Report on Supplemental Information .......................................................................... 31 
+ 
+Consolidating Statement of Financial Position ..................................................................................................... 32 
+ 
+Consolidating Statement of Activities .................................................................................................................... 34 
+ 
+Consolidating Statement of Cash Flows ................................................................................................................ 36 
+ 
+Consolidating Schedule of Departmental Revenue........................................................................................... 38 
+ 
+Consolidating Schedule of Costs and Expenses .................................................................................................. 39 
+ 
+Consolidating Schedules of Intragroup Notes (Payable)/Receivable ............................................................ 41 
+
+PAGE 3
+Weaver and Tidwell, L.L.P.
+400 West Illinois Avenue, Suite 1550 | Midland, Texas 79701
+Main: 432.683.5226
+CPAs AND ADVISORS | WEAVER.COM
+ 
+ 
+ 
+Independent Auditor’s Report 
+ 
+ 
+To the General Staff of 
+American Airpower Heritage Group 
+Dallas, Texas 
+ 
+We have audited the accompanying consolidated financial statements of the American Airpower 
+Heritage Group (the Group), which comprise the cons olidated statements of financial position of the 
+Group as of December 31, 2019 and 2018, and the related consolidated statements of activities, 
+functional expenses and cash flows for the years then ended, and the related notes to the consolidated 
+financial statements. 
+ 
+Management’s Responsibility for the Consolidated Financial Statements 
+ 
+Management is responsible for the preparation and fair presentation of these consolidated financial 
+statements in accordance with accounting principl es generally accepted in the United States of 
+America; this includes the design, implementation, and maintenance of internal control relevant to the 
+preparation and fair presentation of the consolidated financial statements that are free from material 
+misstatement, whether due to fraud or error. 
+ 
+Auditor’s Responsibility 
+ 
+Our responsibility is to express an opinion on th ese consolidated financial statements based on our 
+audits. We conducted our audits in accordance with auditing standards generally accepted in the 
+United States of America. Those standards require that we plan and perform the audit to obtain 
+reasonable assurance about whethe r the consolidated financial statements are free from material 
+misstatement. 
+ 
+An audit involves performing procedures to obtain audit evidence about the amounts and disclosures 
+in the consolidated financial statements. The procedures selected depend on the auditor’s judgment, 
+including the assessment of the risks of material miss tatement of the consolidated financial statements, 
+whether due to fraud or error. In making those risk assessments, the auditor considers internal control 
+relevant to the entity’s preparation and fair presen tation of the consolidated financial statements in 
+order to design audit procedures that are appropriate in the circumstances, but not for the purpose of 
+expressing an opinion on the effectiveness of the entity’s internal control. Accordingly, we express no 
+such opinion. An audit also includes evaluating th e appropriateness of accounting policies used and 
+the reasonableness of significant ac counting estimates made  by management, as well as evaluating 
+the overall presentation of the consolidated financial statements. 
+ 
+We believe that the audit evidence we have obtain ed is sufficient and appropriate to provide a basis 
+for our audit opinion. 
+ 
+
+PAGE 4
+The General Staff of 
+American Airpower Heritage Group 
+ 
+2 
+Opinion 
+ 
+In our opinion, the consolidated fin ancial statements referred to abov e present fairly, in all material 
+respects, the financial position of the Group as of December 31, 2019 and 2018, and the changes in 
+their net assets and their cash flows for the years th en ended in accordance with accounting principles 
+generally accepted in the United States of America. 
+ 
+ 
+ 
+WEAVER AND TIDWELL, L.L.P. 
+ 
+Midland, Texas 
+July 10, 2020 
+
+PAGE 5
+American Airpower Heritage Group 
+Consolidated Statements of Financial Position 
+December 31, 2019 and 2018 
+ 
+The Notes to the Consolidated Financial Statements 
+are an integral part of these statements. 
+3 
+2019 2018
+Cash and cash equivalents 14,233,473 $         11,638,317 $         
+Accounts receivable (net) 320,973                 327,404                 
+Pledges receivable 167,713                 3,442,042              
+Inventories 812,092                910,330                 
+Prepaid expenses 944,186                 843,434                 
+Investments 8,916,094              7,589,762              
+Property and equipment
+  (net of accumulated depreciation) 11,955,400            11,521,119            
+Aircraft collection, museum and library -
+Notes 1 and 18 -                         -                         
+Intangible assets
+  (net of accumulated amortization) 29,554                   48,533                   
+Other assets 252,226                 137,980                 
+TOTAL ASSETS 37,631,711$         36,458,921 $         
+LIABILITIES
+Accounts payable 1,030,318 $           1,084,958 $           
+Accrued liabilities 403,962                 247,377                 
+Notes payable, current portion 88,370                   78,119                   
+Line of credit 1,000,000              -                         
+Capital lease liability 1,762,125              1,762,125              
+Deferred revenue   448,427                 603,403                 
+Notes payable, long term portion 597,539                 588,306                 
+Total liabilities 5,330,741              4,364,288              
+NET ASSETS 
+Without donor restrictions 17,228,977            16,219,444            
+With donor restrictions 15,071,993            15,875,189            
+Total net assets 32,300,970            32,094,633            
+TOTAL LIABILITIES AND NET ASSETS 37,631,711$         36,458,921 $         
+ASSETS
+LIABILITIES AND NET ASSETS
+ 
+
+PAGE 6
+American Airpower Heritage Group 
+Consolidated Statements of Activities 
+Years Ended December 31, 2019 and 2018 
+ 
+The Notes to the Consolidated Financial Statements 
+are an integral part of these statements. 
+4 
+2019 2018
+CHANGES IN NET ASSETS WITHOUT DONOR RESTRICTIONS
+Departmental revenues 11,815,359 $         11,181,655 $         
+Donations 8,252,952              8,434,681              
+Memberships 1,460,459              1,482,832              
+Investment income, net 1,386,889              (531,650)                
+Insurance recovery 22,256                   117,030                 
+Gain (loss) on disposal of assets 80,369                   (3,191,479)             
+Grant or state fund revenue 145,595                 229,118                 
+Other 21,059                  43,810                   
+Total revenues and gains without donor restriction 23,184,938           17,765,997            
+Net assets released from restrictions through
+  satisfaction of program requirements 2,125,232              3,012,420              
+Total revenues, gains and other support
+without donor restrictions 25,310,170            20,778,417            
+Expenses
+Education (17,502,581)           (18,155,721)           
+Management and general (2,513,817)            (3,139,359)             
+Fundraising (4,284,239)            (4,803,848)             
+Total costs and expenses (24,300,637)           (26,098,928)           
+Increase (decrease) in net assets 
+  without donor restrictions 1,009,533              (5,320,511)             
+CHANGES IN NET ASSETS WITH DONOR RESTRICTIONS
+Donations 1,287,056              6,033,206              
+Operating 577,902                 589,927                 
+Gain (loss) on disposal of assets 192,697                 21,017                   
+Other 208,196                262,554                 
+Return of donation from foundation (1,070,348)             -                         
+Investment income 126,533                 3,692                     
+Net assets released from restrictions (2,125,232)             (3,012,420)             
+Increase (decrease) in net assets 
+  with donor restrictions (803,196)                3,897,976              
+CHANGE IN NET ASSETS 206,337                (1,422,535)             
+NET ASSETS, beginning of year 32,094,633           33,517,168            
+NET ASSETS, end of year 32,300,970$         32,094,633 $         
+ 
+
+PAGE 7
+American Airpower Heritage Group 
+Consolidated Statements of Functional Expenses 
+Years Ended December 31, 2019 and 2018 
+ 
+The Notes to the Consolidated Financial Statements 
+are an integral part of these statements. 
+5 
+Management Management
+Education and General Fund raising Total Education and  General Fundraising Total
+Aircraft maintenance 4,415,052 $    33,989 $           - $             4,449,041$    7,251,946 $    321 $                - $             7,252,267$    
+Payroll and payroll related 1,176,348      1,275,010         676,427        3,127,785       1,110,722       1,684,661         667,594        3,462,977       
+Facilities and insurance 2,836,288       370,498            19,701          3,226,487       2,564,997       537,100            26,946          3,129,043       
+Administration expenses 3,664,122       393,478            1,789,032     5,846,632       1,836,170       327,455            3,115,344     5,278,969       
+Airshow and event expenses 2,888,313      164,146            19,530          3,071,989       2,854,461       151,105            1,751            3,007,317      
+Contracted services 390,794          123,062            422,767        936,623          819,109          212,892            856,691        1,888,692       
+Other expenses 628,013          132,298            60,682          820,993          593,705          211,974            78,843          884,522          
+Operating expenses 430,666          21,336              1,232,923     1,684,925       548,516          13,851              11,475          573,842          
+Cost of merchandise sold 1,072,985       -                    63,177          1,136,162       576,095          -                    45,204          621,299          
+TOTAL EXPENSES 17,502,581$  2,513,817 $      4,284,239 $  24,300,637 $  18,155,721 $  3,139,359 $      4,803,848 $  26,098,928 $  
+2019 2018
+ 
+
+PAGE 8
+American Airpower Heritage Group 
+Consolidated Statements of Cash Flows 
+Years Ended December 31, 2019 and 2018 
+ 
+The Notes to the Consolidated Financial Statements 
+are an integral part of these statements. 
+6 
+2019 2018
+CASH FLOWS FROM OPERATING ACTIVITIES
+Change in net assets 206,337$              (1,422,535) $          
+Adjustments to reconcile change in net assets to
+  net cash provided by operating activities
+Depreciation 743,262                993,595                 
+Amortization 25,854                  28,885                   
+(Gain) loss on sale of property and equipment (174,230)               3,193,462              
+Unrealized (gain) loss from investments (1,380,817)            706,215                 
+Change in operating assets and liabilities
+Accounts receivable (net) 6,431                    54,826                   
+Pledges receivable 3,274,329             (2,381,907)             
+Inventories 98,238                  (56,843)                  
+Prepaid expenses (100,752)               (75,147)                  
+Other assets (114,246)               (26,191)                  
+Accounts payable (54,640)                 494,571                 
+Accrued liabilities 156,585                (173,097)                
+Deferred revenue (154,976)               117,326                 
+Total adjustments 2,325,038             2,875,695              
+Net cash provided by operating activities 2,531,375             1,453,160              
+CASH FLOWS FROM INVESTING ACTIVITIES
+Purchase of property and equipment (1,304,004)            (812,607)                
+Disposal of property and equipment 300,691                -                         
+Purchases of intangibles (6,875)                   -                         
+Purchase of investments (585,183)               (1,932,977)             
+Sale of investments 639,667                1,737,160              
+Net cash used in investing activities (955,703)               (1,008,424)             
+CASH FLOWS FROM FINANCING ACTIVITIES
+Reduction in principal of long-term debt (78,516)                 (73,284)                  
+Proceeds from long-term debt borrowings 98,000                  -                         
+Proceeds from line of credit 1,000,000             -                         
+Net cash provided by (used in) financing activities 1,019,484             (73,284)                  
+Net change in cash and cash equivalents 2,595,156             371,452                 
+CASH AND CASH EQUIVALENTS, beginning of year 11,638,317           11,292,065            
+CASH AND CASH EQUIVALENTS, end of year 14,233,473$         11,638,317 $         
+CASH PAID DURING YEAR FOR INTEREST 95,786$                83,065 $                
+ 
+
+PAGE 9
+American Airpower Heritage Group 
+Notes to the Consolidated Financial Statements 
+ 
+7 
+Note 1.   Summary of Significant Accounting Policies 
+ 
+Organization 
+ 
+The American Airpower Heritage Group (the Group), which consists of the Commemorative Air Force, Inc., 
+Units and Supporting Foundations (Units), the American Airpower Heritage Foundation, Inc. (AAHF), the 
+American Airpower Heritage Museum, Inc. (AAHM), and the American Airpower Heritage Flying Museum, 
+Inc. (AAHFM), was created by resolution approved by the general membership of the Commemorative 
+Air Force, Inc. (CAF) effective November 20, 1990.   
+ 
+Principles of Consolidation 
+ 
+The accompanying consolidated financial statements include the accounts of CAF, Units, AAHF, AAHM, 
+and AAHFM, which are here after referred to as the Group. All significant intercompany transactions and 
+balances have been eliminated in the consolidated financial statements. 
+ 
+The Group and purpose of each of the five entities which comprise the Group is set out as follows: 
+ 
+The Commemorative Air Force, Inc. (CAF) – Headquarters  
+ 
+The consolidated financial statements presented in clude the Headquarters division of the Group and 
+include its assets, liabilities and net assets, and support, revenue, and expenses. 
+ 
+CAF is a nonprofit corporation established in 1961 fo r charitable and educational purposes. The primary 
+objective of the organization was to acquire, restore, maintain and operate a collection of World War II 
+and other historical aircraft. With the reorganization  discussed above, the structure of the CAF remains 
+essentially unchanged. It has primary responsibility for membership, maintenance of aircraft, educational 
+programs and air show demonstrations. In addition , the CAF provides administrative and management 
+assistance to the other members in the Group. 
+ 
+The Commemorative Air Force, Inc. – Units and Supporting Foundations (Units) 
+ 
+The Units is comprised of 89-chartered wings, squadrons and detachments throughout the nation. Each 
+unit or supporting foundation receives administrative support and oversight from CAF. The majority of the 
+aircraft operations are performed through these wing s and squadrons and includes aircraft restoration 
+and maintenance, aircraft display, air shows and PX (gift shop) operations.  
+ 
+The Units operate under the same federal tax ID number as the CAF. Individual foundations, which are 
+described below, are separate legal entities. The CAF, including all of the Units operating under the CAF, 
+file one group tax return. The individual foundations, with the exception of Wings Over Houston, file 
+individual tax returns. For presentation purposes, the CAF and the Units are shown separately in the 
+consolidating financial statements for transparency  and the following reasons: the CAF and the Units 
+each serve two different purposes; the volume and types of transactions that are carried out by the CAF 
+are different than those carried out by the Units; the Units hold significantly more assets than the CAF does, 
+due the nature of operations. 
+ 
+
+PAGE 10
+American Airpower Heritage Group 
+Notes to the Consolidated Financial Statements 
+ 
+8 
+Ownership and operational control of all non-flying (static) museum artifacts are in the AAHM. In addition, 
+as further discussed below, ownership of life membersh ip funds and aircraft sponsorship funds are in the 
+AAHF and ownership of all or substantially all of the aircraft are in the AAHFM. The CAF has agreed by 
+formal contract to maintain aircraft belonging to the AAHFM and fully control operation of those aircraft 
+in accordance with the rules and regulations of the CAF. The CAF continues to conduct educational 
+programs and air show demonstrations and provide training for aircraft operators. 
+ 
+The General Staff has allowed certain entities to be formed as separate 501(c)(3) corporations in their 
+respective states with the purpose of the new entities to act as philanthropic organizations to raise funds 
+for the restoration, maintenance and operations of Group operated aircraft. The subordinated 
+corporations must meet the following conditions for formation: each entity must submit to CAF’s Finance 
+Committee their request to establish a separate 501(c)(3) corporation; the CAF attorney must draw up the 
+by-laws for each corporation; the request must be reviewed and approved by the Executive Committee; 
+and all control of the corporations must remain with the CAF. 
+ 
+Seven entities have incorporated and are located in  Arizona, California, Florida, Georgia, New Mexico, 
+Minnesota and Texas. For reporting purposes, they will continue to be included in the Units’ totals until such 
+time they are materially significant to the consolidated financial statements. 
+ 
+American Airpower Heritage Foundation, Inc. (AAHF) 
+ 
+AAHF is a nonprofit corporation, without voting members, established in 1983 to assist in the preservation of 
+World War II and other historical aircraft and teachi ng the traditions, heritages and accomplishments of 
+the military air services of the United States. The primary objective of the AAHF was to establish and 
+manage an endowment fund for the benefit of the CAF. It was charged with the responsibility of investing 
+life membership funds and endowment funds, which had been created from donations and gifts. The  
+by-laws of the AAHF provide that there is only one single voting member of the AAHF, that being the CAF. 
+The board of directors of the AAHF is not required to have a majority of CAF General Staff members on the 
+board. Ownership of life membership funds and aircraft funds are in the AAHF. The AAHF manages and 
+retains sponsorship funds. 
+ 
+American Airpower Heritage Museum, Inc. (AAHM) 
+ 
+AAHM has been established to house the non-flying (static) museum artifacts and the PX (the gift shop) 
+facilities. It was incorporated in 1989 as a nonprofit corporation without members. The by-laws of the 
+AAHM provide that there is only one single voting member of the AAHM, that being the CAF. In 1993, the 
+AAHM started accepting membership revenues for no n-voting members to help fund the day-to-day 
+operations. The board of directors of the AAHM is not required to have a majority of CAF General Staff 
+members on the board. All museum  assets belong to the AAHM. All static museum operations are 
+conducted by and through the AAHM and ownership of  all properties necessary for conducting the 
+museum's operations rests with the AAHM. 
+ 
+In the future, a part of the AAHM will include the Henry B. Tippie National Aviation Education Center (the 
+Center).  After the completion of a multi-year campaign, the Center is currently under construction, with a 
+planned opening in early of 2021.  The facility will provide hands-on interactive experiential STEM (Science, 
+Technology, Engineering and Math) programming intended to spark students’ imaginations, while 
+concurrently developing leadership and 21
+st century job skills. 
+
+PAGE 11
+American Airpower Heritage Group 
+Notes to the Consolidated Financial Statements 
+ 
+9 
+American Airpower Heritage Flying Museum, Inc. (AAHFM) 
+ 
+AAFHM was incorporated in 1989 as a nonprofit, nonmember organization. The AAHFM owns all or 
+substantially all of the Group's aircraft. The aircraft’s values, which are undeterminable, are not recorded 
+on these consolidated financial statements. As mentioned above, by formal agreement, the CAF 
+maintains aircraft belonging to the AAHFM and fully controls operation of those aircraft in accordance 
+with CAF rules and regulations. The CAF also displays the aircraft owned by the AAHFM. The AAHFM does 
+not conduct educational programs or  air show demonstrations, nor does  it have responsibility for the 
+maintenance of aircraft or the training of aircraft operations. The by-laws of the AAHFM provide that there 
+is only one single voting member of the AAHFM, that being the CAF. 
+ 
+Financial Statement Presentation 
+ 
+For presentation of the consolidated financial statements, net assets and revenue, gains, expenses, and 
+losses are classified as without donor restriction, an d with donor restriction based upon the following 
+criteria: 
+ 
+ Net assets without donor restriction represent expendable funds available for operations which are 
+not otherwise limited by donor restrictions. While these net assets do not have donor  
+restrictions, they may be Board restricted for st ated purposes and are classified as without donor 
+restriction – designated; and 
+ Net assets with donor restriction consist of contributed funds subject to specific donor-imposed 
+restrictions contingent upon specific performance of a future event or a specific passage of time 
+before the Group may spend the funds. They are al so subject to irrevocable donor restrictions 
+requiring that the assets be maintained in perpetuity usually for the purpose of generating 
+investment income to fund current operations. Donor restricted endowment trust assets are those 
+assets from which the corpus may never be withdrawn. 
+ 
+Basis of Accounting and Principles  
+ 
+The consolidated financial statements of the Grou p have been prepared on  the accrual basis of 
+accounting. The financial statements are prepared on a consolidated basis since all members of the 
+Group are commonly controlled. Members of the Group separately file their information reports with the 
+Internal Revenue Service because the Internal Revenue Code does not provide for combined reports. All 
+financial transactions have been summarized for accounting reporting purposes into funds established 
+according to their nature and purpose as follows: 
+ 
+General Funds 
+General funds represent the portion of expendable funds without donor restrictions that are available for 
+the general operations and support of the Group. 
+ 
+Aircraft Funds 
+Aircraft funds represent the donor restricted contributions from aircraft sponsors, which are to be used for 
+acquisition, restoration and maintenance of specific aircraft. Effective with the reorganization, the AAHF 
+holds in a separate account each sponsorship fund  established by a sponsor for the restoration and 
+preservation of a designated aircraft owned by th e AAHFM. The AAHF shall distribute so much of the 
+income and principal of the particular sponsorship fund as may be required by the AAHFM or the CAF for 
+purposes of restoring, maintaining and operating the designated aircraft. In the event a sponsor's aircraft 
+shall be permanently retired and no longer in need of support, the sponsor shall be given an opportunity 
+to designate another aircraft to sponsor, and upon failure to do so, such remaining funds shall be added 
+to the general fund and administered in accordance with provisions in the by-laws. 
+
+PAGE 12
+American Airpower Heritage Group 
+Notes to the Consolidated Financial Statements 
+ 
+10 
+Life Member Funds 
+Life member funds represent funds designated in 1982 by the General Staff requiring in perpetuity that the 
+principal remain invested and only the investment income be available for the general operations and 
+support of the CAF. Initially, life member funds were included and utilized by the CAF general fund until 
+the membership was paid in full. At that time, the total amount paid for the life membership was 
+transferred from the CAF general fund to the life member fund. The AAHF holds in a separate account the 
+life member funds generated by the CAF, and such other funds as the CAF or the museums from time to 
+time may transfer to the AAHF. 
+ 
+These funds are held separately from the general endowment funds. 
+The principal of the life member funds remains intact with no expenditures other than for investment 
+purposes or as required below. 
+ 
+Upon the written request of the General Staff, with the approval of the board of directors of the AAHF, 
+which approval cannot be unreasonably withheld, the AAHF shall distribute to the CAF or the museums an 
+amount of the principal of the life member funds as may be required for use in their charitable, 
+educational or scientific activities within the meaning of Section 501(c)(3) of the Internal Revenue Code. 
+The AAHF shall not approve any distribution of funds for purposes that do not meet such criteria. 
+ 
+Net income earned from life member funds may be  distributed to the CAF. The General Staff may 
+designate part or all of the distribution be made to the museum. Additional distributions may be made on 
+request of the General Staff. Any undistributed income at the end of the fiscal year is added to the 
+principal. 
+ 
+Board Designated Quasi – Endowment Funds 
+The AAHF shall deposit all of its funds, except thos e funds necessary for its own administrative purposes, 
+into a quasi-endowment fund without donor restrictions for the support and benefit of the CAF, the 
+AAHFM and the AAHM. Said funds shall be invested, held, and administered under the standards that 
+apply to trusts and their trustees under the Texas Trust Act. 
+ 
+A portion of the annual net income of the general endowment fund as the General Staff of the CAF shall 
+request, will be distributed to the CAF for its support and maintenance at the end of each fiscal year or at 
+such other times as the General Staff of the CAF shall reasonably request. In addition, with the approval of 
+the General Staff of the CAF, a portion of the net income may be distributed as necessary for the support 
+and maintenance of the AAHFM and the AAHM. 
+ 
+Donor Restricted Endowment Funds 
+The CAF Missouri Wing/USO Endowment was establishe d to provide the Missouri Wing with funds that 
+would allow the unit to bring their assigned aircraft to pristine condition. 
+ 
+The agreement and restrictions on the endowment are that they are pooled and invested in the same 
+manner as other AAHF managed endowments and the endowment stays with CAF/AAHF until the 
+Missouri Wing ceases to exist. Should the Missouri wing cease to exist at some point in the future, the 
+endowment corpus would then go to benefit the USO at Lambert Field, St. Louis, Missouri. The USO at 
+Lambert Field receives no benefit nor has any rights to any annual distributions as long as the Missouri Wing 
+exists. 
+ 
+The Missouri Wing may make annual distributions requests of up to 5% annually. An annual disbursement of 
+$30,000 was made in 2019. 
+
+PAGE 13
+American Airpower Heritage Group 
+Notes to the Consolidated Financial Statements 
+ 
+11 
+Annuity Funds 
+Annuity funds represent donor restricted funds received in the form of a charitable gift annuity, which 
+have been restricted for payments to the annuitant. 
+ 
+Save the Girls 
+Save the Girls funds represent donor restricted contributions for the purpose of Nose Art restoration. 
+ 
+Aircraft Acquisition Fund 
+This fund is set up to accumulate donor restricted donations on behalf of the fund for acquisition and 
+transportation of additional aircraft for the AAHFM and AAHM. 
+ 
+Cash and Cash Equivalents 
+ 
+At year-end, cash and cash equivalent balances were held with financial institutions in either deposit 
+accounts or in trust.  
+ 
+For purposes of the statement of cash flows, the Gr oup considers all highly liquid investments purchased 
+with a maturity of three months or less to be cash equivalents. 
+ 
+Receivables 
+ 
+Accounts Receivable 
+Annual membership dues are recorded as receivables in the period the membership will renew.  
+ 
+Pledges Receivable 
+Pledges of aircraft sponsorships and life memberships are recorded as receivables in the year pledged.  
+ 
+Revenues are recorded as earned on the accrual basis.  
+ 
+Inventories 
+ 
+Inventories are valued at the lower of cost or market, with cost being determined using the first-in, first-out 
+method. 
+ 
+Investments 
+ 
+The Group’s investments are comprised of marketable  equity securities, marketable debt securities, 
+mutual funds, interests in common trust funds and certificates of deposits. The investments are carried at 
+estimated fair value based on quoted market prices. 
+ 
+Property and Equipment 
+ 
+Property and equipment acquisitions have consistently been recorded at cost if purchased and at fair 
+market value at date received if donated. In the case  of capitalized leases, cost represents the present 
+value of the future minimum lease payments including any bargain purchase option. 
+ 
+Major renewals and improvements that extend the life of an asset or benefit one or more subsequent 
+periods are capitalized. 
+ 
+
+PAGE 14
+American Airpower Heritage Group 
+Notes to the Consolidated Financial Statements 
+ 
+12 
+Replacements, maintenance and repairs which do not ex tend or improve the life of existing assets are 
+charged to expense in the period incurred. When properties or equipment are retired or otherwise 
+disposed of, the property and related accumulated depreciation accounts are relieved of the applicable 
+amounts. Gain or loss from retirements or sales are credited or charged to income currently. 
+ 
+Depreciation and amortization is provided on a straight-line basis over the following estimated useful lives: 
+ 
+Buildings 20 - 40 years
+Leasehold improvements 20 - 40 years
+Furniture, fixtures and equipment 5 -10 years
+Exhibits 5 years
+Vehicles 3 -15 years
+Aircraft property 5 years
+Leased property 40 years
+ 
+Intangible Assets 
+ 
+Intangible assets consist of trademarks and inte rnal-use software and associated accumulated 
+amortization. The life of the trademarks is 40 years. The useful life of the software is three years. Intangible 
+assets had a net book value of $29,554 and $48,533 at December 31, 2019 and 2018, respectively. 
+Accumulated amortization was $128,649 and $102,795 at December 31, 2019 and 2018, respectively. 
+ 
+Accrued Employee Benefits 
+ 
+Employees are granted vacation in varying amounts. In the event of termination, an employee is paid for 
+accumulated vacation days not exceeding 30 da ys. An accrual of $133,518 and $151,048 as of 
+December 31, 2019 and 2018 has been recorded within the accrued liabilities of these consolidated 
+financial statements. Sick leave is also granted to the employees and may accrue to 30 days, but is not 
+payable upon termination, and therefore has not been accrued. 
+ 
+Revenue Recognition 
+ 
+Contributions, including unconditional promises to give (pledges), are recognized as revenues in the 
+period received or promised. Pledge receivables du e beyond one year are stated at the net present 
+value of the estimated cash flows using a risk-adjusted rate. Conditional contributions are recorded when 
+the conditions have been substantially met. Contributions are considered to be without donor restriction 
+unless specifically restricted by the donor. 
+ 
+Contributions received with donor stipulations as to  their use are reported in net assets with donor 
+restrictions. Upon the expiration of the donor rest riction, or as the purpose of the restriction is 
+accomplished, the net assets with donor restriction are released and reclassified as net assets without 
+donor restrictions in the consolidated statements of activities. 
+ 
+Product and services revenue, which are generated from the Group’s air shows, aircraft displays and  
+PX (gift shop) operations, are generally recognized upon delivery of the services to the customer or the 
+shipment of the product. 
+ 
+Revenues from grants are generally reported as grant revenues without donor restriction and are 
+recognized as qualifying expenses as they are incurred under the terms of the agreements. 
+ 
+
+PAGE 15
+American Airpower Heritage Group 
+Notes to the Consolidated Financial Statements 
+ 
+13 
+Gains and losses on investments and other assets and liabilities are reported as increases or decreases in 
+net assets without donor restrictions unless the use of the investment is restricted by donor stipulations or 
+law. 
+ 
+In May 2014, the FASB issued ASU 2014-09, which amends ASC Topic 606, “Revenue from Contracts with 
+Customers”. The amendments in this  ASU provide a five-step analysis of contracts to determine when 
+and how revenue is recognized and replaces most existing revenue recognition guidance in GAAP. The 
+core principle of the new guidance is that an entity should recognize revenue to reflect the transfer of 
+goods and services to customers in an amount equal to the consideration the entity receives or expects 
+to receive. The amendments in this ASU are effe ctive for annual reporting periods beginning after 
+December 15, 2018 for private entities. Certain revenue streams, such as grants, contributions and 
+investment income, were scoped out. CAF has adopted the guidance as of January 1, 2019, using the 
+modified retrospective transition method. However, because adoption of this guidance did not change 
+the timing or amount of CAF’s recognition of revenue, there was no adjustment to net assets needed as 
+part of adoption of the new standard.  
+Return of Donations 
+In 2016, as a part of a capital campaign, the CAF received a $3,000,000 grant that was reported as 
+revenue with donor restriction under the guidance th at was in place at the time. The grant was split 
+between an aircraft restoration component and an equipment component. Under the equipment 
+component terms of the grant, the CAF was required to purchase a flight simulator. A portion of the 
+funds received for the equipment component were returned in 2019 and are reported in the statement 
+of activities in the amount of $1,070,348. 
+Retirement Plan 
+ 
+The Group offers full-time, permanent employees a 3% employee matching simple IRA (SRA) retirement 
+plan. The Group contributed $58,564 and $52,905 of  matching SRA funds for the years ended  
+December 31, 2019 and 2018, respectively. 
+ 
+Aircraft Collection, Museum and Library 
+ 
+In conformity with the practice followed by many museums, aircraft collection, museum objects and 
+library objects, purchased or donated, are not included in the accompanying consolidated statements of 
+financial position. 
+ 
+Insurance recoveries from non-recorded collection objects are recorded as revenue upon collection. 
+Aircraft expenditures are recorded by HQ as an expense when funded by HQ on behalf of the Units and 
+Supporting Foundations. Reimbursements, if any, of  these expenses are recorded as revenue when 
+received by HQ from the Units and Supporting Foundations indirectly through the AAHF, which has 
+ownership of the aircraft sponsorship funds. 
+ 
+Any insurance proceeds received on destroyed aircraft or income from the sale of an aircraft may only 
+be used for the purchase of a new aircraft or direct care of existing collections. 
+ 
+Federal Income Taxes 
+ 
+The Group is comprised of qualified nonprofit organi zations that are exempt from federal income tax 
+under Section 501(c)(3) of the Internal Revenue Code.  
+
+PAGE 16
+American Airpower Heritage Group 
+Notes to the Consolidated Financial Statements 
+ 
+14 
+The accounting for uncertain tax positions guidan ce requires that the Group recognize in its 
+consolidated financial statements the financial effect of a tax position, if that position is more likely than 
+not to be sustained upon examination, including resolution of any appeals or litigation processes, based 
+upon the technical merits of the position. The guidance also provides guidance on measurement, 
+classification, interest and penalties and disclosure. 
+ 
+Tax positions taken related to the Group’s tax exempt  status for federal tax purposes and state filing 
+requirements have been reviewed, and management is of the opinion that material positions taken by 
+the Group would more likely than not be sustaine d by examination. Accordingly, the Group has not 
+recorded an income tax liability for uncertain tax benefits.  
+ 
+Functional Allocation of Expenses 
+ 
+The consolidated statements of functional expenses  demonstrates expenses by function and natural 
+classification. Expenses directly attributable to a sp ecific functional area are reported as expenses of 
+those functional areas. As a result of the 2019 Fiscal Year the functional expenses are recorded with 70% 
+going to support the Education programs. The natural expenses are recorded as having 18% going to 
+promote fundraising and 12% going to support general and administrative functions. 
+ 
+Concentrations 
+ 
+The Group maintains its cash balances at several financial institutions located throughout the  
+United States. Cash balances may, at times, ex ceed federally insured limits. The Group has not 
+experienced any losses in such accounts and believes it is not exposed to any significant credit risk on 
+cash and cash equivalents. 
+ 
+Use of Estimates 
+ 
+In preparing consolidated financial statements in  conformity with generally accepted accounting 
+principles, management is required to make estimates and assumptions that affect the reported amounts 
+of assets and liabilities, the disclosure of contingent assets and liabilities at the date of the consolidated 
+financial statements, and the reported amounts of re venues and expenses during the reporting period. 
+Actual results could differ from those estimates. Significant estimates include, but are not limited to, useful 
+lives of depreciable assets, fair values of financial instruments, and allocations of costs among functional 
+categories. 
+ 
+Deferred Revenue 
+ 
+Income from membership dues not yet earned is deferred and recognized over the periods to which the 
+dues and fees relate. Additionally, airplane rides sold but not yet taken are shown as deferred revenues 
+until the ride is taken or the purchase expires.  
+ 
+
+PAGE 17
+American Airpower Heritage Group 
+Notes to the Consolidated Financial Statements 
+ 
+15 
+Recent Pronouncements 
+ 
+ASU 2016-02 
+ 
+In February 2016, the Financial Accounting Standards Board (FASB) issued ASU 2016-02, Lease  
+(Topic 842) (ASU 2016-02) in order to increase transparency and comparability among organizations by 
+recognizing lease assets and lease liabilities on th e balance sheet and disclosing key information about 
+leasing arrangements. To meet that objective, th e FASB is amending the Codification and creating 
+Topic 842, Leases. ASU 2016-02, along with IFRS 16, Leases, are the results of the FASB’s and the 
+International Accounting Standards Board’s (IASB’s) efforts to meet that objective and improve financial 
+reporting. 
+ 
+Under this standard, leases are classified as financ e leases and operating leases. For finance leases, a 
+lessee is required to do the following: 
+ 
+1. Recognize a right-of-use asset and a lease liability, initially measured at the present value of the 
+lease payments, in the statement of financial position; 
+2. Recognize interest on the lease liability separately  from amortization of the right-of-use asset in 
+the statement of comprehensive income; and 
+3. Classify repayments of the principal portion of th e lease liability within financing activities and 
+payments of interest on the lease liability and variable lease payments within operating activities 
+in the statement of cash flows. 
+ 
+For operating leases, a lessee is required to do the following: 
+ 
+1. Recognize a right-of-use asset and a lease liability, initially measured at the present value of the 
+lease payments, in the statement of financial position; 
+2. Recognize a single lease cost, calculated so that  the cost of the lease is allocated over the 
+lease term on a generally straight-line basis; and 
+3. Classify all cash payments within operating activities in the statement of cash flows. 
+ 
+For leases with a term of 12 months or less, a lessee is permitted to make an accounting policy election 
+by class of underlying asset not to  recognize lease assets and lease liabilities. If a lessee makes this 
+election, it should recognize lease expense for such leases generally on a straight-line basis over the 
+lease term.  
+ 
+For all non-public for profit entities, the amendmen ts in this ASU 2016-02 are effective for fiscal years 
+beginning after December 15, 2020, and interim periods within fiscal years beginning after  
+December 15, 2021. The Group is in the process of determining the effects of this ASU on financial 
+reporting. 
+ 
+ASU 2019-03 
+ 
+In March 2019, the Financial Accounting Standards Board (FASB) issued ASU 2019-03, Not-for-Profit 
+Entities (Topic 958) (ASU 2019-03) to modify the definition of the term collections and require that 
+collection-holding entities disclose their policies fo r the use of proceeds from when collection items are 
+deaccessioned (that is, removed from a collection).  If a collection-holding entity has a policy that 
+allows proceeds from deaccessioned collection items to be used for direct care, the entity should 
+disclose the definition of direct care. 
+
+PAGE 18
+American Airpower Heritage Group 
+Notes to the Consolidated Financial Statements 
+ 
+16 
+The FASB is issuing this update to improve the de finition of collections in the Master Glossary by 
+realigning it with the definition in the Code. The FASB is also making a technical correction in Topic 360, 
+Property, Plant, and Equipment, to clarify that the accounting and disclosure guidance for collections in 
+Subtopic 958-360, Not-for-Profit Entities – Property, Plant, and Equipment, applies to business entities as 
+well as not-for-profit entities, consistent with what was indicated in Statement 116. 
+ 
+The amendments in this update are effective for a nnual financial statements issued for fiscal years 
+beginning after December 15, 2019, and for interim periods within fiscal years beginning after 
+December 15, 2020. Early application of the amendment is permitted. The amendments in this update 
+should be applied on a prospective basis. 
+ 
+Reclassifications 
+ 
+Certain prior year amounts have be en reclassified for consistency with the current year presentation. 
+These reclassifications had no effect on the reported changes in net assets. 
+ 
+Subsequent Events 
+ 
+The Group has evaluated events subsequent to the date of the statement of financial position 
+December 31, 2019 through July 10, 2020, the date the consolidated financial statements were 
+available to be issued. See subsequent event note 19. 
+ 
+Note 2.  Liquidity 
+ 
+The Group’s financial assets available for general expenditure, that is, without donor or other restrictions 
+limiting their use, within one year of the consolidated statement of financial position date, are as follows: 
+ 
+2019 2018
+Cash and cash equivalents 14,233,473 $     11,638,317 $     
+Line of credit 1,500,000          2,500,000          
+Accounts receivable 320,973             327,404             
+Pledges receivable 167,713             3,342,042          
+Investments 8,916,094          7,589,762          
+Other assets 252,226             137,980             
+Total financial assets, year end 25,390,479        25,535,505        
+Less
+Pledges receivable, long term (50,231)              (608,742)            
+Other assets (252,226)            (137,980)            
+Total financial assets not available to
+  be used within one year (302,457)           (746,722)            
+Total financial assets available to meet general
+  expenditures within one year 25,088,022$     24,788,783 $     
+ 
+
+PAGE 19
+American Airpower Heritage Group 
+Notes to the Consolidated Financial Statements 
+ 
+17 
+Note 3.   Transactions with Units and Supporting Foundations 
+ 
+The following is a summary of the significant transactions between the Units and HQ and the impact upon 
+the accompanying consolidated financial statements. 
+ 
+a. Various wings, squadrons and detachments sponsor air shows, which must be approved in 
+advance by HQ. The net profits from the air shows remain with the wing, squadron or 
+detachment for specific aircraft restoration or maintenance projects; 
+b. Most aircraft are supported financially by a spon sor or group of sponsors. Revenues received by 
+the wings, squadrons or detachments for this pu rpose must be remitted to AAHF. AAHF records 
+the sponsor funds as revenue by aircraft and general donations as gifts as cash is received; 
+c. Substantially all Units incur aircraft restoration and maintenance costs on the aircraft assigned to 
+them. To the extent that specific aircraft sponsor funds exist, AAHF will reimburse the wing, 
+squadron or detachment for the expenditures or pay the charges directly. In certain cases, and 
+by HQ approval only, these costs will be reimbursed or paid out of general funds if specific 
+aircraft sponsor funds are not available; 
+i. AAHF records an operating expense as reimbursements or expenditures made. Revenues 
+are recorded when received from the AAHF where funds for sponsorships are retained and 
+invested; 
+d. Some repairs and maintenance are performed at the HQ. Costs to repair the aircraft are charged 
+to operating expense as incurred; 
+e. Most insurance coverages are negotiated by HQ staff and charged to the individual aircraft 
+(aircraft liability) or general and administrative expense as appropriate; 
+f. Various Units must purchase inventory on their respective credit  cards.  All inventory transactions 
+for HQ is online now and no credit is extended to the Units for purchases off the HQ website; 
+g. Most Units have been assigned at least one of the historic airplanes by AAHFM to operate and 
+maintain in accordance with HQ policy. No compensation is received by any entity for this 
+assignment; however, the aircraft can be recalled at any time. 
+h. All Units pay an Annual Unit Administration Charge (ANUAC). This charge is necessary to provide 
+additional revenue to support HQ in meeting the various rules and regulations as set forth by the 
+Federal Aviation Administration, which requires central record keeping and central responsibility to 
+be maintained, to operate a unique business of flying 70-year-old aircraft. ANUAC revenues and 
+expenses are part of the HQ and Units consolidated financial statements but then are eliminated 
+during the consolidation process; and 
+i. Some donations are the result of direct mail fund raising programs administered by a professional 
+fund raising company. A third party company proc esses donation deposits. For the current year, 
+CAF Headquarters and one unit participated in th is service. However, all vendor payments are 
+made by the unit itself. 
+ 
+
+PAGE 20
+American Airpower Heritage Group 
+Notes to the Consolidated Financial Statements 
+ 
+18 
+Note 4.   Lease Agreement between the City of Midland, Texas and the Commemorative 
+Air Force, Inc. 
+ 
+On July 4, 1990, the CAF entered into a lease agreement with the City of Midland to lease land, buildings, 
+and leasehold improvements located at Midland International Airport to the CAF.  
+ 
+This agreement commenced on July 1, 1990 (the Commencement Date), with a termination date of  
+June 30, 2040, unless terminated earlier pursuant to provisions of the agreement. 
+ 
+The lease required annual rent payments of $1. In addition to the rent to be paid, the CAF was required to 
+substantially complete within 24 months after the Commencement Date the renovation of existing 
+improvements on the leased premises (the Windecker Facility) and construction of such additional square 
+footage of maintenance, storage, and exhibit hangar s as are necessary to achieve the HQ’s purpose.  
+HQ expended approximately $4,800,000 for five additional facilities. 
+ 
+The leased Windecker Facility was returned to th e City of Midland on July 2016. The Commemorative 
+Center facility (one of the five additional facilities) was returned to the City of Midland in August 2018. The 
+leasehold improvements on the Commemorative Center were expensed as a result of the return of this 
+property. The Group recognized a loss of $3,191,471 on the leasehold improvements, which is included in 
+the consolidated statement of activities for the year ended December 31, 2018. 
+ 
+The remaining properties leased under the agreement for the Supporting Units are still under contract and 
+accounted for as property leased under an operating lease. 
+ 
+Note 5.   Lease Agreement between the City of Dallas, Texas, and the Commemorative 
+Air Force, Inc. 
+ 
+On December 31, 2015 (the effective date), the CAF entered into a lease agreement with the City of 
+Dallas to lease land and facilities at the Dallas Executive Airport for its new International Headquarters.  
+ 
+The agreement has a termination date of December 31, 2054, unless terminated earlier pursuant to 
+provisions of the agreement. 
+ 
+The lease requires annual base rent payments of $1,000. Beginning in year six of the lease agreement, the 
+lease requires additional annual rent payments totaling $120,000. Additional rent payments are abated by 
+the percentage specified below when the following events occur: 
+ 
+a. The additional base rent shall be abated by 30% ($36,000 per year, payable monthly) each year 
+the CAF maintains at least 25 full-time jobs on the leased premises with a payroll of at least  
+$1.5 million; 
+b. The additional base rent shall be abated by 40% ($48,000 per year, payable monthly) each year 
+after the year in which the CAF constructs a new hangar valued at no less than $5,000,000 as 
+required by the Development Agreement and operates a museum attraction displaying historic 
+military aircraft open to the general public and school groups on at least 250 days a year; and 
+c. The additional base rent shall be abated by 30% ($36,000 per year, payable monthly) each year 
+that the CAF sponsors and produces at least one major event on the premises.  
+ 
+
+PAGE 21
+American Airpower Heritage Group 
+Notes to the Consolidated Financial Statements 
+ 
+19 
+The lease is accounted for as a capital lease in the consolidated statement of financial position, with  
+the associate depreciation in the consolidated statement of activities. For the years ended  
+December 31, 2019 and 2018, the CAF recorded $45,183 in  depreciation expense related to the capital 
+lease. 
+ 
+Note 6.   Development Agreement 
+ 
+On December 1, 2016, the CAF entered into a Development Agreement with the City of Dallas in 
+conjunction with the Group’s relocation of its International Headquarters to the Dallas Executive Airport. 
+The Agreement sets out requirements and milestones for relocation to existing facilities and construction 
+of new facilities. 
+ 
+The Agreement provided for a grant of $600,000 upon initial relocation. This amount is included in the 
+consolidated statement of activities for the year ended December 31, 2016. The CAF achieved a 
+milestone per the Agreement in 2019 and received a $100,000 grant. No additional funds were granted 
+for the year ended December 31, 2018. 
+ 
+The Agreement also outlines Phase I Improvements, which require that the CAF invest a minimum of 
+$5,000,000 in a minimum of 35,000 square feet of museum and hangar space. The CAF is required to 
+obtain a building permit for the Phase I Improvements by December 31, 2019 and complete Phase I 
+Improvements by December 31, 2020. In consid eration for the CAF’s investment in Phase I 
+Improvements, the City of Dallas will reimburse the CAF for up to 40% of eligible expenditures, not to 
+exceed $2,000,000.  
+ 
+Note 7.   Fair Value of Investments  
+ 
+For assets and liabilities measured at fair value on  a recurring basis, accoun ting principles generally 
+accepted in the United States of America establish a fair value hierarchy that requires an entity to 
+maximize the use of observable inputs and minimize the use of unobservable inputs when measuring fair 
+value. The three levels of inputs that may be used to measure fair value are described below: 
+ 
+Level 1: Quoted price in active market s for identical assets or liabilities. 
+ 
+Level 2: Observable inputs other than Level 1 pric es, such as quoted prices for similar assets or 
+liabilities; quoted prices in markets that are not active; or other inputs that are observable 
+or can be corroborated by observable market data for substantially the full term of the 
+assets or liabilities.  
+ 
+Level 3: Unobservable inputs that are supported by little or no market activity and that are 
+significant to the fair value of the assets or liabilities. 
+ 
+Following is a description of the valuation methodologies used for assets and liabilities measured at fair 
+value on a recurring basis and recognized in the acco mpanying statement of financial position, as well 
+as the general classification of such assets and liabilities pursuant to the valuation hierarchy. 
+ 
+Where quoted market prices are available in an active  market, securities are classified within Level 1 of 
+the valuation hierarchy. Level 1 securities include publicly traded mutual funds and fixed income 
+equities.  
+
+PAGE 22
+American Airpower Heritage Group 
+Notes to the Consolidated Financial Statements 
+ 
+20 
+Level 2 securities include money markets and CDs. If quoted market prices are not available, then fair 
+values are estimated by using pricing models, quoted prices of securities with similar characteristics, or 
+discounted cash flows. 
+ 
+The following table presents the fair value measurements of assets and liabilities recognized in the 
+consolidated statements of financial position measur ed at fair value on a recurring basis and the level 
+within the fair value hierarchy in which the fair value measurements fall at December 31, 2019: 
+ 
+Level 1 Level 2 Level 3 Total
+Investments
+Fixed income (mutual funds) 2,590,357$     - $                - $                2,590,357$     
+Equities 6,108,178        -                   -                   6,108,178       
+Tangible assets (commodities) 217,559          -                   -                   217,559          
+Total investments 8,916,094        -                   -                   8,916,094       
+Money markets 603,734           -                   -                   603,734          
+Total 9,519,828 $     - $                - $                9,519,828$     
+Fair Value Measurements Using
+ 
+The following table presents the fair value measurements of assets and liabilities recognized in the 
+consolidated statements of financial position measur ed at fair value on a recurring basis and the level 
+within the fair value hierarchy in which the fair value measurements fall at December 31, 2018: 
+ 
+Level 1 Level 2 Level 3 Total
+Investments
+Fixed income (mutual funds) 2,057,168$     - $                - $                2,057,168$     
+Equities 5,494,169        -                   -                   5,494,169       
+Tangible assets (commodities) 38,425            -                   -                   38,425             
+Total investments 7,589,762        -                   -                   7,589,762       
+Money markets 2,686,529        -                   -                   2,686,529       
+Total 10,276,291 $   - $                - $                10,276,291$   
+Fair Value Measurements Using
+ 
+
+PAGE 23
+American Airpower Heritage Group 
+Notes to the Consolidated Financial Statements 
+ 
+21 
+Investments at December 31, 2019 and 2018, consisted of the following: 
+ 
+2019 2018
+Fixed income (mutual funds) 2,590,357 $           2,057,168 $           
+Equities 6,108,178              5,494,169              
+Tangible assets (commodities) 217,559                 38,425                   
+Investments 8,916,094              7,589,762              
+Money markets 603,734                 2,686,529              
+Total investments at fair value 9,519,828 $           10,276,291 $         
+ 
+Note 8.   Accounts Receivable 
+ 
+Accounts receivable (net) at December 31, 2019 and 2018 consist of the following: 
+ 
+2019 2018
+Member dues, net of allowance 35,070 $                7,325 $                  
+Other, net of allowance 285,903 320,079
+Total accounts receivable (net) 320,973 $              327,404 $              
+ 
+Note 9.   Pledges Receivable 
+ 
+Pledges receivable at December 31, 2019 and 2018 consist of the following: 
+ 
+2019 2018
+Life members, net of allowance 11,400 $                11,600 $                
+Empoyees pledge, aircraft restoration, 
+  and national airbase, net of allowance 135,976 3,402,592             
+Aircraft sponsorship, net of allowance 20,337                  27,850
+Total pledges receivable 167,713 $              3,442,042 $           
+ 
+Multi-year pledges at December 31, 2019 consist of the following: 
+ 
+Year Ending 
+December 31,
+2020 117,482 $              
+2021 8,473                     
+2022 21,417                   
+2023 20,341                   
+Total 167,713 $              
+ 
+
+PAGE 24
+American Airpower Heritage Group 
+Notes to the Consolidated Financial Statements 
+ 
+22 
+Note 10.   Property and Equipment 
+ 
+A summary of property and equipment and the related accumulated depreciation at December 31, 
+2019 and 2018 follows: 
+ 
+2019 2018
+Building 12,512,966 $         12,513,369 $         
+Leasehold improvements 1,762,551 1,572,946
+Furniture, fixtures and equipment 867,840 818,144
+Exhibits 4,630,031 4,011,563
+Vehicles 290,621 286,607
+Construction in progress 997,836 782,650
+Aircraft property 400,000 400,000                 
+Leased property 1,762,125 1,762,125
+Land 110,000 125,000
+Less accumulated depreciation (11,378,570)          (10,751,285)           
+Total 11,955,400 $         11,521,119 $         
+Depreciation expense for the  
+  year ended December 31, 743,262 $              993,595 $              
+ 
+During 2017, the CAF received a donated A-36 Bonanza ai rcraft. The aircraft is not considered to be a 
+historical artifact, as defined in the Group’s mission statement. The donation stipulates that the aircraft 
+must be displayed by the Group for a period of five years. At that time, the Group is free to sell the aircraft 
+and use proceeds to benefit the direct care and maintenance of existing collections. Because the aircraft 
+is not considered a collection artifact, it is capitalized at the fair value of the aircraft at the date of 
+donation and depreciated at its estimated useful life of five years.  
+ 
+
+PAGE 25
+American Airpower Heritage Group 
+Notes to the Consolidated Financial Statements 
+ 
+23 
+Note 11.   Notes Payable  
+ 
+Following is a summary of notes payable for the Units at December 31, 2019 and 2018: 
+ 
+2019 2018
+Unsecured note payable due in monthly installments as follows: April 
+2019 - September 2019 (monthly interest only at 5.97%), October 2019 -
+March 2024 ($1,133 monthly principal plus interest at 5.97%), April 2024 -
+March 2029 ($1,140 monthly principal plus interest at the WSJ Prime
+Rate + 0.75%) maturing on March 1, 2029. 96,511$      - $            
+Note payable due in monthly installments of $4,905 including
+interest at 3.70%, due on April 7, 2023, secured by a hangar. 183,893       234,815       
+Note payable bearing interest at 8.75%, due on April 1, 2030,
+secured by a hangar.  Interest only until April 1, 2010 then interest
+plus monthly principal payments of $1,204 until maturity. 148,112       163,766       
+Note payable due in monthly installments of $612 including interest
+ at 6.00%; matures November, 1 2033; collateralized by a hangar. 69,504         72,340         
+Unsecured non-interest bearing note payable to an individual
+payable in unspecified increments over an unspecified time period.  
+Payments to be made promptly as revenues are generated by future 
+sponsorships or profits generated through air show appearances. 38,889         46,504         
+Total 536,909$    517,425 $    
+ 
+Following are maturities of the notes for each of the next five years: 
+ 
+Year Ending
+December 31,
+2020 88,370 $                
+2021 91,121                   
+2022 94,435                   
+2023 57,052                   
+2024 32,383                   
+2025 and thereafter 173,548                
+Total 536,909 $              
+ 
+On September 4, 2015, the AAFHM entered into an agreement with a third party for HQ, as an affiliate to 
+the AAFHM, to operate an aircraft for a period of five years. Upon maturity of the agreement, the AAFHM, 
+or one of its affiliates, has to return the aircraft in acceptable working condition or purchase the aircraft for 
+$149,000. The note requires no principal payments until maturity and bears no interest. Upon maturity, the 
+note begins incurring annual interest of up to 18%. The third party may extend the maturity date of the 
+note up to July 1, 2025 at its discretion.  
+ 
+
+PAGE 26
+American Airpower Heritage Group 
+Notes to the Consolidated Financial Statements 
+ 
+24 
+The entire balances of the Units notes payable and the AAFHM note payable are included in the notes 
+payable, current and long term portions of the cons olidated statements of financial position as of 
+December 31, 2019 and 2018. 
+ 
+Note 12.   Line of Credit 
+ 
+In December 2014, CAF entered into a line of credit agreement with a financial institution. The terms of the 
+line of credit agreement allows CAF to borrow up to $2,000,000. The line of credit has a variable interest 
+rate at the WSJ prime rate + 0.750%. The line of credit is guaranteed by AAHFM, AAHF and AAHM. The line 
+of credit agreement matured on August 30, 2016. On August 28, 2018, the line was extended to July 31, 
+2020 with the original interest rate and a borrowing limit of $2,500,000. The balance outstanding on the line 
+of credit was $1,000,000 and $0 at December 31, 2019 and 2018, respectively. 
+ 
+Note 13.   Leases 
+ 
+CAF has entered into numerous non-cancelable oper ating leases for real and personal property and 
+equipment. The related lease expense is recorded in the consolidated statement of activities of the  
+Units and Supporting Foundations. Additionally, the lease between the City of Dallas and HQ is recorded 
+as a capital lease. 
+ 
+Future minimum lease payments as of December 31, 2019 are as follows: 
+ 
+Year Ending
+December 31,
+2020 255,753 $              
+2021 349,448                 
+2022 334,900                 
+2023 248,278                 
+2024 237,490                 
+2025 and thereafter 4,290,057             
+Total 5,715,926 $           
+ 
+ 
+
+PAGE 27
+American Airpower Heritage Group 
+Notes to the Consolidated Financial Statements 
+ 
+25 
+Note 14.   Net Assets 
+ 
+Net asset classifications and balances at December 31, 2019 are shown on the consolidated statement of 
+financial position. This schedule provides additional classification detail. See Note 1 for individual fund 
+descriptions and imposed restrictions.  
+ 
+With donor restrictions
+CAF Headquarters 2,107,698 $       (1,006,862) $      1,100,836 $       
+Units- AAHF Arizona Foundation 60,803               74,016               134,819             
+AAHF- Aircraft fund 2,505,415          (243,619)            2,261,796          
+AAHF- Endowment earnings 357,386             116,154             473,540             
+AAHF- Headquarters 567,430             -                     567,430             
+AAHM- Save the Girls 797                    -                     797                    
+AAHM- Building and Museum Fund 3,945,424         (35,697)              3,909,727          
+AAHM- Education 363,526             110,009             473,535             
+Units- CAF Missouri Wing/USO
+  General operation endowment 380,000            120,009             500,009             
+AAHF- Endowment fund 5,562,168          87,336               5,649,504          
+AAHM- Endowment fund 24,542               (24,542)              -                     
+Total with donor restriction 15,875,189        (803,196)            15,071,993        
+Without donor restrictions
+Undesignated 15,977,651        983,102             16,960,753        
+Designated
+AAHF- Quasi-endowment fund 94,549               -                     94,549               
+AAHF- Life member fund 137,554             26,506               164,060             
+AAHF- Annuity Fund 9,690                 (75)                     9,615                 
+Total without donor restriction 16,219,444       1,009,533          17,228,977        
+Total net assets 32,094,633 $     206,337 $          32,300,970 $     
+Balances 
+December 31, 
+2018 
+Increase 
+(Decrease) in 
+Net Assets
+Balances 
+December 31, 
+2019
+ 
+
+PAGE 28
+American Airpower Heritage Group 
+Notes to the Consolidated Financial Statements 
+ 
+26 
+Net asset classifications and balances at December 31, 2018 are shown on the consolidated statement of 
+financial position. This schedule provides additional classification detail. 
+ 
+Balances
+December 31,
+2017
+With donor restrictions
+CAF Headquarters 2,159,959 $       (52,261) $           2,107,698 $       
+Units- AAHF Arizona Foundation 51,775               9,028                 60,803               
+AAHF- Aircraft Fund 2,713,963          (208,548)            2,505,415          
+AAHF- Endowment earnings 395,194             (37,808)              357,386             
+AAHF- Headquarters 567,430             -                     567,430             
+AAHM- Save the Girls 797                    -                     797                    
+AAHM- Building and Museum Fund -                         3,945,424         3,945,424          
+AAHM- Education 364,330             (804)                   363,526             
+Units- CAF Missouri Wing/USO
+General operation endowment 270,000             110,000             380,000             
+AAHF- Endowment fund 5,431,201          130,967             5,562,168          
+AAHM- Endowment fund 22,564               1,978                 24,542               
+Total with donor restrictions 11,977,213       3,897,976          15,875,189        
+Without donor restrictions
+Undesignated 21,291,678        (5,314,027)         15,977,651        
+Designated
+AAHF- Quasi-endowment fund 94,549               -                     94,549               
+AAHF- Life member fund 141,323             (3,769)                137,554             
+AAHF- Annuity Fund 12,405               (2,715)                9,690                 
+Total with donor restrictions 21,539,955       (5,320,511)         16,219,444        
+Total net assets 33,517,168 $     (1,422,535) $      32,094,633 $     
+Increase 
+(Decrease) in 
+Net Assets
+Balances 
+December 31, 
+2018
+ 
+ 
+
+PAGE 29
+American Airpower Heritage Group 
+Notes to the Consolidated Financial Statements 
+ 
+27 
+Note 15.   Endowment Funds 
+ 
+Board Designated Endowment Funds and Quasi-Endowment Fund 
+ 
+As required by generally accepted accounting principles, net assets associated with endowment funds, 
+including funds designated by the Board of Direct ors to function as endowments, are classified and 
+reported based on the existence or absence of donor-imposed restrictions. 
+ 
+The Group’s Board of Directors esta blished a quasi-endowment fund for the support and benefit of the 
+CAF, the AAHFM and the AAHM. This fund is designated and all Foundation funds, except those funds 
+necessary for its own administrative purposes, are deposited into this fund and are invested, held and 
+administered by the Board as needed. 
+ 
+Interpretation of the Law 
+ 
+The Group has interpreted the Uniform Prudent Mana gement of Institutional Funds Act (UPMIFA) as 
+requiring the preservation of the fair value of the original gift as of the gift date of the donor restricted 
+endowment funds absent explicit donor stipulations to the contrary. As a result of this interpretation, the 
+Group classifies as net assets with donor restrictio ns: (a) the original value of gifts donated to the 
+permanent endowment, (b) the original value of subsequent gifts to the permanent endowment, and 
+(c) accumulations to the permanent endowment made in accordance with the direction of the 
+applicable donor gift instrument at the time the accumulation is added to the fund. The remaining 
+portion of the donor restricted endowment fund that is not classified in donor restricted endowment net 
+assets is classified as without donor restrictions -designated quasi-endowment until those amounts are 
+appropriated for expenditure by the organization in a manner consistent with the standard of prudence 
+prescribed by UPMIFA. 
+ 
+Endowment Spending and Investment Policies 
+ 
+The Group has adopted investment and spending po licies for endowment assets that attempt to 
+provide a fairly predictable stream of funding to  programs supported by its endowment funds while 
+seeking to maintain the purchasing power of the endowment assets. Most assets are invested and are 
+administered by Bank of America – Private Bank in a manner that is intended to produce results with a 
+moderate level of investment risk. A small portion of the assets are in interest bearing money market 
+accounts. The Group expects its endowment funds, over time, to provide an average rate of return of 
+approximately 8% percent annually. While actual returns in any given year may vary from this amount, 
+the CAF General Staff may request up to a 5% market value distribution of income from the 
+endowments.  
+ 
+The CAF General Staff and the AAHM Board requested a 7% market value distribution of income from 
+their respective endowment funds in 2019 and 2018. 
+ 
+
+PAGE 30
+American Airpower Heritage Group 
+Notes to the Consolidated Financial Statements 
+ 
+28 
+Endowment composition at December 31, 2019 is as follows: 
+ 
+Without
+Donor restriction With Dono r
+Quasi- Restriction
+Endowments Endowments
+Endowment net assets,  beginning of year 241,793$                6,027,513 $              
+Interest and dividends 6,561                       1,097                        
+Total investment 248,354                   6,028,610                 
+Contribution 28,554                     284,871                    
+ Appropriation of endowment
+   assets for expenditure (8,684)                      (29,149)                     
+Endowment net assets, end of year 268,224$                6,284,332 $              
+ 
+Endowment composition at December 31, 2018 is as follows:  
+ 
+Without
+Donor restriction With Dono r
+Quasi- Restriction
+Endowments Endowments
+Endowment net assets,  beginning of year 248,277$                5,775,540 $              
+Interest and dividends (8,105)                      540                           
+Total investment 240,172                   5,776,080                 
+Contribution 1,635                       252,993                    
+ Appropriation of endowment
+   assets for expenditure (14)                           (1,560)                       
+Endowment net assets, end of year 241,793$                6,027,513 $              
+ 
+Note 16.   Contributed Services 
+ 
+Contributions are recognized at their fair value if the services received (a) create or enhance nonfinancial 
+assets or (b) require specialized skills that are provided by individuals possessing those skills and  
+would typically need to be purchased if not provided by donation. Management determined that the 
+total contributed services that met this definition were $1,146,248 and $1,771,809 for the years ended 
+December 31, 2019 and 2018, respectively, and were recorded as both donations and also expensed to 
+costs and expenses in the consolidated financial statements. 
+ 
+A substantial number of unpaid volunteers have made significant contributions of their time to develop 
+the Group’s programs. These donated services are not reflected in the consolidated financial statements 
+since the services do not require specialized skills. 
+
+PAGE 31
+American Airpower Heritage Group 
+Notes to the Consolidated Financial Statements 
+ 
+29 
+Note 17.   Related Party Transactions 
+ 
+The American Airpower Heritage Group (the Group) consists of multiple entities as discussed in Note 1. As 
+part of their operations, there are various transactions between the entities for various purposes.  
+ 
+The recording of these transactions depends upon the underlying intent. If the transfer is a temporary 
+advance, other intragroup receivables and payables are recorded. These amounts are reversed when 
+the advance is repaid. 
+ 
+Transactions from one corporation to another in accordance with operating agreements or other donor 
+designations for fulfilling the mission of the Group are recorded as revenues of the receiving entity and as 
+expenditures of the provider entity and are included in donations to or from affiliates. 
+ 
+For the purposes of the consolidated financial stat ements, all intercompany transactions have been 
+eliminated. 
+ 
+Note 18.  Aircraft Collection Proceeds and Restoration Grant 
+ 
+Through the restoration grant program, aircraft not being utilized by the CAF are sold and proceeds used 
+for additional aircraft acquisition and restoration and repair of current aircraft. These funds are put into a 
+special account and are used only for restoration purposes. Units and Supporting Foundations seeking use 
+of these funds submit a request for the funds needed and explanation of how the funds will be used. The 
+restoration committee reviews requests and awards monies to Units and Supported Foundations for use on 
+specific aircrafts. 
+ 
+Donations of $25,957 and $44,679 were made to the gr ant program by members for multiple restoration 
+projects for the years ended December 31, 2019 and 2018, respectively. 
+ 
+The Group sold two aircraft in 2019 and one in 2018.  The Group purchased two aircraft in 2019 and two 
+aircraft in 2018. 
+ 
+The Group received four donated planes in 2019 an d two donated planes in 2018 to be held in its 
+collection. The planes were not capitalized in accordance with the Group’s adopted accounting policies. 
+ 
+Note 19.  Subsequent Events 
+ 
+COVID-19 
+ 
+The extent of the operational and financial impact the COVID-19 pandemic may have on the Group 
+has yet to be determined and is dependent on its duration and spread, any related operational 
+restrictions and the overall economy. The Group is  unable to accurately predict how COVID-19 will 
+affect the results of its operations because the virus’s severity and the duration of the pandemic are 
+uncertain. However, while it is premature to accurate ly predict its full impact we expect our results for 
+fiscal year 2020 to be impacted with potential continuing, adverse impacts beyond fiscal year 2020. 
+ 
+
+PAGE 32
+American Airpower Heritage Group 
+Notes to the Consolidated Financial Statements 
+ 
+30 
+The CARES Act and the PPP Loan Program 
+ 
+The Coronavirus Aid, Relief, and Economic Security Ac t, also known as the CARES Act, was signed into 
+law on March 27, 2020. Among other things, the CARES Act provided for a business loan program known 
+as the Paycheck Protection Program (PPP). Entities ar e able to borrow, through the SBA, up to two and 
+a half months of payroll and related benefits and is de signed to be fully forgiven if payroll levels are not 
+reduced in the 8 weeks subsequent to the funding of the loan. The Group received $541,900 in 
+proceeds from such programs in April 2020. 
+ 
+NAEC Line of Credit 
+ 
+In April of 2020, the CAF entered into a line of credit agreement with a financial institution to support the 
+construction of the Henry B. Tippie National Aviation Education Center (the NAEC). The terms of the line of 
+credit allow the CAF to borrow up to $8,125,000. The line of credit has a variable interest rate based on the 
+3-month LIBOR plus 2.50%. The line of credit is guaranteed by AAHF, AAHM and AAHFM. The line of credit 
+matures in April of 2023. As of the date of issuance of these consolidated financial statements, the CAF 
+has not drawn on this credit facility. 
+
+PAGE 33
+ 
+ 
+Supplemental Information 
+
+PAGE 34
+Weaver and Tidwell, L.L.P.
+400 West Illinois Avenue, Suite 1550 | Midland, Texas 79701
+Main: 432.683.5226
+CPAs AND ADVISORS | WEAVER.COM
+ 
+ 
+ 
+Independent Auditor’s Report 
+on Supplemental Information 
+ 
+ 
+To the General Staff of 
+American Airpower Heritage Group 
+Dallas, Texas 
+ 
+We have audited the consolidated financial statements of American Airpower Heritage Group as of and 
+for the year ended December 31, 2019, and have issued our report thereon dated July 10, 2020, which 
+contained an unmodified opinion on those consolidated financial statements. Our audit was performed 
+for the purpose of forming an opinion on the consolidated financial statements as a whole.  
+ 
+The consolidating financial statements and schedules are presented for the purposes of additional 
+analysis and are not a required part of the consolid ated financial statements. Such information is the 
+responsibility of management and was derived from and relates directly to the underlying accounting 
+and other records used to prepare the consolidated  financial statements. The information has been 
+subjected to the auditing procedures applied in the audit of the consolidated financial statements and 
+certain additional procedures, including comparing and reconciling such information directly to the 
+underlying accounting and other records used to prepare the consolidated financial statements or to the 
+consolidated financial statements themselves, and other additional procedures in accordance with 
+auditing standards generally accepted in the United States of America. In our opinion, the information is 
+fairly stated in all material respects in relation to the consolidated financial statements as a whole. 
+ 
+ 
+ 
+WEAVER AND TIDWELL, L.L.P. 
+ 
+Midland, Texas 
+July 10, 2020 
+ 
+
+PAGE 35
+American Airpower Heritage Group 
+Consolidating Statement of Financial Position 
+December 31, 2019 
+(With Summarized Comparative Consolidated Totals for December 31, 2018) 
+ 
+32 
+CAF-HQ AAHF AAHM
+Cash and cash equivalents 454,799 $      8,876,858 $           728,233 $      4,173,004 $   
+Accounts receivable (net) 143,587 124,633                 52,753 -                 
+Pledges receivable 4,615             -                         31,737 131,361
+Inventories 307,503         487,685                 -                 16,904           
+Prepaid expenses 452,899 479,815 -                 11,472
+Investments -                 2,321,320             6,594,774      -                 
+Intragroup receivables (net) 1,347,252 152,215 651,735 -                 
+Intragroup notes receivable 51,511 -                         1,108,754 -                 
+Property and equipment
+  (net of accumulated depreciation) 2,117,021 8,440,409              -                 1,397,970
+Aircraft collection, museum and library - 
+Notes 1 and 18 -                 -                         -                 -                 
+Intangible assets
+  (net of accumulated amortization) 7,701 21,853 -                 -                 
+Other assets -                 186,873 65,353 -                 
+TOTAL ASSETS 4,886,888$   21,091,661 $         9,233,339 $   5,730,711 $   
+LIABILITIES
+Accounts payable 463,349 $      252,722 $              104,567 $      209,680 $      
+Accrued liabilities 370,953 33,009 -                 -                 
+Notes payable, current portion -                 88,370 -                 -                 
+Line of credit 1,000,000 -                         -                 -                 
+Capital lease liability 1,762,125 -                         -                 -                 
+Deferred revenue   -                 448,427 -                 -                 
+Intragroup payables (net) 245,764 426,968 75,341           1,403,129
+Intragroup notes payable -                 1,160,265             -                 -                 
+Notes payable, long term portion -                 448,539 -                 -                 
+Total liabilities 3,842,191      2,858,300              179,908         1,612,809      
+NET ASSETS 
+Without donor restriction (56,139)          17,598,533            101,161         (266,157)        
+With donor restriction 1,100,836      634,828                 8,952,270
+     4,384,059      
+Total net assets 1,044,697      18,233,361            9,053,431      4,117,902      
+TOTAL LIABILITIES AND NET ASSETS 4,886,888$   21,091,661 $         9,233,339 $   5,730,711 $   
+ASSETS
+CAF-Units and 
+Supporting 
+Foundations
+LIABILITIES AND NET ASSETS
+ 
+
+PAGE 36
+ 
+ 
+ 
+ 
+ 
+33 
+Eliminating
+AAHFM Entries
+579$             - $                14,233,473$    11,638,317 $    
+-                -                   320,973           327,404            
+-                -                   167,713           3,442,042         
+-                -                   812,092           910,330            
+-                -                   944,186           843,434            
+-                -                   8,916,094        7,589,762         
+-                (2,151,202)      -                    -                    
+-                (1,160,265)      -                    -                    
+-                -                   11,955,400      11,521,119       
+-                -                   -                    -                    
+-                -                   29,554              48,533              
+-                -                   252,226           137,980            
+579$             (3,311,467)$    37,631,711 $    36,458,921 $    
+-$              - $                1,030,318$      1,084,958 $      
+-                -                   403,962           247,377            
+-                -                   88,370              78,119              
+-                -                   1,000,000        -                    
+-                -                   1,762,125        1,762,125         
+-                -                   448,427           603,403            
+-                (2,151,202)      -                    -                    
+-                (1,160,265)      -                    -                    
+149,000 -                   597,539           588,306            
+149,000        (3,311,467)       5,330,741         4,364,288         
+(148,421)       -                   17,228,977      16,219,444       
+-                -                   15,071,993      15,875,189       
+(148,421)       -                   32,300,970      32,094,633       
+579$             (3,311,467)$    37,631,711 $    36,458,921 $    
+ Consolidated 
+Totals 
+2018
+Consolidated 
+Totals 
+2019
+ 
+
+PAGE 37
+American Airpower Heritage Group 
+Consolidating Statement of Activities 
+Year Ended December 31, 2019 
+(With Summarized Comparative Consolidated Totals for December 31, 2018) 
+ 
+34 
+CAF-Units and 
+Supporting 
+CAF-HQ Foundations AAHF
+CHANGES IN NET ASSETS WITHOUT DONOR RESTRICTIONS
+Departmental revenues 536,673 $        11,274,086 $       4,600 $             
+Donations 3,287,508 4,936,893 28,551
+Memberships 1,236,923 203,566 -                   
+Donations from affiliates 1,207,123 959,235 -                   
+Investment income (loss) 23,687 300,381               1,085,647         
+Insurance recovery -                  22,256 -                   
+Gain (loss) on disposal of assets 87,115 (6,746)                 -                   
+Grant or state fund revenue 101,824 43,771 -                   
+Other income (expense) 15,289             5,770 -                   
+Total unrestricted revenues and gains 6,496,142        17,739,212          1,118,798         
+Net assets released from restrictions through
+  satisfaction of program requirements 421,148           -                      1,662,596        
+Total revenues, gains and other support
+  without donor restriction 6,917,290        17,739,212          2,781,394         
+Education (1,144,393)     (15,634,963)        (1,662,490)       
+Management and general (2,832,646)     -                      -                   
+Fundraising (3,350,425)     (1,296,527)          (476,755)          
+Total costs and expenses (7,327,464)      (16,931,490)        (2,139,245)       
+Increase (decrease) in net assets
+  without donor restrictions (410,174)         807,722               642,149            
+CHANGES IN NET ASSETS WITH DONOR RESTRICTIONS
+Donations 298,248          74,016 786,156
+Donation from affiliates -                 -                      40,000
+Operating -                 -                      577,902
+Gain (loss) on disposal of assets 186,197          -                      6,500
+Other 189 -                      206,484
+Return of donation from foundation (1,070,348)     -                      -                   
+Investment income -                 120,009 5,425
+Net assets released from restrictions (421,148)        -                      (1,662,596)      
+Increase (decrease) in net assets
+  with donor restrictions (1,006,862)      194,025
+              (40,129)            
+CHANGE IN NET ASSETS (1,417,036)     1,001,747            602,020            
+NET ASSETS, beginning of year 2,461,733 17,231,614 8,451,411
+NET ASSETS, end of year 1,044,697$     18,233,361 $       9,053,431 $      
+ 
+
+PAGE 38
+ 
+ 
+ 
+ 
+ 
+35 
+Consolidated  Consolidated 
+Eliminating Totals Totals
+AAHM AAHFM Entries 2019 2018
+-$               - $               - $                   11,815,359$        11,181,655 $        
+-                 -                  -                      8,252,952            8,434,681             
+19,970 -                  -                      1,460,459            1,482,832             
+86,573 -                  (2,252,931)         -                        -                        
+-                 -                  (22,826)              1,386,889             (531,650)               
+-                 -                  -                      22,256                  117,030
+-                 -                  -                      80,369                  (3,191,479)           
+-                 -                  -                      145,595               229,118                
+-                 -                  -                      21,059                  43,810                  
+106,543          -                  (2,275,757)         23,184,938           17,765,997           
+246,488          -                  (205,000)            2,125,232             3,012,420             
+353,031          -                  (2,480,757)         25,310,170           20,778,417           
+(383,195)        -                  1,322,460           (17,502,581)          (18,155,721)          
+-                 -                  318,829              (2,513,817)            (3,139,359)            
+-                 -                  839,468              (4,284,239)            (4,803,848)            
+(383,195)        -                  2,480,757           (24,300,637)          (26,098,928)          
+(30,164)          -                  -                      1,009,533            (5,320,511)            
+128,636 -                  -                      1,287,056            6,033,206             
+165,000 -                  (205,000)            -                        -                        
+-                 -                  -                      577,902               589,927                
+-                 -                  -                      192,697               21,017                  
+1,523 -                  -                      208,196               262,554                
+-                 -                  -                      (1,070,348)           -                        
+1,099 -                  -                      126,533               3,692                    
+(246,488)        -                  205,000              (2,125,232)            (3,012,420)            
+49,770            -                  -                      (803,196)              3,897,976             
+19,606            -                  -                      206,337               (1,422,535)            
+4,098,296       (148,421)         -                      32,094,633          33,517,168           
+4,117,902$     (148,421) $      - $                   32,300,970$        32,094,633 $        
+ 
+
+PAGE 39
+American Airpower Heritage Group 
+Consolidating Statement of Cash Flows 
+Year Ended December 31, 2019 
+(With Summarized Comparative Consolidated Totals for December 31, 2018) 
+ 
+36 
+CAF-Units and 
+Supporting
+CAF-HQ Foundations AAHF
+CASH FLOWS FROM OPERATING ACTIVITIES
+Change in net assets (1,417,036) $     1,001,747 $       602,020 $       
+Adjustments to reconcile change in net assets to
+  net cash provided by (used in) operating activities
+Depreciation 218,807             468,859             -                 
+Amortization 326                    25,528               -                 
+(Gain) loss on sale of property and equipment (87,115)             (87,115)             -                 
+Unrealized (gain) loss from investments -                    (303,142)          (1,077,675)     
+Changes in operating assets and liabilities
+Accounts receivable (net) (33,248)             46,485               (6,806)            
+Pledges receivable 1,548                 -                    7,713              
+Inventories 15,124               83,114               -                 
+Prepaid expenses 47,060               (150,649)           -                 
+Intragroup receivable (net) 240,732             (57,943)             (145,165)        
+Other assets -                    (138,908)          (80)                 
+Accounts payable (152,181)           (162,872)           61,945            
+Accrued liabilities 150,420             6,165                 -                 
+Deferred revenue -                    (154,976)          -                 
+Intragroup payable (net) 55,049               (105,288)           51,562            
+Total adjustments 456,522             (530,742)           (1,108,506)     
+Net cash provided by (used in) operating activities (960,514)          471,005             (506,486)        
+CASH FLOWS FROM INVESTING ACTIVITIES
+Purchase of property and equipment (217,585)           (293,890)           -                 
+Disposal of property and equipment 87,098               213,593             -                 
+Purchase of intangibles -                    (6,875)               -                 
+Purchase of investments -                    (306,345)          (278,838)        
+Sale of investments -                    111,511            528,156          
+Net cash (used in) provided by investing activities (130,487)           (282,005)           249,318          
+CASH FLOWS FROM FINANCING ACTIVITIES
+Reduction in principal of long-term debt -                    (78,516)            -                 
+Proceeds from long-term debt borrowings -                    98,000               -                 
+Net borrowings on line of credit 1,000,000          -                    -                 
+Net cash provided by (used in) financing activities 1,000,000         19,484               -                 
+Net change in cash and cash equivalents (91,001)             208,484             (257,168)        
+CASH AND CASH EQUIVALENTS, beginning of year 545,800            8,668,374          985,401          
+CASH AND CASH EQUIVALENTS, end of year 454,799$          8,876,858 $       728,233 $       
+CASH PAID DURING YEAR FOR INTEREST 95,116$            23,496 $            - $                  
+ 
+
+PAGE 40
+ 
+ 
+ 
+ 
+ 
+37 
+Consolidated  Consolidated 
+Eliminating Totals Totals
+AAHM AAHFM Entries 2019 2018
+19,606$            - $            - $                 206,337$          (1,422,535) $     
+55,596              -               -                    743,262            993,595             
+-                   -               -                    25,854               28,885               
+-                   -               -                    (174,230)          3,193,462          
+-                   -               -                    (1,380,817)       706,215             
+-                   -               -                    6,431                 54,826               
+3,265,068         -               -                    3,274,329         (2,381,907)        
+-                   -               -                    98,238               (56,843)             
+2,837                -               -                    (100,752)          (75,147)             
+8,600                -               -                    46,224               1,222,673          
+24,742              -               -                    (114,246)          (26,191)             
+200,068            (1,600)          -                    (54,640)            494,571             
+-                   -               -                    156,585            (173,097)           
+-                   -               -                    (154,976)          117,326             
+(47,547)            -               -                    (46,224)            (1,222,673)        
+3,509,364         (1,600)          -                    2,325,038         2,875,695          
+3,528,970         (1,600)          -                    2,531,375         1,453,160          
+(792,529)          -               -                    (1,304,004)       (812,607)           
+-                   -               -                    300,691            -                    
+-                   -               -                    (6,875)               (25,200)             
+-                   -               -                    (585,183)          (1,932,977)        
+-                   -               -                    639,667            1,737,160          
+(792,529)          -               -                    (955,703)          (1,033,624)        
+-                   -               -                    (78,516)            (73,284)             
+-                   -               -                    98,000               -                    
+-                   -               -                    1,000,000         -                    
+-                   -               -                    1,019,484         (73,284)             
+2,736,441         (1,600)          -                    2,595,156         346,252             
+1,436,563         2,179           -                    11,638,317       11,292,065        
+4,173,004$       579 $           - $                 14,233,473$     11,638,317 $     
+-$                 - $            (22,826)$          95,786 $            83,065 $            
+ 
+
+PAGE 41
+American Airpower Heritage Group 
+Consolidating Schedule of Departmental Revenues 
+Year Ended December 31, 2019 
+(With Summarized Comparative Consolidated Totals for December 31, 2018) 
+ 
+38 
+CAF-Units 
+Departmental CAF- and Supporting Elimi nating Consolidated Consolidated 
+ Revenue HQ Foundations AAHF Entries Totals 2019 Totals 2018
+Air show 382,982 $       8,213,849 $          - $               - $              8,596,831$    7,915,601 $    
+Operating 16,273 1,728,907 -                  -                 1,745,180      1,745,045       
+Sales 88,303 -                       -                  -                 88,303            88,516            
+Special events 49,115 1,331,330 4,600 -                 1,385,045      1,432,493       
+536,673$       11,274,086 $        4,600 $           - $              11,815,359$  11,181,655 $  
+ 
+
+PAGE 42
+American Airpower Heritage Group 
+Consolidating Schedule of Costs and Expenses 
+Year Ended December 31, 2019 
+(With Summarized Comparative Consolidated Totals for December 31, 2018) 
+ 
+39 
+CAF Units 
+and Supporting 
+CAF HQ Foundations AAHF AAHM
+COST AND EXPENSES
+Advertising and promotion 16,231 $          380,992 $          - $                - $                
+Aircraft insurance and ANUAC 8,700               15,590               1,668 -                   
+Aircraft maintenance 34,778             3,303,278          1,110,985        -                   
+Air show expense 369,231           1,837,888          -                   -                   
+Amortization 326                  -                    -                   -                   
+Bad debt 40,779             2,547                 (11,211)            8,600               
+Contract services 166,457           687,201             -                   82,965             
+Cost of merchandise sold 63,177             1,072,985          -                   -                   
+Depreciation 218,807           468,859 -                   55,596             
+Designated expenses -                   -                    1,880               -                   
+Donations to affiliates 226,434           1,199,357          928,393           126,573           
+Dues and subscriptions 40,768             50,324               -                   617                  
+Entertainment 23,509             10,663               -                   391                  
+Equipment rental 15,646             150,392             -                   -                   
+Exhibits expense -                   256,216            -                   -                   
+Fuel and oil 262                  1,251,249         -                   689                  
+Fundraising expense 2,087,342 1,177,447 -                   -                   
+Insurance 33,881             1,190,018          -                   21,400             
+Interest 95,116             23,496               -                   -                   
+Miscellaneous and other 115,839           277,010             63,580 24,005             
+Operating expenses 91,982 416,221 (725)                 -                   
+Other expense 24,660             -                    11,563             1,343               
+Payroll and payroll related expenses 2,642,600       485,181             4                      -                   
+Printing and production 127,219           114,137             1,104               -                   
+Professional fees 104,078           20,216               12,429             -                   
+Rent 26,901             766,911             -                   43,106             
+Repairs and maintenance 31,616             250,454             -                   -                   
+Shipping and freight 84,690             63,655 -                   380                  
+Special events 194,620           659,731             -                   10,519             
+Supplies 94,079             126,275 19,575             647                  
+Taxes and licenses 50,169             -                    -                   -                   
+Telephone and utilities 50,575             323,956             -                   1,832               
+Translation (gain) loss -                   (4,288)              -                   -                   
+Transportation expense 9,619               -                    -                   -                   
+Travel and meetings 237,373           353,529             -                   4,532               
+TOTAL COSTS AND EXPENSES 7,327,464$     16,931,490 $     2,139,245 $     383,195 $        
+ 
+
+PAGE 43
+ 
+ 
+ 
+ 
+ 
+40 
+Eliminating
+AAHFM Entries 2019 2018
+-$                - $                397,223$         584,010 $            
+-                  -                   25,958              16,060                 
+-                  -                   4,449,041        5,438,315            
+-                  -                   2,207,119        2,153,978            
+-                  -                   326                   311                      
+-                  -                   40,715              98,217                 
+-                  -                   936,623           938,361               
+-                  -                   1,136,162        1,067,538            
+-                  -                   743,262           994,193               
+-                  -                   1,880                1,350                   
+-                  (2,480,757)      -                    -                       
+-                  -                   91,709              107,457               
+-                  -                   34,563              30,212                 
+-                  -                   166,038           153,382               
+-                  -                   256,216           266,085               
+-                  -                   1,252,200        1,136,730            
+-                  -                   3,264,789        3,469,868            
+-                  -                   1,245,299        1,232,613            
+-                  -                   118,612           151,634               
+-                  -                   480,434           328,176               
+-                  -                   507,478           435,272               
+-                  -                   37,566              85,551                 
+-                  -                   3,127,785        3,462,977            
+-                  -                   242,460           225,784               
+-                  -                   136,723           270,579               
+-                  -                   836,918           867,077               
+-                  -                   282,070           368,954               
+-                  -                   148,725           148,066               
+-                  -                   864,870           835,770               
+-                  -                   240,576           294,827               
+-                  -                   50,169              64,458                 
+-                  -                   376,363           391,856               
+-                  -                   (4,288)              26,826                 
+-                  -                   9,619                4,598                   
+-                  -                   595,434           447,843               
+-$                (2,480,757)$    24,300,637 $    26,098,928 $       
+ 
+
+PAGE 44
+American Airpower Heritage Group 
+Consolidating Schedules of Intragroup Notes (Payable)/Receivable 
+December 31, 2019 and 2018 
+ 
+41 
+Intragroup notes (payable)/receivable for the year ended December 31, 2019 were: 
+ 
+AAHF
+Unsecured note payable to an intergroup party bearing 
+interest at prime plus 2.00%, due December 31, 2022. 923,509 $        (923,509) $          - $                 
+Unsecured note payable to an intergroup party bearing 
+  interest at prime plus 2.00%, due December 31, 2022. 95,245 (95,245)               -                    
+Unsecured note payable to an intergroup party bearing
+  interest at prime plus 2.00%, due December 31, 2022. 90,000             (90,000)               -                    
+Unsecured note payable to an intergroup party bearing 
+  interest at prime plus 2.00%, with monthly payments of 
+  $2,256, maturing December 1, 2021. -                   (51,511)              51,511
+Total 1,108,754 $     (1,160,265) $       51,511 $           
+CAF-Units and 
+Supporting 
+Foundations HQ
+ 
+Intragroup notes (payable)/receivable for the year ended December 31, 2018 were: 
+ 
+AAHF
+Unsecured note payable to an intergroup party bearing 
+interest at prime plus 2.00%, due December 31, 2022. 923,509 $        (923,509) $          - $                 
+Unsecured note payable to an intergroup party bearing 
+  interest at prime plus 2.00%, due December 31, 2022. 95,245             (95,245)               -                    
+Unsecured note payable to an intergroup party bearing
+  interest at prime plus 2.00%, due December 31, 2022. 90,000             (90,000)               -                    
+Unsecured note payable to an intergroup party bearing 
+  interest at prime plus 2.00%, with monthly payments of 
+  $2,256, maturing December 1, 2021. -                   (75,329)              75,329              
+Unsecured note payable to an intergroup party bearing
+  interest at prime plus 2.00%, due December 31, 2018 50,121             (50,121)               -                    
+Total 1,158,875 $     (1,234,204) $       75,329 $           
+CAF-Units and 
+Supporting 
+Foundations HQ
+ 
+
+PAGE 45
+American Airpower Heritage Group 
+Consolidating Schedules of Intragroup Notes (Payable)/Receivable – 
+Continued 
+December 31, 2019 and 2018 
+ 
+42 
+Intragroup (payable)/receivable at December 31, 2019 was: 
+ 
+Receivable Payable
+CAF-HQ 1,347,252 $           245,764 $              
+CAF-Units and supporting foundations 152,215                 426,968                 
+AAHF 651,735                 75,341                   
+AAHM -                         1,403,129             
+2,151,202$           2,151,202 $           
+ 
+Intragroup (payable)/receivable at December 31, 2018 was: 
+ 
+Receivable Payable
+CAF-HQ 1,564,166 $           190,715 $              
+CAF-Units and supporting foundations 94,272                   458,317                 
+AAHF 456,449                 23,779                   
+AAHM 8,600                     1,450,676              
+2,123,487$           2,123,487 $           
+ 

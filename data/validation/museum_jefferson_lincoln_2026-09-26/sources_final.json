@@ -1,0 +1,37 @@
+[
+  {
+    "id": "jeff_ne_operator",
+    "url": "https://www.jeffersoncohistory.org/",
+    "extension": "html"
+  },
+  {
+    "id": "jeff_co_rename",
+    "url": "https://emahs.org/wp-content/uploads/2021/10/EMAHS_F_W_2018-Newsletter.pdf",
+    "extension": "pdf"
+  },
+  {
+    "id": "jeff_ga_city_current",
+    "url": "https://www.cityoflouisvillegeorgia.com/jefferson-county-historical-society/",
+    "extension": "html"
+  },
+  {
+    "id": "lincoln_co_town",
+    "url": "https://townhugo.com/museum/",
+    "extension": "html"
+  },
+  {
+    "id": "lincoln_wa_legacy",
+    "url": "https://lincolncountymuseum.weebly.com/",
+    "extension": "html"
+  },
+  {
+    "id": "lincoln_wa_legacy_about",
+    "url": "https://lincolncountymuseum.weebly.com/about.html",
+    "extension": "html"
+  },
+  {
+    "id": "lincoln_wa_legacy_contact",
+    "url": "https://lincolncountymuseum.weebly.com/contact-us.html",
+    "extension": "html"
+  }
+]

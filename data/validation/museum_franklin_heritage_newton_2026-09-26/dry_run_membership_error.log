@@ -1,0 +1,3 @@
+Error in dn_reconcile_museums(baseline, ids) : 
+  Identity review must list every member of affected baseline entities.
+Execution halted

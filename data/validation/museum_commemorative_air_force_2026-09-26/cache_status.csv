@@ -1,0 +1,27 @@
+id,url,path,sha256,status
+units,https://commemorativeairforce.org/units,data/raw/commemorative_air_force_units_2026-09-26.html,df0b6f11f68f9025e22ebba83098fa896cf4c6ebcdbe671fb376327c38233365,cached
+unit_policy,https://www.commemorativeairforce.org/caf_documents/229,data/raw/commemorative_air_force_unit_policy_2026-09-26.html,0e6d5d45b0044fb7021b7228a60563d2ccc7389f850977876c4f165528fa0e1f,cached
+nonprofit,https://www.commemorativeairforce.org/pages/About-the-CAF,data/raw/commemorative_air_force_nonprofit_2026-09-26.html,aa6b5f429ec5d4e03d329864f34230dbd68dd093293f3778c13812a3ebca7179,cached
+fl_unit,https://commemorativeairforce.org/units/32,data/raw/commemorative_air_force_fl_unit_2026-09-26.html,5ac9ec102bbaf47571f6772f3a828dfa626398571f193c3e0d93ee850792f8e1,cached
+ks_unit,https://commemorativeairforce.org/units/37,data/raw/commemorative_air_force_ks_unit_2026-09-26.html,213e6c10f2dc029b7c4ae2cc03d81454cf112ad99ee530069bd7329ad529c1d2,cached
+midland_unit,https://commemorativeairforce.org/units/39,data/raw/commemorative_air_force_midland_unit_2026-09-26.html,c54abb229c77212549e168994fe9fd094eb3d8532eaf15677505fb4040c438b0,cached
+nm_unit,https://commemorativeairforce.org/units/47,data/raw/commemorative_air_force_nm_unit_2026-09-26.html,2cdea419cc85757a38b65adf7494d5ae12898c2696e43c031fd54009588415d8,cached
+mn_unit,https://commemorativeairforce.org/units/9,data/raw/commemorative_air_force_mn_unit_2026-09-26.html,2e7fb1416aa241e74c5377e315089fcd630f644973d0d83aea8f9679f4a8bd63,cached
+ga_unit,https://commemorativeairforce.org/units/5,data/raw/commemorative_air_force_ga_unit_2026-09-26.html,e372d779c44359a51afcadc22a5002ec6c7249e58854993966aec3f2b5546c0e,cached
+hq_unit,https://www.commemorativeairforce.org/units/23,data/raw/commemorative_air_force_hq_unit_2026-09-26.html,5225c4495fa90fa34ea61eb97d1f5fefeba18985c0a5c00c99123554980f0b2a,cached
+ks_home,https://www.cafhoa.org,data/raw/commemorative_air_force_ks_home_2026-09-26.html,b0b6f60f43f4d9902ba932e1bc4ef96950dd4b18675469c90f479b56788af5a6,cached
+midland_home,http://www.highskywing.org,data/raw/commemorative_air_force_midland_home_2026-09-26.html,9f8cb1c4641517b05960f2c9cbce8a045ac71bf1f7bc96a708768e7b7e0988d5,cached
+nm_home,http://www.lobowing.org/,data/raw/commemorative_air_force_nm_home_2026-09-26.html,25a6f32cae358dbdd987ab537fb6c6ae8ed38861fd9bfebefabc63de480edc2c,cached
+mn_home,http://www.cafmn.org/,data/raw/commemorative_air_force_mn_home_2026-09-26.html,7f763f34d4ff3d95fc5b758328537f767c888846bd4e2dc03489f0373d9f1a54,cached
+ga_home,https://airbasegeorgia.org,data/raw/commemorative_air_force_ga_home_2026-09-26.html,172cb8a776fce4f65f67be63ead0787b5361d22e45b5faf5a903228ab98ca53d,cached
+fl_home,http://www.caffl.org/,data/raw/commemorative_air_force_fl_home_2026-09-26.html,aaf9167a875657d5a37e604d421ad4d9dad75e1c1a972a78bc99f5e1552cdced,cached
+naec_home,https://flynaec.org,data/raw/commemorative_air_force_naec_home_2026-09-26.html,d9484920d26e59423cc0d77ddbf60062382485df95c15935d1de7395d66873dc,cached
+financial_2019,https://commemorativeairforce.org/uploads/caf_document/pdf/275/American_Airpower_Heritage_-_Final_Report_2019.pdf,data/raw/commemorative_air_force_financial_2019_2026-09-26.pdf,8b00ee2b80f0acc451aba4286a437a5b188c22404bc64f1c6780574731d2e664,cached
+midland_museum,https://highskywing.org/?page_id=3699,data/raw/commemorative_air_force_midland_museum_2026-09-26.html,,SSL peer certificate or SSH remote key was not OK [highskywing.org]: schannel: SEC_E_UNTRUSTED_ROOT (0x80090325) - The certificate chain was issued by an authority that is not trusted.
+nm_about,https://www.lobowing.org/about-the-lobo-wing/,data/raw/commemorative_air_force_nm_about_2026-09-26.html,e63748ab88ba0e6737ed66c3655b343060ec0ab7e69371b2cb844c453471e771,cached
+nm_history,https://www.lobowing.org/history-of-the-lobo-wing/,data/raw/commemorative_air_force_nm_history_2026-09-26.html,8365d133bbe3d6ecb6e868806c5b4541c33205ea620bee54a2dac36244f2f110,cached
+naec_governance,https://flynaec.org/non-profit-information/,data/raw/commemorative_air_force_naec_governance_2026-09-26.html,887270c01ea8f9be4712b6e50228b61be00b134289993aa932e5b69788d6944a,cached
+naec_visit,https://flynaec.org/visit-us/,data/raw/commemorative_air_force_naec_visit_2026-09-26.html,8ff1ac690f56cf0da509ddd4263b24c9e40b2bc2ae4f0c95c31cad164f9d1878,cached
+hq_contact,https://www.commemorativeairforce.org/pages/contacts,data/raw/commemorative_air_force_hq_contact_2026-09-26.html,56a3c4bb166cf7990152fe57f5b1969d2737a646349ef691ddac242dc659f747,cached
+ga_museum,https://airbasegeorgia.org/museum/,data/raw/commemorative_air_force_ga_museum_2026-09-26.html,f78b6fa2cebdc4c27a5fc009c4e54d55e79defeedc28c153909930a5a3f15372,cached
+mn_visit,https://www.cafmn.org/visit.html,data/raw/commemorative_air_force_mn_visit_2026-09-26.html,0addc7dca75016b69a983a78ae6db2f7306a6a935999a796c37f03c88126c9d0,cached

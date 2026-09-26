@@ -1,0 +1,72 @@
+[
+  {
+    "id": "madison_oh_about",
+    "url": "https://madisonohiohistoricalsociety.org/about/",
+    "extension": "html"
+  },
+  {
+    "id": "madison_oh_chamber",
+    "url": "https://business.easternlakecountychamber.org/list/member/madison-historical-society-4112",
+    "extension": "html"
+  },
+  {
+    "id": "madison_la_destination",
+    "url": "https://www.ladelta65.org/places/Hermione.Museum.htm",
+    "extension": "html"
+  },
+  {
+    "id": "madison_la_operator_profile",
+    "url": "https://www.museumsusa.org/museums/info/21666",
+    "extension": "html"
+  },
+  {
+    "id": "marion_oh_school",
+    "url": "https://www.marionhistory.com/events/linn-school-opens-for-the-season/",
+    "extension": "html"
+  },
+  {
+    "id": "marion_oh_programs",
+    "url": "https://www.marionhistory.com/explore/interactive-educational-programs/",
+    "extension": "html"
+  },
+  {
+    "id": "marion_oh_popcorn",
+    "url": "https://www.marionhistory.com/explore/wyandot-popcorn-museum/",
+    "extension": "html"
+  },
+  {
+    "id": "marion_ia_contact",
+    "url": "https://www.marioncountyhistory.org/index.php/contact/index.html",
+    "extension": "html"
+  },
+  {
+    "id": "marion_ia_history",
+    "url": "https://www.marioncountyhistory.org/index.php/our-history/index.html",
+    "extension": "html"
+  },
+  {
+    "id": "marion_ia_board",
+    "url": "https://www.marioncountyhistory.org/index.php/board-members/index.html",
+    "extension": "html"
+  },
+  {
+    "id": "marion_al_contact",
+    "url": "https://mcalhs.org/contact-us/",
+    "extension": "html"
+  },
+  {
+    "id": "marion_ms_exhibit",
+    "url": "https://www.mshumanities.org/event/crossroads-columbia-main-street-historic-tour/",
+    "extension": "html"
+  },
+  {
+    "id": "milton_pa_destination",
+    "url": "https://www.visitcentralpa.org/listing/milton-historical-society-cameron-house/73/",
+    "extension": "html"
+  },
+  {
+    "id": "milton_wi_board",
+    "url": "https://miltonhouse.org/staff-and-board",
+    "extension": "html"
+  }
+]

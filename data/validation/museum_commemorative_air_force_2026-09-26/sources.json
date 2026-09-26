@@ -1,0 +1,20 @@
+[
+ {"id":"units","url":"https://commemorativeairforce.org/units"},
+ {"id":"unit_policy","url":"https://www.commemorativeairforce.org/caf_documents/229"},
+ {"id":"nonprofit","url":"https://www.commemorativeairforce.org/pages/About-the-CAF"},
+ {"id":"fl_unit","url":"https://commemorativeairforce.org/units/32"},
+ {"id":"ks_unit","url":"https://commemorativeairforce.org/units/37"},
+ {"id":"midland_unit","url":"https://commemorativeairforce.org/units/39"},
+ {"id":"nm_unit","url":"https://commemorativeairforce.org/units/47"},
+ {"id":"mn_unit","url":"https://commemorativeairforce.org/units/9"},
+ {"id":"ga_unit","url":"https://commemorativeairforce.org/units/5"},
+ {"id":"hq_unit","url":"https://www.commemorativeairforce.org/units/23"},
+ {"id":"ks_home","url":"https://www.cafhoa.org"},
+ {"id":"midland_home","url":"http://www.highskywing.org"},
+ {"id":"nm_home","url":"http://www.lobowing.org/"},
+ {"id":"mn_home","url":"http://www.cafmn.org/"},
+ {"id":"ga_home","url":"https://airbasegeorgia.org"},
+ {"id":"fl_home","url":"http://www.caffl.org/"},
+ {"id":"naec_home","url":"https://flynaec.org"},
+ {"id":"financial_2019","url":"https://commemorativeairforce.org/uploads/caf_document/pdf/275/American_Airpower_Heritage_-_Final_Report_2019.pdf"}
+]

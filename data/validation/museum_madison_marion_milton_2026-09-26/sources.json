@@ -1,0 +1,137 @@
+[
+  {
+    "id": "madison_nh_home",
+    "url": "https://www.madisonnhhistoricalsociety.org/",
+    "extension": "html"
+  },
+  {
+    "id": "madison_nh_report",
+    "url": "https://www.madison-nh.org/wp-content/uploads/2024/02/2023-Town-Report-Web.pdf",
+    "extension": "pdf"
+  },
+  {
+    "id": "madison_ct_home",
+    "url": "https://www.madisonhistory.org/",
+    "extension": "html"
+  },
+  {
+    "id": "madison_ct_plan",
+    "url": "https://www.madisonhistory.org/bylaws/2025-strategic-plan/",
+    "extension": "html"
+  },
+  {
+    "id": "madison_nj_home",
+    "url": "https://www.madisonnjhistoricalsociety.org/",
+    "extension": "html"
+  },
+  {
+    "id": "madison_oh_home",
+    "url": "https://madisonohiohistoricalsociety.org/",
+    "extension": "html"
+  },
+  {
+    "id": "madison_ny_county",
+    "url": "https://www.madisoncounty.ny.gov/DocumentCenter/View/1000/The-Madison-County-History-Trail-PDF?bidId=",
+    "extension": "pdf"
+  },
+  {
+    "id": "madison_la_guide",
+    "url": "https://www.lsuagcenter.com/~/media/system/3/f/5/a/3f5a0f1dc1cfaef11587761949a61b3a/madison%20parish%20asset%20guide%202021%20adapdf.pdf",
+    "extension": "pdf"
+  },
+  {
+    "id": "marion_oh_home",
+    "url": "https://www.marionhistory.com/",
+    "extension": "html"
+  },
+  {
+    "id": "marion_oh_destination",
+    "url": "https://www.visitmarionohio.com/attractions/heritage-hall-auditorium/",
+    "extension": "html"
+  },
+  {
+    "id": "marion_ia_home",
+    "url": "https://www.marioncountyhistory.org/index.php/museum/index.html",
+    "extension": "html"
+  },
+  {
+    "id": "marion_al_home",
+    "url": "https://mcalhs.org/",
+    "extension": "html"
+  },
+  {
+    "id": "marion_al_places",
+    "url": "https://mcalhs.org/places/",
+    "extension": "html"
+  },
+  {
+    "id": "marion_mo_jims",
+    "url": "https://www.jimsjourney.org/mission-leadership-and-partners",
+    "extension": "html"
+  },
+  {
+    "id": "marion_ga_si",
+    "url": "https://www.si.edu/es/object/pasaquan-sculpture%3Asiris_ari_331011",
+    "extension": "html"
+  },
+  {
+    "id": "marion_or_history",
+    "url": "https://www.willametteheritage.org/organizational-history/",
+    "extension": "html"
+  },
+  {
+    "id": "marion_or_about",
+    "url": "https://www.willametteheritage.org/about-willamette-heritage-center/",
+    "extension": "html"
+  },
+  {
+    "id": "marion_ms_home",
+    "url": "https://marioncountyhistoricalsociety.weebly.com/",
+    "extension": "html"
+  },
+  {
+    "id": "milton_pa_home",
+    "url": "https://www.miltonpahistoricalsociety.com/",
+    "extension": "html"
+  },
+  {
+    "id": "milton_de_about",
+    "url": "https://www.historicmilton.org/about/",
+    "extension": "html"
+  },
+  {
+    "id": "milton_de_visit",
+    "url": "https://www.historicmilton.org/about/location/",
+    "extension": "html"
+  },
+  {
+    "id": "milton_vt_home",
+    "url": "https://www.miltonvthistory.org/",
+    "extension": "html"
+  },
+  {
+    "id": "milton_vt_museum",
+    "url": "https://www.miltonvthistory.org/milton-historical-museum.html",
+    "extension": "html"
+  },
+  {
+    "id": "milton_ma_visit",
+    "url": "https://www.miltonhistoricalsociety.org/visiting",
+    "extension": "html"
+  },
+  {
+    "id": "milton_ma_house",
+    "url": "https://www.miltonhistoricalsociety.org/suffolk-resolves-house",
+    "extension": "html"
+  },
+  {
+    "id": "milton_wi_home",
+    "url": "https://miltonhouse.org/",
+    "extension": "html"
+  },
+  {
+    "id": "milton_wi_history",
+    "url": "https://miltonhouse.org/milton-house-history",
+    "extension": "html"
+  }
+]

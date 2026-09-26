@@ -1,0 +1,51 @@
+# A tibble: 1 x 9
+  source_rows counted_rows institutions eligible identity_rows identity_cases
+        <int>        <int>        <int>    <int>         <int>          <int>
+1       60002        57202        52493    52361           243             98
+  complete_reviews not_museum overrides
+             <int>      <int>     <int>
+1              101         18        55
+# A tibble: 12 x 10
+    rank name_expanded                       n_entities n_chain
+   <int> <chr>                                    <int>   <int>
+ 1     1 african american museum                      8       0
+ 2     2 cass county historical society               8       0
+ 3     3 chester historical society                   8       0
+ 4     4 crawford county historical society           8       0
+ 5     5 imagination station                          8       0
+ 6     6 jefferson county historical society          8       0
+ 7     7 lincoln county historical society            8       0
+ 8     8 madison historical society                   8       0
+ 9     9 marion county historical society             8       0
+10    10 milton historical society                    8       0
+11    11 old jail museum                              8       3
+12    12 bedford historical society                   7       0
+   n_independent_verified n_affiliation_unknown n_category_pending n_multisite
+                    <int>                 <int>              <int>       <int>
+ 1                      0                     8                  0           0
+ 2                      0                     8                  0           0
+ 3                      0                     8                  0           0
+ 4                      0                     8                  0           0
+ 5                      0                     8                  0           0
+ 6                      0                     8                  0           0
+ 7                      0                     8                  0           0
+ 8                      0                     8                  0           0
+ 9                      0                     8                  0           0
+10                      0                     8                  0           0
+11                      4                     4                  0           0
+12                      0                     7                  0           0
+   n_review_pending publication_ready
+              <int> <lgl>            
+ 1                8 FALSE            
+ 2                8 FALSE            
+ 3                8 FALSE            
+ 4                8 FALSE            
+ 5                8 FALSE            
+ 6                8 FALSE            
+ 7                8 FALSE            
+ 8                8 FALSE            
+ 9                8 FALSE            
+10                8 FALSE            
+11                4 FALSE            
+12                7 FALSE            
+Dry run passed; no live decision inputs changed.

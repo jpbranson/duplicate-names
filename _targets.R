@@ -5,7 +5,7 @@
 # resolution), cheap metrics fanning out behind them. Change a metric and only
 # that metric re-runs.
 #
-# PHASE 1a — MUSEUMS. Churches are queued, not cancelled; see the block at the
+# MUSEUMS. Churches use a separate target store; see the block at the
 # bottom and DESIGN.md §9 decision 5.
 
 library(targets)
@@ -39,6 +39,8 @@ list(
   tar_target(museum_chain_rules, dn_read_museum_review(museum_chain_rules_file, dn_schema_chain_rules())),
   tar_target(museum_decisions_file, "data/validation/museum_decisions.csv", format = "file"),
   tar_target(museum_decisions, dn_read_museum_review(museum_decisions_file, dn_schema_museum_decisions())),
+  tar_target(museum_name_overrides_file, "data/validation/museum_name_overrides.csv", format = "file"),
+  tar_target(museum_name_overrides, dn_read_museum_review(museum_name_overrides_file, dn_schema_museum_name_overrides())),
   tar_target(entities, dn_apply_counting_policy(dn_flag_franchises(resolved, museum_chain_rules))),
   tar_target(multisite_review, dn_flag_multisite_review(entities)),
 
@@ -73,7 +75,8 @@ list(
   ),
 
   ## --- metrics -----------------------------------------------------------
-  tar_target(museum_analysis, dn_museum_analysis(museum_records, museum_chain_rules, museum_decisions)),
+  tar_target(museum_analysis, dn_museum_analysis(museum_records, museum_chain_rules, museum_decisions,
+                                                museum_name_overrides, gazetteer)),
   tar_target(dup_museums, metric_duplicate_counts(museum_analysis, category = "museum", exclude_chains = TRUE)),
   tar_target(museum_ranking, dn_museum_ranking(museum_analysis)),
   tar_target(museum_singularity, metric_singularity_collisions(museum_analysis)),
@@ -90,16 +93,9 @@ list(
     museum_chains, museum_chain_overlap), format = "file")
 )
 
-## --- PHASE 1b: CHURCHES (queued) ----------------------------------------
-## Add back when 1b starts. The stubs already exist in R/src_others.R.
-##
-##   tar_target(raw_overture_worship, src_overture(
-##     category_like = "%religious%", category = "place_of_worship", country = "US")),
-##   tar_target(raw_gnis,  src_gnis()),
-##   tar_target(raw_hifld, src_hifld()),
-##   tar_target(raw_osm,   src_osm()),
-##   tar_target(census_places, tigris::places(cb = TRUE)),   # C2 denominator
-##
-## and extend dn_bind_sources() plus add:
-##   tar_target(dup_churches, metric_duplicate_counts(entities,
-##                                                    category = "place_of_worship"))
+## --- CHURCHES: isolated pipeline ---------------------------------------
+## Run targets::tar_make(script = "_targets_churches.R",
+##                       store = "_targets_churches", names = church_output_files).
+## The raw union and automatic church records remain separate from museums.
+## Generated church labels are blank review sheets; preserve completed human labels
+## outside data/processed/ before rebuilding. See FLIGHT_LOG.md and the church packet.

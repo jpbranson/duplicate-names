@@ -1,0 +1,21 @@
+check,passed
+Automatic baseline unchanged,TRUE
+Baseline multisite queue unchanged,TRUE
+All source rows and normalized fields preserved,TRUE
+Guarded identity replay matches pipeline,TRUE
+Analysis with preferred names matches replay,TRUE
+Reviewed Parquet matches pipeline,TRUE
+Baseline Parquet unchanged,TRUE
+861 earlier evidence files and human labels preserved,TRUE
+Identity rows outside the new cases unchanged,TRUE
+Threshold remains 0.85,TRUE
+Current counts match reviewed dry run,TRUE
+243 identity rows in 98 cases,TRUE
+101 complete reviews and 18 not-museum decisions,TRUE
+"Bare Clinton zero, Madison zero, Monroe three non-chain candidates",TRUE
+Eight new conflicts isolated; nineteen total; no aliases,TRUE
+Virginia clean parent remains pending separately from Madison Museum,TRUE
+Kentucky society and Ohio office excluded on affirmative roles,TRUE
+Unresolved Tennessee Wisconsin Missouri and Iowa remain pending counted unknown,TRUE
+Every prior factual decision preserved,TRUE
+Remaining leader fails explicit publication gate,TRUE
