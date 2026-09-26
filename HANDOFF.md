@@ -1,6 +1,14 @@
 # Handoff
 
-**Last session:** 2026-09-23 chain separation and not-a-museum exclusion · **Phase:** 2 headline review ongoing
+**Active continuation:** See [FLIGHT_LOG.md](FLIGHT_LOG.md). The [M2 leading-group checkpoint](data/validation/museum_m2_leaders_2026-09-26.md) validates 52,387 counted / 52,255 eligible museum institutions, 440 identity rows in 185 cases and 174 complete factual reviews (including exclusions). At that checkpoint all 340 assertions and 27 integrity checks passed (the full suite is now 352 assertions across 73 tests); 1,887 prior evidence/label files remain unchanged. Four batch reviews are newly complete; 28 open actions remain, including three carried forward. Local artifacts refreshed; next continue remaining source reviews and church factual leader/ordinal checks while independent labels and publication are blocked. Old Jail has four pending reviews; no national winner is certified. Cloud spending USD 0.
+
+**Church continuation:** The [ordinal/scope checkpoint](data/validation/church_ordinal_review_2026-09-26.md) retains 1,032,223 raw rows and 540,778 canonical descriptions, with 442,832 eligible after two sourced COGASOC scope holds. Day-modifier parsing is corrected; automatic memberships are unchanged. All 352 assertions and 20 integrity checks pass; 2,020 prior files preserved. Draft/explorer refreshed and browser-checked. Ten high ordinals have documented findings; five unresolved cases need human review, three remain partial, and two have scope-only corrections. Zero complete factual reviews. Independent version-2 labels remain blank; source research does not grade them. No national maximum or project completion is certified. **In progress, not applied:** the [scope follow-up packet](data/validation/church_scope_followup_2026-09-26/) holds 23 proposed guarded scope decisions that passed a read-only dry run (eligible would become 442,818). They await user approval; live inputs and counts are unchanged.
+
+**Explorer and drafts:** Refreshed to the M2 checkpoint: 52,719 museum descriptions including holds (52,255 eligible; 174 complete factual reviews) and 540,778 church records (442,832 eligible after the church scope checkpoint; zero complete factual reviews). All L2/L3 serialized checks and 19 JS assertions pass. Museum draft rendered independently with current counts and twelve-group examples, and browser QA confirms the corrected police museum group. [Artifact QA](data/validation/artifact_refresh_2026-09-26/artifact_QA.md) retains the unverified browser CSV save. Both drafts remain unpublished; destination and research gates remain missing. Current queues distinguish 233 reviewed unresolved descriptions from 51,904 unreviewed eligible descriptions.
+
+**Historical handoff follows.** September 23 counts and queued-phase descriptions below describe that earlier state; use the live checkpoint above.
+
+**Last session:** 2026-09-26 authorized mission (see [FLIGHT_LOG.md](FLIGHT_LOG.md)) · **Phase:** museum headline review (2) and church review (1b/3) ongoing; nothing committed since `7bd56b3`
 **Repo:** https://github.com/jpbranson/duplicate-names
 
 Read [DESIGN.md](DESIGN.md) for the plan and the numbered decisions, [LEADS.md](LEADS.md)
@@ -22,7 +30,8 @@ renv::restore()      # 137 packages, pinned
 
 **Pin R to 4.4.** The lockfile records 4.4.2. On the previous machine R 4.6.1 was
 installed but had an empty library, so a newer R will not "just work" — it will try to
-rebuild everything.
+rebuild everything. On the current Windows machine the `Rscript` on `PATH` is 4.3.2 without
+the renv library; call `C:\Program Files\R\R-4.4.2\bin\Rscript.exe` explicitly.
 
 For the current museum review (preserves the completed working label sheet):
 
@@ -31,6 +40,8 @@ targets::tar_make(names = c(museum_review_files, museum_identity_audit_file,
                             museum_records_file, dup_museums,
                             multisite_review, entities_file))
 source("tests/testthat.R")              # source functions, then run tests
+targets::tar_make(script = "_targets_churches.R", store = "_targets_churches",
+                  names = church_output_files)   # church outputs
 ```
 
 Before a full `targets::tar_make()`, archive any new human labels: `labelling_sheet`
@@ -67,7 +78,7 @@ rebuildable directories. The archived CSV cannot be recreated by `tar_make()`.
 
 ## 2. Where things stand
 
-Museums only. Churches (Phase 1b) are queued, not cancelled — see §6.
+As of 2026-09-23, museums only. Churches have since been implemented in a separate pipeline; see the church checkpoint at the top of this file.
 
 | | |
 |---|---|
@@ -187,7 +198,7 @@ M2 candidates, and the seed case. Tracked inputs are `museum_chain_rules.csv`,
 generated review outputs are under
 `data/processed/museum_review/`.
 
-**Next: review the new headline leaders.** With chains separated, Franklin, Greene and
+**Next (2026-09-23 queue, since superseded; see FLIGHT_LOG.md and the M2 checkpoint's 28 open actions): review the new headline leaders.** With chains separated, Franklin, Greene and
 Jackson County Historical Society and Old Jail Museum tie at 11 non-chain institutions.
 Review the three county-society groups (identity merges into operated museums, and
 `not_museum` where operator evidence supports it) and Old Jail's ten pending cases.
@@ -219,8 +230,10 @@ operator/campus records, older society addresses and visitor points. St. Augusti
 affiliated with Historic Tours of America; do not infer independence from unknown values.
 Operator points for Mandeville, Smedley and Peters Creek are staged in the address packet's
 `publication_locations.csv`, with separate publication fields and dated access wording.
-The pipeline and Parquet do not yet consume these overrides. Wire them into publication
-export and recheck access; Mandeville still lists an open-ended indoor closure.
+`dn_museum_publication_points()` in `R/museum_publication.R` now applies them, with 30-day
+access checks, in the dated [publication export](data/validation/museum_publication_2026-09-26.md);
+the pipeline and Parquet still carry source coordinates only. Recheck access before
+publication (Mandeville listed an open-ended indoor closure on 2026-09-23).
 The dossier improvement is now
 implemented: generated source sheets and future archives retain IMLS EIN and separate
 physical/mailing address fields, including ZIP codes as text. Institution summaries
@@ -336,7 +349,13 @@ the institution, but do not describe it as open for visits during this transitio
 
 ---
 
-## 6. Phase 1b — churches, when the time comes
+## 6. Phase 1b — churches (original plan, 2026-09-23)
+
+**Update 2026-09-26:** implemented. Church acquisition (Overture worship, GNIS 2021, HIFLD,
+Census places/states) and resolution run in `_targets_churches.R`; `R/src_others.R` is now
+only a pointer comment. OSM is an internal regional validation sample only. Church ordinals
+parse through 999, including compounds (`R/church_normalize.R`); the shared museum parser
+keeps the compound gap described below. The rest of this section is the original plan.
 
 Queued, not cancelled (DESIGN.md §9 decision 5). The stubs are in `R/src_others.R` with
 their notes intact, and `_targets.R` carries the wiring in a comment block at the bottom.
@@ -360,6 +379,13 @@ Two known gaps that only matter for churches:
 ---
 
 ## 7. Session log
+
+2026-09-25/26 authorized mission: see [FLIGHT_LOG.md](FLIGHT_LOG.md) for every checkpoint.
+Museum batches through the [M2 checkpoint](data/validation/museum_m2_leaders_2026-09-26.md)
+(52,387 counted / 52,255 eligible, 174 complete reviews); the church pipeline, C1-C4 outputs
+and [ordinal/scope checkpoint](data/validation/church_ordinal_review_2026-09-26.md) (442,832
+eligible); explorer and both drafts refreshed locally, unpublished. The church scope
+follow-up proposal awaits approval. Nothing is committed since `7bd56b3`.
 
 2026-09-23 chain separation and not-a-museum exclusion (user decisions): headline M1/M2 now
 count only non-chain institutions; new `museum_chains` and `museum_chain_overlap` targets
@@ -538,3 +564,7 @@ corrected the documented non-primary-site exclusion count from 2,305 to 2,306.
 | `8121d9e` | Gazetteer, two-layer entity resolution, counting policy |
 | `54b00fb` | Fuzzy cross-source matching, labelling harness, IMLS encoding fix |
 | `2fefd93` | Society-under-museum merge, `alt_names`, handoff docs |
+
+
+
+

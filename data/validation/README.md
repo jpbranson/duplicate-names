@@ -1,29 +1,44 @@
-# Museum validation and review evidence
+# Validation and review evidence
 
-**Current checkpoint: 2026-09-23 [chain separation and not-a-museum decisions](museum_methodology_2026-09-23.md).**
-The headline (M1/M2) now excludes chain-affiliated locations, which are reported
-beside it, and a sourced `not_museum` decision removes non-museum records from the count.
-The reviewed data retain 60,002 source rows, with 57,292 counted rows, 52,584 counted
-institutions and 52,452 eligible for L2 name analysis. Counts remain provisional.
-Nineteen institutions have complete factual reviews. Franklin, Greene and Jackson County
-Historical Society and Old Jail Museum lead at 11 non-chain institutions; every leading
-group still fails publication certification. See the
-[follow-up queue](museum_methodology_2026-09-23/follow_up.csv), the
-[leaders queue](museum_leaders_review_2026-09-23/follow_up.csv), the
-[Union County queue](museum_union_county_review_2026-09-17/follow_up.csv) and the
-[project handoff](../../HANDOFF.md) for the remaining work.
+**Current checkpoint: 2026-09-26 [M2 leading groups](museum_m2_leaders_2026-09-26.md).**
+Reviewed outputs preserve 60,002 rows: 57,083 counted source rows, 52,387 institutions and 52,255 eligible for L2 analysis. There are 174 complete factual reviews including exclusions, 440 identity rows in 185 cases, and 35 isolated source conflicts. All 340 assertions and 27 integrity checks pass; 1,887 prior files are preserved. Counts remain provisional; unknown affiliation is not independence.
+
+Four new complete reviews and 28 open actions, including three carried forward. See [ranking](museum_m2_leaders_2026-09-26/ranking_after.csv), [actions](museum_m2_leaders_2026-09-26/human_review.csv), [scope-word interpretation](museum_m2_leaders_2026-09-26/scope_word_review.csv), [preceding checkpoint](museum_telephone_union_washington_2026-09-26.md) and [handoff](../../HANDOFF.md). Old Jail still has four pending reviews. Local artifacts were refreshed; see [artifact QA](artifact_refresh_2026-09-26/artifact_QA.md).
+
+## Church work in progress
+
+Latest: [ordinal/scope checkpoint](church_ordinal_review_2026-09-26.md), with 442,832
+eligible descriptions, 352 passing assertions and preserved original identities.
+Live `church_scope_decisions.csv` adds two guarded analytical exclusions; it does
+not change source religion or certify full factual review. Preserve it with the
+other live decision inputs before future changes. The ten-leader evidence and
+remaining actions are in the dated packet.
+
+**In progress, not applied:** the [scope follow-up packet](church_scope_followup_2026-09-26/)
+holds 23 proposed guarded scope decisions for linked Church of God and Saints of Christ
+records. Its read-only dry run passed (eligible would become 442,818). They await user
+approval; the live file still has two rows and 442,832 eligible.
+
+The [church acquisition/methodology packet](church_phase1_2026-09-26/README.md) and
+[independent review protocol](church_phase1_2026-09-26/INDEPENDENT_REVIEW.md) cover the
+separate church pipeline. `church_name_overrides.csv` records two sourced 38th Avenue
+public-name corrections. It does not certify institutional identity or matching accuracy.
+Corrected outputs, standalone post/map and the local explorer are built and checked. The blank [version-2 labels](church_phase1_2026-09-26/independent_review_v2/) await independent human review; the earlier sample is superseded. No church headline is certified.
 
 ## Decision inputs and human labels
 
-The three decision/rule files feed the pipeline. Preserve their prior contents in a new
+The four museum decision/rule files feed `_targets.R`; the two church files feed `_targets_churches.R`. Preserve their prior contents in a new
 dated packet before applying further decisions; dated copies describe their own checkpoint.
 The human-label archive is a separate, unchanged input to resolution scoring.
 
 | File | Purpose |
 |---|---|
 | [museum_chain_rules.csv](museum_chain_rules.csv) | Sourced brand-affiliation rules and ambiguous-name review hints; unknown does not mean independent |
-| [museum_identity_decisions.csv](museum_identity_decisions.csv) | Explicit membership over the automatic `entities` baseline; 92 rows in 37 cases, including five source-conflict holdouts |
+| [museum_identity_decisions.csv](museum_identity_decisions.csv) | Explicit membership over the automatic `entities` baseline; 440 rows in 185 cases, including thirty-five source-conflict holdouts, guarded multi-institution splits and one explicit primary-site reselection |
 | [museum_decisions.csv](museum_decisions.csv) | Naming/category (including sourced `not_museum`), affiliation and overall review decisions, keyed to source records and expected names after identity reconciliation |
+| [museum_name_overrides.csv](museum_name_overrides.csv) | Guarded preferred public names; original source names remain unchanged |
+| [church_name_overrides.csv](church_name_overrides.csv) | Guarded church public-name corrections (two 38th Avenue records); no identity or accuracy certification |
+| [church_scope_decisions.csv](church_scope_decisions.csv) | Guarded, sourced `outside_christian_scope` holds; every cluster member listed; source religion and identity unchanged |
 | [resolution_labelling_2026-09-15.csv](resolution_labelling_2026-09-15.csv) | Authoritative archive of 300 independent human pair labels; preserve unchanged and use for scoring |
 
 The identity layer produces `museum_records`; `museum_analysis` then selects one canonical
@@ -31,9 +46,13 @@ name per entity and applies naming/affiliation decisions. Identity evidence is n
 independent matching label. Do not carry a historical-name hold onto a reconciled current
 name, or infer ownership from a repeated naming template.
 
+The preceding [Old Jail packet](museum_jail_followup_2026-09-26/) includes its [human-review queue](museum_jail_followup_2026-09-26/human_review.csv), guarded current-name input and full validation. No leading group is certified.
+
+The [affiliation checkpoint](museum_affiliation_followup_2026-09-26.md) and [publication checkpoint](museum_publication_2026-09-26.md) follow the Old Jail packet. The unpublished museum draft builds in isolation; leading groups still fail publication gates.
+
 ## Dated checkpoints, in order
 
-The September 15 checkpoints share a date; the Union County batch follows on September 17 and the leaders review and methodology checkpoint on September 23.
+The September 15 checkpoints share a date; Union County follows on September 17, leaders/methodology on September 23, and the county corrections on September 26.
 Their descriptive names identify successive stages, not interchangeable copies of the latest results.
 
 | Report | Evidence and role |
@@ -49,6 +68,32 @@ Their descriptive names identify successive stages, not interchangeable copies o
 | [Provisional leaders review](museum_leaders_review_2026-09-23.md) | [Leaders packet](museum_leaders_review_2026-09-23/): all 26 Museum of Illusions and Washington County Historical Society candidates researched; eight cases cover 19 source rows, one a new source conflict; 13 new complete reviews; 52,588 counted and 52,456 eligible |
 | [Chain separation and not-a-museum](museum_methodology_2026-09-23.md) | [Methodology packet](museum_methodology_2026-09-23/): headline excludes chains, chain summary/overlap outputs, 14 city-suffixed Museum of Illusions locations affiliated, Atlanta duplicate reconciled, three sourced not-a-museum records; 52,584 counted and 52,452 eligible |
 
+The [county leaders checkpoint](museum_county_leaders_2026-09-26.md) follows the table's
+September 23 checkpoint: 29 new identity rows in 12 cases, four additional sourced
+not-museum decisions, nine additional complete reviews, and separate visitor
+institutions restored by an explicit guarded split in Independence, Missouri.
+
+Later September 26 checkpoints, in order (each report states its own counts):
+[Old Jail follow-up](museum_jail_followup_2026-09-26.md),
+[affiliation follow-up](museum_affiliation_followup_2026-09-26.md),
+[publication preparation](museum_publication_2026-09-26.md),
+[Museum Depot and Wayne County](museum_next_leaders_2026-09-26.md),
+[Adams and Brown](museum_adams_brown_2026-09-26.md),
+[Discovery and Pioneer Village](museum_discovery_pioneer_2026-09-26.md),
+[Veterans Memorial and Carroll](museum_veterans_carroll_2026-09-26.md),
+[Clinton, Madison and Monroe](museum_clinton_madison_monroe_2026-09-26.md),
+[African American Museum and Imagination Station](museum_african_imagination_2026-09-26.md),
+[Cass, Chester and Crawford](museum_cass_chester_crawford_2026-09-26.md),
+[Jefferson and Lincoln](museum_jefferson_lincoln_2026-09-26.md),
+[Madison, Marion and Milton](museum_madison_marion_milton_2026-09-26.md),
+[Bedford, Belmont and Chatham](museum_bedford_belmont_chatham_2026-09-26.md),
+[Commemorative Air Force](museum_commemorative_air_force_2026-09-26.md),
+[Franklin, Heritage and Newton](museum_franklin_heritage_newton_2026-09-26.md),
+[Telephone, Union and Washington](museum_telephone_union_washington_2026-09-26.md) and the
+current [M2 leading groups](museum_m2_leaders_2026-09-26.md). The
+[artifact refresh](artifact_refresh_2026-09-26/artifact_QA.md) and
+[explorer build packet](dashboard_2026-09-26/) record local artifact checks.
+
 The [initial research notes](museum_research_2026-09-15.csv) retain earlier leads; use the
 later reports and evidence ledgers for resolved questions. The 38-row
 [Overture context extract](museum_identity_review_2026-09-15/overture_context.csv) is
@@ -63,13 +108,13 @@ Their queries and checksums are recorded in
 ## Current outputs versus archives
 
 `data/processed/museum_review/` is generated and overwritten. The current saved review
-contains 457 candidate institutions, 560 source rows and 149 nearby pairs, with a top-20
-cutoff of 8 non-chain entities. It also writes `chain_summary.csv`, `chain_overlap.csv`
+(M2 checkpoint) contains 432 candidate institutions, 557 source rows and 84 nearby pairs,
+with a top-20 cutoff of six non-chain entities; Old Jail Museum leads at eight. It also writes `chain_summary.csv`, `chain_overlap.csv`
 and `not_museum_review.csv`. The original
 packet's 470 institutions, 551 rows and 159 pairs remain valid historical counts.
 Diagnostic pair labels remain blank; they are not another completed validation sample.
 `multisite_review` still describes the automatic baseline (249 entities).
-Union County's (seven) and Washington County's (four in the headline) exact-name groups
+Union County's (three) and Washington County's (four) exact-name groups
 fall below that cutoff. Their packets' reviewed-institution files and follow-up queues retain those
 cases, including ones merged into differently named institutions; check `museum_analysis` for
 current IDs on later revisits.
@@ -138,3 +183,6 @@ human decisions first. Before exporting selected headlines, explicitly call
 `dn_assert_museum_publication_ready()` and complete the factual checks described in
 [README.md](../../README.md#completing-a-museum-review). The pipeline does not call that
 helper automatically.
+
+
+

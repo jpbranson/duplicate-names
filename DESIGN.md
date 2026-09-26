@@ -1,7 +1,19 @@
 # Duplicate Names — Development Plan
 
-**Status:** Phase 2 tooling and focused source/identity passes complete; remaining headline checks pending
-**Last updated:** 2026-09-18
+> Implementation checkpoint, 2026-09-26: source acquisition and provisional C1-C4
+> outputs now exist in the isolated church pipeline. Church ordinals use the L3
+> core so place names such as First Mesa do not become congregation numbers;
+> distance summaries restrict both endpoints to the selected First cohort.
+> Day modifiers (Seventh Day, Eighth Day, Third Day) are also held out of congregation
+> numbering, while outer ordinals remain. Two exact operator-linked COGASOC records
+> are held outside Christian-only scope; source religion and identity are preserved.
+> Independent accuracy labels, final identities and headline factual reviews are
+> still pending. Both post bundles and the static explorer remain unpublished.
+> See FLIGHT_LOG.md for current validation and blockers. Earlier dated methodology
+> below remains historical evidence, not a claim that all later work is complete.
+
+**Status:** Museum headline review (Phase 2) and church review (Phases 1b/3) in progress; explorer (Phase 4) drafted locally; nothing published
+**Last updated:** 2026-09-26
 
 The museum pipeline runs on Overture + IMLS. All 300 candidate pairs have human labels;
 the [validation report](data/validation/resolution_validation_2026-09-15.md) records the
@@ -83,8 +95,10 @@ should point forward to both regardless of which lands first.
 Availability verified 2026-09-07.
 
 **Implemented inputs:** Overture Places release `2026-08-19.0` and the IMLS 2018 CSV
-archive, with provenance in `data/raw/MANIFEST.json`. GNIS, HIFLD, OSM, and Overture
-religious categories remain queued for Phase 1b. Wikidata enrichment is not implemented
+archive, with provenance in `data/raw/MANIFEST.json`. The church pipeline
+(`_targets_churches.R`, 2026-09-26) adds Overture worship categories, the GNIS 2021 archive,
+HIFLD and Census 2023 TIGER places/states. OSM is cached for eight metro areas as an
+internal validation sample only. Wikidata enrichment is not implemented
 and is not a completed Phase 1a dependency.
 
 Phase 2 also uses official institution pages and source address/website metadata for
@@ -191,8 +205,10 @@ ordinal and scope-claim parsing and using the geography-stripped name for subjec
   ethnolinguistic | descriptive | other`. Lexicon-classified first; then hand-label a
   stratified sample of ~500 to measure the classifier's error rate, and publish that rate.
 
-**Implementation status:** ordinal and scope-claim parsing exist. Compound ordinals remain
-a known church-analysis gap. `name_style` and `denom_norm` remain placeholders. Museum
+**Implementation status:** ordinal and scope-claim parsing exist. The church pipeline parses
+ordinals through 999, including compounds, and assigns heuristic `denom_norm` and
+`name_style` values pending independent labels. The shared museum parser still returns
+`NA` for compound ordinals. Museum
 subjects use a bounded regex vocabulary on L3, with unmatched names left unknown and
 multiple topics retained. This is a heuristic topic taxonomy, not complete noun-phrase
 parsing. IMLS discipline provides a coarse compatibility diagnostic; GMU is not agreement,
@@ -252,11 +268,19 @@ identity cases covering 15 source rows. The
 [leaders pass](data/validation/museum_leaders_review_2026-09-23.md) adds eight cases covering 19 rows,
 one of them an isolated IMLS row whose legal name and EIN identify another organization.
 The [methodology checkpoint](data/validation/museum_methodology_2026-09-23.md) adds one Atlanta duplicate case.
-The current input has 92 source rows across 37 cases, with five isolated conflicting rows.
+The input had 92 source rows across 37 cases at that checkpoint. The September 26 batches
+extend it; at the [M2 checkpoint](data/validation/museum_m2_leaders_2026-09-26.md) it has
+440 source rows across 185 cases, including 35 isolated conflicting rows.
 A conflict row receives its own stable entity/site ID, `counted = FALSE` and
 `reviewed_source_conflict`; its disputed aliases cannot propagate to accepted members.
 Cases containing only conflicts need no canonical institution. Cases with accepted
-members still require exactly one counted canonical record.
+members still require exactly one counted canonical record. An explicit
+`reselected_canonical` role can replace the automatic primary-site choice with
+a documented source row excluded only as `non_primary_site`, provided another
+accepted member of that same baseline institution was counted. It cannot revive
+an entirely excluded institution, a closed/nameless row, or a group supported
+only by conflicting records. Full membership and source guards still apply;
+the audit records the original false and corrected true counting flags.
 
 Identity reconciliation does not certify a visitor location. Source coordinates remain
 intact, including Mandeville's displaced points; the operator-supplied destination is
@@ -337,10 +361,10 @@ singularity). No candidate count is a verified count of independent institutions
 names for counted, eligible, verified rows with resolved affiliation; a chain-only name fails. It is an explicit pre-export check, not a target
 automatically invoked by `_targets.R`. The ranking's `publication_ready` column summarizes
 recorded review statuses; neither mechanism verifies evidence, semantic scope claims or
-map/access details. Nineteen institutions have verified overall reviews. The leading
-Franklin, Greene and Jackson County Historical Society groups are unreviewed, and ten
-Old Jail reviews remain pending, so every leading group fails the explicit
-publication check. The [September 17 batch](data/validation/museum_union_county_review_2026-09-17.md)
+map/access details. At the [M2 checkpoint](data/validation/museum_m2_leaders_2026-09-26.md),
+174 institutions have complete factual reviews, including exclusions. Old Jail Museum is the
+provisional non-chain leader at eight with four pending reviews, so no leading group passes
+the explicit publication check. The [September 17 batch](data/validation/museum_union_county_review_2026-09-17.md)
 reduces Union County's provisional count from 14 to seven; the
 [September 23 batch](data/validation/museum_leaders_review_2026-09-23.md) reduces Washington County's from 13 to seven.
 A supported identity or naming decision alone does not complete a review.
@@ -425,8 +449,9 @@ A full `targets::tar_make()` can overwrite the working label sheet; archive new 
 first. Run `source("tests/testthat.R")` for tests; it sources this non-package project's
 functions first.
 
-The current layout is below. Named post bundles will be created during their analysis
-phases; only the shared setup and template exist today.
+The current layout is below. The standalone drafts are `posts/duplicate-museum-names/` and
+`posts/duplicate-church-names/`, with earlier bundles in `posts/01-museums/` and
+`posts/02-churches/`. All are unpublished.
 
 ```
 duplicate-names/                # analysis repo; source of truth
@@ -437,9 +462,15 @@ duplicate-names/                # analysis repo; source of truth
   LEADS.md
   duplicate-names.Rproj
   renv.lock                     # pinned to R 4.4
-  _targets.R                    # pipeline DAG
+  _targets.R                    # museum pipeline DAG
+  _targets_churches.R           # church pipeline DAG (store: _targets_churches)
+  FLIGHT_LOG.md                 # durable resume record for the 2026-09-25 mission
   R/
-    src_*.R                     # one file per source: overture, osm, gnis, imls, hifld
+    src_*.R                     # adapters: overture, imls, churches (GNIS+HIFLD), church_overture, osm
+    church_*.R                  # church normalization, resolution, names, scope, analysis, metrics
+    museum_names.R              # preferred public names
+    museum_publication.R        # publication gates and sourced publication points
+    manifest.R                  # input provenance
     normalize.R                 # §4 — the ladder, extraction, exceptions
     gazetteer.R                 # L3 place-name stripping and exceptions
     resolve.R                   # §4.3 entity resolution and counting policy
@@ -461,7 +492,7 @@ duplicate-names/                # analysis repo; source of truth
     _setup.R                    # shared plotting and payload helpers
     _template/index.Rmd         # skeleton for future post bundles
   embeds/                       # self-contained widget HTML → blog's static/embeds/
-  dashboard/                    # Phase 4
+  dashboard/                    # Phase 4: local static duplicate-name explorer
 ```
 
 **Two repos, one direction of flow.** This repo owns the pipeline and drafts the posts; the
@@ -585,6 +616,8 @@ limited to what can be pushed into the client. Shiny (which `mapgl` supports dir
 real querying but needs hosting — shinyapps.io or Posit Connect — which is a different
 operational commitment than a blogdown site. Static first is the recommendation; revisit
 only if the interactions the posts suggest genuinely can't be done client-side.
+**Update 2026-09-26:** a static, local-first explorer is built in `dashboard/`; it is
+not deployed.
 
 **Required of the map, not optional:** every entity that carries `alt_names` must expose
 them — a footnote, a popup line, whatever fits — because the map is where the merge
@@ -647,9 +680,9 @@ Supporting files now in place: `R/config_blog.R`, `R/theme_dupnames.R`, `R/embed
 | **0. Scaffold** ✅ **done 2026-09-07** | `git init`, RStudio project, renv pinned to R 4.4 (138 packages), schema contract, manifest machinery, source stubs, gold-set tests | ✅ `targets::tar_make()` runs end to end; 42 tests pass; `entities.parquet` written with 0 rows / 31 cols matching the contract |
 | **1a. Acquire + resolve — MUSEUMS** ✅ **milestone met 2026-09-15** | Overture + IMLS; the L3 gazetteer; entity resolution; 300 human-labelled pairs scored | Museum entities generated and pair-level validation measured; final clusters and multi-site cases remain subject to review (§4.3) |
 | **2. Museums analysis → D1** ◀ **in progress** | Analysis tooling and focused source/identity passes complete; remaining top-20 checks, then figures and draft | Post 1 knits from its bundle and small payloads without the analysis checkout or pipeline; every headline number checked against evidence |
-| **1b. Acquire + resolve — CHURCHES** | GNIS, HIFLD, OSM, Overture religious categories; Census places denominator | Same, extended to ~250k congregations |
-| **3. Churches analysis → D2** | C1–C4; territory maps as `mapgl` embeds; ladder; naming cultures; emit the multiplicity list for post 4 | Post 2 drafted; embeds load standalone in a bare browser tab and have static fallbacks |
-| **4. Dashboard → D6** | Generalize the post-2 embeds into an arbitrary-category explorer | Deployed and queryable beyond churches and museums |
+| **1b. Acquire + resolve — CHURCHES** ◀ **in progress** (national build complete; independent labels and identity validation pending) | GNIS, HIFLD, OSM, Overture religious categories; Census places denominator | Same, extended to ~250k congregations |
+| **3. Churches analysis → D2** ◀ **in progress** (C1–C4 outputs and local draft; factual and label gates pending) | C1–C4; territory maps as `mapgl` embeds; ladder; naming cultures; emit the multiplicity list for post 4 | Post 2 drafted; embeds load standalone in a bare browser tab and have static fallbacks |
+| **4. Dashboard → D6** ◀ local static draft built; deployment blocked | Generalize the post-2 embeds into an arbitrary-category explorer | Deployed and queryable beyond churches and museums |
 | **5. Post 4 → D4** *(later)* | Historical sourcing on the multiplicity list from Phase 3 | — |
 | **6. Post 3 → D3** *(later)* | Founding-date acquisition; cohort analysis | — |
 
@@ -664,14 +697,15 @@ Reorder freely if the writing momentum runs the other way.
 ### Immediate Phase 2 deliverable
 
 The cleaned provisional L2 ranking and institution/source review sheets are available;
-the [methodology checkpoint](data/validation/museum_methodology_2026-09-23.md) is the latest: 52,584 counted
-entities and 52,452 eligible for name analysis. Chains leave the headline (decision 12)
-and three sourced `not_museum` records leave the count (decision 13). Franklin, Greene and
-Jackson County Historical Society and Old Jail Museum lead at 11 non-chain institutions;
-nineteen institutions have complete factual reviews, and every leading group still fails
-the publication gate. The [provisional leaders report](data/validation/museum_leaders_review_2026-09-23.md)
-preserves the preceding checkpoint; see the latest
-[follow-up queue](data/validation/museum_methodology_2026-09-23/follow_up.csv).
+the [M2 leading-group checkpoint](data/validation/museum_m2_leaders_2026-09-26.md) is the latest:
+52,387 counted institutions and 52,255 eligible for name analysis. Chains leave the headline
+(decision 12) and sourced `not_museum` records (25) leave the count (decision 13). Old Jail
+Museum is the provisional non-chain leader at eight with four pending reviews; 174
+institutions have complete factual reviews, 28 actions remain open, and no leading group
+passes the publication gate. The
+[methodology checkpoint](data/validation/museum_methodology_2026-09-23.md) and
+[provisional leaders report](data/validation/museum_leaders_review_2026-09-23.md) preserve
+earlier states; the [validation index](data/validation/README.md) lists every dated packet.
 The [initial Phase 2 report](data/validation/museum_analysis_2026-09-15.md)
 preserves the earlier implementation checkpoint.
 Category handling, affiliation rules, subject extraction, canonical entity counting and
@@ -691,7 +725,8 @@ This work does not require reopening the matching threshold.
 
 Decisions 1–8 were settled 2026-09-07, with implementation clarifications below.
 Decisions 9–11 record the museum analysis policy, September 15 validation outcome and
-curated correction layer.
+curated correction layer. Decisions 12–13 (2026-09-23) separate chains from headlines and
+exclude sourced non-museums.
 
 1. **Geographic scope — US-first, with a global follow-up.** Both near-term posts are
    US-only; Phase 1 keeps the schema country-general so a global pass is cheap. See §7.
@@ -716,6 +751,9 @@ curated correction layer.
    churches work is being unwound, it is queued. The schema in `R/schema.R` is already
    church-shaped (`denomination`, `religion`, `ordinal`, `place_geoid`), so 1b extends the
    pipeline rather than reopening it.
+
+   **Update 2026-09-26:** Phase 1b is implemented in `_targets_churches.R`; see the
+   [church checkpoint](data/validation/church_ordinal_review_2026-09-26.md).
 
    The one thing to watch: matching validation covers museum source data, leaving
    possible church-specific blind spots. Phase 1b must re-run the gold set with church cases added
@@ -790,6 +828,9 @@ curated correction layer.
 - Setup and project overview → [`README.md`](README.md)
 - Current work and saved counts → [`HANDOFF.md`](HANDOFF.md)
 - Validation evidence and limitations → [September 15 report](data/validation/resolution_validation_2026-09-15.md)
-- Latest museum counts and remaining review cases → [methodology checkpoint](data/validation/museum_methodology_2026-09-23.md)
+- Latest museum counts and remaining review cases → [M2 leading-group checkpoint](data/validation/museum_m2_leaders_2026-09-26.md)
+- Latest church counts → [church ordinal/scope checkpoint](data/validation/church_ordinal_review_2026-09-26.md)
+- Durable resume record → [`FLIGHT_LOG.md`](FLIGHT_LOG.md)
 - Live decisions and archived evidence → [validation index](data/validation/README.md)
 - Analogous name-collision phenomena → [`LEADS.md`](LEADS.md)
+

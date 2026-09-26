@@ -2,23 +2,26 @@
 
 ## Project Structure & Module Organization
 
-This is an R analysis project, not an R package. Read `HANDOFF.md` for current work, `DESIGN.md` for methodology, and `README.md` for setup and the project overview. Phase 2 tooling and focused source/identity passes are complete; remaining headline checks precede the post.
+This is an R analysis project, not an R package. Read `HANDOFF.md` for current work, `DESIGN.md` for methodology, and `README.md` for setup and the project overview. `FLIGHT_LOG.md` is the durable resume record for the mission authorized on 2026-09-25; read its status board and latest entry first. Museum and church source reviews continue; no headline is certified and neither post is published.
 
-- `_targets.R` defines the pipeline, currently focused on museums.
+- `_targets.R` defines the museum pipeline; `_targets_churches.R` defines the church pipeline in the separate `_targets_churches` store.
 - `R/` contains source adapters (`src_*.R`), normalization, resolution, metrics, and publishing helpers. `R/schema.R` defines stage contracts.
-- `tests/testthat/` holds normalization, schema, metric and museum-review/identity tests.
+- `tests/testthat/` holds normalization, schema, metric, museum-review/identity and church tests.
 - `data/raw/` caches inputs; `data/processed/` holds derived outputs and the generated labelling sheet. Preserve completed human labels and reports in `data/validation/`; its [index](data/validation/README.md) distinguishes live inputs from dated evidence packets. Track input provenance in `data/raw/MANIFEST.json`.
-- `posts/` holds Hugo page bundles and a template; `embeds/` holds generated maps. `dashboard/` is reserved for later work.
+- `posts/` holds Hugo page bundles and a template; `embeds/` holds generated maps. `dashboard/` holds the local duplicate-name explorer; see its README.
 
 ## Build, Test, and Development Commands
 
-Use R 4.4, preferably lockfile version 4.4.2. Run from the repository root in R:
+Use R 4.4, preferably lockfile version 4.4.2. On the current Windows machine the `Rscript` on `PATH` is 4.3.2 and has no renv library; call `C:\Program Files\R\R-4.4.2\bin\Rscript.exe` explicitly. Run from the repository root in R:
 
 ```r
 renv::restore()                # Restore pinned dependencies
 targets::tar_make(names = c(museum_review_files, museum_identity_audit_file,
                             museum_records_file, dup_museums,
                             multisite_review, entities_file)) # Current review and exports
+targets::tar_make(script = "_targets_churches.R", store = "_targets_churches",
+                  names = church_output_files)                 # Church outputs
+source("dashboard/build_data.R")  # Explorer payload; see dashboard/README.md
 targets::tar_visnetwork()      # Inspect the dependency graph
 source("tests/testthat.R")     # Source project functions and run tests
 ```
@@ -48,13 +51,14 @@ guards reject stale decisions. One canonical record counts per reviewed institut
 supporting rows remain with reviewed exclusion reasons. Keep `source_conflict`
 holdouts auditable: contradictory rows have separate uncounted IDs
 and must not contribute disputed aliases to accepted institutions. The
-[methodology checkpoint](data/validation/museum_methodology_2026-09-23.md) is the latest
-count checkpoint: 92 identity rows in 37 cases, including five isolated source conflicts,
-and three verified `not_museum` records. Nineteen institutions have complete factual reviews.
-Franklin, Greene and Jackson County Historical Society and Old Jail Museum lead at 11
-non-chain institutions; review those groups next, then the latest follow-up queue.
-Smithsonian Institution (10) needs sourced parent affiliation before it can headline. Preserve Oregon's
-mixed source context and unresolved museum/address/name cases without unsupported merges.
+[M2 leading-group checkpoint](data/validation/museum_m2_leaders_2026-09-26.md) is the latest
+museum count checkpoint: 52,387 counted and 52,255 eligible institutions, 440 identity rows
+in 185 cases, 35 isolated source conflicts, 25 `not_museum` exclusions and 174 complete
+factual reviews. Old Jail Museum is the provisional non-chain leader at eight with four
+pending reviews; 28 open actions remain. The
+[validation index](data/validation/README.md) lists every dated packet and its open-action
+queue. Preserve Oregon's mixed source context and unresolved museum/address/name cases
+without unsupported merges.
 The earlier
 [address follow-up](data/validation/museum_address_review_2026-09-15.md) reconciles Chipley
 and the accepted Peters Creek pair; its mixed IMLS row stays isolated. That packet's
@@ -75,6 +79,16 @@ values are alternatives to inspect, not additional confirmed sites. Before expor
 `dn_assert_museum_publication_ready()` explicitly; the pipeline does not invoke it.
 The helper checks recorded statuses, not the evidence, visitor access, map points or
 M2 scope-word meaning. These still require factual review.
+
+Church counts come from `church_named_analysis`. The latest
+[church checkpoint](data/validation/church_ordinal_review_2026-09-26.md) keeps
+1,032,223 source rows and 540,778 canonical descriptions, 442,832 of them eligible, with
+zero complete factual reviews. `data/validation/church_scope_decisions.csv` holds guarded,
+sourced `outside_christian_scope` holds: every cluster member must be listed, and a
+similar name alone never justifies exclusion. Scope holds do not change source religion,
+identity or review status. Independent church matching labels are still blank; source
+research does not grade them. Dated packet `prepare`/`apply` scripts are one-time: never
+rerun them after their checkpoint.
 
 ## Commit & Pull Request Guidelines
 

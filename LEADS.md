@@ -5,9 +5,11 @@ here whenever something surfaces during Phase 2/3 work** rather than chasing it 
 
 Format: one heading per lead, with the question, why it's interesting, and a data note.
 
-**Status, 2026-09-23:** Phase 2 tooling and the source/identity passes through the
-[methodology checkpoint](data/validation/museum_methodology_2026-09-23.md), which separates chains from the headline,
-are complete. Remaining headline checks precede the post. The dated counts below remain
+**Status, 2026-09-26:** The latest museum count checkpoint is the
+[M2 leading-group review](data/validation/museum_m2_leaders_2026-09-26.md): 52,387 counted
+institutions, 52,255 eligible and 174 complete factual reviews. Old Jail Museum is the
+provisional non-chain leader at eight with four pending reviews; no headline is certified.
+The museum and church posts are unpublished local drafts. The dated counts below remain
 exploratory observations, not verified publication figures; see
 [HANDOFF.md](HANDOFF.md) for current work and the
 [validation report](data/validation/resolution_validation_2026-09-15.md) for sample limits.
@@ -106,7 +108,9 @@ Washington County Historical Society from 13 to seven: five of its society recor
 operators of differently named museums (Stevens Memorial, Miller House, Port o' Plymouth,
 Dewey Hotel, Washington County Heritage Center), and one IMLS row belongs to another
 organization. Several remaining records describe a headquarters, archives or umbrella
-society rather than a museum. No leading name is publication ready.
+society rather than a museum. By the September 26 M2 checkpoint, Washington County
+Historical Society has four provisional institutions and Union County three; Old Jail Museum
+leads provisionally at eight. No leading name is publication ready.
 
 The interesting part is that this duplication is **downstream of a different
 duplication**. There are ~31 Washington Counties in the US; the historical
@@ -160,9 +164,12 @@ calls the Santa Monica museum "a separate business"; Miami Beach's operator doma
 The official directory lists 25 open US locations; 14 carry city-suffixed names, so an
 exact-name count measures one chain's listing style, not independent naming. Chains now
 sit beside the headline. The [chain overlap](data/validation/museum_methodology_2026-09-23/chain_overlap.csv) keeps
-the interesting part: Old Jail Museum shares its name with one Historic Tours of America
-site, Madame Tussaud's Wax Museum with two unaffiliated records (not yet researched), and
-Museum of Illusions with the unaffiliated Miami Beach venue. Brand affiliation does not establish common
+the interesting part: at that September 23 checkpoint, Old Jail Museum shared its name with
+one Historic Tours of America site, Madame Tussaud's Wax Museum with two unaffiliated records,
+and Museum of Illusions with the unaffiliated Miami Beach venue. By September 26 the generated
+`chain_overlap.csv` shows three chain-affiliated Old Jail sites beside its non-chain
+institutions, and the [affiliation follow-up](data/validation/museum_affiliation_followup_2026-09-26.md)
+reconciled the two Las Vegas Madame Tussaud's records as one attraction. Brand affiliation does not establish common
 legal ownership. See the [source report](data/validation/museum_source_review_2026-09-15.md).
 
 ### Relocations can impersonate national collisions (Phase 2, 2026-09-15)
@@ -192,3 +199,14 @@ checks without changing the existing identity decisions. The subsequent address 
 confirms Peters Creek's physical museum and consolidates its two accepted Overture
 records, while preserving the contradictory IMLS row as a separate holdout. Tax IDs
 help identify an organization; they do not justify copying all fields from a mixed row.
+
+### Numbered geography masquerading as a numbered congregation (church Phase 1, 2026-09-26)
+
+The church pass found First Mesa Baptist Church: First Mesa is the place qualifier,
+not an ordinal congregation count. Removing that qualifier leaves Baptist Church.
+A similar missing-word problem made two source rows for 38th Avenue Baptist Church
+look like a Thirty Eighth Baptist Church. The operator contact page supplies Avenue:
+https://38thavenuebaptist.org/contact-us. Preserve raw names and review the number's
+meaning before announcing a highest ordinal. Sixteenth Tabernacle Beth El's own
+history counts charters within Virginia, illustrating another boundary problem:
+https://alexandria.cogasoc.org/history-of-the-tabernacle/.

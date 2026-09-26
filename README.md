@@ -21,7 +21,24 @@ renv::restore()      # restore the pinned dependencies
 This is an R analysis project, not an R package. Keep `DESCRIPTION` as
 `Type: Project` without a `Package:` field.
 
-## Current status — 2026-09-17
+## Current status
+The [church ordinal/scope checkpoint](data/validation/church_ordinal_review_2026-09-26.md)
+corrects day-name parsing and holds two operator-confirmed Jewish tabernacles outside
+Christian-only analysis. It preserves the automatic identities: 540,778 canonical
+descriptions, 442,832 eligible. Tests and local artifacts pass; independent labels,
+remaining factual checks and publication are still incomplete.
+
+The initial national church build is complete in a separate target store:
+`targets::tar_make(script = "_targets_churches.R", store = "_targets_churches", names = church_output_files)`.
+The [church acquisition checkpoint](data/validation/church_phase1_2026-09-26/README.md) describes
+sources and the independent-label requirements (442,834 eligible at that checkpoint; 442,832
+after the [ordinal/scope checkpoint](data/validation/church_ordinal_review_2026-09-26.md)).
+Corrected C1-C4 outputs, a standalone church draft/map and a static explorer are built.
+Museum headlines, church factual/independent reviews and publication remain unfinished.
+Historical status below is retained
+for provenance; the flight log identifies the live checkpoint.
+
+The [M2 leading-group checkpoint](data/validation/museum_m2_leaders_2026-09-26.md) validates 52,387 counted / 52,255 eligible museum institutions, 440 identity rows in 185 cases and 174 complete factual reviews (including exclusions). All 340 assertions and 27 integrity checks pass; 1,887 prior evidence/label files remain unchanged. Four batch reviews are newly complete; 28 open actions remain, including three carried forward. Historical counts below describe earlier checkpoints. Local post/explorer were refreshed and validated in [artifact QA](data/validation/artifact_refresh_2026-09-26/artifact_QA.md). Both drafts remain unpublished; see [FLIGHT_LOG.md](FLIGHT_LOG.md).
 
 **Phase 2 tooling and focused source/identity passes are complete;
 remaining headline checks precede the museum post.** The pipeline uses Overture Places release
@@ -38,7 +55,8 @@ corrections:
 | After Old Jail review | 57,313 | 52,605 | 52,473 |
 | After Union County review | 57,305 | 52,597 | 52,465 |
 | After provisional leaders review | 57,293 | 52,588 | 52,456 |
-| After chain separation and not-a-museum decisions (current) | 57,292 | 52,584 | 52,452 |
+| After chain separation and not-a-museum decisions (September 23) | 57,292 | 52,584 | 52,452 |
+| After M2 leading groups (September 26; latest, see the [validation index](data/validation/README.md) for intermediate batches) | 57,083 | 52,387 | 52,255 |
 
 These are provisional counts; remaining source checks precede publication.
 
@@ -54,7 +72,7 @@ analysis implementation; the [identity report](data/validation/museum_identity_r
 preserves the first identity checkpoint. The [Old Jail review](data/validation/museum_old_jail_review_2026-09-15.md)
 and [Union County review](data/validation/museum_union_county_review_2026-09-17.md) preserve
 preceding checkpoints, as does the [provisional leaders review](data/validation/museum_leaders_review_2026-09-23.md);
-the [methodology checkpoint](data/validation/museum_methodology_2026-09-23.md) has the latest counts and remaining cases.
+the [Cass/Chester/Crawford checkpoint](data/validation/museum_cass_chester_crawford_2026-09-26.md) preserves an earlier September 26 state, and the [M2 leading-group checkpoint](data/validation/museum_m2_leaders_2026-09-26.md) has the latest validated counts and remaining cases.
 M1/M2 now count one canonical L2 name per non-chain entity; the old helper counted source
 rows and aliases. Chain locations are reported beside the headline, and a sourced
 `not_museum` decision removes records that describe no museum. Category-only names are
@@ -67,7 +85,7 @@ not-a-museum review, and nearby-pair diagnostics to `data/processed/museum_revie
 `data/validation/museum_decisions.csv`, keyed by source record and expected name.
 Use the generated sheets for current candidates. Each dated packet's reviewed-institution
 file and follow-up queue preserve cases that merged into differently named institutions;
-see the [latest queue](data/validation/museum_methodology_2026-09-23/follow_up.csv). Check `museum_analysis` for current IDs when revisiting any dated packet.
+see the [latest queue](data/validation/museum_m2_leaders_2026-09-26/human_review.csv) (28 open actions). Earlier packets retain unresolved cases from their own batches. Check `museum_analysis` for current IDs when revisiting any dated packet.
 No headline count is certified by these automated analyses.
 
 The [source-verification report](data/validation/museum_source_review_2026-09-15.md)
@@ -137,9 +155,11 @@ Counted institutions fall to **52,584** and eligible institutions to **52,452**;
 Franklin, Greene and Jackson County Historical Society and Old Jail Museum lead at **11**.
 **217 assertions and 23 integrity checks passed**, including 212 protected files.
 
-The regenerated review sheets contain **457 candidate institutions, 560 source rows
-and 149 nearby pairs**. The original dated packet's 470 institutions, 551 rows and
-159 pairs describe an earlier checkpoint. Use the
+At that checkpoint the regenerated review sheets contained 457 candidate institutions,
+560 source rows and 149 nearby pairs. The live sheets (M2 checkpoint) contain **432
+candidate institutions, 557 source rows and 84 nearby pairs**, with a top-20 cutoff of six.
+The original dated packet's 470 institutions, 551 rows and 159 pairs describe an earlier
+checkpoint. Use the
 [validation index](data/validation/README.md) to distinguish live decision inputs,
 historical evidence and the latest follow-up queue.
 
@@ -148,8 +168,11 @@ attached to the institution summaries. The earlier dossier-only rebuild refreshe
 192 assertions and 23 integration checks passed, with counts and decisions unchanged.
 See the [review-field guide](#completing-a-museum-review) before continuing source checks.
 
-Church acquisition is queued for Phase 1b, after the museum post. The dashboard
-comes after the first two posts. See [HANDOFF.md](HANDOFF.md) for the work queue.
+Church acquisition and a separate provisional national build are now implemented.
+Both posts are local research drafts. The static explorer in [dashboard/](dashboard/README.md)
+was refreshed and checked at the church ordinal/scope checkpoint; browser CSV file saving
+remains unverified. Independent church labels and museum headline
+reviews remain pending; see [HANDOFF.md](HANDOFF.md) and [FLIGHT_LOG.md](FLIGHT_LOG.md).
 
 ## Running
 
@@ -190,6 +213,9 @@ root, supplying a new review date:
 Rscript scripts/archive_museum_review.R YYYY-MM-DD
 ```
 
+Use R 4.4.2's `Rscript`. On the current Windows machine the one on `PATH` is 4.3.2 and has
+no renv library, so call `"C:\Program Files\R\R-4.4.2\bin\Rscript.exe"` explicitly.
+
 It reads saved targets and archives the leading rankings (including cutoff ties),
 review sheets and baseline multi-site queue into `data/validation/museum_review_YYYY-MM-DD/`.
 It neither builds targets nor copies the entire generated export directory, and it refuses
@@ -200,7 +226,7 @@ For an identity-correction checkpoint, also preserve those inputs, before/after 
 evidence and hashes, following the
 [identity packet](data/validation/museum_identity_review_2026-09-15/) and
 [focused packet](data/validation/museum_focused_review_2026-09-15/) or the latest
-[methodology packet](data/validation/museum_methodology_2026-09-23/). Existing dated
+[M2 packet](data/validation/museum_m2_leaders_2026-09-26/). Existing dated
 packets and completed human labels are historical evidence, not generated scratch files.
 
 ### Completing a museum review
@@ -239,9 +265,11 @@ map accuracy. Complete those checks as relevant to the post.
 The generated `lon`, `lat` and `map_url` still describe selected source points.
 The [staged location table](data/validation/museum_address_review_2026-09-15/publication_locations.csv)
 has separate `publication_lon`/`publication_lat` and dated access wording for Mandeville,
-Smedley and Peters Creek. It is not yet consumed by the pipeline or Parquet exports.
-Apply those fields during publication export and refresh access wording, preserving source
-coordinates and evidence. See the [current queue](data/validation/museum_methodology_2026-09-23/follow_up.csv)
+Smedley and Peters Creek. The pipeline and Parquet exports still do not consume it; `dn_museum_publication_points()`
+applies it, with 30-day access checks, only in the dated
+[publication export](data/validation/museum_publication_2026-09-26.md). Refresh access wording
+before publication, preserving source coordinates and evidence. See the
+[current queue](data/validation/museum_m2_leaders_2026-09-26/human_review.csv)
 for the remaining source checks and the
 [address queue](data/validation/museum_address_review_2026-09-15/follow_up.csv) for location details.
 
@@ -249,9 +277,12 @@ for the remaining source checks and the
 
 | Path | What |
 |---|---|
-| `_targets.R` | Pipeline DAG |
+| `_targets.R` | Museum pipeline DAG |
+| `_targets_churches.R` | Church pipeline DAG (store `_targets_churches`) |
+| `FLIGHT_LOG.md` | Durable resume record and checkpoint log for the 2026-09-25 mission |
 | `R/schema.R` | Stage contracts, validation and source binding. Start here. |
-| `R/src_*.R` | Implemented Overture/IMLS adapters; queued source stubs in `src_others.R` |
+| `R/src_*.R` | Overture/IMLS museum adapters; church adapters in `src_churches.R` (GNIS, HIFLD) and `src_church_overture.R` (Overture worship, Census places/states); `src_osm.R` for internal validation only |
+| `R/church_*.R` | Church normalization, resolution, names, scope holds, analysis and metrics |
 | `R/normalize.R` | The name ladder — decides every headline number |
 | `R/gazetteer.R` | Place names and exceptions for L3 geography stripping |
 | `R/resolve.R` | Cross-source entity resolution |
@@ -260,11 +291,14 @@ for the remaining source checks and the
 | `R/museums.R` | Category handling, affiliations, subjects, review queues and publication gate |
 | `R/museum_review_context.R` | IMLS EIN, separate physical/mailing addresses and legacy context for review |
 | `R/museum_identity.R` | Guarded source-specific corrections and before/after identity audit |
+| `R/museum_names.R` | Guarded preferred public names |
+| `R/museum_publication.R` | Publication gates and sourced publication points |
 | `R/config_blog.R` | Every blog-dependent setting, in one place |
 | `R/theme_dupnames.R` | ggplot2 theme, palette, scales |
 | `R/embed.R` | Builds and deploys self-contained map embeds |
-| `posts/` | Shared setup and a template for future Hugo page bundles |
-| `data/raw/MANIFEST.json` | Museum input/query provenance; Census gazetteer downloads are not yet manifest-tracked |
+| `posts/` | Shared setup, template, unpublished drafts `duplicate-museum-names/` and `duplicate-church-names/`, and earlier bundles `01-museums/` and `02-churches/` |
+| `dashboard/` | Local static duplicate-name explorer (unpublished) |
+| `data/raw/MANIFEST.json` | Museum and church input/query provenance; the L3 Census gazetteer downloads are not yet manifest-tracked |
 | `data/processed/` | Baseline/reviewed Parquet, review sheets, identity audit and labelling sheet; gitignored |
 | [`data/validation/`](data/validation/README.md) | Human labels, sourced decisions, evidence packets and dated reports; index distinguishes live inputs from archives |
 | `scripts/archive_museum_review.R` | General review-packet archive helper; identity artifacts need separate preservation |
@@ -280,7 +314,7 @@ expectation to make a test pass.
 **Museum name headlines use L2 (`name_expanded`).** The L3 gazetteer step is
 implemented, but stripping geography often removes part of a museum's identity.
 Use L3 (`name_core`) for geography-stripped comparisons and as input to the
-subject analysis; churches will use L3 for their name counts. M2's former L3
+subject analysis; churches use L3 for their name counts. M2's former L3
 implementation mismatch has been corrected. The resolved-record table retains all
 source rows; `museum_analysis` is the one-row-per-entity analysis table.
 
@@ -296,8 +330,12 @@ part of Phase 2.
 
 ## Data licensing
 
-The current museum pipeline uses Overture and IMLS. The planned church extension
-adds GNIS and HIFLD, with OpenStreetMap reserved for internal enrichment and
-validation under the project's licensing plan. Review licensing and attribution
+The museum pipeline uses Overture and IMLS. The separate church pipeline uses Overture
+places of worship, the GNIS 2021 snapshot, HIFLD and Census TIGER places, with
+OpenStreetMap reserved for internal validation under the project's licensing plan. Review licensing and attribution
 before releasing tables or figures that depend on OSM contributions. See
 DESIGN.md §7; the published dataset's destination is still undecided.
+
+
+
+
