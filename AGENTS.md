@@ -2,12 +2,13 @@
 
 ## Project Structure & Module Organization
 
-This is an R analysis project, not an R package. Read `HANDOFF.md` for current work, `DESIGN.md` for methodology, and `README.md` for setup and the project overview. `FLIGHT_LOG.md` is the durable resume record for the mission authorized on 2026-09-25; read its status board and latest entry first. Museum and church source reviews continue; no headline is certified and neither post is published.
+This is an R analysis project, not an R package. Project knowledge lives in `knowledge/`, an Open Knowledge Format (OKF v0.2) bundle: start at `knowledge/index.md` and the status report `knowledge/project/status.md`. The mission authorized on 2026-09-25 is in `knowledge/project/mission.md` (status board, resume steps) and `knowledge/project/flight-log.md`; read the board and the latest entry first. `README.md` covers setup and layout. `DESIGN.md`, `HANDOFF.md`, `LEADS.md` and `FLIGHT_LOG.md` are redirect stubs; never add content to them.
 
 - `_targets.R` defines the museum pipeline; `_targets_churches.R` defines the church pipeline in the separate `_targets_churches` store.
 - `R/` contains source adapters (`src_*.R`), normalization, resolution, metrics, and publishing helpers. `R/schema.R` defines stage contracts.
-- `tests/testthat/` holds normalization, schema, metric, museum-review/identity and church tests.
-- `data/raw/` caches inputs; `data/processed/` holds derived outputs and the generated labelling sheet. Preserve completed human labels and reports in `data/validation/`; its [index](data/validation/README.md) distinguishes live inputs from dated evidence packets. Track input provenance in `data/raw/MANIFEST.json`.
+- `tests/testthat/` holds normalization, schema, metric, museum-review/identity, church and knowledge-bundle tests.
+- `knowledge/` holds one concept per decision, method, metric, dataset, live input, dated evidence packet, publication and lead, plus status and work logs; `knowledge/conventions.md` defines its types and keys. `R/knowledge.R` checks it and regenerates its indexes.
+- `data/raw/` caches inputs; `data/processed/` holds derived outputs and the generated labelling sheet. Preserve completed human labels and reports in `data/validation/`; `knowledge/inputs/` describes its live inputs and `knowledge/evidence/` its dated packets. Track input provenance in `data/raw/MANIFEST.json`.
 - `posts/` holds Hugo page bundles and a template; `embeds/` holds generated maps. `dashboard/` holds the local duplicate-name explorer; see its README.
 
 ## Build, Test, and Development Commands
@@ -24,6 +25,7 @@ targets::tar_make(script = "_targets_churches.R", store = "_targets_churches",
 source("dashboard/build_data.R")  # Explorer payload; see dashboard/README.md
 targets::tar_visnetwork()      # Inspect the dependency graph
 source("tests/testthat.R")     # Source project functions and run tests
+dn_okf_write_indexes("knowledge"); dn_okf_check("knowledge")  # After sourcing R/: bundle indexes and conformance
 ```
 
 Cold pipeline runs download public datasets. A full `targets::tar_make()` builds all outdated targets. Before that or any rebuild of `labelling_sheet`, archive new completed labels outside `data/processed/`, because the target rewrites `data/processed/resolution_labelling.csv`. The authoritative completed sample is `data/validation/resolution_labelling_2026-09-15.csv`; score that archive with `dn_score_labels()` after sourcing `R/`. Building `museum_review_files` alone does not refresh the separate identity-audit or reviewed-Parquet export targets. See [README.md](README.md#running) for the archive helper's identity-artifact limitations.
@@ -42,7 +44,7 @@ Never change gold-set expectations merely to pass tests. Museum headline counts 
 
 Retain the 0.85 matching threshold supported by the September 15 sample. Its unweighted pair-level precision and recall do not establish dataset-wide or final-cluster accuracy. Preserve the original labels and use fresh independent labels to evaluate changes suggested by the nine disagreements.
 
-Phase 2 now has category-only holdouts, sourced affiliation rules, subject extraction, L2 M1/M2 metrics and review queues. Use `museum_analysis` for one canonical name per entity; `entities` retains multiple source records. Unknown affiliation is `NA`, not independence. Preserve completed review decisions in `data/validation/museum_decisions.csv`; generated review files are overwritten. Repeated naming templates alone do not establish common ownership. Keep uncertain and excluded records auditable, including `historical_name` holdouts and sourced `not_museum` decisions (society offices, archives or umbrella groups with no museum). Do not infer `not_museum` from a failed search, a mailbox or an IRS revocation. An assistant can verify official sources and apply supported factual decisions. Complete identity/count checks before publishing headlines; independent human labels are required for matching-accuracy evaluation, not as blanket approval for source research. `review_status = verified` means complete factual review. See the [first identity report](data/validation/museum_identity_review_2026-09-15.md) for the correction layer and the latest source review below for its current checkpoint.
+Phase 2 now has category-only holdouts, sourced affiliation rules, subject extraction, L2 M1/M2 metrics and review queues. Use `museum_analysis` for one canonical name per entity; `entities` retains multiple source records. Unknown affiliation is `NA`, not independence. Preserve completed review decisions in `data/validation/museum_decisions.csv`; generated review files are overwritten. Repeated naming templates alone do not establish common ownership. Keep uncertain and excluded records auditable, including `historical_name` holdouts and sourced `not_museum` decisions (society offices, archives or umbrella groups with no museum). Do not infer `not_museum` from a failed search, a mailbox or an IRS revocation. An assistant can verify official sources and apply supported factual decisions. Complete identity/count checks before publishing headlines; independent human labels are required for matching-accuracy evaluation, not as blanket approval for source research. `review_status = verified` means complete factual review. See `knowledge/methodology/identity-corrections.md` for the correction layer and `knowledge/project/status.md` for the current checkpoint.
 
 `entities` is the unchanged automatic baseline. `museum_records` applies the explicit
 membership in `data/validation/museum_identity_decisions.csv` before museum analysis.
@@ -50,17 +52,13 @@ Every affected baseline-cluster member must be listed; name, entity and coordina
 guards reject stale decisions. One canonical record counts per reviewed institution;
 supporting rows remain with reviewed exclusion reasons. Keep `source_conflict`
 holdouts auditable: contradictory rows have separate uncounted IDs
-and must not contribute disputed aliases to accepted institutions. The
-[M2 leading-group checkpoint](data/validation/museum_m2_leaders_2026-09-26.md) is the latest
-museum count checkpoint: 52,387 counted and 52,255 eligible institutions, 440 identity rows
-in 185 cases, 35 isolated source conflicts, 25 `not_museum` exclusions and 174 complete
-factual reviews. Old Jail Museum is the provisional non-chain leader at eight with four
-pending reviews; 28 open actions remain. DESIGN decision 14 now governs post 1: use its
-headline-sufficient standard and M1 stopping rule, verify at most five surprising
+and must not contribute disputed aliases to accepted institutions. Current counts, the
+latest checkpoint and open actions are in `knowledge/project/status.md`.
+[Decision 14](knowledge/decisions/14-post-1-headline-sufficient-review.md) governs post 1:
+use its headline-sufficient standard and M1 stopping rule, verify at most five surprising
 collisions, and do not open new leader batches. Church work and the explorer are frozen
-until post 1 publishes. The
-[validation index](data/validation/README.md) lists every dated packet and its open-action
-queue. Preserve Oregon's mixed source context and unresolved museum/address/name cases
+until post 1 publishes. `knowledge/evidence/index.md` lists every dated packet and links
+its open-action queue. Preserve Oregon's mixed source context and unresolved museum/address/name cases
 without unsupported merges.
 The earlier
 [address follow-up](data/validation/museum_address_review_2026-09-15.md) reconciles Chipley
@@ -85,18 +83,37 @@ For post 1, pass `data/validation/post1_headline_review.csv` as `headline_review
 The helper checks recorded statuses, not the evidence, visitor access, map points or
 M2 scope-word meaning. These still require factual review.
 
-Church counts come from `church_named_analysis`. The latest
-[church checkpoint](data/validation/church_ordinal_review_2026-09-26.md) keeps
-1,032,223 source rows and 540,778 canonical descriptions, 442,832 of them eligible, with
-zero complete factual reviews. `data/validation/church_scope_decisions.csv` holds guarded,
+Church counts come from `church_named_analysis`; the latest church checkpoint and counts
+are in `knowledge/project/status.md`. `data/validation/church_scope_decisions.csv` holds guarded,
 sourced `outside_christian_scope` holds: every cluster member must be listed, and a
 similar name alone never justifies exclusion. Scope holds do not change source religion,
 identity or review status. Independent church matching labels are still blank; source
 research does not grade them. Dated packet `prepare`/`apply` scripts are one-time: never
 rerun them after their checkpoint.
 
+## Knowledge Bundle
+
+Record what the project learns in `knowledge/`, following `knowledge/conventions.md`:
+
+- Every concept needs YAML frontmatter with a non-empty `type`, plus `title`, a one-line
+  `description`, `generated: { by: <tool>/<model>, at: <ISO 8601 UTC> }` and `sources` for
+  what it derives from. Cite specific claims with footnotes keyed to `sources[].id`.
+- Use links relative to the file; `dn_okf_check()` requires them to resolve.
+- Copy numbers from their evidence; never strengthen a claim beyond its source. Only a
+  person may add a `human:` entry to `verified`. OKF `verified` is unrelated to
+  `review_status = verified` and is never a matching-accuracy label.
+- For each new dated packet, add `knowledge/evidence/<track>/<packet>.md` with the next
+  `sequence`, mark the previous current packet `status: deprecated` with `superseded_by`,
+  and update `knowledge/project/status.md` and any affected input, method or publication
+  concept. Never edit a dated packet to fit the bundle.
+- During the mission, append checkpoint entries to `knowledge/project/flight-log.md` and
+  keep `knowledge/project/mission.md` current.
+- Regenerate indexes with `dn_okf_write_indexes("knowledge")`, run
+  `dn_okf_check("knowledge")` (also covered by `tests/testthat/test-knowledge.R`), and
+  add a dated, newest-first entry to `knowledge/log.md`.
+
 ## Commit & Pull Request Guidelines
 
 Use concise, descriptive commit subjects, optionally prefixed by phase, such as `Phase 1a: implement museum sources`. Keep changes focused.
 
-PRs should explain the problem, resulting behavior, validation performed, and effects on counts or methodology. Link relevant issues or design decisions; include rendered previews for visual changes. Update `HANDOFF.md` when the next task or project state changes.
+PRs should explain the problem, resulting behavior, validation performed, and effects on counts or methodology. Link relevant issues or design decisions; include rendered previews for visual changes. Update `knowledge/project/status.md` when the next task or project state changes.
