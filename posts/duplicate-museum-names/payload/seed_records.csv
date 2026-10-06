@@ -1,0 +1,7 @@
+source,source_id,name_raw,lon,lat,counted,exclusion_reason,entity_id
+overture,28ff977d-d6f9-497d-b371-f480d69a587b,Cryptozoology & Paranormal Museum,-77.91621173,36.43313988,TRUE,,73881cc2860e
+overture,6905d6a9-c355-4ce2-aac6-3105dd6273ef,Cryptozoology and Paranormal Museum,-77.91373047,36.42712988,FALSE,non_primary_site,73881cc2860e
+overture,8eeacbc0-92c8-40fd-a9a2-8380cb4fd8a7,International Cryptozoology Museum,-70.2906624,43.6518947,FALSE,non_primary_site,a0f978e53c34
+overture,501141c4-3d4c-49e6-b3b8-c7b4c0c89250,International Cryptozoology Museum,-70.26591434244422,43.65359747670012,FALSE,non_primary_site,a0f978e53c34
+overture,6d77967f-48ef-4e2c-a928-dd4d4d935614,International Cryptozoology Museum,-68.77496444,44.81822101,TRUE,,a0f978e53c34
+imls,8402300523,INTERNATIONAL CRYPTOZOOLOGY MUSEUM,-70.26613,43.65407,FALSE,non_primary_site,a0f978e53c34

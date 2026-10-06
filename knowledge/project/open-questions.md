@@ -4,7 +4,7 @@ title: "Open analysis, resolution and publication questions"
 description: "Unresolved methodological questions (matching, multi-site, categories, M2 semantics) and undecided publication details."
 tags: [museums, matching, publication, questions]
 sequence: 7
-generated: { by: claude-code/claude-opus-5-5, at: 2026-10-05T02:28:14Z }
+generated: { by: claude-code/claude-fable-5-1, at: 2026-10-06T03:45:00Z }
 sources:
   - id: handoff
     resource: 7416eef:HANDOFF.md
@@ -60,10 +60,9 @@ the institution, but do not describe it as open for visits during this transitio
 
 # Publication details still open
 
-- **Confirm against the reworked blog repo when it settles:** the real content column width
-  (the only default likely to be visibly wrong), whether `static/` is served at root as
-  usual, and the R version its `renv` library pins. All are one-line changes in
-  `R/config_blog.R`.
+- **Confirmed against the blog repository on 2026-10-05:** the content column is 700 px (the
+  720 px default is kept), `static/` is served at root as usual, and the blog has no `renv`
+  library. See [blog defaults](../architecture/blog-defaults.md).
 - **Where the published dataset (D7) lives** — GitHub release, Zenodo DOI, or alongside the
   blog. Affects nothing technically, but decide it together with the [licensing](../architecture/licensing.md) question.
 

@@ -1,2 +1,2 @@
-original_source_rows,counted_source_rows,provisional_institutions,eligible_l2,complete_factual_reviews,national_winner_certified
-60002,57083,52387,52255,174,FALSE
+source_rows,counted_source_rows,counted_institutions,eligible_institutions,chain_locations,non_chain_institutions,distinct_names,names_used_once,names_shared,complete_factual_reviews,exported_on
+60002,57083,52387,52255,181,52074,47807,44603,3204,174,2026-10-05

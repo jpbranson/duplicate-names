@@ -267,6 +267,46 @@ test_that("headline-sufficient evidence passes the gate without changing review 
   expect_error(run(review), "completed identity")
 })
 
+test_that("post 1 groups count members one by one and confirm only gate-passing collisions", {
+  a <- dn_museum_analysis(museum_fixture(c(rep("Old Jail Museum", 3), rep("Mermaid Museum", 2),
+                                           rep("Kid Museum", 3), "Lone Museum")))
+  a$review_status[1] <- "verified"
+  a$affiliation_status[c(1, 3)] <- c("independent", "chain")
+  row <- function(group, id, a = "yes", b = "yes") data.frame(group = group, source = "test",
+    source_id = as.character(id), place = paste("Town", id), state = "TN", operator = paste("Operator", id),
+    a_distinct_public_museum = a, b_plausibly_operating = b, c_no_shared_operator_in_group = "yes",
+    evidence_url = "https://example.org/evidence", checked_on = "2026-10-05", note = "")
+  review <- rbind(row("old jail museum", 2), row("mermaid museum", 4), row("mermaid museum", 5, "no", "no"),
+                  row("kid museum", 6), row("kid museum", 7), row("kid museum", 8, "no"))
+  before <- a
+  out <- dn_post1_groups(a, review, as.Date("2026-10-05"))
+  expect_identical(a, before)
+  expect_equal(out$groups$group, c("kid museum", "mermaid museum", "old jail museum"))
+  expect_equal(out$groups$records, c(3L, 2L, 2L))
+  expect_equal(out$groups$counting, c(2L, 1L, 2L))
+  expect_equal(out$groups$chain_locations, c(0L, 0L, 1L))
+  expect_equal(out$groups$gate_passed, c(FALSE, FALSE, TRUE))
+  expect_equal(out$groups$status, c("unresolved_record", "not_a_collision", "confirmed"))
+  jail <- out$members[out$members$group == "old jail museum", ]
+  expect_setequal(jail$basis, c("complete factual review", "headline-sufficient check"))
+  expect_equal(out$members$basis[out$members$source_id == "8"], "failed check")
+  expect_false(out$members$counts[out$members$source_id == "8"])
+  # The operator's own name must normalize to the group name, whatever the source calls it.
+  named <- cbind(review, public_name = c("The Old Jail Museum", "", NA, "Kid Museum", "Kid Gallery", ""))
+  out <- dn_post1_groups(a, named, as.Date("2026-10-05"))
+  expect_equal(out$members$basis[out$members$source_id == "7"], "public name differs")
+  expect_equal(out$groups$counting, c(1L, 1L, 2L))
+  expect_equal(out$groups$status, c("not_a_collision", "not_a_collision", "confirmed"))
+  # A reviewed name with an unreviewed member cannot be confirmed.
+  partial <- dn_post1_groups(a, review[review$source_id != "7", ], as.Date("2026-10-05"))
+  expect_equal(partial$members$basis[partial$members$source_id == "7"], "not reviewed")
+  expect_equal(partial$groups$status[partial$groups$group == "kid museum"], "not_a_collision")
+  # Evidence for a record that is not a counted non-chain member of that name is stale.
+  expect_error(dn_post1_groups(a, rbind(review, row("old jail museum", 3)), as.Date("2026-10-05")), "Stale")
+  expect_error(dn_post1_groups(a, rbind(review, row("old jail museum", 9)), as.Date("2026-10-05")), "Stale")
+  expect_error(dn_post1_groups(a, rbind(review, row("absent museum", 99)), as.Date("2026-10-05")), "Stale")
+})
+
 test_that("nearby review pairs use distances without assigning matching labels", {
   x <- museum_fixture(rep("Example Museum", 3))
   x$lon <- c(-90, -90.01, -100)

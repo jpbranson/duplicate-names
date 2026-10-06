@@ -1,9 +1,0 @@
-step,status,remaining_work,evidence
-M1 leaders,incomplete,Old Jail has four pending factual reviews; new six-count groups remain unreviewed. No national winner certified.,current_ranking.csv
-Old Jail evidence,human_review_needed,Hayesville current operator/name; Winchester governance; Thompson Falls governance/address; Greenwood campus scope.,museum_jail_followup_2026-09-26/human_review.csv
-M2 identities and meanings,incomplete,Twelve leading groups have semantic review; 28 related actions remain. Other scope-word groups are unreviewed.,museum_m2_leaders_2026-09-26/scope_word_review.csv
-Reviewed unresolved cases,incomplete,Use current pending decisions; older action lists may have been superseded.,current_review_followup.csv
-Visitor locations/access,incomplete,Three sourced points and dated access checks exist; these do not certify all selected institutions or reopen Mandeville.,museum_publication_2026-09-26/publication_points.csv
-Publication destination,configuration_needed,DUPNAMES_BLOG_DIR unset and ../blog absent; no destination supplied.,R/config_blog.R
-Church evaluation,human_labels_needed,Independent v2 has 300 matching and 500 style items awaiting labels; factual leader/ordinal checks remain.,church_phase1_2026-09-26/independent_review_v2
-Explorer CSV saving,unverified,Data/export checks pass; actual filesystem saving from browser remains unverified.,artifact_QA.md

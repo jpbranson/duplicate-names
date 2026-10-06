@@ -1,11 +1,11 @@
 ---
 title: "Who checks the museum names?"
-subtitle: "A search for duplicate names becomes a test of what counts as a museum."
+subtitle: "America's most duplicated museum name, and five collisions that looked too good to check."
 author: "J.P. Branson"
-date: 2026-09-26
+date: 2026-10-05
 slug: duplicate-museum-names
 categories: [data]
-tags: [names, museums, maps]
+tags: [names, museums]
 draft: true
 output:
   blogdown::html_page:
@@ -17,210 +17,248 @@ output:
 dn_root <- "."
 source("_setup.R", local = TRUE)
 knitr::opts_chunk$set(fig.path = "figures/")
+num <- function(x) format(x, big.mark = ",")
+word <- function(n) c("one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven", "twelve")[n]
+Word <- function(n) tools::toTitleCase(word(n))
+link <- function(text, url) sprintf("[%s](%s)", text, url)
+cp <- dn_payload("checkpoint.csv")
+top <- dn_payload("headline.csv")
+jail <- dn_payload("headline_members.csv")
+groups <- dn_payload("collision_groups.csv")
+records <- dn_payload("collision_members.csv")
+chains <- dn_payload("chains.csv")
+runner_up <- dn_payload("runner_up_names.csv")
+seed <- dn_payload("seed_records.csv")
+bangor <- seed[tolower(seed$name_raw) == "international cryptozoology museum", ]
+chain_n <- function(id) chains$n_locations[chains$chain_id == id]
+# The prose below names these results; stop the knit if a re-export changes them.
+stopifnot(
+  top$display_name == "Old Jail Museum", top$museums == nrow(jail), top$museums > top$runner_up_museums,
+  sum(grepl("Historical", jail$operator)) == top$museums - 1L, top$chain_locations == 3L,
+  identical(groups$status[match(c("100th meridian museum", "billy the kid museum"), groups$group)],
+            c("confirmed", "unresolved_record")),
+  sum(groups$status == "not_a_collision") == 3L, nrow(records) == 12L, sum(groups$counting) == 7L,
+  nrow(bangor) == 4L, sum(bangor$counted) == 1L,
+  abs(mean(grepl("historical society", runner_up$name_expanded)) - 0.5) < 0.1
+)
 ```
 
-> **Working draft — unpublished.** The national ranking and collision reviews are
-> unfinished. The numbers below describe documented changes to a provisional
-> dataset; they do not identify the most duplicated museum name in America.
+The International Cryptozoology Museum in Bangor, Maine, bills itself as
+["The World's Only Cryptozoology Museum"](https://cryptozoologymuseum.com/).
+Standing in front of it, the question that nags is not whether Bigfoot is real.
+It is: who checks?
 
-The International Cryptozoology Museum in Bangor, Maine, calls itself
-[“The World's Only Cryptozoology Museum”](https://cryptozoologymuseum.com/).
-That is a wonderfully testable-sounding claim. First, though, you need to decide
-what would count as another museum.
+Nobody does. There is no registrar of museum names. Anyone can open The Museum of
+Anything, call it National or International, and no office writes back to say the
+name is taken. So I checked. Not the world, just the United States, using two public
+lists of museums and a fair amount of tidying.
 
-Even this opening example leaves a trail. The museum's
-[current visitor page](https://cryptozoologymuseum.com/plan-your-visit/) gives 490
-Broadway in Bangor and says its former Portland and Hammond Street locations are
-closed. Its home page dates the Bangor opening to June 1, 2026. A directory that
-retains the old addresses can make one institution look like several.
+## The most duplicated museum name in America
 
-Our source data contain four records for this institution. After resolution, one
-current institution counts; the older records remain visible with exclusion reasons.
-That finding checks the identity of these records. It does not prove a worldwide
-uniqueness claim, especially in a project whose geographic scope is the United States.
+Start with the easy version of the question: which name do the most museums share?
 
-## A name is not an institution
+After merging records that describe the same place and setting chains aside, the
+lists give me `r num(cp$non_chain_institutions)` museums, or at least
+`r num(cp$non_chain_institutions)` things the lists call museums, under
+`r num(cp$distinct_names)` different names. Most are safe:
+`r num(cp$names_used_once)` of those names belong to exactly one museum. The rest
+get crowded quickly.
 
-The starting ingredients are Overture Maps' August 19, 2026 Places release and
-the IMLS 2018 museum archive. Their dates matter. The second source tells us about
-an earlier museum universe; a current retrieval date cannot make it a current census.
-
-The analysis preserves every original record and groups records into institutions.
-A separate, explicit review layer can correct a mistaken group, reconcile a move,
-or keep a contradictory record out of the count. The old record is not erased.
-A history society's museum, office and mailing address can appear under several
-names. Two buildings can house one institution. One society can also operate two
-separately named museums.
-
-At this checkpoint, the `r format(dn_payload("checkpoint.csv")$original_source_rows, big.mark=",")`
-source rows yield `r format(dn_payload("checkpoint.csv")$provisional_institutions, big.mark=",")`
-provisionally counted institutions, of which
-`r format(dn_payload("checkpoint.csv")$eligible_l2, big.mark=",")` are eligible for the
-name analysis. Only `r dn_payload("checkpoint.csv")$complete_factual_reviews`
-institution descriptions have complete factual reviews, including sourced exclusions.
-The remainder have pending or unstarted checks.
-
-The first apparent leaders made that distinction unavoidable. Three county-society
-names began this review batch at eleven institutions each. Supported corrections
-reduced each to six. The remaining records still need review.
-
-The next pass found the same problem in Wayne County: ten candidate institutions sharing the
-society name became one unresolved bare-name candidate after duplicate institutions,
-public museum names and shared operators were accounted for. The ten entries called
-*Depot Museum* now have sourced, more specific public names. This does not settle
-their entire factual review, and it does not establish a national winner.
-
-```{r review-counts, fig.width=6, fig.asp=1.2, fig.alt="Before and after candidate counts: Franklin, Greene and Jackson County Historical Society each 11 to 6; Old Jail Museum 11 to 8; Wayne County Historical Society 10 to 1; Depot Museum 10 to 0.", fig.cap="Provisional L2 non-chain candidate counts before and after the September 26 review batches. Remaining factual reviews prevent a national ranking claim."}
-dat <- dn_payload("review_count_changes.csv")
-dat$group <- factor(dat$group, levels = rev(unique(dat$group)))
-dat$checkpoint <- factor(dat$checkpoint, levels = c("Before review", "Current provisional"))
-ggplot(dat, aes(count, group, fill = checkpoint)) +
-  scale_y_discrete(labels = function(x) sub(" County Historical Society", paste(" County", "Historical Society", sep = intToUtf8(10)), x, fixed = TRUE)) +
-  geom_col(position = position_dodge(width = 0.75), width = 0.65) +
-  geom_text(aes(label = count), position = position_dodge(width = 0.75),
-            hjust = -0.25, size = 4.1, colour = dn_ink$primary) +
-  theme_dupnames(base_size = 14) + scale_fill_dn() + scale_x_continuous(limits = c(0, 12), breaks = c(0, 3, 6, 9, 12)) +
-  labs(x = "Candidate institutions", y = NULL,
-       title = "Review changes the apparent leaders",
-       subtitle = "These are unresolved candidate groups, not certified winners.",
-       caption = paste(dn_caption(c("overture", "imls")), "L2 names; affiliated museums separated.", sep = intToUtf8(10)))
+```{r name-ladder}
+ladder <- dn_payload("name_ladder.csv")
+ladder <- merge(data.frame(museums_sharing = seq_len(max(ladder$museums_sharing))), ladder, all.x = TRUE)
+ladder$names[is.na(ladder$names)] <- 0
+shared_by <- paste(ladder$museums_sharing, ifelse(ladder$museums_sharing == 1, "museum", "museums"))
+knitr::kable(data.frame(shared_by, num(ladder$names)), row.names = FALSE, align = "lr",
+             col.names = c("A name shared by", "How many names"))
 ```
 
-Old Jail Museum illustrates several different corrections. Smethport's operator
-uses [The County Museum in The Old Jail](https://www.mchsmuseum.org/) as its public
-name. That changes its exact-name group without changing the source record.
-Barnesville's [society](https://www.blchs.com/) distinguishes its jail museum from
-its research archive. Allegan's [operator](https://alleganoldjailmuseum.com/) runs
-both a jail museum and a historical village. These are three different reasons a
-simple name count can mislead.
+The one name at the top is **`r top$display_name`**.
 
-In Enterprise, Alabama, the [current operator](https://peariverhistorical.square.site/)
-calls its attraction **Pea River Museum** and distinguishes it from its gift shop
-and research library. In Corydon, Iowa, the
-[Prairie Trails Museum contact page](https://prairietrailsmuseum.wordpress.com/contactus/)
-connects a physical museum address with its post-office box. These corrections
-preserve the source labels as aliases while counting the reviewed institution once.
+`r Word(top$museums)` unrelated museums, each in a former jail, each run by a
+different local group: `r word(top$museums - 1)` by a historical society or
+council, one by a family.
 
-The following groups began later review passes with nine candidates each. The
-same combination of old addresses, broader society records, specific public names
-and common operators changed these counts too. Every number remains provisional.
-
-```{r recent-review-counts, results='asis'}
-recent <- dn_payload("recent_review_counts.csv")
-names(recent) <- c("Source name group", "Before review", "Current candidates")
-knitr::kable(recent, row.names = FALSE, align = c("l", "r", "r"))
+```{r old-jail}
+jail$operator <- sub(" \\(.*\\)$", "", jail$operator)
+jail$operator[grepl("^Family-owned", jail$operator)] <- "The McBride family"
+knitr::kable(data.frame(paste0(jail$place, ", ", jail$state), link(jail$operator, jail$evidence_url)),
+             row.names = FALSE, col.names = c("Old Jail Museum in", "Run by"))
 ```
 
-One particularly revealing case is Carroll County. The Missouri society's legal
-record had a transposed street number; an exact EIN match in the IRS file connected
-it to the museum's current address. In Georgia, one automatic cluster instead
-contained two distinct organizations: a historical society and a genealogical
-society. The latter's own [description](https://ccgsga.org/about/) and
-[library resources](https://ccgsga.org/resources/) establish a research and
-publishing role. The correction separates them before excluding that organization
-from the museum count. The historical society's current museum review remains open.
+It is a very reasonable name. The county builds a new jail. The old one is too
+sturdy to knock down and too grim for offices, so the historical society moves in
+and the sign more or less writes itself. Nobody in Thompson Falls, Montana, had to
+ask Hayesville, North Carolina, for permission.
 
-Clinton County exposed a different source problem. Several archived records mix
-the physical address of a museum in one state with the mailing address, website or
-legal identifier of a society in another. For example, the Pennsylvania operator
-places [Heisey House Museum at 362 East Water Street](https://www.clintonpahistory.org/),
-while the Michigan operator places its
-[museum at 106 Maple](https://sites.google.com/cchsmichigan.org/welcome).
-Those street addresses also appear in contradictory IMLS records assigned to other
-states. The review keeps each mixed record visible and uncounted, with its own
-identifier, so it cannot contribute disputed aliases to an accepted museum.
+Second place is a `r top$runner_up_names`-way tie at `r word(top$runner_up_museums)`.
+About half are historical societies named for a popular county or town (Franklin
+County, Greene County, Jackson County); most of the rest are plain descriptions
+such as Pioneer Museum, Telephone Museum and Dinosaur Museum. I did not vet all
+`r top$runner_up_names`. I did check that none of them can catch up through spelling
+variants, and a few are probably one organization with several branches, which would
+only push them down.
 
-## Repeated names, repeated operators
+The lead grows if you loosen the rule. I counted exact names, so the Monticello Old
+Jail Museum and the Old Jail Museum Complex are different names. Count anything with
+"old jail" in it and the lists have `r top$related_museums`.
 
-For the principal question, affiliated museums are reported separately from
-independently named institutions. Unknown affiliation stays unknown.
+`r Word(top$chain_locations)` more Old Jail Museums are missing from the
+`r word(top$museums)` on purpose. Each belongs to an operator that runs other
+museums too (in St. Augustine, Florida; Allegan, Michigan; and Sandersville,
+Georgia), and I count shared operators and chains separately. That rule matters more
+elsewhere: the names that repeat most in the raw lists are brands, led by Play
+Street Museum (`r chain_n("play_street")` locations), Museum of Illusions
+(`r chain_n("museum_of_illusions_global")`) and Ripley's (`r chain_n("ripleys")`).
+A brand repeating is a business plan, not a coincidence.
 
-The distinction includes local operators. An organization can have its own
-independent nonprofit board and still operate several museums that share that
-board. It also includes brands: two records labelled Madame Tussaud's Wax Museum
-in Las Vegas turned out to describe one attraction at the
-[operator's published address](https://lasvegas-support.madametussauds.com/hc/en-us/articles/115002250572-What-is-your-address).
-Its current public name is Madame Tussauds Las Vegas.
+## Five collisions that looked too good to check
 
-The Smithsonian example contains a different trap. Its own
-[visitor directory](https://www.si.edu/visit/museums) distinguishes its museums from
-the separate Affiliates program. Some generic Smithsonian Institution records refer
-to museums under that parent; two others match office and research locations that
-the [Archives of American Art](https://www.aaa.si.edu/sites/default/files/Documents/2023-Annual-Report.pdf)
-distinguishes from its exhibition gallery. Counting parent labels would confuse
-organizational structure with independent naming.
+Old jails are a category. The better collisions are names specific enough that you
+would bet there is only one. I went looking for those: names with no town, county or
+generic word in them, shared by museums a long way apart. I picked
+`r word(nrow(groups))`, then checked every record behind them against the best
+public source I could find, usually the museum's own website or an official tourism
+listing. Is it a real museum the public can visit? Does it appear to be operating?
+Is it unrelated to its namesake?
 
-## International what?
+```{r collisions, fig.asp=0.62, fig.alt="Grouped bar chart of five museum names, comparing records in the data with museums that passed the check. Billy the Kid Museum: 3 records, 2 museums. 100th Meridian Museum: 2 and 2. Santa Claus Museum: 2 and 1. The Mermaid Museum: 2 and 1. Salt and Pepper Shaker Museum: 3 and 1.", fig.cap="Twelve records, seven museums, two real collisions. Checked October 5, 2026."}
+dat <- groups[order(groups$counting, groups$records), ]
+dat$display_name <- sub("^Mermaid", "The Mermaid", dat$display_name)
+dat$display_name <- factor(dat$display_name, levels = dat$display_name)
+series <- c("Records in the data", "Museums that passed the check")
+long <- rbind(data.frame(name = dat$display_name, series = series[1], n = dat$records),
+              data.frame(name = dat$display_name, series = series[2], n = dat$counting))
+long$series <- factor(long$series, levels = series)
+dodge <- position_dodge2(width = 0.7, reverse = TRUE, padding = 0.12)
+ggplot(long, aes(n, name, fill = series)) +
+  geom_col(position = dodge, width = 0.7) +
+  geom_text(aes(label = n), position = position_dodge2(width = 0.7, reverse = TRUE),
+            hjust = -0.7, size = 4.1, colour = dn_ink$primary) +
+  scale_fill_dn() +
+  scale_x_continuous(limits = c(0, max(long$n) + 0.4), breaks = 0:max(long$n), expand = c(0, 0)) +
+  theme_dupnames(base_size = 14) +
+  theme(panel.grid.major.y = element_blank(),
+        panel.grid.major.x = element_line(colour = dn_ink$grid, linewidth = 0.3),
+        axis.line.x = element_blank(), axis.text.y = element_text(colour = dn_ink$primary)) +
+  labs(x = NULL, y = NULL, title = "What the lists said, and what survived",
+       subtitle = "Two museums left on a bar means the collision is real.",
+       caption = dn_caption(c("overture", "imls"), "Checks by the author against public sources."))
+```
 
-A search for *National*, *International*, *World* or *American* produces candidates
-for a second question: do names suggesting broad scope collide?
+**100th Meridian Museum: real.** One is in
+[Cozad, Nebraska](https://visitnebraska.com/cozad/100th-meridian-museum), run by the
+Cozad Historical Society. The other is in
+[Erick, Oklahoma](https://www.travelok.com/listings/view.profile/id.37151), about 390
+miles south, run by its own nonprofit. Cozad has the older claim to the line.
+[Union Pacific](https://www.up.com/aboutup/train_town/cozad_ne/index.htm) says its
+railroad reached the 100th meridian there in 1866, and that the town's namesake,
+John J. Cozad, spotted the 100th Meridian sign from a train in 1872. Erick is, in
+the
+[Oklahoma Historical Society](https://www.okhistory.org/publications/enc/entry.php?entry=ER001)'s
+words, "six miles from the Oklahoma-Texas border", and that stretch of border is
+drawn along the meridian.
 
-A word search cannot answer that on its own. *African American* identifies a cultural
-subject. *American Civil War* identifies a historical subject. *Old World* is an
-idiom. A museum of international folk art can describe the range of its collection.
-Even a genuinely institutional scope word does not automatically promise exclusivity.
-The draft therefore makes no numerical claim about independent collisions among
-singularity-claiming names. Those identities, affiliations and meanings still need
-review together.
+**Billy the Kid Museum: real, with a ghost.** The
+[Fort Sumner, New Mexico](https://www.billythekidmuseumfortsumner.com/), museum has
+been run by the Sweet family since 1953. The
+[Hico, Texas](https://www.billythekidmuseumhico.com/), museum is a separate
+nonprofit. They share a name and disagree about the ending. Fort Sumner's
+[state tourism listing](https://www.newmexico.org/places-to-visit/regions/southeast/billy-the-kid-museum-in-fort-sumner/)
+says "we firmly believe that he was in fact shot and Killed by Pat Garrett on July 14
+1881". Hico's museum says the history books got it wrong and the Kid "actually
+survived his famous gun fight and hid in Hico, Texas the last seventeen years of his
+life". The lists also had a third Billy the Kid Museum, in Clovis, New Mexico. Its
+coordinates match an address that belongs to a
+[tire shop](https://local.yahoo.com/tires/nm/clovis/). The same phantom sits on a
+[road-trip site](https://maps.roadtrippers.com/us/clovis-nm/attractions/billy-the-kid-museum-clovis-nm)
+with Hico's web address and a one-star review: "The museum is awesome but is NOT in
+Clovis."
 
-The first twelve leading scope-word groups illustrate the problem. The
-[Seneca-Iroquois National Museum](https://senecamuseum.org/about/) is operated by
-the Seneca Nation; interpreting its name as a claim to represent the entire United
-States would misread it. A [county account of its 2018 move](https://historicpath.com/current-event/new-seneca-iroquois-national-museum-and-cultural-center-opens-salamanca-708)
-also explains why old and current street addresses appeared as separate records.
+**Santa Claus Museum: a near miss.** The one in
+[Columbus, Texas](https://santamuseum.org/about/), holds
+[more than 5,000 Santas](https://www.columbushpt.com/index.php/historical-properties/santa-claus-museum/)
+and says there are "only two museums dedicated to Santa Claus in the entire United
+States". The other is in Santa Claus, Indiana, and it calls itself the
+[Santa Claus Museum & Village](https://santaclausmuseum.org/). A 2018 federal list
+has it as plain Santa Claus Museum and a newer map has the longer name, so my data
+counted one museum twice and then matched its old name to Texas. Two museums, two
+names, three records.
 
-Other apparent collisions are support facilities. A Smithsonian
-[conservation contract](https://nmaahc.si.edu/sites/default/files/downloads/nmaahc_digitalarchivesspecialist_package.pdf)
-distinguishes the African American history museum on Constitution Avenue from
-its conservation labs on Maryland Avenue. The
-[Old World Foundation](https://oldworldfoundation.org/about-owf.html) describes its
-fundraising role for the Wisconsin museum. Neither a laboratory nor a fundraising
-office supplies evidence of another public museum with the same name.
+**The Mermaid Museum: one museum and one marketing campaign.**
+[Berlin, Maryland](https://www.berlinmermaidmuseum.com/), has a real one. The record
+in Hollywood sits about a block from a studio that hosted the
+[POPSUGAR x Freeform Mermaid Museum](https://www.timeout.com/los-angeles/things-to-do/popsugar-x-freeform-mermaid-museum),
+a promotional pop-up that ran for four days in March 2018. I found no mermaid museum
+there now. My best guess is that the pop-up never left the map. (Washington state
+has an International Mermaid Museum.
+[It opened two days after Berlin's](https://hyperallergic.com/the-curious-emergence-of-two-mermaid-museums-in-the-us),
+and both founders were surprised.)
 
-These corrections leave specific open questions. They do not turn a word search
-into a validated count of institutions making competing scope claims.
+**Salt and Pepper Shaker Museum: one museum, twice, and a gallery.** The
+[Gatlinburg, Tennessee](https://thesaltandpeppershakermuseum.com/), museum calls
+itself "The World's only Salt and Pepper Shaker Museum", with a footnote: "Well, we
+do have a Sister Museum in Spain". The second record is the same museum from the
+2018 list, with coordinates in San Francisco. The third is in
+[Traer, Iowa](https://www.traer.com/museums). It is real, the city owns it, and it
+has "more than 15,000 sets of shakers". It is also called the Salt & Pepper Shaker
+Gallery. Gatlinburg's claim survives by one word.
 
-For the generic tail, the analysis distinguishes exact names from subjects and
-naming templates. Children's museums and county-history museums can resemble one
-another linguistically without sharing an operator. A subject extracted from a name
-is a clue, not a complete description of a collection.
+So: `r word(nrow(records))` records, `r word(sum(groups$counting))` museums, and
+`r word(sum(groups$counting >= 2))` real collisions out of `r word(nrow(groups))`.
+Names nobody coordinates collide by accident. Lists nobody curates invent collisions
+that are not there. In this batch, the second kind was more common.
 
-## The method behind a future ranking
+## Back to Bangor
 
-Museum headlines use **L2**: cleaned names with abbreviations expanded, while
-retaining geography. **L3** removes geographic wording and answers a different
-question. Each reviewed institution gets one canonical name and one vote. Original
-names, aliases, source points, decisions and excluded records remain auditable.
-A preferred-name correction changes the analysis name, not the original source text.
+The International Cryptozoology Museum appears `r word(nrow(bangor))` times in my
+data: once at its current address and `r word(sum(!bangor$counted))` times in
+Portland, Maine, which it has left. One museum, and no other museum in these lists
+shares its name.
 
-An independent human sample of 300 nearby candidate pairs supported keeping the
-matching threshold at 0.85. Its unweighted pair-level precision was 99.17% and recall
-93.70%. The sample was balanced across five similarity bands; these are not estimates
-of dataset-wide accuracy and do not validate all final clusters or distant moves.
-The [validation report](evidence/matching-validation.html) explains the design.
+Whether it is the world's only is a different claim, and nobody checks that one
+either. The same lists have a Cryptozoology & Paranormal Museum in Littleton, North
+Carolina, which WALTER magazine
+[profiled in 2023](https://waltermagazine.com/explore/its-cryptic-the-bigfoot-museum-in-littleton/)
+as the Bigfoot museum. I am not refereeing.
 
-Visitor maps require another check. Publication coordinates are kept in separate
-fields, with operator evidence and dated access wording. A corrected point does not
-certify that a building is open. UC San Diego's
-[Mandeville visit page](https://mandevilleartgallery.ucsd.edu/visit/index.html), for
-example, still lists an indefinite closure when checked on September 26.
+Next: churches, which noticed this problem a few centuries ago and solved it by
+counting. First Baptist, Second Baptist, Third.
 
-The remaining work is substantive: finish the leading-name and relevant multi-site
-reviews, settle uncertain museum roles and affiliations, validate M2 meanings, and
-then rerun the explicit publication gates. Until that happens, the interesting
-result is how easily a directory can manufacture a collision.
+## How this was counted
 
-The next post turns to churches: the repeated *First*, the spacing between them,
-and how far the ordinal ladder goes. It will need its own source checks and
-independent matching labels; the museum sample cannot validate it.
+- **Sources.** [Overture Maps](https://overturemaps.org/) places, release 2026-08-19,
+  and the Institute of Museum and Library Services'
+  [2018 Museum Universe Data File](https://www.imls.gov/research-evaluation/data/museum-data-files).
+  The 2018 file shows that a museum existed then, not that it exists now. This is a
+  view of two lists, not a census: `r num(cp$source_rows)` records became
+  `r num(cp$counted_institutions)` counted institutions.
+- **Same name.** Names are compared after light tidying: case, punctuation, a leading
+  "The", "&" for "and", and common abbreviations. Place names stay, because for a
+  museum the place is usually the identity.
+- **One museum, one vote.** Records for the same institution are merged first. A
+  test of the merging step on 300 hand-labelled pairs is
+  [written up here](https://github.com/jpbranson/duplicate-names/blob/main/data/validation/resolution_validation_2026-09-15.md);
+  it measures those pairs, not the whole dataset.
+- **Chains apart.** Museums with a known shared operator or brand
+  (`r num(cp$chain_locations)` locations so far) are counted separately. For
+  everything else, shared ownership is unknown rather than ruled out.
+- **What I checked by hand.** Every record behind the names in this post: the
+  `r word(top$museums)` Old Jail Museums and the `r word(nrow(records))` records in
+  the `r word(nrow(groups))` collisions, between September 15 and October 5, 2026.
+  The links in the tables and files are the evidence. Some of the
+  `r word(top$museums)` carry a longer formal title as well: Tennessee's tourism
+  office lists Winchester's as the Franklin County Old Jail Museum. Only
+  `r cp$complete_factual_reviews` institutions in the whole dataset have had a full
+  review, so every other number here is provisional, and I have not yet corrected
+  the stray records above in the data.
 
-[Download the review-count figure data](payload/review_count_changes.csv).
-[Read the current publication blockers](payload/publication_blockers.csv).
-[Download the twelve-group scope-word review](payload/scope_word_review.csv).
-The bundle is self-contained: knitting reads its CSV payloads and local helpers,
-with no analysis checkout, database query or source download.
-
-
-
-
-
+The numbers behind this post:
+[name counts](payload/name_ladder.csv),
+[the `r word(top$museums)` Old Jail Museums](payload/headline_members.csv),
+[the `r top$runner_up_names`-way tie](payload/runner_up_names.csv),
+[every "old jail" name](payload/headline_related_names.csv),
+[the `r word(nrow(groups))` collisions](payload/collision_groups.csv) with
+[each record and its evidence](payload/collision_members.csv), and
+[chains](payload/chains.csv). The pipeline is on
+[GitHub](https://github.com/jpbranson/duplicate-names).

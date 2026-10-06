@@ -1,16 +1,16 @@
 ---
 type: Status Report
 title: Current project status
-description: "Where the project stands at the last recorded checkpoint (2026-09-26): post 1 ships first, museum counts at the M2 checkpoint, church work and the explorer frozen, nothing published."
+description: "Where the project stands at the last recorded checkpoint (2026-10-05): post 1 is rewritten, verified to decision 14 and staged as a draft awaiting the user's go-ahead to publish; museum counts unchanged; church work and the explorer frozen."
 tags: [status, museums, churches, post-1]
 sequence: 1
-checkpoint: 2026-09-26
+checkpoint: 2026-10-05
 stale_after: 2026-11-05T00:00:00Z
-generated: { by: claude-code/claude-opus-5-5, at: 2026-10-05T02:28:14Z }
+generated: { by: claude-code/claude-fable-5-1, at: 2026-10-06T03:45:00Z }
 sources:
   - id: flight-log
     resource: flight-log.md
-    title: Flight log, entries through "Gate change committed; surprising-collision shortlist"
+    title: Flight log, entries through "Post 1 collisions verified; draft rewritten and staged"
   - id: m2-report
     resource: ../../data/validation/museum_m2_leaders_2026-09-26.md
     title: Leading M2 groups checkpoint report
@@ -34,13 +34,15 @@ Refresh this report at the next checkpoint, and no later than its `stale_after` 
 synthesizes the sources below; the [mission board](mission.md) and [flight log](flight-log.md)
 hold the step-by-step record.
 
-- **Scope: post 1 ships first.** Under [decision 14](../decisions/14-post-1-headline-sufficient-review.md),
+- **Scope: post 1 ships first, and the scope held.** Under [decision 14](../decisions/14-post-1-headline-sufficient-review.md),
   approved on 2026-09-26, post 1 answers two questions: which museum name is number one, and
-  whether there are surprising collisions. Its publication target is the blogdown site.
-  Church work, including the 23-decision scope proposal, and the explorer are frozen until
-  post 1 publishes.[^flight-log]
-- **Nothing is published.** Both post bundles and the explorer are local, unpublished
-  drafts.[^handoff]
+  whether there are surprising collisions. A check on 2026-10-05 found no dated packet after
+  2026-09-26, the church scope proposal unapplied, and no change to church or explorer code
+  since the rescope commit.[^flight-log]
+- **Post 1 is ready for the user's review, not published.** The draft is rewritten to the
+  brief and staged with `draft: true` in the blog repository. Publishing needs the user's
+  explicit go-ahead.[^flight-log]
+- **Nothing is published.** Both post bundles and the explorer remain unpublished.[^flight-log]
 - **Cloud spending:** USD 0 against a budget of strictly less than USD 5.[^flight-log]
 
 # Post 1 (museums)
@@ -48,20 +50,34 @@ hold the step-by-step record.
 - **M1 headline.** All eight non-chain Old Jail Museum members meet the decision 14
   standard, with per-member evidence in
   [`post1_headline_review.csv`](../inputs/post1-headline-review.md). V = 8, above every
-  other group (none at 7, 38 at 6). The upward-risk check on the 38 six-member groups found
-  that every L4 variant carries a place name, so none joins its L2 group.[^flight-log] The
-  flight log records this as the M1 stopping rule applied: Old Jail Museum is the headline. Details are in
-  [post 1](../publications/post-1-museums.md).
-- **Publication gate.** `dn_assert_museum_publication_ready()` now accepts a
-  `headline_review` table. Old Jail passes with `post1_headline_review.csv` (4 verified + 4
-  decision-14 members); committed as `5b50ab3` with 366 tests passing.[^flight-log] The gate
-  checks recorded statuses, not evidence: see the [publication gate](../methodology/publication-gate.md).
-- **Surprising collisions.** Five candidate groups are shortlisted but not yet verified to
-  decision 14: Billy the Kid Museum, 100th Meridian Museum, Santa Claus Museum, The Mermaid
-  Museum, and Salt and Pepper Shaker Museum.[^flight-log]
-- **Remaining for post 1:** verify at most five surprising-collision groups, rewrite the
-  draft to the original brief, then publish on the blogdown site. No further leader
-  batches.[^flight-log]
+  other group (none at 7, 38 at 6). The eight evidence pages were re-read on 2026-10-05 and
+  are live.[^flight-log] Three more locations share the name but belong to multi-museum
+  operators and are reported beside the headline.[^post1-review]
+- **Surprising collisions (five groups, twelve records, checked 2026-10-05).**[^post1-review]
+
+  | Group | Records | Count | Result |
+  |---|---:|---:|---|
+  | 100th Meridian Museum | 2 | 2 | Confirmed: Cozad NE and Erick OK; passes the gate |
+  | Billy the Kid Museum | 3 | 2 | Fort Sumner NM and Hico TX count; the Clovis NM record matches no museum, so the gate fails for the name |
+  | Santa Claus Museum | 2 | 1 | Columbus TX counts; the Indiana row duplicates the separately counted Santa Claus Museum and Village |
+  | Mermaid Museum | 2 | 1 | Berlin MD counts; the Los Angeles record sits beside the venue of a four-day 2018 pop-up |
+  | Salt and Pepper Shaker Museum | 3 | 1 | Gatlinburg TN counts; one row duplicates it; Traer IA calls itself a Gallery |
+
+- **Publication gate.** `dn_assert_museum_publication_ready()` passes for Old Jail Museum and
+  100th Meridian Museum with `post1_headline_review.csv`. `dn_post1_groups()` reports each
+  member and marks a group confirmed only when the gate passes and every member counts. The
+  gate checks recorded statuses, not evidence: see the
+  [publication gate](../methodology/publication-gate.md).[^flight-log]
+- **Draft.** [Post 1](../publications/post-1-museums.md) is rewritten to the original brief
+  with a payload exported by `scripts/export_post1_payload.R`. It knits in isolation and
+  builds as a draft in the blog's theme.[^flight-log]
+- **Remaining for post 1:** the user reads the draft and approves publication; then set
+  `draft: false`, commit and push the blog repository. See
+  [publishing a post](../playbooks/publish-post.md).[^flight-log]
+- **Deferred until after post 1.** Five records failed the check and are still counted in
+  the data: the Clovis, Los Angeles, Indiana (IMLS) and San Francisco-coordinate rows, and
+  Traer's public name. Each needs a sourced decision through the correction layer and a
+  dated packet; none was applied, so no count changed.[^flight-log]
 
 # Museum counts (M2 checkpoint, latest)
 
@@ -79,7 +95,8 @@ hold the step-by-step record.
 
 Source: the [M2 leading-groups checkpoint](../evidence/museums/museum_m2_leaders_2026-09-26.md).[^m2-report]
 Counts remain provisional; unknown affiliation is not independence.[^validation-index] The
-[count history](count-history.md) shows how earlier checkpoints reached these numbers.
+[count history](count-history.md) shows how earlier checkpoints reached these numbers. The
+2026-10-05 work changed no decision, status, count or target.[^flight-log]
 
 # Churches (frozen until post 1 publishes)
 
@@ -92,14 +109,17 @@ Counts remain provisional; unknown affiliation is not independence.[^validation-
   (23 guarded decisions; dry run passed; eligible would become 442,818) awaits user approval
   and is frozen. Live inputs and counts are unchanged.[^handoff]
 
-# Explorer and drafts (frozen)
+# Explorer and church draft (frozen)
 
-The [explorer](../publications/explorer.md) and both drafts were refreshed locally at the M2
-and church checkpoints. Browser CSV saving remains unverified and no deployment destination
-is configured.[^handoff]
+The [explorer](../publications/explorer.md) and the church draft were refreshed locally at the
+M2 and church checkpoints. Browser CSV saving remains unverified and the explorer has no
+deployment destination.[^handoff]
 
 # Operational notes
 
+- The blog is the `goodsite` repository beside this one (`jpbranson/goodsite`, branch
+  `master`, served by Netlify at `jpbranson.rbind.io`). `DUPNAMES_BLOG_DIR` is not set in
+  any `.Renviron`; pass it when staging. See [blog defaults](../architecture/blog-defaults.md).[^flight-log]
 - `tar_outdated()` lists museum source targets, including `raw_overture_museums`, as
   outdated. Use the selective `tar_make(names = ...)` commands in the
   [README](../../README.md#running), not a full build.[^flight-log]
@@ -108,10 +128,13 @@ is configured.[^handoff]
 - Use `C:\Program Files\R\R-4.4.2\bin\Rscript.exe`; the `Rscript` on `PATH` is 4.3.2
   without the renv library. An earlier 4.3.2 attempt left an untracked `renv/library/R-4.3`
   for the user to remove.[^flight-log]
+- Neither Pandoc nor Hugo is on `PATH`. Knit with the portable Pandoc 3.11 under
+  `data/processed/tools/pandoc/` (set `RSTUDIO_PANDOC`).[^flight-log]
 - One-time packet scripts (`prepare`, `apply`, `propose`) are frozen; never rerun them.
 
-[^flight-log]: Flight log, entries through "Gate change committed; surprising-collision shortlist"
+[^flight-log]: Flight log, entries through "Post 1 collisions verified; draft rewritten and staged"
 [^m2-report]: Leading M2 groups checkpoint report
 [^church-report]: Church ordinal/scope checkpoint report
 [^handoff]: HANDOFF.md header paragraphs, as of commit 7416eef
 [^validation-index]: data/validation/README.md current-checkpoint and church sections, as of commit 7416eef
+[^post1-review]: Post 1 headline review (decision 14 evidence)

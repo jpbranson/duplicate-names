@@ -4,11 +4,14 @@ title: "Blog defaults (adjustable)"
 description: "Chosen defaults for the blog integration (paths, format, widths, devices, slugs) and the load-bearing palette rules."
 tags: [architecture, publication]
 sequence: 7
-generated: { by: claude-code/claude-opus-5-5, at: 2026-10-05T02:28:14Z }
+generated: { by: claude-code/claude-fable-5-1, at: 2026-10-06T03:45:00Z }
 sources:
   - id: design
     resource: 7416eef:DESIGN.md
     title: "DESIGN.md §7.3, as of commit 7416eef (moved here verbatim)"
+  - id: flight-log
+    resource: ../project/flight-log.md
+    title: Flight log, 2026-10-06 post 1 entry
 ---
 
 The blog repo is being reworked, so these are chosen defaults rather than measured facts.
@@ -46,3 +49,22 @@ did not have `node` available.
 
 Supporting files now in place: `R/config_blog.R`, `R/theme_dupnames.R`, `R/embed.R`,
 `posts/_setup.R` (shared knitr defaults), `posts/_template/index.Rmd` (post skeleton).
+
+# Settled against the blog repository (2026-10-05)
+
+- **Blog repository.** `goodsite`, beside this checkout (`jpbranson/goodsite`, branch
+  `master`). `jpbranson.rbind.io` is served by Netlify, reported generator Hugo 0.164.0 and
+  reflected the repository's latest commit. `DUPNAMES_BLOG_DIR` is not set in any
+  `.Renviron`, so pass it when staging.[^flight-log]
+- **Content width.** The `hugo-lithium` theme sets `.content { max-width: 700px }`. The
+  720 px default is kept; figures scale to the column.[^flight-log]
+- **Post path and URL.** `content/post/<slug>/`, published at `/<year>/<slug>/` by the
+  blog's `permalinks` setting. `static/` follows the standard Hugo layout. Payload files
+  publish as page resources.[^flight-log]
+- **Evidence links.** Link evidence in this repository on GitHub. Under Hugo's page-bundle
+  rules, other `.html` and `.md` files inside a leaf bundle are content, not downloads;
+  this build did not test that.
+- **The blog has no renv.** `scripts/stage_post.R` knits with this project's library and
+  needs `RSTUDIO_PANDOC`, because neither Pandoc nor Hugo is on `PATH`.[^flight-log]
+
+[^flight-log]: Flight log, 2026-10-06 post 1 entry

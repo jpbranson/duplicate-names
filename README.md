@@ -121,6 +121,8 @@ publication check and staged publication points) is in
 | `data/processed/` | Baseline/reviewed Parquet, review sheets, identity audit and labelling sheet; gitignored |
 | [`data/validation/`](data/validation/README.md) | Human labels, sourced decisions, evidence packets and dated reports; described by [inputs](knowledge/inputs/index.md) and [evidence](knowledge/evidence/index.md) |
 | `scripts/archive_museum_review.R` | General review-packet archive helper; identity artifacts need separate preservation |
+| `scripts/export_post1_payload.R` | Post 1 payload export from saved targets; stops unless the headline passes the publication gate |
+| `scripts/stage_post.R` | Copies a post bundle into the blog repository and knits it there; never publishes |
 | `tests/testthat/data/raw/` | Immutable IMLS ZIP fixture and provenance; adapter caches are ignored |
 
 ## Two things worth knowing before changing anything
@@ -139,13 +141,13 @@ source rows; `museum_analysis` is the one-row-per-entity analysis table.
 
 ## Blog
 
-Posts will be drafted here and handed to a separate R blogdown repo as a payload:
-`index.Rmd` plus the small aggregated files it reads. The blog repo never needs
-`duckdb`, `sf`, or `arrow` to build. Set `DUPNAMES_BLOG_DIR` to point at it; all
+Posts are drafted here and handed to a separate R blogdown repository as a page bundle:
+`index.Rmd`, its bundled helpers and the small aggregated files it reads. The blog never
+needs `duckdb`, `sf`, or `arrow` to build. Set `DUPNAMES_BLOG_DIR` to point at it; all
 other blog settings live in `R/config_blog.R` (see [blog defaults](knowledge/architecture/blog-defaults.md)).
-The current template still sources shared helpers from this analysis checkout;
-packaging those helpers with the post and verifying an independent knit remain
-part of Phase 2.
+`scripts/export_post1_payload.R` writes post 1's payload from saved targets, and
+`scripts/stage_post.R` copies a bundle into the blog and knits it there. Publishing is a
+separate, deliberate step: see [publishing a post](knowledge/playbooks/publish-post.md).
 
 ## Data licensing
 

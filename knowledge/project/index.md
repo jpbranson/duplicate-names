@@ -1,6 +1,6 @@
 # Status Reports
 
-* [Current project status](status.md) - Where the project stands at the last recorded checkpoint (2026-09-26): post 1 ships first, museum counts at the M2 checkpoint, church work and the explorer frozen, nothing published.
+* [Current project status](status.md) - Where the project stands at the last recorded checkpoint (2026-10-05): post 1 is rewritten, verified to decision 14 and staged as a draft awaiting the user's go-ahead to publish; museum counts unchanged; church work and the explorer frozen.
 
 # Status Reports (superseded)
 
@@ -8,7 +8,7 @@
 
 # Missions
 
-* [Mission, constraints and status board](mission.md) - The 2026-09-25 authorized mission: order of work, the USD 5 cloud budget, the step status board and how to resume.
+* [Mission, constraints and status board](mission.md) - The 2026-09-25 authorized mission: order of work, the USD 5 cloud budget, the step status board (rescoped by decision 14) and how to resume.
 
 # Work Logs
 
@@ -22,7 +22,7 @@
 # Plans
 
 * [Deliverables](deliverables.md) - The seven planned deliverables (D1-D7): four blog posts, the leads register, the explorer and the reproducible pipeline and dataset.
-* [Phases](phases.md) - Phase plan and exit criteria, from the Phase 0 scaffold to posts 3 and 4, with each phase's state at the 2026-09-26 checkpoint.
+* [Phases](phases.md) - Phase plan and exit criteria, from the Phase 0 scaffold to posts 3 and 4, with each phase's state at the 2026-10-05 checkpoint.
 
 # Plans (superseded)
 

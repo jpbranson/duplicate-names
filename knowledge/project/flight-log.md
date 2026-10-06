@@ -4,11 +4,11 @@ title: "Flight log (mission checkpoints)"
 description: "Timestamped checkpoint entries for the 2026-09-25 mission, oldest first; append new entries at the end."
 tags: [mission, history]
 sequence: 3
-generated: { by: claude-code/claude-opus-5-5, at: 2026-10-05T02:28:14Z }
+generated: { by: claude-code/claude-fable-5-1, at: 2026-10-06T03:45:00Z }
 sources:
   - id: flight-log
     resource: 7416eef:FLIGHT_LOG.md
-    title: "FLIGHT_LOG.md checkpoint entries, as of commit 7416eef (moved here verbatim)"
+    title: "FLIGHT_LOG.md checkpoint entries, as of commit 7416eef (moved here verbatim); later entries were written here"
 ---
 
 # 2026-09-26 16:04 UTC — Jefferson/Lincoln snapshot prepared
@@ -293,3 +293,17 @@ sources:
 - Dropped: Doc Holliday Museum (Griffin reported closed), National Medal of Honor Museum (Chattanooga record carries a former name), International Police Museum and Gone With the Wind Museum (public names differ), Eight Track Museum (Dallas closed; Roxbury shares its founder).
 - Not in M1 scope but relevant to the M4 chain table: unflagged brands and touring shows (Karpeles, Jurassic Quest, Candytopia, Sloomoo Institute, WNDR Museum, Medieval Torture Museum, Challenger Learning Center, FamilySearch Center). All are at 6 or fewer, so M1 is unaffected.
 - `tar_outdated()` lists museum source targets as outdated, including `raw_overture_museums`; use the selective `tar_make(names = ...)` commands, not a full build.
+
+# 2026-10-06 03:45 UTC - Post 1 collisions verified; draft rewritten and staged
+
+- Scope check before starting: no dated packet after 2026-09-26; `church_scope_decisions.csv` still holds its two decisions (the 23-decision proposal is unapplied); no commit after 5b50ab3 touches `dashboard/`, church code or `_targets_churches.R`. Baseline: 377 assertions pass, zero failures.
+- Surprising collisions checked to decision 14 on 2026-10-05: five groups, twelve records, one row each in `data/validation/post1_headline_review.csv`. Five background research agents gathered sources; every page cited in the file or the post was then re-read directly before recording.
+- Results. 100th Meridian Museum: Cozad NE and Erick OK both count; gate passes. Billy the Kid Museum: Fort Sumner NM and Hico TX count; the Clovis NM record matches a directory listing at 1121 W 7th St that carries Hico's website, and another listing gives that address to a tire shop; gate fails for the name. Santa Claus Museum: Columbus TX counts; the Indiana IMLS row and Overture's separately counted Santa Claus Museum and Village are one institution. Mermaid Museum: Berlin MD counts; the Los Angeles record is within about 150 m of the venue of a March 22-25, 2018 pop-up (attribution by name and location). Salt and Pepper Shaker Museum: Gatlinburg TN counts; the IMLS row is the same museum with San Francisco coordinates; Traer IA is a city-owned attraction called the Salt & Pepper Shaker Gallery.
+- Not applied: five records failed the check and are still counted (Clovis, Los Angeles, the two IMLS rows, Traer's name), and Hico is counted twice under two L2 names. Each needs a sourced decision through the correction layer and a dated packet. Decision 14 keeps post 1's evidence in one flat file, so no live decision, review status, count or target changed.
+- Old Jail Museum: all eight evidence URLs re-read on 2026-10-05 and live. Name variants seen: the Albion operator page is headed "Old Jail Museum of Noble County, Indiana"; Tennessee tourism lists Winchester's as "Franklin County Old Jail Museum". Headline unchanged; the post's method note states the Winchester variant. Flag for the user: decision 14 has no public-name criterion.
+- Code: `dn_post1_groups()` in `R/museum_publication.R` (read-only per-member summary; `confirmed` needs a gate pass and every member counting); `scripts/export_post1_payload.R`; `scripts/stage_post.R`. The review file gains an optional `public_name` column, blank on the eight earlier rows. 395 assertions pass, zero failures.
+- Post rewritten to the brief: Bangor opening, Old Jail Museum at eight, the 38-way tie at six, chains beside the headline, the five collisions with one figure, a short method note. No map. The old draft's payload files, bundled packet copies and figure were removed from the bundle; originals remain in `data/validation/`. Isolated knit passed with Pandoc 3.11.
+- Blog destination found: `C:\Developer\goodsite` (`jpbranson/goodsite`, branch `master`). `jpbranson.rbind.io` is served by Netlify, reported generator Hugo 0.164.0 and reflected the repository's latest commit. `DUPNAMES_BLOG_DIR` is not set in any `.Renviron`.
+- Staged with `scripts/stage_post.R museums` at `goodsite/content/post/duplicate-museum-names/`, `draft: true`. Hugo 0.164.0, downloaded to a scratch directory, built the blog into scratch: the draft build has the post at `/2026/duplicate-museum-names/` with its figure and payload files; the production build omits it. Desktop and narrow-width screenshots inspected.
+- Deliberate blocker: publishing needs the user's go-ahead. Nothing was committed or pushed in either repository. Fetch failures kept honest: aol.com article 404; cozadhistory.org did not resolve; several third-party pages returned 403 to the agents.
+- Resume: `"C:\Program Files\R\R-4.4.2\bin\Rscript.exe" scripts/export_post1_payload.R`, then with `DUPNAMES_BLOG_DIR=C:/Developer/goodsite` and `RSTUDIO_PANDOC=C:/Developer/duplicate-names/data/processed/tools/pandoc/pandoc-3.11`, `Rscript scripts/stage_post.R museums`. Publication steps are in `knowledge/playbooks/publish-post.md`. Cloud spending USD 0.

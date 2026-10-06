@@ -4,3 +4,4 @@
 * [Completing a museum review](complete-museum-review.md) - Order of identity and naming decisions, the IMLS review fields, the publication check and the staged publication points.
 * [Preserving evidence and distinguishing current outputs from archives](preserve-evidence.md) - Which outputs are generated and overwritten, how dated packets and checksums are preserved, and where research extracts live.
 * [Reproduce results without rebuilding](reproduce-without-rebuilding.md) - Score the archived human labels and replay archived checkpoints read-only, without rebuilding targets or rewriting labels.
+* [Publishing a post](publish-post.md) - Export a post's payload, knit it in isolation, stage it in the blog repository, and publish only after the user's explicit go-ahead.

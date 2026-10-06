@@ -7,7 +7,8 @@ tags: [museums, post-1, publication]
 status: stable
 implemented_in:
   - ../../R/museums.R
-generated: { by: claude-code/claude-opus-5-5, at: 2026-10-05T02:28:14Z }
+  - ../../R/museum_publication.R
+generated: { by: claude-code/claude-fable-5-1, at: 2026-10-06T03:45:00Z }
 sources:
   - id: csv
     resource: ../../data/validation/post1_headline_review.csv
@@ -27,6 +28,9 @@ sources:
   - id: agents
     resource: ../../AGENTS.md
     title: Repository guidelines for coding agents
+  - id: post1-code
+    resource: ../../R/museum_publication.R
+    title: Post 1 group summary, dn_post1_groups() (R/museum_publication.R)
 ---
 
 # Purpose
@@ -61,6 +65,7 @@ The gate reads only the columns marked "gate"; the rest are context for reviewer
 | `evidence_url` | text | Gate: must start with `https://` |
 | `checked_on` | text (date) | Gate: `YYYY-MM-DD`; must parse and not be after `as_of` |
 | `note` | text | Evidence summary and questions left outside decision 14 |
+| `public_name` | text | The operator's own current name, where checked. Blank on the eight rows recorded before 2026-10-05. Read by `dn_post1_groups()`, not by the gate |
 
 # Rules
 
@@ -74,6 +79,15 @@ The gate reads only the columns marked "gate"; the rest are context for reviewer
 - The helper checks recorded statuses, not the evidence, visitor access, map points or M2
   scope-word meaning.[^agents] Map and access checks apply only to institutions the post
   maps.[^design]
+- `dn_post1_groups()` lists every counted non-chain member of each group with its basis
+  and whether it counts. A member whose `public_name` does not normalize to `group` under
+  the L2 rules does not count, whatever its criteria say. A group is `confirmed` only when
+  the gate passes and every member counts (at least two); `unresolved_record` means two
+  members count beside one that does not; otherwise it is `not_a_collision`. A row for a
+  record that is not a counted non-chain member under that name stops the summary as
+  stale.[^post1-code]
+- Record failed checks too, with `no` on the criterion that fails. A failed row never
+  changes the data: corrections still go through the correction layer.[^agents]
 - M1 stopping rule: resolve Old Jail Museum's pending members to this standard to get V. If
   V is 7 or more, Old Jail is the headline, after checking that no six-member group can reach
   V through pending renames or near-variant names. Select at most five surprising-collision
@@ -81,16 +95,26 @@ The gate reads only the columns marked "gate"; the rest are context for reviewer
 
 # Current contents
 
-As of commit 7416eef: 8 rows, all group `old jail museum`, all Overture, all `yes` on (a), (b)
-and (c).[^csv] Four were `verified` (Albion IN, Jim Thorpe PA, Lawrenceburg TN, Barnesville GA)
-and four `pending` (Winchester TN, Hayesville NC, Greenwood AR, Thompson Falls MT). Checked on
-2026-09-15 (2) and 2026-09-26 (6).[^csv]
+As of 2026-10-05: 20 rows in six groups.[^csv]
 
-The flight log records V = 8, above every other group (none at 7, 38 at 6). Old Jail passes
-the gate with this file (4 verified plus 4 decision-14 members).[^flight-log] Re-running the
-gate read-only against the saved `museum_analysis` target during this migration gave the same
-result: pass with the file, fail without it. The five shortlisted surprising collisions are
-not yet verified to decision 14 and have no rows.[^flight-log]
+The eight `old jail museum` rows are unchanged apart from the empty `public_name` field. All
+are Overture records with `yes` on (a), (b) and (c).[^csv] Four were `verified` (Albion IN,
+Jim Thorpe PA, Lawrenceburg TN, Barnesville GA) and four `pending` (Winchester TN, Hayesville
+NC, Greenwood AR, Thompson Falls MT). Checked on 2026-09-15 (2) and 2026-09-26 (6).[^csv]
+
+Twelve rows checked on 2026-10-05 cover the five surprising-collision groups.[^csv]
+
+| Group | Rows | Count | Rows that do not count |
+|---|---:|---:|---|
+| `100th meridian museum` | 2 | 2 | None |
+| `billy the kid museum` | 3 | 2 | Clovis NM: no museum found |
+| `mermaid museum` | 2 | 1 | Los Angeles CA: a 2018 pop-up |
+| `salt and pepper shaker museum` | 3 | 1 | The IMLS row duplicates Gatlinburg; Traer IA's public name is Salt & Pepper Shaker Gallery |
+| `santa claus museum` | 2 | 1 | The Indiana IMLS row duplicates a record counted under another name |
+
+The flight log records V = 8 for Old Jail Museum, above every other group (none at 7, 38 at
+6). Old Jail Museum and 100th Meridian Museum pass the gate with this file; the other four
+names fail it.[^flight-log]
 
 # Consumers
 
@@ -102,6 +126,10 @@ review <- readr::read_csv("data/validation/post1_headline_review.csv",
 dn_assert_museum_publication_ready(targets::tar_read(museum_analysis),
                                    "old jail museum", headline_review = review)
 ```
+
+`scripts/export_post1_payload.R` does this for post 1: it calls the gate for the headline,
+stops if it fails, summarizes every group with `dn_post1_groups()` and writes the post's
+payload.[^post1-code]
 
 `dn_headline_sufficient()` evaluates the rows. See the
 [publication gate](../methodology/publication-gate.md) and
@@ -121,3 +149,4 @@ helper neither copies nor checksums it. See
 [^flight-log]: Flight log, 2026-09-26 rescope and gate-change entries
 [^index]: Validation evidence index at 7416eef, decision inputs and human labels
 [^agents]: Repository guidelines for coding agents
+[^post1-code]: Post 1 group summary, dn_post1_groups() (R/museum_publication.R)

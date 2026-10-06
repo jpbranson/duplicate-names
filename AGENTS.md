@@ -80,6 +80,11 @@ values are alternatives to inspect, not additional confirmed sites. Before expor
 `dn_assert_museum_publication_ready()` explicitly; the pipeline does not invoke it.
 For post 1, pass `data/validation/post1_headline_review.csv` as `headline_review`
 (decision 14); it never changes recorded review or affiliation statuses.
+Record failed checks in that file as well; `dn_post1_groups()` reports which members count,
+and corrections still go through the correction layer, not the post. Export post 1's
+payload with `scripts/export_post1_payload.R` and stage it with `scripts/stage_post.R`.
+Publishing (clearing `draft`, committing and pushing the blog repository) needs the user's
+explicit go-ahead; see `knowledge/playbooks/publish-post.md`.
 The helper checks recorded statuses, not the evidence, visitor access, map points or
 M2 scope-word meaning. These still require factual review.
 

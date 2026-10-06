@@ -31,3 +31,54 @@ dn_museum_publication_points <- function(x, locations, access, as_of = Sys.Date(
   out$visitor_ready <- out$counted & out$review_status == "verified" & out$access_status %in% c("open", "appointment_or_event") & !is.na(out$publication_lon)
   out
 }
+
+# Post 1 tables under DESIGN decision 14. Lists every counted non-chain member of each
+# group named in `headline_review` and whether it counts toward the name: a complete
+# factual review with known affiliation, or a passing headline-review row. A recorded
+# `public_name` must also normalize to the group's L2 name. A group is `confirmed` only
+# when the publication gate passes and every member counts (at least two);
+# `unresolved_record` keeps two counting members beside a record that does not count.
+# Read-only: review statuses, affiliations, counts and source fields are unchanged.
+dn_post1_groups <- function(analysis, headline_review, as_of = Sys.Date()) {
+  key <- function(z) paste(z$source, z$source_id, sep = ":")
+  x <- dplyr::filter(analysis, .data$counted, .data$name_expanded %in% headline_review$group,
+                     .data$affiliation_status != "chain")
+  i <- match(key(x), key(headline_review))
+  j <- match(key(headline_review), key(x))
+  if (anyNA(j) || any(headline_review$group != x$name_expanded[j])) {
+    stop("Stale headline review row: no counted non-chain member under that name.", call. = FALSE)
+  }
+  complete <- x$review_status == "verified" & x$affiliation_status != "unknown"
+  sufficient <- dn_headline_sufficient(x, headline_review, as_of)
+  field <- function(name) if (name %in% names(headline_review)) as.character(headline_review[[name]][i]) else NA_character_
+  public <- field("public_name")
+  named <- is.na(public) | !nzchar(public) | dn_name_expand(dn_name_clean(public)) == x$name_expanded
+  members <- tibble::tibble(
+    group = x$name_expanded, source = x$source, source_id = x$source_id,
+    place = field("place"), state = field("state"), public_name = public, operator = field("operator"),
+    basis = dplyr::case_when(complete & named ~ "complete factual review",
+                             is.na(i) ~ "not reviewed",
+                             !complete & !sufficient ~ "failed check",
+                             !named ~ "public name differs",
+                             TRUE ~ "headline-sufficient check"),
+    counts = x$analysis_eligible & named & (complete | sufficient),
+    evidence_url = field("evidence_url"), checked_on = field("checked_on"), note = field("note")) |>
+    dplyr::arrange(.data$group, dplyr::desc(.data$counts), .data$state, .data$place)
+  gate <- function(name) {
+    tryCatch({dn_assert_museum_publication_ready(analysis, name, headline_review, as_of); TRUE},
+             error = function(e) FALSE)
+  }
+  groups <- members |>
+    dplyr::group_by(.data$group) |>
+    dplyr::summarise(records = dplyr::n(), counting = sum(.data$counts), .groups = "drop") |>
+    dplyr::mutate(
+      chain_locations = vapply(.data$group, function(name) {
+        sum(analysis$counted & analysis$name_expanded %in% name & analysis$affiliation_status %in% "chain")
+      }, integer(1), USE.NAMES = FALSE),
+      gate_passed = vapply(.data$group, gate, logical(1), USE.NAMES = FALSE),
+      status = dplyr::case_when(.data$gate_passed & .data$counting == .data$records &
+                                  .data$counting >= 2L ~ "confirmed",
+                                .data$counting >= 2L ~ "unresolved_record",
+                                TRUE ~ "not_a_collision"))
+  list(members = members, groups = groups)
+}

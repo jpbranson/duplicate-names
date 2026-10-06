@@ -21,7 +21,7 @@ output:
 # package _setup.R and its config/theme/embed dependencies with the bundle,
 # adjust this source path, and verify a knit without the analysis checkout.
 # Data chunks must read only the bundle's small payload/ files.
-dn_root <- Sys.getenv("DUPNAMES_ROOT", unset = "../../..")
+dn_root <- Sys.getenv("DUPNAMES_ROOT", unset = "../..")
 source(file.path(dn_root, "posts", "_setup.R"), local = TRUE)
 ```
 
@@ -71,17 +71,18 @@ at threshold 0.85. These unweighted results do not establish dataset-wide accura
 or validate final clusters and multi-site merges. Link the archived validation report
 when drafting the museum post; use the relevant evidence for later posts.
 
-Before publishing the museum post, check category decisions affecting headlines, distinguish
-chains from independent naming templates, and verify the top-20 collisions and
-relevant multi-site cases. Show alternate names where entities have been merged.
+Before publishing the museum post, follow DESIGN decision 14
+(`knowledge/decisions/14-post-1-headline-sufficient-review.md`): check each member of every
+named group to its headline-sufficient standard, report chains beside the headline, and do
+not open further leader batches. Show alternate names where entities have been merged.
 An institution's `verified` status means factual identity/count review is complete;
 assistant source research does not supply independent labels for measuring accuracy.
 Keep unknown affiliation and unreviewed cases explicit.
 Call `dn_assert_museum_publication_ready()` for the selected L2 headlines before exporting
 payloads; the pipeline does not invoke this helper automatically. Its status checks do not
-replace evidence review or the semantic check on M2 scope words. Use the current queue and
-checkpoint links in `data/validation/README.md` when preparing the export, then bundle the
-needed evidence references with the post.
+replace evidence review or the semantic check on M2 scope words. Use the current status in
+`knowledge/project/status.md` when preparing the export, and link evidence in the repository
+rather than copying packets into the bundle.
 Use CSV payloads for a blog build without `arrow`, and verify that the completed
 bundle knits without the analysis checkout or a pipeline run.
 

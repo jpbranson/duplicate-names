@@ -1,0 +1,6 @@
+group,display_name,records,counting,gate_passed,status
+100th meridian museum,100th Meridian Museum,2,2,TRUE,confirmed
+billy the kid museum,Billy the Kid Museum,3,2,FALSE,unresolved_record
+mermaid museum,Mermaid Museum,2,1,FALSE,not_a_collision
+salt and pepper shaker museum,Salt and Pepper Shaker Museum,3,1,FALSE,not_a_collision
+santa claus museum,Santa Claus Museum,2,1,FALSE,not_a_collision

@@ -1,24 +1,27 @@
 ---
 type: Plan
 title: "Phases"
-description: "Phase plan and exit criteria, from the Phase 0 scaffold to posts 3 and 4, with each phase's state at the 2026-09-26 checkpoint."
+description: "Phase plan and exit criteria, from the Phase 0 scaffold to posts 3 and 4, with each phase's state at the 2026-10-05 checkpoint."
 tags: [planning]
 sequence: 6
-generated: { by: claude-code/claude-opus-5-5, at: 2026-10-05T02:28:14Z }
+generated: { by: claude-code/claude-opus-5-5, at: 2026-10-06T04:30:00Z }
 sources:
   - id: design
     resource: 7416eef:DESIGN.md
     title: "DESIGN.md §8, including the Immediate Phase 2 deliverable, as of commit 7416eef (moved here verbatim)"
+  - id: flight-log
+    resource: flight-log.md
+    title: Flight log, 2026-09-26 rescope entry and 2026-10-06 post 1 entry
 ---
 
 | Phase | Work | Exit criterion |
 |---|---|---|
 | **0. Scaffold** ✅ **done 2026-09-07** | `git init`, RStudio project, renv pinned to R 4.4 (138 packages), schema contract, manifest machinery, source stubs, gold-set tests | ✅ `targets::tar_make()` runs end to end; 42 tests pass; `entities.parquet` written with 0 rows / 31 cols matching the contract |
 | **1a. Acquire + resolve — MUSEUMS** ✅ **milestone met 2026-09-15** | Overture + IMLS; the L3 gazetteer; entity resolution; 300 human-labelled pairs scored | Museum entities generated and pair-level validation measured; final clusters and multi-site cases remain subject to review ([entity resolution](../methodology/entity-resolution.md)) |
-| **2. Museums analysis → D1** ◀ **in progress** | Analysis tooling and focused source/identity passes complete; remaining top-20 checks, then figures and draft | Post 1 knits from its bundle and small payloads without the analysis checkout or pipeline; every headline number checked against evidence |
-| **1b. Acquire + resolve — CHURCHES** ◀ **in progress** (national build complete; independent labels and identity validation pending) | GNIS, HIFLD, OSM, Overture religious categories; Census places denominator | Same, extended to ~250k congregations |
-| **3. Churches analysis → D2** ◀ **in progress** (C1–C4 outputs and local draft; factual and label gates pending) | C1–C4; territory maps as `mapgl` embeds; ladder; naming cultures; emit the multiplicity list for post 4 | Post 2 drafted; embeds load standalone in a bare browser tab and have static fallbacks |
-| **4. Dashboard → D6** ◀ local static draft built; deployment blocked | Generalize the post-2 embeds into an arbitrary-category explorer | Deployed and queryable beyond churches and museums |
+| **2. Museums analysis → D1** ◀ **in progress** (post 1 drafted, knitted in isolation and staged as a blog draft on 2026-10-05; publication awaits the user's go-ahead)[^flight-log] | Analysis tooling and focused source/identity passes complete; headline and collision checks done to [decision 14](../decisions/14-post-1-headline-sufficient-review.md); draft written and staged | Post 1 knits from its bundle and small payloads without the analysis checkout or pipeline; every headline number checked against evidence |
+| **1b. Acquire + resolve — CHURCHES** ◀ **frozen until post 1 publishes** (national build complete; independent labels and identity validation pending)[^flight-log] | GNIS, HIFLD, OSM, Overture religious categories; Census places denominator | Same, extended to ~250k congregations |
+| **3. Churches analysis → D2** ◀ **frozen until post 1 publishes** (C1–C4 outputs and local draft; factual and label gates pending) | C1–C4; territory maps as `mapgl` embeds; ladder; naming cultures; emit the multiplicity list for post 4 | Post 2 drafted; embeds load standalone in a bare browser tab and have static fallbacks |
+| **4. Dashboard → D6** ◀ **frozen until post 1 publishes** (local static draft built; deployment blocked) | Generalize the post-2 embeds into an arbitrary-category explorer | Deployed and queryable beyond churches and museums |
 | **5. Post 4 → D4** *(later)* | Historical sourcing on the multiplicity list from Phase 3 | — |
 | **6. Post 3 → D3** *(later)* | Founding-date acquisition; cohort analysis | — |
 
@@ -56,3 +59,5 @@ human supplied an independent matching label. Record evidence for factual correc
 and use fresh independent human labels to evaluate matching changes. Then export the
 post payloads and write the headlines.
 This work does not require reopening the matching threshold.
+
+[^flight-log]: Flight log, 2026-09-26 rescope entry and 2026-10-06 post 1 entry
